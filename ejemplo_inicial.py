@@ -2,11 +2,11 @@
 # IMPORTANTE: antes de lanzarlo hay que ejecutar el demonio de pigpio con "sudo pigpiod"
 # Este programa sigue una persona que se encuentre dentro de la imagen percibida por PiCamera
 #import imutils
-import cv2
+#import cv2
 import argparse
-import sys, traceback, Ice
-import easyiceconfig as EasyIce
-import jderobot
+import sys, traceback#, Ice
+#import easyiceconfig as EasyIce
+#import jderobot
 import numpy as np
 import threading
 import sys, tty, termios, time, pigpio
@@ -33,72 +33,72 @@ def motor2_stop():
     dit.set_servo_pulsewidth(servos[1], 1510)
 
 def forward (tiempo):
-	print "Avanzando"
-        motor1_forward()
-        motor2_forward()
-        time.sleep(tiempo)
+    print ("Avanzando")
+    motor1_forward()
+    motor2_forward()
+    time.sleep(tiempo)
 
-def reverse (tiempo):
-	print "Retrocediendo"
-        motor1_reverse()
-        motor2_reverse()
-        time.sleep(tiempo)
+#def reverse (tiempo):
+#	print "Retrocediendo"
+#        motor1_reverse()
+#        motor2_reverse()
+#        time.sleep(tiempo)
 
-def turn_left (tiempo):
-	print "Avanzando izquierda"
-	dit.set_servo_pulsewidth(servos[0], 1540)
-	dit.set_servo_pulsewidth(servos[1], 1490)
-        time.sleep(tiempo)
+#def turn_left (tiempo):
+#	print "Avanzando izquierda"
+#	dit.set_servo_pulsewidth(servos[0], 1540)
+#	dit.set_servo_pulsewidth(servos[1], 1490)
+ #       time.sleep(tiempo)
 
-def turn_right (tiempo):
-	print "Avanzando derecha"
-	dit.set_servo_pulsewidth(servos[0], 1550)
-	dit.set_servo_pulsewidth(servos[1], 1500)
-        time.sleep(tiempo)
+#def turn_right (tiempo):
+#	print "Avanzando derecha"
+#	dit.set_servo_pulsewidth(servos[0], 1550)
+#	dit.set_servo_pulsewidth(servos[1], 1500)
+ #       time.sleep(tiempo)
 
-def stop (tiempo):
-        print("DETENIENDO")
-        motor1_stop()
-        motor2_stop()
-        time.sleep(tiempo)
+#def stop (tiempo):
+ #       print("DETENIENDO")
+ #       motor1_stop()
+ #       motor2_stop()
+ #       time.sleep(tiempo)
         #for s in servos: # stop servo pulses
 	#	dit.set_servo_pulsewidth(s, 0)
 
         #dit.stop()
 
-def seguirPersona (image, color):
+#def seguirPersona (image, color):
     # resize the frame
-    image = imutils.resize(image, width=600)
+ #   image = imutils.resize(image, width=600)
 
     # Convert to grayscale
-    gray = cv2.cvtColor(imgage, cv2.COLOR_BGR2GRAY)
+ #   gray = cv2.cvtColor(imgage, cv2.COLOR_BGR2GRAY)
 
     # Función Haar para detectar caras
-    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+#    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 
     # Dibujamos un rectángulo alrededor de la cara detectada
-    origen = (x, y)
-    extremo = (x+w, y+h)
-    area = w*h
-    cv2.rectangle(image, origen, extremo, (255, 0, 0), 2)
+ #   origen = (x, y)
+ #   extremo = (x+w, y+h)
+ #   area = w*h
+ #   cv2.rectangle(image, origen, extremo, (255, 0, 0), 2)
 
-    center = (int((x+w)/2), int((y+h)/2))
-    print 'x: ' + str(int(center.x)) + ' y: ' + str(int(center.y)) + ' area: ' + str(area)
-    moverPiBot (center.x,center.y,round(area, -5))
-    time.sleep(0.15)
+ #   center = (int((x+w)/2), int((y+h)/2))
+#    print 'x: ' + str(int(center.x)) + ' y: ' + str(int(center.y)) + ' area: ' + str(area)
+#    moverPiBot (center.x,center.y,round(area, -5))
+#    time.sleep(0.15)
 
     # show the image to our screen
-    cv2.imshow("Imagen en curso", image)
+  #  cv2.imshow("Imagen en curso", image)
     # key = cv2.waitKey(1) & 0xFF
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        stop (1); # paramos los motores
-        for s in servos: # stop servo pulses
-	      	dit.set_servo_pulsewidth(s, 0)
+  #  if cv2.waitKey(1) & 0xFF == ord('q'):
+  #      stop (1); # paramos los motores
+  #      for s in servos: # stop servo pulses
+#	      	dit.set_servo_pulsewidth(s, 0)
 
-        dit.stop()
-        clean_up()
-        sys.exit()
-
+ #       dit.stop()
+ #       clean_up()
+ #       sys.exit()
+#
     return center
 
 def moverPiBot (x,y,area):
@@ -119,8 +119,8 @@ if __name__ == "__main__":
     #cameraProxy = jderobot.CameraPrx.checkedCast(basecameraL)
     #key=-1
 
-    while key != 1048689:
-        forward(1000)
+    #while key != 1048689:
+    forward(1000)
         # grab the current image
         #imageData = cameraProxy.getImageData("RGB8")
         #imageData_h = imageData.description.height
