@@ -35,21 +35,21 @@ def forward (tiempo):
     time.sleep(tiempo)
 
 def reverse (tiempo):
-	print("Retrocediendo")
+    print("Retrocediendo")
     motor1_reverse()
     motor2_reverse()
     time.sleep(tiempo)
 
 def turn_left (tiempo):
-	print("Avanzando izquierda")
-	dit.set_servo_pulsewidth(servos[0], 1540) # derecha
-	dit.set_servo_pulsewidth(servos[1], 1490) # izquierda
+    print("Avanzando izquierda")
+    dit.set_servo_pulsewidth(servos[0], 1540) # derecha
+    dit.set_servo_pulsewidth(servos[1], 1490) # izquierda
     time.sleep(tiempo)
 
 def turn_right (tiempo):
-	print "Avanzando derecha"
-	dit.set_servo_pulsewidth(servos[0], 1550) # derecha
-	dit.set_servo_pulsewidth(servos[1], 1500) # izquierda
+    print("Avanzando derecha")
+    dit.set_servo_pulsewidth(servos[0], 1550) # derecha
+    dit.set_servo_pulsewidth(servos[1], 1500) # izquierda
     time.sleep(tiempo)
 
 def stop (tiempo):
@@ -58,10 +58,10 @@ def stop (tiempo):
     motor2_stop()
     time.sleep(tiempo)
     for s in servos: # stop servo pulses
-	    dit.set_servo_pulsewidth(s, 0)
+        dit.set_servo_pulsewidth(s, 0)
         dit.stop()
 
 if __name__ == "__main__":
     
-    forward(10)
+    stop(10)
 
