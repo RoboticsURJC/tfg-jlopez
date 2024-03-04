@@ -17,15 +17,20 @@ prev_frame_time = time.time()
 cal_image_count = 0
 frame_count = 0
 
+
+
 while True:
 
     ret,frame = cap.read() # -- Read the camera frame
+    
+    # flip image 
+    flipped_frame = cv2.flip(frame,0)
 
     # processing code goes here
     frame_count += 1
 
     if frame_count == 30:
-        cv2.imwrite("cal_image_" + str(cal_image_count) + ".jpg", frame)
+        cv2.imwrite("cal_image_" + str(cal_image_count) + ".jpg", flipped_frame)
         cal_image_count += 1
         frame_count = 0
 
@@ -34,9 +39,9 @@ while True:
     new_frame_time = time.time()
     fps = 1/(new_frame_time - prev_frame_time)
     prev_frame_time = new_frame_time
-    cv2.putText(frame, "FPS" + str(int(fps)), (10,40), cv2.FONT_HERSHEY_PLAIN, 3, (100, 255, 0), 2, cv2.LINE_AA)
+    cv2.putText(flipped_frame, "FPS" + str(int(fps)), (10,40), cv2.FONT_HERSHEY_PLAIN, 3, (100, 255, 0), 2, cv2.LINE_AA)
 
-    cv2.imshow("Image Feed", frame)
+    cv2.imshow("Image Feed", flipped_frame)
 
     # --- use "q" to quit
     key = cv2.waitKey(1) & 0xFF

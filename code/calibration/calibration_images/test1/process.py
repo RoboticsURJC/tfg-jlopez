@@ -43,4 +43,13 @@ for frame_name in list_images:
         
 cv2.destroyAllWindows()
 
+ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(list_cb_3d_points, list_cb_2d_img_points, gray.shape[::-1], None, None)
+
+print("Calibration Matrix: ")
+print(mtx)
+print("Distorsion: " , dist)
+
+with open('camera_cal.py', 'wb') as f:
+    np.save(f,mtx)
+    np.save(f,dist)
 
