@@ -4,7 +4,7 @@ import glob
 
 cb_width = 9
 cb_height = 6
-cb_square_size = 26.3
+cb_square_size = 26.7
 
 # termination criteria
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
