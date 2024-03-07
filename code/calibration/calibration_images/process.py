@@ -49,7 +49,7 @@ print("Calibration Matrix: ")
 print(mtx)
 print("Distorsion: " , dist)
 
-with open('camera_cal.py', 'wb') as f:
+with open('camera_cal.txt', 'wb') as f:
     np.save(f,mtx)
     np.save(f,dist)
 
