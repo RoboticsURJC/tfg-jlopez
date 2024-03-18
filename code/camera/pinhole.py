@@ -28,6 +28,7 @@ import math
 def getradian(degrees):
 
     return ((degrees*math.pi)/180)
+
 # de 3d a 2d 
 def get2Dpoint(K, point3d, degreevalue):
 
@@ -45,22 +46,19 @@ def get2Dpoint(K, point3d, degreevalue):
 
     return K.dot(aux)
     
-
+# matriz obtenida de los parámetros intrínsecos
 K = np.array([[333.76, 0.0, 310.99],
                   [0.0, 335.08, 230.93],
                   [0.0, 0.0, 1.0]])
 
+# la z siempre va a ser 0
 point3d = np.array([1.0,0.0,0.0,1.0])
 
+# 40 es el valor obtenido tras medir la inclinación cámara
 point2d = get2Dpoint(K, point3d, 40)
 
 print(point2d)
-
+# el valor del eje z no es necesario y nos ayuda a poder escalar al
+# valor que estamos buscando del eje x e y
 finalpoint2D = np.array([ point2d[0]/point2d[2], point2d[1]/point2d[2]])
 print(finalpoint2D)
-
-
-# parámetros extrínsecos 
-
-# punto en 3D
- 
