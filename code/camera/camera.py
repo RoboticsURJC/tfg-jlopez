@@ -15,6 +15,13 @@ def detect_color(frame, lower_color, upper_color):
             return centroid_x, centroid_y
     return None, None
 
+#x e y del mundo real es en milímertros
+def getlinearregresion(xrw, yrw):
+    # pixel
+    xcamera = 208.136 + 1.109*xrw
+    ycamera = 479.752 - 1.284*yrw
+    
+    return (xcamera,ycamera)
 # Crea una ventana 
 cv2.namedWindow("Image Feed")
 # Mueve la ventana a una posición en concreto de la pantalla
@@ -28,6 +35,20 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
 cap.set(cv2.CAP_PROP_FPS,40)
 
 
+#camera = getlinearregresion(99,111)# sus valores coinciden mejor  
+camera = getlinearregresion(111,99) # no muy preciso
+
+# para acceder a sus posiciones hay que usar camera[0]
+print(camera)
+
+center_coordinates = (int(camera[0]), int(camera[1]))
+
+# Definir el radio del punto (en este caso, 5 píxeles)
+radius = 5
+
+# Definir el color del punto (en este caso, rojo)
+color = (0, 0, 255)
+
 while True:
 
     # Lee un frame de la cámara 
@@ -35,9 +56,13 @@ while True:
     
     # Gira la cámara 180º porque la cámara está físiscamente dada la vuelta 
     flipped_frame = cv2.flip(frame,0)
+    
+    flipped_frame = cv2.circle(flipped_frame, center_coordinates, radius, color, -1)
 
     
+
     
+    cv2.imshow('Frame', flipped_frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
