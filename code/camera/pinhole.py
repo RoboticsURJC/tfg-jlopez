@@ -1,29 +1,6 @@
-
 import numpy as np
 import cv2
 import math 
-
-# de 2d a 3d
-# def get3Dpoint(point2d, K):
-
-#     point2d_x = point2d[0]
-#     point2d_y = point2d[1]
-
-#     cx = K[][]
-#     cy = K[][]
-
-#     fx = K[][]
-#     fy = K[][]
-
-
-#     x = ((point2d_x-cx)*d)/fx
-#     y  = ((point2d_y -cy)*d)/ fy
-
-#     z = depth
-
-    
-
-#     return
 
 #x e y del mundo real es en milímertros
 #def getlinearregresion(xrw, yrw):
@@ -53,10 +30,7 @@ def get2Dpoint(K, point3d, degreevalue):
 
        
     rad = getradian(degreevalue)
-
-    #K = np.array([[333.76, 0.0, 310.99],
-    #              [0.0, 335.08, 230.93],
-    #              [0.0, 0.0, 1.0]])
+    
     RT = np.array([[np.cos(rad), 0.0, np.sin(rad),     0.0],
                 [    0.0 , 1.0,       0.0,     0.0],
                 [-np.sin(rad), 0, np.cos(rad), 110.0]])
@@ -65,7 +39,6 @@ def get2Dpoint(K, point3d, degreevalue):
 
     return K.dot(aux)
     
-
 # Crea una ventana 
 cv2.namedWindow("Image Feed")
 # Mueve la ventana a una posición en concreto de la pantalla
@@ -86,15 +59,15 @@ K = np.array([[333.76, 0.0, 310.99],
 
 #camera = getlinearregresion(99,111)
 # la z siempre va a ser 0
-point3d = np.array([90.0,-60.0,0.0,1.0])
+point3d = np.array([90.0,-50.0,0.0,1.0])
 
 # 40 es el valor obtenido tras medir la inclinación cámara
-point2d = get2Dpoint(K, point3d, 40)
+point2d = get2Dpoint(K, point3d, 50)
 
 print(point2d)
 # el valor del eje z no es necesario y nos ayuda a poder escalar al
 # valor que estamos buscando del eje x e y
-finalpoint2D = np.array([ point2d[0]/point2d[2], point2d[1]/point2d[2]])
+finalpoint2D = np.array([point2d[0]/point2d[2], point2d[1]/point2d[2]])
 print(finalpoint2D)
 
 truefinalpoint2D = movepoint(finalpoint2D[0], finalpoint2D[1])
@@ -120,14 +93,10 @@ while True:
     flipped_frame = cv2.circle(flipped_frame, center_coordinates, radius, color, -1)
     flipped_frame = cv2.circle(flipped_frame, (0, 480) , radius, (0, 255, 0), -1)
     flipped_frame = cv2.circle(flipped_frame, (0, 0) , radius, (255, 0, 0), -1)
-
-    
-
     
     cv2.imshow('Frame', flipped_frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
 
 cap.release()
 cv2.destroyAllWindows()
