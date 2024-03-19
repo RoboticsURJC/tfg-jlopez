@@ -26,12 +26,23 @@ import math
 #     return
 
 #x e y del mundo real es en milímertros
-def getlinearregresion(xrw, yrw):
+#def getlinearregresion(xrw, yrw):
     # pixel
-    xcamera = 208.136 + 1.109*xrw
-    ycamera = 479.752 - 1.284*yrw
+#    xcamera = 208.136 + 1.109*xrw
+#    ycamera = 479.752 - 1.284*yrw
     
-    return (xcamera,ycamera)
+#return (xcamera,ycamera)
+# desplazar la matriz hacia la izquierda y hacia abajo
+# para obtener el valor verdadero
+def movepoint(x,y):
+    
+    cx = 310.99
+    cy = 230.93
+    truex = x - cx
+    truey = y + cy
+    
+    return(truex, truey)
+    
 
 def getradian(degrees):
 
@@ -75,7 +86,7 @@ K = np.array([[333.76, 0.0, 310.99],
 
 #camera = getlinearregresion(99,111)
 # la z siempre va a ser 0
-point3d = np.array([0.0,0.0,0.0,1.0])
+point3d = np.array([90.0,-60.0,0.0,1.0])
 
 # 40 es el valor obtenido tras medir la inclinación cámara
 point2d = get2Dpoint(K, point3d, 40)
@@ -86,7 +97,10 @@ print(point2d)
 finalpoint2D = np.array([ point2d[0]/point2d[2], point2d[1]/point2d[2]])
 print(finalpoint2D)
 
-center_coordinates = (int(finalpoint2D[0]), int(finalpoint2D[1]))
+truefinalpoint2D = movepoint(finalpoint2D[0], finalpoint2D[1])
+print(truefinalpoint2D)
+
+center_coordinates = (int(truefinalpoint2D[0]), int(truefinalpoint2D[1]))
 
 # Definir el radio del punto (en este caso, 5 píxeles)
 radius = 5
