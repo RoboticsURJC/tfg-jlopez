@@ -2,39 +2,17 @@ import numpy as np
 import cv2
 import math 
 
-
 FX = 333.76
 FY = 335.08
 CX = 310.99
 CY = 230.93
-
-
-#x e y del mundo real es en milímertros
-#def getlinearregresion(xrw, yrw):
-    # pixel
-#    xcamera = 208.136 + 1.109*xrw
-#    ycamera = 479.752 - 1.284*yrw
-    
-#return (xcamera,ycamera)
-# desplazar la matriz hacia la izquierda y hacia abajo
-# para obtener el valor verdadero
-
-
-#def movepoint(x,y):
-    
-#    cx = 310.99
-#    cy = 230.93
-#    truex = x - cx
-#    truey = y + cy
-    
-#    return(truex, truey)
 
 def getradian(degrees):
 
     return ((degrees*math.pi)/180)
 
 # de 2D a 3D
-def backproyection(x2d, y2d, degreevalue):
+def backpropagation(x2d, y2d):
     
     x3d = (x2d - CX) / FX
     y3d = (y2d - CY) / FY
@@ -43,56 +21,20 @@ def backproyection(x2d, y2d, degreevalue):
     
     point3d = np.array([x3d,y3d,z3d])
     
-    #K = np.array([[FX, 0.0, CX],
-    #              [0.0, FY, CY],
-    #              [0.0, 0.0, 1.0]])   
-    
-    #rad = getradian(degreevalue)
-    
-    #RT = np.array([[np.cos(rad), 0.0, np.sin(rad),     0.0],
-    #            [    0.0 , 1.0,       0.0,     0.0],
-    #            [-np.sin(rad), 0, np.cos(rad), 110.0]])
-    
 
-    #aux = K.dot(RT)
-    
-    #print("Auxiliary Matrix:")
-    #print(aux)
-    
-    #inverted_matrix = None
-    
-    #try:
-    #    inverted_matrix = np.linalg.pinv(aux)
-    #except np.linalg.LinAlgError:
-    #    print("Pseudo-inverse not computable for the given matrix.")
-    
-    #if inverted_matrix is not None:
-        #print("Inverted Matrix:")
-        #print(inverted_matrix)
-     #   point3d = inverted_matrix.dot(np.array([[x2d],
-      #                                          [y2d],
-      #                                          [1.0]]))
-    return point3d
-    #else:
-    #    return None
-    
-    
+    return point3d 
+
 # Función para convertir de píxeles a unidades ópticas
 def pixel2optical(pixel_x, pixel_y):
-    # Valores de ejemplo, se deben ajustar según las especificaciones de la cámara
-    #sensor_width = 6  # Ancho del sensor en mm (ejemplo para un sensor full-frame)
+
     ancho = 640
     largo = 480
-    # Convertir píxeles a unidades ópticas
     
-    optic_x = largo -1 - pixel_y  #(pixel_x - 316.068) * (sensor_width / 640)  # Suponiendo una resolución de 640x480
+    optic_x = largo -1 - pixel_y  
     optic_y = pixel_x
     
-    #(pixel_y - 236.933) * (sensor_width / 480)  # y que la cámara está centrada
-
     return optic_x, optic_y
     
-
 def detect_color(frame, lower_color, upper_color):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_color, upper_color)
@@ -108,7 +50,7 @@ def detect_color(frame, lower_color, upper_color):
     return None, None
 
 # de 3d a 2d 
-def propragation(point3d, degreevalue):
+def propagation(point3d, degreevalue):
 
     K = np.array([[FX, 0.0, CX],
                   [0.0, FY, CY],
@@ -141,33 +83,7 @@ if __name__=="__main__":
     # Setup camera: para agilizar el cómputo
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
-    #cap.set(cv2.CAP_PROP_FPS,40)
-
-    #camera = getlinearregresion(99,111)
-    # la z siempre va a ser 0
-    #point3d = np.array([90.0,-50.0,0.0,1.0])
-
-    # 40 es el valor obtenido tras medir la inclinación cámara
-    #point2d = get2Dpoint(point3d, 50)
-
-    #print(point2d)
-    # el valor del eje z no es necesario y nos ayuda a poder escalar al
-    # valor que estamos buscando del eje x e y
-    #finalpoint2D = np.array([point2d[0]/point2d[2], point2d[1]/point2d[2]])
-    #print(finalpoint2D)
-
-    #truefinalpoint2D = movepoint(finalpoint2D[0], finalpoint2D[1])
-    #print(truefinalpoint2D)
-
-    #center_coordinates = (int(truefinalpoint2D[0]), int(truefinalpoint2D[1]))
-
-    # Definir el radio del punto (en este caso, 5 píxeles)
-    #radius = 5
-
-    # Definir el color del punto (en este caso, rojo)
-    #color = (0, 0, 255)
-
-
+    
     while True:
 
         # Lee un frame de la cámara 
@@ -179,9 +95,6 @@ if __name__=="__main__":
         
         centroid_x, centroid_y = detect_color(flipped_frame, lower_color, upper_color)
     
-        #flipped_frame = cv2.circle(flipped_frame, center_coordinates, radius, color, -1)
-        #flipped_frame = cv2.circle(flipped_frame, (0, 480) , radius, (0, 255, 0), -1)
-        #flipped_frame = cv2.circle(flipped_frame, (0, 0) , radius, (255, 0, 0), -1)
         if centroid_x is not None and centroid_y is not None:
             cv2.circle(flipped_frame, (centroid_x, centroid_y), 5, (0, 255, 0), -1)
             cv2.putText(flipped_frame, f"Centroide: ({centroid_x}, {centroid_y})", (centroid_x - 100, centroid_y - 20),
@@ -194,20 +107,8 @@ if __name__=="__main__":
             print(f"Coordenadas pixeles: X={centroid_x}, Y={centroid_y}")
             print(f"Coordenadas ópticas: X={optic_x}, Y={optic_y}")
             
-            point3d = backproyection(optic_x, optic_y, 45)
-            
+            point3d = backpropagation(optic_x, optic_y)
             print(point3d)
-            # teniendo el punto en 2D hay que sacar su conversión en 3D 
-            # retroproyección
-            
-            # del punto 3d sacar su punto 2d
-            # proyección
-            
-            
-            # Proyectar coordenadas 2D a 3D
-            #focal_length = 100  # Longitud focal en mm (debe ser ajustada según las especificaciones de la cámara)
-            #x, y, z = project(optic_x, optic_y)
-            #print(f"Coordenadas 3D: X={x}, Y={y}, Z={z}")
 
         cv2.imshow('Frame', flipped_frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
