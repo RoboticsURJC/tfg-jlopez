@@ -129,10 +129,27 @@ def backproject (punto2D, camera):
 
 
 def pixel2optical(p2d):
+    
     aux = p2d.x
     p2d.x = LARGO_IMAGEN - 1 - p2d.y
     p2d.y = aux
+    
+    #aux = p2d.y
+    #p2d.y = ANCHO_IMAGEN - 1 - p2d.x
+    #p2d.x = aux
+    
     p2d.h = 1
+
+    # En este caso cuando  se varía el eje x, varía el eje x
+    # y el eje y se queda como debe estar (y viceversa)
+    # sin embargo, los valores no son correctos.
+    #x_imagen_centro = p2d.x - ANCHO_IMAGEN / 2
+    #y_imagen_centro = LARGO_IMAGEN / 2 - p2d.y
+
+    #p2d.x = x_imagen_centro + ANCHO_IMAGEN / 2
+    #p2d.y = y_imagen_centro + LARGO_IMAGEN / 2
+    #p2d.h = 1
+    
     return p2d
 
 def detect_color(frame, lower_color, upper_color):
@@ -164,8 +181,8 @@ if __name__=="__main__":
     cap = cv2.VideoCapture(0)
 
     # Setup camera: para agilizar el cómputo
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
+    #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+    #cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
     
     
     #K = np.array([[FX, 0.0, CX],
@@ -206,7 +223,7 @@ if __name__=="__main__":
         # Lee un frame de la cámara 
         ret,frame = cap.read() 
     
-        # Gira la cámara 180º porque la cámara está físiscamente dada la vuelta 
+        # Gira la cámara 180º porque la cámara está físicamente dada la vuelta 
         flipped_frame = cv2.flip(frame,0)
         flipped_frame = cv2.flip(flipped_frame,1)
         
