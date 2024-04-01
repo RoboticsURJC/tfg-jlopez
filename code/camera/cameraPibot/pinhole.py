@@ -6,12 +6,8 @@
 ###############################################################################
 
 # -*- coding: utf-8 -*-
-#from progeo import *
 from projGeom import *
 import cv2
-#import pygame
-#import timeit
-#import time
 import numpy 
 
 # defino variables globales:
@@ -25,27 +21,27 @@ CY = 230.93
 # PYGAME CONSTANTS
 #pyGameFont = None
 #pyGameScreen = None # pantalla donde dibujo
-ANCHO_ESCENA = 700
-LARGO_ESCENA = 700
-BLACK = (  0,   0,   0)
-WHITE = (255, 255, 255)
-BLUE =  (  0,   0, 255)
-GREEN = (  0, 255,   0)
-RED =   (255,   0,   0)
-GREY =  (128, 128, 128)
-LIGHT_BLUE = (135,206,250)
+#ANCHO_ESCENA = 700
+#LARGO_ESCENA = 700
+#BLACK = (  0,   0,   0)
+# WHITE = (255, 255, 255)
+#BLUE =  (  0,   0, 255)
+#GREEN = (  0, 255,   0)
+#RED =   (255,   0,   0)
+#GREY =  (128, 128, 128)
+#LIGHT_BLUE = (135,206,250)
 SCALE = 1 # los valores reales los dividimos entre este factor para dibujarlos
 
 DEGTORAD = 3.1415926535897932 / 180
 myCamera = None
-originalImg = None
-hsvImg = None
-bnImg = None
-groundImg = None
-fronteraImg = None
-GREEN_MIN = numpy.array([20, 50, 100],numpy.uint8)#numpy.array([48, 138, 138],numpy.uint8)
-GREEN_MAX = numpy.array([90, 235, 210],numpy.uint8)#numpy.array([67, 177, 192],numpy.uint8)
-puntosFrontera = 0
+#originalImg = None
+#hsvImg = None
+#bnImg = None
+#groundImg = None
+#fronteraImg = None
+#GREEN_MIN = numpy.array([20, 50, 100],numpy.uint8)#numpy.array([48, 138, 138],numpy.uint8)
+#GREEN_MAX = numpy.array([90, 235, 210],numpy.uint8)#numpy.array([67, 177, 192],numpy.uint8)
+#puntosFrontera = 0
 
 
 def loadCamera ():
@@ -70,7 +66,7 @@ def loadCamera ():
 	T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-110)]) # T is a 3x4 traslation matrix
 	Res = numpy.dot (R_tot,T)
 	RT = numpy.append(Res, [[0,0,0,1]], axis=0) # RT is a 4x4 matrix
-	K = numpy.array ([(313.89382026,0,117.5728043,0),(0,316.64906146,158.04145907,0),(0,0,1,0)]) # K is a 3x4 matrix
+	K = numpy.array ([(FX,0,CX,0),(0,FY,CY,0),(0,0,1,0)]) # K is a 3x4 matrix
 	# -------------------------------------------------------------
 
 	# -------------------------------------------------------------
@@ -256,3 +252,10 @@ if __name__=="__main__":
 
 	
         getFronteraImage(flipped_frame)
+        
+        cv2.imshow('Frame', flipped_frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
