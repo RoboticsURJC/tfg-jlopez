@@ -30,7 +30,7 @@ CY = 230.93
 #RED =   (255,   0,   0)
 #GREY =  (128, 128, 128)
 #LIGHT_BLUE = (135,206,250)
-SCALE = 1 # los valores reales los dividimos entre este factor para dibujarlos
+#SCALE = 1 # los valores reales los dividimos entre este factor para dibujarlos
 
 DEGTORAD = 3.1415926535897932 / 180
 myCamera = None
@@ -52,7 +52,7 @@ def loadCamera ():
 	# -------------------------------------------------------------
 	#R = numpy.array ([(1,0,0),(0,1,0),(0,0,1)]) # R is a 3x3 rotation matrix
 	#R = numpy.array ([(1,0,-0.0274),(0,1,0),(0.0274,0,1)]) # R is a 3x3 rotation matrix
-	thetaY = 59*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+	thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 	thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 	thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 
@@ -194,7 +194,7 @@ def detect_color(frame, lower_color, upper_color):
 
 
 # obtenemos el pixel de la imagen
-def getFronteraImage (frame):
+def getPoints (frame):
 
     global fronteraImg
     global puntosFrontera
@@ -221,14 +221,6 @@ def getFronteraImage (frame):
 
         print(f"Coordenadas 3D: X={pixelOnGround3D.x}, Y={pixelOnGround3D.y}, Z={pixelOnGround3D.z}")
 
-
-
-    # imprimir estos 2 puntos: (pixelOnGround3D.x, pixelOnGround3D.y)
-
-
-	
-
-
 if __name__=="__main__":
 	
     cv2.namedWindow("Image Feed")
@@ -251,7 +243,7 @@ if __name__=="__main__":
         flipped_frame = cv2.flip(flipped_frame,1)
 
 	
-        getFronteraImage(flipped_frame)
+        getPoints(flipped_frame)
         
         cv2.imshow('Frame', flipped_frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
