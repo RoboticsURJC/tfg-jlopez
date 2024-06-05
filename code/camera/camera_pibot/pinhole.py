@@ -239,13 +239,13 @@ if __name__=="__main__":
         ret,frame = cap.read() 
     
         # Gira la cámara 180º porque la cámara está físicamente dada la vuelta 
-        flipped_frame = cv2.flip(frame,0)
-        flipped_frame = cv2.flip(flipped_frame,1)
+        #flipped_frame = cv2.flip(frame,0)
+        #flipped_frame = cv2.flip(flipped_frame,1)
 
 	
-        getPoints(flipped_frame)
+        getPoints(frame)
         
-        cv2.imshow('Frame', flipped_frame)
+        cv2.imshow('Frame', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
