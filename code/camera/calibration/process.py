@@ -60,5 +60,7 @@ file = open("calibration_data.txt", "w+")
 
 # Saving the array in a text file
 content = str(mtx)
+content2 = str(dist)
 file.write(content)
+file.write(content2)
 file.close()
