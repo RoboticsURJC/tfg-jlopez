@@ -37,10 +37,10 @@ def detect_color(frame, lower_color, upper_color):
 
 # Using bilinear interpolation
 def getdistance(xi, yi):
-    fx1y1 = 115 # cm
-    fx1y2 = 450 # cm
-    fx2y1 = 115 # cm
-    fx2y2 = 445 # cm
+    fx1y1 = 65 #115 # mm
+    fx1y2 = 403 #450 # mm
+    fx2y1 = 65 #115 # mm
+    fx2y2 = 403 #445 # mm
     x1 = 0
     x2 = 640
     y1 = 480
@@ -81,7 +81,7 @@ def getPoints(frame):
 
 def camera2world(cameraPoint):
     theta = np.deg2rad(15)
-    height = 90.0
+    height = 95.0
     
     R = np.array([
         [math.cos(theta), 0.0, math.sin(theta)],
