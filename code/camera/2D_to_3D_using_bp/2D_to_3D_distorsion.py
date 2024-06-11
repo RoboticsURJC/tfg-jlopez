@@ -117,9 +117,11 @@ if __name__ == "__main__":
     cap = cv2.VideoCapture(0)
     
     # Setup camera: para agilizar el cómputo
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480)
-    cap.set(cv2.CAP_PROP_FPS,40)
+    # Puede cdambiar el plano imagen
+
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640) # 320
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT,480) # 240
+    cap.set(cv2.CAP_PROP_FPS,30)
 		
     while True:
         # Lee un frame de la cámara 
