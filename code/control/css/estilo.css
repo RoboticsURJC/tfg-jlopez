@@ -1,0 +1,41 @@
+.cuadro_exto{
+  margin: 0 auto;
+  width: 150px;
+   -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+#texto{
+  display: none;
+}
+.boton{
+  cursor:pointer;
+  -webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.boton_activo{
+box-shadow: inset 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-moz-box-shadow: inset 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-webkit-box-shadow: inset 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+}
+.container{
+  position: relative;
+  margin: 0px auto;
+  padding: 10px;
+  border: 1px #0083ca solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0px 0px 10px 1px #585858;
+  -webkit-box-shadow: 0px 0px 10px 1px #585858;
+  box-shadow: 0px 0px 10px 1px #585858;
+
+}
+
