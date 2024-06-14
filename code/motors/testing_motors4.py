@@ -27,7 +27,7 @@ def main():
         set_servo_angle(pi, pwm_gpio_left, angle)
                 # Set angle for right servo (mirrored movement)
         set_servo_angle(pi, pwm_gpio_right, 180 - angle)
-        #time.sleep(0.5)
+        time.sleep(0.5)
     finally:
         # Stop the servos and clean up
         pi.set_servo_pulsewidth(pwm_gpio_left, 0)
