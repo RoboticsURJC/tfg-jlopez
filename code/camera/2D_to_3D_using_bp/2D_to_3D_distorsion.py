@@ -21,7 +21,7 @@ class Punto3D:
         self.y = y
         self.z = z
 
-def detect_color(frame, lower_color, upper_color):
+def detectcolor(frame, lower_color, upper_color):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_color, upper_color)
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -64,7 +64,7 @@ def getPoints(frame):
     lower_color = np.array([150, 50, 50])
     upper_color = np.array([170, 255, 255])
 	
-    centroid_x, centroid_y = detect_color(frame, lower_color, upper_color)
+    centroid_x, centroid_y = detectcolor(frame, lower_color, upper_color)
 
     if centroid_x is not None and centroid_y is not None:
         cv2.circle(frame, (centroid_x, centroid_y), 5, (0, 255, 0), -1)
