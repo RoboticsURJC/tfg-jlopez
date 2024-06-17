@@ -1,4 +1,6 @@
-import pigpio
+# -*- coding: utf-8 -*-
+
+import RPi.GPIO as GPIO
 import time
 
 ## ESQUEMA PARA LA RELACIÓN ÁNGULO/MOVIMIENTO DE LOS SERVOS:
@@ -7,39 +9,25 @@ import time
 ### GIRO IZQUIERDA-> M_izq = 90º, M_Der = 180º
 ### ATRÁS->          M_izq = 0º, M_Der = 180º
 
-# Usa pin 7 (GPIO 4) para el motor izquiero
-pwm_gpio_left = 4
-# Usa pin 12 (GPIO 18) para el motor derecho
-pwm_gpio_right = 18
+## 12% -> 180º
+##  2% ->   0º
 
-def set_servo_angle(pi, gpio, angle):
-    # Calcula el ciclo de trabajo dado el ángulo
-    duty_cycle = int(12.346 * angle ** 2 + 7777.8 * angle + 700000)
-    # Convierte el ciclo de trabajo al rango usado por pigpiod (500 to 2500 microsegundos)
-    pulse_width = duty_cycle / 1000
-    pi.set_servo_pulsewidth(gpio, pulse_width)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False) 
 
-def main():
-    # Inicializo pigpiod
-    pi = pigpio.pi()
+#Usa pin 4 
+pwm_gpio_left = 7
+#Usa pin 18 
+pwm_gpio_right = 12
+frequence = 50
 
-    if not pi.connected:
-        exit(0)
+GPIO.setup(pwm_gpio_left, GPIO.OUT)
+pwm_left = GPIO.PWM(pwm_gpio_left, frequence)
+GPIO.setup(pwm_gpio_right, GPIO.OUT)
+pwm_right = GPIO.PWM(pwm_gpio_right, frequence)
 
-    try:
-        # Ángulo para el motor izquierdo
-        set_servo_angle(pi, pwm_gpio_left, 90)
-        # Ángulo para el motor derecho
-        set_servo_angle(pi, pwm_gpio_right, 0)
-        time.sleep(0.15)
-    finally:
-        # Para los servos
-        pi.set_servo_pulsewidth(pwm_gpio_left, 0)
-        pi.set_servo_pulsewidth(pwm_gpio_right, 0)
-        pi.stop()
-
-if __name__ == '__main__':
-    main()
-
-
+#Va hacia izquierda (90º, 0º)
+pwm_left.start(7)
+pwm_right.start(2)
+time.sleep(0.15)
 
