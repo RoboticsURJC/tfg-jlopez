@@ -21,6 +21,7 @@ def angle2dutycycle(angle):
     c = y2
     
     dutycycle = ((y1-y2)/(x1-x2))*angle + c
+    print(f"Type of duty cycle: {type(dutycycle)}")
     
     return dutycycle
 
@@ -40,7 +41,27 @@ pwm_right = GPIO.PWM(pwm_gpio_right, frequence)
 
 #Va hacia adelante (180º, 0º)
 #print(angle2dutycycle(180))
-pwm_left.start(angle2dutycycle(180))
+#pwm_left.start(angle2dutycycle(180))
+# Calculate duty cycle
+duty_cycle = angle2dutycycle(180)
+
+# Check if duty cycle is a valid float and within range
+if isinstance(duty_cycle, float) and 0.0 <= duty_cycle <= 100.0:
+    print(f"Starting PWM with duty cycle: {duty_cycle}")
+    pwm_left.start(duty_cycle)
+else:
+    print(f"Invalid duty cycle value: {duty_cycle}")
+    # Optionally, handle error or use a default value
+    pwm_left.start(0)
 #pwm_left.start(12)
 pwm_right.start(2)
-time.sleep(0.15)
+time.sleep(0.5)
+
+print("Stopping PWM")
+pwm_left.stop()
+pwm_right.stop()
+
+# Cleanup GPIO
+GPIO.cleanup()
+print("GPIO cleanup done")
+
