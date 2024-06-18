@@ -12,7 +12,7 @@ def angle2dutycycle(angle):
     return dutycycle
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)
+#GPIO.setwarnings(False)
 
 pwm_gpio_left = 7
 pwm_gpio_right = 12
@@ -33,8 +33,8 @@ try:
     pwm_left.stop()
     pwm_right.stop()
     GPIO.cleanup()
-    with open('/var/www/html/control/log/python_debug.log', 'a') as f:
+    with open('/var/www/html/control/python_debug.log', 'a') as f:
         f.write('Adelante: Ejecutado correctamente\n')
 except Exception as e:
-    with open('/var/www/html/control/log/python_debug.log', 'a') as f:
-        f.write(f'Adelante: Error - {str(e)}\n')
+    with open('/var/www/html/control/python_debug.log', 'a') as f:
+        f.write('Adelante: Error - {}\n'.format(str(e)))
