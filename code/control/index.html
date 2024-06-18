@@ -28,7 +28,6 @@
 					</tr>
 					<tr>
 						<td><img src="images/left.png" class="boton" id="left"></td>
-						<td><img src="images/stop.png" class="boton" id="stop"></td>
 						<td><img src="images/right.png" class="boton" id="right"></td>
 					</tr>
 					<tr>
@@ -51,7 +50,6 @@ $("#ahead").click(function(){
 	$("#right").removeClass('boton_activo').addClass( "boton" );
 	$("#left").removeClass('boton_activo').addClass( "boton" );
 	$("#back").removeClass('boton_activo').addClass( "boton" );
-	$("#stop").removeClass('boton_activo').addClass( "boton" );
     window.estado=1;
 });
 $("#left").click(function(){
@@ -61,7 +59,6 @@ $("#left").click(function(){
 	$("#ahead").removeClass('boton_activo').addClass( "boton" );
 	$("#right").removeClass('boton_activo').addClass( "boton" );
 	$("#back").removeClass('boton_activo').addClass( "boton" );
-	$("#stop").removeClass('boton_activo').addClass( "boton" );
     window.estado=2;
 });
 $("#right").click(function(){
@@ -71,7 +68,6 @@ $("#right").click(function(){
 	$("#ahead").removeClass('boton_activo').addClass( "boton" );
 	$("#left").removeClass('boton_activo').addClass( "boton" );
 	$("#back").removeClass('boton_activo').addClass( "boton" );
-	$("#stop").removeClass('boton_activo').addClass( "boton" );
     window.estado=3;
 });
 $("#back").click(function(){
@@ -81,19 +77,9 @@ $("#back").click(function(){
 	$("#ahead").removeClass('boton_activo').addClass( "boton" );
 	$("#left").removeClass('boton_activo').addClass( "boton" );
 	$("#right").removeClass('boton_activo').addClass( "boton" );
-	$("#stop").removeClass('boton_activo').addClass( "boton" );
     window.estado=4;
 });
-$("#stop").click(function(){
-	$('#texto').show().text("Detenido");
-	$("#texto").removeClass(' btn-primary btn-success btn-info btn-danger').addClass( "btn-inverse" );
-	$(this).removeClass('boton').addClass( "boton_activo" );
-	$("#ahead").removeClass('boton_activo').addClass( "boton" );
-	$("#left").removeClass('boton_activo').addClass( "boton" );
-	$("#right").removeClass('boton_activo').addClass( "boton" );
-	$("#back").removeClass('boton_activo').addClass( "boton" );
-    window.estado=5;
- });
+
 $(this).click(function(){
    console.log("estado: "+estado);
 	$.ajax({

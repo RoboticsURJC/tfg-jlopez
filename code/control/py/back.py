@@ -12,8 +12,17 @@ import time
 ## 12% -> 180º
 ##  2% ->   0º 
 
+def angle2dutycycle(angle):
+    x1 = 180
+    y1 = 12
+    x2 = 0
+    y2 = 2
+    c = y2
+    
+    dutycycle = ((y1 - y2) / (x1 - x2)) * angle + c
+    return dutycycle
+
 GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False) 
 
 #Usa pin 4 
 pwm_gpio_left = 7
@@ -27,7 +36,9 @@ GPIO.setup(pwm_gpio_right, GPIO.OUT)
 pwm_right = GPIO.PWM(pwm_gpio_right, frequence)
 
 #Va hacia detrás (0º, 180º)
-pwm_left.start(2)
-pwm_right.start(12)
+pwm_left.start(angle2dutycycle(0))
+pwm_right.start(angle2dutycycle(180))
 time.sleep(0.15)
-
+pwm_left.stop()
+pwm_right.stop()
+GPIO.cleanup()
