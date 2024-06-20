@@ -15,6 +15,7 @@ while True:
         # 08          -> Cantidad de satélites recibidos 
         # 545.4,M     -> Altura en metros sobre el nivel del mar
         # *47         -> Checksum o valor de control, siempre comienza con *
+        print(data)
         if(data[0:6] == "$GPGGA"):
             #print(data)
             latitud = data[17:27]
