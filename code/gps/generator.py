@@ -24,8 +24,10 @@ while True:
             message = pynmea2.parse(newdata.decode('ascii', errors='replace'))
             # imprime el mensaje del tipo $GPGGA 
             if(isinstance(message, pynmea2.types.talker.GGA)):
-                print(message.latitude)
-                print(message.longitude)
+                lat = message.latitude
+                lng = message.longitude
+                gps = "Latitude=" + str(lat) + " and Longitude=" + str(lng)
+                print(gps)
         except pynmea2.ParseError as e:
             pass
             #print(f"Error parsing NMEA data")
