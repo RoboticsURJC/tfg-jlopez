@@ -1,0 +1,6 @@
+<div id="app">
+    <l-map ref="map" :zoom="zoom" :center="center">
+      <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+      <l-marker :key="index" v-for="(user, index) in users" :lat-lng="formatLocation(user.coords.latitude, user.coords.longitude)"></l-marker>
+      </l-map>
+  </div> 

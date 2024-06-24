@@ -31,3 +31,4 @@ while True:
                 data = {"LAT": lat, "LNG": lng}
                 db.update(data)
                 print("Data sent")
+        # tengo que añadir lo de parse error
