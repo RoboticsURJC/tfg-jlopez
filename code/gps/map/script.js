@@ -1,3 +1,8 @@
+// Import necessary functions from Firebase modules
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, onValue } from 'firebase/database';
+import L from 'leaflet';
+
 // Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBgrLRMuPB8bkaMUNg4XlQKTbY34JgWwic",
@@ -11,8 +16,12 @@ const firebaseConfig = {
 };
 
 // Inicializar Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+//firebase.initializeApp(firebaseConfig);
+
+const app = initializeApp(firebaseConfig);
+
+// Get a reference to the Firebase Realtime Database service
+const database = getDatabase(app);
 
 const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 let myMap = L.map('myMap').setView([51.505, -0.09], 13);
@@ -23,8 +32,8 @@ L.tileLayer(tilesProvider, {
 
 let marker;
 
-// Escuchar los cambios en la base de datos de Firebase
-database.ref('location').on('value', (snapshot) => {
+// Listen for changes in Firebase Realtime Database
+onValue(ref(database, 'location'), (snapshot) => {
   const data = snapshot.val();
   const lat = data.LAT;
   const lng = data.LNG;
@@ -35,4 +44,6 @@ database.ref('location').on('value', (snapshot) => {
 
   marker = L.marker([lat, lng]).addTo(myMap);
   myMap.setView([lat, lng], 13);
+
+  console.log(`Marker updated: Latitude=${lat}, Longitude=${lng}`);
 });
