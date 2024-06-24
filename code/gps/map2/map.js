@@ -1,38 +1,42 @@
-// Configuración de Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBgrLRMuPB8bkaMUNg4XlQKTbY34JgWwic",
-  authDomain: "gps-tracker-c5d0e.firebaseapp.com",
-  databaseURL: "https://gps-tracker-c5d0e-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "gps-tracker-c5d0e",
-  storageBucket: "gps-tracker-c5d0e.appspot.com",
-  messagingSenderId: "443475027920",
-  appId: "1:443475027920:web:dc2a4bf0259b861f3d7bd5",
-  measurementId: "G-6JPHY9G9S1"
-};
-
-// Inicializar Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-
-const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-let myMap = L.map('myMap').setView([51.505, -0.09], 13);
+const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+let myMap = L.map('myMap').setView([51.505, -0.09], 13)
 
 L.tileLayer(tilesProvider, {
-  maxZoom: 18,
+	maxZoom: 18,
 }).addTo(myMap);
 
-let marker;
+let marker = L.marker([51.5, -0.09]).addTo(myMap)
 
-// Escuchar los cambios en la base de datos de Firebase
-database.ref('location').on('value', (snapshot) => {
-  const data = snapshot.val();
-  const lat = data.LAT;
-  const lng = data.LNG;
+let iconMarker = L.icon({
+    iconUrl: 'marker.png',
+    iconSize: [60, 60],
+    iconAnchor: [30, 60]
+})
 
-  if (marker) {
-    myMap.removeLayer(marker);
-  }
+let marker2 = L.marker([51.51, -0.09], { icon: iconMarker }).addTo(myMap)
 
-  marker = L.marker([lat, lng]).addTo(myMap);
-  myMap.setView([lat, lng], 13);
-});
+myMap.doubleClickZoom.disable()
+myMap.on('dblclick', e => {
+  let latLng = myMap.mouseEventToLatLng(e.originalEvent);
+
+  L.marker([latLng.lat, latLng.lng], { icon: iconMarker }).addTo(myMap)
+})
+
+navigator.geolocation.getCurrentPosition(
+  (pos) => {
+    const { coords } = pos
+    const { latitude, longitude } = coords
+    L.marker([latitude, longitude], { icon: iconMarker }).addTo(myMap)
+
+    setTimeout(() => {
+      myMap.panTo(new L.LatLng(latitude, longitude))
+    }, 5000)
+  },
+  (error) => {
+    console.log(error)
+  },
+  {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  })
