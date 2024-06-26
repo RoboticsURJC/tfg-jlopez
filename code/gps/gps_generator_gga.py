@@ -13,7 +13,7 @@ import serial
     # *47         -> Checksum o valor de control, siempre comienza con *
 
 while True:
-    port = "/dev/ttyS0"
+    port = "/dev/ttyAMA0"
     ser = serial.Serial(port, baudrate=9600, timeout=0.5)
     dataout = pynmea2.NMEAStreamReader()
     newdata = ser.readline()

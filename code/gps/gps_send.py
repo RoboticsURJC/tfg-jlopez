@@ -16,7 +16,7 @@ firebaseConfig={
 firebase=pyrebase.initialize_app(firebaseConfig)
 db=firebase.database()
 
-port="/dev/ttyS0"
+port="/dev/ttyAMA0"
 ser=serial.Serial(port, baudrate=9600, timeout=0.5)
 while True:
     dataout = pynmea2.NMEAStreamReader()
