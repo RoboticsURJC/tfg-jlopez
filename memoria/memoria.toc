@@ -1,7 +1,7 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}La primera sección}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Segunda sección}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.1}La robótica}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Segunda sección}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Números}{2}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Listas}{2}{subsection.1.2.2}%
 \contentsline {paragraph}{Referencias bibliográficas}{3}{paragraph*.12}%
