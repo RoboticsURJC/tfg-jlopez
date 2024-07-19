@@ -6,24 +6,24 @@
 \contentsline {subsubsection}{Robots de limpieza}{6}{subsubsection*.17}%
 \contentsline {subsubsection}{Robots de entretenimiento}{6}{subsubsection*.19}%
 \contentsline {subsubsection}{Robots de salud}{7}{subsubsection*.21}%
-\contentsline {subsubsection}{Robots de logística}{7}{subsubsection*.22}%
-\contentsline {subsubsection}{Robots de campo}{7}{subsubsection*.23}%
-\contentsline {section}{\numberline {1.2}Segunda sección}{7}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Números}{8}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Listas}{8}{subsection.1.2.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{9}{paragraph*.25}%
-\contentsline {chapter}{\numberline {2}Objetivos}{10}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Descripción del problema}{10}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Requisitos}{10}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Metodología}{10}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Plan de trabajo}{10}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Plataforma de desarrollo}{11}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Diseño}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Snippets}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Verbatim}{12}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Ecuaciones}{13}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Tablas o cuadros}{13}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{15}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Corrector ortográfico}{16}{section.5.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{17}{appendix*.31}%
+\contentsline {subsubsection}{Robots de logística}{7}{subsubsection*.23}%
+\contentsline {subsubsection}{Robots de campo}{8}{subsubsection*.25}%
+\contentsline {section}{\numberline {1.2}Segunda sección}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Números}{9}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Listas}{9}{subsection.1.2.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{10}{paragraph*.27}%
+\contentsline {chapter}{\numberline {2}Objetivos}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descripción del problema}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Requisitos}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Metodología}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Plan de trabajo}{11}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Plataforma de desarrollo}{12}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Diseño}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Snippets}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Verbatim}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Ecuaciones}{14}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Tablas o cuadros}{14}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Corrector ortográfico}{17}{section.5.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{18}{appendix*.33}%
