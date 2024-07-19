@@ -1,9 +1,59 @@
 \begin{thebibliography}{}
 
+\bibitem[Bidaud, ]{bidaudrobots}
+Bidaud, P.
+\newblock Les robots et les hommes.
+
+\bibitem[Clarke, 1993]{clarke1993asimov}
+Clarke, R. (1993).
+\newblock Asimov's laws of robotics: implications for information
+  technology-part i.
+\newblock {\em Computer}, 26(12):53--61.
+
 \bibitem[contributors, 2022]{memnon_image}
 contributors, W. (2022).
 \newblock Colosos de memnón, luxor, egipto, 2022-04-03.
 \newblock Sección: Archivo.
+
+\bibitem[Cuenca~S{\'a}nchez et~al., 2023]{cuenca2023diseno}
+Cuenca~S{\'a}nchez, A., Farinango~Galeano, W., and Murillo~Zambrano, J. (2023).
+\newblock Dise{\~n}o de un sistema de generaci{\'o}n microhidr{\'a}ulica basado
+  en un tornillo de arqu{\'\i}medes.
+\newblock {\em Ingenius. Revista de Ciencia y Tecnolog{\'\i}a}, (29):98--107.
+
+\bibitem[de~Toledo, 2024]{hombredepalo_leyendasdetoledo}
+de~Toledo, L. (2024).
+\newblock El hombre de palo.
+\newblock Consultado el 19 de julio de 2024.
+
+\bibitem[Earnest, 2012]{earnest2012stanfordcart}
+Earnest, L. (2012).
+\newblock The stanford cart.
+\newblock Consultado el 19 de julio de 2024.
+
+\bibitem[{El Zaatari} et~al., 2019]{ELZAATARI2019162}
+{El Zaatari}, S., Marei, M., Li, W., and Usman, Z. (2019).
+\newblock Cobot programming for collaborative industrial tasks: An overview.
+\newblock {\em Robotics and Autonomous Systems}, 116:162--180.
+
+\bibitem[Giri, 2020]{giri2020maquinas}
+Giri, L.~A. (2020).
+\newblock M{\'a}quinas t{\'e}rmicas desde la antig{\"u}edad al siglo xvii:
+  an{\'a}lisis hist{\'o}rico desde la filosof{\'\i}a de la t{\'e}cnica.
+
+\bibitem[G{\'O}MEZ~PINOS, ]{gomezguerreros}
+G{\'O}MEZ~PINOS, H.
+\newblock Guerreros de terracota.
+
+\bibitem[Nilsson et~al., 1984]{nilsson1984shakey}
+Nilsson, N.~J. et~al. (1984).
+\newblock {\em Shakey the robot}, volume 323.
+\newblock Sri International Menlo Park, California.
+
+\bibitem[Plaza, 2023]{plaza_robotica_servicio}
+Plaza, J. M.~C. (2022-2023).
+\newblock Robótica de servicio: Robots de limpieza.
+\newblock Consultado el 19 de julio de 2024.
 
 \bibitem[Vega, 2008]{vega08b}
 Vega, J. (2008).
@@ -47,5 +97,15 @@ Vega, J., Perdices, E., and Ca\~nas, J. (2012).
 \newblock {\em Attentive visual memory for robot localization}, pages 408--438.
 \newblock IGI Global, USA.
 \newblock Text not available. This book is protected by copyright.
+
+\bibitem[Vel{\'a}zquez, ]{velazquezcual}
+Vel{\'a}zquez, C.
+\newblock Cual p{\'a}jaros al viento.
+
+\bibitem[Villalba~Duarte, 2017]{villalba2017ensamblaje}
+Villalba~Duarte, K.~D. (2017).
+\newblock {\em Ensamblaje automatizado pist{\'o}n-biela mediante dos brazos
+  robot}.
+\newblock PhD thesis, Universitat Polit{\`e}cnica de Val{\`e}ncia.
 
 \end{thebibliography}

@@ -1,24 +1,29 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}La robótica}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Robots industriales}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{3}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Segunda sección}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Números}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Listas}{4}{subsection.1.2.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{5}{paragraph*.13}%
-\contentsline {chapter}{\numberline {2}Objetivos}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Descripción del problema}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Requisitos}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Metodología}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Plan de trabajo}{6}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Plataforma de desarrollo}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Diseño}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Snippets}{8}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Verbatim}{8}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Ecuaciones}{9}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Tablas o cuadros}{9}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Corrector ortográfico}{12}{section.5.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{13}{appendix*.19}%
+\contentsline {subsection}{\numberline {1.1.1}Robots industriales}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{6}{subsection.1.1.2}%
+\contentsline {subsubsection}{Robots de limpieza}{6}{subsubsection*.17}%
+\contentsline {subsubsection}{Robots de entretenimiento}{6}{subsubsection*.19}%
+\contentsline {subsubsection}{Robots de salud}{7}{subsubsection*.21}%
+\contentsline {subsubsection}{Robots de logística}{7}{subsubsection*.22}%
+\contentsline {subsubsection}{Robots de campo}{7}{subsubsection*.23}%
+\contentsline {section}{\numberline {1.2}Segunda sección}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Números}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Listas}{8}{subsection.1.2.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{9}{paragraph*.25}%
+\contentsline {chapter}{\numberline {2}Objetivos}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descripción del problema}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Requisitos}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Metodología}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Plan de trabajo}{10}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Plataforma de desarrollo}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Diseño}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Snippets}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Verbatim}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Ecuaciones}{13}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Tablas o cuadros}{13}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Corrector ortográfico}{16}{section.5.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{17}{appendix*.31}%
