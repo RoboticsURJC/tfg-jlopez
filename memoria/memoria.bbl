@@ -55,6 +55,13 @@ Plaza, J. M.~C. (2022-2023).
 \newblock Robótica de servicio: Robots de limpieza.
 \newblock Consultado el 19 de julio de 2024.
 
+\bibitem[Shaw and Pathak, 2024]{shaw2024leap}
+Shaw, K. and Pathak, D. (2024).
+\newblock {LEAP} hand v2: Dexterous, low-cost anthropomorphic hybrid rigid soft
+  hand for robot learning.
+\newblock In {\em 2nd Workshop on Dexterous Manipulation: Design, Perception
+  and Control (RSS)}.
+
 \bibitem[Thorpe and Durrant-Whyte, 2003]{thorpe2003field}
 Thorpe, C. and Durrant-Whyte, H. (2003).
 \newblock Field robots.
