@@ -55,6 +55,12 @@ Plaza, J. M.~C. (2022-2023).
 \newblock Robótica de servicio: Robots de limpieza.
 \newblock Consultado el 19 de julio de 2024.
 
+\bibitem[Thorpe and Durrant-Whyte, 2003]{thorpe2003field}
+Thorpe, C. and Durrant-Whyte, H. (2003).
+\newblock Field robots.
+\newblock In {\em Robotics Research: The Tenth International Symposium}, pages
+  329--340. Springer.
+
 \bibitem[Vega, 2008]{vega08b}
 Vega, J. (2008).
 \newblock Navegaci{\'o}n y autolocalizaci{\'o}n de un robot gu{\'i}a de
