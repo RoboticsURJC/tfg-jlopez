@@ -21,7 +21,7 @@ def set_servo_angle(pi, gpio, angle):
 
 def main():
     # Inicializo pigpiod
-    angle = 0
+    angle = 0 
     pi = pigpio.pi()
 
     if not pi.connected:
@@ -41,4 +41,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
