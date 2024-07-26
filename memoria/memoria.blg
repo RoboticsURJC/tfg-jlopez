@@ -5,6 +5,7 @@ The style file: apalike.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "memnon_image" isn't style-file defined
 --line 5 of file bibliografia.bib
+Warning--there's a number but no volume in barcelo2004nuevo
 Warning--empty year in bidaudrobots
 Warning--empty journal in bidaudrobots
 Warning--there's a number but no volume in cuenca2023diseno
@@ -14,45 +15,45 @@ Warning--empty journal in gomezguerreros
 Warning--empty institution in vega15
 Warning--empty year in velazquezcual
 Warning--empty journal in velazquezcual
-You've used 22 entries,
+You've used 23 entries,
             1935 wiz_defined-function locations,
-            587 strings with 6823 characters,
-and the built_in function-call counts, 6985 in all, are:
-= -- 697
-> -- 216
-< -- 22
-+ -- 69
-- -- 66
-* -- 495
-:= -- 1269
-add.period$ -- 65
-call.type$ -- 22
-change.case$ -- 141
-chr.to.int$ -- 21
-cite$ -- 31
-duplicate$ -- 305
-empty$ -- 502
-format.name$ -- 95
-if$ -- 1361
+            593 strings with 6879 characters,
+and the built_in function-call counts, 7314 in all, are:
+= -- 731
+> -- 223
+< -- 23
++ -- 71
+- -- 68
+* -- 523
+:= -- 1327
+add.period$ -- 68
+call.type$ -- 23
+change.case$ -- 147
+chr.to.int$ -- 22
+cite$ -- 33
+duplicate$ -- 319
+empty$ -- 528
+format.name$ -- 98
+if$ -- 1424
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 110
-num.names$ -- 66
-pop$ -- 137
+missing$ -- 16
+newline$ -- 115
+num.names$ -- 69
+pop$ -- 141
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 148
 quote$ -- 0
-skip$ -- 232
+skip$ -- 241
 stack$ -- 0
-substring$ -- 409
-swap$ -- 30
+substring$ -- 434
+swap$ -- 31
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 128
-warning$ -- 9
-while$ -- 55
+type$ -- 134
+warning$ -- 10
+while$ -- 59
 width$ -- 0
-write$ -- 269
-(There were 10 warnings)
+write$ -- 282
+(There were 11 warnings)

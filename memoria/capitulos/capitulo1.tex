@@ -21,29 +21,31 @@ En el presente capítulo se va a abordar el contexto de la robótica, explicando
 
 La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots para tareas específicas. Por ende, un robot se podría definir como un sistema informático formado por sensores y actuadores imprecisos, ya que tienen ruido. Los robots realizan tareas sucias, aburridas y peligrosas y tienen que ser sensibles al entorno. Sin embargo, no existe una definición unívoca al respecto y depende del campo y de la época de la que queramos hablar. Para poder entenderlo, se va a hacer un breve resumen sobre la historia de la robótica.\\
 
-Desde la antigüedad se han desarrollado ingenios o autómatas de los cuáles muchos de ellos tenían fines religiosos como puede ser las estatuas de Memnon y la estatua de Anubis (Figura \ref{fig:ancientrel}).   \\
+Desde la antigüedad se han desarrollado ingenios o autómatas de los cuáles muchos de ellos tenían fines religiosos  muestra la Figura \ref{fig:ancientrel}.   \\
 
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.3\linewidth}
+	\begin{minipage}{0.4\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/memnon.jpeg}
-		\caption*{\centering Estatuas de Memnon \cite{memnon_image}}
+		\caption*{\centering Estatuas de Memnon} %\cite{memnon_image}
 	\end{minipage}
-	\hspace{3cm}
+	\hspace{2cm}
 	% aquí incluir iamgen de Guerrero de terracota
-	\begin{minipage}{0.3\linewidth}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/terracota.png}
-		\caption*{\centering Guerreros de Terracota \cite{gomezguerreros}}
+		\caption*{\centering Guerreros de Terracota} %\cite{gomezguerreros}
 	\end{minipage}
 	\caption{Ingenios de la antigüedad con fines religiosos}
 	\label{fig:ancientrel}
 \end{figure}
 
  
-Otras invenciones que destacaban por otras aplicaciones fueron el tornillo de Arquímedes de Siracusa, la eolípila de Herón de Alejandría, el ornitóptero de Leonardo Da Vinci y el hombre de palo de Juanelo Turriano (Figura \ref{fig:ancient}).\\
+Otras invenciones que destacaban por otras aplicaciones fueron el tornillo de Arquímedes de Siracusa, la eolípila de Herón de Alejandría, el ornitóptero de Leonardo Da Vinci y el hombre de palo de Juanelo Turriano, entre otras. Se pueden apreciar algunas de dichas invenciones en la Figura \ref{fig:ancient}.\\
+
+En \cite{cuenca2023diseno} se trata el principio de generación hidroeléctrica, tomando en cuenta el modelo tornillo de Arquímedes. También en el artículo \cite{giri2020maquinas} se traza una línea histórica de las máquinas térmicas, teniendo en cuenta a la eolípila. 
 
 \begin{figure}[ht!]
 	\centering
@@ -51,73 +53,73 @@ Otras invenciones que destacaban por otras aplicaciones fueron el tornillo de Ar
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/arquimedes.png}
-		\caption*{\centering Tornillo de Arquímedes \cite{cuenca2023diseno}}
+		\caption*{\centering Tornillo de Arquímedes}  %\cite{cuenca2023diseno}
 	\end{minipage}
 	\hspace{3cm}
 	% Imagen de la eolípila
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/eolipila.png}
-		\caption*{\centering Eolípila \cite{giri2020maquinas}}
+		\caption*{\centering Eolípila} %\cite{giri2020maquinas}
 	\end{minipage}
-	\hspace{3cm}
+	%\hspace{3cm}
 	% Imgen del ornitóptero
-	\begin{minipage}{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/davinci.png}
-		\caption*{\centering Ornitóptero \cite{velazquezcual}}
-	\end{minipage}
-	\hspace{3cm}
+	%\begin{minipage}{0.3\linewidth}
+	%	\centering
+	%	\includegraphics[width=\linewidth]{figs/davinci.png}
+	%	\caption*{\centering Ornitóptero \cite{velazquezcual}}
+	%\end{minipage}
+	%\hspace{3cm}
 	% Imagen del hombre de palo 
-	\begin{minipage}{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/hombre-palo.jpg}
-		\caption*{\centering Hombre de palo \cite{hombredepalo_leyendasdetoledo}}
-	\end{minipage}
+	%\begin{minipage}{0.3\linewidth}
+	%	\centering
+	%	\includegraphics[width=\linewidth]{figs/hombre-palo.jpg}
+	%	\caption*{\centering Hombre de palo \cite{hombredepalo_leyendasdetoledo}}
+	%\end{minipage}
 	\caption{Ingenios de la antigüedad con fines no religiosos}
     \label{fig:ancient}
     \end{figure}
 
-Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislamiento y se desarrolló en laboratorios con más gente. El movimiento del positivismo lógico fomentó las investigaciones ya que este movimiento trataba de dar importancia a la ciencia y dejar de lado la filosofía; también, el contexto de las guerras mundiales y de las bombas nucleares influyeron significativamente en este aspecto. Ya se empieza a acuñar la palabra robot a las distintas creaciones que iban surgiendo como pueden ser: Electro y Sparko de Westinghouse Electric Corporation e Isaac Asimov y sus leyes de la robótica (Figura \ref{fig:sigloXX}).\\
+Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislamiento y se desarrolló en laboratorios con más gente. El movimiento del positivismo lógico fomentó las investigaciones ya que este movimiento trataba de dar importancia a la ciencia y dejar de lado la filosofía; también, el contexto de las guerras mundiales y de las bombas nucleares influyeron significativamente en este aspecto. Ya se empieza a acuñar la palabra robot y surge Electro y Sparko de Westinghouse Electric Corporation (Figura \ref{fig:EyS}), tratado en muchas ocasiones como uno de los primeros robots, como se describe en \cite{bidaudrobots}. Un descubrimiento muy destacado fue y sigue siendo hoy en día son Las Leyes de la Robótica de Isaac Asimov (Figura \ref{fig:Asimov}), así lo transmite \cite{barcelo2004nuevo}.\\
 
-\begin{figure}[ht!]
-	\centering
-	\begin{minipage}{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/electro-sparko.png}
-		\caption*{\centering Electro y Sparko \cite{bidaudrobots}}
-	\end{minipage}
-	\hspace{3cm}
-	% aquí incluir imagen de asimov
-	\begin{minipage}{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/issac-law.png}
-		\caption*{\centering  Leyes de la robótica \cite{clarke1993asimov}}
-	\end{minipage}
-	\caption{Ingenios del siglo XX}
-	\label{fig:sigloXX}
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/electro-sparko.png}
+	\end{center}
+	\caption{Electro y Sparko} %\cite{bidaudrobots}}
+	\label{fig:EyS}
 \end{figure}
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/issac-law.png}
+	\end{center}
+	\caption{ Leyes de la robótica} %\cite{barcelo2004nuevo}
+\label{fig:Asimov}
+\end{figure}
+
 
 %\ac{} expande las siglas
 %\acs{} no expande las siglas
-En 1969 se construye por el \ac{SRI} Internacional un prototipo experimental llamado Shakey que era una unidad independiente de 1.5 metros, equipado con 2 motores, cámara de televisión y una radio conectada a un ordenador, capaz de navegar en entornos cerrados y estructurados de una forma autónoma. Sus objetivos eran aprender del medio y ser capaz de planificar trayectorias de movimiento y las tareas que le asignaron fueron mover y detectar bloques. Sin embargo, cada movimiento podría tardar más de una hora en computarse y aún así, podrían producirse fallos. A Shakey se le conoce como el primer robot móvil (Figura \ref{fig:shakey}). \\
+\cite{nilsson1984shakey} nos cuenta que en 1969 se construye por el \ac{SRI} Internacional un prototipo experimental llamado Shakey que era una unidad independiente de 1.5 metros, equipado con 2 motores, cámara de televisión y una radio conectada a un ordenador, capaz de navegar en entornos cerrados y estructurados de una forma autónoma. Sus objetivos eran aprender del medio y ser capaz de planificar trayectorias de movimiento y las tareas que le asignaron fueron mover y detectar bloques. Sin embargo, cada movimiento podría tardar más de una hora en computarse y aún así, podrían producirse fallos. A Shakey se le conoce como el primer robot móvil (Figura \ref{fig:shakey}). \\
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=8cm]{figs/shakey.png}
 	\end{center}
-	\caption{Robot Shakey \cite{nilsson1984shakey}}
+	\caption{Robot Shakey} %\cite{nilsson1984shakey}}
 	\label{fig:shakey}
 \end{figure}\
 
 
-Otro robot muy conocido es la carreta de Stanford que era capaz de ver y moverse en cualquier ambiente. Con la cámara que disponía, era capaz de calcular y trazar distancias. Sin embargo, tardaba 5 horas en recorrer 30 metros (Figura \ref{fig:stanford}). 
+Otro robot muy conocido  y descrito en \cite{earnest2012stanfordcart} es la carreta de Stanford que era capaz de ver y moverse en cualquier ambiente. Con la cámara que disponía, era capaz de calcular y trazar distancias. Sin embargo, tardaba 5 horas en recorrer 30 metros (Figura \ref{fig:stanford}). 
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=8cm]{figs/stanford.png}
 	\end{center}
-	\caption{Carreta de Stanford \cite{earnest2012stanfordcart}}
+	\caption{Carreta de Stanford}
 	\label{fig:stanford}
 \end{figure}\
 
@@ -130,15 +132,33 @@ Ya a partir de la década de los 80, se decidió que el acceso a los robots fues
 Los robots industriales son brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos. Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA} o \acs{ABB} (Figura \ref{fig:robindustriales}).
 
 
+%\begin{figure}[ht!]
+%	\centering
+%	\begin{minipage}{0.3\linewidth}
+%		\centering´
+%		\includegraphics[width=\linewidth]{figs/brazoIRB140.png}
+%		\caption*{\centering Brazo robot IRB 140 } % \cite{villalba2017ensamblaje}}
+%	\end{minipage}
+%	\hspace{3cm}
+	% aquí incluir iamgen de Guerrero de terracota
+%	\begin{minipage}{0.3\linewidth}
+%		\centering
+%		\includegraphics[width=\linewidth]{figs/cobot.png}
+%		\caption*{\centering Cobot \cite{ELZAATARI2019162}}
+%	\end{minipage}
+%	\caption{Robots industriales}
+%\end{figure}
+
+
+
 \begin{figure}[ht!]
 	\centering
 	\begin{minipage}{0.3\linewidth}
-		\centering´
+		\centering
 		\includegraphics[width=\linewidth]{figs/brazoIRB140.png}
-		\caption*{\centering Brazo robot IRB 140 \cite{villalba2017ensamblaje}}
+		\caption*{\centering Brazo robot IRB 140 \footnote{{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}}}
 	\end{minipage}
 	\hspace{3cm}
-	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cobot.png}
@@ -148,6 +168,7 @@ Los robots industriales son brazos robotizados y manipuladores que tienen más d
 	\label{fig:robindustriales}
 \end{figure}
 
+
 \subsection{Robots de servicio}
 
 Los robots de servicios son todos aquellos que no son industriales; por lo tanto, tienen menos de 3 grados de libertad, no trabajan en un entorno controlado, son más difíciles de programar, toman aplicaciones heterogéneas y todavía se encuentran en un mercado inmaduro. Existen muchos tipos de robots de servicio, de los cuáles a continuación se podrán enumerar algunos campos con algunos de sus respectivos ejemplos. \\ 
@@ -155,7 +176,7 @@ Los robots de servicios son todos aquellos que no son industriales; por lo tanto
 
 \subsubsection{Robots de limpieza}
 
-Son aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus características, pueden ser capaces de aspirar y fregar el suelo, o de limpiar los cristales de las ventanas. Estos últimos, son comunes en edificios que tienen grandes ventanales y un difícil acceso a ellos. Las aspiradoras se encuentran en un mercado mundial asentado cuyos inicios eran aspiradoras que usaban sensores de contacto, encoders y una navegación pseudoaleatoria (Figura \ref{fig:roblimpieza} izquierda); y han evolucionado hasta el punto de usar mapas para poder navegar y poder localizarse. También, usan algoritmos sofisticados como navegación de cobertura por barridos sistemáticos \acs{BSA} y se componen de sensores más sofisticados como láseres y cámaras que son capaces de detectar obstáculos como calcetines y ser capaz de esquivarlos (Figura \ref{fig:roblimpieza} derecha).\\
+En \cite{plaza_robotica_servicio} se define a los robots de limpieza como aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus características, pueden ser capaces de aspirar y fregar el suelo, o de limpiar los cristales de las ventanas. Estos últimos, son comunes en edificios que tienen grandes ventanales y un difícil acceso a ellos. Las aspiradoras se encuentran en un mercado mundial asentado cuyos inicios eran aspiradoras que usaban sensores de contacto, encoders y una navegación pseudoaleatoria (Figura \ref{fig:roblimpieza} izquierda); y han evolucionado hasta el punto de usar mapas para poder navegar y poder localizarse. También, usan algoritmos sofisticados como navegación de cobertura por barridos sistemáticos \acs{BSA} y se componen de sensores más sofisticados como láseres y cámaras que son capaces de detectar obstáculos como calcetines y ser capaz de esquivarlos (Figura \ref{fig:roblimpieza} derecha).\\
 
 
 \begin{figure}[ht!]
@@ -163,14 +184,14 @@ Son aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus 
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/gama-baja.png}
-		\caption*{\centering Modelo económico \cite{plaza_robotica_servicio}}
+		\caption*{\centering Modelo económico }% \cite{plaza_robotica_servicio}}
 	\end{minipage}
 	\hspace{3cm}
 	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/gama-alta.png}
-		\caption*{\centering Gama alta \cite{plaza_robotica_servicio}}
+		\caption*{\centering Gama alta} % \cite{plaza_robotica_servicio}}
 	\end{minipage}
 	\caption{Robots de limpieza}
 	\label{fig:roblimpieza}
@@ -205,7 +226,7 @@ Los prototipos nombrados anteriormente suelen ser demostradores tecnológicos qu
 
 \subsubsection{Robots de salud}
 
-Los robots de salud sirven para mejorar la calidad de la atención médica y apoyar a los profesionales de la salud en diversas tareas. De esas tareas se pueden enumerar las siguientes: telepresencia, asistentes personales, cirugía, desinfección, esterilización, transporte interno y rehabilitación. De este gran abanico de tareas se puede destacar algunas aplicaciones que se puede ver en la Figura \ref{fig:robsalud}\\
+Los robots de salud sirven para mejorar la calidad de la atención médica y apoyar a los profesionales de la salud en diversas tareas. De esas tareas se pueden enumerar las siguientes: telepresencia, asistentes personales, cirugía, desinfección, esterilización, transporte interno y rehabilitación. De este gran abanico de tareas se puede destacar algunas aplicaciones que se puede ver en la Figura \ref{fig:robsalud}.\\
 
 \begin{figure}[ht!]
 	\centering
@@ -239,7 +260,7 @@ Los robots de salud sirven para mejorar la calidad de la atención médica y apo
 
 \subsubsection{Robots de logística}
 
-Los robots de logística son sistemas automatizados diseñados para mejorar la eficiencia, precisión y velocidad en la gestión de la cadena de suministro y operaciones logísticas en cadenas de montaje y almacenes. Generalmente los sistemas automatizados son flotas de robots a las que se les aplica distintas arquitecturas software como puede ser \acs{AGV} o \acs{AMR} para poder realizar la tarea asignada. También existen prototipos de robots de reparto que son capaces de hacer entrega de última milla. La figura \ref{fig:robreparto}  muestra ejemplos de robots de reparto. \\ 
+Los robots de logística son sistemas automatizados diseñados para mejorar la eficiencia, precisión y velocidad en la gestión de la cadena de suministro y operaciones logísticas en cadenas de montaje y almacenes. Generalmente los sistemas automatizados son flotas de robots a las que se les aplica distintas arquitecturas software como puede ser \acs{AGV} o \acs{AMR} para poder realizar la tarea asignada. También existen prototipos de robots de reparto que son capaces de hacer entrega de última milla. La Figura \ref{fig:robreparto}  muestra ejemplos de robots de reparto. \\ 
 
 \begin{figure}[ht!]
 	\centering
@@ -263,7 +284,7 @@ Los robots de logística son sistemas automatizados diseñados para mejorar la e
 
 En \cite{thorpe2003field} se define a los robots de campo como la automatización de muchas plataformas terrestres, marítimas y aéreas en aplicaciones como la minería, la manipulación de carga, la agricultura, la exploración y explotación submarina, las carreteras, la exploración planetaria, la vigilancia costera y el rescate, entre otros. La robótica de campo se caracteriza por la aplicación de los principios robóticos más avanzados en cuanto a sensado, control y razonamiento en entornos no estructurados y difíciles. El atractivo de la robótica de campo es que es una ciencia desafiante, involucra los últimos principios de ingeniería y diseño de sistemas, y ofrece la verdadera posibilidad de que los principios robóticos hagan una contribución económica y social sustancial en muchas áreas de aplicación diferentes. En general, los robots de campo son plataformas móviles que trabajan al aire libre, a menudo produciendo interacciones fuertes con sus entornos, sin supervisión humana.
 
-En los últimos años se ha podido notar un gran progreso en el desarrollo y la implementación de sistemas robóticos de campo. En la figura \ref{fig:robcampo} se pueden ver ejemplos al respecto. \\
+En los últimos años se ha podido notar un gran progreso en el desarrollo y la implementación de sistemas robóticos de campo. En la Figura \ref{fig:robcampo} se pueden ver ejemplos al respecto. \\
 
 
 \begin{figure}[ht!]
@@ -311,13 +332,13 @@ Los robots de bajo coste son aquellos robots diseñados y fabricados con el obje
 	
 \end{itemize}\
 
-En resumen, los robots de bajo coste permiten la democratización de la tecnología robótica, facilitando su acceso a un público más amplio y fomentando la innovación y el aprendizaje en diferentes campos. En la figura \ref{fig:roblowcost} se puede apreciar una aplicación real reciente de la robótica de bajo coste de la universidad \textit{Carnegie Mellon}.\\ 
+En resumen, los robots de bajo coste permiten la democratización de la tecnología robótica, facilitando su acceso a un público más amplio y fomentando la innovación y el aprendizaje en diferentes campos. En la Figura \ref{fig:roblowcost} se puede apreciar una aplicación real reciente de la robótica de bajo coste de la universidad \textit{Carnegie Mellon} descrita en el artículo \cite{shaw2024leap}.\\ 
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=9cm]{figs/handlowcost.png}
+		\includegraphics[width=16cm]{figs/handlowcost.png}
 	\end{center}
-	\caption{Mano Antropomórfica Híbrida Rígida y Suave \cite{shaw2024leap}}
+	\caption{Mano Antropomórfica Híbrida Rígida y Suave} %\cite{shaw2024leap}}
 	\label{fig:roblowcost}
 \end{figure}\
 
