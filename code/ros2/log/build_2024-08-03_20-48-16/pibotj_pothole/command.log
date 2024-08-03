@@ -1,0 +1,2 @@
+Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole -- -j8 -l8
+Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole' returned '2': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole -- -j8 -l8

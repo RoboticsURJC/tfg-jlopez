@@ -1,0 +1,18 @@
+[31mCMake Error at CMakeLists.txt:15 (find_package):
+  By not providing "Findjoint_state_controller.cmake" in CMAKE_MODULE_PATH
+  this project has asked CMake to find a package configuration file provided
+  by "joint_state_controller", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "joint_state_controller" with any of the following names:
+
+    joint_state_controllerConfig.cmake
+    joint_state_controller-config.cmake
+
+  Add the installation prefix of "joint_state_controller" to
+  CMAKE_PREFIX_PATH or set "joint_state_controller_DIR" to a directory
+  containing one of the above files.  If "joint_state_controller" provides a
+  separate development package or SDK, be sure it has been installed.
+
+[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

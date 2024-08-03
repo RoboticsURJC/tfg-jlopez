@@ -1,26 +1,57 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.5)
 project(pibotj_pothole)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+# Default to C++14 if not set
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 
-# find dependencies
+# Find ament_cmake package
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
-  set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
-  set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+# Find dependencies
+find_package(urdf REQUIRED)
+find_package(controller_manager REQUIRED)
+find_package(joint_state_broadcaster REQUIRED)
+find_package(robot_state_publisher REQUIRED)
+
+# Include directories
+include_directories(
+  ${ament_INCLUDE_DIRS}
+)
+
+# Declare a C++ executable (if needed)
+# Uncomment and adapt if you have executables to compile
+# add_executable(${PROJECT_NAME}_node src/mrm_description_node.cpp)
+# ament_target_dependencies(${PROJECT_NAME}_node
+#   urdf
+#   controller_manager
+#   joint_state_broadcaster
+#   robot_state_publisher
+# )
+
+# Install targets
+# Uncomment and adapt if you have libraries or executables to install
+# install(TARGETS ${PROJECT_NAME}
+#   ARCHIVE DESTINATION lib/${PROJECT_NAME}
+#   LIBRARY DESTINATION lib/${PROJECT_NAME}
+#   RUNTIME DESTINATION lib/${PROJECT_NAME}
+# )
+# install(TARGETS ${PROJECT_NAME}_node
+#   RUNTIME DESTINATION lib/${PROJECT_NAME}
+# )
+
+# Install headers
+# install(DIRECTORY include/${PROJECT_NAME}/
+#   DESTINATION include
+#   FILES_MATCHING PATTERN "*.h"
+#   PATTERN ".svn" EXCLUDE
+# )
+
+# Install other files (e.g., launch files)
+# install(FILES
+#   launch/view_robot.launch.py
+#   DESTINATION share/${PROJECT_NAME}/launch
+# )
 
 ament_package()

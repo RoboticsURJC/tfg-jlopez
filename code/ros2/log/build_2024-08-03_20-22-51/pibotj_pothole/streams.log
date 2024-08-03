@@ -1,0 +1,38 @@
+[0.010s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole -- -j8 -l8
+[0.032s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.145s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.154s] -- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)
+[0.190s] -- Found controller_manager: 2.41.0 (/opt/ros/humble/share/controller_manager/cmake)
+[0.209s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.212s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.217s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.227s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.239s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.851s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.852s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.880s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.887s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.907s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.913s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.922s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.522s] [31mCMake Error at CMakeLists.txt:15 (find_package):
+[1.522s]   By not providing "Findjoint_state_controller.cmake" in CMAKE_MODULE_PATH
+[1.522s]   this project has asked CMake to find a package configuration file provided
+[1.522s]   by "joint_state_controller", but CMake did not find one.
+[1.523s] 
+[1.523s]   Could not find a package configuration file provided by
+[1.523s]   "joint_state_controller" with any of the following names:
+[1.523s] 
+[1.523s]     joint_state_controllerConfig.cmake
+[1.523s]     joint_state_controller-config.cmake
+[1.523s] 
+[1.523s]   Add the installation prefix of "joint_state_controller" to
+[1.523s]   CMAKE_PREFIX_PATH or set "joint_state_controller_DIR" to a directory
+[1.523s]   containing one of the above files.  If "joint_state_controller" provides a
+[1.523s]   separate development package or SDK, be sure it has been installed.
+[1.524s] 
+[1.524s] [0m
+[1.524s] -- Configuring incomplete, errors occurred!
+[1.524s] See also "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/CMakeOutput.log".
+[1.529s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[1.531s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole' returned '2': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole -- -j8 -l8
