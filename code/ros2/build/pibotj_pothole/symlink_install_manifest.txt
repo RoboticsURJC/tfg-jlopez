@@ -1,0 +1,15 @@
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/ament_index/resource_index/package_run_dependencies/pibotj_pothole
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/ament_index/resource_index/parent_prefix_path/pibotj_pothole
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/ament_prefix_path.sh
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/ament_prefix_path.dsv
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/path.sh
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/path.dsv
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.bash
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.sh
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.zsh
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.dsv
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/package.dsv
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/ament_index/resource_index/packages/pibotj_pothole
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/cmake/pibotj_potholeConfig.cmake
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/cmake/pibotj_potholeConfig-version.cmake
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/package.xml

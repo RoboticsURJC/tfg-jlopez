@@ -1,0 +1,44 @@
+[0.011s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_pothole -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole
+[0.243s] -- The C compiler identification is GNU 11.4.0
+[0.402s] -- The CXX compiler identification is GNU 11.4.0
+[0.413s] -- Detecting C compiler ABI info
+[0.484s] -- Detecting C compiler ABI info - done
+[0.492s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.492s] -- Detecting C compile features
+[0.493s] -- Detecting C compile features - done
+[0.497s] -- Detecting CXX compiler ABI info
+[0.572s] -- Detecting CXX compiler ABI info - done
+[0.580s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.580s] -- Detecting CXX compile features
+[0.581s] -- Detecting CXX compile features - done
+[0.592s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.774s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.840s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.878s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.960s] -- Added test 'lint_cmake' to check CMake code style
+[0.962s] -- Added test 'xmllint' to check XML markup files
+[0.963s] -- Configuring done
+[0.966s] -- Generating done
+[0.967s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole
+[0.971s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_pothole -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole
+[0.972s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole -- -j8 -l8
+[1.008s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole -- -j8 -l8
+[1.037s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole
+[1.043s] -- Install configuration: ""
+[1.043s] -- Execute custom install script
+[1.044s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/ament_index/resource_index/package_run_dependencies/pibotj_pothole
+[1.053s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/ament_index/resource_index/parent_prefix_path/pibotj_pothole
+[1.061s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/ament_prefix_path.sh
+[1.070s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/ament_prefix_path.dsv
+[1.078s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/path.sh
+[1.086s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/environment/path.dsv
+[1.094s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.bash
+[1.102s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.sh
+[1.111s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.zsh
+[1.119s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/local_setup.dsv
+[1.127s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/package.dsv
+[1.136s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/ament_index/resource_index/packages/pibotj_pothole
+[1.145s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/cmake/pibotj_potholeConfig.cmake
+[1.153s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/cmake/pibotj_potholeConfig-version.cmake
+[1.162s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_pothole/share/pibotj_pothole/package.xml
+[1.173s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole
