@@ -1,9 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/pibotj_pothole_uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/test.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/edit_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/rebuild_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/list_install_components.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/install.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/install/local.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_pothole/CMakeFiles/install/strip.dir

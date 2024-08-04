@@ -1,0 +1,71 @@
+<?xml version="1.0"?> <!-- Define la versión del estándar XML utilizada -->
+<robot name="simple_robot"> <!-- Comienza la definición del robot y le da el nombre "simple_robot" -->
+<!-- hay 3 piezas que están unidas por 2 uniones (joints)-->
+<!-- rotaciones pueden ser: prismáticas o rotacionales-->
+<!-- c1: es las coordenadas (base_link) -->
+<!-- c2: es el sistema de coordenadas de (joint_1 - revolute) -->
+<!-- c3: es el centro de (first_link) -->
+<!-- c4: es el sistema de coordenadas de (joint_2 - prismatic) -->
+<!-- c5:  es el centro de (second_link) -->
+  <!-- C1 -->
+  <link name="base_link"> <!-- Define un enlace llamado "base_link", que es la base del robot -->
+    <visual> <!-- Define la apariencia visual del enlace -->
+      <geometry> <!-- Especifica la geometría del enlace -->
+        <cylinder length="0.1" radius="0.3"/> <!-- Define la geometría como un cilindro con longitud de 0.1 y radio de 0.3 -->
+      </geometry>
+      <!-- origin- el marco de referencia del elemento visual con respecto al marco de referencia del enlace -->
+      <!-- rpy- r es roll, p es pitch y y es yaw -->
+      <!-- xyz - desplazamientos en los ejes x, y, z -->
+      <!-- No hay rotación respecto del sistema de coordenadas del mundo real -->
+      <origin rpy="0 0 0" xyz="0 0 0"/> <!-- Define el origen de la geometría respecto al enlace (sin rotación ni desplazamiento) -->
+      <material name="blue"> <!-- Define el material del enlace -->
+        <color rgba="0 1 0 1"/> <!-- Especifica el color del material en formato RGBA (verde) -->
+      </material>
+    </visual>
+  </link>
+
+  <!-- C2 JOINT -->
+  <joint name="joint_1" type="revolute"> <!-- Define una articulación llamada "joint_1" de tipo rotacional -->
+    <parent link="base_link"/> <!-- Enlace anterior al que se une la articulación (origen de la unión) -->
+    <child link="first_link"/> <!-- Enlace posterior al que se une la articulación (destino de la unión) -->
+    <origin rpy="0 0 0" xyz="0 0 0.05"/> <!-- Posición de la articulación respecto al enlace base -->
+    <axis xyz="0 0 1"/> <!-- Define el eje de rotación de la articulación (en el eje Z) -->
+    <limit effort="300" velocity="2.0" lower="-1.2" upper="1.2"/> <!-- Limita el esfuerzo, velocidad y rango de movimiento de la articulación (en radianes) -->
+  </joint>
+
+  <!-- C3 -->
+  <link name="first_link"> <!-- Define un enlace llamado "first_link" -->
+    <visual> <!-- Define la apariencia visual del enlace -->
+      <geometry> <!-- Especifica la geometría del enlace -->
+        <cylinder length="0.5" radius="0.08"/> <!-- Define la geometría como un cilindro con longitud de 0.5 y radio de 0.08 -->
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.25"/> <!-- Origen del enlace respecto a "joint_1" -->
+      <material name="yellow"> <!-- Define el material del enlace -->
+        <color rgba="1 1 0 1"/> <!-- Especifica el color del material en formato RGBA (amarillo) -->
+      </material>
+    </visual>
+  </link>
+  
+  <!-- C4 JOINT -->
+  <joint name="joint_2" type="prismatic"> <!-- Define una articulación llamada "joint_2" de tipo prismática (movimiento lineal) -->
+    <parent link="first_link"/> <!-- Enlace anterior al que se une la articulación (origen de la unión) -->
+    <child link="second_link"/> <!-- Enlace posterior al que se une la articulación (destino de la unión) -->
+    <origin rpy="0 0 0" xyz="0 0 0.5"/> <!-- Posición de la articulación respecto al enlace "first_link" -->
+    <axis xyz="0 1 0"/> <!-- Define el eje de movimiento lineal de la articulación (en el eje Y) -->
+    <limit effort="300" velocity="2.0" lower="-2" upper="2"/> <!-- Limita el esfuerzo, velocidad y rango de movimiento de la articulación (en metros) -->
+  </joint>
+
+  <!-- C5 -->
+  <link name="second_link"> <!-- Define un enlace llamado "second_link" -->
+    <visual> <!-- Define la apariencia visual del enlace -->
+      <geometry> <!-- Especifica la geometría del enlace -->
+        <box size="0.2 0.7 0.1"/> <!-- Define la geometría como una caja con dimensiones especificadas -->
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.05"/> <!-- Origen del enlace respecto a "joint_2" -->
+      <material name="red"> <!-- Define el material del enlace -->
+        <color rgba="0 0 1 1"/> <!-- Especifica el color del material en formato RGBA (azul) -->
+      </material>
+    </visual>
+  </link>
+
+</robot> <!-- Cierra la definición del robot -->
