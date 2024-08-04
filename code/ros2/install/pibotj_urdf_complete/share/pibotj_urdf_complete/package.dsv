@@ -1,0 +1,8 @@
+source;share/pibotj_urdf_complete/hook/cmake_prefix_path.ps1
+source;share/pibotj_urdf_complete/hook/cmake_prefix_path.dsv
+source;share/pibotj_urdf_complete/hook/cmake_prefix_path.sh
+source;share/pibotj_urdf_complete/local_setup.bash
+source;share/pibotj_urdf_complete/local_setup.dsv
+source;share/pibotj_urdf_complete/local_setup.ps1
+source;share/pibotj_urdf_complete/local_setup.sh
+source;share/pibotj_urdf_complete/local_setup.zsh

@@ -1,0 +1,203 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.099s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x75ba58b55e40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75ba58b55840>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75ba58b55840>>)
+[0.250s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.251s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.251s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.251s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.251s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.251s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.251s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/pibotj_urdf_complete) by extension 'ros'
+[0.264s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pibotj_urdf_complete' with type 'ros.ament_cmake' and name 'pibotj_urdf_complete'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extensions ['ignore', 'ignore_ament_install']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extension 'ignore'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extensions ['colcon_meta']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extension 'colcon_meta'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extensions ['ros']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf_humble_test) by extension 'ros'
+[0.264s] DEBUG:colcon.colcon_core.package_identification:Package 'src/urdf_humble_test' with type 'ros.ament_cmake' and name 'urdf_humble_test'
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.303s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install
+[0.305s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 461 installed packages in /opt/ros/humble
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'cmake_target' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'cmake_clean_cache' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'cmake_clean_first' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'cmake_force_configure' from command line to 'False'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'ament_cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'catkin_cmake_args' from command line to 'None'
+[0.360s] Level 5:colcon.colcon_core.verb:set package 'pibotj_urdf_complete' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.361s] DEBUG:colcon.colcon_core.verb:Building package 'pibotj_urdf_complete' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete', 'merge_install': False, 'path': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_urdf_complete', 'symlink_install': False, 'test_result_base': None}
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'cmake_target' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'urdf_humble_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.361s] DEBUG:colcon.colcon_core.verb:Building package 'urdf_humble_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test', 'merge_install': False, 'path': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/urdf_humble_test', 'symlink_install': False, 'test_result_base': None}
+[0.361s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.362s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.362s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_urdf_complete' with build type 'ament_cmake'
+[0.362s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_urdf_complete'
+[0.364s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.364s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.364s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.367s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/urdf_humble_test' with build type 'ament_cmake'
+[0.367s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/urdf_humble_test'
+[0.367s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.367s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_urdf_complete -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete
+[0.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test -- -j8 -l8
+[0.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test -- -j8 -l8
+[0.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test
+[0.449s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_humble_test)
+[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/urdf_humble_test
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test' for CMake module files
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test' for CMake config files
+[0.453s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_humble_test', 'cmake_prefix_path')
+[0.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/hook/cmake_prefix_path.ps1'
+[0.453s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/hook/cmake_prefix_path.dsv'
+[0.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/hook/cmake_prefix_path.sh'
+[0.454s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/bin'
+[0.454s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/lib/pkgconfig/urdf_humble_test.pc'
+[0.455s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/lib/python3.10/site-packages'
+[0.455s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/bin'
+[0.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.ps1'
+[0.456s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.dsv'
+[0.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.sh'
+[0.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.bash'
+[0.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.zsh'
+[0.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/colcon-core/packages/urdf_humble_test)
+[0.479s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(urdf_humble_test)
+[0.479s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test' for CMake module files
+[0.479s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test' for CMake config files
+[0.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('urdf_humble_test', 'cmake_prefix_path')
+[0.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/hook/cmake_prefix_path.ps1'
+[0.480s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/hook/cmake_prefix_path.dsv'
+[0.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/hook/cmake_prefix_path.sh'
+[0.481s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/bin'
+[0.481s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/lib/pkgconfig/urdf_humble_test.pc'
+[0.481s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/lib/python3.10/site-packages'
+[0.482s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/bin'
+[0.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.ps1'
+[0.482s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.dsv'
+[0.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.sh'
+[0.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.bash'
+[0.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/urdf_humble_test/package.zsh'
+[0.484s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/urdf_humble_test/share/colcon-core/packages/urdf_humble_test)
+[0.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_urdf_complete -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete
+[0.948s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete -- -j8 -l8
+[0.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete -- -j8 -l8
+[1.002s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete
+[1.012s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pibotj_urdf_complete)
+[1.012s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_urdf_complete
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete' for CMake module files
+[1.014s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete' for CMake config files
+[1.014s] Level 1:colcon.colcon_core.shell:create_environment_hook('pibotj_urdf_complete', 'cmake_prefix_path')
+[1.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/hook/cmake_prefix_path.ps1'
+[1.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/hook/cmake_prefix_path.dsv'
+[1.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/hook/cmake_prefix_path.sh'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/bin'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/lib/pkgconfig/pibotj_urdf_complete.pc'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/lib/python3.10/site-packages'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/bin'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.ps1'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.dsv'
+[1.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.sh'
+[1.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.bash'
+[1.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.zsh'
+[1.019s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/colcon-core/packages/pibotj_urdf_complete)
+[1.038s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pibotj_urdf_complete)
+[1.038s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete' for CMake module files
+[1.039s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete' for CMake config files
+[1.039s] Level 1:colcon.colcon_core.shell:create_environment_hook('pibotj_urdf_complete', 'cmake_prefix_path')
+[1.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/hook/cmake_prefix_path.ps1'
+[1.040s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/hook/cmake_prefix_path.dsv'
+[1.040s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/hook/cmake_prefix_path.sh'
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/bin'
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/lib/pkgconfig/pibotj_urdf_complete.pc'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/lib/python3.10/site-packages'
+[1.041s] Level 1:colcon.colcon_core.environment:checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/bin'
+[1.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.ps1'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.dsv'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.sh'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.bash'
+[1.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/pibotj_urdf_complete/package.zsh'
+[1.043s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_urdf_complete/share/colcon-core/packages/pibotj_urdf_complete)
+[1.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.044s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.049s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.049s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.049s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.061s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.061s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.ps1'
+[1.062s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/_local_setup_util_ps1.py'
+[1.063s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.ps1'
+[1.064s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.sh'
+[1.065s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/_local_setup_util_sh.py'
+[1.065s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.sh'
+[1.066s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.bash'
+[1.067s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.bash'
+[1.068s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.zsh'
+[1.068s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.zsh'
