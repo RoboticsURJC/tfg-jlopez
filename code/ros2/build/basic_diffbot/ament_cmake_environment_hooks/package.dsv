@@ -1,0 +1,4 @@
+source;share/basic_diffbot/local_setup.bash
+source;share/basic_diffbot/local_setup.dsv
+source;share/basic_diffbot/local_setup.sh
+source;share/basic_diffbot/local_setup.zsh
