@@ -9,7 +9,7 @@ def generate_launch_description():
     #fijamos el path a nuestro paquete
     pkgPath = launch_ros.substitutions.FindPackageShare(package='pibotj_urdf_complete').find('pibotj_urdf_complete')
     # fijamos el path a nuestro urdf
-    urdfModelPath=os.path.join(pkgPath, 'urdf/model.xacro')
+    urdfModelPath=os.path.join(pkgPath, 'urdf/model.urdf')
     # fijamos el path a la configuración de rviz (opcional)
     rvizConfigPath=os.path.join(pkgPath, 'config/config.rviz')
 
@@ -74,3 +74,4 @@ def generate_launch_description():
 
     
     
+

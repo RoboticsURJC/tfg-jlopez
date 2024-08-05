@@ -8,7 +8,7 @@
     <!-- Definición del enlace llamado "base_link". -->
     <visual>
       <!-- Sección que define las propiedades visuales del enlace. -->
-      <origin rpy="-1.57 0 0" xyz="0 0 -0.1"/>
+      <origin rpy="-1.57 0 0" xyz="0 0 0"/>
       <!-- La posición (xyz) y orientación (rpy) del enlace respecto a su origen. -->
       <geometry>
         <!-- Inicio de la definición de la geometría del enlace. -->
@@ -23,7 +23,7 @@
     </visual>
     <collision>
       <!-- Sección que define las propiedades de colisión del enlace. -->
-      <origin rpy="0 0 0" xyz="0 0 -0.1"/>
+      <origin rpy="-1.57 0 0" xyz="0 0 0"/>
       <!-- La posición y orientación de la geometría de colisión. -->
       <geometry>
         <!-- Inicio de la definición de la geometría de colisión. -->
@@ -32,7 +32,7 @@
     </collision>
     <inertial>
       <!-- Sección que define las propiedades inerciales del enlace. -->
-     <origin rpy="0 0 0" xyz="0 0 -0.1"/>
+     <origin rpy="-1.57 0 0" xyz="0 0 0"/>
       <!-- La posición y orientación del centro de masa del enlace. -->
      <mass value="157.633"/>
       <!-- La masa del enlace en kilogramos. -->
@@ -61,43 +61,42 @@
          - `velocity`: Velocidad máxima de rotación en radianes por segundo. -->
   </joint>
 
-  <!-- Definición del enlace base en forma de caja -->
+<!-- Definición de la pate superior del robot -->
   <link name="psuperior_link">
-    <!-- Definición del enlace llamado "link_01". -->
+    <!-- Definición del enlace llamado "base_link". -->
     <visual>
       <!-- Sección que define las propiedades visuales del enlace. -->
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <!-- La posición (xyz) y orientación (rpy: roll, pitch, yaw) del enlace respecto a su origen. -->
+      <origin rpy="3.14 0 0" xyz="2.5 93.1 34"/>
+      <!-- La posición (xyz) y orientación (rpy) del enlace respecto a su origen. -->
       <geometry>
         <!-- Inicio de la definición de la geometría del enlace. -->
-        <box size="1 1 1"/>
-        <!-- Definición de una caja con tamaño 1x1x1 metros. -->
+        <mesh filename="package://pibotj_urdf_complete/meshes/psuperior.stl" scale="1.0 1.0 1.0"/>
+        <!-- Geometría del enlace definida mediante una malla (mesh) que se encuentra en el archivo "base.stl".
+             La malla se escala a tamaño real -->
       </geometry>
-      <material name="gray">
-        <!-- Material del enlace con nombre "gray". -->
-        <color rgba="0.5 0.5 0.5 1.0"/>
-        <!-- Color del material: gris con transparencia completa (opaco). -->
+      <material name="blue">
+        <!-- Material del enlace con nombre azul. -->
+        <color rgba="0.0 0.0 1.0 1.0"/>
       </material>
     </visual>
     <collision>
       <!-- Sección que define las propiedades de colisión del enlace. -->
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="3.14 0 0" xyz="2.5 93.1 34"/>
       <!-- La posición y orientación de la geometría de colisión. -->
       <geometry>
         <!-- Inicio de la definición de la geometría de colisión. -->
-        <box size="1 1 1"/>
-        <!-- La geometría de colisión es una caja de 1x1x1 metros, igual que la visual. -->
+        <mesh filename="package://pibotj_urdf_complete/meshes/psuperior.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
     <inertial>
       <!-- Sección que define las propiedades inerciales del enlace. -->
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+     <origin rpy="3.14 0 0" xyz="2.5 93.1 34"/>
       <!-- La posición y orientación del centro de masa del enlace. -->
-      <mass value="1024"/>
+     <mass value="157.633"/>
       <!-- La masa del enlace en kilogramos. -->
-      <inertia ixx="170.667" ixy="0" ixz="0" iyy="170.667" iyz="0" izz="170.667"/>
+     <inertia ixx="0.085" ixy="0" ixz="0" iyy="0.085" iyz="0" izz="0.085"/>
       <!-- Tensor de inercia del enlace, que define cómo se distribuye la masa alrededor del centro de masa. -->
-    </inertial>
+     </inertial>
   </link>
 
  
