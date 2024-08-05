@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="caster_diffbot" xmlns:xacro="http://ros.org/wiki/xacro"> 
   
-  <xacro:property name="package_name" value="pibotj_description"/>
+  <xacro:property name="package_name" value="pibotj"/>
   <xacro:property name="PI" value="3.14159265"/>
   
   <xacro:property name="wheelSeparation" value="0.13"/>

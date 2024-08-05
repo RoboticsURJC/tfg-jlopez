@@ -10,7 +10,7 @@ import xacro
 
 def generate_launch_description():
 
-    package_name = "pibotj_description"
+    package_name = "pibotj"
     robot_model_urdf = "the_simplest_diffbot.xacro"
 
     simu_time = DeclareLaunchArgument(

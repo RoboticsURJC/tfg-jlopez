@@ -7,7 +7,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 import xacro
 
-package_name = 'pibotj_description'
+package_name = 'pibotj'
 robot_model='caster_diffbot' #the_simplest_diffbot, caster_diffbot
 pose = ['0.0', '0.0', '0.0', '0.0'] #Initial robot pose in gz: x,y,z,th
 gz_robot_name = robot_model #robot name used in Gazebo

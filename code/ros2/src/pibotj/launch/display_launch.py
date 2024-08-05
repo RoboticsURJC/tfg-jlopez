@@ -9,7 +9,7 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    package_name = get_package_share_path('pibotj_description')
+    package_name = get_package_share_path('pibotj')
     model_path = package_name / 'urdf/the_simplest_diffbot.xacro'
     rviz_config_path = package_name / 'rviz/robot_display.rviz'
 
