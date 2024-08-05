@@ -11,9 +11,7 @@
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/caster_wheel.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base_plate.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base.stl
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/psuperior.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/camara.stl
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/strasera.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/rviz/robot_display.rviz
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/worlds/empty.world
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model.config

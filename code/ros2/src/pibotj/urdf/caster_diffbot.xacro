@@ -115,12 +115,14 @@
   <joint name="caster_base_joint" type="fixed">
     <origin xyz="-0.104 0 0.015" rpy="0 0 ${PI}" />
     <parent link="base_link" />
-    <child link="caster_base_link" />
+    <!--child link="caster_base_link" /-->
+    <child link="caster_wheel_link" />
+
     <!--axis xyz="0 0 1" /-->
     <!--dynamics damping="0.001" fricction="0.001"/-->
   </joint>
   
-  <link name="caster_base_link">
+  <!--link name="caster_base_link">
     <visual>
       <origin xyz="0 0 0.015" rpy="${-PI} 0 0" />
       <geometry>
@@ -132,14 +134,14 @@
       <mass value="0.5" />
       <inertia ixx="0.00004" ixy="0" ixz="0" iyy="0.00004" iyz="0" izz="0.00001" />
     </inertial>
-  </link>
+  </link-->
 
-  <joint name="caster_wheel_joint" type="fixed">
+  <!--joint name="caster_wheel_joint" type="fixed">
     <origin xyz="0.015014 -0.00012272 -0.01" rpy="0 ${-PI/2} ${PI/2}" />
     <parent link="caster_base_link" />
-    <child link="caster_wheel_link" />
+    <child link="caster_wheel_link" /-->
     <!--axis xyz="0 0 1" /-->
-  </joint>
+  <!--/joint-->
   
   <link name="caster_wheel_link">
     <visual>
@@ -164,15 +166,15 @@
   
   <!-- ******************** SENSORS DEFINITION ******************** -->
   <!-- IMU -->
-  <joint name="imu_joint" type="fixed">
+  <!--joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu_link"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
-  <link name="imu_link" />
+  <link name="imu_link" /-->
   
   <!-- LIDAR -->
-  <joint name="lidar_joint" type="fixed">
+  <!--joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar_link"/>
     <origin xyz="-0.04 0 0.07" rpy="0 0 0"/>
@@ -184,31 +186,46 @@
         <cylinder length="0.05" radius="0.03" />
       </geometry>
     </visual>
-  </link>
+  </link-->
   
   
   <!-- CAMERA -->
   <joint name="camera_joint" type="fixed">
-    <origin xyz="0.04 0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.04 0.025 0.05" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="camera_frame"/>
   </joint>
-  <link name="camera_frame">
+  <!--link name="camera_frame">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <box size="0.01 0.03 0.02"/>
       </geometry>
     </visual>
+  </link-->
+
+  <link name="camera_frame"> <!-- Important: Every visual, collision and inertial tag has its own origin -->
+    <visual>
+      <!--origin xyz="-0.033 0.0 0.04" rpy="0 0 ${PI}"/-->
+      <origin xyz="0.0 0.0 0.0 " rpy="0 0 ${-PI/2}"/>
+      <geometry>
+        <!--mesh filename="package://${package_name}/meshes/base_plate.stl" scale="1 1 1"/-->
+        <mesh filename="package://${package_name}/meshes/camara.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="Blue"> <!-- Color in Rviz2 (inside visual tag) -->
+        <color rgba="${0/255} ${0/255} ${255/255} 1.0"/>
+      </material>
+    </visual>
   </link>
+
   
   
-  <joint name="logo_joint" type="fixed">
+  <!--joint name="logo_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="logo_link"/>
     <origin xyz="-0.09 0.0 0.05" rpy="0 0 0"/>
-  </joint>
-  <link name="logo_link">
+  </joint-->
+  <!--link name="logo_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 ${PI}"/>
       <geometry>
@@ -221,7 +238,7 @@
         <box size="0.01 0.1 0.1"/>
       </geometry>
     </collision>
-  </link>
+  </link-->
 
 
 </robot>
