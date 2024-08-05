@@ -28,6 +28,7 @@
       <geometry>
         <!--mesh filename="package://${package_name}/meshes/base_plate.stl" scale="1 1 1"/-->
         <mesh filename="package://${package_name}/meshes/base.stl" scale="0.001 0.001 0.001"/>
+
       </geometry>
       <material name="Blue"> <!-- Color in Rviz2 (inside visual tag) -->
         <color rgba="${0/255} ${0/255} ${255/255} 1.0"/>
