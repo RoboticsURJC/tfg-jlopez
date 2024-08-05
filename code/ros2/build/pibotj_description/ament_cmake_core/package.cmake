@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "pibotj_description")
 set(pibotj_description_VERSION "1.0.0")
-set(pibotj_description_MAINTAINER "C. Mauricio Arteaga Escamilla from "Robotica Posgrado" (YouTube channel) <juloau11@gmail.com>")
+set(pibotj_description_MAINTAINER "C. Mauricio Arteaga Escamilla from "Robotica Posgrado" (YouTube channel) <cmauricioae8@gmail.com>")
 set(pibotj_description_BUILD_DEPENDS "geometry_msgs" "nav_msgs")
 set(pibotj_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(pibotj_description_BUILD_EXPORT_DEPENDS "geometry_msgs" "nav_msgs")

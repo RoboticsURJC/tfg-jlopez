@@ -1,0 +1,104 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[33mCMake Warning (dev) at /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_description/ament_cmake_core/package.cmake:3:
+  Syntax Warning in cmake code at column 72
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:100 (include)
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+  CMakeLists.txt:26 (ament_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_description/ament_cmake_core/package.cmake:3:
+  Syntax Warning in cmake code at column 89
+
+  Argument not separated from preceding token by whitespace.
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:100 (include)
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+  CMakeLists.txt:26 (ament_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_description
+-- Install configuration: ""
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/launch
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/launch/display_launch.py
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/launch/simple_robot_gz_launch.py
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/launch/one_robot_gz_launch.py
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/urdf
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/urdf/the_simplest_diffbot.xacro
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/urdf/caster_diffbot_gz.xacro
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/urdf/caster_diffbot.xacro
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/urdf/the_simplest_diffbot_gz.xacro
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/meshes
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/meshes/base_caster.stl
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/meshes/husky_wheel.stl
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/meshes/wheel_ring.stl
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/meshes/caster_wheel.stl
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/meshes/base_plate.stl
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/rviz
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/rviz/robot_display.rviz
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/worlds
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/worlds/empty.world
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/model.config
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/meshes
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/meshes/RP_logo.dae
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/model-1_4.sdf
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/materials
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/materials/textures
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/materials/textures/RoboticaPosgrado_logo.png
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/materials/textures/Marker0_4x4.png
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/model-1_5.sdf
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/roboticaposgrado/model.sdf
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/ament_index/resource_index/package_run_dependencies/pibotj_description
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/ament_index/resource_index/parent_prefix_path/pibotj_description
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/environment/ament_prefix_path.sh
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/environment/ament_prefix_path.dsv
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/environment/path.sh
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/environment/path.dsv
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/local_setup.bash
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/local_setup.sh
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/local_setup.zsh
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/local_setup.dsv
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/package.dsv
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/ament_index/resource_index/packages/pibotj_description
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/cmake/pibotj_descriptionConfig.cmake
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/cmake/pibotj_descriptionConfig-version.cmake
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description/share/pibotj_description/package.xml

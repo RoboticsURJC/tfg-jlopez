@@ -1,0 +1,110 @@
+[0.010s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/basic_diffbot -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot
+[0.217s] -- The C compiler identification is GNU 11.4.0
+[0.368s] -- The CXX compiler identification is GNU 11.4.0
+[0.378s] -- Detecting C compiler ABI info
+[0.447s] -- Detecting C compiler ABI info - done
+[0.458s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.458s] -- Detecting C compile features
+[0.459s] -- Detecting C compile features - done
+[0.463s] -- Detecting CXX compiler ABI info
+[0.537s] -- Detecting CXX compiler ABI info - done
+[0.548s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.548s] -- Detecting CXX compile features
+[0.548s] -- Detecting CXX compile features - done
+[0.556s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.701s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.802s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.857s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.862s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.872s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.887s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.908s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.982s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.986s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.071s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.095s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.136s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.150s] -- Looking for pthread.h
+[1.227s] -- Looking for pthread.h - found
+[1.227s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.295s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.296s] -- Found Threads: TRUE  
+[1.456s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.498s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.578s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[1.640s] [33mCMake Warning (dev) at /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/ament_cmake_core/package.cmake:3:
+[1.640s]   Syntax Warning in cmake code at column 67
+[1.640s] 
+[1.640s]   Argument not separated from preceding token by whitespace.
+[1.640s] Call Stack (most recent call first):
+[1.640s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:100 (include)
+[1.641s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.641s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[1.641s]   CMakeLists.txt:26 (ament_package)
+[1.641s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.641s] [0m
+[1.641s] [33mCMake Warning (dev) at /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/ament_cmake_core/package.cmake:3:
+[1.641s]   Syntax Warning in cmake code at column 84
+[1.641s] 
+[1.641s]   Argument not separated from preceding token by whitespace.
+[1.641s] Call Stack (most recent call first):
+[1.641s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:100 (include)
+[1.641s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.641s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[1.641s]   CMakeLists.txt:26 (ament_package)
+[1.641s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.641s] [0m
+[1.645s] -- Configuring done
+[1.648s] -- Generating done
+[1.650s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot
+[1.660s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/basic_diffbot -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot
+[1.660s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot -- -j8 -l8
+[1.696s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot -- -j8 -l8
+[1.722s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot
+[1.729s] -- Install configuration: ""
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/launch
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/launch/display_launch.py
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/launch/simple_robot_gz_launch.py
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/launch/one_robot_gz_launch.py
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/urdf
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/urdf/the_simplest_diffbot.xacro
+[1.729s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/urdf/caster_diffbot_gz.xacro
+[1.730s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/urdf/caster_diffbot.xacro
+[1.730s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/urdf/the_simplest_diffbot_gz.xacro
+[1.730s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/meshes
+[1.730s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/meshes/base_caster.stl
+[1.730s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/meshes/husky_wheel.stl
+[1.731s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/meshes/wheel_ring.stl
+[1.732s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/meshes/caster_wheel.stl
+[1.733s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/meshes/base_plate.stl
+[1.734s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/rviz
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/rviz/robot_display.rviz
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/worlds
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/worlds/empty.world
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/model.config
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/meshes
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/meshes/RP_logo.dae
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/model-1_4.sdf
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/materials
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/materials/textures
+[1.735s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/materials/textures/RoboticaPosgrado_logo.png
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/materials/textures/Marker0_4x4.png
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/model-1_5.sdf
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/roboticaposgrado/model.sdf
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/ament_index/resource_index/package_run_dependencies/basic_diffbot
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/ament_index/resource_index/parent_prefix_path/basic_diffbot
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/environment/ament_prefix_path.sh
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/environment/ament_prefix_path.dsv
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/environment/path.sh
+[1.736s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/environment/path.dsv
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/local_setup.bash
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/local_setup.sh
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/local_setup.zsh
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/local_setup.dsv
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/package.dsv
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/ament_index/resource_index/packages/basic_diffbot
+[1.737s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/cmake/basic_diffbotConfig.cmake
+[1.738s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/cmake/basic_diffbotConfig-version.cmake
+[1.738s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot/share/basic_diffbot/package.xml
+[1.739s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot
