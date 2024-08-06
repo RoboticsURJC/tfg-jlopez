@@ -1,0 +1,54 @@
+[0.010s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj -- -j8 -l8
+[0.046s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj -- -j8 -l8
+[0.073s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj
+[0.079s] -- Install configuration: ""
+[0.079s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch
+[0.079s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch/display_launch.py
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch/simple_robot_gz_launch.py
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch/one_robot_gz_launch.py
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/the_simplest_diffbot.xacro
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/caster_diffbot_gz.xacro
+[0.080s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/caster_diffbot.xacro
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/the_simplest_diffbot_gz.xacro
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes
+[0.080s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/wheel.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base_caster.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/husky_wheel.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/wheel_ring.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/caster_wheel.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base_plate.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/camara.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/bolaloca.stl
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/rviz
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/rviz/robot_display.rviz
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/worlds
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/worlds/empty.world
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model.config
+[0.081s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/meshes
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/meshes/RP_logo.dae
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model-1_4.sdf
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/materials
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/materials/textures
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/materials/textures/RoboticaPosgrado_logo.png
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/materials/textures/Marker0_4x4.png
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model-1_5.sdf
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model.sdf
+[0.082s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/ament_index/resource_index/package_run_dependencies/pibotj
+[0.083s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/ament_index/resource_index/parent_prefix_path/pibotj
+[0.083s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/ament_prefix_path.sh
+[0.083s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/ament_prefix_path.dsv
+[0.084s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/path.sh
+[0.084s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/path.dsv
+[0.084s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.bash
+[0.084s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.sh
+[0.084s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.zsh
+[0.085s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.dsv
+[0.085s] -- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/package.dsv
+[0.085s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/ament_index/resource_index/packages/pibotj
+[0.085s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/cmake/pibotjConfig.cmake
+[0.086s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/cmake/pibotjConfig-version.cmake
+[0.086s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/package.xml
+[0.086s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj
