@@ -128,27 +128,6 @@
     <!--dynamics damping="0.001" fricction="0.001"/-->
   </joint>
   
-  <!--link name="caster_base_link">
-    <visual>
-      <origin xyz="0 0 0.015" rpy="${-PI} 0 0" />
-      <geometry>
-        <mesh filename="package://${package_name}/meshes/base_caster.stl" />
-      </geometry>
-    </visual>
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <mass value="0.5" />
-      <inertia ixx="0.00004" ixy="0" ixz="0" iyy="0.00004" iyz="0" izz="0.00001" />
-    </inertial>
-  </link-->
-
-  <!--joint name="caster_wheel_joint" type="fixed">
-    <origin xyz="0.015014 -0.00012272 -0.01" rpy="0 ${-PI/2} ${PI/2}" />
-    <parent link="caster_base_link" />
-    <child link="caster_wheel_link" /-->
-    <!--axis xyz="0 0 1" /-->
-  <!--/joint-->
-  
   <link name="caster_wheel_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -170,32 +149,6 @@
     </inertial>
   </link>
   
-  
-  <!-- ******************** SENSORS DEFINITION ******************** -->
-  <!-- IMU -->
-  <!--joint name="imu_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="imu_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>
-  <link name="imu_link" /-->
-  
-  <!-- LIDAR -->
-  <!--joint name="lidar_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="lidar_link"/>
-    <origin xyz="-0.04 0 0.07" rpy="0 0 0"/>
-  </joint>
-  <link name="lidar_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder length="0.05" radius="0.03" />
-      </geometry>
-    </visual>
-  </link-->
-  
-  
   <!-- CAMERA -->
 
   
@@ -211,7 +164,8 @@
     <child link="camera_frame"/>
     <origin xyz="0.04 0.025 0.05" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+    <!--limit effort="0.0" lower="0.0" upper="3.14" velocity="0.0"/-->
+    <limit effort="2.0" lower="0.0" upper="3.14" velocity="1.0"/>
     <dynamics damping="0.05" friction="0.05"/>
   </joint>
 
@@ -243,28 +197,6 @@
       <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
       </inertial>
   </link>
-
-  
-  <!--joint name="logo_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="logo_link"/>
-    <origin xyz="-0.09 0.0 0.05" rpy="0 0 0"/>
-  </joint-->
-  <!--link name="logo_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 ${PI}"/>
-      <geometry>
-        <mesh filename="package://${package_name}/roboticaposgrado/meshes/RP_logo.dae" scale="0.2 0.2 0.2"/>
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0.05" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.01 0.1 0.1"/>
-      </geometry>
-    </collision>
-  </link-->
-
 
 </robot>
 
