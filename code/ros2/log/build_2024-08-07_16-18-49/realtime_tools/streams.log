@@ -1,0 +1,58 @@
+[0.012s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools -- -j8 -l8
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target thread_priority[0m
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target realtime_tools[0m
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.078s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.096s] [  8%] Built target thread_priority
+[0.101s] [ 17%] Built target realtime_tools
+[0.102s] [ 30%] Built target gmock
+[0.103s] [ 39%] Built target gmock_main
+[0.120s] [35m[1mConsolidate compiler generated dependencies of target realtime_box_tests[0m
+[0.123s] [35m[1mConsolidate compiler generated dependencies of target realtime_box_best_effort_tests[0m
+[0.124s] [35m[1mConsolidate compiler generated dependencies of target realtime_publisher_tests[0m
+[0.128s] [35m[1mConsolidate compiler generated dependencies of target realtime_buffer_tests[0m
+[0.130s] [35m[1mConsolidate compiler generated dependencies of target realtime_clock_tests[0m
+[0.135s] [35m[1mConsolidate compiler generated dependencies of target realtime_server_goal_handle_tests[0m
+[0.138s] [35m[1mConsolidate compiler generated dependencies of target realtime_publisher_tests_non_polling[0m
+[0.156s] [ 47%] Built target realtime_box_tests
+[0.160s] [ 56%] Built target realtime_box_best_effort_tests
+[0.166s] [ 65%] Built target realtime_clock_tests
+[0.177s] [ 73%] Built target realtime_publisher_tests
+[0.182s] [ 82%] Built target realtime_buffer_tests
+[0.186s] [ 91%] Built target realtime_server_goal_handle_tests
+[0.199s] [100%] Built target realtime_publisher_tests_non_polling
+[0.214s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools -- -j8 -l8
+[0.260s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools
+[0.266s] -- Install configuration: ""
+[0.267s] -- Execute custom install script
+[0.268s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_box.h
+[0.268s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_box_best_effort.h
+[0.269s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_buffer.h
+[0.269s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_clock.h
+[0.269s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_publisher.h
+[0.270s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_server_goal_handle.h
+[0.270s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/include/realtime_tools/realtime_tools/thread_priority.hpp
+[0.270s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/environment/library_path.sh
+[0.271s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/environment/library_path.dsv
+[0.271s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/ament_index/resource_index/package_run_dependencies/realtime_tools
+[0.272s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/ament_index/resource_index/parent_prefix_path/realtime_tools
+[0.272s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/environment/ament_prefix_path.sh
+[0.273s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/environment/ament_prefix_path.dsv
+[0.273s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/environment/path.sh
+[0.273s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/environment/path.dsv
+[0.274s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/local_setup.bash
+[0.274s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/local_setup.sh
+[0.274s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/local_setup.zsh
+[0.274s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/local_setup.dsv
+[0.275s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/package.dsv
+[0.284s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/ament_index/resource_index/packages/realtime_tools
+[0.284s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_targets-extras.cmake
+[0.284s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.285s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig.cmake
+[0.285s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig-version.cmake
+[0.285s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/package.xml
+[0.286s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib/librealtime_tools.so
+[0.287s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib/libthread_priority.so
+[0.287s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake/export_realtime_toolsExport.cmake
+[0.287s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake/export_realtime_toolsExport-noconfig.cmake
+[0.291s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools

@@ -1,14 +1,1 @@
-<?xml version="1.0" ?><sdf version="1.5">
-  <model name="4x4Marker_0">
-    <static>true</static>
-    <link name="link">
-      <visual name="visual">
-        <geometry>
-          <mesh>
-            <uri>model://4x4marker_0/meshes/4x4Marker_0.dae</uri>
-          <scale>2.0 2.0 2.0</scale></mesh>
-        </geometry>
-      </visual>
-    </link>
-  </model>
-</sdf>
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj/roboticaposgrado/model-1_5.sdf

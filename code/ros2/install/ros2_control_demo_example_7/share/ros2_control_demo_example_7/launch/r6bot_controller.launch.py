@@ -1,0 +1,1 @@
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/ros2_control_demos/example_7/bringup/launch/r6bot_controller.launch.py

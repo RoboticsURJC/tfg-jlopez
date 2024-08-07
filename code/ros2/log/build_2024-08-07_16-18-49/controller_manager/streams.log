@@ -1,0 +1,130 @@
+[0.022s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager -- -j8 -l8
+[0.067s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.069s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target controller_manager[0m
+[0.088s] [  5%] Built target gmock_main
+[0.092s] [ 14%] Built target gmock
+[0.094s] [ 14%] Built target ament_cmake_python_symlink_controller_manager
+[0.096s] [ 14%] Built target ament_cmake_python_symlink_controller_manager_setup
+[0.106s] [ 20%] Built target controller_manager
+[0.125s] [35m[1mConsolidate compiler generated dependencies of target test_controller_failed_init[0m
+[0.128s] [35m[1mConsolidate compiler generated dependencies of target test_controller[0m
+[0.132s] [35m[1mConsolidate compiler generated dependencies of target ros2_control_node[0m
+[0.142s] [35m[1mConsolidate compiler generated dependencies of target test_controller_manager_urdf_passing[0m
+[0.155s] [35m[1mConsolidate compiler generated dependencies of target test_controller_with_interfaces[0m
+[0.163s] [ 25%] Built target test_controller
+[0.164s] [ 28%] [32mBuilding CXX object CMakeFiles/test_chainable_controller.dir/test/test_chainable_controller/test_chainable_controller.cpp.o[0m
+[0.172s] [ 34%] Built target ros2_control_node
+[0.177s] [ 45%] Built target test_controller_manager_urdf_passing
+[0.181s] [ 45%] Built target test_controller_failed_init
+[0.205s] [ 51%] Built target test_controller_with_interfaces
+[0.209s] [ 54%] [32mBuilding CXX object CMakeFiles/test_controller_manager.dir/test/test_controller_manager.cpp.o[0m
+[0.210s] [ 57%] [32mBuilding CXX object CMakeFiles/test_controller_manager_with_namespace.cpp.dir/test/test_controller_manager_with_namespace.cpp.o[0m
+[0.222s] [ 60%] [32mBuilding CXX object CMakeFiles/test_hardware_management_srvs.dir/test/test_hardware_management_srvs.cpp.o[0m
+[0.225s] [ 62%] [32mBuilding CXX object CMakeFiles/test_spawner_unspawner.dir/test/test_spawner_unspawner.cpp.o[0m
+[0.266s] [ 65%] [32mBuilding CXX object CMakeFiles/test_load_controller.dir/test/test_load_controller.cpp.o[0m
+[0.659s] running egg_info
+[0.661s] writing controller_manager.egg-info/PKG-INFO
+[0.661s] writing dependency_links to controller_manager.egg-info/dependency_links.txt
+[0.662s] writing entry points to controller_manager.egg-info/entry_points.txt
+[0.662s] writing top-level names to controller_manager.egg-info/top_level.txt
+[0.662s] running install_scripts
+[0.668s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.668s]   warnings.warn(
+[0.668s] reading manifest file 'controller_manager.egg-info/SOURCES.txt'
+[0.670s] writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+[0.709s] running egg_info
+[0.712s] writing controller_manager.egg-info/PKG-INFO
+[0.712s] writing dependency_links to controller_manager.egg-info/dependency_links.txt
+[0.713s] writing entry points to controller_manager.egg-info/entry_points.txt
+[0.713s] writing top-level names to controller_manager.egg-info/top_level.txt
+[0.717s] [ 65%] Built target ament_cmake_python_build_controller_manager_egg
+[0.718s] reading manifest file 'controller_manager.egg-info/SOURCES.txt'
+[0.719s] writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+[0.722s] Installing hardware_spawner script to scripts
+[0.722s] Installing spawner script to scripts
+[0.722s] Installing unspawner script to scripts
+[0.784s] [ 65%] Built target ament_cmake_python_build_controller_manager_scripts
+[0.786s] [ 68%] [32mBuilding CXX object CMakeFiles/test_release_interfaces.dir/test/test_release_interfaces.cpp.o[0m
+[14.591s] [ 71%] [32m[1mLinking CXX executable test_spawner_unspawner[0m
+[14.631s] [ 74%] [32m[1mLinking CXX executable test_controller_manager_with_namespace.cpp[0m
+[14.752s] [ 77%] [32m[1mLinking CXX executable test_release_interfaces[0m
+[16.351s] [ 80%] [32m[1mLinking CXX executable test_controller_manager[0m
+[16.924s] [ 82%] [32m[1mLinking CXX executable test_load_controller[0m
+[17.589s] [ 85%] [32m[1mLinking CXX executable test_hardware_management_srvs[0m
+[18.925s] [ 85%] Built target test_spawner_unspawner
+[18.978s] [ 85%] Built target test_controller_manager_with_namespace.cpp
+[18.983s] [ 85%] Built target test_release_interfaces
+[20.298s] [ 88%] [32m[1mLinking CXX shared library libtest_chainable_controller.so[0m
+[20.335s] [ 88%] Built target test_controller_manager
+[20.563s] [ 88%] Built target test_load_controller
+[20.671s] [ 88%] Built target test_hardware_management_srvs
+[21.032s] [ 88%] Built target test_chainable_controller
+[21.055s] [ 91%] [32mBuilding CXX object CMakeFiles/test_controller_manager_srvs.dir/test/test_controller_manager_srvs.cpp.o[0m
+[21.056s] [ 94%] [32mBuilding CXX object CMakeFiles/test_controllers_chaining_with_controller_manager.dir/test/test_controllers_chaining_with_controller_manager.cpp.o[0m
+[29.169s] [ 97%] [32m[1mLinking CXX executable test_controllers_chaining_with_controller_manager[0m
+[30.535s] [ 97%] Built target test_controllers_chaining_with_controller_manager
+[34.215s] [100%] [32m[1mLinking CXX executable test_controller_manager_srvs[0m
+[35.781s] [100%] Built target test_controller_manager_srvs
+[35.792s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager -- -j8 -l8
+[35.857s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager
+[35.865s] -- Install configuration: ""
+[35.865s] -- Execute custom install script
+[35.866s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libcontroller_manager.so
+[35.875s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager/ros2_control_node
+[35.885s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/include/controller_manager/controller_manager.hpp
+[35.895s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/include/controller_manager/controller_spec.hpp
+[35.905s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/include/controller_manager/visibility_control.h
+[35.915s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_controller/test_controller.xml
+[35.926s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_controller.so
+[35.935s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_controller_failed_init/test_controller_failed_init.xml
+[35.945s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_controller_failed_init.so
+[35.956s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_chainable_controller/test_chainable_controller.xml
+[35.966s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_chainable_controller.so
+[35.976s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_controller_with_interfaces/test_controller_with_interfaces.xml
+[35.986s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_controller_with_interfaces.so
+[35.995s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/pythonpath.sh
+[36.003s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/pythonpath.dsv
+[36.012s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/PKG-INFO
+[36.020s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/SOURCES.txt
+[36.028s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/dependency_links.txt
+[36.036s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/entry_points.txt
+[36.044s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/top_level.txt
+[36.053s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager//hardware_spawner
+[36.061s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager//spawner
+[36.069s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager//unspawner
+[36.079s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/__init__.py
+[36.087s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/controller_manager_services.py
+[36.095s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/hardware_spawner.py
+[36.103s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/launch_utils.py
+[36.112s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/spawner.py
+[36.120s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/unspawner.py
+[36.129s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/library_path.sh
+[36.136s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/library_path.dsv
+[36.145s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/package_run_dependencies/controller_manager
+[36.153s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/parent_prefix_path/controller_manager
+[36.161s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/ament_prefix_path.sh
+[36.169s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/ament_prefix_path.dsv
+[36.177s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/path.sh
+[36.185s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/path.dsv
+[36.193s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.bash
+[36.201s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.sh
+[36.210s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.zsh
+[36.217s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.dsv
+[36.226s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/package.dsv
+[36.233s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/packages/controller_manager
+[36.241s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/controller_interface__pluginlib__plugin/controller_manager
+[36.250s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/ament_cmake_export_libraries-extras.cmake
+[36.258s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/ament_cmake_export_include_directories-extras.cmake
+[36.266s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/ament_cmake_export_dependencies-extras.cmake
+[36.274s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/controller_managerConfig.cmake
+[36.282s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/controller_managerConfig-version.cmake
+[36.290s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/package.xml
+[36.354s] Listing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager'...
+[36.354s] Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/__init__.py'...
+[36.355s] Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/controller_manager_services.py'...
+[36.355s] Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/hardware_spawner.py'...
+[36.355s] Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/launch_utils.py'...
+[36.355s] Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/spawner.py'...
+[36.355s] Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/unspawner.py'...
+[36.361s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager

@@ -1,0 +1,494 @@
+[0.028s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs -- -j8 -l8
+[0.145s] [  0%] Built target control_msgs__cpp
+[0.155s] [  0%] Built target ament_cmake_python_symlink_control_msgs
+[0.169s] [ 13%] Built target control_msgs__rosidl_generator_c
+[0.262s] [ 25%] Built target control_msgs__rosidl_typesupport_cpp
+[0.298s] [ 38%] Built target control_msgs__rosidl_typesupport_introspection_cpp
+[0.310s] [ 50%] Built target control_msgs__rosidl_typesupport_c
+[0.311s] [ 62%] Built target control_msgs__rosidl_typesupport_fastrtps_cpp
+[0.313s] [ 74%] Built target control_msgs__rosidl_typesupport_fastrtps_c
+[0.319s] [ 86%] Built target control_msgs__rosidl_typesupport_introspection_c
+[0.366s] [ 86%] Built target control_msgs
+[0.409s] [ 86%] Built target control_msgs__py
+[0.481s] [ 97%] Built target control_msgs__rosidl_generator_py
+[0.542s] [ 98%] Built target control_msgs__rosidl_typesupport_c__pyext
+[0.568s] [ 99%] Built target control_msgs__rosidl_typesupport_introspection_c__pyext
+[0.572s] [100%] Built target control_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.723s] running egg_info
+[0.724s] writing control_msgs.egg-info/PKG-INFO
+[0.724s] writing dependency_links to control_msgs.egg-info/dependency_links.txt
+[0.724s] writing top-level names to control_msgs.egg-info/top_level.txt
+[0.727s] reading manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.728s] writing manifest file 'control_msgs.egg-info/SOURCES.txt'
+[0.764s] [100%] Built target ament_cmake_python_build_control_msgs_egg
+[0.781s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs -- -j8 -l8
+[2.012s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs
+[2.025s] -- Install configuration: ""
+[2.026s] -- Execute custom install script
+[2.027s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/ament_index/resource_index/rosidl_interfaces/control_msgs
+[2.028s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__functions.h
+[2.028s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__struct.h
+[2.028s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__type_support.h
+[2.028s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__functions.h
+[2.029s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__struct.h
+[2.029s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__type_support.h
+[2.029s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__functions.h
+[2.029s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__struct.h
+[2.029s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__type_support.h
+[2.030s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__functions.h
+[2.031s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__struct.h
+[2.031s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__type_support.h
+[2.031s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__functions.h
+[2.031s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__struct.h
+[2.031s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__type_support.h
+[2.032s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__functions.h
+[2.032s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__struct.h
+[2.032s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__type_support.h
+[2.032s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/follow_joint_trajectory.h
+[2.033s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/gripper_command.h
+[2.033s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/joint_trajectory.h
+[2.033s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/parallel_gripper_command.h
+[2.033s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/point_head.h
+[2.034s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/single_joint_position.h
+[2.034s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/admittance_controller_state.h
+[2.034s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__functions.h
+[2.034s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__struct.h
+[2.034s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__type_support.h
+[2.034s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__functions.h
+[2.035s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__struct.h
+[2.035s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__type_support.h
+[2.035s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__functions.h
+[2.035s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__struct.h
+[2.035s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__type_support.h
+[2.036s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__functions.h
+[2.036s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__struct.h
+[2.036s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__type_support.h
+[2.036s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__functions.h
+[2.036s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__struct.h
+[2.036s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__type_support.h
+[2.037s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__functions.h
+[2.037s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__struct.h
+[2.037s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__type_support.h
+[2.037s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__functions.h
+[2.037s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__struct.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__type_support.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__functions.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__struct.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__type_support.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__functions.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__struct.h
+[2.038s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__type_support.h
+[2.039s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__functions.h
+[2.039s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__struct.h
+[2.039s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__type_support.h
+[2.039s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__functions.h
+[2.040s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__struct.h
+[2.040s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__type_support.h
+[2.040s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__functions.h
+[2.041s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__struct.h
+[2.041s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__type_support.h
+[2.041s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__functions.h
+[2.041s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__struct.h
+[2.041s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__type_support.h
+[2.041s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__functions.h
+[2.042s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__struct.h
+[2.042s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__type_support.h
+[2.042s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__functions.h
+[2.042s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__struct.h
+[2.042s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__type_support.h
+[2.042s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__functions.h
+[2.043s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__struct.h
+[2.043s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__type_support.h
+[2.043s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/dynamic_joint_state.h
+[2.043s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/gripper_command.h
+[2.043s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/interface_value.h
+[2.044s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_component_tolerance.h
+[2.044s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_controller_state.h
+[2.044s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_jog.h
+[2.044s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_tolerance.h
+[2.044s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_trajectory_controller_state.h
+[2.044s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/mecanum_drive_controller_state.h
+[2.045s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/multi_dof_command.h
+[2.045s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/multi_dof_state_stamped.h
+[2.045s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/pid_state.h
+[2.045s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.045s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/single_dof_state.h
+[2.045s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/single_dof_state_stamped.h
+[2.046s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/steering_controller_status.h
+[2.046s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__functions.h
+[2.046s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__struct.h
+[2.046s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__type_support.h
+[2.046s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__functions.h
+[2.047s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__struct.h
+[2.047s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__type_support.h
+[2.047s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/query_calibration_state.h
+[2.047s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/query_trajectory_state.h
+[2.047s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/library_path.sh
+[2.047s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/library_path.dsv
+[2.049s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__rosidl_typesupport_fastrtps_c.h
+[2.050s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__rosidl_typesupport_fastrtps_c.h
+[2.050s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__rosidl_typesupport_fastrtps_c.h
+[2.050s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__rosidl_typesupport_fastrtps_c.h
+[2.050s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__rosidl_typesupport_fastrtps_c.h
+[2.050s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__rosidl_typesupport_fastrtps_c.h
+[2.051s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__rosidl_typesupport_fastrtps_c.h
+[2.051s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__rosidl_typesupport_fastrtps_c.h
+[2.051s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__rosidl_typesupport_fastrtps_c.h
+[2.051s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__rosidl_typesupport_fastrtps_c.h
+[2.051s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__rosidl_typesupport_fastrtps_c.h
+[2.052s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__rosidl_typesupport_fastrtps_c.h
+[2.052s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__rosidl_typesupport_fastrtps_c.h
+[2.052s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__rosidl_typesupport_fastrtps_c.h
+[2.052s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__rosidl_typesupport_fastrtps_c.h
+[2.052s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__rosidl_typesupport_fastrtps_c.h
+[2.053s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__rosidl_typesupport_fastrtps_c.h
+[2.053s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__rosidl_typesupport_fastrtps_c.h
+[2.053s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__rosidl_typesupport_fastrtps_c.h
+[2.053s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__rosidl_typesupport_fastrtps_c.h
+[2.053s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__rosidl_typesupport_fastrtps_c.h
+[2.054s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__rosidl_typesupport_fastrtps_c.h
+[2.054s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.054s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__rosidl_typesupport_fastrtps_c.h
+[2.054s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__rosidl_typesupport_fastrtps_c.h
+[2.055s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__builder.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__struct.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__traits.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__builder.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__struct.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__traits.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__builder.hpp
+[2.056s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__struct.hpp
+[2.057s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__traits.hpp
+[2.057s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__builder.hpp
+[2.057s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__struct.hpp
+[2.057s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__traits.hpp
+[2.057s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__builder.hpp
+[2.057s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__struct.hpp
+[2.058s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__traits.hpp
+[2.058s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__builder.hpp
+[2.058s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__struct.hpp
+[2.058s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__traits.hpp
+[2.058s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/follow_joint_trajectory.hpp
+[2.059s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/gripper_command.hpp
+[2.059s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/joint_trajectory.hpp
+[2.059s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/parallel_gripper_command.hpp
+[2.059s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/point_head.hpp
+[2.059s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/single_joint_position.hpp
+[2.060s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/admittance_controller_state.hpp
+[2.060s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__builder.hpp
+[2.060s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__struct.hpp
+[2.060s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__traits.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__builder.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__struct.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__traits.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__builder.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__struct.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__traits.hpp
+[2.061s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__builder.hpp
+[2.062s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__struct.hpp
+[2.062s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__traits.hpp
+[2.062s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__builder.hpp
+[2.062s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__struct.hpp
+[2.062s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__traits.hpp
+[2.063s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__builder.hpp
+[2.063s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__struct.hpp
+[2.063s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__traits.hpp
+[2.063s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__builder.hpp
+[2.063s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__struct.hpp
+[2.064s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__traits.hpp
+[2.064s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__builder.hpp
+[2.064s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__struct.hpp
+[2.064s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__traits.hpp
+[2.064s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__builder.hpp
+[2.064s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__struct.hpp
+[2.065s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__traits.hpp
+[2.065s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__builder.hpp
+[2.065s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__struct.hpp
+[2.065s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__traits.hpp
+[2.065s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__builder.hpp
+[2.066s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__struct.hpp
+[2.066s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__traits.hpp
+[2.066s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__builder.hpp
+[2.066s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__struct.hpp
+[2.066s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__traits.hpp
+[2.067s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__builder.hpp
+[2.067s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__struct.hpp
+[2.067s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__traits.hpp
+[2.067s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__builder.hpp
+[2.067s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__struct.hpp
+[2.068s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__traits.hpp
+[2.068s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__builder.hpp
+[2.068s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__struct.hpp
+[2.068s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__traits.hpp
+[2.068s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__builder.hpp
+[2.069s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__struct.hpp
+[2.069s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__traits.hpp
+[2.069s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/dynamic_joint_state.hpp
+[2.069s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/gripper_command.hpp
+[2.069s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/interface_value.hpp
+[2.069s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_component_tolerance.hpp
+[2.070s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_controller_state.hpp
+[2.070s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_jog.hpp
+[2.070s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_tolerance.hpp
+[2.070s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/joint_trajectory_controller_state.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/mecanum_drive_controller_state.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/multi_dof_command.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/multi_dof_state_stamped.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/pid_state.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/single_dof_state.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/single_dof_state_stamped.hpp
+[2.071s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/steering_controller_status.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__builder.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__struct.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__traits.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__builder.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__struct.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__traits.hpp
+[2.072s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/query_calibration_state.hpp
+[2.073s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/query_trajectory_state.hpp
+[2.073s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[2.073s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.073s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[2.073s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.074s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__rosidl_typesupport_fastrtps_cpp.hpp
+[2.074s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__rosidl_typesupport_fastrtps_cpp.hpp
+[2.074s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.074s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.075s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.075s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__rosidl_typesupport_fastrtps_cpp.hpp
+[2.075s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__rosidl_typesupport_fastrtps_cpp.hpp
+[2.075s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.075s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__rosidl_typesupport_fastrtps_cpp.hpp
+[2.075s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[2.076s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__rosidl_typesupport_fastrtps_cpp.hpp
+[2.077s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.077s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.077s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.077s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__rosidl_typesupport_introspection_c.h
+[2.078s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__rosidl_typesupport_introspection_c.h
+[2.078s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__rosidl_typesupport_introspection_c.h
+[2.078s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__rosidl_typesupport_introspection_c.h
+[2.078s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__rosidl_typesupport_introspection_c.h
+[2.079s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__rosidl_typesupport_introspection_c.h
+[2.079s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__rosidl_typesupport_introspection_c.h
+[2.079s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__rosidl_typesupport_introspection_c.h
+[2.079s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__rosidl_typesupport_introspection_c.h
+[2.079s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__rosidl_typesupport_introspection_c.h
+[2.080s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__rosidl_typesupport_introspection_c.h
+[2.080s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__rosidl_typesupport_introspection_c.h
+[2.080s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__rosidl_typesupport_introspection_c.h
+[2.080s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__rosidl_typesupport_introspection_c.h
+[2.080s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__rosidl_typesupport_introspection_c.h
+[2.081s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__rosidl_typesupport_introspection_c.h
+[2.081s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__rosidl_typesupport_introspection_c.h
+[2.081s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__rosidl_typesupport_introspection_c.h
+[2.081s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__rosidl_typesupport_introspection_c.h
+[2.081s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__rosidl_typesupport_introspection_c.h
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__rosidl_typesupport_introspection_c.h
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__rosidl_typesupport_introspection_c.h
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__rosidl_typesupport_introspection_c.h
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__rosidl_typesupport_introspection_c.h
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/follow_joint_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[2.082s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/gripper_command__rosidl_typesupport_introspection_cpp.hpp
+[2.083s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/joint_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[2.083s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/parallel_gripper_command__rosidl_typesupport_introspection_cpp.hpp
+[2.083s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/point_head__rosidl_typesupport_introspection_cpp.hpp
+[2.083s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/action/detail/single_joint_position__rosidl_typesupport_introspection_cpp.hpp
+[2.083s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/admittance_controller_state__rosidl_typesupport_introspection_cpp.hpp
+[2.083s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/dynamic_joint_state__rosidl_typesupport_introspection_cpp.hpp
+[2.084s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/gripper_command__rosidl_typesupport_introspection_cpp.hpp
+[2.084s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/interface_value__rosidl_typesupport_introspection_cpp.hpp
+[2.084s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_component_tolerance__rosidl_typesupport_introspection_cpp.hpp
+[2.084s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_controller_state__rosidl_typesupport_introspection_cpp.hpp
+[2.085s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_jog__rosidl_typesupport_introspection_cpp.hpp
+[2.085s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_tolerance__rosidl_typesupport_introspection_cpp.hpp
+[2.085s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/joint_trajectory_controller_state__rosidl_typesupport_introspection_cpp.hpp
+[2.085s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/mecanum_drive_controller_state__rosidl_typesupport_introspection_cpp.hpp
+[2.085s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_command__rosidl_typesupport_introspection_cpp.hpp
+[2.085s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/multi_dof_state_stamped__rosidl_typesupport_introspection_cpp.hpp
+[2.086s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/pid_state__rosidl_typesupport_introspection_cpp.hpp
+[2.086s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state__rosidl_typesupport_introspection_cpp.hpp
+[2.086s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/single_dof_state_stamped__rosidl_typesupport_introspection_cpp.hpp
+[2.086s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/msg/detail/steering_controller_status__rosidl_typesupport_introspection_cpp.hpp
+[2.086s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_calibration_state__rosidl_typesupport_introspection_cpp.hpp
+[2.087s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/include/control_msgs/control_msgs/srv/detail/query_trajectory_state__rosidl_typesupport_introspection_cpp.hpp
+[2.087s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/pythonpath.sh
+[2.087s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/pythonpath.dsv
+[2.087s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs-4.6.0-py3.10.egg-info/PKG-INFO
+[2.087s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs-4.6.0-py3.10.egg-info/SOURCES.txt
+[2.087s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs-4.6.0-py3.10.egg-info/dependency_links.txt
+[2.088s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs-4.6.0-py3.10.egg-info/top_level.txt
+[2.089s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/__init__.py
+[2.089s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/_control_msgs_s.ep.rosidl_typesupport_c.c
+[2.089s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/_control_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.090s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/_control_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[2.090s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/__init__.py
+[2.090s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_follow_joint_trajectory.py
+[2.091s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_follow_joint_trajectory_s.c
+[2.091s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_gripper_command.py
+[2.091s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_gripper_command_s.c
+[2.091s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_joint_trajectory.py
+[2.091s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_joint_trajectory_s.c
+[2.092s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_parallel_gripper_command.py
+[2.092s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_parallel_gripper_command_s.c
+[2.092s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_point_head.py
+[2.092s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_point_head_s.c
+[2.092s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_single_joint_position.py
+[2.093s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action/_single_joint_position_s.c
+[2.093s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/control_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.093s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/control_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.093s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/control_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.093s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/libcontrol_msgs__rosidl_generator_py.so
+[2.093s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/__init__.py
+[2.094s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_admittance_controller_state.py
+[2.094s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_admittance_controller_state_s.c
+[2.095s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_dynamic_joint_state.py
+[2.095s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_dynamic_joint_state_s.c
+[2.095s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_gripper_command.py
+[2.095s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_gripper_command_s.c
+[2.095s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_interface_value.py
+[2.096s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_interface_value_s.c
+[2.096s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_component_tolerance.py
+[2.096s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_component_tolerance_s.c
+[2.096s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_controller_state.py
+[2.096s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_controller_state_s.c
+[2.096s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_jog.py
+[2.097s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_jog_s.c
+[2.097s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_tolerance.py
+[2.097s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_tolerance_s.c
+[2.097s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_trajectory_controller_state.py
+[2.097s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_joint_trajectory_controller_state_s.c
+[2.097s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_mecanum_drive_controller_state.py
+[2.098s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_mecanum_drive_controller_state_s.c
+[2.098s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_multi_dof_command.py
+[2.098s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_multi_dof_command_s.c
+[2.098s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_multi_dof_state_stamped.py
+[2.098s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_multi_dof_state_stamped_s.c
+[2.098s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_pid_state.py
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_pid_state_s.c
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_single_dof_state.py
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_single_dof_state_s.c
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_single_dof_state_stamped.py
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_single_dof_state_stamped_s.c
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_steering_controller_status.py
+[2.099s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg/_steering_controller_status_s.c
+[2.100s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/srv/__init__.py
+[2.100s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/srv/_query_calibration_state.py
+[2.100s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/srv/_query_calibration_state_s.c
+[2.100s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/srv/_query_trajectory_state.py
+[2.100s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/srv/_query_trajectory_state_s.c
+[2.100s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/control_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/control_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/control_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/ParallelGripperCommand.idl
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/FollowJointTrajectory.idl
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/GripperCommand.idl
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/JointTrajectory.idl
+[2.101s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/PointHead.idl
+[2.102s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/SingleJointPosition.idl
+[2.102s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/AdmittanceControllerState.idl
+[2.102s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/DynamicJointState.idl
+[2.102s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/GripperCommand.idl
+[2.102s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/InterfaceValue.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointComponentTolerance.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointControllerState.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointJog.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointTolerance.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointTrajectoryControllerState.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/MecanumDriveControllerState.idl
+[2.103s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/MultiDOFCommand.idl
+[2.104s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/MultiDOFStateStamped.idl
+[2.104s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/PidState.idl
+[2.104s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/SingleDOFState.idl
+[2.104s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/SingleDOFStateStamped.idl
+[2.104s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/SteeringControllerStatus.idl
+[2.104s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryCalibrationState.idl
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryTrajectoryState.idl
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/ParallelGripperCommand.action
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/FollowJointTrajectory.action
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/GripperCommand.action
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/JointTrajectory.action
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/PointHead.action
+[2.105s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/action/SingleJointPosition.action
+[2.106s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/AdmittanceControllerState.msg
+[2.106s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/DynamicJointState.msg
+[2.106s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/GripperCommand.msg
+[2.106s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/InterfaceValue.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointComponentTolerance.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointControllerState.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointJog.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointTolerance.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/JointTrajectoryControllerState.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/MecanumDriveControllerState.msg
+[2.107s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/MultiDOFCommand.msg
+[2.108s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/MultiDOFStateStamped.msg
+[2.108s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/PidState.msg
+[2.108s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/SingleDOFState.msg
+[2.108s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/SingleDOFStateStamped.msg
+[2.108s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/msg/SteeringControllerStatus.msg
+[2.108s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryCalibrationState.srv
+[2.109s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryCalibrationState_Request.msg
+[2.109s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryCalibrationState_Response.msg
+[2.109s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryTrajectoryState.srv
+[2.109s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryTrajectoryState_Request.msg
+[2.110s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/srv/QueryTrajectoryState_Response.msg
+[2.110s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/ament_index/resource_index/package_run_dependencies/control_msgs
+[2.110s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/ament_index/resource_index/parent_prefix_path/control_msgs
+[2.110s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/ament_prefix_path.sh
+[2.110s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/ament_prefix_path.dsv
+[2.111s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/path.sh
+[2.111s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/environment/path.dsv
+[2.111s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/local_setup.bash
+[2.111s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/local_setup.sh
+[2.111s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/local_setup.zsh
+[2.112s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/local_setup.dsv
+[2.112s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/package.dsv
+[2.127s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/ament_index/resource_index/packages/control_msgs
+[2.128s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/rosidl_cmake-extras.cmake
+[2.128s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.128s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.128s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.128s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.129s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.129s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.129s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgsConfig.cmake
+[2.129s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgsConfig-version.cmake
+[2.129s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/package.xml
+[2.130s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_generator_c.so
+[2.130s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_c.so
+[2.130s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.130s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_typesupport_introspection_c.so
+[2.131s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_typesupport_c.so
+[2.131s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_typesupport_introspection_cpp.so
+[2.131s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_typesupport_cpp.so
+[2.180s] Listing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs'...
+[2.180s] Listing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/action'...
+[2.180s] Listing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/msg'...
+[2.180s] Listing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages/control_msgs/srv'...
+[2.185s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib/libcontrol_msgs__rosidl_generator_py.so
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_generator_cExport.cmake
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_generator_cppExport.cmake
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.186s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_cExport.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.187s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_cppExport.cmake
+[2.188s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/control_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.188s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_generator_pyExport.cmake
+[2.188s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/share/control_msgs/cmake/export_control_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.189s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/control_msgs

@@ -1,0 +1,126 @@
+[35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[35m[1mConsolidate compiler generated dependencies of target controller_manager[0m
+[  5%] Built target gmock_main
+[ 14%] Built target gmock
+[ 14%] Built target ament_cmake_python_symlink_controller_manager
+[ 14%] Built target ament_cmake_python_symlink_controller_manager_setup
+[ 20%] Built target controller_manager
+[35m[1mConsolidate compiler generated dependencies of target test_controller_failed_init[0m
+[35m[1mConsolidate compiler generated dependencies of target test_controller[0m
+[35m[1mConsolidate compiler generated dependencies of target ros2_control_node[0m
+[35m[1mConsolidate compiler generated dependencies of target test_controller_manager_urdf_passing[0m
+[35m[1mConsolidate compiler generated dependencies of target test_controller_with_interfaces[0m
+[ 25%] Built target test_controller
+[ 28%] [32mBuilding CXX object CMakeFiles/test_chainable_controller.dir/test/test_chainable_controller/test_chainable_controller.cpp.o[0m
+[ 34%] Built target ros2_control_node
+[ 45%] Built target test_controller_manager_urdf_passing
+[ 45%] Built target test_controller_failed_init
+[ 51%] Built target test_controller_with_interfaces
+[ 54%] [32mBuilding CXX object CMakeFiles/test_controller_manager.dir/test/test_controller_manager.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/test_controller_manager_with_namespace.cpp.dir/test/test_controller_manager_with_namespace.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/test_hardware_management_srvs.dir/test/test_hardware_management_srvs.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/test_spawner_unspawner.dir/test/test_spawner_unspawner.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/test_load_controller.dir/test/test_load_controller.cpp.o[0m
+running egg_info
+writing controller_manager.egg-info/PKG-INFO
+writing dependency_links to controller_manager.egg-info/dependency_links.txt
+writing entry points to controller_manager.egg-info/entry_points.txt
+writing top-level names to controller_manager.egg-info/top_level.txt
+running install_scripts
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+reading manifest file 'controller_manager.egg-info/SOURCES.txt'
+writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+running egg_info
+writing controller_manager.egg-info/PKG-INFO
+writing dependency_links to controller_manager.egg-info/dependency_links.txt
+writing entry points to controller_manager.egg-info/entry_points.txt
+writing top-level names to controller_manager.egg-info/top_level.txt
+[ 65%] Built target ament_cmake_python_build_controller_manager_egg
+reading manifest file 'controller_manager.egg-info/SOURCES.txt'
+writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+Installing hardware_spawner script to scripts
+Installing spawner script to scripts
+Installing unspawner script to scripts
+[ 65%] Built target ament_cmake_python_build_controller_manager_scripts
+[ 68%] [32mBuilding CXX object CMakeFiles/test_release_interfaces.dir/test/test_release_interfaces.cpp.o[0m
+[ 71%] [32m[1mLinking CXX executable test_spawner_unspawner[0m
+[ 74%] [32m[1mLinking CXX executable test_controller_manager_with_namespace.cpp[0m
+[ 77%] [32m[1mLinking CXX executable test_release_interfaces[0m
+[ 80%] [32m[1mLinking CXX executable test_controller_manager[0m
+[ 82%] [32m[1mLinking CXX executable test_load_controller[0m
+[ 85%] [32m[1mLinking CXX executable test_hardware_management_srvs[0m
+[ 85%] Built target test_spawner_unspawner
+[ 85%] Built target test_controller_manager_with_namespace.cpp
+[ 85%] Built target test_release_interfaces
+[ 88%] [32m[1mLinking CXX shared library libtest_chainable_controller.so[0m
+[ 88%] Built target test_controller_manager
+[ 88%] Built target test_load_controller
+[ 88%] Built target test_hardware_management_srvs
+[ 88%] Built target test_chainable_controller
+[ 91%] [32mBuilding CXX object CMakeFiles/test_controller_manager_srvs.dir/test/test_controller_manager_srvs.cpp.o[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/test_controllers_chaining_with_controller_manager.dir/test/test_controllers_chaining_with_controller_manager.cpp.o[0m
+[ 97%] [32m[1mLinking CXX executable test_controllers_chaining_with_controller_manager[0m
+[ 97%] Built target test_controllers_chaining_with_controller_manager
+[100%] [32m[1mLinking CXX executable test_controller_manager_srvs[0m
+[100%] Built target test_controller_manager_srvs
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libcontroller_manager.so
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager/ros2_control_node
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/include/controller_manager/controller_manager.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/include/controller_manager/controller_spec.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/include/controller_manager/visibility_control.h
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_controller/test_controller.xml
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_controller.so
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_controller_failed_init/test_controller_failed_init.xml
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_controller_failed_init.so
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_chainable_controller/test_chainable_controller.xml
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_chainable_controller.so
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/test/test_controller_with_interfaces/test_controller_with_interfaces.xml
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/libtest_controller_with_interfaces.so
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/pythonpath.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/pythonpath.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/entry_points.txt
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager-2.42.0-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager//hardware_spawner
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager//spawner
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib/controller_manager//unspawner
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/__init__.py
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/controller_manager_services.py
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/hardware_spawner.py
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/launch_utils.py
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/spawner.py
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/unspawner.py
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/library_path.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/library_path.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/package_run_dependencies/controller_manager
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/parent_prefix_path/controller_manager
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/ament_prefix_path.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/ament_prefix_path.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/path.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/environment/path.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.bash
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.zsh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/local_setup.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/package.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/packages/controller_manager
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/ament_index/resource_index/controller_interface__pluginlib__plugin/controller_manager
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/controller_managerConfig.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake/controller_managerConfig-version.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/package.xml
+Listing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager'...
+Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/__init__.py'...
+Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/controller_manager_services.py'...
+Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/hardware_spawner.py'...
+Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/launch_utils.py'...
+Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/spawner.py'...
+Compiling '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages/controller_manager/unspawner.py'...

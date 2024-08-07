@@ -1,0 +1,69 @@
+[0.068s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one
+[0.522s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.522s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.522s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.581s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.597s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.600s] -- Added test 'lint_cmake' to check CMake code style
+[0.603s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.612s] -- Added test 'xmllint' to check XML markup files
+[0.619s] -- Configuring done
+[0.625s] -- Generating done
+[0.627s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one
+[0.637s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/articubot_one -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one
+[0.638s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one -- -j8 -l8
+[0.721s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one -- -j8 -l8
+[0.783s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one
+[0.800s] -- Install configuration: ""
+[0.801s] -- Execute custom install script
+[0.802s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/ball_tracker_params_robot.yaml
+[0.817s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/ball_tracker_params_sim.yaml
+[0.832s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/drive_bot.rviz
+[0.847s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/empty.yaml
+[0.871s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/gaz_ros2_ctl_use_sim.yaml
+[0.892s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/gazebo_params.yaml
+[0.908s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/joystick.yaml
+[0.924s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/main.rviz
+[0.940s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/map.rviz
+[0.969s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/mapper_params_online_async.yaml
+[0.984s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/my_controllers.yaml
+[1.001s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/nav2_params.yaml
+[1.018s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/twist_mux.yaml
+[1.035s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/config/view_bot.rviz
+[1.052s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/camera.xacro
+[1.070s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/depth_camera.xacro
+[1.086s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/face.xacro
+[1.102s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
+[1.117s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+[1.133s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/lidar.xacro
+[1.148s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
+[1.164s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/robot_core.xacro
+[1.180s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/description/ros2_control.xacro
+[1.197s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/ball_tracker.launch.py
+[1.214s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/camera.launch.py
+[1.227s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/joystick.launch.py
+[1.242s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/launch_robot.launch.py
+[1.258s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+[1.285s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/localization_launch.py
+[1.305s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/navigation_launch.py
+[1.321s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/online_async_launch.py
+[1.338s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/rplidar.launch.py
+[1.356s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/launch/rsp.launch.py
+[1.377s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/worlds/empty.world
+[1.399s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/worlds/obstacles.world
+[1.431s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one
+[1.473s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one
+[1.509s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh
+[1.538s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/environment/ament_prefix_path.dsv
+[1.565s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/environment/path.sh
+[1.617s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/environment/path.dsv
+[1.635s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/local_setup.bash
+[1.677s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/local_setup.sh
+[1.692s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/local_setup.zsh
+[1.709s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/local_setup.dsv
+[1.726s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/package.dsv
+[1.745s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/ament_index/resource_index/packages/articubot_one
+[1.792s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig.cmake
+[1.818s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/cmake/articubot_oneConfig-version.cmake
+[1.849s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one/share/articubot_one/package.xml
+[1.882s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/articubot_one

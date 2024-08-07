@@ -1,0 +1,43 @@
+[35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[  8%] Built target gripper_action_controller_parameters
+[ 50%] Built target gmock
+[ 50%] Built target gmock_main
+[35m[1mConsolidate compiler generated dependencies of target gripper_action_controller[0m
+[35m[1mConsolidate compiler generated dependencies of target test_load_gripper_action_controllers[0m
+[ 66%] Built target gripper_action_controller
+[ 83%] Built target test_load_gripper_action_controllers
+[35m[1mConsolidate compiler generated dependencies of target test_gripper_controllers[0m
+[100%] Built target test_gripper_controllers
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/include/gripper_action_controller_parameters/gripper_action_controller_parameters.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers//ros_control_plugins.xml
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/include/gripper_action_controller/gripper_controllers/gripper_action_controller.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/include/gripper_action_controller/gripper_controllers/gripper_action_controller_impl.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/include/gripper_action_controller/gripper_controllers/hardware_interface_adapter.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/include/gripper_action_controller/gripper_controllers/visibility_control.hpp
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/environment/library_path.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/environment/library_path.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/ament_index/resource_index/package_run_dependencies/gripper_controllers
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/ament_index/resource_index/parent_prefix_path/gripper_controllers
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/environment/ament_prefix_path.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/environment/ament_prefix_path.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/environment/path.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/environment/path.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/local_setup.bash
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/local_setup.sh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/local_setup.zsh
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/local_setup.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/package.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/ament_index/resource_index/packages/gripper_controllers
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/gripper_controllers
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/cmake/gripper_controllersConfig.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/cmake/gripper_controllersConfig-version.cmake
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/package.xml
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/lib/libgripper_action_controller.so
+-- Set runtime path of "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/lib/libgripper_action_controller.so" to ""
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/cmake/export_gripper_action_controllerExport.cmake
+-- Installing: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gripper_controllers/share/gripper_controllers/cmake/export_gripper_action_controllerExport-noconfig.cmake

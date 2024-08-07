@@ -1,0 +1,87 @@
+[0.044s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj
+[0.085s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.493s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.514s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.658s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.666s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.683s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.720s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.782s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.995s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.999s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.503s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.015s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.156s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.426s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[2.660s] [33mCMake Warning (dev) at /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/ament_cmake_core/package.cmake:3:
+[2.660s]   Syntax Warning in cmake code at column 60
+[2.661s] 
+[2.661s]   Argument not separated from preceding token by whitespace.
+[2.661s] Call Stack (most recent call first):
+[2.661s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:100 (include)
+[2.661s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[2.661s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[2.662s]   CMakeLists.txt:26 (ament_package)
+[2.662s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.663s] [0m
+[2.663s] [33mCMake Warning (dev) at /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/ament_cmake_core/package.cmake:3:
+[2.663s]   Syntax Warning in cmake code at column 77
+[2.663s] 
+[2.663s]   Argument not separated from preceding token by whitespace.
+[2.663s] Call Stack (most recent call first):
+[2.663s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:100 (include)
+[2.664s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[2.664s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[2.664s]   CMakeLists.txt:26 (ament_package)
+[2.664s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.664s] [0m
+[2.677s] -- Configuring done
+[2.698s] -- Generating done
+[2.703s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj
+[2.744s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj
+[2.745s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj -- -j8 -l8
+[2.878s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj -- -j8 -l8
+[2.962s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj
+[2.978s] -- Install configuration: ""
+[2.979s] -- Execute custom install script
+[2.980s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch/display_launch.py
+[3.033s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch/one_robot_gz_launch.py
+[3.075s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/launch/simple_robot_gz_launch.py
+[3.111s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/caster_diffbot.xacro
+[3.154s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/caster_diffbot_gz.xacro
+[3.188s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/the_simplest_diffbot.xacro
+[3.230s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/urdf/the_simplest_diffbot_gz.xacro
+[3.277s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base.stl
+[3.318s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base_caster.stl
+[3.353s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/base_plate.stl
+[3.400s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/bolaloca.stl
+[3.436s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/camara.stl
+[3.471s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/caster_wheel.stl
+[3.506s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/husky_wheel.stl
+[3.545s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/wheel.stl
+[3.567s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/meshes/wheel_ring.stl
+[3.589s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/rviz/robot_display.rviz
+[3.616s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/worlds/empty.world
+[3.639s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/materials/textures/Marker0_4x4.png
+[3.662s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/materials/textures/RoboticaPosgrado_logo.png
+[3.688s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/meshes/RP_logo.dae
+[3.701s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model-1_4.sdf
+[3.722s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model-1_5.sdf
+[3.746s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model.config
+[3.790s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/roboticaposgrado/model.sdf
+[3.808s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/ament_index/resource_index/package_run_dependencies/pibotj
+[3.827s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/ament_index/resource_index/parent_prefix_path/pibotj
+[3.847s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/ament_prefix_path.sh
+[3.867s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/ament_prefix_path.dsv
+[3.887s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/path.sh
+[3.909s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/environment/path.dsv
+[3.932s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.bash
+[3.952s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.sh
+[3.973s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.zsh
+[3.994s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/local_setup.dsv
+[4.018s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/package.dsv
+[4.039s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/ament_index/resource_index/packages/pibotj
+[4.066s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/cmake/pibotjConfig.cmake
+[4.086s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/cmake/pibotjConfig-version.cmake
+[4.106s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj/share/pibotj/package.xml
+[4.133s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj

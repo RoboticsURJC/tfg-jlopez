@@ -1,0 +1,115 @@
+[0.028s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/ros2_control/controller_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager
+[0.094s] -- The C compiler identification is GNU 11.4.0
+[0.162s] -- The CXX compiler identification is GNU 11.4.0
+[0.170s] -- Detecting C compiler ABI info
+[0.254s] -- Detecting C compiler ABI info - done
+[0.265s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.265s] -- Detecting C compile features
+[0.266s] -- Detecting C compile features - done
+[0.270s] -- Detecting CXX compiler ABI info
+[0.371s] -- Detecting CXX compiler ABI info - done
+[0.382s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.382s] -- Detecting CXX compile features
+[0.383s] -- Detecting CXX compile features - done
+[0.388s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.590s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.673s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.732s] -- Found backward_ros: 1.0.2 (/opt/ros/humble/share/backward_ros/cmake)
+[0.749s] -- Found libdw: /usr/lib/x86_64-linux-gnu/libdw.so  
+[0.758s] -- Could NOT find libbfd (missing: LIBBFD_LIBRARY LIBBFD_INCLUDE_DIR) 
+[0.758s] -- BACKWARD_HAS_UNWIND=1
+[0.758s] -- BACKWARD_HAS_BACKTRACE=0
+[0.758s] -- BACKWARD_HAS_BACKTRACE_SYMBOL=0
+[0.758s] -- BACKWARD_HAS_DW=1
+[0.758s] -- BACKWARD_HAS_BFD=0
+[0.759s] -- Found Backward: /opt/ros/humble/share/backward_ros/cmake  
+[0.763s] -- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)
+[0.764s] -- Found controller_interface: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/cmake)
+[0.831s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.842s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.858s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.882s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.917s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.231s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.242s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.364s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.500s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.508s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.548s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.580s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.602s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[2.635s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.674s] -- Looking for pthread.h
+[3.005s] -- Looking for pthread.h - found
+[3.006s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.327s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.335s] -- Found Threads: TRUE  
+[4.357s] -- Found controller_manager_msgs: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/share/controller_manager_msgs/cmake)
+[4.523s] -- Found realtime_tools: 2.5.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/share/realtime_tools/cmake)
+[6.226s] -- Found ament_cmake_gmock: 1.3.9 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[6.228s] -- Found ros2_control_test_assets: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake)
+[6.243s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[6.262s] -- Found ament_cmake_gtest: 1.3.9 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[6.264s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[6.752s] -- Configuring done
+[7.441s] -- Generating done
+[7.451s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager
+[7.489s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/ros2_control/controller_manager -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager
+[7.490s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/articubot_one:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_description:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/basic_diffbot:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_manager -- -j8 -l8
+[7.667s] [  2%] [32mBuilding CXX object CMakeFiles/controller_manager.dir/src/controller_manager.cpp.o[0m
+[7.684s] [  5%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[7.717s] [  8%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/humble/src/gtest_vendor/src/gtest-all.cc.o[0m
+[7.734s] [ 11%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[7.744s] [ 11%] Built target ament_cmake_python_symlink_controller_manager_setup
+[7.791s] [ 11%] Built target ament_cmake_python_symlink_controller_manager
+[9.136s] running egg_info
+[9.138s] creating controller_manager.egg-info
+[9.138s] writing controller_manager.egg-info/PKG-INFO
+[9.139s] writing dependency_links to controller_manager.egg-info/dependency_links.txt
+[9.139s] writing entry points to controller_manager.egg-info/entry_points.txt
+[9.139s] writing top-level names to controller_manager.egg-info/top_level.txt
+[9.140s] writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+[9.148s] running install_scripts
+[9.159s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[9.160s]   warnings.warn(
+[9.160s] reading manifest file 'controller_manager.egg-info/SOURCES.txt'
+[9.161s] writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+[9.271s] running egg_info
+[9.273s] writing controller_manager.egg-info/PKG-INFO
+[9.281s] writing dependency_links to controller_manager.egg-info/dependency_links.txt
+[9.282s] writing entry points to controller_manager.egg-info/entry_points.txt
+[9.282s] writing top-level names to controller_manager.egg-info/top_level.txt
+[9.294s] reading manifest file 'controller_manager.egg-info/SOURCES.txt'
+[9.296s] writing manifest file 'controller_manager.egg-info/SOURCES.txt'
+[9.299s] Installing hardware_spawner script to scripts
+[9.306s] Installing spawner script to scripts
+[9.306s] Installing unspawner script to scripts
+[9.312s] [ 11%] Built target ament_cmake_python_build_controller_manager_egg
+[9.425s] [ 11%] Built target ament_cmake_python_build_controller_manager_scripts
+[12.103s] [ 14%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[12.190s] [ 14%] Built target gmock_main
+[15.766s] [ 17%] [32m[1mLinking CXX static library libgmock.a[0m
+[15.844s] [ 17%] Built target gmock
+[31.844s] [ 20%] [32m[1mLinking CXX shared library libcontroller_manager.so[0m
+[33.324s] [ 20%] Built target controller_manager
+[33.351s] [ 22%] [32mBuilding CXX object CMakeFiles/test_chainable_controller.dir/test/test_chainable_controller/test_chainable_controller.cpp.o[0m
+[33.352s] [ 25%] [32mBuilding CXX object CMakeFiles/test_controller_failed_init.dir/test/test_controller_failed_init/test_controller_failed_init.cpp.o[0m
+[33.352s] [ 31%] [32mBuilding CXX object CMakeFiles/test_controller_manager_urdf_passing.dir/test/test_controller_manager_urdf_passing.cpp.o[0m
+[33.352s] [ 31%] [32mBuilding CXX object CMakeFiles/test_controller.dir/test/test_controller/test_controller.cpp.o[0m
+[33.355s] [ 34%] [32mBuilding CXX object CMakeFiles/ros2_control_node.dir/src/ros2_control_node.cpp.o[0m
+[33.356s] [ 37%] [32mBuilding CXX object CMakeFiles/test_controller_with_interfaces.dir/test/test_controller_with_interfaces/test_controller_with_interfaces.cpp.o[0m
+[39.239s] [ 40%] [32m[1mLinking CXX shared library libtest_controller_with_interfaces.so[0m
+[39.452s] [ 42%] [32m[1mLinking CXX executable ros2_control_node[0m
+[39.468s] [ 42%] Built target test_controller_with_interfaces
+[39.499s] [ 45%] [32mBuilding CXX object CMakeFiles/test_release_interfaces.dir/test/test_release_interfaces.cpp.o[0m
+[40.107s] [ 48%] [32m[1mLinking CXX shared library libtest_controller.so[0m
+[40.357s] [ 48%] Built target test_controller
+[40.404s] [ 54%] [32mBuilding CXX object CMakeFiles/test_controller_manager.dir/test/test_controller_manager.cpp.o[0m
+[40.406s] [ 54%] [32mBuilding CXX object CMakeFiles/test_spawner_unspawner.dir/test/test_spawner_unspawner.cpp.o[0m
+[40.408s] [ 57%] [32mBuilding CXX object CMakeFiles/test_controller_manager_with_namespace.cpp.dir/test/test_controller_manager_with_namespace.cpp.o[0m
+[41.284s] [ 57%] Built target ros2_control_node
+[41.333s] [ 60%] [32mBuilding CXX object CMakeFiles/test_hardware_management_srvs.dir/test/test_hardware_management_srvs.cpp.o[0m
+[42.261s] [ 62%] [32m[1mLinking CXX shared library libtest_controller_failed_init.so[0m
+[42.597s] [ 62%] Built target test_controller_failed_init
+[42.642s] [ 65%] [32mBuilding CXX object CMakeFiles/test_load_controller.dir/test/test_load_controller.cpp.o[0m
+[47.747s] [ 68%] [32m[1mLinking CXX executable test_controller_manager_urdf_passing[0m

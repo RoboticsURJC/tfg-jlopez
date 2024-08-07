@@ -1,0 +1,45 @@
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/launch/one_robot_gz_launch.py
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/urdf/caster_diffbot.xacro
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/urdf/caster_diffbot_gz.xacro
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/base.stl
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/bolaloca.stl
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/camara.stl
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/wheel_ring.stl
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/rviz/robot_display.rviz
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/worlds/empty.world
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/config/gaz_ros2_ctl_use_sim.yaml
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/config/my_controllers.yaml
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/ament_index/resource_index/package_run_dependencies/pibotj_r2c
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/ament_index/resource_index/parent_prefix_path/pibotj_r2c
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/environment/path.sh
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/environment/path.dsv
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/local_setup.bash
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/local_setup.sh
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/local_setup.zsh
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/local_setup.dsv
+-- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.dsv
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/ament_index/resource_index/packages/pibotj_r2c
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/cmake/pibotj_r2cConfig.cmake
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/cmake/pibotj_r2cConfig-version.cmake
+-- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.xml

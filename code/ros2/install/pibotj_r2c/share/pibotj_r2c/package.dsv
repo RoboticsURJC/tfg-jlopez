@@ -1,0 +1,8 @@
+source;share/pibotj_r2c/hook/cmake_prefix_path.ps1
+source;share/pibotj_r2c/hook/cmake_prefix_path.dsv
+source;share/pibotj_r2c/hook/cmake_prefix_path.sh
+source;share/pibotj_r2c/local_setup.bash
+source;share/pibotj_r2c/local_setup.dsv
+source;share/pibotj_r2c/local_setup.ps1
+source;share/pibotj_r2c/local_setup.sh
+source;share/pibotj_r2c/local_setup.zsh

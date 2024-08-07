@@ -1,9 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/basic_diffbot_uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/test.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/edit_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/rebuild_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/list_install_components.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/install.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/install/local.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/basic_diffbot/CMakeFiles/install/strip.dir

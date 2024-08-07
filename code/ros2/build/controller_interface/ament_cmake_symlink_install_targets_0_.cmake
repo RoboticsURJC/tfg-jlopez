@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface/libcontroller_interface.so" "TARGETS" "controller_interface" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

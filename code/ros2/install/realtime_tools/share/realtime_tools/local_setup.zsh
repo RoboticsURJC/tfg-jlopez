@@ -1,0 +1,1 @@
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/realtime_tools/ament_cmake_environment_hooks/local_setup.zsh
