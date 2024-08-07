@@ -3,11 +3,15 @@ controller_manager:
     update_rate: 30
     use_sim_time: true
 
+    # define controllers
     diff_cont:
       type: diff_drive_controller/DiffDriveController
 
-    joint_broad:
+    joint_broad: # muestra el estado de las joints
       type: joint_state_broadcaster/JointStateBroadcaster
+
+    pos_cont: 
+      type: position_controllers/JointGroupPositionController
 
 diff_cont:
   ros__parameters:
@@ -16,8 +20,8 @@ diff_cont:
 
     base_frame_id: base_link
 
-    left_wheel_names: ['wheel_left_joint']
-    right_wheel_names: ['wheel_right_joint']
+    left_wheel_names: ['left_wheel_joint']
+    right_wheel_names: ['right_wheel_joint']
     wheel_separation: 0.297
     wheel_radius: 0.033
 
@@ -66,3 +70,10 @@ diff_cont:
 
 # joint_broad:
 #   ros__parameters:
+
+
+pos_cont:
+  ros__parameters:
+    joints: ['camera_joint']  # Aquí debes especificar las joints
+    publish_rate: 50.0
+

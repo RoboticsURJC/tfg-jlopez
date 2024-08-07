@@ -16,7 +16,7 @@ set(_pibotj_r2c_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT pibotj_r2c_FIND_QUIETLY)
-  message(STATUS "Found pibotj_r2c: 1.0.0 (${pibotj_r2c_DIR})")
+  message(STATUS "Found pibotj_r2c: 0.0.0 (${pibotj_r2c_DIR})")
 endif()
 
 # warn when using a deprecated package
