@@ -1,0 +1,55 @@
+[0.009s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits -- -j8 -l8
+[0.037s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.172s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.180s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.214s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.217s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.224s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.235s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.250s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.291s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.292s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.420s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.482s] -- Found rclcpp_lifecycle: 16.0.10 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.501s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.502s] -- Found launch_testing_ament_cmake: 1.0.6 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+[0.502s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.526s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.526s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.527s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.528s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.602s] -- Configuring done
+[0.614s] -- Generating done
+[0.616s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits
+[0.642s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.642s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.656s] [ 33%] Built target gtest_main
+[0.657s] [ 66%] Built target gtest
+[0.668s] [35m[1mConsolidate compiler generated dependencies of target joint_limits_rosparam_test[0m
+[0.685s] [100%] Built target joint_limits_rosparam_test
+[0.695s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits -- -j8 -l8
+[0.718s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits
+[0.725s] -- Install configuration: ""
+[0.725s] -- Execute custom install script
+[0.725s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/include/joint_limits/joint_limits.hpp
+[0.726s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/include/joint_limits/joint_limits_rosparam.hpp
+[0.726s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/lib/joint_limits/joint_limits_rosparam_test
+[0.726s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/test/joint_limits_rosparam.yaml
+[0.726s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/ament_index/resource_index/package_run_dependencies/joint_limits
+[0.726s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/ament_index/resource_index/parent_prefix_path/joint_limits
+[0.727s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/environment/ament_prefix_path.sh
+[0.727s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/environment/ament_prefix_path.dsv
+[0.727s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/environment/path.sh
+[0.727s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/environment/path.dsv
+[0.727s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/local_setup.bash
+[0.728s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/local_setup.sh
+[0.728s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/local_setup.zsh
+[0.728s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/local_setup.dsv
+[0.728s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/package.dsv
+[0.737s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/ament_index/resource_index/packages/joint_limits
+[0.737s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.737s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.737s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/cmake/joint_limitsConfig.cmake
+[0.738s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/cmake/joint_limitsConfig-version.cmake
+[0.738s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/joint_limits/share/joint_limits/package.xml
+[0.740s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/joint_limits

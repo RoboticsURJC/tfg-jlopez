@@ -1,0 +1,76 @@
+[0.016s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface -- -j8 -l8
+[0.042s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.172s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.180s] -- Found hardware_interface: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/share/hardware_interface/cmake)
+[0.212s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.215s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.221s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.232s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.246s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.029s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.043s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.212s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.278s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.412s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.475s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.553s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.102s] -- Found ament_cmake_gmock: 1.3.10 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[2.112s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[2.124s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[2.130s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.880s] -- Configuring done
+[3.839s] -- Generating done
+[3.865s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface
+[4.100s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[4.106s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[4.130s] [35m[1mConsolidate compiler generated dependencies of target controller_interface[0m
+[4.266s] [  9%] Built target gmock_main
+[4.298s] [ 23%] Built target gmock
+[4.416s] [ 42%] Built target controller_interface
+[4.427s] [35m[1mConsolidate compiler generated dependencies of target test_semantic_component_interface[0m
+[4.445s] [35m[1mConsolidate compiler generated dependencies of target test_force_torque_sensor[0m
+[4.459s] [35m[1mConsolidate compiler generated dependencies of target test_imu_sensor[0m
+[4.559s] [35m[1mConsolidate compiler generated dependencies of target test_controller_interface[0m
+[4.611s] [35m[1mConsolidate compiler generated dependencies of target test_controller_with_options[0m
+[4.615s] [35m[1mConsolidate compiler generated dependencies of target test_chainable_controller_interface[0m
+[4.663s] [ 52%] Built target test_semantic_component_interface
+[4.664s] [ 61%] Built target test_imu_sensor
+[4.731s] [ 71%] Built target test_force_torque_sensor
+[4.782s] [ 80%] Built target test_controller_interface
+[4.812s] [ 90%] Built target test_controller_with_options
+[4.838s] [100%] Built target test_chainable_controller_interface
+[4.915s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface -- -j8 -l8
+[5.297s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface
+[5.364s] -- Install configuration: ""
+[5.365s] -- Execute custom install script
+[5.366s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/controller_interface/chainable_controller_interface.hpp
+[5.367s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/controller_interface/controller_interface.hpp
+[5.368s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/controller_interface/controller_interface_base.hpp
+[5.368s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/controller_interface/helpers.hpp
+[5.368s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/controller_interface/visibility_control.h
+[5.368s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/semantic_components/force_torque_sensor.hpp
+[5.369s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/semantic_components/imu_sensor.hpp
+[5.369s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/semantic_components/range_sensor.hpp
+[5.369s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/include/semantic_components/semantic_component_interface.hpp
+[5.370s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib/libcontroller_interface.so
+[5.370s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/environment/library_path.sh
+[5.371s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/environment/library_path.dsv
+[5.371s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/ament_index/resource_index/package_run_dependencies/controller_interface
+[5.371s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/ament_index/resource_index/parent_prefix_path/controller_interface
+[5.372s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/environment/ament_prefix_path.sh
+[5.372s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/environment/ament_prefix_path.dsv
+[5.372s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/environment/path.sh
+[5.373s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/environment/path.dsv
+[5.373s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/local_setup.bash
+[5.373s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/local_setup.sh
+[5.374s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/local_setup.zsh
+[5.374s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/local_setup.dsv
+[5.374s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/package.dsv
+[5.387s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/ament_index/resource_index/packages/controller_interface
+[5.387s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.388s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.388s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[5.388s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/cmake/controller_interfaceConfig.cmake
+[5.389s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/cmake/controller_interfaceConfig-version.cmake
+[5.389s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/share/controller_interface/package.xml
+[5.408s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface

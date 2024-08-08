@@ -1,0 +1,254 @@
+[0.046s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control -- -j8 -l8
+[0.094s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.341s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.355s] -- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)
+[0.356s] -- Found controller_manager: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/share/controller_manager/cmake)
+[0.420s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.425s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.437s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.457s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.483s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.848s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.851s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.897s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.914s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.945s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.959s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.978s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.148s] -- Found yaml_cpp_vendor: 8.0.2 (/opt/ros/humble/share/yaml_cpp_vendor/cmake)
+[1.156s] -- Looking for ignition-gazebo6 -- found version 6.16.0
+[1.162s] -- Searching for dependencies of ignition-gazebo6
+[1.164s] -- Looking for sdformat12 -- found version 12.7.2
+[1.165s] -- Searching for dependencies of sdformat12
+[1.174s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.175s] -- Searching for dependencies of ignition-math6
+[1.177s] -- Looking for ignition-utils1 -- found version 1.5.1
+[1.178s] -- Searching for dependencies of ignition-utils1
+[1.182s] -- Looking for ignition-plugin1 -- found version 1.4.0
+[1.183s] -- Searching for dependencies of ignition-plugin1
+[1.184s] -- Searching for <ignition-plugin1> component [loader]
+[1.185s] -- Looking for ignition-plugin1-loader -- found version 1.4.0
+[1.186s] -- Searching for dependencies of ignition-plugin1-loader
+[1.187s] -- Searching for <ignition-plugin1> component [register]
+[1.188s] -- Looking for ignition-plugin1-register -- found version 1.4.0
+[1.189s] -- Searching for dependencies of ignition-plugin1-register
+[1.191s] -- Looking for ignition-transport11 -- found version 11.4.1
+[1.192s] -- Searching for dependencies of ignition-transport11
+[1.250s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.257s] -- Checking for module 'libzmq >= 4'
+[1.279s] --   Found libzmq , version 4.3.4
+[1.346s] -- Checking for module 'uuid'
+[1.368s] --   Found uuid, version 2.37.2
+[1.423s] -- Looking for ignition-utils1 -- found version 1.5.1
+[1.424s] -- Searching for dependencies of ignition-utils1
+[1.424s] -- Searching for <ignition-utils1> component [cli]
+[1.431s] -- Looking for ignition-utils1-cli -- found version 1.5.1
+[1.432s] -- Searching for dependencies of ignition-utils1-cli
+[1.434s] -- Looking for ignition-msgs8 -- found version 8.7.0
+[1.435s] -- Searching for dependencies of ignition-msgs8
+[1.470s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[1.472s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.486s] -- Searching for <ignition-transport11> component [log]
+[1.488s] -- Looking for ignition-transport11-log -- found version 11.4.1
+[1.489s] -- Searching for dependencies of ignition-transport11-log
+[1.490s] -- Searching for <ignition-transport11> component [parameters]
+[1.491s] -- Looking for ignition-transport11-parameters -- found version 11.4.1
+[1.492s] -- Searching for dependencies of ignition-transport11-parameters
+[1.494s] -- Looking for ignition-msgs8 -- found version 8.7.0
+[1.495s] -- Looking for ignition-common4 -- found version 4.7.0
+[1.496s] -- Searching for dependencies of ignition-common4
+[1.496s] -- Looking for dlfcn.h - found
+[1.496s] -- Looking for libdl - found
+[1.514s] -- Searching for <ignition-common4> component [profiler]
+[1.515s] -- Looking for ignition-common4-profiler -- found version 4.7.0
+[1.516s] -- Searching for dependencies of ignition-common4-profiler
+[1.517s] -- Searching for <ignition-common4> component [events]
+[1.518s] -- Looking for ignition-common4-events -- found version 4.7.0
+[1.519s] -- Searching for dependencies of ignition-common4-events
+[1.519s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.521s] -- Searching for <ignition-common4> component [av]
+[1.522s] -- Looking for ignition-common4-av -- found version 4.7.0
+[1.523s] -- Searching for dependencies of ignition-common4-av
+[1.532s] -- Checking for module 'libswscale'
+[1.628s] --   Found libswscale, version 5.9.100
+[2.085s] -- Checking for module 'libavdevice >= 56.4.100'
+[2.246s] --   Found libavdevice , version 58.13.100
+[2.737s] -- Checking for module 'libavformat'
+[2.912s] --   Found libavformat, version 58.76.100
+[3.399s] -- Checking for module 'libavcodec'
+[3.551s] --   Found libavcodec, version 58.134.100
+[4.003s] -- Checking for module 'libavutil'
+[4.155s] --   Found libavutil, version 56.70.100
+[4.564s] -- Looking for ignition-fuel_tools7 -- found version 7.3.0
+[4.569s] -- Searching for dependencies of ignition-fuel_tools7
+[5.059s] -- Checking for module 'jsoncpp'
+[5.214s] --   Found jsoncpp, version 1.9.5
+[5.651s] -- Checking for module 'libzip'
+[5.807s] --   Found libzip, version 1.7.3
+[6.190s] -- Looking for ignition-common4 -- found version 4.7.0
+[6.195s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.201s] -- Looking for ignition-msgs8 -- found version 8.7.0
+[6.221s] -- Looking for ignition-gui6 -- found version 6.8.0
+[6.227s] -- Searching for dependencies of ignition-gui6
+[6.553s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.554s] -- Looking for ignition-common4 -- found version 4.7.0
+[6.555s] -- Looking for ignition-plugin1 -- found version 1.4.0
+[6.557s] -- Looking for ignition-transport11 -- found version 11.4.1
+[6.564s] -- Looking for ignition-rendering6 -- found version 6.6.3
+[6.565s] -- Searching for dependencies of ignition-rendering6
+[6.566s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.567s] -- Searching for dependencies of ignition-math6
+[6.567s] -- Searching for <ignition-math6> component [eigen3]
+[6.569s] -- Looking for ignition-math6-eigen3 -- found version 6.15.1
+[6.570s] -- Searching for dependencies of ignition-math6-eigen3
+[6.574s] -- Looking for ignition-common4 -- found version 4.7.0
+[6.574s] -- Searching for dependencies of ignition-common4
+[6.575s] -- Looking for dlfcn.h - found
+[6.575s] -- Looking for libdl - found
+[6.592s] -- Searching for <ignition-common4> component [graphics]
+[6.593s] -- Looking for ignition-common4-graphics -- found version 4.7.0
+[6.594s] -- Searching for dependencies of ignition-common4-graphics
+[6.594s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.595s] -- Looking for ignition-utils1 -- found version 1.5.1
+[6.596s] -- Searching for <ignition-common4> component [events]
+[6.598s] -- Looking for ignition-plugin1 -- found version 1.4.0
+[6.599s] -- Searching for dependencies of ignition-plugin1
+[6.599s] -- Searching for <ignition-plugin1> component [all]
+[6.600s] -- Looking for all libraries of ignition-plugin1 -- found version 1.4.0
+[6.601s] -- Looking for ignition-plugin1 -- found version 1.4.0
+[6.606s] -- Looking for ignition-msgs8 -- found version 8.7.0
+[6.656s] -- Looking for ignition-physics5 -- found version 5.3.2
+[6.657s] -- Searching for dependencies of ignition-physics5
+[6.657s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.658s] -- Looking for ignition-plugin1 -- found version 1.4.0
+[6.659s] -- Looking for ignition-utils1 -- found version 1.5.1
+[6.661s] -- Searching for <ignition-physics5> component [heightmap]
+[6.663s] -- Looking for ignition-physics5-heightmap -- found version 5.3.2
+[6.663s] -- Searching for dependencies of ignition-physics5-heightmap
+[6.664s] -- Looking for ignition-common4 -- found version 4.7.0
+[6.665s] -- Searching for <ignition-physics5> component [mesh]
+[6.666s] -- Looking for ignition-physics5-mesh -- found version 5.3.2
+[6.667s] -- Searching for dependencies of ignition-physics5-mesh
+[6.668s] -- Looking for ignition-common4 -- found version 4.7.0
+[6.669s] -- Searching for <ignition-physics5> component [sdf]
+[6.670s] -- Looking for ignition-physics5-sdf -- found version 5.3.2
+[6.671s] -- Searching for dependencies of ignition-physics5-sdf
+[6.672s] -- Looking for sdformat12 -- found version 12.7.2
+[6.674s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.675s] -- Searching for dependencies of ignition-sensors6
+[6.709s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[6.710s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.711s] -- Looking for ignition-common4 -- found version 4.7.0
+[6.712s] -- Looking for ignition-transport11 -- found version 11.4.1
+[6.713s] -- Looking for ignition-rendering6 -- found version 6.6.3
+[6.713s] -- Looking for ignition-msgs8 -- found version 8.7.0
+[6.714s] -- Looking for sdformat12 -- found version 12.7.2
+[6.715s] -- Searching for <ignition-sensors6> component [air_pressure]
+[6.717s] -- Looking for ignition-sensors6-air_pressure -- found version 6.8.0
+[6.718s] -- Searching for dependencies of ignition-sensors6-air_pressure
+[6.719s] -- Searching for <ignition-sensors6> component [altimeter]
+[6.720s] -- Looking for ignition-sensors6-altimeter -- found version 6.8.0
+[6.721s] -- Searching for dependencies of ignition-sensors6-altimeter
+[6.722s] -- Searching for <ignition-sensors6> component [imu]
+[6.723s] -- Looking for ignition-sensors6-imu -- found version 6.8.0
+[6.724s] -- Searching for dependencies of ignition-sensors6-imu
+[6.725s] -- Searching for <ignition-sensors6> component [force_torque]
+[6.727s] -- Looking for ignition-sensors6-force_torque -- found version 6.8.0
+[6.727s] -- Searching for dependencies of ignition-sensors6-force_torque
+[6.729s] -- Searching for <ignition-sensors6> component [logical_camera]
+[6.730s] -- Looking for ignition-sensors6-logical_camera -- found version 6.8.0
+[6.731s] -- Searching for dependencies of ignition-sensors6-logical_camera
+[6.732s] -- Searching for <ignition-sensors6> component [magnetometer]
+[6.733s] -- Looking for ignition-sensors6-magnetometer -- found version 6.8.0
+[6.734s] -- Searching for dependencies of ignition-sensors6-magnetometer
+[6.735s] -- Searching for <ignition-sensors6> component [navsat]
+[6.736s] -- Looking for ignition-sensors6-navsat -- found version 6.8.0
+[6.737s] -- Searching for dependencies of ignition-sensors6-navsat
+[6.738s] -- Searching for <ignition-sensors6> component [rendering]
+[6.739s] -- Looking for ignition-sensors6-rendering -- found version 6.8.0
+[6.740s] -- Searching for dependencies of ignition-sensors6-rendering
+[6.741s] -- Searching for <ignition-sensors6> component [lidar]
+[6.742s] -- Looking for ignition-sensors6-lidar -- found version 6.8.0
+[6.743s] -- Searching for dependencies of ignition-sensors6-lidar
+[6.744s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.745s] -- Searching for <ignition-sensors6> component [gpu_lidar]
+[6.746s] -- Looking for ignition-sensors6-gpu_lidar -- found version 6.8.0
+[6.747s] -- Searching for dependencies of ignition-sensors6-gpu_lidar
+[6.747s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.749s] -- Searching for <ignition-sensors6> component [camera]
+[6.750s] -- Looking for ignition-sensors6-camera -- found version 6.8.0
+[6.751s] -- Searching for dependencies of ignition-sensors6-camera
+[6.751s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.753s] -- Searching for <ignition-sensors6> component [boundingbox_camera]
+[6.754s] -- Looking for ignition-sensors6-boundingbox_camera -- found version 6.8.0
+[6.755s] -- Searching for dependencies of ignition-sensors6-boundingbox_camera
+[6.756s] -- Searching for <ignition-sensors6> component [segmentation_camera]
+[6.757s] -- Looking for ignition-sensors6-segmentation_camera -- found version 6.8.0
+[6.758s] -- Searching for dependencies of ignition-sensors6-segmentation_camera
+[6.759s] -- Searching for <ignition-sensors6> component [depth_camera]
+[6.760s] -- Looking for ignition-sensors6-depth_camera -- found version 6.8.0
+[6.761s] -- Searching for dependencies of ignition-sensors6-depth_camera
+[6.762s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.763s] -- Searching for <ignition-sensors6> component [rgbd_camera]
+[6.765s] -- Looking for ignition-sensors6-rgbd_camera -- found version 6.8.0
+[6.765s] -- Searching for dependencies of ignition-sensors6-rgbd_camera
+[6.766s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.767s] -- Searching for <ignition-sensors6> component [thermal_camera]
+[6.768s] -- Looking for ignition-sensors6-thermal_camera -- found version 6.8.0
+[6.769s] -- Searching for dependencies of ignition-sensors6-thermal_camera
+[6.770s] -- Looking for ignition-sensors6 -- found version 6.8.0
+[6.772s] -- Looking for ignition-rendering6 -- found version 6.6.3
+[6.773s] -- Looking for ignition-math6 -- found version 6.15.1
+[6.774s] -- Looking for ignition-utils1 -- found version 1.5.1
+[6.811s] -- Compiling against Ignition Fortress
+[6.812s] -- Looking for ignition-plugin1 -- found version 1.4.0
+[6.868s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[7.017s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.019s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.020s] -- Configured cppcheck include dirs: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/gz_ros2_control/ign_ros2_control/include
+[7.020s] -- Configured cppcheck exclude dirs and/or files: 
+[7.022s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.022s] -- Configured cpplint exclude dirs and/or files: 
+[7.023s] -- Added test 'lint_cmake' to check CMake code style
+[7.025s] -- Added test 'uncrustify' to check C / C++ code style
+[7.025s] -- Configured uncrustify additional arguments: 
+[7.025s] -- Added test 'xmllint' to check XML markup files
+[7.030s] -- Configuring done
+[7.132s] -- Generating done
+[7.138s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control
+[7.193s] [35m[1mConsolidate compiler generated dependencies of target ign_hardware_plugins[0m
+[7.193s] [35m[1mConsolidate compiler generated dependencies of target ign_ros2_control-system[0m
+[7.243s] [ 50%] Built target ign_hardware_plugins
+[7.255s] [ 75%] [32m[1mLinking CXX shared library libign_ros2_control-system.so[0m
+[10.400s] [100%] Built target ign_ros2_control-system
+[10.411s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control -- -j8 -l8
+[10.440s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control
+[10.447s] -- Install configuration: ""
+[10.448s] -- Execute custom install script
+[10.448s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/lib/libign_hardware_plugins.so
+[10.449s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/include/ign_ros2_control/ign_ros2_control_plugin.hpp
+[10.449s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/include/ign_ros2_control/ign_system.hpp
+[10.449s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/include/ign_ros2_control/ign_system_interface.hpp
+[10.449s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/environment/library_path.sh
+[10.449s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/environment/library_path.dsv
+[10.450s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/lib/libign_ros2_control-system.so
+[10.450s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control//ign_hardware_plugins.xml
+[10.450s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ament_index/resource_index/package_run_dependencies/ign_ros2_control
+[10.450s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ament_index/resource_index/parent_prefix_path/ign_ros2_control
+[10.450s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/environment/ament_prefix_path.sh
+[10.451s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/environment/ament_prefix_path.dsv
+[10.451s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/environment/path.sh
+[10.451s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/environment/path.dsv
+[10.451s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/local_setup.bash
+[10.451s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/local_setup.sh
+[10.452s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/local_setup.zsh
+[10.452s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/local_setup.dsv
+[10.452s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/package.dsv
+[10.462s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ament_index/resource_index/packages/ign_ros2_control
+[10.462s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ament_index/resource_index/ign_ros2_control__pluginlib__plugin/ign_ros2_control
+[10.462s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.462s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake
+[10.462s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/cmake/ign_ros2_controlConfig.cmake
+[10.463s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/cmake/ign_ros2_controlConfig-version.cmake
+[10.463s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ign_ros2_control/share/ign_ros2_control/package.xml
+[10.466s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface_testing/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/realtime_tools/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/controller_manager_msgs/local/lib/python3.10/dist-packages:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control

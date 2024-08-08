@@ -1,0 +1,84 @@
+[0.029s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface -- -j8 -l8
+[0.054s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.187s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.195s] -- Found hardware_interface: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/share/hardware_interface/cmake)
+[0.226s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.228s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.235s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.245s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.259s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.453s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.454s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.475s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.484s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.502s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.510s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[0.521s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.579s] -- Found ament_cmake_gmock: 1.3.10 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[0.580s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[0.582s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.582s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.699s] -- Configuring done
+[0.832s] -- Generating done
+[0.835s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface
+[0.862s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.865s] [35m[1mConsolidate compiler generated dependencies of target transmission_interface[0m
+[0.868s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.877s] [  8%] Built target gmock_main
+[0.889s] [ 21%] Built target gmock
+[0.892s] [ 39%] Built target transmission_interface
+[0.905s] [35m[1mConsolidate compiler generated dependencies of target test_differential_transmission[0m
+[0.905s] [35m[1mConsolidate compiler generated dependencies of target test_simple_transmission_loader[0m
+[0.906s] [35m[1mConsolidate compiler generated dependencies of target test_four_bar_linkage_transmission_loader[0m
+[0.909s] [35m[1mConsolidate compiler generated dependencies of target test_four_bar_linkage_transmission[0m
+[0.912s] [35m[1mConsolidate compiler generated dependencies of target test_simple_transmission[0m
+[0.916s] [35m[1mConsolidate compiler generated dependencies of target test_utils[0m
+[0.917s] [35m[1mConsolidate compiler generated dependencies of target test_differential_transmission_loader[0m
+[0.929s] [ 47%] Built target test_four_bar_linkage_transmission_loader
+[0.930s] [ 56%] Built target test_differential_transmission
+[0.932s] [ 65%] Built target test_simple_transmission_loader
+[0.937s] [ 73%] Built target test_simple_transmission
+[0.939s] [ 82%] Built target test_four_bar_linkage_transmission
+[0.941s] [ 91%] Built target test_utils
+[0.943s] [100%] Built target test_differential_transmission_loader
+[0.953s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface -- -j8 -l8
+[0.996s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface
+[1.004s] -- Install configuration: ""
+[1.004s] -- Execute custom install script
+[1.005s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/accessor.hpp
+[1.005s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/differential_transmission.hpp
+[1.005s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/differential_transmission_loader.hpp
+[1.005s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/exception.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/four_bar_linkage_transmission.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/four_bar_linkage_transmission_loader.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/handle.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/simple_transmission.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/simple_transmission_loader.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/transmission.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/transmission_interface_exception.hpp
+[1.006s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/transmission_loader.hpp
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/include/transmission_interface/visibility_control.h
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface//ros2_control_plugins.xml
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/environment/library_path.sh
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/environment/library_path.dsv
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/ament_index/resource_index/package_run_dependencies/transmission_interface
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/ament_index/resource_index/parent_prefix_path/transmission_interface
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/environment/ament_prefix_path.sh
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/environment/ament_prefix_path.dsv
+[1.007s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/environment/path.sh
+[1.008s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/environment/path.dsv
+[1.008s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/local_setup.bash
+[1.008s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/local_setup.sh
+[1.008s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/local_setup.zsh
+[1.008s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/local_setup.dsv
+[1.008s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/package.dsv
+[1.017s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/ament_index/resource_index/packages/transmission_interface
+[1.017s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/ament_index/resource_index/transmission_interface__pluginlib__plugin/transmission_interface
+[1.017s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.017s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.017s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[1.017s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/cmake/transmission_interfaceConfig.cmake
+[1.018s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/cmake/transmission_interfaceConfig-version.cmake
+[1.018s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/share/transmission_interface/package.xml
+[1.018s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/transmission_interface/lib/libtransmission_interface.so
+[1.021s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/hardware_interface/lib:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/transmission_interface

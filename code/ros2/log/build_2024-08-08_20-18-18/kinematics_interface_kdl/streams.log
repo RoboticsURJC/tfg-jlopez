@@ -1,0 +1,63 @@
+[0.011s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl -- -j8 -l8
+[0.037s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.164s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.172s] -- Found kdl_parser: 2.6.4 (/opt/ros/humble/share/kdl_parser/cmake)
+[0.174s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.175s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.190s] -- Found kinematics_interface: 1.1.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface/share/kinematics_interface/cmake)
+[0.212s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.215s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.221s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.231s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.244s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.279s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.280s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.395s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.474s] -- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)
+[0.494s] -- Found tf2_eigen_kdl: 0.25.7 (/opt/ros/humble/share/tf2_eigen_kdl/cmake)
+[0.520s] -- Found ament_cmake_gmock: 1.3.10 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[0.521s] -- Found ros2_control_test_assets: 2.42.0 (/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake)
+[0.523s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[0.526s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.527s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.606s] -- Configuring done
+[0.641s] -- Generating done
+[0.645s] -- Build files have been written to: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl
+[0.677s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.677s] [35m[1mConsolidate compiler generated dependencies of target kinematics_interface_kdl[0m
+[0.678s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.698s] [ 22%] Built target kinematics_interface_kdl
+[0.698s] [ 44%] Built target gmock_main
+[0.701s] [ 77%] Built target gmock
+[0.713s] [35m[1mConsolidate compiler generated dependencies of target test_kinematics_interface_kdl[0m
+[0.733s] [100%] Built target test_kinematics_interface_kdl
+[0.744s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl -- -j8 -l8
+[0.775s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl
+[0.782s] -- Install configuration: ""
+[0.782s] -- Execute custom install script
+[0.782s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl//kinematics_interface_kdl.xml
+[0.782s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/include/kinematics_interface_kdl/kinematics_interface_kdl/kinematics_interface_kdl.hpp
+[0.783s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/environment/library_path.sh
+[0.783s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/environment/library_path.dsv
+[0.783s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/ament_index/resource_index/package_run_dependencies/kinematics_interface_kdl
+[0.783s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/ament_index/resource_index/parent_prefix_path/kinematics_interface_kdl
+[0.783s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/environment/ament_prefix_path.sh
+[0.784s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/environment/ament_prefix_path.dsv
+[0.784s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/environment/path.sh
+[0.784s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/environment/path.dsv
+[0.784s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/local_setup.bash
+[0.785s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/local_setup.sh
+[0.785s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/local_setup.zsh
+[0.785s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/local_setup.dsv
+[0.785s] -- Symlinking: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/package.dsv
+[0.794s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/ament_index/resource_index/packages/kinematics_interface_kdl
+[0.794s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/ament_index/resource_index/kinematics_interface__pluginlib__plugin/kinematics_interface_kdl
+[0.794s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/cmake/ament_cmake_export_targets-extras.cmake
+[0.794s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.795s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/cmake/kinematics_interface_kdlConfig.cmake
+[0.795s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/cmake/kinematics_interface_kdlConfig-version.cmake
+[0.795s] -- Up-to-date symlink: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/package.xml
+[0.796s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/lib/libkinematics_interface_kdl.so
+[0.796s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/cmake/export_kinematics_interface_kdlExport.cmake
+[0.796s] -- Up-to-date: /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface_kdl/share/kinematics_interface_kdl/cmake/export_kinematics_interface_kdlExport-noconfig.cmake
+[0.799s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl' returned '0': AMENT_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_test_assets:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface:/opt/ros/humble LD_LIBRARY_PATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/kinematics_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo/../../lib/x86_64-linux-gnu/gazebo-11/plugins /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl

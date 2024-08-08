@@ -109,8 +109,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/humble/share/ament_cmake_libraries/cmake/ament_cmake_librariesConfig-version.cmake"
   "/opt/ros/humble/share/ament_cmake_libraries/cmake/ament_cmake_librariesConfig.cmake"
   "/opt/ros/humble/share/ament_cmake_libraries/cmake/ament_libraries_deduplicate.cmake"
-  "/opt/ros/humble/share/ament_cmake_libraries/cmake/ament_libraries_pack_build_configuration.cmake"
-  "/opt/ros/humble/share/ament_cmake_libraries/cmake/ament_libraries_unpack_build_configuration.cmake"
   "/opt/ros/humble/share/ament_cmake_python/cmake/ament_cmake_python-extras.cmake"
   "/opt/ros/humble/share/ament_cmake_python/cmake/ament_cmake_pythonConfig-version.cmake"
   "/opt/ros/humble/share/ament_cmake_python/cmake/ament_cmake_pythonConfig.cmake"
@@ -131,13 +129,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/humble/share/ament_cmake_version/cmake/ament_cmake_versionConfig-version.cmake"
   "/opt/ros/humble/share/ament_cmake_version/cmake/ament_cmake_versionConfig.cmake"
   "/opt/ros/humble/share/ament_cmake_version/cmake/ament_export_development_version_if_higher_than_manifest.cmake"
-  "/usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake"
-  "/usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in"
   "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/share/cmake-3.22/Modules/CMakeUnixFindMake.cmake"
   "/usr/share/cmake-3.22/Modules/DartConfiguration.tcl.in"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
@@ -155,7 +150,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "ament_cmake_core/stamps/templates_2_cmake.py.stamp"
   "ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake"
   "ament_cmake_symlink_install/ament_cmake_symlink_install.cmake"
