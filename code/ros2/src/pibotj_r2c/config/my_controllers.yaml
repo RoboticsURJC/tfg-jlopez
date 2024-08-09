@@ -70,8 +70,6 @@ diff_cont:
     # angular.z.min_jerk: NAN
 
 
-
-
 # joint_broad:
 #   ros__parameters:
 
