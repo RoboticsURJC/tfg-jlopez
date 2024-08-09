@@ -16,8 +16,8 @@
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/depth_camera.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/face.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/gazebo_control.xacro
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/gps.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/inertial_macros.xacro
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/lidar.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/robot.urdf.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/robot_core.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/ros2_control.xacro
@@ -33,6 +33,7 @@
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/launch/rsp.launch.py
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/worlds/empty.world
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/worlds/obstacles.world
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/GY-NEO6MV2 NEO-6M.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/base.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/bolaloca.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/camara.stl

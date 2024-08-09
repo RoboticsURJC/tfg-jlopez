@@ -1,0 +1,73 @@
+[0.015s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps -- -j8 -l8
+[0.073s] [35m[1mConsolidate compiler generated dependencies of target gps_node[0m
+[0.094s] [ 50%] [32mBuilding CXX object CMakeFiles/gps_node.dir/src/gps_node.cpp.o[0m
+[2.370s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.370s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:117:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgps[m[K’ was not declared in this scope
+[2.370s]   117 |   auto sensor_pub = node->create_publisher<[01;31m[Kgps[m[K::Gps>("/gps/gps_data", 1000);
+[2.370s]       |                                            [01;31m[K^~~[m[K
+[2.370s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:117:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[2.370s]   117 |   auto sensor_pub = node->[01;31m[Kcreate_publisher<gps::Gps>[m[K("/gps/gps_data", 1000);
+[2.370s]       |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.370s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:117:53:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [14], int)[m[K’
+[2.370s]   117 |   auto sensor_pub = [01;31m[Knode->create_publisher<gps::Gps>("/gps/gps_data", 1000)[m[K;
+[2.370s]       |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.371s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[2.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.371s]                  from [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:17[m[K:
+[2.371s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[2.371s]   195 |   [01;36m[Kcreate_publisher[m[K(
+[2.371s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[2.371s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.371s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:117:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.371s]   117 |   auto sensor_pub = [01;31m[Knode->create_publisher<gps::Gps>("/gps/gps_data", 1000)[m[K;
+[2.371s]       |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.376s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:135:10:[m[K [01;31m[Kerror: [m[K‘[01m[KserialOpen[m[K’ was not declared in this scope
+[2.376s]   135 |   if((fd=[01;31m[KserialOpen[m[K("/dev/ttyS0",9600))<0) {    // 9600 baudrate determined from module datasheet
+[2.376s]       |          [01;31m[K^~~~~~~~~~[m[K
+[2.381s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:141:6:[m[K [01;31m[Kerror: [m[K‘[01m[KwiringPiSetup[m[K’ was not declared in this scope
+[2.381s]   141 |   if([01;31m[KwiringPiSetup[m[K() == -1) {
+[2.381s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[2.381s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:148:21:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[2.381s]   148 |     auto msg = std::[01;31m[Kmake_unique<gps::Gps>[m[K();
+[2.381s]       |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.382s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:148:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<gps>()[m[K’
+[2.382s]   148 |     auto msg = [01;31m[Kstd::make_unique<gps::Gps>()[m[K;
+[2.382s]       |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.382s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.382s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[2.382s]                  from [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:17[m[K:
+[2.382s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+[2.382s]   961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+[2.382s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.382s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.382s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+[2.382s]   967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+[2.382s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.382s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.382s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+[2.382s]   973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+[2.383s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.383s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.386s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:154:16:[m[K [01;31m[Kerror: [m[K‘[01m[KserialDataAvail[m[K’ was not declared in this scope
+[2.387s]   154 |             if([01;31m[KserialDataAvail[m[K(fd))
+[2.387s]       |                [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.391s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:157:26:[m[K [01;31m[Kerror: [m[K‘[01m[KserialGetchar[m[K’ was not declared in this scope
+[2.391s]   157 |               uartChar = [01;31m[KserialGetchar[m[K(fd);
+[2.391s]       |                          [01;31m[K^~~~~~~~~~~~~[m[K
+[2.393s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:231:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.393s]   231 | }
+[2.393s]       |  [01;31m[K^[m[K
+[2.393s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:147:3:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.393s]   147 |   [01;36m[K{[m[K
+[2.393s]       |   [01;36m[K^[m[K
+[2.393s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:231:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.393s]   231 | }
+[2.394s]       |  [01;31m[K^[m[K
+[2.394s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:112:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.394s]   112 | [01;36m[K{[m[K
+[2.394s]       | [01;36m[K^[m[K
+[2.829s] gmake[2]: *** [CMakeFiles/gps_node.dir/build.make:76: CMakeFiles/gps_node.dir/src/gps_node.cpp.o] Error 1
+[2.829s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gps_node.dir/all] Error 2
+[2.829s] gmake: *** [Makefile:146: all] Error 2
+[2.831s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps' returned '2': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps -- -j8 -l8

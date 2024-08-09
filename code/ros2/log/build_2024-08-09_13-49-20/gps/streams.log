@@ -1,0 +1,10 @@
+[0.013s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps -- -j8 -l8
+[0.088s] [ 50%] [32mBuilding CXX object CMakeFiles/gps_node.dir/src/gps_node.cpp.o[0m
+[0.296s] [01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:24:10:[m[K [01;31m[Kfatal error: [m[Kgps/Gps.h: No such file or directory
+[0.297s]    24 | #include [01;31m[K<gps/Gps.h>[m[K
+[0.297s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[0.297s] compilation terminated.
+[0.304s] gmake[2]: *** [CMakeFiles/gps_node.dir/build.make:76: CMakeFiles/gps_node.dir/src/gps_node.cpp.o] Error 1
+[0.304s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gps_node.dir/all] Error 2
+[0.304s] gmake: *** [Makefile:146: all] Error 2
+[0.306s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps' returned '2': /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps -- -j8 -l8

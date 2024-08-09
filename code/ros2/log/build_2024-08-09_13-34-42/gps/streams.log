@@ -1,0 +1,41 @@
+[0.013s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps': /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gps
+[0.030s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.030s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.030s]   CMake.
+[0.030s] 
+[0.030s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.030s]   CMake that the project does not need compatibility with older versions.
+[0.031s] 
+[0.031s] [0m
+[0.196s] -- The C compiler identification is GNU 11.4.0
+[0.354s] -- The CXX compiler identification is GNU 11.4.0
+[0.366s] -- Detecting C compiler ABI info
+[0.457s] -- Detecting C compiler ABI info - done
+[0.466s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.467s] -- Detecting C compile features
+[0.468s] -- Detecting C compile features - done
+[0.472s] -- Detecting CXX compiler ABI info
+[0.569s] -- Detecting CXX compiler ABI info - done
+[0.585s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.585s] -- Detecting CXX compile features
+[0.586s] -- Detecting CXX compile features - done
+[0.612s] [31mCMake Error at CMakeLists.txt:9 (find_package):
+[0.612s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.612s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.612s]   CMake did not find one.
+[0.612s] 
+[0.612s]   Could not find a package configuration file provided by "catkin" with any
+[0.613s]   of the following names:
+[0.613s] 
+[0.613s]     catkinConfig.cmake
+[0.613s]     catkin-config.cmake
+[0.613s] 
+[0.613s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.613s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.613s]   provides a separate development package or SDK, be sure it has been
+[0.613s]   installed.
+[0.613s] 
+[0.613s] [0m
+[0.613s] -- Configuring incomplete, errors occurred!
+[0.613s] See also "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps/CMakeFiles/CMakeOutput.log".
+[0.617s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gps' returned '1': /usr/bin/cmake /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/gps
