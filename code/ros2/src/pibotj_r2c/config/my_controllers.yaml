@@ -13,6 +13,10 @@ controller_manager:
     pos_cont: 
       type: position_controllers/JointGroupPositionController
 
+
+    vel_cont: 
+      type: velocity_controllers/JointGroupVelocityController
+
 diff_cont:
   ros__parameters:
 
