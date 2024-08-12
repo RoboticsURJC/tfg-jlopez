@@ -156,17 +156,38 @@ Los robots industriales son brazos robotizados y manipuladores que tienen más d
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/brazoIRB140.png}
-		\caption*{\centering Brazo robot IRB 140 \footnote{{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}}}
+		%\caption*{\centering Brazo robot IRB 140 \footnote{{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}}}
+		%\caption*{Brazo robot IRB 140~\ref{note:enlace1}.}
+		\caption*{Brazo robot IRB 140~\footnotemark[1]}
+
 	\end{minipage}
 	\hspace{3cm}
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cobot.png}
-		\caption*{\centering Cobot \cite{ELZAATARI2019162}}
+		%\caption*{\centering Cobot \cite{ELZAATARI2019162}}
+		%\caption*{Cobot $^{\footnotesize{\ref{note:enlace2}}}$.}
+		\caption*{Cobot $^{\ref{note:enlace2}}$.}
+		
 	\end{minipage}
 	\caption{Robots industriales}
 	\label{fig:robindustriales}
 \end{figure}
+
+
+\footnotetext[1]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}
+%\footnotetext[1]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}
+
+
+%\renewcommand{\thefootnote}{\textsuperscript{\smaller\arabic{footnote}}} % Cambiar el tamaño del número de la nota al pie
+% Definir la primera nota al pie con el número 1
+%\setcounter{footnote}{1} % Reiniciar la numeración de notas al pie
+%\renewcommand{\thefootnote}{\textsuperscript{\smaller\arabic{footnote}}} % Cambiar el tamaño del número de la nota al pie
+%\footnotetext[\value{footnote}]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}\label{note:enlace1}}
+
+% Definir la segunda nota al pie con el número 2
+\setcounter{footnote}{2} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\href{http://www.ejemplo2.com}{http://www.ejemplo2.com}\label{note:enlace2}}
 
 
 \subsection{Robots de servicio}

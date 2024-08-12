@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {1.1.2}Robots de servicio}{6}{subsection.1.1.2}%
 \contentsline {subsubsection}{Robots de limpieza}{6}{subsubsection*.19}%
 \contentsline {subsubsection}{Robots de entretenimiento}{7}{subsubsection*.21}%
-\contentsline {subsubsection}{Robots de salud}{8}{subsubsection*.24}%
+\contentsline {subsubsection}{Robots de salud}{7}{subsubsection*.24}%
 \contentsline {subsubsection}{Robots de logística}{8}{subsubsection*.26}%
 \contentsline {section}{\numberline {1.2}Robots de campo}{9}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Robots de bajo coste}{9}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Segunda sección}{11}{section.1.4}%
+\contentsline {section}{\numberline {1.3}Robots de bajo coste}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Segunda sección}{12}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Números}{12}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Listas}{12}{subsection.1.4.2}%
 \contentsline {paragraph}{Referencias bibliográficas}{13}{paragraph*.31}%
