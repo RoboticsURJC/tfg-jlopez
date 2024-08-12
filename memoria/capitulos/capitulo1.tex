@@ -29,19 +29,26 @@ Desde la antigüedad se han desarrollado ingenios o autómatas de los cuáles mu
 	\begin{minipage}{0.4\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/memnon.jpeg}
-		\caption*{\centering Estatuas de Memnon} %\cite{memnon_image}
+		\caption*{\centering Estatuas de Memnon $^{\ref{note:enlace1}}$} %\cite{memnon_image}
 	\end{minipage}
 	\hspace{2cm}
 	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/terracota.png}
-		\caption*{\centering Guerreros de Terracota} %\cite{gomezguerreros}
+		\caption*{\centering Guerreros de Terracota $^{\ref{note:enlace2}}$} %\cite{gomezguerreros}
 	\end{minipage}
 	\caption{Ingenios de la antigüedad con fines religiosos}
 	\label{fig:ancientrel}
 \end{figure}
 
+
+% Definir la primera nota al pie con el número 1
+\setcounter{footnote}{1} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/Colosos_de_Memn\%C3\%B3n}\label{note:enlace1}}
+
+\setcounter{footnote}{2} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/Guerreros_de_terracota}\label{note:enlace2}}
  
 Otras invenciones que destacaban por otras aplicaciones fueron el tornillo de Arquímedes de Siracusa, la eolípila de Herón de Alejandría, el ornitóptero de Leonardo Da Vinci y el hombre de palo de Juanelo Turriano, entre otras. Se pueden apreciar algunas de dichas invenciones en la Figura \ref{fig:ancient}.\\
 
@@ -129,45 +136,23 @@ Ya a partir de la década de los 80, se decidió que el acceso a los robots fues
 
 \subsection{Robots industriales}
 
-Los robots industriales son brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos. Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA} o \acs{ABB} (Figura \ref{fig:robindustriales}).
-
-
-%\begin{figure}[ht!]
-%	\centering
-%	\begin{minipage}{0.3\linewidth}
-%		\centering´
-%		\includegraphics[width=\linewidth]{figs/brazoIRB140.png}
-%		\caption*{\centering Brazo robot IRB 140 } % \cite{villalba2017ensamblaje}}
-%	\end{minipage}
-%	\hspace{3cm}
-	% aquí incluir iamgen de Guerrero de terracota
-%	\begin{minipage}{0.3\linewidth}
-%		\centering
-%		\includegraphics[width=\linewidth]{figs/cobot.png}
-%		\caption*{\centering Cobot \cite{ELZAATARI2019162}}
-%	\end{minipage}
-%	\caption{Robots industriales}
-%\end{figure}
+Los robots industriales son brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos como se describe en  \cite{ELZAATARI2019162}. Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA} o \acs{ABB} (Figura \ref{fig:robindustriales}).
 
 
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.3\linewidth}
+	\begin{minipage}{0.4\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/brazoIRB140.png}
-		%\caption*{\centering Brazo robot IRB 140 \footnote{{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}}}
-		%\caption*{Brazo robot IRB 140~\ref{note:enlace1}.}
-		\caption*{Brazo robot IRB 140~\footnotemark[1]}
+		\caption*{Brazo robot IRB 140 $^{\ref{note:enlace3}}$.}
 
 	\end{minipage}
 	\hspace{3cm}
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cobot.png}
-		%\caption*{\centering Cobot \cite{ELZAATARI2019162}}
-		%\caption*{Cobot $^{\footnotesize{\ref{note:enlace2}}}$.}
-		\caption*{Cobot $^{\ref{note:enlace2}}$.}
+		\caption*{\centering Cobot}
 		
 	\end{minipage}
 	\caption{Robots industriales}
@@ -175,19 +160,9 @@ Los robots industriales son brazos robotizados y manipuladores que tienen más d
 \end{figure}
 
 
-\footnotetext[1]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}
-%\footnotetext[1]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}}
 
-
-%\renewcommand{\thefootnote}{\textsuperscript{\smaller\arabic{footnote}}} % Cambiar el tamaño del número de la nota al pie
-% Definir la primera nota al pie con el número 1
-%\setcounter{footnote}{1} % Reiniciar la numeración de notas al pie
-%\renewcommand{\thefootnote}{\textsuperscript{\smaller\arabic{footnote}}} % Cambiar el tamaño del número de la nota al pie
-%\footnotetext[\value{footnote}]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}\label{note:enlace1}}
-
-% Definir la segunda nota al pie con el número 2
-\setcounter{footnote}{2} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\href{http://www.ejemplo2.com}{http://www.ejemplo2.com}\label{note:enlace2}}
+\setcounter{footnote}{3} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}\label{note:enlace3}}
 
 
 \subsection{Robots de servicio}
@@ -228,21 +203,28 @@ Los prototipos nombrados anteriormente suelen ser demostradores tecnológicos qu
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.3\linewidth}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/FLL_TO19.jpg}
-		\caption*{\centering\href{https://www.uclm.es/noticias/febrero2019/toledo/finalfirstlegoleague}{Competición \ac{FLL} Toledo} }
+		\caption*{\centering \ac{FLL} Toledo $^{\ref{note:enlace4}}$}
 	\end{minipage}
 	\hspace{3cm}
 	% aquí incluir imagen de Spot
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/spot.jpg}
-		\caption*{\centering\href{https://bostondynamics.com/products/spot/}{Spot de Boston Dynamics}}
+		\caption*{\centering Spot de Boston Dynamics $^{\ref{note:enlace5}}$}
 	\end{minipage}
 	\caption{Robótica enfocada al entretenimiento}
 	\label{fig:robed}
 \end{figure}
+
+\setcounter{footnote}{4} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.uclm.es/noticias/febrero2019/toledo/finalfirstlegoleague}\label{note:enlace4}}
+
+
+\setcounter{footnote}{5} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://bostondynamics.com/products/spot/}\label{note:enlace5}}
 
 
 \subsubsection{Robots de salud}
@@ -254,30 +236,43 @@ Los robots de salud sirven para mejorar la calidad de la atención médica y apo
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/davincimed.png}
-		\caption*{\centering\href{https://www.abexsl.es/es/sistema-robotico-da-vinci/que-es}{Robot Da Vinci}}
+		\caption*{\centering Robot Da Vinci $^{\ref{note:enlace6}}$}
 	\end{minipage}
     \hspace{1 cm}
 	% aquí incluir imagen de  mako
 	\begin{minipage}{0.15\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/mako.png}
-		\caption*{\centering\href{https://www.stryker.com/content/dam/stryker/joint-replacement/systems/mako-system-overview/resources}{Robot Mako}}
+		\caption*{\centering Robot Mako $^{\ref{note:enlace7}}$}
 	\end{minipage}
     \hspace{3cm}
     \begin{minipage}{0.2\linewidth}
     	\centering
     	\includegraphics[width=\linewidth]{figs/marsi.png}
-    	\caption*{\centering\href{https://www.marsibionics.com/}{Marsi Bionics} }
+    	\caption*{\centering Marsi Bionics $^{\ref{note:enlace8}}$}
     \end{minipage}
     \hspace{3cm}
     \begin{minipage}{0.25\linewidth}
     	\centering
     	\includegraphics[width=\linewidth]{figs/cyberdyne.jpg}
-    	\caption*{\centering\href{https://www.cyberdyne.com/}{CyberDyne}}
+    	\caption*{\centering CyberDyne $^{\ref{note:enlace9}}$}
     \end{minipage}
 	\caption{Robots de salud}
 	\label{fig:robsalud}
 \end{figure}
+
+
+\setcounter{footnote}{6} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.abexsl.es/es/sistema-robotico-da-vinci/que-es}\label{note:enlace6}}
+
+\setcounter{footnote}{7} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.stryker.com/content/dam/stryker/joint-replacement/systems/mako-system-overview/resources}\label{note:enlace7}}
+
+\setcounter{footnote}{8} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.marsibionics.com/}\label{note:enlace8}}
+
+\setcounter{footnote}{9} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.cyberdyne.com/}\label{note:enlace9}}
 
 \subsubsection{Robots de logística}
 
@@ -288,18 +283,25 @@ Los robots de logística son sistemas automatizados diseñados para mejorar la e
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/skypod.png}
-		\caption*{\centering\href{https://exotecbydexter.com/skypod/}{Skypod de Exotec} }
+		\caption*{\centering Skypod de Exotec $^{\ref{note:enlace10}}$ }
 	\end{minipage}
 	\hspace{3cm}
 	% aquí incluir imagen de Amazon prime air
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/amazon.png}
-		\caption*{\centering\href{https://www.aboutamazon.es/noticias/innovacion/prime-air}{Amazon Prime Air}}
+		\caption*{\centering Amazon Prime Air $^{\ref{note:enlace11}}$}
 	\end{minipage}
 	\caption{Robots de logística}
 	\label{fig:robreparto}
 \end{figure}
+
+\setcounter{footnote}{10} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://exotecbydexter.com/skypod/}\label{note:enlace10}}
+
+
+\setcounter{footnote}{11} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.aboutamazon.es/noticias/innovacion/prime-air}\label{note:enlace11}}
 
 \section{Robots de campo}
 
@@ -313,30 +315,41 @@ En los últimos años se ha podido notar un gran progreso en el desarrollo y la 
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/strawberry.png}
-		\caption*{\centering\href{https://advanced.farm/technology/strawberry-harvester/}{TX Robotic Strawberry Harvester}}
+		\caption*{\centering TX Robotic Strawberry Harvester $^{\ref{note:enlace12}}$ }
 	\end{minipage}
 	\hspace{3 cm}
 	% aquí incluir imagen de  mako
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/komatsu.jpeg}
-		\caption*{\centering\href{https://www.komatsu.com/en/technology/smart-mining/loading-and-haulage/autonomous-haulage-system/}{FrontRunner Autonomous Haulage System (AHS)}}
+		\caption*{\centering FrontRunner Autonomous Haulage System (AHS) $^{\ref{note:enlace13}}$ }
 	\end{minipage}
 	\hspace{3cm}
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/tello.png}
-		\caption*{\centering\href{https://www.ryzerobotics.com/es/tello}{Drone Tello}}
+		\caption*{\centering Drone Tello $^{\ref{note:enlace14}}$ }
 	\end{minipage}
 	\hspace{3cm}
 	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/perseverance.jpg}
-		\caption*{\centering\href{https://es.wikipedia.org/wiki/Perseverance}{Perseverance}}
+		\caption*{\centering Perseverance $^{\ref{note:enlace15}}$ }
 	\end{minipage}
 	\caption{Robots de campo}
 	\label{fig:robcampo}
 \end{figure}
+
+
+\setcounter{footnote}{12} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://advanced.farm/technology/strawberry-harvester/}\label{note:enlace12}}
+
+\setcounter{footnote}{13} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.komatsu.com/en/technology/smart-mining/loading-and-haulage/autonomous-haulage-system/}\label{note:enlace13}}
+\setcounter{footnote}{14} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.ryzerobotics.com/es/tello}\label{note:enlace14}}
+\setcounter{footnote}{15} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/Perseverance}\label{note:enlace15}}
 
 Por contra, debido a las condiciones que se tienen que someter estos robots, su coste es elevado e imposibilita que su uso se pueda extender a aquellos lugares que necesiten de su servicio y que tienen bajos recursos. Es por esto que existe una necesidad que para ciertas aplicaciones, que no tienen condiciones tan extremas, se creen robots asequibles que puedan lidiar con ciertas tareas. \\
 
@@ -362,6 +375,9 @@ En resumen, los robots de bajo coste permiten la democratización de la tecnolog
 	\caption{Mano Antropomórfica Híbrida Rígida y Suave} %\cite{shaw2024leap}}
 	\label{fig:roblowcost}
 \end{figure}\
+
+
+Incluir la estructura de los organismos de españa y de decir el por qué me he decidido por  los baches... \\
 
 El presente proyecto trata ....\\
 
