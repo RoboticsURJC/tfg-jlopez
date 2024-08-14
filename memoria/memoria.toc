@@ -14,30 +14,26 @@
 \contentsline {subsubsection}{Tipos de deterioros}{14}{subsubsection*.35}%
 \contentsline {subsubsection}{Mantenimiento de baches}{17}{subsubsection*.41}%
 \contentsline {chapter}{\numberline {2}Estado del arte}{18}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Descripción del problema}{18}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Requisitos}{18}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Metodología}{18}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Plan de trabajo}{18}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Segunda sección}{19}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Números}{19}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Listas}{20}{subsection.2.5.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{20}{paragraph*.44}%
-\contentsline {chapter}{\numberline {3}Objetivos}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Descripción del problema}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Requisitos}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Metodología}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Plan de trabajo}{21}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Segunda sección}{22}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Números}{22}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Listas}{23}{subsection.3.5.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{23}{paragraph*.46}%
-\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{24}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Diseño}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{25}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{25}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{26}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{26}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{28}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{28}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{29}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{30}{appendix*.52}%
+\contentsline {subsubsection}{Sistema robotizado basado en Raspberry Pi para la reconstrucción 3D de baches}{18}{subsubsection*.44}%
+\contentsline {subsubsection}{El proyecto Herón}{20}{subsubsection*.47}%
+\contentsline {subsubsection}{EyesNroad}{21}{subsubsection*.49}%
+\contentsline {subsubsection}{El proyecto OMICRÓN}{22}{subsubsection*.51}%
+\contentsline {chapter}{\numberline {3}Objetivos}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción del problema}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Requisitos}{24}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Metodología}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Plan de trabajo}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Segunda sección}{25}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Números}{25}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Listas}{26}{subsection.3.5.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{26}{paragraph*.54}%
+\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Diseño}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{29}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{31}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{32}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{33}{appendix*.60}%

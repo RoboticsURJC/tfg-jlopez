@@ -9,6 +9,13 @@ Barcel{\'o}, M. (2004).
 Bidaud, P.
 \newblock Les robots et les hommes.
 
+\bibitem[Bruno et~al., 2023]{s23135860}
+Bruno, S., Loprencipe, G., Di~Mascio, P., Cantisani, G., Fiore, N., Polidori,
+  C., D’Andrea, A., and Moretti, L. (2023).
+\newblock A robotized raspberry-based system for pothole 3d reconstruction and
+  mapping.
+\newblock {\em Sensors}, 23(13).
+
 \bibitem[Clarke, 1993]{clarke1993asimov}
 Clarke, R. (1993).
 \newblock Asimov's laws of robotics: implications for information
@@ -49,6 +56,15 @@ Giri, L.~A. (2020).
 \bibitem[G{\'O}MEZ~PINOS, ]{gomezguerreros}
 G{\'O}MEZ~PINOS, H.
 \newblock Guerreros de terracota.
+
+\bibitem[Katsamenis et~al., 2022]{10.1145/3529190.3534746}
+Katsamenis, I., Bimpas, M., Protopapadakis, E., Zafeiropoulos, C., Kalogeras,
+  D., Doulamis, A., Doulamis, N., Mart\'{\i}n-Portugu\'{e}s~Montoliu, C.,
+  Handanos, Y., Schmidt, F., Ott, L., Cantero, M., and Lopez, R. (2022).
+\newblock Robotic maintenance of road infrastructures: The heron project.
+\newblock In {\em Proceedings of the 15th International Conference on PErvasive
+  Technologies Related to Assistive Environments}, PETRA '22, page 628–635,
+  New York, NY, USA. Association for Computing Machinery.
 
 \bibitem[Llopis~Castell{\'o} and P{\'e}rez~Zuriaga, 2020]{llopis2020deterioros}
 Llopis~Castell{\'o}, D. and P{\'e}rez~Zuriaga, A.~M. (2020).

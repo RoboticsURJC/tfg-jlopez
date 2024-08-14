@@ -16,45 +16,45 @@ Warning--empty journal in llopis2020deterioros
 Warning--empty institution in vega15
 Warning--empty year in velazquezcual
 Warning--empty journal in velazquezcual
-You've used 24 entries,
+You've used 26 entries,
             1935 wiz_defined-function locations,
-            596 strings with 6995 characters,
-and the built_in function-call counts, 7619 in all, are:
-= -- 759
-> -- 236
-< -- 24
-+ -- 75
-- -- 72
-* -- 547
-:= -- 1383
-add.period$ -- 70
-call.type$ -- 24
-change.case$ -- 154
-chr.to.int$ -- 23
-cite$ -- 35
-duplicate$ -- 332
-empty$ -- 548
-format.name$ -- 105
-if$ -- 1481
+            610 strings with 7838 characters,
+and the built_in function-call counts, 9019 in all, are:
+= -- 887
+> -- 347
+< -- 25
++ -- 119
+- -- 114
+* -- 672
+:= -- 1619
+add.period$ -- 77
+call.type$ -- 26
+change.case$ -- 185
+chr.to.int$ -- 25
+cite$ -- 37
+duplicate$ -- 382
+empty$ -- 608
+format.name$ -- 149
+if$ -- 1758
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 17
-newline$ -- 119
-num.names$ -- 72
-pop$ -- 149
+missing$ -- 19
+newline$ -- 129
+num.names$ -- 78
+pop$ -- 179
 preamble$ -- 1
-purify$ -- 155
+purify$ -- 186
 quote$ -- 0
-skip$ -- 252
+skip$ -- 299
 stack$ -- 0
-substring$ -- 446
-swap$ -- 31
-text.length$ -- 3
+substring$ -- 490
+swap$ -- 52
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
+type$ -- 152
 warning$ -- 11
-while$ -- 61
+while$ -- 66
 width$ -- 0
-write$ -- 292
+write$ -- 321
 (There were 12 warnings)
