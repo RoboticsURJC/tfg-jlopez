@@ -24,7 +24,18 @@ setup(
             # nodo para mandar velocidades a los motores
             'input_node = pibotj_rr.input_node:main',
             # nodo que obtiene los valores de latitud y longitud del puerto serie
-            'gps_node = pibotj_rr.gps_node:main' 
+            'gps_node = pibotj_rr.gps_node:main',
+
+            # nodo que publica la cámara correctamente
+            'publisher_node = pibotj_rr.cameraPublisher:main',
+            # nodo que publica el modelo tflitle
+            'tflitle_node = pibotj_rr.tflitle_node:main',
+
+            # nodo que publica la cámara e integra el tf 
+            'debug_image_tf_lite_node = pibotj_rr.DebugImageTFLite:main'
+
+        
+
         ],
     },
 )
