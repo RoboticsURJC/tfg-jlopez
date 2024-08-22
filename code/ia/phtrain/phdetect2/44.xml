@@ -1,0 +1,26 @@
+<annotation>
+	<folder>potholeimages</folder>
+	<filename>44.jpg</filename>
+	<path>/home/juloau/Desktop/TFG/tfg-jlopez/code/ia/tfliterpipothole/potholeimages/44.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>268</width>
+		<height>188</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>26</xmin>
+			<ymin>26</ymin>
+			<xmax>220</xmax>
+			<ymax>151</ymax>
+		</bndbox>
+	</object>
+</annotation>
