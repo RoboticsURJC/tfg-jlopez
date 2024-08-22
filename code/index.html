@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Tracking</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/roslib@1.0.0/build/roslib.min.js"></script>
+</head>
+<body>
+    <div id="map" style="height: 500px;"></div>
+    <script>
+        const map = L.map('map').setView([0, 0], 13); // Center the map initially
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        let marker = L.marker([0, 0]).addTo(map);
+
+        // Connect to rosbridge
+        const ros = new ROSLIB.Ros({
+            url: 'ws://192.168.5.73:9090'
+        });
+
+        // Subscribe to the topic 'gps_data'
+        const gpsListener = new ROSLIB.Topic({
+            ros: ros,
+            name: '/gps_data',
+            messageType: 'std_msgs/String'
+        });
+
+        gpsListener.subscribe(function(message) {
+            console.log("Received message:", message.data); // Verify message content
+            // Extract latitude and longitude from the message
+            const data = message.data.split(',');
+            const lat = parseFloat(data[0].split(':')[1].trim());
+            const lon = parseFloat(data[1].split(':')[1].trim());
+
+            // Update the marker's position on the map
+            marker.setLatLng([lat, lon]);
+            map.setView([lat, lon], 13);
+        });
+    </script>
+</body>
+</html>
