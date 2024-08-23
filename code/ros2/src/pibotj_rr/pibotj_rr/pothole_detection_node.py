@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
-from std_msgs.msg import String, Int32 
+from std_msgs.msg import String 
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
@@ -27,15 +27,14 @@ class PotholeDetectionNode(Node):
         # Publicador que publica string 
         self.topicNameDetection = 'topic_tfdetected' 
         self.detection_publisher = self.create_publisher(String, self.topicNameDetection, self.queueSize)
-        # Alternativamente, puedes usar Int32:
-        # self.detection_publisher = self.create_publisher(Int32, self.topicNameDetection, self.queueSize)
+
         
         self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
         self.i = 0
 
         # Cargar el modelo TFLite
-        self.model_path = '/home/juloau/Desktop/robot_ws/src/pibotj_rr/custom_model_lite/detect.tflite'  # Reemplaza con la ruta de tu modelo
+        self.model_path = '/home/juloau/Desktop/robot_ws/src/pibotj_rr/custom_model_lite/detect.tflite'
         self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
         self.interpreter.allocate_tensors()
 
@@ -43,11 +42,25 @@ class PotholeDetectionNode(Node):
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
 
+        
+        # inicializa las barras deslizadoras
+        cv2.namedWindow('Filtered Image')
+        cv2.createTrackbar('Low Threshold', 'Filtered Image', self.low_threshold, 255, self.on_trackbar_change)
+        cv2.createTrackbar('High Threshold', 'Filtered Image', self.high_threshold, 255, self.on_trackbar_change)
+
+    def on_trackbar_change(self, val):
+        self.low_threshold = cv2.getTrackbarPos('Low Threshold', 'Filtered Image')
+        self.high_threshold = cv2.getTrackbarPos('High Threshold', 'Filtered Image')
+
+
     def timer_callbackFunction(self):
         success, frame = self.camera.read()
         if not success:
             self.get_logger().error('Failed to read frame from camera')
             return
+
+        # Get the dimensions of the frame
+        height, width, channels = frame.shape
 
         # Redimensionar el marco a las dimensiones requeridas por el modelo
         input_shape = self.input_details[0]['shape']
@@ -62,6 +75,7 @@ class PotholeDetectionNode(Node):
         self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
         self.interpreter.invoke()
 
+        
         output_data = self.interpreter.get_tensor(self.output_details[0]['index'])
         prediction = np.squeeze(output_data)
 
@@ -75,16 +89,17 @@ class PotholeDetectionNode(Node):
             label = "Pothole detected"
             detection_message = String()
             detection_message.data = "Yes"
-            # Alternativamente, con Int32:
-            # detection_message = Int32()
-            # detection_message.data = 1  # 1 para indicar que se detectó un bache
+            
+            # Crea una función que saque el contorno de la imagen y sus píxeles 
+            newframe = self.get_pothole_coords(frame)
+            newframe = cv2.cvtColor(newframe, cv2.COLOR_GRAY2BGR)
+
         else:
             label = "No pothole"
             detection_message = String()
             detection_message.data = "No"
-            # Alternativamente, con Int32:
-            # detection_message = Int32()
-            # detection_message.data = 0  # 0 para indicar que no se detectó un bache
+
+            newframe = frame
 
         # Publicar el mensaje de detección  en formato string
         self.detection_publisher.publish(detection_message)
@@ -93,11 +108,23 @@ class PotholeDetectionNode(Node):
         cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
         # Convertir y publicar la imagen con la etiqueta
-        ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
+        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
+        ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
+
         self.publisher.publish(ROSImageMessage)
+
+    def get_pothole_coords(self, image):
+
+        img_blur = cv2.GaussianBlur(image,(7,7),1)
+        img_gray = cv2.cvtColor(img_blur, cv2.COLOR_BGR2GRAY)
+        img_canny = cv2.Canny(img_gray, self.low_threshold, self.high_threshold)
+        
+        return img_canny
+
 
     def __del__(self):
         self.camera.release()
+
 
 def main(args=None):
     rclpy.init(args=args)

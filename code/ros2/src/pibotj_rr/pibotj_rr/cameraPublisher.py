@@ -19,7 +19,7 @@ class PublisherNodeClass(Node):
         self.topicNameFrames = 'topic_camera_image'
         self.queueSize = 20
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
-        self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
+        self.periodCommunication = 0.1 # Reduce to 10 Hz for stability
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
         self.i = 0
 
@@ -29,9 +29,7 @@ class PublisherNodeClass(Node):
             self.get_logger().error('Failed to read frame from camera')
             return
 
-        #frame = cv2.resize(frame, (820, 640), interpolation=cv2.INTER_CUBIC)
-        #frame = cv2.resize(frame, (820, 640), interpolation=cv2.INTER_CUBIC)
-        frame = cv2.resize(frame, (410, 320), interpolation=cv2.INTER_LINEAR)
+        frame = cv2.resize(frame, (320, 240), interpolation=cv2.INTER_LINEAR)
 
 
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
