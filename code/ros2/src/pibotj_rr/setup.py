@@ -20,7 +20,7 @@ setup(
     entry_points={
         'console_scripts': [
             # nodo controlador para controlar los motores
-            'controller_node = pibotj_rr.controller_node:main',
+            'motors_controller_node = pibotj_rr.motors_controller_node:main',
             # nodo para mandar velocidades a los motores
             'input_node = pibotj_rr.input_node:main',
             # nodo que obtiene los valores de latitud y longitud del puerto serie
@@ -30,7 +30,7 @@ setup(
             'publisher_node = pibotj_rr.cameraPublisher:main',
 
             # nodo que publica cámara + tflite
-            'pothole_detection_node = pibotj_rr.pothole_node:main'
+            'pothole_detection_node = pibotj_rr.pothole_detection_node:main'
 
 
         ],

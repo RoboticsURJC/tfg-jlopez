@@ -1,11 +1,11 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
+from std_msgs.msg import String, Int32 
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
 import tensorflow as tf
-from PIL import Image as PILImage
 
 class PotholeDetectionNode(Node):
     def __init__(self):
@@ -18,10 +18,18 @@ class PotholeDetectionNode(Node):
             rclpy.shutdown()
             return
 
+        # Publicador que publica imagen
         self.bridgeObject = CvBridge()
         self.topicNameFrames = 'topic_cameratf_image'
         self.queueSize = 20
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
+        
+        # Publicador que publica string 
+        self.topicNameDetection = 'topic_tfdetected' 
+        self.detection_publisher = self.create_publisher(String, self.topicNameDetection, self.queueSize)
+        # Alternativamente, puedes usar Int32:
+        # self.detection_publisher = self.create_publisher(Int32, self.topicNameDetection, self.queueSize)
+        
         self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
         self.i = 0
@@ -57,16 +65,29 @@ class PotholeDetectionNode(Node):
         output_data = self.interpreter.get_tensor(self.output_details[0]['index'])
         prediction = np.squeeze(output_data)
 
-        # prediction es un array de 10 valores pero al tener una clase definida
-        # da igual y según he ido haciendo pruebas, necesito el valor máximo del array
+        # Obtener el valor máximo del array de predicción
         max_value = np.max(prediction)
 
-        print(max_value)
+        # MODIFICAR ESTO PARA QUE LA LÓGICA SEA CONSISTENTE
+        # ES DECIR, QUE SI VARIOS MENSAJES SON VERDAD, SE CONSIDERE UN BACHE
 
         if max_value > 0.90:  
             label = "Pothole detected"
+            detection_message = String()
+            detection_message.data = "Yes"
+            # Alternativamente, con Int32:
+            # detection_message = Int32()
+            # detection_message.data = 1  # 1 para indicar que se detectó un bache
         else:
             label = "No pothole"
+            detection_message = String()
+            detection_message.data = "No"
+            # Alternativamente, con Int32:
+            # detection_message = Int32()
+            # detection_message.data = 0  # 0 para indicar que no se detectó un bache
+
+        # Publicar el mensaje de detección  en formato string
+        self.detection_publisher.publish(detection_message)
 
         # Añadir la etiqueta al marco
         cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
