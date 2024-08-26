@@ -44,13 +44,13 @@ class PotholeDetectionNode(Node):
 
         
         # inicializa las barras deslizadoras
-        cv2.namedWindow('Filtered Image')
-        cv2.createTrackbar('Low Threshold', 'Filtered Image', self.low_threshold, 255, self.on_trackbar_change)
-        cv2.createTrackbar('High Threshold', 'Filtered Image', self.high_threshold, 255, self.on_trackbar_change)
+        #cv2.namedWindow('Filtered Image')
+        #cv2.createTrackbar('Low Threshold', 'Filtered Image', self.low_threshold, 255, self.on_trackbar_change)
+        #cv2.createTrackbar('High Threshold', 'Filtered Image', self.high_threshold, 255, self.on_trackbar_change)
 
-    def on_trackbar_change(self, val):
-        self.low_threshold = cv2.getTrackbarPos('Low Threshold', 'Filtered Image')
-        self.high_threshold = cv2.getTrackbarPos('High Threshold', 'Filtered Image')
+    #def on_trackbar_change(self, val):
+    #    self.low_threshold = cv2.getTrackbarPos('Low Threshold', 'Filtered Image')
+    #    self.high_threshold = cv2.getTrackbarPos('High Threshold', 'Filtered Image')
 
 
     def timer_callbackFunction(self):
@@ -92,7 +92,8 @@ class PotholeDetectionNode(Node):
             
             # Crea una función que saque el contorno de la imagen y sus píxeles 
             newframe = self.get_pothole_coords(frame)
-            newframe = cv2.cvtColor(newframe, cv2.COLOR_GRAY2BGR)
+            # para canny y dilate si que necesitamos la linea de debajo
+            #newframe = cv2.cvtColor(newframe, cv2.COLOR_GRAY2BGR)
 
         else:
             label = "No pothole"
@@ -110,16 +111,95 @@ class PotholeDetectionNode(Node):
         # Convertir y publicar la imagen con la etiqueta
         #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
-
+ 
         self.publisher.publish(ROSImageMessage)
 
+
+    #def get_contours(sel, img, img_contour):
+
+    #    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+
+    #    for cnt in contours:
+    #        area = cv2.contourArea(cnt)
+
+    #        if area < 1000: 
+    #            cv2.drawContours(img_contour, cnt, -1,(255,0,255), 7)
+    #            peri=cv2.arcLength(cnt, True)
+    #            approx = cv2.approxPolyDP(cnt, 0.02*peri, True)
+    #            print(len(approx))
+    #            print(approx)
+
+    def get_contours(self, img, img_contour):
+        contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        for cnt in contours:
+            area = cv2.contourArea(cnt)
+            if area > 1500:  # Ignorar pequeños contornos para reducir ruido
+                cv2.drawContours(img_contour, cnt, -1,(255,0,255), 5)
+
+                peri = cv2.arcLength(cnt, True)
+                approx = cv2.approxPolyDP(cnt, 0.02 * peri, True)
+                
+                print(len(approx))
+                print(approx)
+
+                # Dibujar los contornos y el polígono aproximado
+                #cv2.drawContours(img_contour, [approx], 0, (255, 0, 255), 5)
+                
+                # Detectar la forma según el número de vértices
+                #if len(approx) == 3:
+                #    shape_name = "Triangle"
+                #elif len(approx) == 4:
+                #    x, y, w, h = cv2.boundingRect(approx)
+                #    aspectRatio = float(w) / h
+                #    if 0.95 <= aspectRatio <= 1.05:
+                #        shape_name = "Square"
+                #    else:
+                #        shape_name = "Rectangle"
+                #elif len(approx) == 5:
+                #    shape_name = "Pentagon"
+                #elif len(approx) == 6:
+                #    shape_name = "Hexagon"
+                #else:
+                #    shape_name = "Circle"
+                
+                # Dibujar el nombre de la forma en la imagen
+                #x, y, w, h = cv2.boundingRect(approx)
+                #cv2.putText(img_contour, shape_name, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
+    
     def get_pothole_coords(self, image):
 
         img_blur = cv2.GaussianBlur(image,(7,7),1)
         img_gray = cv2.cvtColor(img_blur, cv2.COLOR_BGR2GRAY)
-        img_canny = cv2.Canny(img_gray, self.low_threshold, self.high_threshold)
+
+        height, width = img_gray.shape
+
+    
+        # Excluye 200 píxeles de cada lado
+        #min_distance_from_edge = 100  # pixels
+        #mask = np.zeros_like(img_gray)
+        #mask[min_distance_from_edge:height - min_distance_from_edge, min_distance_from_edge:width - min_distance_from_edge] = 255
+
+
+        # Excluye 100 píxeles en la parte superior e inferior no de los lados
+        min_distance_from_top_bottom = 100  # pixels
+        mask = np.zeros_like(img_gray)
+        mask[min_distance_from_top_bottom:height - min_distance_from_top_bottom, 0:width] = 255
+
+    
+        # Se aplica el filtro Canny a la imagen reducida
+        # El valor más acercado es mínimo: 80 y máximo: 180
+        img_canny = cv2.Canny(img_gray, 80, 180)
+        img_canny_masked = cv2.bitwise_and(img_canny, mask)
+        kernel = np.ones((5,5))
+        img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
+
+        img_contour = image.copy()
+        self.get_contours(img_dilated,img_contour)
         
-        return img_canny
+        return img_contour
+
 
 
     def __del__(self):
