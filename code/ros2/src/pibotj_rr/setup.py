@@ -29,10 +29,12 @@ setup(
             # nodo que publica la cámara correctamente
             'publisher_node = pibotj_rr.cameraPublisher:main',
 
-            # nodo que publica cámara + tflite
-            'pothole_detection_node = pibotj_rr.pothole_detection_node:main'
+            # nodo que publica cámara + tflite            
+            'camera_test_node = pibotj_rr.camera_test_node:main',
 
-
+            # nodo que publica cámara + tflite + Coral           
+            'cameratflite_test_node = pibotj_rr.cameratflite_test_node:main'
+            
         ],
     },
 )
