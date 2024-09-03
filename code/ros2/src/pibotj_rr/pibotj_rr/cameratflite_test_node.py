@@ -42,25 +42,31 @@ class CameraTFLITETestNode(Node):
         self.i = 0
 
         # Cargar el modelo TFLite
-        self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/best_full_integer_quant_edgetpu.tflite'
+        self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
         #self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
         #self.interpreter = tflite.lite.Interpreter(model_path=self.model_path)
         # working one
         #self.interpreter = tflite.Interpreter(model_path=self.model_path)
 
         self.interpreter = tflite.Interpreter(model_path=self.model_path, experimental_delegates=[tflite.load_delegate('/usr/lib/aarch64-linux-gnu/libedgetpu.so.1')])
-
+        print("loaded interpreter")
         #self.interpreter = tflite.Interpreter(model_path=self.model_path)
 
 
         self.interpreter.allocate_tensors()
+        print("allocated tensors")
+
 
         # Obtener detalles de entrada y salida del modelo
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
+        print("set input and output details")
+
 
         # Signal handler for cleanup
         signal.signal(signal.SIGINT, self.signal_handler)
+        print("set signal handler")
+
 
     def timer_callbackFunction(self):
         success, frame = self.camera.read()
