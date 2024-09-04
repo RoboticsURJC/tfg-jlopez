@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Tracking</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/roslib@1.0.0/build/roslib.min.js"></script>
+    <style>
+        #map { height: 500px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Crear y configurar el mapa
+        const map = L.map('map').setView([0, 0], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Array para almacenar las posiciones
+        const positions = [];
+
+        // Conjunto para almacenar los marcadores en el mapa
+        const markers = [];
+
+        // Conectar a rosbridge
+        const ros = new ROSLIB.Ros({
+            url: 'ws://192.168.5.73:9090'
+        });
+
+        // Suscribirse al tema 'gps_data'
+        const gpsListener = new ROSLIB.Topic({
+            ros: ros,
+            name: '/gps_data',
+            messageType: 'std_msgs/String'
+        });
+
+        gpsListener.subscribe(function(message) {
+            console.log("Received message:", message.data);
+
+            // Extraer latitud y longitud del mensaje
+            const data = message.data.split(',');
+            const lat = parseFloat(data[0].split(':')[1].trim());
+            const lon = parseFloat(data[1].split(':')[1].trim());
+
+            // Añadir la nueva posición al array de posiciones
+            if (positions.length >= 100) {
+                const oldMarker = markers.shift(); // Eliminar el marcador más antiguo
+                map.removeLayer(oldMarker); // Eliminar el marcador del mapa
+                positions.shift(); // Eliminar la posición más antigua
+            }
+            positions.push([lat, lon]);
+
+            // Crear un nuevo marcador y añadirlo al mapa
+            const newMarker = L.marker([lat, lon]).addTo(map);
+            markers.push(newMarker);
+
+            // Opcional: ajustar la vista del mapa para mostrar todos los marcadores
+            if (markers.length > 0) {
+                const latlngs = markers.map(marker => marker.getLatLng());
+                const bounds = L.latLngBounds(latlngs);
+                map.fitBounds(bounds);
+            }
+        });
+    </script>
+</body>
+</html>
