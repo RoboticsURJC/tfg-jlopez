@@ -21,19 +21,18 @@ setup(
         'console_scripts': [
             # nodo controlador para controlar los motores
             'motors_controller_node = pibotj_rr.motors_controller_node:main',
-            # nodo para mandar velocidades a los motores
-            'input_node = pibotj_rr.input_node:main',
+            
             # nodo que obtiene los valores de latitud y longitud del puerto serie
             'gps_node = pibotj_rr.gps_node:main',
 
             # nodo que publica la cámara correctamente
-            'publisher_node = pibotj_rr.cameraPublisher:main',
+            'camera_node = pibotj_rr.camera:main',
 
             # nodo que publica cámara + tflite            
-            'camera_test_node = pibotj_rr.camera_test_node:main',
+            'camera_tfv1_node = pibotj_rr.camera_tfv1_node:main',
 
             # nodo que publica cámara + tflite + Coral           
-            'cameratflite_test_node = pibotj_rr.cameratflite_test_node:main'
+            'camera_tfv2_node = pibotj_rr.camera_tfv2_node:main'
             
         ],
     },

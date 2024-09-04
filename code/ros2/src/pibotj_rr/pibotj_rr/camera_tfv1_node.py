@@ -5,17 +5,15 @@ from rclpy.node import Node
 from cv_bridge import CvBridge
 import numpy as np
 #import tensorflow as tf
-# EL BUENO ES ESTE
 import tflite_runtime.interpreter as tflite
-
-#import tflite_runtime.interpreter as interpreter
+import tflite_runtime.interpreter as interpreter
 from std_msgs.msg import String
 import signal
 import sys
 
-class CameraTFLITETestNode(Node):
+class CameraTFv1Node(Node):
     def __init__(self):
-        super().__init__('cameratflite_test_node')
+        super().__init__('camera_tf1_node')
         self.cameraDeviceNumber = 0
         self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
         
@@ -25,15 +23,12 @@ class CameraTFLITETestNode(Node):
             return
 
         self.bridgeObject = CvBridge()
-        self.topicNameFrames = 'topic_imagetf_test'
+        self.topicNameFrames = 'camera_tf1'
         self.queueSize = 20
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
-        #self.periodCommunication = 0.1 # Reduce to 10 Hz for stability
-        #self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
-        #self.i = 0
-
-         # Publicador que publica string 
-        self.topicNameDetection = 'topic_tf2detected' 
+        
+        # Publicador que publica string 
+        self.topicNameDetection = 'pothole_detected' 
         self.detection_publisher = self.create_publisher(String, self.topicNameDetection, self.queueSize)
 
         
@@ -42,31 +37,17 @@ class CameraTFLITETestNode(Node):
         self.i = 0
 
         # Cargar el modelo TFLite
-        self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
-        #self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
-        #self.interpreter = tflite.lite.Interpreter(model_path=self.model_path)
-        # working one
-        #self.interpreter = tflite.Interpreter(model_path=self.model_path)
-
-        self.interpreter = tflite.Interpreter(model_path=self.model_path, experimental_delegates=[tflite.load_delegate('/usr/lib/aarch64-linux-gnu/libedgetpu.so.1')])
-        print("loaded interpreter")
-        #self.interpreter = tflite.Interpreter(model_path=self.model_path)
-
+        self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/detect.tflite'
+        self.interpreter = interpreter.Interpreter(model_path=self.model_path)
 
         self.interpreter.allocate_tensors()
-        print("allocated tensors")
-
 
         # Obtener detalles de entrada y salida del modelo
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
-        print("set input and output details")
 
-
-        # Signal handler for cleanup
+        # Maneja las señales recibidas
         signal.signal(signal.SIGINT, self.signal_handler)
-        print("set signal handler")
-
 
     def timer_callbackFunction(self):
         success, frame = self.camera.read()
@@ -74,7 +55,6 @@ class CameraTFLITETestNode(Node):
             self.get_logger().error('Failed to read frame from camera')
             return
 
-        # Get the dimensions of the frame
         height, width, channels = frame.shape
 
         # Redimensionar el marco a las dimensiones requeridas por el modelo
@@ -85,10 +65,6 @@ class CameraTFLITETestNode(Node):
         # Convertir la imagen a formato adecuado
         input_data = np.expand_dims(resized_frame, axis=0).astype(np.float32)
         input_data = (input_data - 127.5) / 127.5  # Normalización como en el ejemplo
-
-        # convertir lla imagen a int8
-        scale, zero_point = self.input_details[0]['quantization']
-        input_data = (input_data / scale + zero_point).astype(np.int8)
 
         # Realizar la inferencia
         self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
@@ -128,7 +104,6 @@ class CameraTFLITETestNode(Node):
         cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
         # Convertir y publicar la imagen con la etiqueta
-        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
  
         self.publisher.publish(ROSImageMessage)
@@ -140,21 +115,6 @@ class CameraTFLITETestNode(Node):
         self.get_logger().info('Interrupt received, shutting down...')
         self.cleanup()
         sys.exit(0)  
-
-
-    #def get_contours(sel, img, img_contour):
-
-    #    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
-
-    #    for cnt in contours:
-    #        area = cv2.contourArea(cnt)
-
-    #        if area < 1000: 
-    #            cv2.drawContours(img_contour, cnt, -1,(255,0,255), 7)
-    #            peri=cv2.arcLength(cnt, True)
-    #            approx = cv2.approxPolyDP(cnt, 0.02*peri, True)
-    #            print(len(approx))
-    #            print(approx)
 
     def get_contours(self, img, img_contour):
         contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -170,44 +130,13 @@ class CameraTFLITETestNode(Node):
                 print(len(approx))
                 print(approx)
 
-                # Dibujar los contornos y el polígono aproximado
-                #cv2.drawContours(img_contour, [approx], 0, (255, 0, 255), 5)
-                
-                # Detectar la forma según el número de vértices
-                #if len(approx) == 3:
-                #    shape_name = "Triangle"
-                #elif len(approx) == 4:
-                #    x, y, w, h = cv2.boundingRect(approx)
-                #    aspectRatio = float(w) / h
-                #    if 0.95 <= aspectRatio <= 1.05:
-                #        shape_name = "Square"
-                #    else:
-                #        shape_name = "Rectangle"
-                #elif len(approx) == 5:
-                #    shape_name = "Pentagon"
-                #elif len(approx) == 6:
-                #    shape_name = "Hexagon"
-                #else:
-                #    shape_name = "Circle"
-                
-                # Dibujar el nombre de la forma en la imagen
-                #x, y, w, h = cv2.boundingRect(approx)
-                #cv2.putText(img_contour, shape_name, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
 
-    
     def get_pothole_coords(self, image):
 
         img_blur = cv2.GaussianBlur(image,(7,7),1)
         img_gray = cv2.cvtColor(img_blur, cv2.COLOR_BGR2GRAY)
 
         height, width = img_gray.shape
-
-    
-        # Excluye 200 píxeles de cada lado
-        #min_distance_from_edge = 100  # pixels
-        #mask = np.zeros_like(img_gray)
-        #mask[min_distance_from_edge:height - min_distance_from_edge, min_distance_from_edge:width - min_distance_from_edge] = 255
-
 
         # Excluye 100 píxeles en la parte superior e inferior no de los lados
         min_distance_from_top_bottom = 100  # pixels
@@ -218,9 +147,10 @@ class CameraTFLITETestNode(Node):
         # Se aplica el filtro Canny a la imagen reducida
         # El valor más acercado es mínimo: 80 y máximo: 180
         img_canny = cv2.Canny(img_gray, 80, 180)
-        img_canny_masked = cv2.bitwise_and(img_canny, mask)
+        #img_canny_masked = cv2.bitwise_and(img_canny, mask)
         kernel = np.ones((5,5))
-        img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
+        #img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
+        img_dilated = cv2.dilate(img_canny, kernel, iterations=1)
 
         img_contour = image.copy()
         self.get_contours(img_dilated,img_contour)
@@ -233,11 +163,7 @@ class CameraTFLITETestNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    publisherObject = CameraTFLITETestNode()
-    #rclpy.spin(publisherObject)
-    #publisherObject.destroy_node()
-    #rclpy.shutdown()
-
+    publisherObject = CameraTFv1Node()
     try:
         rclpy.spin(publisherObject)
     except KeyboardInterrupt:

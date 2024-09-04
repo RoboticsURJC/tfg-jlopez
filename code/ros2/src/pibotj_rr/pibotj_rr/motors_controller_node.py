@@ -22,7 +22,7 @@ class ControllerNode(Node):
         # Suscripción al tópico 'servo_command'
         self.subscription = self.create_subscription(
             String,
-            'topic_tfdetected',
+            'pothole_detected',
             self.command_callback,
             10)  # 10 es el tamaño del buffer de la cola de mensajes
         

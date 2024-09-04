@@ -6,9 +6,9 @@ from cv_bridge import CvBridge
 import signal
 import sys
 
-class PublisherNodeClass(Node):
+class CameraClass(Node):
     def __init__(self):
-        super().__init__('publisher_node')
+        super().__init__('camera_node')
         self.cameraDeviceNumber = 0
         self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
         
@@ -18,7 +18,7 @@ class PublisherNodeClass(Node):
             sys.exit(1)  # Exit with an error code
 
         self.bridgeObject = CvBridge()
-        self.topicNameFrames = 'topic_camera_image'
+        self.topicNameFrames = 'camera'
         self.queueSize = 20
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
         self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
@@ -51,7 +51,7 @@ class PublisherNodeClass(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    publisherObject = PublisherNodeClass()
+    publisherObject = CameraClass()
     try:
         rclpy.spin(publisherObject)
     except KeyboardInterrupt:
