@@ -38,6 +38,17 @@ class CameraTFv2Node(Node):
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
         self.i = 0
 
+        # Inicializa el Filtro de Kalman
+        self.x_k = np.array([[0]])  # Estado inicial (magnitud del bache, por ejemplo)
+        self.P_k = np.array([[1]])  # Covarianza inicial (incertidumbre sobre el estado)
+        self.A = np.array([[1]])    # Matriz de transición de estado
+        self.B = np.array([[0]])    # Matriz de control (sin control externo)
+        self.H = np.array([[1]])    # Matriz de observación
+        self.Q = np.array([[0.001]])  # Covarianza del proceso (ajústalo según tu sistema)
+        self.R = np.array([[0.1]])    # Covarianza de las mediciones (ajústalo según el ruido de las mediciones)
+        self.u_k = np.array([[0]])    # Sin control externo
+
+
         # Cargar el modelo TFLite
         self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
 
@@ -84,75 +95,47 @@ class CameraTFv2Node(Node):
         self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
         self.interpreter.invoke()
 
-        #COSAS AÑADIDAS 
-        input_details = self.interpreter.get_input_details()
+        # tiene forma [1,38,756] y se supone que esta clase no nos hace falta 
+        #output_data0 = self.interpreter.get_tensor(self.output_details[0]['index'])
+        #prediction0 = np.squeeze(output_data0)
 
-        #print(output_details)
-        #FIN COSAS AÑADIDAS
-
-        
-        output_data0 = self.interpreter.get_tensor(self.output_details[0]['index'])
-        # deja todo de una dimensión: SE supone que este NO nos hace FALTA
-        prediction0 = np.squeeze(output_data0)
-
-        #print("Processed Output data 0:", prediction0)
+        # tiene forma [1, 48, 48, 32] y esta clase sí se trata del modelo entrenado
         output_data1 = self.interpreter.get_tensor(self.output_details[1]['index'])
-        # deja todo de una dimensión
+        # elimina la dimensión del batch
         prediction1 = np.squeeze(output_data1)
     
-        #print("Processed Output data 1:", prediction1)
 
-        print("prediction shape ", prediction1.shape)
-        #if len(prediction1.shape) == 3:  # Asegúrate de que prediction1 tiene 4 dimensiones
-            #prediction1 = prediction1[0]  # Extrae el batch
-            #print("prediction shape ", prediction1)
-            #pothole_mask = prediction1[:, :, 1]  # Extrae la máscara para la clase 'pothole'
-            #print(pothole_mask)    
-    
         # Suponiendo que el segundo canal es la máscara de baches
         if prediction1.shape[-1] > 1:
-            pothole_mask = prediction1[:, :, 1]  # Extrae la máscara para la clase 'pothole'
+             # Extrae la máscara para la clase 'pothole' lo he sacado del .yaml
+            pothole_mask = prediction1[:, :, 1]
         else:
             self.get_logger().error('Unexpected number of channels in prediction output')
             return
 
-
-
-        #pred = [self.interpreter.get_tensor(self.output_details[i]['index']) for i in range(len(self.output_details))]
-
-        # COSAS AÑADIDAS
-        #print("Value")
-        #print(output_data)
-        #boxes = self.interpreter.get_tensor(self.output_details[0]['index'])[0]
-        #classes = self.interpreter.get_tensor(self.output_details[1]['index'])[0]
-        #scores = self.interpreter.get_tensor(self.output_details[2]['index'])[0]
-
-        #print("Boxes: " + str(boxes))
-        #print("Classes: " + str(classes))
-        #print("Scores: " + str(scores))
-        # FIN COSAS AÑADIDAS
-
-
-        # Asumamos que prediction tiene forma [height, width, num_classes]
-        # Extraer la máscara de la clase 'pothole', que es la clase 1
-        #pothole_mask = prediction[:, :, 1]
-
-        # Opcional: Descuantificar la máscara para su uso
+        # Descuantificar la máscara para su uso
         scale, zero_point = self.output_details[1]['quantization']
         pothole_mask = (pothole_mask.astype(np.float32) - zero_point) * scale
     
         # Determinar si se ha detectado un bache
         max_value = np.max(pothole_mask)
-        print(max_value)
+        print("Max value", max_value)
 
+        # Predicción del filtro de Kalman
+        x_k_pred, P_k_pred = self.kalman_predict()
 
-        # Obtener el valor máximo del array de predicción
-        #max_value = np.max(prediction)
+        # Actualización con la nueva medición (max_value)
+        z_k = np.array([[max_value]])  # Medición actual del sistema
+        self.x_k, self.P_k = self.kalman_update(x_k_pred, P_k_pred, z_k)
+
+        print("Kalman", self.x_k[0][0])
 
         # MODIFICAR ESTO PARA QUE LA LÓGICA SEA CONSISTENTE
         # ES DECIR, QUE SI VARIOS MENSAJES SON VERDAD, SE CONSIDERE UN BACHE
 
-        if max_value > 1.0 :  
+        #if max_value > 1.0 :  
+        if self.x_k[0][0] > 1.0:  
+
             label = "Pothole detected"
             detection_message = String()
             detection_message.data = "Yes"
@@ -230,6 +213,22 @@ class CameraTFv2Node(Node):
         self.get_contours(img_dilated,img_contour)
         
         return img_contour    
+
+    def kalman_predict(self):
+        # Predicción del estado
+        x_k_pred = self.A @ self.x_k + self.B @ self.u_k
+        # Predicción de la covarianza
+        P_k_pred = self.A @ self.P_k @ self.A.T + self.Q
+        return x_k_pred, P_k_pred
+
+    def kalman_update(self, x_k_pred, P_k_pred, z_k):
+        # Ganancia de Kalman
+        K = P_k_pred @ self.H.T @ np.linalg.inv(self.H @ P_k_pred @ self.H.T + self.R)
+        # Actualización del estado
+        x_k_new = x_k_pred + K @ (z_k - self.H @ x_k_pred)
+        # Actualización de la covarianza
+        P_k_new = (np.eye(P_k_pred.shape[0]) - K @ self.H) @ P_k_pred
+        return x_k_new, P_k_new
 
     
     def __del__(self):
