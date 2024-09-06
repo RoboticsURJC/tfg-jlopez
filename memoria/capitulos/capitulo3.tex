@@ -47,7 +47,7 @@ Tras nombrar los objetivos y subjetivos necesarios para cumplir en este proyecto
 	\item{} Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
 	\item{} Se usará Ubuntu como sistema operativo para tanto el ordenador como el robot.
 	\item{} A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica para entrenar los modelos. 
-	\item{} Los modelo entrenados se deben ajustar a las limitaciones hardware del robot.
+	\item{} Los modelos entrenados se deben ajustar a las limitaciones hardware del robot.
 	\item{} Se busca que sea un proyecto a largo plazo y por eso se debe realizar la integración con la plataforma ROS2. 
 	
 	
@@ -95,74 +95,52 @@ Las competencias adquiridas a lo largo del desarrollo del presente proyecto fin 
 \section{Metodología}
 \label{sec:metodologia}
 
-Qué paradigma de desarrollo software has seguido para alcanzar tus objetivos.
+Para llevar a cabo este proyecto final de grado se ha optado por seguir una metodología que se iniciaba en una profunda investigación sobre el estado del arte para comprobar la viabilidad del desarrollo del presente proyecto. Posteriormente tras haber elegido el \textit{hardware} necesario para el robot, se decidió usar una metodología experimental que ayudó a decidir el diseño final que tendría el robot. Una vez cumplido esto, se imprimió y se ensambló las distintas piezas. 
+
+
+Para el desarrollo \textit{software} en el robot real se probó y configuró cada sensor y actuador del robot en distintos sistemas operativos y versiones hasta encontrar la mejor que cumpliese todos los objetivos. Una vez conseguido eso, se decidió seguir un ciclo de desarrollo conocido como \ac{PDCA} y así poder ir haciendo pequeños avances consistentes hasta llegar a una versión completamente funcional. Para el desarrollo del robot en simulación también se decidió usar la metodología \acs{PDCA}. Esta metodología sigue los siguientes pasos cíclicos: 
+
+\begin{enumerate}
+	\item{\textit{Planear}}. Ante el problema presentado, se decide qué hacer.
+	
+	\item{\textit{Hacer}}. Tras conocer qué hacer, se pone en marcha lo planeado previamente.
+	
+	\item{\textit{Comprobar}}. Tras conocer los resultados obtenidos, se comprueban.
+	
+	\item{\textit{Actuar}}. Tras comprobar los resultados, se ajusta lo que tiene que ser corregido. 
+
+\end{enumerate}
+
 
 \section{Plan de trabajo}
 \label{sec:plantrabajo}
 
-Qué agenda has seguido. Si has ido manteniendo reuniones semanales, cumplimentando objetivos parciales, si has ido afinando poco a poco un producto final completo, etc.
-
-
-
-
-El presente proyecto trata ....\\
-
-
-Después de aquí pasar al aparatado del estado del arte \\\\
-
-En los textos puedes poner palabras en \textit{cursiva}, para aquellas expresiones en sentido \textit{figurado}, palabras como \textit{robota}, que está fuera del diccionario castellano, o bien para resaltar palabras de una colección: \textit{(a)} es la primera letra del abecedario, \textit{(b)} es la segunda, etc.\\
-
-Al poner las dos líneas del anterior párrafo, este aparecerá separado del anterior. Si no las pongo, los párrafos aparecerán pegados. Sigue el criterio que consideres más oportuno.
-
-\section{Segunda sección}
-\label{sec:segundaseccion}
-
-No olvides incluir imágenes y referenciarlas, como la Figura \ref{fig:roomba}.
-
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=8cm]{figs/roomba}
-	\end{center}
-	\caption{Robot aspirador Roomba de iRobot.}
-	\label{fig:roomba}
-\end{figure}\
-
-Ni tampoco olvides de poner las URLs como notas al pie. Por ejemplo, si hablo de la Robocup\footnote{\url{http://www.robocup.org}}.
-
-\subsection{Números}
-\label{sec:subseccion}
-
-En lugar de tener secciones interminables, como la Sección \ref{sec:robotica}, divídelas en subsecciones.
-
-Para hablar de números, mételos en el entorno \textit{math} de \LaTeX, por ejemplo, $1.5Kg$. También puedes usar el símbolo del Euro como aquí: 1.500\euro.
-
-\subsection{Listas}
-
-Cuando describas una colección, usa \texttt{itemize} para ítems o \texttt{enumerate} para enumerados. Por ejemplo:
-
-\begin{itemize}
-	\item \textit{Entorno de simulación.} Hemos usado dos entornos de simulación: uno en 3D y otro en 2D.
-	\item \textit{Entornos reales.} Dentro del campus, hemos realizado experimentos en Biblioteca y en el edificio de Gestión.
-\end{itemize}\
+El desarrollo del presente proyecto fin de grado ha estado dividido en las siguientes etapas: 
 
 \begin{enumerate}
-	\item Primer elemento de la colección.
-	\item Segundo elemento de la colección.
-\end{enumerate}\
+	\item{\textit{Investigación del estado del arte}}. En esta fase inicial, se realizaron búsquedas en plataformas online como Google Scholar y otras relacionadas con el mantenimiento de carreteras con el fin de encontrar soluciones al problema descrito. 
+	
+	\item{\textit{Planteamiento hardware del robot}}. Una vez conocida la viabilidad del proyecto, se decidió estudiar qué componentes \textit{low-cost} eran necesarios para dar forma al esqueleto del robot. 
+	
+	\item{\textit{Diseño de prototipos del robot}}. Tras conocer cuál será el esqueleto del robot, usando cartón y pegamento se hicieron una serie de prototipos hasta encontrar la solución final. Posteriormente se usó la herramienta FreeCAD para modelar las distintas piezas.
+	
+	\item{\textit{Impresión 3D y emsamblaje de las piezas}}. Una vez el diseño estaba hecho, se decidió imprimirlo usando filamento de tipo PLA azul. Finalmente, se produjo el ensamblaje de todas las piezas.
+	
+	\item{\textit{Desarrollo del robot en simulación}}. Tras tener el robot completemente montado, se decidió desarrollar el modelo del robot pero esta vez para que se pudiera trabajar con él en simulación, usando Gazebo.
+	
+	\item{\textit{Configuración hardware del robot}}. Tras tener al robot listo en simulación, se decidió configurar cada componente hardware del robot en distintos sistemas operativos hasta encontrar el que mejor encajase con la arquitectura del mismo. 
+	
+	\item{\textit{Desarrollo software del robot en físico}}. El robot finalmente está configurado y listo para operar en un entorno real. Asimismo se desarrolló una serie de nodos en ROS2 que mostraban un correcto funcionamiento de cada componente hardware siguiendo el propósito buscado. 
+	
+	\item{\textit{Experimentos en un entorno real}}. En esta etapa final, se realizaron distintos experimentos en el entorno real para demostrar que se cumplía el objetivo principal.
 
-\paragraph{Referencias bibliográficas}
-\label{sec:referencias}
+\end{enumerate}
 
-Cita, sobre todo en este capítulo, referencias bibliográficas que respalden tu argumento. Para citarlas basta con poner la instrucción \verb|\cite| con el identificador de la cita. Por ejemplo: libros como \cite{vega12e}, artículos como \cite{vega19b}, URLs como \cite{vega19a}, tesis como \cite{vega18b}, congresos como \cite{vega18a}, u otros trabajos fin de grado como \cite{vega08b}.
+Asimismo, a lo largo de todo el proceso se ha ido elaborando la presente memoria. La dinámica seguida con el tutor ha sido de reuniones semanales o cada dos semanas, dependiendo de la disponibilidad por las dos partes. Además en dichas reuniones se comentaban todos los avances realizados y se proponían aspectos a mejorar, sugerencias y se definían nuevos objetivos a conseguir. 
 
-Las referencias, con todo su contenido, están recogidas en el fichero \texttt{bibliografia.bib}. El contenido de estas referencias está en formato \texttt{BibTex}. Este formato se puede obtener en muchas ocasiones directamente, desde plataformas como \texttt{Google Scholar} u otros repositorios de recursos científicos.
+Todo el contenido del proyecto está alojado en un repositorio público de GitHub\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez}}. Además, todo el trabajo diario está documentado en el apartado Wiki\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/wiki}} de dicho repositorio; dividido en \textit{diario} y en \textit{evolución del proyecto}. El apartado de \textit{diario} trata de contar de forma coloquial qué se ha ido realizando cada día o cada pocos días. Por otro lado, en \textit{evolución del proyecto} se puede encontrar pasos de instalación seguidos, explicación detallada de códigos o de conceptos teóricos, entre otros detalles.
 
-Existen numerosos estilos para reflejar una referencia bibliográfica. El estilo establecido por defecto en este documento es APA, que es uno de los estilos más comunes, pero lo puedes modificar en el archivo \texttt{memoria.tex}; concretamente, cambiando el campo \verb|apalike| a otro en la instrucción \verb|\bibliographystyle{apalike}|. 
 
-\
 
-\
 
-\
 
-Y, para terminar este capítulo, resume brevemente qué vas a contar en los siguientes.

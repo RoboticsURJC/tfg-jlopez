@@ -26,17 +26,17 @@
 \contentsline {subsection}{\numberline {3.3.2}Competencias adquiridas}{27}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Metodología}{28}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Plan de trabajo}{28}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Segunda sección}{28}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Números}{29}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Listas}{29}{subsection.3.6.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{29}{paragraph*.55}%
 \contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Diseño}{32}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{32}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{32}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{33}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{33}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{35}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{36}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{37}{appendix*.61}%
+\contentsline {section}{\numberline {4.1}Segunda sección}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Números}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Listas}{32}{subsection.4.1.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{32}{paragraph*.56}%
+\contentsline {chapter}{\numberline {5}Diseño}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{34}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{35}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{35}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{37}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{37}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{38}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{39}{appendix*.62}%
