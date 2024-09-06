@@ -10,48 +10,21 @@ from projGeom import *
 import cv2
 import numpy 
 
-# defino variables globales:
+
 ANCHO_IMAGEN = 640
 LARGO_IMAGEN = 480
-FX = 333.76
-FY = 335.08
-CX = 310.99
-CY = 230.93
-
-# PYGAME CONSTANTS
-#pyGameFont = None
-#pyGameScreen = None # pantalla donde dibujo
-#ANCHO_ESCENA = 700
-#LARGO_ESCENA = 700
-#BLACK = (  0,   0,   0)
-# WHITE = (255, 255, 255)
-#BLUE =  (  0,   0, 255)
-#GREEN = (  0, 255,   0)
-#RED =   (255,   0,   0)
-#GREY =  (128, 128, 128)
-#LIGHT_BLUE = (135,206,250)
-#SCALE = 1 # los valores reales los dividimos entre este factor para dibujarlos
+FX = 497.66
+FY = 502.16
+CX = 325.3
+CY = 240.18
 
 DEGTORAD = 3.1415926535897932 / 180
 myCamera = None
-#originalImg = None
-#hsvImg = None
-#bnImg = None
-#groundImg = None
-#fronteraImg = None
-#GREEN_MIN = numpy.array([20, 50, 100],numpy.uint8)#numpy.array([48, 138, 138],numpy.uint8)
-#GREEN_MAX = numpy.array([90, 235, 210],numpy.uint8)#numpy.array([67, 177, 192],numpy.uint8)
-#puntosFrontera = 0
 
 
 def loadCamera ():
 	global myCamera
 	myCamera = PinholeCamera()
-	# -------------------------------------------------------------
-	# LOADING MATRICES:
-	# -------------------------------------------------------------
-	#R = numpy.array ([(1,0,0),(0,1,0),(0,0,1)]) # R is a 3x3 rotation matrix
-	#R = numpy.array ([(1,0,-0.0274),(0,1,0),(0.0274,0,1)]) # R is a 3x3 rotation matrix
 	thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 	thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 	thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
@@ -76,7 +49,7 @@ def loadCamera ():
 	# -------------------------------------------------------------
 	myCamera.position.x = 0
 	myCamera.position.y = 0
-	myCamera.position.z = -110
+	myCamera.position.z = -88
 	myCamera.position.h = 1
 
 	# K intrinsec parameters matrix (values got from the PiCamCalibration.py)
@@ -146,7 +119,6 @@ def pixel2optical (p2d):
 
 	return p2d
 
-
 def getIntersectionZ (p2d):
 	p3d = Punto3D ()
 	res = Punto3D ()
@@ -177,10 +149,15 @@ def getIntersectionZ (p2d):
 
 	return res
 
+def calcular_distancia_3d(x_cam, y_cam, z_cam, x_punto, y_punto, z_punto):
+    distancia = numpy.sqrt((x_punto - x_cam)**2 + (y_punto - y_cam)**2 + (z_punto - z_cam)**2)
+    return distancia
+
 
 def detect_color(frame, lower_color, upper_color):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_color, upper_color)
+    # Esto  hasido modificado 
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
     if contours:
@@ -196,8 +173,8 @@ def detect_color(frame, lower_color, upper_color):
 # obtenemos el pixel de la imagen
 def getPoints (frame):
 
-    global fronteraImg
-    global puntosFrontera
+    #global fronteraImg
+    #global puntosFrontera
 
     pixel = Punto2D()
     pixelOnGround3D = Punto3D()

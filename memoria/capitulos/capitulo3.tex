@@ -10,18 +10,48 @@ Tony Robbins\\
 \end{flushright}
 
 \vspace{1cm}
+\setcounter{footnote}{29} 
 
-Escribe aquí un párrafo explicando brevemente lo que vas a contar en este capítulo. En este capítulo lo ideal es explicar cuáles han sido los objetivos que te has fijado conseguir con tu trabajo, qué requisitos ha de respetar el resultado final, y cómo lo has llevado a cabo; esto es, cuál ha sido tu plan de trabajo.\\
+Tras haber establecido el marco contextual del presente proyecto, se procederá a presentar la descripción del problema, los requisitos, las competencias tanto adquiridas como empleadas, la metodología y el plan de trabajo seguido.
 
 \section{Descripción del problema}
 \label{sec:descripcion}
 
-Cuenta aquí el objetivo u objetivos generales y, a continuación, concrétalos mediante objetivos específicos.
+La idea del diseño del robot para este trabajo de fin de grado nace tras los acontecimientos vividos por la \ac{DANA} que afectó el pasado septiembre de 2023 en la zona de Toledo y Madrid. Estos hechos dejaron inundaciones, pueblos anegados, carreteras cortadas, muchos vecinos perdieron sus casas y desgraciadamente se cobró la vida de 3 personas. 
+
+Esta situación se produjo, en parte, por la falta de mantenimiento de los pavimentos y carreteras y que posteriormente a lo sucedido, también fue una de las infraestructuras que más tardaron en arreglarse. La principal causa de que eso ocurriese es los bajos recursos y la falta de mano de obra que justamente hay en la zona que sucedieron los hechos. Los operarios que conforman esta mano de obra llevan tiempo exigiendo mejoras de seguridad en su entorno laboral como defiende la Plataforma de Trabajadores de Conservación de Carreteras\footnote{\url{https://conservacion.es/index.php?option=com_content&view=article&id=1&Itemid=101}} mencionada en el Capítulo 1.  
+   
+La solución propuesta busca ayudar a mejorar esta situación, proporcionando un robot de bajo coste y accesible para cualquier persona y que sirva para poder mejorar el mantenimiento de las carreteras y reducir el riesgo de exposición de los operarios. Por lo tanto, este proyecto pretende como objetivo principal crear un robot que usando materiales de bajo coste sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y calcular el área necesario de material que necesitará el bache para ser tapado. De igual manera, todo quedará registrado en una interfaz web en la que cada bache quedará marcado sobre un mapa con su correspondiente descripción para que los operarios puedan operar cuando estimen oportuno.
+
+Con el fin de solventar el problema definido previamente, se han establecido los siguientes subobjetivos:
+
+\begin{enumerate}
+	\item{} Investigar los robots o soluciones actuales que cumplan con las características y objetivos establecidos.
+	\item{} Seleccionar los componentes hardware de bajo coste necesarios para construir el esqueleto del robot.
+	\item{} Analizar las diferentes opciones de diseño que más encajen con la forma del robot.
+	\item{} Diseñar las piezas en \acs{CAD} usando herramientas de \textit{software} libre.
+	\item{} Usar material típico de impresión 3D para imprimir las partes del robot, como puede ser ABS o PLA. 
+	\item{} Desarrollar un modelo del robot para que pueda ser usado en simulación usando herramientas robóticas. 
+	\item{} Desarrollar software necesario usando herramientas robóticas para poder controlar el robot físico. 
+	\item{} Poder realizar algunos experimentos en entorno reales o adaptados.  
+\end{enumerate}
+ 
 
 \section{Requisitos}
 \label{sec:requisitos}
 
-Describe los requisitos que ha de cumplir tu trabajo.
+Tras nombrar los objetivos y subjetivos necesarios para cumplir en este proyecto, se deberá cumplir también con los siguientes requisitos: 
+
+\begin{enumerate}
+	\item{} El coste total de la fabricación del robot no debe superar los 200€.
+	\item{} Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
+	\item{} Se usará Ubuntu como sistema operativo para tanto el ordenador como el robot.
+	\item{} A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica para entrenar los modelos. 
+	\item{} Los modelo entrenados se deben ajustar a las limitaciones hardware del robot.
+	\item{} Se busca que sea un proyecto a largo plazo y por eso se debe realizar la integración con la plataforma ROS2. 
+	
+	
+\end{enumerate}
 
 \section{Competencias}
 

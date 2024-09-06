@@ -20,23 +20,23 @@
 \contentsline {subsubsection}{El proyecto OMICRÓN}{22}{subsubsection*.51}%
 \contentsline {chapter}{\numberline {3}Objetivos}{24}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Descripción del problema}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Requisitos}{24}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Competencias}{24}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Competencias empleadas}{24}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Competencias adquiridas}{25}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Metodología}{26}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Plan de trabajo}{26}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Segunda sección}{27}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Números}{27}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Listas}{28}{subsection.3.6.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{28}{paragraph*.54}%
-\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{29}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Diseño}{30}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{30}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{30}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{31}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{31}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{33}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{33}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{34}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{appendix*.60}%
+\contentsline {section}{\numberline {3.2}Requisitos}{25}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Competencias}{26}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Competencias empleadas}{26}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Competencias adquiridas}{27}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Metodología}{28}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Plan de trabajo}{28}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Segunda sección}{28}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Números}{29}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Listas}{29}{subsection.3.6.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{29}{paragraph*.55}%
+\contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{31}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Diseño}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{32}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{33}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{33}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{35}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{36}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{37}{appendix*.61}%
