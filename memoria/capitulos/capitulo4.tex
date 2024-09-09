@@ -15,14 +15,18 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 
 \section{Hardware}
 
-(añadir esquema en fritzing completo)
+En este apartado se van a describir el conjunto de componentes hardware que han sido necesarios adquirir para llevar a cabo este proyecto siempre primando por el menor coste de cada componente.
 
-\subsection{Raspberry pi}
+\subsection{Raspberry pi 4}
+
+La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un potente procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con 3 configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene 2 conectores micro HDMI, tiene conexión Wifi, Bluetooh 5.0, 2 USB 2.0 y 2 USB 3.0. Esta versión de Raspberry permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de 40 pines y los conectores CSI y DSI.
+
+Gracias a esos 40 pines, el usuario puede interactuar con una amplia variedad de dispositivos externos como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta pieza fue prestada por la universidad pero tiene un coste de unos 65€. 
 
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/raspberrypi4.png}
+		\includegraphics[width=14cm]{figs/raspberrypi4.png}
 	\end{center}
 	\caption{Raspberry Pi 4$^{\ref{note:enlace33}}$} 
 \label{fig:raspberry}
@@ -31,8 +35,11 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 \setcounter{footnote}{33} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/raspberry-pi-4-model-b/}\label{note:enlace33}}
 
-
 \subsection{Raspberry pi cámara}
+
+Esta placa que tiene un tamaño de  23.86 x 25 x 9mm (Figura \ref{fig:raspberrycam}), utiliza el sensor de imagen IMX219PQ de Sony que ofrece imágenes de vídeo de alta velocidad y alta sensibilidad. Dispone también de funciones de control automático como el control de exposición, el balance de blancos y la detección de luminancia. Esta cámara usa un cable plano que se conecta directamente al puerto \ac{CSI}.
+
+Es muy importante destacar su bajo coste, lo que le convierte en muy buena opción para hacer aplicaciones \textit{low-cost}. Sin embargo, el cable de la cámara es bastante sensible a tensiones y torsiones y es debido a ello que aunque la cámara fue prestada por la universidad, fue necesario adquirir una unidad más a través de Amazon con un coste aproximado de 18€.    
 
 
 \begin{figure} [h!]
@@ -48,6 +55,10 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 
 \subsection{GPS NEO 6M}
 
+Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió comprar el módulo NEO 6M (Figura \ref{fig:gps}) cuyo asequible precio en Amazon es de 9€. El módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad.Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones), que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
+
+Tiene una precisión de aproximadamente 2.5 metros en condiciones abiertas. Soporta hasta 22 satélites simultáneamente, lo que le permite ofrecer posicionamiento confiable y estable. Asimismo, utiliza comunicación por \ac{UART} comunmente a 9600 bps, lo que facilita su integración con muchas placas del mercado.
+
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/GPSNEO6MV2.jpeg}
@@ -57,34 +68,53 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 \end{figure}\
 
 \setcounter{footnote}{35} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B088LR3488?ref=cm_sw_r_mwn_dp_4PA5Z4MX9MZZAKGSJ97G&ref_=cm_sw_r_mwn_dp_4PA5Z4MX9MZZAKGSJ97G&social_share=cm_sw_r_mwn_dp_4PA5Z4MX9MZZAKGSJ97G&language=en_US}\label{note:gps}}
+\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B088LR3488?ref}\label{note:enlace35}}
 
 
-\subsection{Sevomotores Parallax}
+\subsection{Sevomotor Estándar Parallax}
+Este tipo de servo tiene un rango de rotación de 0 a 180 grados y es compatible su control usando \ac{PWM} con un pulso alto de 0.75–2.25 ms en intervalos de 20 ms (Figura \ref{fig:parallax} izquierda). Estos tipos de servos son muy comunes para utilizar en aplicaciones de animatrónica y robótica. Sin embargo, su coste ha subido en los últimos años y el precio por unidad ronda los 17€. La universidad ha sido quien me ha prestado estos servomotores pero para esta aplicación no es necesario usarlos y se pueden sustituir por otros de menor precio que cumplan con el requisito de tener rotaciones de 0 a 180 grados (Figura \ref{fig:parallax} derecha), cuyo precio de 2 servomotores es de casi 8€. 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/parallax.png}
-	\end{center}
-	\caption{Servomotor Parallax$^{\ref{note:enlace36}}$} 
-\label{fig:parallax}
-\end{figure}\
 
-\setcounter{footnote}{36} % Establecer la numeración de la siguiente nota al pie
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.2\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/parallax.png}
+		\caption*{\centering Parallax $^{\ref{note:enlace36}}$} %\cite{memnon_image}
+	\end{minipage}
+	\hspace{2cm}
+	% aquí incluir iamgen de Guerrero de terracota
+	\begin{minipage}{0.33\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/diyi.png}
+		\caption*{\centering YIDI $^{\ref{note:enlace37}}$} %\cite{gomezguerreros}
+	\end{minipage}
+	\caption{Tipos de Servomotores}
+	\label{fig:parallax}
+\end{figure}
+
+
+\setcounter{footnote}{36} % Reiniciar la numeración de notas al pie
 \footnotetext[\value{footnote}]{\url{https://www.parallax.com/product/parallax-standard-servo/}\label{note:enlace36}}
 
+\setcounter{footnote}{37} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005004551539283.html?spm=a2g0o.productlist.main.15.bee4rd8Srd8SSO&algo_pvid}\label{note:enlace37}}
+
+
 \subsection{Ruedas ActivityBot}
+
+Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits robótico ActivityBot que usan este tipo de ruedas. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel}). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa y el diámetro de la rueda es de 66mm. La universidad ha sido quien me ha prestado su uso pero también se pueden adquirir individualmente con un coste de 4,54€ la unidad.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/wheel.png}
 	\end{center}
-	\caption{Rueda ActivityBot$^{\ref{note:enlace37}}$} 
+	\caption{Rueda ActivityBot$^{\ref{note:enlace38}}$} 
 \label{fig:wheel}
 \end{figure}\
 
-\setcounter{footnote}{37} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace37}}
+\setcounter{footnote}{38} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace38}}
 
 \subsection{Google Coral USB}
 
@@ -92,12 +122,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecoral.png}
 	\end{center}
-	\caption{Google Coral USB$^{\ref{note:enlace38}}$} 
+	\caption{Google Coral USB$^{\ref{note:enlace39}}$} 
 	\label{fig:googlecoral}
 \end{figure}\
 
-\setcounter{footnote}{38} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace38}}
+\setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace39}}
 
 \subsection{PowerBank}
 
@@ -105,12 +135,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/powerbank.png}
 	\end{center}
-	\caption{Xiaomi Powerbank$^{\ref{note:enlace39}}$} 
+	\caption{Xiaomi Powerbank$^{\ref{note:enlace40}}$} 
 	\label{fig:powerbank}
 \end{figure}\
 
-\setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://buy.mi.com/es/item/3202200053}\label{note:enlace39}}
+\setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://buy.mi.com/es/item/3202200053}\label{note:enlace40}}
 
 \subsection{Rueda Loca}
 
@@ -119,12 +149,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ruedaloca.png}
 	\end{center}
-	\caption{Rueda loca$^{\ref{note:enlace40}}$} 
+	\caption{Rueda loca$^{\ref{note:enlace41}}$} 
 	\label{fig:ruedaloca}
 \end{figure}\
 
-\setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace40}}
+\setcounter{footnote}{41} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace41}}
 
 \subsection{Ordenador principal}
 
@@ -133,12 +163,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ordenador.png}
 	\end{center}
-	\caption{ASUS VivoBook (añadir versión)$^{\ref{note:enlace41}}$} 
+	\caption{ASUS VivoBook 14$^{\ref{note:enlace42}}$} 
 	\label{fig:ordenador}
 \end{figure}\
 
-\setcounter{footnote}{41} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:ordenador}}
+\setcounter{footnote}{42} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace42}}
 
 \section{Software}
 
@@ -148,12 +178,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/freecad.png}
 	\end{center}
-	\caption{Logo de Freecad $^{\ref{note:enlace42}}$} 
+	\caption{Logo de Freecad $^{\ref{note:enlace43}}$} 
 	\label{fig:freecad}
 \end{figure}\
 
-\setcounter{footnote}{42} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace42}}
+\setcounter{footnote}{43} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace43}}
 
 \subsection{Python}
 
@@ -161,12 +191,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/python.png}
 	\end{center}
-	\caption{Logo de Python $^{\ref{note:enlace43}}$} 
+	\caption{Logo de Python $^{\ref{note:enlace44}}$} 
 	\label{fig:python}
 \end{figure}\
 
-\setcounter{footnote}{43} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace43}}
+\setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace44}}
 
 \subsection{OpenCV}
 
@@ -174,12 +204,12 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 	\begin{center}
 		\includegraphics[width=4cm]{figs/opencv.png}
 	\end{center}
-	\caption{Logo de OpenCV $^{\ref{note:enlace44}}$} 
+	\caption{Logo de OpenCV $^{\ref{note:enlace45}}$} 
 	\label{fig:opencv}
 \end{figure}\
 
-\setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace44}}
+\setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace45}}
 
 \subsection{Software matemático}
 
@@ -194,12 +224,12 @@ pynmea
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ubuntu.png}
 	\end{center}
-	\caption{Logo de Ubuntu $^{\ref{note:enlace45}}$} 
+	\caption{Logo de Ubuntu $^{\ref{note:enlace46}}$} 
 	\label{fig:ubuntu}
 \end{figure}\
 
-\setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace45}}
+\setcounter{footnote}{46} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace46}}
 
 \subsubsection{Ubuntu 22.04}
 
@@ -219,14 +249,14 @@ pynmea
 	\begin{minipage}{0.4\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/foxy.png}
-		\caption*{\centering Ros2 Foxy $^{\ref{note:enlace46}}$} %\cite{memnon_image}
+		\caption*{\centering Ros2 Foxy $^{\ref{note:enlace47}}$} %\cite{memnon_image}
 	\end{minipage}
 	\hspace{2cm}
 	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/humble.png}
-		\caption*{\centering Logo Ros2 Humble $^{\ref{note:enlace47}}$} %\cite{gomezguerreros}
+		\caption*{\centering Logo Ros2 Humble $^{\ref{note:enlace48}}$} %\cite{gomezguerreros}
 	\end{minipage}
 	\caption{Distribuciones de ROS2 usadas}
 	\label{fig:rosdis}
@@ -234,11 +264,11 @@ pynmea
 
 
 % Definir la primera nota al pie con el número 1
-\setcounter{footnote}{46} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/foxy/Installation.html}\label{note:enlace46}}
-
 \setcounter{footnote}{47} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/humble/index.html}\label{note:enlace47}}
+\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/foxy/Installation.html}\label{note:enlace47}}
+
+\setcounter{footnote}{48} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/humble/index.html}\label{note:enlace48}}
 
 
 (condensar en herramientas de simulación?? añadir xml?? sdf...)
@@ -251,12 +281,12 @@ pynmea
 	\begin{center}
 		\includegraphics[width=4cm]{figs/gazebo.png}
 	\end{center}
-	\caption{Logo de Gazebo $^{\ref{note:enlace48}}$} 
+	\caption{Logo de Gazebo $^{\ref{note:enlace49}}$} 
 	\label{fig:gazebo}
 \end{figure}\
 
-\setcounter{footnote}{48} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace48}}
+\setcounter{footnote}{49} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace49}}
 
 \subsection{Herramientas de visualización}
 
@@ -269,12 +299,12 @@ ros2 topic echo...
 	\begin{center}
 		\includegraphics[width=4cm]{figs/rviz.png}
 	\end{center}
-	\caption{Logo de Rviz $^{\ref{note:enlace49}}$} 
+	\caption{Logo de Rviz $^{\ref{note:enlace50}}$} 
 	\label{fig:rviz}
 \end{figure}\
 
-\setcounter{footnote}{49} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace49}}
+\setcounter{footnote}{50} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace50}}
 
 \subsection{Google Colab/Jupyter Notebook}
 
@@ -282,12 +312,12 @@ ros2 topic echo...
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecolab.png}
 	\end{center}
-	\caption{Logo de Google Colab $^{\ref{note:enlace50}}$} 
+	\caption{Logo de Google Colab $^{\ref{note:enlace51}}$} 
 	\label{fig:googlecolab}
 \end{figure}\
 
-\setcounter{footnote}{50} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace50}}
+\setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace51}}
 
 \subsection{YOLOv8}
 
@@ -296,12 +326,12 @@ ros2 topic echo...
 	\begin{center}
 		\includegraphics[width=4cm]{figs/yolov8.png}
 	\end{center}
-	\caption{Logo de YOLOv8 $^{\ref{note:enlace51}}$} 
+	\caption{Logo de YOLOv8 $^{\ref{note:enlace52}}$} 
 	\label{fig:yolov8}
 \end{figure}\
 
-\setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace51}}
+\setcounter{footnote}{52} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace52}}
 
 
 \subsection{TensorFlow Lite Edge TPU}
@@ -310,12 +340,12 @@ ros2 topic echo...
 	\begin{center}
 		\includegraphics[width=6cm]{figs/tflite.png}
 	\end{center}
-	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace52}}$} 
+	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace53}}$} 
 	\label{fig:tflite}
 \end{figure}\
 
-\setcounter{footnote}{52} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace52}}
+\setcounter{footnote}{53} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace53}}
 
 
 \subsection{Interfaz Web}
@@ -329,12 +359,12 @@ ros2 topic echo...
 	\begin{center}
 		\includegraphics[width=4cm]{figs/osm.png}
 	\end{center}
-	\caption{Logo de Open Street Maps $^{\ref{note:enlace53}}$} 
+	\caption{Logo de Open Street Maps $^{\ref{note:enlace54}}$} 
 	\label{fig:osm}
 \end{figure}\
 
-\setcounter{footnote}{53} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace53}}
+\setcounter{footnote}{54} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace54}}
 
 
 Mirar si hay que añadir alguna otra subsubsección
