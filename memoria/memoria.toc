@@ -28,46 +28,46 @@
 \contentsline {section}{\numberline {3.5}Plan de trabajo}{28}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Plataforma de desarrollo}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Hardware}{31}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Raspberry pi 4}{31}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Raspberry pi cámara}{32}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}GPS NEO 6M}{32}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Sevomotor Estándar Parallax}{33}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.1}Raspberry Pi 4}{31}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Raspberry Pi cámara}{32}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}GPS NEO 6M}{33}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Sevomotor Estándar Parallax}{34}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Ruedas ActivityBot}{34}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Google Coral USB}{35}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}PowerBank}{35}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Rueda Loca}{35}{subsection.4.1.8}%
-\contentsline {subsection}{\numberline {4.1.9}Ordenador principal}{35}{subsection.4.1.9}%
-\contentsline {section}{\numberline {4.2}Software}{36}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Freecad}{36}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Python}{36}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}OpenCV}{37}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Software matemático}{37}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Software localización}{37}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Ubuntu}{37}{subsection.4.2.6}%
-\contentsline {subsubsection}{Ubuntu 22.04}{38}{subsubsection*.71}%
-\contentsline {subsubsection}{Ubuntu 20.04}{38}{subsubsection*.72}%
-\contentsline {subsection}{\numberline {4.2.7}ROS2}{38}{subsection.4.2.7}%
-\contentsline {subsubsection}{ROS2 Humble}{38}{subsubsection*.73}%
-\contentsline {subsubsection}{ROS2 Foxy}{38}{subsubsection*.74}%
+\contentsline {subsection}{\numberline {4.1.7}Power Bank}{35}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.8}Rueda Loca}{36}{subsection.4.1.8}%
+\contentsline {subsection}{\numberline {4.1.9}Ordenador principal}{37}{subsection.4.1.9}%
+\contentsline {section}{\numberline {4.2}Software}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Freecad}{37}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Python}{38}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}OpenCV}{38}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Software matemático}{38}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Software localización}{39}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Ubuntu}{39}{subsection.4.2.6}%
+\contentsline {subsubsection}{Ubuntu 22.04}{39}{subsubsection*.72}%
+\contentsline {subsubsection}{Ubuntu 20.04}{39}{subsubsection*.73}%
+\contentsline {subsection}{\numberline {4.2.7}ROS2}{39}{subsection.4.2.7}%
+\contentsline {subsubsection}{ROS2 Humble}{39}{subsubsection*.74}%
+\contentsline {subsubsection}{ROS2 Foxy}{39}{subsubsection*.75}%
 \contentsline {subsection}{\numberline {4.2.8}Ros2 Control}{39}{subsection.4.2.8}%
 \contentsline {subsection}{\numberline {4.2.9}Gazebo}{39}{subsection.4.2.9}%
 \contentsline {subsection}{\numberline {4.2.10}Herramientas de visualización}{39}{subsection.4.2.10}%
-\contentsline {subsection}{\numberline {4.2.11}Google Colab/Jupyter Notebook}{39}{subsection.4.2.11}%
-\contentsline {subsection}{\numberline {4.2.12}YOLOv8}{39}{subsection.4.2.12}%
-\contentsline {subsection}{\numberline {4.2.13}TensorFlow Lite Edge TPU}{40}{subsection.4.2.13}%
-\contentsline {subsection}{\numberline {4.2.14}Interfaz Web}{40}{subsection.4.2.14}%
-\contentsline {subsubsection}{ROS2 bridge suite}{40}{subsubsection*.81}%
-\contentsline {subsubsection}{Open Street Maps}{40}{subsubsection*.82}%
-\contentsline {section}{\numberline {4.3}Segunda sección}{41}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Números}{42}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Listas}{42}{subsection.4.3.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{42}{paragraph*.85}%
-\contentsline {chapter}{\numberline {5}Diseño}{44}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Snippets}{44}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Verbatim}{44}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ecuaciones}{45}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tablas o cuadros}{45}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{47}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{48}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{49}{appendix*.91}%
+\contentsline {subsection}{\numberline {4.2.11}Google Colab/Jupyter Notebook}{40}{subsection.4.2.11}%
+\contentsline {subsection}{\numberline {4.2.12}YOLOv8}{40}{subsection.4.2.12}%
+\contentsline {subsection}{\numberline {4.2.13}TensorFlow Lite Edge TPU}{41}{subsection.4.2.13}%
+\contentsline {subsection}{\numberline {4.2.14}Interfaz Web}{41}{subsection.4.2.14}%
+\contentsline {subsubsection}{ROS2 bridge suite}{41}{subsubsection*.82}%
+\contentsline {subsubsection}{Open Street Maps}{41}{subsubsection*.83}%
+\contentsline {section}{\numberline {4.3}Segunda sección}{42}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Números}{43}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Listas}{43}{subsection.4.3.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{43}{paragraph*.86}%
+\contentsline {chapter}{\numberline {5}Diseño}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Snippets}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verbatim}{45}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecuaciones}{46}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tablas o cuadros}{46}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{48}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{49}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{50}{appendix*.92}%

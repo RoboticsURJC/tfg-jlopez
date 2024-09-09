@@ -17,11 +17,11 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 
 En este apartado se van a describir el conjunto de componentes hardware que han sido necesarios adquirir para llevar a cabo este proyecto siempre primando por el menor coste de cada componente.
 
-\subsection{Raspberry pi 4}
+\subsection{Raspberry Pi 4}
 
-La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un potente procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con 3 configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene 2 conectores micro HDMI, tiene conexión Wifi, Bluetooh 5.0, 2 USB 2.0 y 2 USB 3.0. Esta versión de Raspberry permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de 40 pines y los conectores CSI y DSI.
+La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con 3 configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene 2 conectores micro HDMI, tiene conexión Wifi, Bluetooh 5.0, 2 USB 2.0 y 2 USB 3.0. Esta versión de \textit{Raspberry} permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de 40 pines y el conector \ac{CSI}. Gracias a esos 40 pines, el usuario puede interactuar con una amplia variedad de dispositivos externos como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. 
 
-Gracias a esos 40 pines, el usuario puede interactuar con una amplia variedad de dispositivos externos como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta pieza fue prestada por la universidad pero tiene un coste de unos 65€. 
+ Sin embargo, la \textit{Raspberry Pi} usa procesadores ARM, que, aunque eficientes energéticamente, no están optimizados para realizar tareas intensivas de \ac{IA} como entrenar modelos de redes neuronales o ejecutar inferencias en tiempo real a gran escala. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta pieza fue prestada por la universidad pero tiene un coste de unos 65€. 
 
 
 \begin{figure} [h!]
@@ -35,7 +35,7 @@ Gracias a esos 40 pines, el usuario puede interactuar con una amplia variedad de
 \setcounter{footnote}{33} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/raspberry-pi-4-model-b/}\label{note:enlace33}}
 
-\subsection{Raspberry pi cámara}
+\subsection{Raspberry Pi cámara}
 
 Esta placa que tiene un tamaño de  23.86 x 25 x 9mm (Figura \ref{fig:raspberrycam}), utiliza el sensor de imagen IMX219PQ de Sony que ofrece imágenes de vídeo de alta velocidad y alta sensibilidad. Dispone también de funciones de control automático como el control de exposición, el balance de blancos y la detección de luminancia. Esta cámara usa un cable plano que se conecta directamente al puerto \ac{CSI}.
 
@@ -103,7 +103,7 @@ Este tipo de servo tiene un rango de rotación de 0 a 180 grados y es compatible
 
 \subsection{Ruedas ActivityBot}
 
-Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits robótico ActivityBot que usan este tipo de ruedas. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel}). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa y el diámetro de la rueda es de 66mm. La universidad ha sido quien me ha prestado su uso pero también se pueden adquirir individualmente con un coste de 4,54€ la unidad.
+Para implementar las ruedas de este robot, se decidió tomar las ruedas del kit robótico ActivityBot que usan este tipo de ruedas. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel}). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa y el diámetro de la rueda es de 66mm. La universidad ha sido quien me ha prestado su uso pero también se pueden adquirir individualmente con un coste de 4,54€ la unidad.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -118,6 +118,10 @@ Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits
 
 \subsection{Google Coral USB}
 
+El \textit{Google Coral USB Accelerator} (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en \textit{TensorFlow Lite}, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Sólo es compatible con  las versiones desde Python 3.6 hasta la versión 3.9.
+
+Gracias a todas esas características y para mejorar la detección de baches en tiempo real y solventar las limitaciones de la \textit{Raspberry Pi}, se ha decidido incluir este componente en el proyecto. Su precio es elevado pero se puede conseguir desde 65€.
+ 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecoral.png}
@@ -129,11 +133,13 @@ Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits
 \setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace39}}
 
-\subsection{PowerBank}
+\subsection{Power Bank}
+
+Para poder alimentar a todos los componentes se ha decidido incluir en el proyecto una \textit{power bank} de bastante capacidad para que permita la autonomía del robot durante mucho tiempo. Para ello se ha elegido la \textit{Xiaomi Redmi Power Bank} de 20000 mAh cuyas dimensiones son: 73,6 x 27,3 x 154 mm. Cuando la adquirí costaba en torno a unos 20€ pero ahora se puede encontrar hasta por el doble de precio. 
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=4cm]{figs/powerbank.png}
+		\includegraphics[width=5cm]{figs/powerbank.png}
 	\end{center}
 	\caption{Xiaomi Powerbank$^{\ref{note:enlace40}}$} 
 	\label{fig:powerbank}
@@ -144,6 +150,7 @@ Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits
 
 \subsection{Rueda Loca}
 
+Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo para el robot, es necesario incluir al robot una rueda loca. Tras investigar para encontrar la que mejor encaja, se ha decidido incluir una rueda loca como la que aparece en la Figura \ref{fig:ruedaloca} que tiene las siguientes dimensiones: 5,3 x 2,9 x 2 cm. El precio de una de ellas sale por 1,13€.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -158,6 +165,8 @@ Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits
 
 \subsection{Ordenador principal}
 
+Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la \textit{Raspberry Pi} y poder comandar acciones al robot; ha sido necesario tener un ordenador principal que permita realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
+
 
 \begin{figure} [h!]
 	\begin{center}
@@ -169,6 +178,33 @@ Para implementar las ruedas de este robot, se decidió tomar las ruedas del kits
 
 \setcounter{footnote}{42} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace42}}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{Características} & \textbf{Descripción} \\
+			\hline
+			Pantalla & 14 pulgadas, Full HD (1920x1080), tecnología LED, antirreflejo \\
+			Procesador (CPU) & Intel Core i7 de 10ª generación \\
+			Memoria RAM & 8GB \\
+			Almacenamiento & 512GB \\
+			Tarjeta gráfica (GPU) & Intel UHD Graphics de la serie Comet Lake-U GT2 \\
+			Sistema Operativo & Windows 10 y Ubuntu 22.04 \\
+			Puertos 1 & 1x USB 3.2 Gen 1 Tipo-A, 1x USB 3.2 Gen 1 Tipo-C, 2x USB 2.0\\  
+			Puertos 2 & 1x HDMI, lector de tarjetas microSD, entrada combo de audio \\
+			Conectividad & 	Wi-Fi 5 (802.11ac), Bluetooth 4.1 / 5.0 \\
+			Batería & 37 Whr \\
+			Peso & 1.4 kg \\
+			Dimensiones & 32.5 x 21.6 x 1.99 cm \\
+			\hline
+		\end{tabular}
+		\caption{Especificaciones técnicas del ordenador usado}
+		\label{cuadro:carac_ordena}
+	\end{center}
+\end{table}
+
+
 
 \section{Software}
 
