@@ -1,0 +1,22 @@
+[1.722s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/ros2_controllers/ros2_controllers_test_nodes': PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../../build/ros2_controllers_test_nodes build --build-base /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/build install --record /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/install.log --single-version-externally-managed install_data
+[2.328s] running egg_info
+[2.328s] writing ../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/PKG-INFO
+[2.329s] writing dependency_links to ../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/dependency_links.txt
+[2.329s] writing entry points to ../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/entry_points.txt
+[2.329s] writing requirements to ../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/requires.txt
+[2.329s] writing top-level names to ../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/top_level.txt
+[2.330s] reading manifest file '../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[2.332s] writing manifest file '../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[2.332s] running build
+[2.332s] running build_py
+[2.332s] running install
+[2.333s] running install_lib
+[2.336s] running install_data
+[2.336s] running install_egg_info
+[2.337s] removing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes/lib/python3.10/site-packages/ros2_controllers_test_nodes-2.37.0-py3.10.egg-info' (and everything under it)
+[2.338s] Copying ../../../../build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes/lib/python3.10/site-packages/ros2_controllers_test_nodes-2.37.0-py3.10.egg-info
+[2.339s] running install_scripts
+[2.376s] Installing publisher_forward_position_controller script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes/lib/ros2_controllers_test_nodes
+[2.376s] Installing publisher_joint_trajectory_controller script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes/lib/ros2_controllers_test_nodes
+[2.377s] writing list of installed files to '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/install.log'
+[2.413s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/ros2_controllers/ros2_controllers_test_nodes' returned '0': PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../../build/ros2_controllers_test_nodes build --build-base /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/build install --record /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_controllers_test_nodes/install.log --single-version-externally-managed install_data

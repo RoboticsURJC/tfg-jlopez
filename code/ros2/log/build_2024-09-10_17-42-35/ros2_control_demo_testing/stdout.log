@@ -1,0 +1,31 @@
+running develop
+Removing /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2-control-demo-testing.egg-link (link to .)
+running egg_info
+writing ../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/PKG-INFO
+writing dependency_links to ../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/dependency_links.txt
+writing entry points to ../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/entry_points.txt
+writing requirements to ../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/requires.txt
+writing top-level names to ../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/top_level.txt
+reading manifest file '../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+writing manifest file '../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build
+creating /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build/lib
+creating /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing
+copying ros2_control_demo_testing/__init__.py -> /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing
+copying ros2_control_demo_testing/test_utils.py -> /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing
+running install
+running install_lib
+creating /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing
+copying /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing/__init__.py -> /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing
+copying /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing/test_utils.py -> /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing
+byte-compiling /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing/test_utils.py to test_utils.cpython-310.pyc
+running install_data
+copying resource/ros2_control_demo_testing -> /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/share/ament_index/resource_index/packages
+copying package.xml -> /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/share/ros2_control_demo_testing
+running install_egg_info
+Copying ../../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_demo_testing/install.log'

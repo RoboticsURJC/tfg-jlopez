@@ -19,9 +19,9 @@ En este apartado se van a describir el conjunto de componentes hardware que han 
 
 \subsection{Raspberry Pi 4}
 
-La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con 3 configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene 2 conectores micro HDMI, tiene conexión Wifi, Bluetooh 5.0, 2 USB 2.0 y 2 USB 3.0. Esta versión de \textit{Raspberry} permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de 40 pines y el conector \ac{CSI}. Gracias a esos 40 pines, el usuario puede interactuar con una amplia variedad de dispositivos externos como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. 
+La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con 3 configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene 2 conectores micro HDMI, tiene conexión Wifi, Bluetooh 5.0, 2 USB 2.0 y 2 USB 3.0. Esta versión de Raspberry permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de 40 pines y el conector \ac{CSI}. Gracias a esos 40 pines, el usuario puede interactuar con una amplia variedad de dispositivos externos como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. 
 
- Sin embargo, la \textit{Raspberry Pi} usa procesadores ARM, que, aunque eficientes energéticamente, no están optimizados para realizar tareas intensivas de \ac{IA} como entrenar modelos de redes neuronales o ejecutar inferencias en tiempo real a gran escala. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta pieza fue prestada por la universidad pero tiene un coste de unos 65€. 
+ Sin embargo, la Raspberry Pi usa procesadores ARM, que, aunque eficientes energéticamente, no están optimizados para realizar tareas intensivas de \ac{IA} como entrenar modelos de redes neuronales o ejecutar inferencias en tiempo real a gran escala. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta pieza fue prestada por la universidad pero tiene un coste de unos 65€. 
 
 
 \begin{figure} [h!]
@@ -55,7 +55,7 @@ Es muy importante destacar su bajo coste, lo que le convierte en muy buena opci�
 
 \subsection{GPS NEO 6M}
 
-Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió comprar el módulo NEO 6M (Figura \ref{fig:gps}) cuyo asequible precio en Amazon es de 9€. El módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad.Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones), que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
+Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió comprar el módulo NEO 6M (Figura \ref{fig:gps}) cuyo asequible precio en Amazon es de 9€. El módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad. Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones), que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
 
 Tiene una precisión de aproximadamente 2.5 metros en condiciones abiertas. Soporta hasta 22 satélites simultáneamente, lo que le permite ofrecer posicionamiento confiable y estable. Asimismo, utiliza comunicación por \ac{UART} comunmente a 9600 bps, lo que facilita su integración con muchas placas del mercado.
 
@@ -118,9 +118,9 @@ Para implementar las ruedas de este robot, se decidió tomar las ruedas del kit 
 
 \subsection{Google Coral USB}
 
-El \textit{Google Coral USB Accelerator} (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en \textit{TensorFlow Lite}, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Sólo es compatible con  las versiones desde Python 3.6 hasta la versión 3.9.
+El Google Coral USB Accelerator (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en TensorFlow Lite, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Sólo es compatible con  las versiones desde Python 3.6 hasta la versión 3.9.
 
-Gracias a todas esas características y para mejorar la detección de baches en tiempo real y solventar las limitaciones de la \textit{Raspberry Pi}, se ha decidido incluir este componente en el proyecto. Su precio es elevado pero se puede conseguir desde 65€.
+Gracias a todas esas características y para mejorar la detección de baches en tiempo real y solventar las limitaciones de la Raspberry Pi, se ha decidido incluir este componente en el proyecto. Su precio es elevado pero se puede conseguir desde 65€.
  
 \begin{figure} [h!]
 	\begin{center}
@@ -135,7 +135,7 @@ Gracias a todas esas características y para mejorar la detección de baches en 
 
 \subsection{Power Bank}
 
-Para poder alimentar a todos los componentes se ha decidido incluir en el proyecto una \textit{power bank} de bastante capacidad para que permita la autonomía del robot durante mucho tiempo. Para ello se ha elegido la \textit{Xiaomi Redmi Power Bank} de 20000 mAh cuyas dimensiones son: 73,6 x 27,3 x 154 mm. Cuando la adquirí costaba en torno a unos 20€ pero ahora se puede encontrar hasta por el doble de precio. 
+Para poder alimentar a todos los componentes se ha decidido incluir en el proyecto una \textit{power bank} de bastante capacidad para que permita la autonomía del robot durante mucho tiempo. Para ello se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh cuyas dimensiones son: 73,6 x 27,3 x 154 mm. Cuando la adquirí costaba en torno a unos 20€ pero ahora se puede encontrar hasta por el doble de precio. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -165,7 +165,7 @@ Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo 
 
 \subsection{Ordenador principal}
 
-Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la \textit{Raspberry Pi} y poder comandar acciones al robot; ha sido necesario tener un ordenador principal que permita realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
+Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la Raspberry Pi y poder comandar acciones al robot; ha sido necesario tener un ordenador principal que permita realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
 
 
 \begin{figure} [h!]
@@ -207,11 +207,17 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 
 \section{Software}
 
-\subsection{Freecad}
+En este apartado se van a describir el conjunto de programas y librerías que han sido necesarios usar cumplir con los objetivos del Capítulo 3.
+
+\subsection{FreeCAD}
+
+Esta herramienta de código abierto (Figura \ref{fig:freecad}) es un \textit{software} de diseño asistido por computadora utilizado principalmente para la creación de modelos 3D en diferentes áreas como la ingeniería, arquitectura, y diseño de productos. Está diseñado para ser altamente modular formado por \textit{workbenches}, lo que permite a los usuarios adaptar y extender su funcionalidad según sus necesidades.
+
+FreeCAD se basa en el concepto de modelado paramétrico, lo que permite modificar el diseño fácilmente. Los usuarios pueden retroceder en la historia de un modelo y cambiar parámetros que actualizan automáticamente el diseño. También FreeCAD es multiplataforma, cuenta con una consola de Python integrada y soporta una amplia gama de formatos de archivo como STL y SVG entre otros. Esta ha sido la herramienta elegida para hacer el diseño 3D de la pieza y la generación del formato STL para su posterior impresión. 
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=4cm]{figs/freecad.png}
+		\includegraphics[width=3cm]{figs/freecad.png}
 	\end{center}
 	\caption{Logo de Freecad $^{\ref{note:enlace43}}$} 
 	\label{fig:freecad}
@@ -221,6 +227,12 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 \footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace43}}
 
 \subsection{Python}
+
+Python (Figura \ref{fig:python}) es un lenguaje de programación de alto nivel, interpretado y de propósito general, ampliamente reconocido por su simplicidad y legibilidad. Fue creado por Guido van Rossum y lanzado por primera vez en 1991, y ha crecido rápidamente en popularidad debido a su versatilidad y facilidad de uso tanto para principiantes como para programadores experimentados lo que le convierte en un lenguaje multiplataforma y multiparadigma.
+
+Python es un lenguaje interpretado, lo que significa que el código se ejecuta línea por línea sin necesidad de ser compilado. Esto facilita el desarrollo rápido y la depuración. Tiene una sintaxis sencilla, legible y es ampliamente utilizado en áreas como: desarrollo web (Django y Flask), ciencia de datos y aprendizaje automático (NumPy, Pandas, TensorFlow, y PyTorch), automatización y scripting, entre otros.
+
+Debido a esa simplicidad y versatilidad en Raspberry Pi, se considera Python como uno de los lenguajes de programación oficiales recomendados y es por ello que se ha decidido usar este lenguaje para este proyecto.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -233,11 +245,29 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 \setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace44}}
 
+\subsubsection{Software matemático}
+
+NumPy (Numerical Python) es una biblioteca fundamental para el cálculo numérico en Python. Está diseñada para facilitar el manejo eficiente de vectores, grandes matrices y arrays multidimensionales, junto con una amplia colección de funciones matemáticas para realizar operaciones sobre estos arrays. Es tal su poder que se ha dedidido usar en este proyecto para poder calcular el área del bache.
+
+\subsubsection{Software localización}
+
+PyNMEA2 es una biblioteca de Python que se utiliza para analizar y generar mensajes en formato NMEA (National Marine Electronics Association), un estándar utilizado en dispositivos GPS y otros sistemas de navegación marina. Es especialmente útil cuando trabajas con módulos GPS en proyectos de Raspberry Pi u otros dispositivos embebidos, ya que te permite interpretar la información que estos dispositivos envían, como la localización, velocidad y tiempo.
+
+PyNMEA2 te permite interpretar las sentencias NMEA, que son los datos en bruto que los módulos GPS envían, usualmente en forma de texto. Algunas sentencias comunes son:
+
+\$GPGGA: proporciona datos como la latitud, longitud, y altitud.\\
+\$GPRMC: contiene información esencial de ubicación, velocidad y tiempo.\\
+\$GPGLL: latitud y longitud.
+
+Es este proyecto, se van a emplear las sentencias de \$GPGGA para estimar la ubicación de cada bache.
+
 \subsection{OpenCV}
+
+OpenCV (Figura \ref{fig:opencv}) es una biblioteca de software de código abierto diseñada para la visión artificial y el procesamiento de imágenes. Fue desarrollada inicialmente por Intel en 1999 y ahora es mantenida por una gran comunidad de desarrolladores. OpenCV es ampliamente utilizada en aplicaciones que requieren análisis de imágenes, detección de objetos, reconocimiento de rostros, visión computacional, y mucho más. Gracias a su gran aplicación se ha decidido integrar en el TFG para la detección del bache y el cálculo del área.
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=4cm]{figs/opencv.png}
+		\includegraphics[width=3cm]{figs/opencv.png}
 	\end{center}
 	\caption{Logo de OpenCV $^{\ref{note:enlace45}}$} 
 	\label{fig:opencv}
@@ -246,14 +276,10 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 \setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace45}}
 
-\subsection{Software matemático}
-
-numpy
-
-\subsection{Software localización}
-pynmea
 
 \subsection{Ubuntu}
+
+Ubuntu (Figura \ref{fig:ubuntu}) es una distribución GNU/Linux basada en Debian GNU/Linux, que incluye principalmente software libre y de código abierto y es mantenida por Canonical Ltd. Puede utilizarse en ordenadores y servidores. Está orientado al usuario promedio, con un fuerte enfoque en la facilidad de uso y en mejorar la experiencia del usuario. Debido a ser software libre es uno de los sistemas operativos más populares y es conocido por su facilidad de uso, estabilidad, amplia comunidad de soporte y por sus actualizaciones periódicas.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -266,201 +292,190 @@ pynmea
 \setcounter{footnote}{46} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace46}}
 
-\subsubsection{Ubuntu 22.04}
+Entre todas las versiones existentes para la realización del proyecto se ha usado Ubuntu 22.04 y Ubuntu 20.04. El ordenador usado (descrito en el Apartado 4.1.9) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB descrito en el Apartado 4.1.6 es compatible con versiones de Python entre 3.6 y 3.9 siendo en Ubuntu 22.04 la instalación de Python por defecto de 3.10 y el intento de cambiar dicha versión generó numerosos problemas de dependencias sobre todo con la versión de ROS2 usada. En muchos foros tampoco aconsejaban modificar las versiones de Python que vienen instaladas por defecto\footnote{\url{https://github.com/google-coral/pycoral/issues/81}} y que la Rasberry únicamente tuviese esta aplicación se recomienda migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/can-an-ros2-node-run-in-a-venv-and-use-a-different-python-than-that-used-by-the}} que usa Python 3.8. A continuación, se va a mostrar un Cuadro \ref{cuadro:ubuntu} con algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
 
-\subsubsection{Ubuntu 20.04}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Características} & \textbf{Ubuntu 20.04} & \textbf{Ubuntu 22.04} \\
+			\hline
+			 Fecha de lanzamiento & Abril 2020 & Abril 2022\\
+			 Soporte & Hasta Abril 2025 & Hasta Abril 2027\\
+			 Kernel & Linux 5.4 & Linux 5.15 \\
+			 Entorno de escritorio & GNOME 3.36 & GNOME 42\\
+			 Python & Python 3.8 & Python 3.10\\
+			 Soporte gráfico NVIDIA & Soporte estándar & Soporte mejorado con Wayland\\
+			\hline
+		\end{tabular}
+		\caption{Diferencias entre Ubuntu 20.04 y Ubuntu 22.04}
+		\label{cuadro:ubuntu}
+	\end{center}
+\end{table}
 
 
-\subsection{ROS2}
+\subsection{ROS 2}
 
+Por sus siglas en inglés, \ac{ROS} se trata de un \textit{middleware} para programar robots. Un \textit{middleware} es una capa de software entre el sistema operativo y las aplicaciones de usuario que permiten llevar a cabo aplicaciones \textit{software} independiente del dominio que ese encuentre. Es decir, \acs{ROS} aporta un conjunto de herramientas, bibliotecas y convenciones. También, ofrecen desarrollo, integración, ejecución y herramienta de monitorización. El número 2 indica que es la segunda generación de este middleware. 
 
-\subsubsection{ROS2 Humble}
+\acs{ROS} 2 tiene tres diferentes dimensiones: la comunidad de \acs{ROS} 2 que contribuye al desarrollo de aplicaciones es enorme, el grafo de computación de una aplicación en \acs{ROS} 2 está formado por nodos conectados con distintos paradigmas de comunicación y el espacio de trabajo, también conocido como \textit{workspace}, es aquel que se trata del \textit{software} instalado que se divide a su vez en \textit{underlay} (la instalación básica de \acs{ROS} 2) y \textit{overlay} (son el resto de programas que se desarrollan).
 
-\subsubsection{ROS2 Foxy}
+Según se ha explicado en el Apartado 4.2.4, debido a que he necesitado para este proyecto usar Ubuntu 20.04 y Ubuntu 22.04; he tenido que usar las dos distribuciones más estable de \acs{ROS} para cada versión de Ubuntu: \acs{ROS} 2 Foxy y \acs{ROS} 2 Humble respectivamente (Figura \ref{fig:rosdis}).
 
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.4\linewidth}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/foxy.png}
-		\caption*{\centering Ros2 Foxy $^{\ref{note:enlace47}}$} %\cite{memnon_image}
+		\caption*{\centering Ros2 Foxy $^{\ref{note:enlace49}}$} %\cite{memnon_image}
 	\end{minipage}
 	\hspace{2cm}
 	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/humble.png}
-		\caption*{\centering Logo Ros2 Humble $^{\ref{note:enlace48}}$} %\cite{gomezguerreros}
+		\caption*{\centering Logo Ros2 Humble $^{\ref{note:enlace50}}$} %\cite{gomezguerreros}
 	\end{minipage}
-	\caption{Distribuciones de ROS2 usadas}
+	\caption{Distribuciones de \acs{ROS} 2 usadas}
 	\label{fig:rosdis}
 \end{figure}
 
 
 % Definir la primera nota al pie con el número 1
-\setcounter{footnote}{47} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/foxy/Installation.html}\label{note:enlace47}}
+\setcounter{footnote}{49} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/foxy/Installation.html}\label{note:enlace49}}
 
-\setcounter{footnote}{48} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/humble/index.html}\label{note:enlace48}}
+\setcounter{footnote}{50} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/humble/index.html}\label{note:enlace50}}
 
 
-(condensar en herramientas de simulación?? añadir xml?? sdf...)
-\subsection{Ros2 Control}
+\subsubsection{ROS 2 Control}
+\acs{ROS} 2 Control\footnote{\url{https://control.ros.org/rolling/doc/getting_started/getting_started.html}} es un framework dentro de \acs{ROS} 2 diseñado para facilitar el control de robots en tiempo real. Proporciona una infraestructura modular y escalable para manejar controladores que gestionan los actuadores (motores, servomotores, etc.) de un robot, así como la lectura de sensores. Se utiliza comúnmente en robots móviles, brazos robóticos, drones y otras plataformas robóticas.
+
+Los componentes principales de \acs{ROS} 2 Control son:
+
+\begin{itemize}
+	\item\textit{Controller Manager}. Gestiona controladores e interfaces de hardware en el framework \acs{ROS} 2 Control.
+	\item \textit{Resource Manager}. Abstrae y gestiona el hardware, permitiendo la reutilización flexible de componentes.
+	\item \textit{Controllers}. Utilizan la teoría de control para interactuar con el hardware.
+	\item \textit{User interface}. Pueden interactuar con el sistema mediante servicios y una interfaz de línea de comandos.
+	\item \textit{Hardware Components}. Realizan comunicación con hardware físico como puede ser: sistemas, sensores y actuadores.
+\end{itemize}\
+
+En este proyecto se ha decidido usar \acs{ROS} 2 Control para crear un modelo del robot en simulación y poder trabajar con él usando la filosofía de \acs{ROS} 2 Control.
+
 
 \subsection{Gazebo}
 
+Gazebo (Figura \ref{fig:gazebo}) es un simulador de robots que permite modelar entornos físicos tridimensionales y probar robots en ellos sin necesidad de tener el robot en físico y evitar así posibles caídas o golpes. Es ampliamente utilizado en la investigación y desarrollo de robótica, especialmente en combinación con \acs{ROS} y \acs{ROS} 2. Además, ofrece una simulación realista en un entorno 3D y por ello se decidió usar este simulador para el proyecto.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/gazebo.png}
 	\end{center}
-	\caption{Logo de Gazebo $^{\ref{note:enlace49}}$} 
+	\caption{Logo de Gazebo $^{\ref{note:enlace52}}$} 
 	\label{fig:gazebo}
 \end{figure}\
 
-\setcounter{footnote}{49} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace49}}
+\setcounter{footnote}{52} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace52}}
 
-\subsection{Herramientas de visualización}
+\subsection{Herramientas de monitorización}
 
-rqtimage view
+\subsubsection{Rviz}
 
-Rviz
-ros2 topic echo...
+RViz (Figura \ref{fig:rviz}) es una herramienta de visualización en 3D utilizada en \acs{ROS} y \acs{ROS} 2 para representar información del sistema robótico. Permite a los usuarios ver datos en tiempo real como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorear el comportamiento del robot en simulación.\\
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/rviz.png}
 	\end{center}
-	\caption{Logo de Rviz $^{\ref{note:enlace50}}$} 
+	\caption{Logo de Rviz $^{\ref{note:enlace53}}$} 
 	\label{fig:rviz}
 \end{figure}\
 
-\setcounter{footnote}{50} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace50}}
+\setcounter{footnote}{53} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace53}}
 
-\subsection{Google Colab/Jupyter Notebook}
+\subsubsection{RQT Image View}
+
+RQt Image View \footnote{\url{http://wiki.ros.org/rqt_image_view}} es una herramienta gráfica dentro del ecosistema de \acs{ROS} y \acs{ROS} 2 que permite visualizar imágenes en tiempo real de un flujo de datos de imágenes publicado por una cámara en un sistema robótico. Se ha usado esta herramienta para monitorizar la cámara del robot físico.
+
+\subsubsection{Ros2cli}
+
+\acs{ROS} 2 \ac{CLI}\footnote{\url{https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools.html}} es una herramienta que permite interactuar con el sistema ROS 2 mediante comandos desde la terminal. Ofrece una forma rápida y sencilla de acceder a las funciones y características de \acs{ROS} 2 sin necesidad de escribir o ejecutar código complejo. Ha sido la herramienta principal en este proyecto para ejecutar los distintos nodos, comprobar si estaban bien lanzados, si se producía buena comunicación entre ellos, entre otras aplicaciones.
+
+
+\subsection{Google Colaboratory}
+
+Google Colaboratory (Figura \ref{fig:googlecolab}) un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta se puede cumplir del apartado 3.2 de Requisitos, el número 4.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecolab.png}
 	\end{center}
-	\caption{Logo de Google Colab $^{\ref{note:enlace51}}$} 
+	\caption{Logo de Google Colab $^{\ref{note:enlace56}}$} 
 	\label{fig:googlecolab}
 \end{figure}\
 
-\setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace51}}
+\setcounter{footnote}{56} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace56}}
 
 \subsection{YOLOv8}
 
+\acs{YOLO}v8 (Figura \ref{fig:yolov8}) desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas incluidos como EdgeTPU para dispositivos con recursos limitados como puede ser Raspberry Pi. Debido a todo lo anterior, esta herramienta ha sido elegida para la el entrenamiento del modelo de detección de baches. 
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/yolov8.png}
 	\end{center}
-	\caption{Logo de YOLOv8 $^{\ref{note:enlace52}}$} 
+	\caption{Logo de YOLOv8 $^{\ref{note:enlace57}}$} 
 	\label{fig:yolov8}
 \end{figure}\
 
-\setcounter{footnote}{52} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace52}}
+\setcounter{footnote}{57} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace57}}
 
 
-\subsection{TensorFlow Lite Edge TPU}
+\subsection{TensorFlow Lite}
+
+TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Para poder ejecutar modelos en dispositivos una Raspberry se usa TensorFlow Lite (Figura \ref{fig:tflite}) ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=6cm]{figs/tflite.png}
 	\end{center}
-	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace53}}$} 
+	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace58}}$} 
 	\label{fig:tflite}
 \end{figure}\
 
-\setcounter{footnote}{53} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace53}}
+\setcounter{footnote}{58} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace58}}
 
 
 \subsection{Interfaz Web}
 
-\subsubsection{ROS2 bridge suite}
+Para poder hacer más amigable la interacción humano-robot, se ha decidido plasmar los datos obtenidos a través de una interfaz web y para ello se ha decidido usar las siguientes herramientas: 
+ 
+\subsubsection{ROS2bridge Server}
 
-\subsubsection{Open Street Maps}
+ROS2bridge Server\footnote{\url{http://wiki.ros.org/rosbridge_server}} es parte de ros2bridge\_suite y ofrece una capa de transporte WebSocket para la comunicación bidireccional entre páginas web y \acs{ROS} 2. Convierte mensajes JSON en llamadas a \acs{ROS} 2 y viceversa, permitiendo que las páginas web interactúen con \acs{ROS} 2. 
+
+\subsubsection{OpenStreetMaps}
+
+OpenStreetMaps (Figura \ref{fig:osm}) un proyecto internacional colaborativo desde 2004 que proporciona datos geográficos gratuitos y abiertos, permitiendo la creación de mapas detallados y editables de cualquier parte del mundo por usuarios voluntarios que den crédito a OpenStreetMaps. OpenStreetMaps es utilizado en una amplia gama de aplicaciones, incluyendo navegación, análisis de datos geográficos, y proyectos de código abierto relacionados con mapas y geolocalización.
 
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/osm.png}
 	\end{center}
-	\caption{Logo de Open Street Maps $^{\ref{note:enlace54}}$} 
+	\caption{Logo de Open Street Maps $^{\ref{note:enlace60}}$} 
 	\label{fig:osm}
 \end{figure}\
 
-\setcounter{footnote}{54} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace54}}
+\setcounter{footnote}{60} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace60}}
 
-
-Mirar si hay que añadir alguna otra subsubsección
-El presente proyecto trata ....\\
-
-
-Después de aquí pasar al aparatado del estado del arte \\\\
-
-En los textos puedes poner palabras en \textit{cursiva}, para aquellas expresiones en sentido \textit{figurado}, palabras como \textit{robota}, que está fuera del diccionario castellano, o bien para resaltar palabras de una colección: \textit{(a)} es la primera letra del abecedario, \textit{(b)} es la segunda, etc.\\
-
-Al poner las dos líneas del anterior párrafo, este aparecerá separado del anterior. Si no las pongo, los párrafos aparecerán pegados. Sigue el criterio que consideres más oportuno.
-
-\section{Segunda sección}
-\label{sec:segundaseccion}
-
-No olvides incluir imágenes y referenciarlas, como la Figura \ref{fig:roomba}.
-
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=8cm]{figs/roomba}
-	\end{center}
-	\caption{Robot aspirador Roomba de iRobot.}
-	\label{fig:roomba}
-\end{figure}\
-
-Ni tampoco olvides de poner las URLs como notas al pie. Por ejemplo, si hablo de la Robocup\footnote{\url{http://www.robocup.org}}.
-
-\subsection{Números}
-\label{sec:subseccion}
-
-En lugar de tener secciones interminables, como la Sección \ref{sec:robotica}, divídelas en subsecciones.
-
-Para hablar de números, mételos en el entorno \textit{math} de \LaTeX, por ejemplo, $1.5Kg$. También puedes usar el símbolo del Euro como aquí: 1.500\euro.
-
-\subsection{Listas}
-
-Cuando describas una colección, usa \texttt{itemize} para ítems o \texttt{enumerate} para enumerados. Por ejemplo:
-
-\begin{itemize}
-	\item \textit{Entorno de simulación.} Hemos usado dos entornos de simulación: uno en 3D y otro en 2D.
-	\item \textit{Entornos reales.} Dentro del campus, hemos realizado experimentos en Biblioteca y en el edificio de Gestión.
-\end{itemize}\
-
-\begin{enumerate}
-	\item Primer elemento de la colección.
-	\item Segundo elemento de la colección.
-\end{enumerate}\
-
-\paragraph{Referencias bibliográficas}
-\label{sec:referencias}
-
-Cita, sobre todo en este capítulo, referencias bibliográficas que respalden tu argumento. Para citarlas basta con poner la instrucción \verb|\cite| con el identificador de la cita. Por ejemplo: libros como \cite{vega12e}, artículos como \cite{vega19b}, URLs como \cite{vega19a}, tesis como \cite{vega18b}, congresos como \cite{vega18a}, u otros trabajos fin de grado como \cite{vega08b}.
-
-Las referencias, con todo su contenido, están recogidas en el fichero \texttt{bibliografia.bib}. El contenido de estas referencias está en formato \texttt{BibTex}. Este formato se puede obtener en muchas ocasiones directamente, desde plataformas como \texttt{Google Scholar} u otros repositorios de recursos científicos.
-
-Existen numerosos estilos para reflejar una referencia bibliográfica. El estilo establecido por defecto en este documento es APA, que es uno de los estilos más comunes, pero lo puedes modificar en el archivo \texttt{memoria.tex}; concretamente, cambiando el campo \verb|apalike| a otro en la instrucción \verb|\bibliographystyle{apalike}|. 
-
-\
-
-\
-
-\
-
-Y, para terminar este capítulo, resume brevemente qué vas a contar en los siguientes.
+Tras conocer todas las plataformas de desarrollo para realizar el presente trabajo fin de grado, es el momento de contar el desarrollo completo llevado a cabo para la construcción hardware del robot que se explicará detalladamente en el siguiente capítulo.

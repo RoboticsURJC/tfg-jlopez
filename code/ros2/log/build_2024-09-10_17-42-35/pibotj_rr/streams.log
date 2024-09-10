@@ -1,0 +1,25 @@
+[1.590s] Invoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_rr': PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pibotj_rr build --build-base /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/build install --record /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/install.log --single-version-externally-managed install_data
+[2.120s] running egg_info
+[2.122s] writing ../../build/pibotj_rr/pibotj_rr.egg-info/PKG-INFO
+[2.122s] writing dependency_links to ../../build/pibotj_rr/pibotj_rr.egg-info/dependency_links.txt
+[2.123s] writing entry points to ../../build/pibotj_rr/pibotj_rr.egg-info/entry_points.txt
+[2.123s] writing requirements to ../../build/pibotj_rr/pibotj_rr.egg-info/requires.txt
+[2.124s] writing top-level names to ../../build/pibotj_rr/pibotj_rr.egg-info/top_level.txt
+[2.129s] reading manifest file '../../build/pibotj_rr/pibotj_rr.egg-info/SOURCES.txt'
+[2.131s] writing manifest file '../../build/pibotj_rr/pibotj_rr.egg-info/SOURCES.txt'
+[2.131s] running build
+[2.132s] running build_py
+[2.133s] running install
+[2.134s] running install_lib
+[2.138s] running install_data
+[2.139s] running install_egg_info
+[2.142s] removing '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/python3.10/site-packages/pibotj_rr-0.0.0-py3.10.egg-info' (and everything under it)
+[2.143s] Copying ../../build/pibotj_rr/pibotj_rr.egg-info to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/python3.10/site-packages/pibotj_rr-0.0.0-py3.10.egg-info
+[2.145s] running install_scripts
+[2.187s] Installing camera_node script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/pibotj_rr
+[2.187s] Installing camera_tfv1_node script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/pibotj_rr
+[2.188s] Installing camera_tfv2_node script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/pibotj_rr
+[2.188s] Installing gps_node script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/pibotj_rr
+[2.188s] Installing motors_controller_node script to /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/pibotj_rr
+[2.188s] writing list of installed files to '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/install.log'
+[2.228s] Invoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_rr' returned '0': PYTHONPATH=/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pibotj_rr build --build-base /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/build install --record /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_rr/install.log --single-version-externally-managed install_data
