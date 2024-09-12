@@ -4,11 +4,7 @@ from sensor_msgs.msg import Image
 from rclpy.node import Node
 from cv_bridge import CvBridge
 import numpy as np
-#import tensorflow as tf
-# EL BUENO ES ESTE
 import tflite_runtime.interpreter as tflite
-
-#import tflite_runtime.interpreter as interpreter
 from std_msgs.msg import String
 import signal
 import sys
@@ -62,7 +58,9 @@ class CameraTFv2Node(Node):
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
         print("set input and output details")
-        #print(self.input_details)
+        print(self.input_details)
+        print(self.output_details)
+
 
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
@@ -107,8 +105,9 @@ class CameraTFv2Node(Node):
 
         # Suponiendo que el segundo canal es la máscara de baches
         if prediction1.shape[-1] > 1:
-             # Extrae la máscara para la clase 'pothole' lo he sacado del .yaml
-            pothole_mask = prediction1[:, :, 1]
+             # Extrae la máscara para la clase 'pothole' lo he sacado del .yaml: 0 es la clase que buscamos
+            pothole_mask = prediction1[:, :, 0]
+            #print("Before quantification", np.max(pothole_mask))
         else:
             self.get_logger().error('Unexpected number of channels in prediction output')
             return
@@ -116,10 +115,11 @@ class CameraTFv2Node(Node):
         # Descuantificar la máscara para su uso
         scale, zero_point = self.output_details[1]['quantization']
         pothole_mask = (pothole_mask.astype(np.float32) - zero_point) * scale
-    
+
+        
         # Determinar si se ha detectado un bache
         max_value = np.max(pothole_mask)
-        print("Max value", max_value)
+        print("Max value after ", max_value)
 
         # Predicción del filtro de Kalman
         x_k_pred, P_k_pred = self.kalman_predict()

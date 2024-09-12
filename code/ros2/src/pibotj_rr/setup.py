@@ -32,7 +32,10 @@ setup(
             'camera_tfv1_node = pibotj_rr.camera_tfv1_node:main',
 
             # nodo que publica cámara + tflite + Coral           
-            'camera_tfv2_node = pibotj_rr.camera_tfv2_node:main'
+            'camera_tfv2_node = pibotj_rr.camera_tfv2_node:main',
+
+            # nodo que publica cámara + modelo pin Hole           
+            'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main'
             
         ],
     },
