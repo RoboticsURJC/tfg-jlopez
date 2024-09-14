@@ -3,16 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPS Tracking</title>
+    <title>GPS Tracking & Control</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/roslib@1.0.0/build/roslib.min.js"></script>
     <style>
-        #map { height: 500px; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        #map-container, #controls-container {
+            margin-bottom: 20px;
+        }
+        #map { 
+            height: 500px; 
+            margin-bottom: 20px; 
+        }
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .arrow-controls {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+        button:active {
+            background-color: #aaa;
+        }
     </style>
 </head>
 <body>
-    <div id="map"></div>
+
+    <!-- Título para el mapa -->
+    <div id="map-container">
+        <h2>Mapa de Seguimiento GPS</h2>
+        <div id="map"></div>
+    </div>
+
+    <!-- Título para el mando controlador -->
+    <!--div id="controls-container">
+        <h2>Mando Controlador</h2>
+        <div id="controls">
+            <button onclick="sendCommand('forward')">⬆️</button>
+            <div class="arrow-controls">
+                <button onclick="sendCommand('left')">⬅️</button>
+                <button onclick="sendCommand('right')">➡️</button>
+            </div>
+            <button onclick="sendCommand('backward')">⬇️</button>
+        </div>
+    </div-->
+
+    <div id="controls-container">
+        <h2>Mando Controlador</h2>
+        <div id="controls">
+            <button id="forward-btn" onmousedown="startMovement('forward')" onmouseup="stopMovement()">⬆️</button>
+            <div class="arrow-controls">
+                <button id="left-btn" onmousedown="startMovement('left')" onmouseup="stopMovement()">⬅️</button>
+                <button id="right-btn" onmousedown="startMovement('right')" onmouseup="stopMovement()">➡️</button>
+            </div>
+            <button id="backward-btn" onmousedown="startMovement('backward')" onmouseup="stopMovement()">⬇️</button>
+        </div>
+    </div>
+
     <script>
         // Crear y configurar el mapa
         const map = L.map('map').setView([0, 0], 13);
@@ -47,17 +115,24 @@
             const lat = parseFloat(data[0].split(':')[1].trim());
             const lon = parseFloat(data[1].split(':')[1].trim());
 
-            // Añadir la nueva posición al array de posiciones
-            if (positions.length >= 100) {
-                const oldMarker = markers.shift(); // Eliminar el marcador más antiguo
-                map.removeLayer(oldMarker); // Eliminar el marcador del mapa
-                positions.shift(); // Eliminar la posición más antigua
+            // Si hay más de 50 marcadores, se elimina el antiguo
+            if (positions.length >= 50) {
+                // Eliminar el marcador más antiguo
+                const oldMarker = markers.shift();
+                // Eliminar el marcador del mapa
+                map.removeLayer(oldMarker); 
+                // Eliminar la posición más antigua
+                positions.shift();
             }
             positions.push([lat, lon]);
 
             // Crear un nuevo marcador y añadirlo al mapa
             const newMarker = L.marker([lat, lon]).addTo(map);
             markers.push(newMarker);
+
+            // Añadir popup al marcador con las coordenadas
+            // EN EL FUTURO CAMBIARLO POR EL ÁREA DETECTADO
+            newMarker.bindPopup(`Latitud: ${lat}, Longitud: ${lon}`).openPopup();
 
             // Opcional: ajustar la vista del mapa para mostrar todos los marcadores
             if (markers.length > 0) {
@@ -66,6 +141,51 @@
                 map.fitBounds(bounds);
             }
         });
+
+
+        const commandTopic = new ROSLIB.Topic({
+            ros: ros,
+            name: '/move_controller',
+            messageType: 'std_msgs/String'
+        });
+
+
+        // Variables para gestionar el intervalo de comandos
+        let commandInterval;
+
+        // Función para empezar a enviar comandos periódicos
+        function startMovement(direction) {
+            sendCommand(direction);
+            // Seguir enviando comandos cada 100ms
+            commandInterval = setInterval(() => {
+                sendCommand(direction);  
+            }, 100); 
+        }
+
+        // Función para detener el envío de comandos
+        function stopMovement() {
+            // Detener el envío periódico
+            clearInterval(commandInterval); 
+            sendCommand("stop");  
+
+        }
+
+        // Función para enviar comandos de control
+        function sendCommand(direction) {
+            const command = new ROSLIB.Message({
+                data: direction
+            });
+
+            // Crear el tópico para enviar el comando de movimiento
+            //const commandTopic = new ROSLIB.Topic({
+            //    ros: ros,
+            //    name: '/move_command',
+            //    messageType: 'std_msgs/String'
+            //});
+
+            commandTopic.publish(command);
+            console.log("Sent command:", direction);
+        }
     </script>
 </body>
 </html>

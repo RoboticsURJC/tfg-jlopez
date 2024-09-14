@@ -35,7 +35,10 @@ setup(
             'camera_tfv2_node = pibotj_rr.camera_tfv2_node:main',
 
             # nodo que publica cámara + modelo pin Hole           
-            'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main'
+            'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main',
+
+            # nodo controlador para controlar los motores por la interfaz web
+            'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main',
             
         ],
     },
