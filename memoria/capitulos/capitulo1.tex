@@ -12,16 +12,16 @@ Jim Ryun\\
 
 \vspace{1cm}
 
-La robótica ha sufrido una transformación enorme a lo largo de su historia aunque siempre teniendo en mente el mismo objetivo: cumplir con el deseo humano. Debido a esa transformación y ese deseo, se ha podido consolidar este campo en la actualidad que abarca cada sector que se pueda imaginar. Otra vertiente que ha destacado en la robótica estos últimos años ha sido la creación de robots de bajo coste para que puedan llegar a un mayor número de personas y se puedan beneficiar de esta ciencia. 
+La robótica ha sufrido una transformación enorme a lo largo de su historia, aunque siempre teniendo en mente el mismo objetivo: cumplir con el deseo humano. Debido a esa transformación y ese deseo se ha podido consolidar este campo en la actualidad, que abarca cada sector que se pueda imaginar. Otra vertiente que ha destacado en la robótica estos últimos años ha sido la creación de robots de bajo coste para que puedan llegar a un mayor número de personas y se puedan beneficiar de esta ciencia. 
 
 En el presente capítulo se va a abordar el contexto de la robótica, explicando brevemente su historia para poder entender realmente qué es la robótica y lo que es un robot. También se van a encuadrar los tipos de robots que existen y sus múltiples aplicaciones. Todo esto nos ayudará a poder entender mejor dónde se encuadra el presente trabajo, proporcionando los conocimientos necesarios, tanto teóricos como prácticos, que se describirán a lo largo del documento.
 
 \section{La robótica}
 \label{sec:robotica} % etiqueta para luego referenciar esta sección
 
-La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots para tareas específicas. Por ende, un robot se podría definir como un sistema informático formado por sensores y actuadores imprecisos, ya que tienen ruido. Los robots realizan tareas sucias, aburridas y peligrosas y tienen que ser sensibles al entorno. Sin embargo, no existe una definición unívoca al respecto y depende del campo y de la época de la que queramos hablar. Para poder entenderlo, se va a hacer un breve resumen sobre la historia de la robótica.\\
+La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots. Y un robot se podría definir como un sistema informático formado por sensores y actuadores imprecisos, ya que tienen ruido. Los robots realizan tareas repetitivas, aburridas y peligrosas, y tienen que ser sensibles al entorno. Sin embargo, no existe una definición unívoca al respecto y depende del campo y de la época de la que queramos hablar. Para poder entenderlo, se va a hacer un breve resumen sobre la historia de la robótica.\\
 
-Desde la antigüedad se han desarrollado ingenios o autómatas de los cuáles muchos de ellos tenían fines religiosos  muestra la Figura \ref{fig:ancientrel}.   \\
+Desde la antigüedad se han desarrollado ingenios o autómatas, de los cuáles muchos de ellos tenían fines religiosos, como los mostrados en la Figura \ref{fig:ancientrel}.   \\
 
 
 \begin{figure}[ht!]
@@ -87,7 +87,7 @@ En \cite{cuenca2023diseno} se trata el principio de generación hidroeléctrica,
     \label{fig:ancient}
     \end{figure}
 
-Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislamiento y se desarrolló en laboratorios con más gente. El movimiento del positivismo lógico fomentó las investigaciones ya que este movimiento trataba de dar importancia a la ciencia y dejar de lado la filosofía; también, el contexto de las guerras mundiales y de las bombas nucleares influyeron significativamente en este aspecto. Ya se empieza a acuñar la palabra robot y surge Electro y Sparko de Westinghouse Electric Corporation (Figura \ref{fig:EyS}), tratado en muchas ocasiones como uno de los primeros robots, como se describe en \cite{bidaudrobots}. Un descubrimiento muy destacado fue y sigue siendo hoy en día son Las Leyes de la Robótica de Isaac Asimov (Figura \ref{fig:Asimov}), así lo transmite \cite{barcelo2004nuevo}.\\
+Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislamiento y se desarrolló en laboratorios con más gente. El movimiento del positivismo lógico fomentó las investigaciones, ya que este movimiento trataba de dar importancia a la ciencia y dejar de lado la filosofía; también, el contexto de las guerras mundiales y de las bombas nucleares influyeron significativamente en este aspecto. Ya se empieza a acuñar la palabra robot y surge Electro y Sparko de Westinghouse Electric Corporation (Figura \ref{fig:EyS}), tratado en muchas ocasiones como uno de los primeros robots, como se describe en \cite{bidaudrobots}. Un descubrimiento muy destacado fue, y sigue siendo hoy en día, la Leyes de la Robótica de Isaac Asimov (Figura \ref{fig:Asimov}), así lo transmite \cite{barcelo2004nuevo}.\\
 
 
 \begin{figure} [h!]
@@ -109,7 +109,7 @@ Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislam
 
 %\ac{} expande las siglas
 %\acs{} no expande las siglas
-\cite{nilsson1984shakey} nos cuenta que en 1969 se construye por el \ac{SRI} Internacional un prototipo experimental llamado Shakey que era una unidad independiente de 1.5 metros, equipado con 2 motores, cámara de televisión y una radio conectada a un ordenador, capaz de navegar en entornos cerrados y estructurados de una forma autónoma. Sus objetivos eran aprender del medio y ser capaz de planificar trayectorias de movimiento y las tareas que le asignaron fueron mover y detectar bloques. Sin embargo, cada movimiento podría tardar más de una hora en computarse y aún así, podrían producirse fallos. A Shakey se le conoce como el primer robot móvil (Figura \ref{fig:shakey}). \\
+\cite{nilsson1984shakey} nos cuenta que en 1969 se construye por el \ac{SRI} Internacional un prototipo experimental llamado Shakey, que era una unidad independiente de un metro y medio, equipado con dos motores, cámara de televisión y una radio conectada a un ordenador, capaz de navegar en entornos cerrados y estructurados de una forma autónoma. Sus objetivos eran aprender del medio y ser capaz de planificar trayectorias de movimiento, y las tareas que le asignaron fueron mover y detectar bloques. Sin embargo, cada movimiento podría tardar más de una hora en computarse y, aún así, podrían producirse fallos. A Shakey se le conoce como el primer robot móvil (Figura \ref{fig:shakey}). \\
 
 \begin{figure} [h!]
 	\begin{center}
@@ -120,7 +120,7 @@ Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislam
 \end{figure}\
 
 
-Otro robot muy conocido  y descrito en \cite{earnest2012stanfordcart} es la carreta de Stanford que era capaz de ver y moverse en cualquier ambiente. Con la cámara que disponía, era capaz de calcular y trazar distancias. Sin embargo, tardaba 5 horas en recorrer 30 metros (Figura \ref{fig:stanford}). 
+Otro robot muy conocido  y descrito en \cite{earnest2012stanfordcart} es la carreta de Stanford, que era capaz de ver y moverse en cualquier ambiente. Con la cámara que disponía, era capaz de calcular y trazar distancias. Sin embargo, tardaba cinco horas en recorrer treinta metros (Figura \ref{fig:stanford}). 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -131,12 +131,13 @@ Otro robot muy conocido  y descrito en \cite{earnest2012stanfordcart} es la carr
 \end{figure}\
 
 
-Ya a partir de la década de los 80, se decidió que el acceso a los robots fuese para todo el mundo. Lo que provocó asombro, inquietud y miedo ya que el desconocimiento de aquella situación generó rechazo; cosa que ocurre hoy en día. El mundo de la literatura y cine tampoco ayudaba en ese aspecto ya que se presentaba al robot como algo perjudicial para la humanidad. Afortunadamente, esta situación va menguando con el tiempo y se está consiguiendo ver a los robots como un asistente del ser humano que lo que quiere es mejorar su calidad de vida. Para conocer en qué ámbitos un robot puede ayudar al ser humano, es necesario conocer que se clasifican en robots industriales y de servicio.
+Ya a partir de la década de los 80 se decidió que el acceso a los robots fuese para todo el mundo, lo que provocó asombro, inquietud y miedo, ya que el desconocimiento suele generar rechazo. El mundo de la literatura y cine tampoco ayudaba en ese aspecto, ya que se presentaba al robot como algo perjudicial para la humanidad. Afortunadamente, esta situación va menguando con el tiempo, y se está consiguiendo ver a los robots como un asistente del ser humano que lo que quiere es mejorar su calidad de vida. Las dos grandes áreas de investigación centradas en tal propósito son la robótica industrial y la robótica de servicio, que veremos detalladamente a continuación.
+%Para conocer en qué ámbitos un robot puede ayudar al ser humano, es necesario conocer que se clasifican en robots industriales y de servicio.
 
 
 \subsection{Robots industriales}
 
-Los robots industriales son brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos como se describe en  \cite{ELZAATARI2019162}. Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA} o \acs{ABB} (Figura \ref{fig:robindustriales}).
+Los robots industriales son brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos como se describe en  \cite{ELZAATARI2019162}. Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA}\footnote{\url{https://www.kuka.com/es-es}} o \acs{ABB}\footnote{\url{https://new.abb.com/es}} (Figura \ref{fig:robindustriales}).
 
 
 
@@ -161,18 +162,18 @@ Los robots industriales son brazos robotizados y manipuladores que tienen más d
 
 
 
-\setcounter{footnote}{3} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{5} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.youtube.com/watch?v=BBrLAOr89KY}\label{note:enlace3}}
 
 
 \subsection{Robots de servicio}
 
-Los robots de servicios son todos aquellos que no son industriales; por lo tanto, tienen menos de 3 grados de libertad, no trabajan en un entorno controlado, son más difíciles de programar, toman aplicaciones heterogéneas y todavía se encuentran en un mercado inmaduro. Existen muchos tipos de robots de servicio, de los cuáles a continuación se podrán enumerar algunos campos con algunos de sus respectivos ejemplos.
+Los robots de servicios son todos aquellos que no son industriales; por lo tanto, tienen menos de 3 grados de libertad, no trabajan en un entorno controlado, son más difíciles de programar, toman aplicaciones heterogéneas y todavía se encuentran en un mercado inmaduro. Existen muchos tipos de robots de servicio, de los cuáles a continuación se enumeran algunos campos con algunos de sus respectivos ejemplos.
 
 
 \subsubsection{Robots de limpieza}
 
-En \cite{plaza_robotica_servicio} se define a los robots de limpieza como aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus características, pueden ser capaces de aspirar y fregar el suelo, o de limpiar los cristales de las ventanas. Estos últimos, son comunes en edificios que tienen grandes ventanales y un difícil acceso a ellos. Las aspiradoras se encuentran en un mercado mundial asentado cuyos inicios eran aspiradoras que usaban sensores de contacto, encoders y una navegación pseudoaleatoria (Figura \ref{fig:roblimpieza} izquierda); y han evolucionado hasta el punto de usar mapas para poder navegar y poder localizarse. También, usan algoritmos sofisticados como navegación de cobertura por barridos sistemáticos \acs{BSA} y se componen de sensores más sofisticados como láseres y cámaras que son capaces de detectar obstáculos como calcetines y ser capaz de esquivarlos (Figura \ref{fig:roblimpieza} derecha).\\
+En \cite{plaza_robotica_servicio} se define a los robots de limpieza como aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus características, pueden ser capaces de aspirar y fregar el suelo, o de limpiar los cristales de las ventanas. Estos últimos son comunes en edificios que tienen grandes ventanales y un difícil acceso a ellos. Las aspiradoras se encuentran en un mercado mundial asentado cuyos inicios eran aspiradoras que usaban sensores de contacto, encoders y una navegación pseudoaleatoria (Figura \ref{fig:roblimpieza} izquierda), y han evolucionado hasta el punto de usar mapas para poder navegar y poder localizarse. También usan algoritmos sofisticados, como navegación de cobertura por barridos sistemáticos \acs{BSA}, y se componen de sensores más sofisticados, como láseres y cámaras, que son capaces de detectar obstáculos, como calcetines, y ser capaz de esquivarlos (Figura \ref{fig:roblimpieza} derecha).\\
 
 
 \begin{figure}[ht!]
@@ -196,7 +197,7 @@ En \cite{plaza_robotica_servicio} se define a los robots de limpieza como aquell
 
 \subsubsection{Robots de entretenimiento}
 
-Son aquellos robots que tienen aplicaciones heterogéneas en un mercado educativo asentado pero también existen muchos prototipos sin un uso comercial claro. En la educación, se ha ido introduciendo la robótica de manera muy atractiva y didáctica a los estudiantes hasta el punto de conseguir tener una asignatura destinada a la robótica y poder participar en competiciones como: \ac{FLL}, Robocup Junior y Robocampeones, entre otros (Figura \ref{fig:robed} izquierda).  En dicha asignatura se adquieren conocimientos generales de programación, impresión 3D, lógica, introducción a la electrónica y los microcontroladores.
+Son aquellos robots que tienen aplicaciones heterogéneas en un mercado educativo asentado pero también existen muchos prototipos sin un uso comercial claro. En educación se ha ido introduciendo la robótica de manera muy atractiva y didáctica a los estudiantes hasta el punto de conseguir tener una asignatura destinada a la robótica y poder participar en competiciones como: \ac{FLL}\footnote{\url{https://firstlegoleague.soy/}}, Robocup Junior\footnote{\url{https://junior.robocup.org/}} y Robocampeones\footnote{\url{https://sites.google.com/view/robocampeonesfuenlabrada/}}, entre otros (Figura \ref{fig:robed} izquierda).  En dicha asignatura se adquieren conocimientos generales de programación, impresión 3D, lógica, introducción a la electrónica y los microcontroladores.
 
 Los prototipos nombrados anteriormente suelen ser demostradores tecnológicos que se crean para exhibiciones, se encuentran a la vanguardia de la tecnología y sirven para atraer un mayor número de clientes como puede ser: Spot de Boston Dynamics, Pepper de Softbank o Sophia de Hanson Robotics. En la Figura \ref{fig:robed} (derecha) se pueden ver un ejemplo de estos demostradores.
 
@@ -219,11 +220,11 @@ Los prototipos nombrados anteriormente suelen ser demostradores tecnológicos qu
 	\label{fig:robed}
 \end{figure}
 
-\setcounter{footnote}{4} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{9} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.uclm.es/noticias/febrero2019/toledo/finalfirstlegoleague}\label{note:enlace4}}
 
 
-\setcounter{footnote}{5} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{10} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://bostondynamics.com/products/spot/}\label{note:enlace5}}
 
 
@@ -262,21 +263,21 @@ Los robots de salud sirven para mejorar la calidad de la atención médica y apo
 \end{figure}
 
 
-\setcounter{footnote}{6} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{11} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.abexsl.es/es/sistema-robotico-da-vinci/que-es}\label{note:enlace6}}
 
-\setcounter{footnote}{7} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{12} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.stryker.com/content/dam/stryker/joint-replacement/systems/mako-system-overview/resources}\label{note:enlace7}}
 
-\setcounter{footnote}{8} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{13} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.marsibionics.com/}\label{note:enlace8}}
 
-\setcounter{footnote}{9} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{14} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.cyberdyne.com/}\label{note:enlace9}}
 
 \subsubsection{Robots de logística}
 
-Los robots de logística son sistemas automatizados diseñados para mejorar la eficiencia, precisión y velocidad en la gestión de la cadena de suministro y operaciones logísticas en cadenas de montaje y almacenes. Generalmente los sistemas automatizados son flotas de robots a las que se les aplica distintas arquitecturas software como puede ser \acs{AGV} o \acs{AMR} para poder realizar la tarea asignada. También existen prototipos de robots de reparto que son capaces de hacer entrega de última milla. La Figura \ref{fig:robreparto}  muestra ejemplos de robots de reparto. 
+Los robots de logística son sistemas automatizados diseñados para mejorar la eficiencia, precisión y velocidad en la gestión de la cadena de suministro y operaciones logísticas en cadenas de montaje y almacenes. Generalmente, los sistemas automatizados son flotas de robots a las que se les aplica distintas arquitecturas software como puede ser \acs{AGV} o \acs{AMR} para poder realizar la tarea asignada. También existen prototipos de robots de reparto que son capaces de hacer entrega de última milla. La Figura \ref{fig:robreparto}  muestra ejemplos de robots de reparto. 
 
 \begin{figure}[ht!]
 	\centering
@@ -296,11 +297,11 @@ Los robots de logística son sistemas automatizados diseñados para mejorar la e
 	\label{fig:robreparto}
 \end{figure}
 
-\setcounter{footnote}{10} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{15} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://exotecbydexter.com/skypod/}\label{note:enlace10}}
 
 
-\setcounter{footnote}{11} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{16} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.aboutamazon.es/noticias/innovacion/prime-air}\label{note:enlace11}}
 
 \section{Robots de campo}
@@ -341,30 +342,31 @@ En los últimos años se ha podido notar un gran progreso en el desarrollo y la 
 \end{figure}
 
 
-\setcounter{footnote}{12} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{17} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://advanced.farm/technology/strawberry-harvester/}\label{note:enlace12}}
 
-\setcounter{footnote}{13} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{18} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.komatsu.com/en/technology/smart-mining/loading-and-haulage/autonomous-haulage-system/}\label{note:enlace13}}
-\setcounter{footnote}{14} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{19} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.ryzerobotics.com/es/tello}\label{note:enlace14}}
-\setcounter{footnote}{15} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{20} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/Perseverance}\label{note:enlace15}}
 
-Por contra, debido a las condiciones que se tienen que someter estos robots, su coste es elevado e imposibilita que su uso se pueda extender a aquellos lugares que necesiten de su servicio y que tienen bajos recursos. Es por esto que existe una necesidad que para ciertas aplicaciones, que no tienen condiciones tan extremas, se creen robots asequibles que puedan lidiar con ciertas tareas. 
+Por contra, debido a las condiciones que se tienen que someter estos robots, su coste es elevado e imposibilita que su uso se pueda extender a aquellos lugares que necesiten de su servicio y que tienen bajos recursos. Es por esto que existe la creciente necesidad de que, para ciertas aplicaciones que no tienen condiciones tan extremas, se creen robots asequibles que puedan lidiar con determinadas tareas. A continuación veremos este campo de investigación. 
 
 \section{Robots de bajo coste}
 
 Los robots de bajo coste son aquellos robots diseñados y fabricados con el objetivo de ser económicos, accesibles y fáciles de producir. Estos robots suelen emplear componentes menos costosos y métodos de fabricación simplificados para reducir el precio final. Algunas características clave de los robots de bajo coste incluyen:
 
 \begin{itemize}
-	\item \textit{Componentes asequibles}. Utilizan materiales y componentes electrónicos más baratos, como puden ser: motores de bajo coste como Parallax, microcontroladores como Arduino y ordenadores monoplaca como Raspberry pi.
+	\item \textit{Componentes asequibles}. Utilizan materiales y componentes electrónicos más baratos, como puden ser: motores de bajo coste como Parallax, microcontroladores como Arduino, y ordenadores monoplaca como Raspberry Pi.
 	\item \textit{Simplicidad en el diseño}. Tienen diseños más sencillos que han sido creados usando técnicas de diseño e impresión 3D, facilitando su actualización y mantenimiento.
 	\item \textit{Accesibilidad}. Están diseñados para ser utilizados por cualquier tipo de persona, sin tener una formación avanzada de la materia.
 	\item \textit{Educación y prototipos}. Ampliamente usados en educación para facilitar el aprendizaje y también en la creación de prototipos rápidos y asequibles.
-	\item \textit{Versatilidad}. Se adaptan a numerosas aplicaciones, desde las más sencillas hasta a proyectos más complejos.
+	\item \textit{Versatilidad}. Se adaptan a numerosas aplicaciones, desde las más sencillas hasta proyectos más complejos.
 	
 \end{itemize}\
+
 
 En resumen, los robots de bajo coste permiten la democratización de la tecnología robótica, facilitando su acceso a un público más amplio y fomentando la innovación y el aprendizaje en diferentes campos. En la Figura \ref{fig:roblowcost} se puede apreciar una aplicación real reciente de la robótica de bajo coste de la universidad \textit{Carnegie Mellon} descrita en el artículo \cite{shaw2024leap}.\\ 
 
@@ -376,51 +378,39 @@ En resumen, los robots de bajo coste permiten la democratización de la tecnolog
 	\label{fig:roblowcost}
 \end{figure}
 
-Sabiendo que existen los robots de campo y la robótica de bajo coste, es necesario explorar y conocer las instituciones, los tipos de irregularidades en la carretera y los procesos actuales que existen en España para poder tener un correcto mantenimiento de ellos. 
+%Sabiendo que existen los robots de campo y la robótica de bajo coste, es necesario explorar y conocer las instituciones, los tipos de irregularidades en la carretera y los procesos actuales que existen en España para poder tener un correcto mantenimiento de ellos. 
+
+Con esta base tecnológica, uno de los desafíos donde los robots de bajo coste están mostrando un gran potencial es en el mantenimiento de infraestructuras públicas, como las carreteras. A medida que se buscan soluciones más eficientes y económicas para mantener y mejorar las infraestructuras, los robots de bajo coste pueden ser una pieza clave en este proceso.
+%los robots de bajo coste pueden abordar problemas globales en campos que requieren soluciones económicas y eficientes, como el mantenimiento de infraestructuras públicas.
+
+El mantenimiento de infraestructuras públicas, y en especial el de las carreteras, es una tarea de vital importancia para garantizar la seguridad y el bienestar de las personas. Sin embargo, también representa un reto logístico y económico significativo. Las carreteras, expuestas constantemente a condiciones climáticas adversas, tráfico pesado y el desgaste natural, requieren un mantenimiento constante para prevenir accidentes y asegurar la movilidad eficiente de personas y mercancías.
+
+Tradicionalmente, este mantenimiento ha dependido de métodos manuales y laboriosos. Equipos de trabajadores inspeccionan las carreteras, identifican los daños y proceden a repararlos, lo que implica un alto coste en tiempo, recursos humanos y materiales. Además, la intervención en las carreteras conlleva cortes de tráfico que generan congestión y molestias tanto para conductores como para peatones.
+
+Aquí es donde la tecnología de los robots de bajo coste puede ofrecer una solución disruptiva. El desarrollo de estos robots ha llegado a un punto en el que pueden ser integrados en el proceso de mantenimiento de carreteras de manera eficaz. Al ser equipados con actuadores, sensores avanzados y algoritmos de \ac{IA}, estos robots tienen la capacidad de detectar y arreglar automáticamente irregularidades en el pavimento evaluando su tamaño y gravedad. Esta automatización permitiría realizar inspecciones más frecuentes y precisas, reduciendo el margen de error humano, facilitando intervenciones más rápidas y localizadas, y mejorando las condiciones de seguridad de los trabajadores.
+
+La posibilidad de desplegar múltiples robots de bajo coste a lo largo de una red de carreteras también representa una ventaja significativa. Estos robots pueden realizar inspecciones de forma continua, recorriendo largas distancias y detectando problemas antes de que se conviertan en riesgos graves para la seguridad vial. Además, los robots pueden operar en entornos donde el acceso humano es complicado o peligroso, como en carreteras rurales o áreas montañosas.
+
+En este contexto, la versatilidad y el bajo coste de los robots también resultan beneficiosos cuando se trata de reparaciones. Actualmente, las reparaciones suelen ser costosas y temporales, lo que significa que el mismo área puede requerir múltiples intervenciones a lo largo del tiempo. Sin embargo, con robots capaces de aplicar reparaciones rápidas y precisas en el lugar y momento adecuados, se podría reducir la frecuencia de intervenciones costosas y prolongar la vida útil del pavimento. 
+
+Es por todo lo expuesto anteriormente que es necesario conocer la situación de las carreteras en España, conocer qué tipos de deterioros existen, así cómo definir en cuál de todos se va a centrar este proyecto. De este modo, se podrá implementar soluciones innovadoras, como el uso de robots de bajo coste, que no solo optimicen los recursos, sino que también mejoren la seguridad vial y la sostenibilidad del sistema de carreteras en el largo plazo.
+
 
 \section{Conservación de carreteras en España}
 
-La conservación de las carreteras es un aspecto fundamental para garantizar la seguridad vial, la eficiencia del transporte y la durabilidad de las infraestructuras viarias. En España, donde la red de carreteras juega un papel crucial en la conectividad y el desarrollo económico, el mantenimiento adecuado de estas infraestructuras es vital para asegurar un tránsito seguro y fluido, así como para prevenir accidentes y reducir los costos derivados del deterioro del pavimento.
+Según informa el \ac{MITMA} \footnote{\url{https://www.transportes.gob.es/carreteras/catalogo-y-evolucion-de-la-red-de-carreteras}} la red de carreteras de España tiene, a 31 de diciembre de 2023, 165.375 kilómetros, de los cuales 26.473 km forman la Red de Carreteras del Estado (RCE), que gestiona el \acs{MITMA} y recoge el 52,5\% del tráfico total y el 64,57\% del tráfico pesado. Además, hay 71.145 km que están gestionados por las Comunidades Autónomas y soportan el 42\% del tráfico, y 67.770 km por las Diputaciones (que suponen el 5,5\% del tráfico restante).
 
-España cuenta con una extensa red de carreteras que incluye autopistas, autovías, carreteras nacionales, autonómicas, y provinciales. Cada una de estas vías requiere un enfoque específico en cuanto a su mantenimiento y conservación, dado que las condiciones de uso y los desafíos asociados varían considerablemente.
-
-La conservación de las carreteras en el país está regulada y gestionada por diversas instituciones y organismos. La Dirección General de Carreteras\footnote{\url{https://www.transportes.gob.es/carreteras/organizacion-y-funciones/secretaria-general-de-infraestructuras/direccion-general-de-carreteras}}, bajo la gestión del \ac{MITMA}, es la entidad responsable de la Red de Carreteras del Estado, que incluye las vías de mayor envergadura y tráfico. Por su parte, las comunidades autónomas y las diputaciones provinciales gestionan las carreteras que pertenecen a sus respectivas jurisdicciones, como es el caso de las carreteras autonómicas de Castilla-La Mancha\footnote{\url{https://www.castillalamancha.es/gobierno/fomento/estructura/dgfcartra/actuaciones/cat\%C3\%A1logo-y-mapa-de-carreteras-de-castilla-la-mancha}} y las carreteras provinciales de Toledo\footnote{\url{http://eiel.diputoledo.es/visor/index.php}} .
-
-Además, varias organizaciones juegan un papel destacado en la promoción, estudio y mejora continua de las infraestructuras viarias. El \ac{CEDEX}\footnote{\url{https://www.cedex.es/presentacion}}, por ejemplo, es un organismo de referencia en la investigación y experimentación en el ámbito de las obras públicas y la movilidad. Fundado en 1957, el \acs{CEDEX} trabaja para mejorar y conservar las infraestructuras, impulsar una movilidad segura y sostenible, y proteger el medioambiente.
+España es uno de los países que tiene mayor número de kilómetros de carreteras y es por ello que tienen que existir distintas entidades que se encarguen de supervisar su mantenimiento. Además de las expuestas previamente, hay varias organizaciones que juegan un papel destacado en la promoción, estudio y mejora continua de las infraestructuras viarias. El \ac{CEDEX}\footnote{\url{https://www.cedex.es/presentacion}}, por ejemplo, es un organismo de referencia en la investigación y experimentación en el ámbito de las obras públicas y la movilidad. Fundado en 1957, el \acs{CEDEX} trabaja para mejorar y conservar las infraestructuras, impulsar una movilidad segura y sostenible, y proteger el medioambiente.
 
 Otra entidad relevante es la \ac{AEC}\footnote{\url{https://www.aecarretera.com/quienes-somos}}, una entidad sin ánimo de lucro fundada en 1949, que trabaja en la defensa y promoción de las carreteras. La \acs{AEC} se enfoca en aspectos como la seguridad vial, la sostenibilidad y la calidad de las infraestructuras, adaptando sus actividades a las necesidades y desafíos contemporáneos, como la digitalización y la descarbonización del transporte.
-
 
 En el ámbito de la conservación propiamente dicha, la \ac{ACEX}\footnote{\url{https://www.acex.eu/la-asociacion/}}, creada en 1995, agrupa a empresas dedicadas a la conservación de carreteras y se centra en promover la eficiencia y sostenibilidad en el mantenimiento de estas infraestructuras, así como en mejorar la seguridad vial y laboral. También es reseñable destacar sus premios anuales\footnote{\url{https://www.acex.eu/premios-acex/}} que permiten avanzar a pasos agigantados en materia de conservación y seguridad vial.
 
 
-Finalmente, cabe destacar la labor de la Plataforma de Trabajadores de Conservación de Carreteras\footnote{\url{https://conservacion.es/index.php?option=com_content&view=article&id=1&Itemid=101}}, un grupo independiente que agrupa a profesionales del sector preocupados por la seguridad laboral, la reducción de la siniestralidad en las actividades de conservación viaria y por mejorar sus condiciones laborales.\\
-
-Tras conocer a todos los actores que conforman parte del mantenimiento correcto de las carreteras de España, es necesario conocer los tipos de deterioros del pavimento que se tienen que enfrentar.
+Sin embargo parece ser que la labor de todas estas plataformas no es suficiente. Noelia Soage \footnote{\url{https://www.abc.es/motor/reportajes/emisiones-accidentes-aumento-mal-estado-carreteras-senales-20230309230204-nt.html?ref=https\%3A\%2F\%2Fwww.google.com\%2F}} redactora en ABC Motor, cuenta que del total de 13.000 kilómetros de la red de carreteras de España presenta graves deterioros en más del 50\% de la superficie del pavimento; los cuales pueden afectar a la estructura o a la superficie de la plataforma, comprometiendo la comodidad, eficiencia y seguridad de la circulación.
 
 
-\section{Deterioros del pavimento}
-
-En el artículo \cite{llopis2020deterioros} se presentan los distintos tipos de deterioros o daños en diferentes tipos de pavimentos, así como su rehabilitación y mantenimento. 
-
-Para entender las distintas categorías de deterioros, es necesario conocer qué es el firme de una carretera y de qué capas está compuesto. El firme es un conjunto de varias capas de materiales seleccionados y, en la mayoría de los casos, tratados, que forman la superestructura de la plataforma. Su propósito es soportar las cargas del tráfico y garantizar que la circulación se realice de manera segura y cómoda. (Figura \ref{fig:firme})
-
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=16cm]{figs/firme.png}
-	\end{center}
-	\caption{Firme de una carretera} %\cite{shaw2024leap}}
-\label{fig:firme}
-\end{figure}
-
-El firme se compone de tres capas: rodadura, capa intermedia y capa base. Las dos primeras forman el pavimento, que soporta las cargas del tráfico y proporciona características como resistencia al deslizamiento y una superficie regular. La capa base, en cambio, tiene una función estructural al absorber las presiones transmitidas y proteger la subbase de cargas excesivas.
-
-Los firmes se dividen en cuatro tipos: flexibles, semiflexibles, semirrígidos y rígidos. Los firmes flexibles y semiflexibles tienen una capa bituminosa sobre capas granulares. Si el espesor de la capa bituminosa es menor de 15 cm, el firme es flexible; si es mayor, es semiflexible. Los firmes semirrígidos cuentan con un pavimento bituminoso sobre capas tratadas con conglomerantes hidráulicos, con un espesor mínimo de 20 cm. Finalmente, los firmes rígidos tienen un pavimento de hormigón sobre una capa de zahorras.
-
-\subsubsection{Tipos de deterioros}
-
-Los distintos tipos de deterioros o daños más comunes que se pueden presentar en
-pavimentos flexibles, semiflexibles y semirrígidos urbanos los podemos clasificar en cuatro grandes categorías: \textit{agrietamiento} (Figura \ref{fig:agrietamiento}), \textit{degradación del material de la capa de rodadura} (Figura \ref{fig:desprendimiento}), \textit{degradación de la capa de rodadura sin degradación de material} (Figura \ref{fig:deformacion}) y \textit{otro tipo de daños} (Figura \ref{fig:otro}). Todo está esquematizado en la Figura \ref{fig:diagrama}.
+Para poder dar mayor contexto a los deterioros, es necesario hacer una clasificación de ellos sabiendo que se pueden presentar en pavimentos flexibles, semiflexibles y semirrígidos urbanos, y los podemos clasificar en cuatro grandes categorías: \textit{agrietamiento} (Figura \ref{fig:agrietamiento}), \textit{degradación del material de la capa de rodadura} (Figura \ref{fig:desprendimiento}), \textit{degradación de la capa de rodadura sin degradación de material} (Figura \ref{fig:deformacion}) y \textit{otro tipo de daños} (Figura \ref{fig:otro}). Todo está esquematizado en la Figura \ref{fig:diagrama}.\\
 
 \begin{figure}[H]
 	\centering
@@ -515,7 +505,7 @@ pavimentos flexibles, semiflexibles y semirrígidos urbanos los podemos clasific
 		\includegraphics[width=\linewidth]{figs/gpc.png}
 		\caption*{\centering Grietas piel de cocodrilo}
 	\end{minipage}
-
+	
 	\caption{Agrietamiento}
 	\label{fig:agrietamiento}
 \end{figure}
@@ -613,32 +603,78 @@ pavimentos flexibles, semiflexibles y semirrígidos urbanos los podemos clasific
 		\includegraphics[width=\linewidth]{figs/parcheo.png}
 		\caption*{\centering Parcheo }
 	\end{minipage}
-
+	
 	\caption{Otro tipo de daños}
 	\label{fig:otro}
 \end{figure}
 
-Tras haber mostrado toda la gran cantidad de tipos de deterioros que existen, es necesario centrarnos en ser capaces del mantenimiento de uno de ellos ya que el problema es muy grande y sería inabarcable para este proyecto. De todos los tipos mostrados, se van a tratar los \textit{baches}.\\
+Tras haber mostrado toda la gran cantidad de tipos de deterioros que existen, es necesario centrarnos en ser capaces del mantenimiento de uno de ellos ya que el problema es muy grande y sería inabarcable para este proyecto. De todos los tipos mostrados, se van a tratar los \textit{baches}.
 
-\subsubsection{Mantenimiento de baches}
+Una vez conocido el deterioro en que se va a centrar este proyecto, los organismos existentes en España y todas las oportunidades que un robot low-cost ofrece para el mantenimiento de carreteras se puede decir, que este proyecto se centra en el desarrollo de un robot de campo de tamaño compacto y bajo coste, diseñado para ser fácil de usar y controlar. El robot ha sido fabricado completamente mediante impresión 3D y está equipado con herramientas ampliamente utilizadas en el campo de la robótica. Esta combinación permite que cualquier persona, incluso sin un conocimiento profundo en robótica, pueda replicar el robot y ponerlo en funcionamiento. En el próximo capítulo, se presentarán diversos prototipos y futuras aplicaciones que guardan una cierta relación con el tipo de robot desarrollado.\\
+%La conservación de las carreteras es un aspecto fundamental para garantizar la seguridad vial, la eficiencia del transporte y la durabilidad de las infraestructuras viarias. En España, donde la red de carreteras juega un papel crucial en la conectividad y el desarrollo económico, el mantenimiento adecuado de estas infraestructuras es vital para asegurar un tránsito seguro y fluido, así como para prevenir accidentes y reducir los costos derivados del deterioro del pavimento.
 
-La reparación de baches en los pavimentos de asfalto es un proceso importante para mantener las carreteras en buen estado. Un bache es una depresión en la superficie de la carretera que puede ser causada por una variedad de factores, como el tráfico pesado, el clima extremo y el envejecimiento del pavimento. Si se dejan sin reparar, los baches pueden causar daños a los vehículos y crear un peligro para los conductores.
+%España cuenta con una extensa red de carreteras que incluye autopistas, autovías, carreteras nacionales, autonómicas, y provinciales. Cada una de estas vías requiere un enfoque específico en cuanto a su mantenimiento y conservación, dado que las condiciones de uso y los desafíos asociados varían considerablemente.
 
-El proceso de reparación de baches comienza con la eliminación del material dañado. Esto se hace mediante el corte del área afectada con una sierra de asfalto o una fresadora. Una vez que se ha eliminado el material dañado, se limpia la superficie hasta dejar el hueco con forma de cuadrilátero regular y se aplica una capa de asfalto fresco. El asfalto se compacta y se alisa para que se ajuste perfectamente al pavimento existente. El resultado final es una superficie de carretera lisa y sin baches\footnote{\url{https://www.youtube.com/watch?v=YPx1bIywgzo}}. En la Figura \ref{fig:repararbache} se puede ver a dos operarios arreglando un bache con asfalto en frío.
+%La conservación de las carreteras en el país está regulada y gestionada por diversas instituciones y organismos. La Dirección General de Carreteras\footnote{\url{https://www.transportes.gob.es/carreteras/organizacion-y-funciones/secretaria-general-de-infraestructuras/direccion-general-de-carreteras}}, bajo la gestión del \ac{MITMA}, es la entidad responsable de la Red de Carreteras del Estado, que incluye las vías de mayor envergadura y tráfico. Por su parte, las comunidades autónomas y las diputaciones provinciales gestionan las carreteras que pertenecen a sus respectivas jurisdicciones, como es el caso de las carreteras autonómicas de Castilla-La Mancha\footnote{\url{https://www.castillalamancha.es/gobierno/fomento/estructura/dgfcartra/actuaciones/cat\%C3\%A1logo-y-mapa-de-carreteras-de-castilla-la-mancha}} y las carreteras provinciales de Toledo\footnote{\url{http://eiel.diputoledo.es/visor/index.php}} .
 
+%Además, varias organizaciones juegan un papel destacado en la promoción, estudio y mejora continua de las infraestructuras viarias. El \ac{CEDEX}\footnote{\url{https://www.cedex.es/presentacion}}, por ejemplo, es un organismo de referencia en la investigación y experimentación en el ámbito de las obras públicas y la movilidad. Fundado en 1957, el \acs{CEDEX} trabaja para mejorar y conservar las infraestructuras, impulsar una movilidad segura y sostenible, y proteger el medioambiente.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=8cm]{figs/repararbache.jpg}
-	\end{center}
-	\caption{Operarios reparando un bache  $^{\ref{note:reba}}$} %\cite{bidaudrobots}}
-\label{fig:repararbache}
-\end{figure}
+%Otra entidad relevante es la \ac{AEC}\footnote{\url{https://www.aecarretera.com/quienes-somos}}, una entidad sin ánimo de lucro fundada en 1949, que trabaja en la defensa y promoción de las carreteras. La \acs{AEC} se enfoca en aspectos como la seguridad vial, la sostenibilidad y la calidad de las infraestructuras, adaptando sus actividades a las necesidades y desafíos contemporáneos, como la digitalización y la descarbonización del transporte.
 
 
-\setcounter{footnote}{25} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://fixer.es/blog/como-reparar-bache-con-asfalto-en-frio/}\label{note:reba}}
+%En el ámbito de la conservación propiamente dicha, la \ac{ACEX}\footnote{\url{https://www.acex.eu/la-asociacion/}}, creada en 1995, agrupa a empresas dedicadas a la conservación de carreteras y se centra en promover la eficiencia y sostenibilidad en el mantenimiento de estas infraestructuras, así como en mejorar la seguridad vial y laboral. También es reseñable destacar sus premios anuales\footnote{\url{https://www.acex.eu/premios-acex/}} que permiten avanzar a pasos agigantados en materia de conservación y seguridad vial.
 
 
-Este proyecto se centra en el desarrollo de un robot de campo de tamaño compacto y bajo costo, diseñado para ser fácil de usar y controlar. El robot ha sido fabricado completamente mediante impresión 3D y está equipado con herramientas ampliamente utilizadas en el campo de la robótica. Esta combinación permite que cualquier persona, incluso sin un conocimiento profundo en robótica, pueda replicar el robot y ponerlo en funcionamiento. En el próximo capítulo, se presentarán diversos prototipos y futuras aplicaciones que guardan una cierta relación con el tipo de robot desarrollado.\\
+%Finalmente, cabe destacar la labor de la Plataforma de Trabajadores de Conservación de Carreteras\footnote{\url{https://conservacion.es/index.php?option=com_content&view=article&id=1&Itemid=101}}, un grupo independiente que agrupa a profesionales del sector preocupados por la seguridad laboral, la reducción de la siniestralidad en las actividades de conservación viaria y por mejorar sus condiciones laborales.\\
 
+%Tras conocer a todos los actores que conforman parte del mantenimiento correcto de las carreteras de España, es necesario conocer los tipos de deterioros del pavimento que se tienen que enfrentar.
+
+
+%\section{Deterioros del pavimento}
+
+%En el artículo \cite{llopis2020deterioros} se presentan los distintos tipos de deterioros o daños en diferentes tipos de pavimentos, así como su rehabilitación y mantenimento. 
+
+%Para entender las distintas categorías de deterioros, es necesario conocer qué es el firme de una carretera y de qué capas está compuesto. El firme es un conjunto de varias capas de materiales seleccionados y, en la mayoría de los casos, tratados, que forman la superestructura de la plataforma. Su propósito es soportar las cargas del tráfico y garantizar que la circulación se realice de manera segura y cómoda. (Figura \ref{fig:firme})
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=16cm]{figs/firme.png}
+%	\end{center}
+%	\caption{Firme de una carretera} %\cite{shaw2024leap}}
+%\label{fig:firme}
+%\end{figure}
+
+%El firme se compone de tres capas: rodadura, capa intermedia y capa base. Las dos primeras forman el pavimento, que soporta las cargas del tráfico y proporciona características como resistencia al deslizamiento y una superficie regular. La capa base, en cambio, tiene una función estructural al absorber las presiones transmitidas y proteger la subbase de cargas excesivas.
+
+%Los firmes se dividen en cuatro tipos: flexibles, semiflexibles, semirrígidos y rígidos. Los firmes flexibles y semiflexibles tienen una capa bituminosa sobre capas granulares. Si el espesor de la capa bituminosa es menor de 15 cm, el firme es flexible; si es mayor, es semiflexible. Los firmes semirrígidos cuentan con un pavimento bituminoso sobre capas tratadas con conglomerantes hidráulicos, con un espesor mínimo de 20 cm. Finalmente, los firmes rígidos tienen un pavimento de hormigón sobre una capa de zahorras.
+
+%\subsubsection{Tipos de deterioros}
+
+%Los distintos tipos de deterioros o daños más comunes que se pueden presentar en
+%pavimentos flexibles, semiflexibles y semirrígidos urbanos los podemos clasificar en cuatro grandes categorías: \textit{agrietamiento} (Figura \ref{fig:agrietamiento}), \textit{degradación del material de la capa de rodadura} (Figura \ref{fig:desprendimiento}), \textit{degradación de la capa de rodadura sin degradación de material} (Figura \ref{fig:deformacion}) y \textit{otro tipo de daños} (Figura \ref{fig:otro}). Todo está esquematizado en la Figura \ref{fig:diagrama}.
+
+%%% Incluir aquí las imágenes puestas más arriba 
+
+%Tras haber mostrado toda la gran cantidad de tipos de deterioros que existen, es necesario centrarnos en ser capaces del mantenimiento de uno de ellos ya que el problema es muy grande y sería inabarcable para este proyecto. De todos los tipos mostrados, se van a tratar los \textit{baches}.\\
+
+%\subsubsection{Mantenimiento de baches}
+
+%La reparación de baches en los pavimentos de asfalto es un proceso importante para mantener las carreteras en buen estado. Un bache es una depresión en la superficie de la carretera que puede ser causada por una variedad de factores, como el tráfico pesado, el clima extremo y el envejecimiento del pavimento. Si se dejan sin reparar, los baches pueden causar daños a los vehículos y crear un peligro para los conductores.
+
+%El proceso de reparación de baches comienza con la eliminación del material dañado. Esto se hace mediante el corte del área afectada con una sierra de asfalto o una fresadora. Una vez que se ha eliminado el material dañado, se limpia la superficie hasta dejar el hueco con forma de cuadrilátero regular y se aplica una capa de asfalto fresco. El asfalto se compacta y se alisa para que se ajuste perfectamente al pavimento existente. El resultado final es una superficie de carretera lisa y sin baches\footnote{\url{https://www.youtube.com/watch?v=YPx1bIywgzo}}. En la Figura \ref{fig:repararbache} se puede ver a dos operarios arreglando un bache con asfalto en frío.
+
+
+%\begin{figure} [h!]
+%\begin{center}
+%	\includegraphics[width=8cm]{figs/repararbache.jpg}
+%\end{center}
+%\caption{Operarios reparando un bache  $^{\ref{note:reba}}$} %\cite{bidaudrobots}}
+%\label{fig:repararbache}
+%\end{figure}
+
+
+%\setcounter{footnote}{30} % Establecer la numeración de la siguiente nota al pie
+%\footnotetext[\value{footnote}]{\url{https://fixer.es/blog/como-reparar-bache-con-asfalto-en-frio/}\label{note:reba}}
+
+
+%Este proyecto se centra en el desarrollo de un robot de campo de tamaño compacto y bajo coste, diseñado para ser fácil de usar y controlar. El robot ha sido fabricado completamente mediante impresión 3D y está equipado con herramientas ampliamente utilizadas en el campo de la robótica. Esta combinación permite que cualquier persona, incluso sin un conocimiento profundo en robótica, pueda replicar el robot y ponerlo en funcionamiento. En el próximo capítulo, se presentarán diversos prototipos y futuras aplicaciones que guardan una cierta relación con el tipo de robot desarrollado.\\

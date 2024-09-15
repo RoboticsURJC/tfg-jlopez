@@ -3,52 +3,51 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: memoria.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
-Warning--I didn't find a database entry for "cuenca2023diseno"
-Warning--I didn't find a database entry for "giri2020maquinas"
 Warning--there's a number but no volume in barcelo2004nuevo
-Warning--empty year in bidaudrobots
 Warning--empty journal in bidaudrobots
+Warning--there's a number but no volume in cuenca2023diseno
+Warning--empty journal in giri2020maquinas
 Warning--empty journal in llopis2020deterioros
 Warning--empty institution in vega15
-You've used 18 entries,
+You've used 20 entries,
             1935 wiz_defined-function locations,
-            576 strings with 6823 characters,
-and the built_in function-call counts, 6711 in all, are:
-= -- 658
-> -- 280
-< -- 18
-+ -- 99
-- -- 94
-* -- 504
-:= -- 1187
-add.period$ -- 56
-call.type$ -- 18
-change.case$ -- 136
-chr.to.int$ -- 17
-cite$ -- 23
-duplicate$ -- 283
-empty$ -- 444
-format.name$ -- 121
-if$ -- 1326
+            587 strings with 7328 characters,
+and the built_in function-call counts, 7469 in all, are:
+= -- 732
+> -- 305
+< -- 20
++ -- 107
+- -- 102
+* -- 567
+:= -- 1317
+add.period$ -- 62
+call.type$ -- 20
+change.case$ -- 150
+chr.to.int$ -- 19
+cite$ -- 26
+duplicate$ -- 316
+empty$ -- 498
+format.name$ -- 131
+if$ -- 1476
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 14
-newline$ -- 92
-num.names$ -- 54
-pop$ -- 134
+missing$ -- 16
+newline$ -- 102
+num.names$ -- 60
+pop$ -- 147
 preamble$ -- 1
-purify$ -- 136
+purify$ -- 150
 quote$ -- 0
-skip$ -- 223
+skip$ -- 249
 stack$ -- 0
-substring$ -- 353
-swap$ -- 49
-text.length$ -- 4
+substring$ -- 403
+swap$ -- 55
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
-warning$ -- 5
-while$ -- 46
+type$ -- 116
+warning$ -- 6
+while$ -- 53
 width$ -- 0
-write$ -- 230
-(There were 7 warnings)
+write$ -- 256
+(There were 6 warnings)

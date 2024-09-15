@@ -5,9 +5,10 @@ Barcel{\'o}, M. (2004).
 \newblock De nuevo los robots.
 \newblock {\em Paradojas}, (64):1--2.
 
-\bibitem[Bidaud, ]{bidaudrobots}
-Bidaud, P.
+\bibitem[Bidaud, 2017]{bidaudrobots}
+Bidaud, P. (2017).
 \newblock Les robots et les hommes.
+\newblock page~40.
 
 \bibitem[Bruno et~al., 2023]{s23135860}
 Bruno, S., Loprencipe, G., Di~Mascio, P., Cantisani, G., Fiore, N., Polidori,
@@ -15,6 +16,12 @@ Bruno, S., Loprencipe, G., Di~Mascio, P., Cantisani, G., Fiore, N., Polidori,
 \newblock A robotized raspberry-based system for pothole 3d reconstruction and
   mapping.
 \newblock {\em Sensors}, 23(13).
+
+\bibitem[Cuenca~S{\'a}nchez et~al., 2023]{cuenca2023diseno}
+Cuenca~S{\'a}nchez, A., Farinango~Galeano, W., and Murillo~Zambrano, J. (2023).
+\newblock Dise{\~n}o de un sistema de generaci{\'o}n microhidr{\'a}ulica basado
+  en un tornillo de arqu{\'\i}medes.
+\newblock {\em Ingenius. Revista de Ciencia y Tecnolog{\'\i}a}, (29):98--107.
 
 \bibitem[Earnest, 2012]{earnest2012stanfordcart}
 Earnest, L. (2012).
@@ -25,6 +32,11 @@ Earnest, L. (2012).
 {El Zaatari}, S., Marei, M., Li, W., and Usman, Z. (2019).
 \newblock Cobot programming for collaborative industrial tasks: An overview.
 \newblock {\em Robotics and Autonomous Systems}, 116:162--180.
+
+\bibitem[Giri, 2020]{giri2020maquinas}
+Giri, L.~A. (2020).
+\newblock M{\'a}quinas t{\'e}rmicas desde la antig{\"u}edad al siglo xvii:
+  an{\'a}lisis hist{\'o}rico desde la filosof{\'\i}a de la t{\'e}cnica.
 
 \bibitem[Katsamenis et~al., 2022]{10.1145/3529190.3534746}
 Katsamenis, I., Bimpas, M., Protopapadakis, E., Zafeiropoulos, C., Kalogeras,
