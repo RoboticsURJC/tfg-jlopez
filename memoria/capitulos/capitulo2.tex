@@ -11,17 +11,18 @@ George Bernard Shaw\\
 
 \vspace{1cm}
 
-En el presente capítulo se van a describir algunos de los prototipos y posibles aplicaciones más destacables sobre la detección y mantenimiento del pavimento de las carreteras usando inteligencia artificial y técnicas robóticas. En este estado del arte, se revisan cuatro soluciones tecnológicas innovadoras desarrolladas recientemente: el sistema robotizado basado en \textit{Raspberry Pi} para la reconstrucción 3D de baches (Infrarob), el Proyecto HERON para el mantenimiento robótico de carreteras, la plataforma EyesNroad para la detección de deterioros viales mediante \ac{IA}, y el proyecto OMICRON para la automatización del sellado de grietas.
+En el presente capítulo se van a describir algunos de los prototipos y posibles aplicaciones más destacables sobre la detección y mantenimiento del pavimento de las carreteras usando inteligencia artificial y técnicas robóticas. En este estado del arte se revisan más de diez soluciones tecnológicas innovadoras desarrolladas recientemente.  
+%En este estado del arte se revisan cuatro soluciones tecnológicas innovadoras desarrolladas recientemente: el sistema robotizado basado en \textit{Raspberry Pi} para la reconstrucción 3D de baches (Infrarob), el Proyecto HERON para el mantenimiento robótico de carreteras, la plataforma EyesNroad para la detección de deterioros viales mediante \ac{IA}, y el proyecto OMICRON para la automatización del sellado de grietas.
 
 
-\subsubsection{Sistema robotizado basado en Raspberry Pi para la reconstrucción 3D de baches}
+\subsubsection{Sistema de reconstrucción 3D de baches}
 
 \setcounter{footnote}{25} 
-Este sistema explicado en \cite{s23135860}, es creado como parte del proyecto Infrarob\footnote{\url{https://infrarobproject.com/}} y desarrollado en el marco del proyecto europeo Horizon 2020, utiliza una \textit{Raspberry Pi 4B} acoplada a un robot autónomo para capturar imágenes usando una cámara y coordenadas \acs{GPS}, usando el módulo  de baches en carreteras. Las imágenes, tomadas desde diferentes ángulos, son procesadas mediante técnicas fotogramétricas para generar modelos 3D de los baches, permitiendo calcular con precisión el volumen que debe ser rellenado. El sistema también integra un \ac{SIG} para mejorar la gestión del mantenimiento de pavimentos. (Figura \ref{fig:infrarob})
+Este sistema, explicado en \cite{s23135860}, es creado como parte del proyecto Infrarob\footnote{\url{https://infrarobproject.com/}} y desarrollado en el marco del proyecto europeo Horizon 2020, utiliza una \textit{Raspberry Pi 4B} acoplada a un robot autónomo para capturar imágenes usando una cámara y coordenadas \acs{GPS}, usando el módulo  de baches en carreteras. Las imágenes, tomadas desde diferentes ángulos, son procesadas mediante técnicas fotogramétricas para generar modelos 3D de los baches, permitiendo calcular con precisión el volumen que debe ser rellenado. El sistema también integra un \ac{SIG} para mejorar la gestión del mantenimiento de pavimentos. (Figura \ref{fig:infrarob})
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=16cm]{figs/infrarob.png}
+		\includegraphics[width=10cm]{figs/infrarob.png}
 	\end{center}
 	\caption{Robot usado para la reconstrucción 3D de baches}
 \label{fig:infrarob}
@@ -29,12 +30,11 @@ Este sistema explicado en \cite{s23135860}, es creado como parte del proyecto In
 
 Las ventajas de este proyecto son las siguientes: 
 \begin{itemize}
-	\item \textit{Bajo costo}. Utiliza componentes de bajo costo como: \textit{Raspberry pi}, \textit{Raspberry pi camera} y el módulo \textit{GPS NEO-6M} que también es \textit{low-cost}. 
+	\item \textit{Bajo coste}. Utiliza componentes de bajo coste como: \textit{Raspberry Pi}, \textit{Raspberry Pi Camera} y el módulo \textit{GPS NEO-6M}, que también es \textit{low-cost}. 
 	\item \textit{Precisión en la detección}. Capacidad para detectar baches de hasta 75 cm de diámetro y crear modelos 3D precisos.
 	\item \textit{Integración con \acs{SIG}}. Facilita la planificación de reparaciones.
 	
 \end{itemize}\
-
 
 Las desventajas de este proyecto son las siguientes: 
 \begin{itemize}
@@ -46,7 +46,7 @@ Las desventajas de este proyecto son las siguientes:
 
 \subsubsection{El proyecto Herón}
 
-En \cite{10.1145/3529190.3534746} se habla del Proyecto HERON\footnote{\url{https://www.heron-h2020.eu/}}, también parte del programa Horizon 2020, propone una solución integral para el mantenimiento de infraestructuras viales mediante el uso de vehículos modulares robóticos autónomos y drones. El sistema está diseñado para optimizar la eficiencia y seguridad de las operaciones de mantenimiento, utilizando sensores y escáneres para crear mapas 3D, inteligencia artificial para coordinar flujos de trabajo, y módulos de análisis de imágenes para detectar defectos. Todavía está en etapa de desarrollo. (Figura \ref{fig:heron})
+En \cite{10.1145/3529190.3534746} se habla del Proyecto HERON\footnote{\url{https://www.heron-h2020.eu/}} que también parte del programa Horizon 2020. Este proyecto propone una solución integral para el mantenimiento de infraestructuras viales mediante el uso de vehículos modulares robóticos autónomos y drones. El sistema está diseñado para optimizar la eficiencia y seguridad de las operaciones de mantenimiento, utilizando sensores y escáneres para crear mapas 3D, inteligencia artificial para coordinar flujos de trabajo, y módulos de análisis de imágenes para detectar defectos. Todavía está en etapa de desarrollo. (Figura \ref{fig:heron})
 
 
 \begin{figure} [h!]
@@ -63,12 +63,12 @@ Las ventajas de este proyecto son las siguientes:
 	\item \textit{Automatización completa}. Minimiza la intervención humana y reduce riesgos laborales.
 	\item \textit{Eficiencia}. El objetivo es mejorar la capacidad y eficiencia de las redes viales.
 	\item \textit{Intercambio de datos en tiempo real}. Otro de los objetivos es mejorar la toma de decisiones
-	\item \textit{Diseño modular}. Para poder maximizar sus capacidades, facilitar el transporte y reducir los costos de mantenimiento y accidentes.
+	\item \textit{Diseño modular}. Para poder maximizar sus capacidades, facilitar el transporte y reducir los costes de mantenimiento y accidentes.
 \end{itemize}\
 
 Las desventajas de este proyecto son las siguientes:
 \begin{itemize}
-	\item \textit{Costo inicial elevado}. La implementación de tecnologías avanzadas es costosa.
+	\item \textit{Coste inicial elevado}. La implementación de tecnologías avanzadas es costosa.
 	\item \textit{Dependencia tecnológica}. Requiere una infraestructura tecnológica robusta para su funcionamiento.
 \end{itemize}\
 
@@ -106,7 +106,7 @@ Las desventajas de este proyecto son las siguientes:
 
 \subsubsection{El proyecto OMICRÓN}
 
-Dentro del proyecto OMICRON se ha decidido crear un sistema robótico que busca automatizar y robotizar el proceso de sellado de grietas en pavimentos, con el objetivo de eliminar la exposición de los operarios a condiciones peligrosas. El sistema integra un brazo robótico y herramientas de inteligencia artificial para detectar grietas y realizar el sellado de manera autónoma, mejorando así la seguridad y eficiencia en las operaciones de mantenimiento. Esta aplicación ha sido desarrollada para participar en los XX premios de conservación de carreteras de \ac{ACEX} (año 2024)\footnote{\url{https://www.acex.eu/candidatura-12-5/}} que ha resultado ganadora en la en la categoría asociados. Puedes ver su aspecto en la Figura \ref{fig:omicron}.
+En este proyecto se ha creado un sistema robótico que busca automatizar y robotizar el proceso de sellado de grietas en pavimentos, con el objetivo de eliminar la exposición de los operarios a condiciones peligrosas. El sistema integra un brazo robótico y herramientas de inteligencia artificial para detectar grietas y realizar el sellado de manera autónoma, mejorando así la seguridad y eficiencia en las operaciones de mantenimiento. Esta aplicación ha sido desarrollada para participar en los XX premios de conservación de carreteras de \ac{ACEX} (año 2024)\footnote{\url{https://www.acex.eu/candidatura-12-5/}}, que ha resultado ganadora en la en la categoría asociados. Puedes ver su aspecto en la Figura \ref{fig:omicron}.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -129,9 +129,38 @@ Las desventajas de este proyecto son las siguientes:
 
 \begin{itemize}
 	\item \textit{Es un prototipo}. Todavía está en fase temprana de implementación lo que le impide a los clientes tener una disponbilidad inmediata.
-	\item \textit{Alto costo}. Necesita componentes caros para poder llevar a cabo sus objetivos: un camión, un brazo robótico, entre otros.
+	\item \textit{Alto coste}. Necesita componentes caros para poder llevar a cabo sus objetivos, como un camión o un brazo robótico, entre otros.
 	\item \textit{Complejidad técnica}. Ya que se trata de una automatización completa, necesita un alto nivel de precisión y coordinación, supone un gran desafío para su implementación.
 \end{itemize}\
 
+\subsubsection{Sistemas de reconstrucción 3D usando SFM y aprendizaje profundo}
 
-Los prototipos y desarrollos tecnológicos presentados demuestran el potencial de la robótica y la inteligencia artificial en el mantenimiento y detección de deterioros en el pavimento. Desde la creación de modelos 3D de baches hasta la automatización del sellado de grietas, estos avances no solo mejoran la seguridad y eficiencia de las operaciones, sino que también optimizan la gestión y planificación del mantenimiento vial. No obstante, cada solución presenta desafíos específicos, como la dependencia de condiciones climáticas, la limitación geográfica y los costos asociados, que deben ser considerados al evaluar su implementación en diferentes contextos. En el siguiente capítulo se va a proceder a definir una serie requisitos, metodología y un plan de trabajo que se ha seguido para dar solución al problema que se expone a lo largo de esta memoria.
+
+Este sistema, descrito en \cite{WANG2023132499}, propone una solución innovadora para la reconstrucción y segmentación 3D de baches en pavimentos. El enfoque aborda las limitaciones de los métodos tradicionales basados en imágenes 2D al utilizar técnicas de fotogrametría para generar perfiles 3D detallados de los baches. El sistema se compone de un método de reconstrucción conocido como Estructura Desde el Movimiento de Pavimentos (PP-SFM) y una red de segmentación 3D, Trans-3D-Seg, que incorpora módulos de transformadores para mejorar la precisión de la segmentación de nubes de puntos 3D. El sistema muestra una alta precisión, con una puntuación F1 del 92.58\% y una precisión general del 93.44\%. Además, se ha demostrado su robustez en diferentes condiciones, como distintas alturas de adquisición y en luz oscura. Otro sistema muy parecido que cumple con todo lo anterior expuesto y que además incorpora un láser para conseguir una segmentación más robusta, está definido en \cite{9345528}.
+
+Las ventajas de estos proyectos son las siguientes:
+
+\begin{itemize}
+	\item \textit{Alta Precisión}. Los sistemas proporcionan una segmentación precisa de baches, evidenciada por las altas puntuaciones en la precisión-recall y la puntuación F1.
+	\item \textit{Robustez}. Los métodos son robustos en diversas condiciones, incluyendo iluminación variable y diferentes alturas de adquisición, lo que es crucial para aplicaciones prácticas en el terreno.
+	\item \textit{Facilidad para la integración}. Ya que los sistemas están preparados para operar en cualquier cámara, facilitan la integración.
+	
+\end{itemize}\
+
+
+Las desventajas de estos proyectos son las siguientes:
+\begin{itemize}
+	\item \textit{Alto coste computacional}. Debido a la complejidad de las aplicaciones, necesitan un procesamiento intensivo. 
+	\item \textit{Hardware potente}. La implementación del sistema necesita \textit{hardware} potente y recursos computacionales considerables para el procesamiento de imágenes y la ejecución de modelos de aprendizaje profundo.
+	\item \textit{Movimiento circular para detección del volumen}. Una vez detectado el bache, es necesario moverse alrededor de él para que el algoritmo de fotogametría sea capaz de encontrar su volumen, lo que ralentiza el cálculo.
+	
+\end{itemize}\
+
+
+Nombrar todas las tecnicas de detección de baches y las distintas fuentes en sus 3 versiones!!!! \\
+
+
+
+Los prototipos y desarrollos tecnológicos presentados demuestran el potencial de la robótica y la \acs{IA} en el mantenimiento y detección de deterioros en el pavimento. Desde la creación de modelos 3D de baches hasta la automatización del sellado de grietas, estos avances no solo mejoran la seguridad y eficiencia de las operaciones, sino que también optimizan la gestión y planificación del mantenimiento vial. No obstante, cada solución presenta desafíos específicos, como la dependencia de condiciones climáticas, la limitación geográfica y los costes asociados, que deben ser considerados al evaluar su implementación en diferentes contextos. 
+
+En el siguiente capítulo se va a proceder a definir una serie requisitos, metodología y un plan de trabajo que se ha seguido para dar solución al problema que se expone a lo largo de esta memoria.

@@ -1,5 +1,13 @@
 \begin{thebibliography}{}
 
+\bibitem[Ahmed et~al., 2022]{9345528}
+Ahmed, A., Ashfaque, M., Ulhaq, M.~U., Mathavan, S., Kamal, K., and Rahman, M.
+  (2022).
+\newblock Pothole 3d reconstruction with a novel imaging system and structure
+  from motion techniques.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  23(5):4685--4694.
+
 \bibitem[Barcel{\'o}, 2004]{barcelo2004nuevo}
 Barcel{\'o}, M. (2004).
 \newblock De nuevo los robots.
@@ -116,5 +124,12 @@ Vega, J., Perdices, E., and Ca\~nas, J. (2012).
 \newblock {\em Attentive visual memory for robot localization}, pages 408--438.
 \newblock IGI Global, USA.
 \newblock Text not available. This book is protected by copyright.
+
+\bibitem[Wang et~al., 2023]{WANG2023132499}
+Wang, N., Dong, J., Fang, H., Li, B., Zhai, K., Ma, D., Shen, Y., and Hu, H.
+  (2023).
+\newblock 3d reconstruction and segmentation system for pavement potholes based
+  on improved structure-from-motion (sfm) and deep learning.
+\newblock {\em Construction and Building Materials}, 398:132499.
 
 \end{thebibliography}
