@@ -3,51 +3,57 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: memoria.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
+Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
+while executing---line 1023 of file apalike.bst
+Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
+while executing---line 1023 of file apalike.bst
 Warning--there's a number but no volume in barcelo2004nuevo
 Warning--empty journal in bidaudrobots
 Warning--there's a number but no volume in cuenca2023diseno
 Warning--empty journal in giri2020maquinas
 Warning--empty journal in llopis2020deterioros
 Warning--empty institution in vega15
-You've used 22 entries,
+Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
+while executing---line 1098 of file apalike.bst
+You've used 29 entries,
             1935 wiz_defined-function locations,
-            600 strings with 7919 characters,
-and the built_in function-call counts, 8556 in all, are:
-= -- 828
-> -- 381
-< -- 20
-+ -- 135
-- -- 130
-* -- 677
-:= -- 1512
-add.period$ -- 68
-call.type$ -- 22
-change.case$ -- 174
-chr.to.int$ -- 21
-cite$ -- 28
-duplicate$ -- 344
-empty$ -- 558
-format.name$ -- 161
-if$ -- 1679
+            638 strings with 9137 characters,
+and the built_in function-call counts, 11511 in all, are:
+= -- 1105
+> -- 537
+< -- 22
++ -- 189
+- -- 184
+* -- 959
+:= -- 2040
+add.period$ -- 89
+call.type$ -- 29
+change.case$ -- 236
+chr.to.int$ -- 28
+cite$ -- 35
+duplicate$ -- 439
+empty$ -- 745
+format.name$ -- 226
+if$ -- 2241
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 112
-num.names$ -- 66
-pop$ -- 167
+missing$ -- 25
+newline$ -- 147
+num.names$ -- 87
+pop$ -- 213
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 236
 quote$ -- 0
-skip$ -- 269
+skip$ -- 344
 stack$ -- 0
-substring$ -- 472
-swap$ -- 57
+substring$ -- 656
+swap$ -- 64
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 128
+type$ -- 170
 warning$ -- 6
-while$ -- 59
+while$ -- 78
 width$ -- 0
-write$ -- 282
-(There were 6 warnings)
+write$ -- 373
+(There were 3 error messages)

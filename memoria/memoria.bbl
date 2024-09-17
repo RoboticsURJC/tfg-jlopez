@@ -8,6 +8,12 @@ Ahmed, A., Ashfaque, M., Ulhaq, M.~U., Mathavan, S., Kamal, K., and Rahman, M.
 \newblock {\em IEEE Transactions on Intelligent Transportation Systems},
   23(5):4685--4694.
 
+\bibitem[Allouch et~al., 2017]{7922534}
+Allouch, A., Koubâa, A., Abbes, T., and Ammar, A. (2017).
+\newblock Roadsense: Smartphone application to estimate road conditions using
+  accelerometer and gyroscope.
+\newblock {\em IEEE Sensors Journal}, 17(13):4231--4238.
+
 \bibitem[Barcel{\'o}, 2004]{barcelo2004nuevo}
 Barcel{\'o}, M. (2004).
 \newblock De nuevo los robots.
@@ -30,6 +36,18 @@ Cuenca~S{\'a}nchez, A., Farinango~Galeano, W., and Murillo~Zambrano, J. (2023).
 \newblock Dise{\~n}o de un sistema de generaci{\'o}n microhidr{\'a}ulica basado
   en un tornillo de arqu{\'\i}medes.
 \newblock {\em Ingenius. Revista de Ciencia y Tecnolog{\'\i}a}, (29):98--107.
+
+\bibitem[Dhiman and Klette, 2020]{8788687}
+Dhiman, A. and Klette, R. (2020).
+\newblock Pothole detection using computer vision and learning.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  21(8):3536--3550.
+
+\bibitem[Du et~al., 2020]{s20020451}
+Du, R., Qiu, G., Gao, K., Hu, L., and Liu, L. (2020).
+\newblock Abnormal road surface recognition based on smartphone acceleration
+  sensor.
+\newblock {\em Sensors}, 20(2).
 
 \bibitem[Earnest, 2012]{earnest2012stanfordcart}
 Earnest, L. (2012).
@@ -55,6 +73,12 @@ Katsamenis, I., Bimpas, M., Protopapadakis, E., Zafeiropoulos, C., Kalogeras,
   Technologies Related to Assistive Environments}, PETRA '22, page 628–635,
   New York, NY, USA. Association for Computing Machinery.
 
+\bibitem[Kim et~al., 2022]{app12115320}
+Kim, Y.-M., Kim, Y.-G., Son, S.-Y., Lim, S.-Y., Choi, B.-Y., and Choi, D.-H.
+  (2022).
+\newblock Review of recent automated pothole-detection methods.
+\newblock {\em Applied Sciences}, 12(11).
+
 \bibitem[Llopis~Castell{\'o} and P{\'e}rez~Zuriaga, 2020]{llopis2020deterioros}
 Llopis~Castell{\'o}, D. and P{\'e}rez~Zuriaga, A.~M. (2020).
 \newblock Deterioros en pavimentos urbanos.
@@ -63,6 +87,12 @@ Llopis~Castell{\'o}, D. and P{\'e}rez~Zuriaga, A.~M. (2020).
 Nilsson, N.~J. et~al. (1984).
 \newblock {\em Shakey the robot}, volume 323.
 \newblock Sri International Menlo Park, California.
+
+\bibitem[Park et~al., 2021]{app112311229}
+Park, S.-S., Tran, V.-T., and Lee, D.-E. (2021).
+\newblock Application of various yolo models for computer vision-based
+  real-time pothole detection.
+\newblock {\em Applied Sciences}, 11(23).
 
 \bibitem[Plaza, 2023]{plaza_robotica_servicio}
 Plaza, J. M.~C. (2022-2023).
@@ -81,6 +111,12 @@ Thorpe, C. and Durrant-Whyte, H. (2003).
 \newblock Field robots.
 \newblock In {\em Robotics Research: The Tenth International Symposium}, pages
   329--340. Springer.
+
+\bibitem[Ul~Haq et~al., 2019]{8638822}
+Ul~Haq, M.~U., Ashfaque, M., Mathavan, S., Kamal, K., and Ahmed, A. (2019).
+\newblock Stereo-based 3d reconstruction of potholes by a hybrid, dense
+  matching scheme.
+\newblock {\em IEEE Sensors Journal}, 19(10):3807--3817.
 
 \bibitem[Vega, 2008]{vega08b}
 Vega, J. (2008).
@@ -131,5 +167,11 @@ Wang, N., Dong, J., Fang, H., Li, B., Zhai, K., Ma, D., Shen, Y., and Hu, H.
 \newblock 3d reconstruction and segmentation system for pavement potholes based
   on improved structure-from-motion (sfm) and deep learning.
 \newblock {\em Construction and Building Materials}, 398:132499.
+
+\bibitem[Wanli~Ye and Xiao, 2021]{doi:10.1080/14680629.2019.1615533}
+Wanli~Ye, Wei~Jiang, Z. T. D.~Y. and Xiao, J. (2021).
+\newblock Convolutional neural network for pothole detection in asphalt
+  pavement.
+\newblock {\em Road Materials and Pavement Design}, 22(1):42--58.
 
 \end{thebibliography}
