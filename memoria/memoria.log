@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  17 SEP 2024 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  17 SEP 2024 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1457,7 +1457,7 @@ Package pdftex.def Info: figs/parcheo.png  used on input line 603.
 LaTeX Info: Redefining \. on input line 612.
 LaTeX Info: Redefining \% on input line 612.
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 613--615
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
 
  []
 
@@ -1568,53 +1568,59 @@ Package acronym Info: Label `acro:DANA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 20.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 [][][][]$\OT1/cmtt/m/n/10 https :
  []
 
 [25
 
 ]
-Underfull \hbox (badness 2126) in paragraph at lines 36--37
+Underfull \hbox (badness 2126) in paragraph at lines 37--38
 []\OT1/cmr/m/n/12 Desarrollar software necesario usando herramientas rob^^Sotic
 as para poder
  []
 
-LaTeX Info: Redefining \. on input line 51.
-LaTeX Info: Redefining \% on input line 51.
+LaTeX Info: Redefining \. on input line 53.
+LaTeX Info: Redefining \% on input line 53.
 [26]
-Underfull \hbox (badness 1596) in paragraph at lines 69--71
+Underfull \hbox (badness 1596) in paragraph at lines 70--72
 \OT1/cmr/m/n/12 atendiendo a los elementos de sensorizaci^^Son y actuaci^^Son m
 ^^Sas adecuados
  []
 
 
-Underfull \hbox (badness 1867) in paragraph at lines 71--73
+Underfull \hbox (badness 1867) in paragraph at lines 72--74
 \OT1/cmr/m/n/12 aplicaciones rob^^Soticas y sitemas inteligentes en red usando 
 \OT1/cmr/m/it/12 middlewares\OT1/cmr/m/n/12 ,
  []
 
-LaTeX Info: Redefining \. on input line 75.
-LaTeX Info: Redefining \% on input line 75.
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
 [27]
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
  [28]
 Package acronym Info: Label `acro:PDCA' newly defined as it shall be overridden
 
-although it is yet undefined on input line 102.
+although it is yet undefined on input line 103.
 
-Underfull \hbox (badness 1571) in paragraph at lines 122--123
+Underfull \hbox (badness 1571) in paragraph at lines 123--124
 \OT1/cmr/m/n/12 en plataformas online como Google Scholar y otras relacionadas 
 con el
  []
 
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
+LaTeX Info: Redefining \. on input line 126.
+LaTeX Info: Redefining \% on input line 126.
 [29]
-LaTeX Info: Redefining \. on input line 143.
-LaTeX Info: Redefining \% on input line 143.
- [30]) (./capitulos/capitulo4.tex
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+ [30]
+Underfull \hbox (badness 5667) in paragraph at lines 145--146
+[]\OT1/cmr/m/n/12 Tras conocer todos los objetivos, subobjetivos, requisitos, c
+ompetencias,
+ []
+
+) (./capitulos/capitulo4.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [31]
@@ -1649,6 +1655,12 @@ LaTeX Info: Redefining \% on input line 59.
 Package acronym Info: Label `acro:UART' newly defined as it shall be overridden
 
 although it is yet undefined on input line 60.
+
+Underfull \hbox (badness 2653) in paragraph at lines 60--61
+\OT1/cmr/m/n/12 Soporta hasta veintid^^Sos sat^^Selites simult^^Saneamente, lo 
+que le permite ofrecer
+ []
+
 <figs/GPSNEO6MV2.jpeg, id=1036, 225.84375pt x 225.84375pt>
 File: figs/GPSNEO6MV2.jpeg Graphic file (type jpg)
 <use figs/GPSNEO6MV2.jpeg>
@@ -1658,7 +1670,7 @@ Package acronym Info: Label `acro:PWM' newly defined as it shall be overridden
 although it is yet undefined on input line 75.
 LaTeX Info: Redefining \. on input line 76.
 LaTeX Info: Redefining \% on input line 76.
- [34 <./figs/campi.png> <./figs/GPSNEO6MV2.jpeg>]
+[34 <./figs/campi.png> <./figs/GPSNEO6MV2.jpeg>]
 <figs/parallax.png, id=1048, 288.07625pt x 432.61626pt>
 File: figs/parallax.png Graphic file (type png)
 <use figs/parallax.png>
@@ -1993,7 +2005,7 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  28695 strings out of 480112
- 539990 string characters out of 5892631
+ 539995 string characters out of 5892631
  1027197 words of memory out of 5000000
  45703 multiletter control sequences out of 15000+600000
  476079 words of font info for 52 fonts, out of 8000000 for 9000
@@ -2016,7 +2028,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (72 pages, 19649518 bytes).
+Output written on memoria.pdf (72 pages, 19649727 bytes).
 PDF statistics:
  1538 PDF objects out of 1728 (max. 8388607)
  1257 compressed objects within 13 object streams
