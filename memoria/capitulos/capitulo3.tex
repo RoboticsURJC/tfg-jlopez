@@ -12,16 +12,17 @@ Tony Robbins\\
 \vspace{1cm}
 \setcounter{footnote}{29} 
 
-Tras haber establecido el marco contextual del presente proyecto, se procederá a presentar la descripción del problema, los requisitos, las competencias tanto adquiridas como empleadas, la metodología y el plan de trabajo seguido.
+Tras haber establecido el marco contextual del presente proyecto, se procede a presentar la descripción del problema, los requisitos, las competencias tanto adquiridas como empleadas, la metodología y el plan de trabajo seguido.
 
 \section{Descripción del problema}
 \label{sec:descripcion}
 
 La idea del diseño del robot para este trabajo de fin de grado nace tras los acontecimientos vividos por la \ac{DANA} que afectó el pasado septiembre de 2023 en la zona de Toledo y Madrid. Estos hechos dejaron inundaciones, pueblos anegados, carreteras cortadas, muchos vecinos perdieron sus casas y desgraciadamente se cobró la vida de 3 personas. 
 
-Esta situación se produjo, en parte, por la falta de mantenimiento de los pavimentos y carreteras y que posteriormente a lo sucedido, también fue una de las infraestructuras que más tardaron en arreglarse. La principal causa de que eso ocurriese es los bajos recursos y la falta de mano de obra que justamente hay en la zona que sucedieron los hechos. Los operarios que conforman esta mano de obra llevan tiempo exigiendo mejoras de seguridad en su entorno laboral como defiende la Plataforma de Trabajadores de Conservación de Carreteras\footnote{\url{https://conservacion.es/index.php?option=com_content&view=article&id=1&Itemid=101}} mencionada en el Capítulo 1.  
+%% Mejorar esta parte por que se da a entender que la dana fue culpa de las carreteras
+Esta situación se produjo, en parte, por la falta de mantenimiento de los pavimentos y carreteras y que posteriormente a lo sucedido, también fue una de las infraestructuras que más tardaron en arreglarse. La principal causa de que eso ocurriese es los bajos recursos y la falta de mano de obra que justamente hay en la zona que sucedieron los hechos. Los operarios que conforman esta mano de obra llevan tiempo exigiendo mejoras de seguridad en su entorno laboral como defiende la Plataforma de Trabajadores de Conservación de Carreteras\footnote{\url{https://conservacion.es/index.php?option=com_content&view=article&id=1&Itemid=101}}.  
    
-La solución propuesta busca ayudar a mejorar esta situación, proporcionando un robot de bajo coste y accesible para cualquier persona y que sirva para poder mejorar el mantenimiento de las carreteras y reducir el riesgo de exposición de los operarios. Por lo tanto, este proyecto pretende como objetivo principal crear un robot que usando materiales de bajo coste sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y calcular el área necesario de material que necesitará el bache para ser tapado. De igual manera, todo quedará registrado en una interfaz web en la que cada bache quedará marcado sobre un mapa con su correspondiente descripción para que los operarios puedan operar cuando estimen oportuno.
+La solución propuesta busca ayudar a mejorar esta situación, proporcionando un robot de bajo coste y accesible para cualquier persona y que sirva para poder mejorar el mantenimiento de las carreteras y reducir el riesgo de exposición de los operarios. Por lo tanto, este proyecto pretende, como objetivo principal, crear un robot que, usando materiales de bajo coste, sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y calcular el área necesario de material que necesitará el bache para ser tapado. De igual manera, todo quedará registrado en una interfaz web en la que cada bache quedará marcado sobre un mapa con su correspondiente descripción para que los operarios puedan operar cuando estimen oportuno.
 
 Con el fin de solventar el problema definido previamente, se han establecido los siguientes subobjetivos:
 
@@ -33,20 +34,20 @@ Con el fin de solventar el problema definido previamente, se han establecido los
 	\item{} Usar material típico de impresión 3D para imprimir las partes del robot, como puede ser ABS o PLA. 
 	\item{} Desarrollar un modelo del robot para que pueda ser usado en simulación usando herramientas robóticas. 
 	\item{} Desarrollar software necesario usando herramientas robóticas para poder controlar el robot físico. 
-	\item{} Poder realizar algunos experimentos en entorno reales o adaptados.  
+	\item{} Realizar algunos experimentos en entorno reales o adaptados.  
 \end{enumerate}
  
 
 \section{Requisitos}
 \label{sec:requisitos}
 
-Tras nombrar los objetivos y subjetivos necesarios para cumplir en este proyecto, se deberá cumplir también con los siguientes requisitos: 
+Tras nombrar los objetivos y subobjetivos a cumplir en este proyecto, se enumeran los requisitos que se han de satisfacer: 
 
 \begin{enumerate}
 	\item{} El coste total de la fabricación del robot no debe superar los 220€.
 	\item{} Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
-	\item{} Se usará Ubuntu como sistema operativo para tanto el ordenador como el robot.
-	\item{} A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica para entrenar los modelos. 
+	\item{} Se usará Ubuntu con soporte a largo plazo como sistema operativo tanto para el ordenador como para el robot.
+	\item{} A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica de uso dedicado para entrenar los modelos. 
 	\item{} Los modelos entrenados se deben ajustar a las limitaciones hardware del robot.
 	\item{} Se busca que sea un proyecto a largo plazo y por eso se debe realizar la integración con la plataforma ROS2. 
 	
@@ -55,10 +56,10 @@ Tras nombrar los objetivos y subjetivos necesarios para cumplir en este proyecto
 
 \section{Competencias}
 
-Las competencias son aquellas habilidades, conocimientos y aptitudes que una persona emplea y adquiere para la realización, en este caso, del presente proyecto aunque es aplicable para cualquier tarea.
+A continuación se detallan las competencias que se han empleado y adquirido para la realización del presente trabajo fin de grado.
    
 \subsection{Competencias empleadas}
-Las competencias empleadas para la realización del presente proyecto fin de grado, que han sido tomadas de las distintas asignaturas del grado, son las siguientes: 
+Las competencias empleadas para la realización del presente trabajo fin de grado, que han sido tomadas de las distintas asignaturas del grado, son las siguientes: 
 
 \begin{enumerate}
 	\item{Evolución y futuro de la robótica: \textit{CE1.} Capacidad para analizar la evolución de la Ingeniería Robótica y ser capaz de identificar sus aplicaciones, oportunidades de emprendimiento y su impacto en el futuro. 
@@ -78,7 +79,7 @@ Las competencias empleadas para la realización del presente proyecto fin de gra
 
 \subsection{Competencias adquiridas}
 
-Las competencias adquiridas a lo largo del desarrollo del presente proyecto fin de grado que aparecen descritas en la guía docente de la propia asignatura, son las siguientes: 
+Las competencias adquiridas con el desarrollo de este trabajo fin de grado, y que aparecen descritas en la guía docente de la propia asignatura, son las siguientes: 
 
 \begin{enumerate}
 	\item{\textit{CB2.} Que los estudiantes sepan aplicar sus conocimientos a su trabajo o vocación de una forma profesional y posean las competencias que suelen demostrarse por medio de la elaboración y defensa de argumentos y la resolución de problemas dentro de su área de estudio. 
@@ -95,7 +96,7 @@ Las competencias adquiridas a lo largo del desarrollo del presente proyecto fin 
 \section{Metodología}
 \label{sec:metodologia}
 
-Para llevar a cabo este proyecto final de grado se ha optado por seguir una metodología que se iniciaba en una profunda investigación sobre el estado del arte para comprobar la viabilidad del desarrollo del presente proyecto. Posteriormente tras haber elegido el \textit{hardware} necesario para el robot, se decidió usar una metodología experimental que ayudó a decidir el diseño final que tendría el robot. Una vez cumplido esto, se imprimió y se ensambló las distintas piezas. 
+Para llevar a cabo este proyecto se ha optado por seguir una metodología que se iniciaba en una profunda investigación sobre el estado del arte para comprobar la viabilidad del desarrollo del presente proyecto. Posteriormente, tras haber elegido el \textit{hardware} necesario para el robot, se decidió usar una metodología experimental que ayudó a decidir el diseño final que tendría el robot. Una vez cumplido esto, se imprimió y se ensamblaron las distintas piezas. 
 
 
 Para el desarrollo \textit{software} en el robot real se probó y configuró cada sensor y actuador del robot en distintos sistemas operativos y versiones hasta encontrar la mejor que cumpliese todos los objetivos. Una vez conseguido eso, se decidió seguir un ciclo de desarrollo conocido como \ac{PDCA} y así poder ir haciendo pequeños avances consistentes hasta llegar a una versión completamente funcional. Para el desarrollo del robot en simulación también se decidió usar la metodología \acs{PDCA}. Esta metodología sigue los siguientes pasos cíclicos: 
@@ -115,7 +116,7 @@ Para el desarrollo \textit{software} en el robot real se probó y configuró cad
 \section{Plan de trabajo}
 \label{sec:plantrabajo}
 
-El desarrollo del presente proyecto fin de grado ha estado dividido en las siguientes etapas: 
+El desarrollo del presente trabajo fin de grado se ha dividido en las siguientes etapas: 
 
 \begin{enumerate}
 	\item{\textit{Investigación del estado del arte}}. En esta fase inicial, se realizaron búsquedas en plataformas online como Google Scholar y otras relacionadas con el mantenimiento de carreteras con el fin de encontrar soluciones al problema descrito. 
@@ -136,7 +137,7 @@ El desarrollo del presente proyecto fin de grado ha estado dividido en las sigui
 
 \end{enumerate}
 
-Asimismo, a lo largo de todo el proceso se ha ido elaborando la presente memoria. La dinámica seguida con el tutor ha sido de reuniones semanales o cada dos semanas, dependiendo de la disponibilidad por las dos partes. Además en dichas reuniones se comentaban todos los avances realizados y se proponían aspectos a mejorar, sugerencias y se definían nuevos objetivos a conseguir. 
+Asimismo, a lo largo de todo el proceso se ha ido elaborando la presente memoria. La dinámica seguida con el tutor ha sido de reuniones semanales o cada dos semanas, dependiendo de la disponibilidad por las dos partes. Además, en dichas reuniones se comentaban todos los avances realizados y se proponían aspectos a mejorar, sugerencias y se definían nuevos objetivos a conseguir. 
 
 Todo el contenido del proyecto está alojado en un repositorio público de GitHub\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez}}. Además, todo el trabajo diario está documentado en el apartado Wiki\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/wiki}} de dicho repositorio; dividido en \textit{diario} y en \textit{evolución del proyecto}. El apartado de \textit{diario} trata de contar de forma coloquial qué se ha ido realizando cada día o cada pocos días. Por otro lado, en \textit{evolución del proyecto} se puede encontrar pasos de instalación seguidos, explicación detallada de códigos o de conceptos teóricos, entre otros detalles.
 
