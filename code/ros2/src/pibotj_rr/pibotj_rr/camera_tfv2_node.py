@@ -58,8 +58,8 @@ class CameraTFv2Node(Node):
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
         print("set input and output details")
-        print(self.input_details)
-        print(self.output_details)
+        #print(self.input_details)
+        #print(self.output_details)
 
 
         # Maneja la señal de Ctrl+C

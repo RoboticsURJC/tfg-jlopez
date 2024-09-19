@@ -39,7 +39,7 @@ class ControllerWebNode(Node):
         #self.servos_moving = True
     
     def forward(self):
-        self.get_logger().info('Moving forward')
+        #self.get_logger().info('Moving forward')
         # motor izquierdo
         self.set_servo_angle(180, self.servos[0])
         # motor derecho
@@ -47,7 +47,7 @@ class ControllerWebNode(Node):
         #self.servos_moving = True
 
     def backward(self):
-        self.get_logger().info('Moving backward')
+        #self.get_logger().info('Moving backward')
         # motor izquierdo
         self.set_servo_angle(0, self.servos[0])
         # motor derecho
@@ -55,7 +55,7 @@ class ControllerWebNode(Node):
         #self.servos_moving = True
 
     def left(self):
-        self.get_logger().info('Moving left')
+        #self.get_logger().info('Moving left')
         # motor izquierdo
         #self.set_servo_angle(90, self.servos[0])
 
@@ -66,7 +66,7 @@ class ControllerWebNode(Node):
         #self.servos_moving = True
 
     def right(self):
-        self.get_logger().info('Moving right')
+        #self.get_logger().info('Moving right')
         # motor izquierdo
         self.set_servo_angle(180, self.servos[0])
         # motor derecho
@@ -75,7 +75,7 @@ class ControllerWebNode(Node):
 
     def stop(self):
         # Detiene los servos en su posición actual
-        self.get_logger().info('Stopping servos')
+        #self.get_logger().info('Stopping servos')
 
         # Desactiva PWM de los 2 motores para pararlos
         self.servos[0].ChangeDutyCycle(0) 
@@ -87,7 +87,7 @@ class ControllerWebNode(Node):
     def command_callback(self, msg):
         # Obtiene el contenido del mensaje
         command = msg.data  
-        self.get_logger().info(f'Received command: {command}') 
+        #self.get_logger().info(f'Received command: {command}') 
 
 
         if command == "forward":

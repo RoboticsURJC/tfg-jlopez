@@ -22,7 +22,7 @@ class GPSNode(Node):
 
         # Verificar si la línea está vacía
         if not line:
-            self.get_logger().warn("Received an empty line from GPS. Skipping...")
+            #self.get_logger().warn("Received an empty line from GPS. Skipping...")
             return
         
         decoded_line = line.decode('ascii', errors='ignore').strip()
@@ -38,9 +38,9 @@ class GPSNode(Node):
                 if hasattr(message, 'latitude') and hasattr(message, 'longitude'):
                     ros_msg.data = f"Lat: {message.latitude}, Lon: {message.longitude}"
                     self.publisher_.publish(ros_msg)
-                    self.get_logger().info(f"Published GPS data: {ros_msg.data}")
-                else:
-                    self.get_logger().warn(f"NMEA message does not contain GPS data: {decoded_line}")
+                    #self.get_logger().info(f"Published GPS data: {ros_msg.data}")
+                #else:
+                    #self.get_logger().warn(f"NMEA message does not contain GPS data: {decoded_line}")
 
             except pynmea2.ParseError as e:
                 self.get_logger().error(f"Failed to parse NMEA sentence: {e}")

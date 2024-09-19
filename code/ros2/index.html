@@ -18,7 +18,7 @@
             margin: 10px 0;
             font-size: 24px;
         }
-        #map-container, #controls-container {
+        #map-container, #controls-container{
             margin-bottom: 20px;
         }
         #map { 
@@ -33,7 +33,8 @@
         }
         .arrow-controls {
             display: flex;
-            gap: 10px;
+            justify-content: space-between;
+            width: 150px; /* Ajusta el ancho para que las flechas estén alineadas */
         }
         button {
             padding: 20px;
@@ -50,38 +51,31 @@
 </head>
 <body>
 
-    <!-- Título para el mapa -->
     <div id="map-container">
         <h2>Mapa de Seguimiento GPS</h2>
         <div id="map"></div>
     </div>
 
-    <!-- Título para el mando controlador -->
-    <!--div id="controls-container">
-        <h2>Mando Controlador</h2>
-        <div id="controls">
-            <button onclick="sendCommand('forward')">⬆️</button>
-            <div class="arrow-controls">
-                <button onclick="sendCommand('left')">⬅️</button>
-                <button onclick="sendCommand('right')">➡️</button>
-            </div>
-            <button onclick="sendCommand('backward')">⬇️</button>
-        </div>
-    </div-->
-
     <div id="controls-container">
         <h2>Mando Controlador</h2>
         <div id="controls">
-            <button id="forward-btn" onmousedown="startMovement('forward')" onmouseup="stopMovement()">⬆️</button>
+            <button id="forward-btn" onmousedown="startMovement('forward')" onmouseup="stopMovement()" 
+                    ontouchstart="startMovement('forward')" ontouchend="stopMovement()">⬆️</button>
             <div class="arrow-controls">
-                <button id="left-btn" onmousedown="startMovement('left')" onmouseup="stopMovement()">⬅️</button>
-                <button id="right-btn" onmousedown="startMovement('right')" onmouseup="stopMovement()">➡️</button>
+                <button id="left-btn" onmousedown="startMovement('left')" onmouseup="stopMovement()" 
+                        ontouchstart="startMovement('left')" ontouchend="stopMovement()">⬅️</button>
+                <button id="right-btn" onmousedown="startMovement('right')" onmouseup="stopMovement()" 
+                        ontouchstart="startMovement('right')" ontouchend="stopMovement()">➡️</button>
             </div>
-            <button id="backward-btn" onmousedown="startMovement('backward')" onmouseup="stopMovement()">⬇️</button>
+            <button id="backward-btn" onmousedown="startMovement('backward')" onmouseup="stopMovement()" 
+                    ontouchstart="startMovement('backward')" ontouchend="stopMovement()">⬇️</button>
         </div>
     </div>
 
     <script>
+
+        // MAPA
+
         // Crear y configurar el mapa
         const map = L.map('map').setView([0, 0], 13);
 
@@ -89,18 +83,12 @@
             maxZoom: 18,
         }).addTo(map);
 
-        // Array para almacenar las posiciones
-        const positions = [];
-
-        // Conjunto para almacenar los marcadores en el mapa
-        const markers = [];
-
         // Conectar a rosbridge
         const ros = new ROSLIB.Ros({
-            url: 'ws://192.168.5.73:9090'
+            url: 'ws://raspberrypi.local:9090'
         });
 
-        // Suscribirse al tema 'gps_data'
+        // Suscribirse al topic 'gps_data' para ver las coordenadas del gps
         const gpsListener = new ROSLIB.Topic({
             ros: ros,
             name: '/gps_data',
@@ -115,33 +103,11 @@
             const lat = parseFloat(data[0].split(':')[1].trim());
             const lon = parseFloat(data[1].split(':')[1].trim());
 
-            // Si hay más de 50 marcadores, se elimina el antiguo
-            if (positions.length >= 50) {
-                // Eliminar el marcador más antiguo
-                const oldMarker = markers.shift();
-                // Eliminar el marcador del mapa
-                map.removeLayer(oldMarker); 
-                // Eliminar la posición más antigua
-                positions.shift();
-            }
-            positions.push([lat, lon]);
-
-            // Crear un nuevo marcador y añadirlo al mapa
             const newMarker = L.marker([lat, lon]).addTo(map);
-            markers.push(newMarker);
-
-            // Añadir popup al marcador con las coordenadas
-            // EN EL FUTURO CAMBIARLO POR EL ÁREA DETECTADO
             newMarker.bindPopup(`Latitud: ${lat}, Longitud: ${lon}`).openPopup();
-
-            // Opcional: ajustar la vista del mapa para mostrar todos los marcadores
-            if (markers.length > 0) {
-                const latlngs = markers.map(marker => marker.getLatLng());
-                const bounds = L.latLngBounds(latlngs);
-                map.fitBounds(bounds);
-            }
         });
 
+        // MOTORES
 
         const commandTopic = new ROSLIB.Topic({
             ros: ros,
@@ -149,43 +115,36 @@
             messageType: 'std_msgs/String'
         });
 
-
-        // Variables para gestionar el intervalo de comandos
         let commandInterval;
 
-        // Función para empezar a enviar comandos periódicos
+
+        // manda la dirección 'forward', 'backward', 'left', right
         function startMovement(direction) {
             sendCommand(direction);
-            // Seguir enviando comandos cada 100ms
-            commandInterval = setInterval(() => {
+            // REVISAR ESTO
+            //commandInterval = setInterval(() => {
+
+            commandInterval = setTimeout(() => {
                 sendCommand(direction);  
             }, 100); 
+            //console.log("Intervalo iniciado con ID:", commandInterval); 
         }
 
-        // Función para detener el envío de comandos
         function stopMovement() {
-            // Detener el envío periódico
             clearInterval(commandInterval); 
+            //console.log("Intervalo finalizado con ID:", commandInterval);
             sendCommand("stop");  
-
         }
 
-        // Función para enviar comandos de control
+        // se publica la acción que tiene que hacer 'forward', 'backward', ...
         function sendCommand(direction) {
             const command = new ROSLIB.Message({
                 data: direction
             });
-
-            // Crear el tópico para enviar el comando de movimiento
-            //const commandTopic = new ROSLIB.Topic({
-            //    ros: ros,
-            //    name: '/move_command',
-            //    messageType: 'std_msgs/String'
-            //});
-
             commandTopic.publish(command);
             console.log("Sent command:", direction);
         }
+
     </script>
 </body>
 </html>

@@ -5,6 +5,7 @@ from rclpy.node import Node
 from cv_bridge import CvBridge
 import signal
 import sys
+from rclpy.executors import MultiThreadedExecutor
 
 class CameraClass(Node):
     def __init__(self):
