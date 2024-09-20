@@ -11,17 +11,17 @@ Steve Jobs\\
 
 \vspace{1cm}
 
-Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto, en este capítulo se van a tratar las distintas plataformas de desarrollo tanto \textit{hardware} como \textit{software} que han contribuido para lograr dichos objetivos.
+Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto, en este capítulo se van a tratar las distintas plataformas de desarrollo, tanto \textit{hardware} como \textit{software}, que han contribuido en la consecución de dichos objetivos.
 
 \section{Hardware}
 
-En este apartado se van a describir el conjunto de componentes hardware que han sido necesarios adquirir para llevar a cabo este proyecto siempre primando por el menor coste de cada componente.
+En este apartado se van a describir el conjunto de componentes hardware que se han adquirido para llevar a cabo este proyecto, siempre primando el menor coste de cada componente.
 
 \subsection{Raspberry Pi 4}
 
-La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con tres configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene dos conectores micro HDMI, tiene conexión Wifi, Bluetooh 5.0, dos USB 2.0 y dos USB 3.0. Esta versión de Raspberry permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de cuarenta pines y el conector \ac{CSI}. Gracias a esos cuarenta pines, el usuario puede interactuar con una amplia variedad de dispositivos externos como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. 
+La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que es ideal para proyectos de electrónica, programación y educación. Esta, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50GHz fabricado en 28nm y con tres configuraciones de memoria. Además, entre otras características, ahora solo necesita una alimentación de USB-C, tiene dos conectores micro HDMI, conexión Wifi, Bluetooh 5.0, dos USB 2.0 y dos USB 3.0. Esta versión de Raspberry permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de cuarenta pines y el conector \ac{CSI}. Gracias a esos cuarenta pines, el usuario puede interactuar con una amplia variedad de dispositivos externos, como sensores, LEDs y motores, lo que lo hace excelente para proyectos de automatización y robótica. 
 
- Sin embargo, la Raspberry Pi usa procesadores ARM, que, aunque eficientes energéticamente, no están optimizados para realizar tareas intensivas de \ac{IA} como entrenar modelos de redes neuronales o ejecutar inferencias en tiempo real a gran escala. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta pieza fue prestada por la universidad pero tiene un coste de unos 65€. 
+ Sin embargo, la Raspberry Pi usa procesadores ARM, que, aunque eficientes energéticamente, no están optimizados para realizar tareas intensivas de \ac{IA} como entrenar modelos de redes neuronales o ejecutar inferencias en tiempo real a gran escala. En la figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta placa tiene un coste de unos 65€. 
 
 
 \begin{figure} [h!]
@@ -37,9 +37,9 @@ La Raspberry Pi es una computadora de bajo coste y con un tamaño compacto que e
 
 \subsection{Raspberry Pi cámara}
 
-Esta placa que tiene un tamaño de  23.86 x 25 x 9mm (Figura \ref{fig:raspberrycam}), utiliza el sensor de imagen IMX219PQ de Sony que ofrece imágenes de vídeo de alta velocidad y alta sensibilidad. Dispone también de funciones de control automático como el control de exposición, el balance de blancos y la detección de luminancia. Esta cámara usa un cable plano que se conecta directamente al puerto \ac{CSI}.
+Esta cámara (Figura \ref{fig:raspberrycam}) tiene un tamaño de  23.86 x 25 x 9mm, utiliza el sensor de imagen IMX219PQ de Sony que ofrece imágenes de vídeo de alta velocidad y alta sensibilidad. Dispone también de funciones de control automático, como el control de exposición, el balance de blancos y la detección de luminancia. Esta cámara usa un cable plano que se conecta directamente al puerto \ac{CSI}. Su coste aproximado es de 18€. 
 
-Es muy importante destacar su bajo coste, lo que le convierte en muy buena opción para hacer aplicaciones \textit{low-cost}. Sin embargo, el cable de la cámara es bastante sensible a tensiones y torsiones y es debido a ello que aunque la cámara fue prestada por la universidad, fue necesario adquirir una unidad más a través de Amazon con un coste aproximado de 18€.    
+%Es muy importante destacar su bajo coste, lo que le convierte en muy buena opción para hacer aplicaciones \textit{low-cost}. Sin embargo, el cable de la cámara es bastante sensible a tensiones y torsiones y es debido a ello que aunque la cámara fue prestada por la universidad, fue necesario adquirir una unidad más a través de Amazon con un coste aproximado de 18€.    
 
 
 \begin{figure} [h!]
@@ -55,7 +55,7 @@ Es muy importante destacar su bajo coste, lo que le convierte en muy buena opci�
 
 \subsection{GPS NEO 6M}
 
-Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió comprar el módulo NEO 6M (Figura \ref{fig:gps}) cuyo asequible precio en Amazon es de 9€. El módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad. Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones), que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
+Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Este módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad. Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones) que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
 
 Tiene una precisión de aproximadamente 2.5 metros en condiciones abiertas. Soporta hasta veintidós satélites simultáneamente, lo que le permite ofrecer posicionamiento confiable y estable. Asimismo, utiliza comunicación por \ac{UART} comunmente a 9600 bps, lo que facilita su integración con muchas placas del mercado.
 
@@ -72,112 +72,120 @@ Tiene una precisión de aproximadamente 2.5 metros en condiciones abiertas. Sopo
 
 
 \subsection{Sevomotor Estándar Parallax}
-Este tipo de servo tiene un rango de rotación de 0 a 180 grados y es compatible su control usando \ac{PWM} con un pulso alto de 0.75–2.25 ms en intervalos de 20 ms (Figura \ref{fig:parallax} izquierda). Estos tipos de servos son muy comunes para utilizar en aplicaciones de animatrónica y robótica. Sin embargo, su coste ha subido en los últimos años y el precio por unidad ronda los 17€. La universidad ha sido quien me ha prestado estos servomotores pero para esta aplicación no es necesario usarlos y se pueden sustituir por otros de menor precio que cumplan con el requisito de tener rotaciones de 0 a 180 grados (Figura \ref{fig:parallax} derecha), cuyo precio de dos servomotores es de casi 8€. 
+Este tipo de servo tiene un rango de rotación de 0 a 180 grados y es compatible su control usando \ac{PWM} con un pulso alto de 0.75–2.25 ms en intervalos de 20 ms (Figura \ref{fig:parallax} izquierda). Estos tipos de servos son muy comunes en aplicaciones de animatrónica y robótica. Su precio ronda los 17€.
+%Sin embargo, su coste ha subido en los últimos años y el precio por unidad ronda los 17€. La universidad ha sido quien me ha prestado estos servomotores pero para esta aplicación no es necesario usarlos y se pueden sustituir por otros de menor precio que cumplan con el requisito de tener rotaciones de 0 a 180 grados (Figura \ref{fig:parallax} derecha), cuyo precio de dos servomotores es de casi 8€. 
 
 
-\begin{figure}[ht!]
-	\centering
-	\begin{minipage}{0.2\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/parallax.png}
-		\caption*{\centering Parallax $^{\ref{note:enlace38}}$} %\cite{memnon_image}
-	\end{minipage}
-	\hspace{2cm}
-	% aquí incluir iamgen de Guerrero de terracota
-	\begin{minipage}{0.33\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/diyi.png}
-		\caption*{\centering YIDI $^{\ref{note:enlace39}}$} %\cite{gomezguerreros}
-	\end{minipage}
-	\caption{Tipos de Servomotores}
+%\begin{figure}[ht!]
+%	\centering
+%	\begin{minipage}{0.2\linewidth}
+%		\centering
+%		\includegraphics[width=\linewidth]{figs/parallax.png}
+%		\caption*{\centering Parallax $^{\ref{note:enlace38}}$} %\cite{memnon_image}
+%	\end{minipage}
+%	\hspace{2cm}
+%	\begin{minipage}{0.33\linewidth}
+%		\centering
+%		\includegraphics[width=\linewidth]{figs/diyi.png}
+%		\caption*{\centering YIDI $^{\ref{note:enlace39}}$} %\cite{gomezguerreros}
+%	\end{minipage}
+%	\caption{Tipos de Servomotores}
+%	\label{fig:parallax}
+%\end{figure}
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=4cm]{figs/parallax.png}
+	\end{center}
+	\caption{Servomotor Parallax$^{\ref{note:enlace38}}$} 
 	\label{fig:parallax}
-\end{figure}
+\end{figure}\
 
 
 \setcounter{footnote}{38} % Reiniciar la numeración de notas al pie
 \footnotetext[\value{footnote}]{\url{https://www.parallax.com/product/parallax-standard-servo/}\label{note:enlace38}}
 
-\setcounter{footnote}{39} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005004551539283.html?spm=a2g0o.productlist.main.15.bee4rd8Srd8SSO&algo_pvid}\label{note:enlace39}}
+%\setcounter{footnote}{39} % Reiniciar la numeración de notas al pie
+%\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005004551539283.html?spm=a2g0o.productlist.main.15.bee4rd8Srd8SSO&algo_pvid}\label{note:enlace39}}
 
 
 \subsection{Ruedas ActivityBot}
 
-Para implementar las ruedas de este robot, se decidió tomar las ruedas del kit robótico ActivityBot que usan este tipo de ruedas. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel}). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa y el diámetro de la rueda es de 66mm. La universidad ha sido quien me ha prestado su uso pero también se pueden adquirir individualmente con un coste de 4,54€ la unidad.
+Para implementar las ruedas de este robot se decidió tomar las ruedas del kit robótico ActivityBot, que usa este tipo de ruedas. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel}). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa y el diámetro de la rueda es de 66mm. Se pueden adquirir individualmente con un coste de 4,54€ la unidad.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/wheel.png}
 	\end{center}
-	\caption{Rueda ActivityBot$^{\ref{note:enlace40}}$} 
+	\caption{Rueda ActivityBot$^{\ref{note:enlace39}}$} 
 \label{fig:wheel}
 \end{figure}\
 
-\setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace40}}
+\setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace39}}
 
 \subsection{Google Coral USB}
 
 El Google Coral USB Accelerator (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en TensorFlow Lite, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Sólo es compatible con  las versiones desde Python 3.6 hasta la versión 3.9.
 
-Gracias a todas esas características y para mejorar la detección de baches en tiempo real y solventar las limitaciones de la Raspberry Pi, se ha decidido incluir este componente en el proyecto. Su precio es elevado pero se puede conseguir desde 65€.
+Gracias a todas esas características y para mejorar la detección de baches en tiempo real y solventar las limitaciones de la Raspberry Pi, se ha decidido incluir este componente en el proyecto. Su precio es de unos 65€.
  
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecoral.png}
 	\end{center}
-	\caption{Google Coral USB$^{\ref{note:enlace41}}$} 
+	\caption{Google Coral USB$^{\ref{note:enlace40}}$} 
 	\label{fig:googlecoral}
 \end{figure}\
 
-\setcounter{footnote}{41} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace41}}
+\setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace40}}
 
-\subsection{Power Bank}
+\subsection{Power bank}
 
-Para poder alimentar a todos los componentes se ha decidido incluir en el proyecto una \textit{power bank} de bastante capacidad para que permita la autonomía del robot durante mucho tiempo. Para ello se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh cuyas dimensiones son: 73,6 x 27,3 x 154 mm. Cuando la adquirí costaba en torno a unos 20€ pero ahora se puede encontrar hasta por el doble de precio. 
+Para poder alimentar a todos los componentes se ha incluido en el prototipo robótico una \textit{power bank} de bastante capacidad para que permita la autonomía del robot durante un tiempo más que razonable. Para ello se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh, cuyas dimensiones son: 73,6 x 27,3 x 154 mm. Su precio ronda los 30€.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=5cm]{figs/powerbank.png}
 	\end{center}
-	\caption{Xiaomi Powerbank$^{\ref{note:enlace42}}$} 
+	\caption{Xiaomi Powerbank$^{\ref{note:enlace41}}$} 
 	\label{fig:powerbank}
 \end{figure}\
 
-\setcounter{footnote}{42} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://buy.mi.com/es/item/3202200053}\label{note:enlace42}}
+\setcounter{footnote}{41} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://buy.mi.com/es/item/3202200053}\label{note:enlace41}}
 
-\subsection{Rueda Loca}
+\subsection{Rueda loca}
 
-Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo para el robot, es necesario incluir al robot una rueda loca. Tras investigar para encontrar la que mejor encaja, se ha decidido incluir una rueda loca como la que aparece en la Figura \ref{fig:ruedaloca} que tiene las siguientes dimensiones: 5,3 x 2,9 x 2 cm. El precio de una de ellas sale por 1,13€.
+Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo para el robot, es necesario incluir al robot una rueda loca. Tras investigar para encontrar la que mejor encaja, se ha decidido incluir una rueda loca como la que aparece en la Figura \ref{fig:ruedaloca} que tiene las siguientes dimensiones: 5,3 x 2,9 x 2 cm. El precio de una de ellas es de 1,13€.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ruedaloca.png}
 	\end{center}
-	\caption{Rueda loca$^{\ref{note:enlace43}}$} 
+	\caption{Rueda loca$^{\ref{note:enlace42}}$} 
 	\label{fig:ruedaloca}
 \end{figure}\
 
-\setcounter{footnote}{43} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace43}}
+\setcounter{footnote}{42} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace42}}
 
 \subsection{Ordenador principal}
 
-Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la Raspberry Pi y poder comandar acciones al robot; ha sido necesario tener un ordenador principal que permita realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
+Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la Raspberry Pi y poder comandar acciones al robot, ha sido necesario tener un ordenador principal que permita realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
 
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ordenador.png}
 	\end{center}
-	\caption{ASUS VivoBook 14$^{\ref{note:enlace44}}$} 
+	\caption{ASUS VivoBook 14$^{\ref{note:enlace43}}$} 
 	\label{fig:ordenador}
 \end{figure}\
 
-\setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace44}}
+\setcounter{footnote}{43} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace43}}
 
 \begin{table}[H]
 	\begin{center}
@@ -219,12 +227,12 @@ FreeCAD se basa en el concepto de modelado paramétrico, lo que permite modifica
 	\begin{center}
 		\includegraphics[width=3cm]{figs/freecad.png}
 	\end{center}
-	\caption{Logo de Freecad $^{\ref{note:enlace45}}$} 
+	\caption{Logo de Freecad $^{\ref{note:enlace44}}$} 
 	\label{fig:freecad}
 \end{figure}\
 
-\setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace45}}
+\setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace44}}
 
 \subsection{Python}
 
@@ -238,12 +246,12 @@ Debido a esa simplicidad y versatilidad en Raspberry Pi, se considera Python com
 	\begin{center}
 		\includegraphics[width=4cm]{figs/python.png}
 	\end{center}
-	\caption{Logo de Python $^{\ref{note:enlace46}}$} 
+	\caption{Logo de Python $^{\ref{note:enlace45}}$} 
 	\label{fig:python}
 \end{figure}\
 
-\setcounter{footnote}{46} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace46}}
+\setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace45}}
 
 \subsubsection{Software matemático}
 
@@ -269,12 +277,12 @@ OpenCV (Figura \ref{fig:opencv}) es una biblioteca de software de código abiert
 	\begin{center}
 		\includegraphics[width=3cm]{figs/opencv.png}
 	\end{center}
-	\caption{Logo de OpenCV $^{\ref{note:enlace47}}$} 
+	\caption{Logo de OpenCV $^{\ref{note:enlace46}}$} 
 	\label{fig:opencv}
 \end{figure}\
 
-\setcounter{footnote}{47} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace47}}
+\setcounter{footnote}{46} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace46}}
 
 
 \subsection{Ubuntu}
@@ -285,12 +293,12 @@ Ubuntu (Figura \ref{fig:ubuntu}) es una distribución GNU/Linux basada en Debian
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ubuntu.png}
 	\end{center}
-	\caption{Logo de Ubuntu $^{\ref{note:enlace48}}$} 
+	\caption{Logo de Ubuntu $^{\ref{note:enlace47}}$} 
 	\label{fig:ubuntu}
 \end{figure}\
 
-\setcounter{footnote}{48} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace48}}
+\setcounter{footnote}{47} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace47}}
 
 Entre todas las versiones existentes para la realización del proyecto se ha usado Ubuntu 22.04 y Ubuntu 20.04. El ordenador usado (descrito en el Apartado 4.1.9) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB descrito en el Apartado 4.1.6 es compatible con versiones de Python entre 3.6 y 3.9 siendo en Ubuntu 22.04 la instalación de Python por defecto de 3.10 y el intento de cambiar dicha versión generó numerosos problemas de dependencias sobre todo con la versión de ROS2 usada. En muchos foros tampoco aconsejaban modificar las versiones de Python que vienen instaladas por defecto\footnote{\url{https://github.com/google-coral/pycoral/issues/81}} y que la Rasberry únicamente tuviese esta aplicación se recomienda migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/can-an-ros2-node-run-in-a-venv-and-use-a-different-python-than-that-used-by-the}} que usa Python 3.8. A continuación, se va a mostrar un Cuadro \ref{cuadro:ubuntu} con algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
 
@@ -328,14 +336,14 @@ Según se ha explicado en el Apartado 4.2.4, debido a que he necesitado para est
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/foxy.png}
-		\caption*{\centering Ros2 Foxy $^{\ref{note:enlace51}}$} %\cite{memnon_image}
+		\caption*{\centering Ros2 Foxy $^{\ref{note:enlace50}}$} %\cite{memnon_image}
 	\end{minipage}
 	\hspace{2cm}
 	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/humble.png}
-		\caption*{\centering Logo Ros2 Humble $^{\ref{note:enlace52}}$} %\cite{gomezguerreros}
+		\caption*{\centering Logo Ros2 Humble $^{\ref{note:enlace51}}$} %\cite{gomezguerreros}
 	\end{minipage}
 	\caption{Distribuciones de \acs{ROS} 2 usadas}
 	\label{fig:rosdis}
@@ -343,11 +351,11 @@ Según se ha explicado en el Apartado 4.2.4, debido a que he necesitado para est
 
 
 % Definir la primera nota al pie con el número 1
-\setcounter{footnote}{51} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/foxy/Installation.html}\label{note:enlace51}}
+\setcounter{footnote}{50} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/foxy/Installation.html}\label{note:enlace50}}
 
-\setcounter{footnote}{52} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/humble/index.html}\label{note:enlace52}}
+\setcounter{footnote}{51} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ros.org/en/humble/index.html}\label{note:enlace51}}
 
 
 \subsubsection{ROS 2 Control}
@@ -374,12 +382,12 @@ Gazebo (Figura \ref{fig:gazebo}) es un simulador de robots que permite modelar e
 	\begin{center}
 		\includegraphics[width=4cm]{figs/gazebo.png}
 	\end{center}
-	\caption{Logo de Gazebo $^{\ref{note:enlace54}}$} 
+	\caption{Logo de Gazebo $^{\ref{note:enlace53}}$} 
 	\label{fig:gazebo}
 \end{figure}\
 
-\setcounter{footnote}{54} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace54}}
+\setcounter{footnote}{53} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace53}}
 
 \subsection{Herramientas de monitorización}
 
@@ -391,12 +399,12 @@ RViz (Figura \ref{fig:rviz}) es una herramienta de visualización en 3D utilizad
 	\begin{center}
 		\includegraphics[width=4cm]{figs/rviz.png}
 	\end{center}
-	\caption{Logo de Rviz $^{\ref{note:enlace55}}$} 
+	\caption{Logo de Rviz $^{\ref{note:enlace54}}$} 
 	\label{fig:rviz}
 \end{figure}\
 
-\setcounter{footnote}{55} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace55}}
+\setcounter{footnote}{54} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace54}}
 
 \subsubsection{RQT Image View}
 
@@ -415,12 +423,12 @@ Google Colaboratory (Figura \ref{fig:googlecolab}) un servicio en la nube propor
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecolab.png}
 	\end{center}
-	\caption{Logo de Google Colab $^{\ref{note:enlace58}}$} 
+	\caption{Logo de Google Colab $^{\ref{note:enlace57}}$} 
 	\label{fig:googlecolab}
 \end{figure}\
 
-\setcounter{footnote}{58} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace58}}
+\setcounter{footnote}{57} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace57}}
 
 \subsection{YOLOv8}
 
@@ -430,12 +438,12 @@ Google Colaboratory (Figura \ref{fig:googlecolab}) un servicio en la nube propor
 	\begin{center}
 		\includegraphics[width=4cm]{figs/yolov8.png}
 	\end{center}
-	\caption{Logo de YOLOv8 $^{\ref{note:enlace59}}$} 
+	\caption{Logo de YOLOv8 $^{\ref{note:enlace58}}$} 
 	\label{fig:yolov8}
 \end{figure}\
 
-\setcounter{footnote}{59} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace59}}
+\setcounter{footnote}{58} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace58}}
 
 
 \subsection{TensorFlow Lite}
@@ -446,12 +454,12 @@ TensorFlow es una plataforma de código abierto desarrollada por Google para el 
 	\begin{center}
 		\includegraphics[width=6cm]{figs/tflite.png}
 	\end{center}
-	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace60}}$} 
+	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace59}}$} 
 	\label{fig:tflite}
 \end{figure}\
 
-\setcounter{footnote}{60} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace60}}
+\setcounter{footnote}{59} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace59}}
 
 
 \subsection{Interfaz Web}
@@ -471,11 +479,11 @@ OpenStreetMaps (Figura \ref{fig:osm}) un proyecto internacional colaborativo des
 	\begin{center}
 		\includegraphics[width=4cm]{figs/osm.png}
 	\end{center}
-	\caption{Logo de Open Street Maps $^{\ref{note:enlace62}}$} 
+	\caption{Logo de Open Street Maps $^{\ref{note:enlace61}}$} 
 	\label{fig:osm}
 \end{figure}\
 
-\setcounter{footnote}{62} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace62}}
+\setcounter{footnote}{61} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace61}}
 
 Tras conocer todas las plataformas de desarrollo para realizar el presente trabajo fin de grado, es el momento de contar el desarrollo completo llevado a cabo para la construcción hardware del robot que se explicará detalladamente en el siguiente capítulo.
