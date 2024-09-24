@@ -9,9 +9,9 @@ from std_msgs.msg import String
 import signal
 import sys
 
-class CameraTFv2Node(Node):
+class CameraTFv3Node(Node):
     def __init__(self):
-        super().__init__('camera_tf2_node')
+        super().__init__('camera_tf3_node')
         self.cameraDeviceNumber = 0
         self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
         
@@ -21,7 +21,7 @@ class CameraTFv2Node(Node):
             return
 
         self.bridgeObject = CvBridge()
-        self.topicNameFrames = 'camera_tf2'
+        self.topicNameFrames = 'camera_tf3'
         self.queueSize = 20
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
 
@@ -79,6 +79,8 @@ class CameraTFv2Node(Node):
         input_shape = self.input_details[0]['shape']
         height, width = input_shape[1], input_shape[2]
         resized_frame = cv2.resize(frame, (width, height))
+
+
         
         # Convertir la imagen a formato adecuado
         input_data = np.expand_dims(resized_frame, axis=0).astype(np.float32)
@@ -88,7 +90,7 @@ class CameraTFv2Node(Node):
         scale, zero_point = self.input_details[0]['quantization']
         input_data = (input_data / scale + zero_point).astype(np.int8)
 
-        # Realizar la inferencia
+        # Establecer el tensor deentrada y realizar la inferencia
         # self.input_details[0]['index'] devuelve 0
         self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
         self.interpreter.invoke()
@@ -103,23 +105,52 @@ class CameraTFv2Node(Node):
         prediction1 = np.squeeze(output_data1)
     
 
+        # Esto se hace para asegurarse de que el tensor tiene al menos dos canales en su última dimensión. 
         # Suponiendo que el segundo canal es la máscara de baches
         if prediction1.shape[-1] > 1:
              # Extrae la máscara para la clase 'pothole' lo he sacado del .yaml: 0 es la clase que buscamos
-            pothole_mask = prediction1[:, :, 0]
-            print("Before quantification", np.max(pothole_mask))
+
+            # Obtener la escala y el punto cero del tensor de salida
+            scale, zero_point = self.output_details[1]['quantization']
+
+            # Descuantificar la máscara de baches mirando el canal 0 es la clase que buscamos
+
+            pothole_mask = (prediction1[:, :, 0].astype(np.float32) - zero_point) * scale
+            
+            #umbral = 0.9
+            # clase 0 llamada como object
+            #object_mask = pothole_mask > umbral  # Esto te da una máscara binaria (True/False) para la clase 0
+            
+            #print("object mask", object_mask)
+            #object_count = np.sum(object_mask)
+            #print(f"Número de píxeles detectados como clase 0: {object_count}")
+            # Obtener las dimensiones del array
+
+            #altura, ancho = object_mask.shape
+
+            # Imprimir las dimensiones
+            #print(f"Tamaño de object_mask: {altura} filas, {ancho} columnas")
+
+            #print("Before quantification 1 ", np.max(pothole_mask2))
+
         else:
             self.get_logger().error('Unexpected number of channels in prediction output')
             return
 
         # Descuantificar la máscara para su uso
-        scale, zero_point = self.output_details[1]['quantization']
-        pothole_mask = (pothole_mask.astype(np.float32) - zero_point) * scale
+        #scale, zero_point = self.output_details[1]['quantization']
+        #pothole_mask = (pothole_mask.astype(np.float32) - zero_point) * scale
+
+        #scale2, zero_point2 = self.output_details[1]['quantization']
+        #pothole_mask2 = (pothole_mask2.astype(np.float32) - zero_point2) * scale2
 
         
         # Determinar si se ha detectado un bache
         max_value = np.max(pothole_mask)
-        print("Max value after ", max_value)
+        print("Max value after 0 ", max_value)
+
+        #max_value2 = np.max(pothole_mask2)
+        #print("Max value after 1 ", max_value2)
 
         # Predicción del filtro de Kalman
         #x_k_pred, P_k_pred = self.kalman_predict()
@@ -133,7 +164,7 @@ class CameraTFv2Node(Node):
         # MODIFICAR ESTO PARA QUE LA LÓGICA SEA CONSISTENTE
         # ES DECIR, QUE SI VARIOS MENSAJES SON VERDAD, SE CONSIDERE UN BACHE
 
-        if max_value > 1.0 :  
+        if max_value > 0.6 :  
         #if self.x_k[0][0] > 1.0:  
 
             label = "Pothole detected"
@@ -142,7 +173,8 @@ class CameraTFv2Node(Node):
             
             # Crea una función que saque el contorno de la imagen y sus píxeles 
             #newframe = self.get_pothole_coords(frame)
-            
+
+            # resized_frame es la imagen de 192,192
             newframe = self.get_pothole_coords(resized_frame)
 
             # para canny y dilate si que necesitamos la linea de debajo
@@ -154,6 +186,8 @@ class CameraTFv2Node(Node):
             detection_message.data = "No"
 
             #newframe = frame
+
+            # resized_frame es la imagen de 192,192
             newframe = resized_frame
 
 
@@ -161,14 +195,11 @@ class CameraTFv2Node(Node):
         self.detection_publisher.publish(detection_message)
 
         # Añadir la etiqueta al marco
-        cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
-
-
+        #cv2.putText(newframe, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 1)
 
         # Convertir y publicar la imagen con la etiqueta
-        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
- 
+
         self.publisher.publish(ROSImageMessage)
 
     def cleanup(self):
@@ -241,7 +272,7 @@ class CameraTFv2Node(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    publisherObject = CameraTFv2Node()
+    publisherObject = CameraTFv3Node()
 
     try:
         rclpy.spin(publisherObject)
