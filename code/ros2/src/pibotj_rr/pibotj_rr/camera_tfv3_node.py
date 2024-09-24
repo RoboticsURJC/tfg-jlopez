@@ -123,13 +123,8 @@ class CameraTFv3Node(Node):
             detection_message = String()
             detection_message.data = "Yes"
             
-            # resized_frame es la imagen de 192,192
-            #newframe = self.get_pothole_coords(resized_frame)
-
-            # para canny y dilate si que necesitamos la linea de debajo
-            #newframe = cv2.cvtColor(newframe, cv2.COLOR_GRAY2BGR)
-
-            newframe = self.extract_pothole_contours_and_area(pothole_mask,resized_frame)
+            # Dibuja una imagen con el contorno más grande 
+            newframe = self.extract_pothole_contour(pothole_mask,resized_frame)
 
         else:
             label = "No pothole"
@@ -157,44 +152,39 @@ class CameraTFv3Node(Node):
         sys.exit(0)  
 
 
-    def get_contours(self, img, img_contour):
-        contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    #def get_contours(self, img, img_contour):
+    #    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        for cnt in contours:
-            area = cv2.contourArea(cnt)
-            if area > 1500:  # Ignorar pequeños contornos para reducir ruido
-                cv2.drawContours(img_contour, cnt, -1,(255,0,255), 5)
+    #    for cnt in contours:
+    #        area = cv2.contourArea(cnt)
+    #        if area > 1500:  # Ignorar pequeños contornos para reducir ruido
+    #            cv2.drawContours(img_contour, cnt, -1,(255,0,255), 5)
 
-                peri = cv2.arcLength(cnt, True)
-                approx = cv2.approxPolyDP(cnt, 0.02 * peri, True)
+    #            peri = cv2.arcLength(cnt, True)
+    #            approx = cv2.approxPolyDP(cnt, 0.02 * peri, True)
                 
                 #print(len(approx))
                 #print(approx)
  
-    def get_pothole_coords(self, image):
+    #def get_pothole_coords(self, image):
 
-        img_blur = cv2.GaussianBlur(image,(7,7),1)
-        img_gray = cv2.cvtColor(img_blur, cv2.COLOR_BGR2GRAY)
+    #    img_blur = cv2.GaussianBlur(image,(7,7),1)
+    #    img_gray = cv2.cvtColor(img_blur, cv2.COLOR_BGR2GRAY)
 
-        height, width = img_gray.shape
-
-        # Excluye 100 píxeles en la parte superior e inferior no de los lados
-        #min_distance_from_top_bottom = 100  # pixels
-        #mask = np.zeros_like(img_gray)
-        #mask[min_distance_from_top_bottom:height - min_distance_from_top_bottom, 0:width] = 255
+    #    height, width = img_gray.shape
 
         # Se aplica el filtro Canny a la imagen reducida
         # El valor más acercado es mínimo: 80 y máximo: 180
-        img_canny = cv2.Canny(img_gray, 80, 180)
+    #    img_canny = cv2.Canny(img_gray, 80, 180)
         #img_canny_masked = cv2.bitwise_and(img_canny, mask)
-        kernel = np.ones((5,5))
+    #    kernel = np.ones((5,5))
         #img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
-        img_dilated = cv2.dilate(img_canny, kernel, iterations=1)
+    #    img_dilated = cv2.dilate(img_canny, kernel, iterations=1)
 
-        img_contour = image.copy()
-        self.get_contours(img_dilated,img_contour)
+    #    img_contour = image.copy()
+    #    self.get_contours(img_dilated,img_contour)
         
-        return img_contour
+    #    return img_contour
 
 
     def update_ema(self,new_value):
@@ -207,8 +197,9 @@ class CameraTFv3Node(Node):
             self.ema_value = alpha * new_value + (1 - alpha) * self.ema_value
         return self.ema_value
 
-  
+
     #def extract_pothole_contours_and_area(self, pothole_mask, resized_frame):
+        # es necesario escalarlo porque sino aparece en pequeño
     #    scale_factor = 192 / 48
 
         # Binarizar la máscara del bache con un umbral de 0.6
@@ -217,23 +208,29 @@ class CameraTFv3Node(Node):
         # Encontrar los contornos del bache
     #    contours, _ = cv2.findContours(binary_mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        # Calcular el área del bache
-    #    for cnt in contours:
-    #        cnt = cnt * scale_factor
-    #        area = cv2.contourArea(cnt)
-    #        print(f"Área del bache detectado: {area} píxeles cuadrados")
-
         # Dibujar los contornos en la imagen original
     #    img_with_contours = resized_frame.copy()
-    #    cv2.drawContours(img_with_contours, contours, -1, (0, 255, 0), 2)
+
+    #    for cnt in contours:
+            # Escalar los contornos al tamaño correcto
+    #        cnt = cnt.astype(np.float32) * scale_factor
+
+            # Calcular el área del bache
+    #        area = cv2.contourArea(cnt)
+    #        print(f"Área del bache detectado: {area} píxeles cuadrados")
+            # descartan los contornos pequeños
+    #        if area > 200: 
+
+                # Dibujar el contorno escalado en la imagen
+    #            cv2.drawContours(img_with_contours, [cnt.astype(np.int32)], -1, (0, 255, 0), 2)
 
     #    return img_with_contours
 
-    def extract_pothole_contours_and_area(self, pothole_mask, resized_frame):
-        # es necesario escalarlo porque sino aparece en pequeño
+    def extract_pothole_contour(self, pothole_mask, resized_frame):
+        # Escalar para que aparezca en el tamaño correcto
         scale_factor = 192 / 48
 
-        # Binarizar la máscara del bache con un umbral de 0.6
+        # Binarizar la máscara del bache
         _, binary_mask = cv2.threshold(pothole_mask, 0.6, 1, cv2.THRESH_BINARY)
 
         # Encontrar los contornos del bache
@@ -241,6 +238,8 @@ class CameraTFv3Node(Node):
 
         # Dibujar los contornos en la imagen original
         img_with_contours = resized_frame.copy()
+        largest_contour = None
+        largest_area = 0
 
         for cnt in contours:
             # Escalar los contornos al tamaño correcto
@@ -248,12 +247,27 @@ class CameraTFv3Node(Node):
 
             # Calcular el área del bache
             area = cv2.contourArea(cnt)
-            print(f"Área del bache detectado: {area} píxeles cuadrados")
+            #print(f"Área del bache detectado: {area} píxeles cuadrados")
+        
+            # Filtrar contornos pequeños
+            if area > 200:
+                # Mantener el contorno más grande
+                if area > largest_area:
+                    largest_area = area
+                    largest_contour = cnt.astype(np.int32)
 
-            # Dibujar el contorno escalado en la imagen
-            cv2.drawContours(img_with_contours, [cnt.astype(np.int32)], -1, (0, 255, 0), 2)
+        # Dibujar solo el contorno más grande
+        if largest_contour is not None:
+            cv2.drawContours(img_with_contours, [largest_contour], -1, (0, 255, 0), 2)
+            # Convertir a una lista de píxeles (x, y)
+            contour_pixels = largest_contour.reshape(-1, 2) 
+            print(f"Píxeles del contorno más grande: {contour_pixels}")
+            # CALCULAR EL MODELO PIN HOLE AQUÍ
+
+        # a lo mejor solo devolver el píxeles del contorno más grande
 
         return img_with_contours
+
 
 
 
