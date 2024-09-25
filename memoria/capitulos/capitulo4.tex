@@ -1,5 +1,5 @@
 \chapter{Plataforma de desarrollo}
-\label{cap:capitulo3}
+\label{cap:capitulo4}
 
 \begin{flushright}
 \begin{minipage}[]{10cm}
@@ -300,7 +300,7 @@ Ubuntu (Figura \ref{fig:ubuntu}) es una distribución GNU/Linux basada en Debian
 \setcounter{footnote}{47} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace47}}
 
-Entre todas las versiones existentes para la realización del proyecto se ha usado Ubuntu 22.04 y Ubuntu 20.04. El ordenador usado (descrito en el Apartado 4.1.9) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB descrito en el Apartado 4.1.6 es compatible con versiones de Python entre 3.6 y 3.9 siendo en Ubuntu 22.04 la instalación de Python por defecto de 3.10 y el intento de cambiar dicha versión generó numerosos problemas de dependencias sobre todo con la versión de ROS2 usada. En muchos foros tampoco aconsejaban modificar las versiones de Python que vienen instaladas por defecto\footnote{\url{https://github.com/google-coral/pycoral/issues/81}} y que la Rasberry únicamente tuviese esta aplicación se recomienda migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/can-an-ros2-node-run-in-a-venv-and-use-a-different-python-than-that-used-by-the}} que usa Python 3.8. A continuación, se va a mostrar un Cuadro \ref{cuadro:ubuntu} con algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
+Entre todas las versiones existentes para la realización del proyecto se ha usado Ubuntu 22.04 y Ubuntu 20.04. El ordenador usado (descrito en el Apartado 4.1.9) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB descrito en el Apartado 4.1.6 es compatible con versiones de Python entre 3.6 y 3.9 siendo en Ubuntu 22.04 la instalación de Python por defecto de 3.10 y el intento de cambiar dicha versión generó numerosos problemas de dependencias sobre todo con la versión de ROS2 usada. En muchos foros tampoco aconsejaban modificar las versiones de Python que vienen instaladas por defecto\footnote{\url{https://github.com/google-coral/pycoral/issues/81}} y que la Rasberry únicamente tuviese esta aplicación se recomienda migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/}} que usa Python 3.8. A continuación, se va a mostrar un Cuadro \ref{cuadro:ubuntu} con algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
 
 \begin{table}[H]
 	\begin{center}
