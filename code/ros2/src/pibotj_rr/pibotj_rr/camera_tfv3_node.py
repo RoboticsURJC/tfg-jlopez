@@ -109,22 +109,32 @@ class CameraTFv3Node(Node):
         
         # Determinar si se ha detectado un bache
         max_value = np.max(pothole_mask)
-
-        print("Value ", max_value)
-
+        # se usa media móvil exponencial para reducir los picos
         ema_value_updated = self.update_ema(max_value)
 
-        print(ema_value_updated)
+        print("Value ", ema_value_updated)
 
-
-        if max_value > 0.6 :  
+        if ema_value_updated > 0.6 :  
 
             label = "Pothole detected"
             detection_message = String()
             detection_message.data = "Yes"
             
-            # Dibuja una imagen con el contorno más grande 
+            # Dibuja una imagen con el contorno más grande de cada imagen detectada 
             newframe = self.extract_pothole_contour(pothole_mask,resized_frame)
+            # mirar si devolver el contorno y dibujarlo más adelante con la lógica:
+
+            # LÓGICA A SEGUIR: 
+
+            # Detecta bache 
+            # Ver si el área es el más grande (aplicable para las 2)
+            # Calcula área (usando pinhole) y publica área a la localización
+            # Publica localización en la web y se segura que se recibe
+            # Opcional: espera x tiempo por si acaso. Terminar de pensar esto 
+            # Siga con el proceso
+
+
+
 
         else:
             label = "No pothole"
@@ -197,34 +207,6 @@ class CameraTFv3Node(Node):
             self.ema_value = alpha * new_value + (1 - alpha) * self.ema_value
         return self.ema_value
 
-
-    #def extract_pothole_contours_and_area(self, pothole_mask, resized_frame):
-        # es necesario escalarlo porque sino aparece en pequeño
-    #    scale_factor = 192 / 48
-
-        # Binarizar la máscara del bache con un umbral de 0.6
-    #    _, binary_mask = cv2.threshold(pothole_mask, 0.6, 1, cv2.THRESH_BINARY)
-
-        # Encontrar los contornos del bache
-    #    contours, _ = cv2.findContours(binary_mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        # Dibujar los contornos en la imagen original
-    #    img_with_contours = resized_frame.copy()
-
-    #    for cnt in contours:
-            # Escalar los contornos al tamaño correcto
-    #        cnt = cnt.astype(np.float32) * scale_factor
-
-            # Calcular el área del bache
-    #        area = cv2.contourArea(cnt)
-    #        print(f"Área del bache detectado: {area} píxeles cuadrados")
-            # descartan los contornos pequeños
-    #        if area > 200: 
-
-                # Dibujar el contorno escalado en la imagen
-    #            cv2.drawContours(img_with_contours, [cnt.astype(np.int32)], -1, (0, 255, 0), 2)
-
-    #    return img_with_contours
 
     def extract_pothole_contour(self, pothole_mask, resized_frame):
         # Escalar para que aparezca en el tamaño correcto

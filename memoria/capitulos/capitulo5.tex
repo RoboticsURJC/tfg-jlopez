@@ -11,40 +11,169 @@ Antoine de Saint-Exupéry\\
 
 \vspace{1cm}
 
-Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proyecto, en este capítulo se describirá el proceso paso a paso, desde la concepción inicial hasta la construcción y ensamblaje del robot hasta que sea completamente operativo.
+Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proyecto, en este capítulo se describirá el proceso paso a paso, desde la concepción inicial hasta la construcción y ensamblaje, para que sea completamente operativo el robot, incluyendo todos los problemas encontrados así como la solución propuesta.
 
 \section{Geometría del robot}
 
+En este apartado se detalla el proceso llevado a cabo para definir la idea y la forma elegida para el robot.
+
+Mirando robots de campo, todos seguían la estructura de robots con ruedas,.... 
+
+Intentando pensar en un robot de bajo coste, encontré el paper de Julio vega tutor de este tfg, me proporcionó un Pibot y en base de ese robot, lo adapté a mi objetivo principal descrito en el Capítulo 3.
+(incluir imagen de pibot)
+
+Seguí mi investigación y tuve que cambiar la cámara que mirase hacia abajo ya que el objetivo principal lo reeuiere 
+
+Finalmente para poder cumplir con el objetivo principal es necesario definir el esqueleto del robot, los componentes electromecánicos, todos aquellos que no se pueden imprimir. 
+
+
+A TENER EN CUENTA\\
+
+En el apartado de geometría del robot, se deben explicar varios aspectos clave relacionados con la configuración física y espacial del robot. Aquí te doy algunos puntos que podrías incluir:
+
+Estructura física del robot:
+Describir la forma general del robot (por ejemplo, cuadrúpedo, bípedo, con ruedas, etc.).
+Mencionar las dimensiones principales: altura, longitud, ancho, y peso.
+Indicar la distribución de los componentes, como la ubicación de los motores, sensores, cámaras, etc.
+
+Disposición de las articulaciones o partes móviles:
+Explicar la cantidad de grados de libertad (DoF) que tiene el robot y cómo están distribuidos (por ejemplo, en los brazos, piernas, etc.).
+Detallar cómo se conectan las partes móviles del robot, como los servomotores, ruedas o brazos robóticos.
+
+Centro de gravedad y estabilidad:
+Describir cómo se distribuye el peso en el robot, con énfasis en el centro de gravedad.
+Explicar cómo la geometría asegura la estabilidad del robot, especialmente si es un robot móvil o articulado.
+
+Cinemática del robot:
+Si el robot tiene movimiento, explicar la relación entre las partes móviles y cómo interactúan para lograr desplazamiento o maniobras específicas.
+En robots con ruedas o patas, describir la disposición y geometría de las ruedas o extremidades para el desplazamiento.
+
+Ángulos de visión y alcance de sensores o cámaras:
+Describir la disposición geométrica de los sensores y cámaras, cubriendo su campo de visión, ángulo de captura o alcance.
+Mencionar cómo esta disposición afecta la capacidad del robot para interactuar con su entorno.
+
+Espacio de trabajo:
+Si el robot es manipulador, incluir una descripción del espacio de trabajo alcanzable por los brazos o herramientas.
+Explicar los límites geométricos del movimiento y cómo influyen en la capacidad del robot para realizar tareas.
+
+Simetría o asimetría en el diseño:
+Comentar si el robot tiene una geometría simétrica o asimétrica, y cómo esto impacta su funcionalidad o estabilidad.
+
+Este apartado debe centrarse en cómo la forma y disposición del robot afectan su capacidad para realizar tareas, moverse y mantener el equilibrio en su entorno.
 
 
 \section{Elección de componentes hardware}
 
-Explicar todos los componenetes usados: 
+Explicar todos los componentes usados: 
 
-Raspberry Pi, Servomotores Parallax, Raspberry Pi Cámara, Módulo GPS NEO 6M, Google Coral USB, Bola Loca, Powerbank, ruedas activitybot
+Si se incluyen imágenes que sean distintas a las del apartado de plataformas de desarrollo o no incluirlas.
+
+\subsection{Raspberry Pi}
+
+Es muy usado en robótica, ordenador a bordo,....
+
+\subsection{Servomotores Parallax}
+La fuerza, la utilidad que hacen,...
+
+
+\subsection{Ruedas ActivityBot}
+La fuerza, la utilidad que hacen,...
+
+\subsection{Rueda/Bola Loca}
+La fuerza, la utilidad que hacen,...
+
+\subsection{Raspberry Pi Cámara}
+
+Calidad de la imagen, parámetros intrínsecos teóricos,... 
+
+\subsection{GPS NEO 6M}
+Explicar el módulo GPS .... pruebas, alcance... tarda en coger señal, la luz azul...
+
+\subsection{Google Coral USB}
+
+Utilidades, el nivel de cómputo que llega,... inferencias por segundo,tipo de modelos compatible...
+
+\subsection{Powerbank}
+ 
+ Todo el día encendida y ejecutando, aguanta perfectamente... 
+ 
+  
 \section{Bocetos}
 
-incluir los dibujos
+incluir los bocetos hechos a papel
 
-incluir la maqueta 
+incluir la maqueta creada con cartón ya que no disponía de una impresora 3D
 
 \section{Diseño CAD}
 
 Versión 1 
 
+Se decidió diseñar una pieza sólida para facilitar a las personas que no tuvieran muchos conocimientos sobre la materia pero iba a ser muy complicado para imprimirlo
+
 Versión 2
+
+Se decidió dividir en 4 piezas que tienen distintas finalidades:
+
+\subsection{Pieza base}
+Esta parte es la que se encuentran los motores de las ruedas y de la cámara. También, he diseñado un rectángulo para poner la rueda loca que va pegada.
+
+Los 4 rectángulos que hay en los lados de la parte superior, se usa para poder pasar los cables y que no quede feo estéticamente desde fuera. Los 4 círculos son para poner posteriormente los tornillos y sujetar la parte superior.
+
+\subsection{Pieza cámara}
+La cámara va sujeta de forma diagonal, ya que no hace falta poner los 4 tornillos. Esto ocure tanto en la parte de la cámara como en la base del servo que usa.
+
+
+\subsection{Pieza sujección trasera}
+He creado esta prolongación que va fija con un tornillo para evitar que la batería se salga si el terreno no es regular. Tras imprimir y ensamblar la pieza, ha quedado así:
+
+\subsection{Pieza batería}
+
+Esta pieza está diseñada para alojar en su interior una powerbank y he cread unas aberturas para poder sacar la powerbank cuando sea necesaria.
+
+Los huecos laterale son para almacenar los cables y poder unir esta pieza con la base.
+
+En su parte superior, hay 12 agujeros para poder ensamblar con tornillos: raspberry pi, módulo GPS y la antena.
+
 
 
 \section{Impresión y montaje}
 
 
-Dificultades imprimiendo 
+Dificultades imprimiendo: con la impresora del instituto. Incluir características de la impresora y de la impresión usada.
 
 Impresión de Gonzalo
+Características: 
 
-Los tornillos usados, hama  beads...\\\\\\
+Impresora FDM Creality Ender3 V2
+Slicer Software: UltiMaker Cura
+
+QUALITY:
+Layer height: 0.2 mm
+Line width: 0.4 mm
+
+WALLS: 
+Wall thickness: 0.8 mm
+Wall line count: 2
+Z sean alignment: "Sharpest corner"
+Seam corner preference: "Smart hiding"
+
+INFILL:
+Infill density: 15%
+Infill pattern: "Gyroid"
+
+SPEED:
+Print speed: 50 mm/s
+Initial layer speed: 20 mm/s
 
 
+Incluir una lista de los tornillos usados, hama  beads...\\\\
+
+
+
+Incluir imagen completa que incluya el Google Coral USB\\\\\\
+
+
+INCLUIR MUCHAS FOTOS\\\\\\
 
 
 \section{Snippets}
