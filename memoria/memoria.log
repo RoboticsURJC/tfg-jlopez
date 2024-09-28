@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  28 SEP 2024 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  28 SEP 2024 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1834,120 +1834,117 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
+LaTeX Warning: Reference `,' on page 48 undefined on input line 24.
 
 [48
 
 ]
-LaTeX Info: Redefining \. on input line 75.
-LaTeX Info: Redefining \% on input line 75.
- [49]
-LaTeX Info: Redefining \. on input line 112.
-LaTeX Info: Redefining \% on input line 112.
+Underfull \hbox (badness 4108) in paragraph at lines 39--40
+[]\OT1/cmr/m/n/12 ADAPT[]E AL PIBOT PARA QUE CUMPLIESE CON EL OBJETIVO
+ []
+
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+[49]
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
  [50]
-LaTeX Info: Redefining \. on input line 154.
-LaTeX Info: Redefining \% on input line 154.
- [51]
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 Package hyperref Info: bookmark level for unknown code defaults to 0 on input l
-ine 195.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 3514) in paragraph at lines 221--222
+ine 180.
+LaTeX Info: Redefining \. on input line 182.
+LaTeX Info: Redefining \% on input line 182.
+[51]
+Underfull \hbox (badness 3514) in paragraph at lines 206--207
 []\OT1/cmr/m/n/12 Para mencionar identificadores usados en el c^^Sodigo ---como
  nombres de
  []
 
 
-Underfull \hbox (badness 7832) in paragraph at lines 221--222
+Underfull \hbox (badness 7832) in paragraph at lines 206--207
 \OT1/cmr/m/n/12 funciones o variables--- en el texto, usa el entorno literal o 
 verbatim
  []
 
-LaTeX Info: Redefining \. on input line 222.
-LaTeX Info: Redefining \% on input line 222.
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
 [52]
 Package hyperref Info: bookmark level for unknown myequation defaults to 0 on i
-nput line 239.
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
- [53]
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
+nput line 224.
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
+LaTeX Info: Redefining \. on input line 269.
+LaTeX Info: Redefining \% on input line 269.
+[53]
 <figs/roomba.jpg, id=1425, 669.50125pt x 342.27875pt>
 File: figs/roomba.jpg Graphic file (type jpg)
 <use figs/roomba.jpg>
-Package pdftex.def Info: figs/roomba.jpg  used on input line 291.
+Package pdftex.def Info: figs/roomba.jpg  used on input line 276.
 (pdftex.def)             Requested size: 227.62204pt x 116.368pt.
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
-[54 <./figs/roomba.jpg>]
-Underfull \hbox (badness 4981) in paragraph at lines 323--324
+LaTeX Info: Redefining \. on input line 302.
+LaTeX Info: Redefining \% on input line 302.
+ [54 <./figs/roomba.jpg>]
+Underfull \hbox (badness 4981) in paragraph at lines 308--309
 [] []\OT1/cmr/bx/n/12 Referencias bibliogr^^Saficas[] \OT1/cmr/m/n/12 Cita, sob
 re todo en este cap^^S^^Ptulo, referencias
  []
 
 
-Underfull \hbox (badness 2980) in paragraph at lines 323--324
+Underfull \hbox (badness 2980) in paragraph at lines 308--309
 \OT1/cmr/m/n/12 art^^S^^Pculos como [[]], URLs como [[]], tesis como
  []
 
 
-Underfull \hbox (badness 6047) in paragraph at lines 325--326
+Underfull \hbox (badness 6047) in paragraph at lines 310--311
 []\OT1/cmr/m/n/12 Las referencias, con todo su contenido, est^^San recogidas en
  el fichero
  []
 
-LaTeX Info: Redefining \. on input line 329.
-LaTeX Info: Redefining \% on input line 329.
-[55]) (./capitulos/capitulo6.tex
+) (./capitulos/capitulo6.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [56]
+ [55]
 Cap\'{\i }tulo 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
@@ -1969,19 +1966,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[57
+[56
 
 ])
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
- [58]
+ [57]
 No file memoria.ind.
 (./memoria.bbl
 Underfull \hbox (badness 1803) in paragraph at lines 35--39
 []\OT1/cmr/m/n/12 Cuenca S^^Sanchez, A., Farinango Galeano, W., and
  []
 
-[59
+[58
 
 
 ]
@@ -1991,10 +1988,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--75
 
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
-[60])
+[59])
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
- [61] (./memoria.aux
+ [60] (./memoria.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -2005,10 +2002,10 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 (rerunfilecheck)             Checksum: E6030D1A228CE124B7F947AF5A29EFF9;9205.
  ) 
 Here is how much of TeX's memory you used:
- 28729 strings out of 480112
- 540477 string characters out of 5892631
- 1026197 words of memory out of 5000000
- 45719 multiletter control sequences out of 15000+600000
+ 28730 strings out of 480112
+ 540481 string characters out of 5892631
+ 1034197 words of memory out of 5000000
+ 45721 multiletter control sequences out of 15000+600000
  476079 words of font info for 52 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  89i,15n,92p,1263b,1426s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2029,10 +2026,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (76 pages, 19480234 bytes).
+Output written on memoria.pdf (75 pages, 19479181 bytes).
 PDF statistics:
- 1646 PDF objects out of 1728 (max. 8388607)
- 1363 compressed objects within 14 object streams
- 383 named destinations out of 1000 (max. 500000)
+ 1642 PDF objects out of 1728 (max. 8388607)
+ 1360 compressed objects within 14 object streams
+ 382 named destinations out of 1000 (max. 500000)
  897 words of extra memory for PDF output out of 10000 (max. 10000000)
 

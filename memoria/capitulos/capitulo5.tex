@@ -11,62 +11,51 @@ Antoine de Saint-Exupéry\\
 
 \vspace{1cm}
 
-Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proyecto, en este capítulo se describirá el proceso paso a paso, desde la concepción inicial hasta la construcción y ensamblaje, para que sea completamente operativo el robot, incluyendo todos los problemas encontrados así como la solución propuesta.
+Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proyecto, en este capítulo se describirá el proceso paso a paso, desde la concepción inicial hasta la construcción y ensamblaje, para que sea completamente operativo el robot.
 
 \section{Geometría del robot}
 
 En este apartado se detalla el proceso llevado a cabo para definir la idea y la forma elegida para el robot.
 
-Mirando robots de campo, todos seguían la estructura de robots con ruedas,.... 
+La aplicación de este proyecto se encuentra dentro de los robots de campo y es por ello que estos tipos de robots son plataformas que trabajan en entornos no estructurados, como se comentó en el Capítulo 1. Por ello, es necesario que la estructura del robot se asemeje a esos tipos de robots y los más comunes son los robots con ruedas. 
 
-Intentando pensar en un robot de bajo coste, encontré el paper de Julio vega tutor de este tfg, me proporcionó un Pibot y en base de ese robot, lo adapté a mi objetivo principal descrito en el Capítulo 3.
-(incluir imagen de pibot)
+Sin embargo los robots de campo son de gran coste y grandes dimensiones, lo que hacía inviable que entidades con recursos limitados pudieran adquirirlos. Es por ello que se decidió apostar por los robots de bajo coste y gracias a mi tutor Julio Vega y a su Pibot pude centrarme en encontrar la solución final a mi proyecto. 
 
-Seguí mi investigación y tuve que cambiar la cámara que mirase hacia abajo ya que el objetivo principal lo reeuiere 
+Pibot es un proyecto descrito en \ref , trata de un robot de bajo coste ( resumir lo del paper). Otra aplicación que ha encontrado es (nombrar el otro paper y una breve descripción)
+
+(incluir foto del robot) 
+
+
+Tiene los siguientes grados de libertad ... (incluir foto con ellos), dim 20x10x8 cm
+Para poder empezar a trabajar se decidió usar una pieza de aluminio para cambiar la disposición de la cámara y mirase para abajo.
+
+LA IDEA DE TENER QUE EL ROBOT FUERA ASÍ: 
+
+Describir la disposición geométrica de los sensores y cámaras, cubriendo su campo de visión, ángulo de captura o alcance. (espacio del trabajo aplicado al robot), simetría del roboT
+
+
+Los grados de libertad, centro de gravedad y explicar cómo es la estabilidad.
+
+ADAPTÉ AL PIBOT  PARA QUE CUMPLIESE CON EL OBJETIVO PRINCIPAL DEL CAPÍTULO 3 
+
+
+A LO MEJOR HACER UN APARTADO PARA EL ESQUELETO DEL ROBOT 
 
 Finalmente para poder cumplir con el objetivo principal es necesario definir el esqueleto del robot, los componentes electromecánicos, todos aquellos que no se pueden imprimir. 
 
+Distribuir los componentes (foto de fritzing): motores, sensores, cámaras (fotos mías)
 
-A TENER EN CUENTA\\
-
-En el apartado de geometría del robot, se deben explicar varios aspectos clave relacionados con la configuración física y espacial del robot. Aquí te doy algunos puntos que podrías incluir:
-
-Estructura física del robot:
-Describir la forma general del robot (por ejemplo, cuadrúpedo, bípedo, con ruedas, etc.).
-Mencionar las dimensiones principales: altura, longitud, ancho, y peso.
-Indicar la distribución de los componentes, como la ubicación de los motores, sensores, cámaras, etc.
-
-Disposición de las articulaciones o partes móviles:
-Explicar la cantidad de grados de libertad (DoF) que tiene el robot y cómo están distribuidos (por ejemplo, en los brazos, piernas, etc.).
-Detallar cómo se conectan las partes móviles del robot, como los servomotores, ruedas o brazos robóticos.
-
-Centro de gravedad y estabilidad:
-Describir cómo se distribuye el peso en el robot, con énfasis en el centro de gravedad.
-Explicar cómo la geometría asegura la estabilidad del robot, especialmente si es un robot móvil o articulado.
-
-Cinemática del robot:
-Si el robot tiene movimiento, explicar la relación entre las partes móviles y cómo interactúan para lograr desplazamiento o maniobras específicas.
-En robots con ruedas o patas, describir la disposición y geometría de las ruedas o extremidades para el desplazamiento.
-
-Ángulos de visión y alcance de sensores o cámaras:
-Describir la disposición geométrica de los sensores y cámaras, cubriendo su campo de visión, ángulo de captura o alcance.
-Mencionar cómo esta disposición afecta la capacidad del robot para interactuar con su entorno.
-
-Espacio de trabajo:
-Si el robot es manipulador, incluir una descripción del espacio de trabajo alcanzable por los brazos o herramientas.
-Explicar los límites geométricos del movimiento y cómo influyen en la capacidad del robot para realizar tareas.
-
-Simetría o asimetría en el diseño:
-Comentar si el robot tiene una geometría simétrica o asimétrica, y cómo esto impacta su funcionalidad o estabilidad.
-
-Este apartado debe centrarse en cómo la forma y disposición del robot afectan su capacidad para realizar tareas, moverse y mantener el equilibrio en su entorno.
 
 
 \section{Elección de componentes hardware}
 
 Explicar todos los componentes usados: 
 
-Si se incluyen imágenes que sean distintas a las del apartado de plataformas de desarrollo o no incluirlas.
+Si se incluyen imágenes que sean distintas a las del apartado de plataformas de desarrollo o no incluirlas. 
+
+Fotos hechas por mí 
+
+Uso las características que he aprovechado del capítulo 4 
 
 \subsection{Raspberry Pi}
 
@@ -106,11 +95,7 @@ incluir la maqueta creada con cartón ya que no disponía de una impresora 3D
 
 \section{Diseño CAD}
 
-Versión 1 
-
-Se decidió diseñar una pieza sólida para facilitar a las personas que no tuvieran muchos conocimientos sobre la materia pero iba a ser muy complicado para imprimirlo
-
-Versión 2
+Incluir imágenes de los planos, de las piezas con las medidas,...
 
 Se decidió dividir en 4 piezas que tienen distintas finalidades:
 
