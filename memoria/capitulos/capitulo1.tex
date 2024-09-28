@@ -19,9 +19,9 @@ En el presente capítulo se va a abordar el contexto de la robótica, explicando
 \section{La robótica}
 \label{sec:robotica} % etiqueta para luego referenciar esta sección
 
-La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots. Y un robot se podría definir como un sistema informático formado por sensores y actuadores imprecisos, ya que operan en el mundo real que es imperfecto también. Los robots realizan tareas repetitivas, aburridas y peligrosas, y tienen que ser sensibles al entorno. Sin embargo, no existe una definición unívoca al respecto y depende del campo y de la época de la que queramos hablar. Para poder entenderlo, se va a hacer un breve resumen sobre la historia de la robótica.\\
+La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots. Y un robot se podría definir como un sistema informático formado por sensores y actuadores imprecisos, ya que operan en el mundo real que es imperfecto también. Los robots realizan tareas repetitivas, aburridas y peligrosas, y tienen que ser sensibles al entorno. Sin embargo, no existe una definición unívoca al respecto y depende del campo y de la época de la que queramos hablar. Para poder entenderlo, se va a hacer un breve resumen sobre la historia de la robótica.
 
-Desde la antigüedad se han desarrollado ingenios o autómatas, de los cuáles muchos de ellos tenían fines religiosos, como los mostrados en la Figura \ref{fig:ancientrel}.   \\
+Desde la antigüedad se han desarrollado ingenios o autómatas, de los cuáles muchos de ellos tenían fines religiosos, como los mostrados en la Figura \ref{fig:ancientrel}. 
 
 
 \begin{figure}[ht!]
@@ -50,7 +50,7 @@ Desde la antigüedad se han desarrollado ingenios o autómatas, de los cuáles m
 \setcounter{footnote}{2} % Reiniciar la numeración de notas al pie
 \footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/Guerreros_de_terracota}\label{note:enlace2}}
  
-Otras invenciones que destacaban por otras aplicaciones fueron el tornillo de Arquímedes de Siracusa, la eolípila de Herón de Alejandría, el ornitóptero de Leonardo Da Vinci y el hombre de palo de Juanelo Turriano, entre otras.\\
+Otras invenciones que destacaban por otras aplicaciones fueron el tornillo de Arquímedes de Siracusa, la eolípila de Herón de Alejandría, el ornitóptero de Leonardo Da Vinci y el hombre de palo de Juanelo Turriano, entre otras.
 
 En \cite{cuenca2023diseno} se trata el principio de generación hidroeléctrica, tomando en cuenta el modelo tornillo de Arquímedes. También en el artículo \cite{giri2020maquinas} se traza una línea histórica de las máquinas térmicas, teniendo en cuenta a la eolípila. Dichas invenciones aparecen reflejadas en la Figura \ref{fig:ancient}.
 
@@ -87,7 +87,7 @@ En \cite{cuenca2023diseno} se trata el principio de generación hidroeléctrica,
     \label{fig:ancient}
     \end{figure}
 
-Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislamiento y se desarrolló en laboratorios con más gente. El movimiento del positivismo lógico fomentó las investigaciones, ya que este movimiento trataba de dar importancia a la ciencia y dejar de lado la filosofía; también, el contexto de las guerras mundiales y de las bombas nucleares influyeron significativamente en este aspecto. Ya se empieza a acuñar la palabra robot y surge Electro y Sparko de Westinghouse Electric Corporation (Figura \ref{fig:EyS}), tratado en muchas ocasiones como uno de los primeros robots, como se describe en \cite{bidaudrobots}. Un descubrimiento muy destacado fue, y sigue siendo hoy en día, la Leyes de la Robótica de Isaac Asimov, así lo transmite \cite{barcelo2004nuevo}.\\
+Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislamiento y se desarrolló en laboratorios con más gente. El movimiento del positivismo lógico fomentó las investigaciones, ya que este movimiento trataba de dar importancia a la ciencia y dejar de lado la filosofía; también, el contexto de las guerras mundiales y de las bombas nucleares influyeron significativamente en este aspecto. Ya se empieza a acuñar la palabra robot y surge Electro y Sparko de Westinghouse Electric Corporation (Figura \ref{fig:EyS}), tratado en muchas ocasiones como uno de los primeros robots, como se describe en \cite{bidaudrobots}. Un descubrimiento muy destacado fue, y sigue siendo hoy en día, la Leyes de la Robótica de Isaac Asimov, así lo transmite \cite{barcelo2004nuevo}.
 
 
 \begin{figure} [h!]
@@ -109,7 +109,7 @@ Durante el siglo XX la ciencia dejó de ser una actividad desarrollada en aislam
 
 %\ac{} expande las siglas
 %\acs{} no expande las siglas
-\cite{nilsson1984shakey} nos cuenta que en 1969 se construye por el \ac{SRI} Internacional un prototipo experimental llamado Shakey, que era una unidad independiente de un metro y medio, equipado con dos motores, cámara de televisión y una radio conectada a un ordenador, capaz de navegar en entornos cerrados y estructurados de una forma autónoma. Sus objetivos eran aprender del medio y ser capaz de planificar trayectorias de movimiento, y las tareas que le asignaron fueron mover y detectar bloques. Sin embargo, cada movimiento podría tardar más de una hora en computarse y, aún así, podrían producirse fallos. A Shakey se le conoce como el primer robot móvil (Figura \ref{fig:sigloxx} izquierda). \\
+\cite{nilsson1984shakey} nos cuenta que en 1969 se construye por el \ac{SRI} Internacional un prototipo experimental llamado Shakey, que era una unidad independiente de un metro y medio, equipado con dos motores, cámara de televisión y una radio conectada a un ordenador, capaz de navegar en entornos cerrados y estructurados de una forma autónoma. Sus objetivos eran aprender del medio y ser capaz de planificar trayectorias de movimiento, y las tareas que le asignaron fueron mover y detectar bloques. Sin embargo, cada movimiento podría tardar más de una hora en computarse y, aún así, podrían producirse fallos. A Shakey se le conoce como el primer robot móvil (Figura \ref{fig:sigloxx} izquierda). 
 
 %\begin{figure} [h!]
 %	\begin{center}
@@ -156,23 +156,23 @@ Ya a partir de la década de los 80 se decidió que el acceso a los robots fuese
 
 \subsection{Robots industriales}
 
-Los robots industriales son, de forma resumida, brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos como se describe en  \cite{ELZAATARI2019162} (Figura \ref{fig:robindustriales} izquierda). Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA}\footnote{\url{https://www.kuka.com/es-es}} o \acs{ABB}\footnote{\url{https://new.abb.com/es}}.
+Los robots industriales son, de forma resumida, brazos robotizados y manipuladores que tienen más de tres grados de libertad, trabajan en entornos controlados y usan efectores como: pinzas, ventosas. etc. Usan control por posición y planificación de trayectorias para poder controlar dichos brazos y poder realizar operaciones como \textit{pick and place}, ensamble de piezas, entre otros. Una variante de los robots industriales son los cobots: capaces de interactuar y colaborar con humanos como se describe en  \cite{ELZAATARI2019162} (Figura \ref{fig:robindustriales} derecha). Dentro del mercado de los robots industriales se puede ver que tiene proveedores asentados como \acs{KUKA}\footnote{\url{https://www.kuka.com/es-es}} o \acs{ABB}\footnote{\url{https://new.abb.com/es}}.
 
 
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.4\linewidth}
+	\begin{minipage}{0.44\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/brazoIRB140.png}
-		\caption*{Brazo robot ABB IRB 140 $^{\ref{note:enlace5}}$.}
+		\caption*{\centering Brazo robot ABB IRB 140 $^{\ref{note:enlace5}}$}
 
 	\end{minipage}
 	\hspace{1cm}
-	\begin{minipage}{0.5\linewidth}
+	\begin{minipage}{0.4\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cobot.png}
-		\caption*{\centering Cobot de \cite{ELZAATARI2019162}}
+		\caption*{\centering Cobot}
 		
 	\end{minipage}
 	\caption{Robots industriales}
@@ -192,7 +192,7 @@ Los robots de servicios son todos aquellos que no son industriales; por lo tanto
 
 \subsubsection{Robots de limpieza}
 
-En \cite{plaza_robotica_servicio} se define a los robots de limpieza como aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus características, pueden ser capaces de aspirar y fregar el suelo, o de limpiar los cristales de las ventanas. Estos últimos son comunes en edificios que tienen grandes ventanales y un difícil acceso a ellos. Las aspiradoras se encuentran en un mercado mundial asentado cuyos inicios eran aspiradoras que usaban sensores de contacto, encoders y una navegación pseudoaleatoria (Figura \ref{fig:roblimpieza} izquierda), y han evolucionado hasta el punto de usar mapas para poder navegar y poder localizarse. También usan algoritmos sofisticados, como navegación de cobertura por barridos sistemáticos \acs{BSA}, y se componen de sensores más sofisticados, como láseres y cámaras, que son capaces de detectar obstáculos, como calcetines, y ser capaz de esquivarlos (Figura \ref{fig:roblimpieza} derecha).\\
+En \cite{plaza_robotica_servicio} se define a los robots de limpieza como aquellos robots que se encargan de eliminar la suciedad. Dependiendo de sus características, pueden ser capaces de aspirar y fregar el suelo, o de limpiar los cristales de las ventanas. Estos últimos son comunes en edificios que tienen grandes ventanales y un difícil acceso a ellos. Las aspiradoras se encuentran en un mercado mundial asentado cuyos inicios eran aspiradoras que usaban sensores de contacto, encoders y una navegación pseudoaleatoria (Figura \ref{fig:roblimpieza} izquierda), y han evolucionado hasta el punto de usar mapas para poder navegar y poder localizarse. También usan algoritmos sofisticados, como navegación de cobertura por barridos sistemáticos \acs{BSA}, y se componen de sensores más sofisticados, como láseres y cámaras, que son capaces de detectar obstáculos, como calcetines, y ser capaz de esquivarlos (Figura \ref{fig:roblimpieza} derecha).
 
 
 \begin{figure}[ht!]
@@ -251,7 +251,7 @@ Los prototipos nombrados anteriormente suelen ser demostradores tecnológicos qu
 
 \subsubsection{Robots de salud}
 
-Los robots de salud sirven para mejorar la calidad de la atención médica y apoyar a los profesionales de la salud en diversas tareas. De esas tareas se pueden enumerar las siguientes: telepresencia, asistentes personales, cirugía, desinfección, esterilización, transporte interno y rehabilitación. De este gran abanico de tareas se puede destacar algunas aplicaciones que se puede ver en la Figura \ref{fig:robsalud}.\\
+Los robots de salud sirven para mejorar la calidad de la atención médica y apoyar a los profesionales de la salud en diversas tareas. De esas tareas se pueden enumerar las siguientes: telepresencia, asistentes personales, cirugía, desinfección, esterilización, transporte interno y rehabilitación. De este gran abanico de tareas se puede destacar algunas aplicaciones que se puede ver en la Figura \ref{fig:robsalud}.
 
 \begin{figure}[ht!]
 	\centering
@@ -329,7 +329,7 @@ Los robots de logística son sistemas automatizados diseñados para mejorar la e
 
 En \cite{thorpe2003field} se define a los robots de campo como la automatización de muchas plataformas terrestres, marítimas y aéreas en aplicaciones como la minería, la manipulación de carga, la agricultura, la exploración y explotación submarina, las carreteras, la exploración planetaria, la vigilancia costera y el rescate, entre otros. La robótica de campo se caracteriza por la aplicación de los principios robóticos más avanzados en cuanto a sensado, control y razonamiento en entornos no estructurados y difíciles. El atractivo de la robótica de campo es que es una ciencia desafiante, involucra los últimos principios de ingeniería y diseño de sistemas, y ofrece la verdadera posibilidad de que los principios robóticos hagan una contribución económica y social sustancial en muchas áreas de aplicación diferentes. En general, los robots de campo son plataformas móviles que trabajan al aire libre, a menudo produciendo interacciones fuertes con sus entornos, sin supervisión humana.
 
-En los últimos años se ha podido notar un gran progreso en el desarrollo y la implementación de sistemas robóticos de campo. En la Figura \ref{fig:robcampo} se pueden ver ejemplos al respecto. Por contra, debido a las condiciones que se tienen que someter estos robots, su coste es elevado e imposibilita que su uso se pueda extender a aquellos lugares que necesiten de su servicio y que tienen bajos recursos. Es por esto que existe la creciente necesidad de que, para ciertas aplicaciones que no tienen condiciones tan extremas, se creen robots asequibles que puedan lidiar con determinadas tareas. A continuación veremos este campo de investigación.  \\
+En los últimos años se ha podido notar un gran progreso en el desarrollo y la implementación de sistemas robóticos de campo. En la Figura \ref{fig:robcampo} se pueden ver ejemplos al respecto. Por contra, debido a las condiciones que se tienen que someter estos robots, su coste es elevado e imposibilita que su uso se pueda extender a aquellos lugares que necesiten de su servicio y que tienen bajos recursos. Es por esto que existe la creciente necesidad de que, para ciertas aplicaciones que no tienen condiciones tan extremas, se creen robots asequibles que puedan lidiar con determinadas tareas. A continuación veremos este campo de investigación. 
 
 
 \begin{figure}[ht!]
@@ -365,7 +365,6 @@ En los últimos años se ha podido notar un gran progreso en el desarrollo y la 
 
 \setcounter{footnote}{18} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://advanced.farm/technology/strawberry-harvester/}\label{note:enlace18}}
-
 \setcounter{footnote}{19} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.komatsu.com/en/technology/smart-mining/loading-and-haulage/autonomous-haulage-system/}\label{note:enlace19}}
 \setcounter{footnote}{20} % Establecer la numeración de la siguiente nota al pie
@@ -388,7 +387,7 @@ Los robots de bajo coste son aquellos robots diseñados y fabricados con el obje
 \end{itemize}\
 
 
-En resumen, los robots de bajo coste permiten la democratización de la tecnología robótica, facilitando su acceso a un público más amplio y fomentando la innovación y el aprendizaje en diferentes campos. En la Figura \ref{fig:roblowcost} se puede apreciar una aplicación real reciente de la robótica de bajo coste de la universidad \textit{Carnegie Mellon} descrita en el artículo \cite{shaw2024leap}.\\ 
+En resumen, los robots de bajo coste permiten la democratización de la tecnología robótica, facilitando su acceso a un público más amplio y fomentando la innovación y el aprendizaje en diferentes campos. En la Figura \ref{fig:roblowcost} se puede apreciar una aplicación real reciente de la robótica de bajo coste de la universidad \textit{Carnegie Mellon} descrita en el artículo \cite{shaw2024leap}.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -427,10 +426,13 @@ Otra entidad relevante es la \ac{AEC}\footnote{\url{https://www.aecarretera.com/
 En el ámbito de la conservación propiamente dicha, la \ac{ACEX}\footnote{\url{https://www.acex.eu/la-asociacion/}}, creada en 1995, agrupa a empresas dedicadas a la conservación de carreteras y se centra en promover la eficiencia y sostenibilidad en el mantenimiento de estas infraestructuras, así como en mejorar la seguridad vial y laboral. También es reseñable destacar sus premios anuales\footnote{\url{https://www.acex.eu/premios-acex/}} que permiten avanzar a pasos agigantados en materia de conservación y seguridad vial.
 
 
-Sin embargo, parece ser que la labor de todas estas plataformas no es suficiente. Noelia Soage\footnote{\url{https://www.abc.es/motor/reportajes/emisiones-accidentes-aumento-mal-estado-carreteras-senales-20230309230204-nt.html?ref=https\%3A\%2F\%2Fwww.google.com\%2F}}, redactora en ABC Motor, cuenta que se estuvieron inspeccionando 13.000 kilómetros del total de la red de carreteras de España de las cuáles, se presentan graves deterioros en más del 50\%; los cuales pueden afectar a la estructura o a la superficie de la plataforma, comprometiendo la comodidad, eficiencia y seguridad de la circulación.
+Sin embargo, parece ser que la labor de todas estas plataformas no es suficiente. Noelia Soage$^{\ref{note:enlace27}}$, redactora en ABC Motor, cuenta que se estuvieron inspeccionando 13.000 kilómetros del total de la red de carreteras de España de las cuáles, se presentan graves deterioros en más del 50\%; los cuales pueden afectar a la estructura o a la superficie de la plataforma, comprometiendo la comodidad, eficiencia y seguridad de la circulación.
 
 
-Para poder dar mayor contexto a los deterioros, es necesario hacer una clasificación de ellos sabiendo que se pueden presentar en pavimentos flexibles, semiflexibles y semirrígidos urbanos, y los podemos clasificar en cuatro grandes categorías: agrietamiento (Figura \ref{fig:agrietamiento}), degradación del material de la capa de rodadura (Figura \ref{fig:desprendimiento}), degradación de la capa de rodadura sin degradación de material (Figura \ref{fig:deformacion}) y otro tipo de daños (Figura \ref{fig:otro}). Todo está esquematizado en la Figura \ref{fig:diagrama}.\\
+Para poder dar mayor contexto a los deterioros, es necesario hacer una clasificación de ellos sabiendo que se pueden presentar en pavimentos flexibles, semiflexibles y semirrígidos urbanos, y los podemos clasificar en cuatro grandes categorías: agrietamiento (Figura \ref{fig:agrietamiento}), degradación del material de la capa de rodadura (Figura \ref{fig:desprendimiento}), degradación de la capa de rodadura sin degradación de material (Figura \ref{fig:deformacion}) y otro tipo de daños (Figura \ref{fig:otro}). Todo está esquematizado en la Figura \ref{fig:diagrama}.
+
+\setcounter{footnote}{27} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.abc.es/motor/reportajes/emisiones-accidentes-aumento-mal-estado-carreteras-senales-20230309230204-nt.html?ref=https}\label{note:enlace27}}
 
 \begin{figure}[H]
 	\centering
@@ -630,7 +632,7 @@ Para poder dar mayor contexto a los deterioros, es necesario hacer una clasifica
 
 Tras haber mostrado los tipos de deterioros que existen, nos centramos en el mantenimiento de uno de ellos, ya que el problema es muy grande e intentar tratar todos los casos se torna inabarcable para este proyecto. Así, de todos los tipos mostrados, se van a tratar los baches.\\\\\\  % hay 3 saltos de página
 
-Una vez conocido el deterioro en que se va a centrar este proyecto, los organismos existentes en España y todas las oportunidades que un robot \textit{low-cost} ofrece para el mantenimiento de carreteras, se puede decir que este proyecto se centra en el desarrollo de un robot de campo de tamaño compacto y bajo coste, diseñado para ser fácil de usar y controlar. El robot ha sido fabricado completamente mediante impresión 3D y está equipado con herramientas ampliamente utilizadas en el campo de la robótica. Esta combinación permite que cualquier persona, incluso sin un conocimiento profundo en robótica, pueda replicar el robot y ponerlo en funcionamiento. En el próximo capítulo, se presentarán diversos prototipos y futuras aplicaciones que guardan una cierta relación con el tipo de robot desarrollado.\\
+Una vez conocido el deterioro en que se va a centrar este proyecto, los organismos existentes en España y todas las oportunidades que un robot \textit{low-cost} ofrece para el mantenimiento de carreteras, se puede decir que este proyecto se centra en el desarrollo de un robot de campo de tamaño compacto y bajo coste, diseñado para ser fácil de usar y controlar. El robot ha sido fabricado completamente mediante impresión 3D y está equipado con herramientas ampliamente utilizadas en el campo de la robótica. Esta combinación permite que cualquier persona, incluso sin un conocimiento profundo en robótica, pueda replicar el robot y ponerlo en funcionamiento. En el próximo capítulo, se presentarán diversos prototipos y futuras aplicaciones que guardan una cierta relación con el tipo de robot desarrollado.
 
 %La conservación de las carreteras es un aspecto fundamental para garantizar la seguridad vial, la eficiencia del transporte y la durabilidad de las infraestructuras viarias. En España, donde la red de carreteras juega un papel crucial en la conectividad y el desarrollo económico, el mantenimiento adecuado de estas infraestructuras es vital para asegurar un tránsito seguro y fluido, así como para prevenir accidentes y reducir los costos derivados del deterioro del pavimento.
 

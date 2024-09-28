@@ -6,7 +6,7 @@
 \contentsline {subsubsection}{Robots de limpieza}{5}{subsubsection*.17}%
 \contentsline {subsubsection}{Robots de entretenimiento}{6}{subsubsection*.19}%
 \contentsline {subsubsection}{Robots de salud}{7}{subsubsection*.22}%
-\contentsline {subsubsection}{Robots de logística}{8}{subsubsection*.24}%
+\contentsline {subsubsection}{Robots de logística}{7}{subsubsection*.24}%
 \contentsline {section}{\numberline {1.2}Robots de campo}{8}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Robots de bajo coste}{9}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Conservación de carreteras en España}{12}{section.1.4}%
@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {4.1.5}Ruedas ActivityBot}{34}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Google Coral USB}{34}{subsection.4.1.6}%
 \contentsline {subsection}{\numberline {4.1.7}Power bank}{35}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Rueda loca}{36}{subsection.4.1.8}%
+\contentsline {subsection}{\numberline {4.1.8}Rueda loca}{35}{subsection.4.1.8}%
 \contentsline {subsection}{\numberline {4.1.9}Ordenador principal}{36}{subsection.4.1.9}%
 \contentsline {section}{\numberline {4.2}Software}{37}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}FreeCAD}{37}{subsection.4.2.1}%
@@ -55,33 +55,33 @@
 \contentsline {subsection}{\numberline {4.2.11}Interfaz Web}{46}{subsection.4.2.11}%
 \contentsline {subsubsection}{ROS2bridge Server}{46}{subsubsection*.87}%
 \contentsline {subsubsection}{OpenStreetMaps}{46}{subsubsection*.88}%
-\contentsline {chapter}{\numberline {5}Implementación hardware del robot}{47}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Geometría del robot}{47}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Elección de componentes hardware}{48}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Raspberry Pi}{48}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Servomotores Parallax}{48}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Ruedas ActivityBot}{49}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Rueda/Bola Loca}{49}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Raspberry Pi Cámara}{49}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}GPS NEO 6M}{49}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}Google Coral USB}{49}{subsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.2.8}Powerbank}{49}{subsection.5.2.8}%
-\contentsline {section}{\numberline {5.3}Bocetos}{49}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Diseño CAD}{49}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Pieza base}{49}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Pieza cámara}{50}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Pieza sujección trasera}{50}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Pieza batería}{50}{subsection.5.4.4}%
-\contentsline {section}{\numberline {5.5}Impresión y montaje}{50}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Snippets}{51}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Verbatim}{51}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Ecuaciones}{52}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Tablas o cuadros}{52}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Segunda sección}{53}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Números}{53}{subsection.5.10.1}%
-\contentsline {subsection}{\numberline {5.10.2}Listas}{53}{subsection.5.10.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{54}{paragraph*.96}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{55}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{55}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{56}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{57}{appendix*.97}%
+\contentsline {chapter}{\numberline {5}Implementación hardware del robot}{48}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Geometría del robot}{48}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Elección de componentes hardware}{49}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Raspberry Pi}{50}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Servomotores Parallax}{50}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Ruedas ActivityBot}{50}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Rueda/Bola Loca}{50}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Raspberry Pi Cámara}{50}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}GPS NEO 6M}{50}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Google Coral USB}{50}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}Powerbank}{50}{subsection.5.2.8}%
+\contentsline {section}{\numberline {5.3}Bocetos}{50}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Diseño CAD}{50}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Pieza base}{51}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Pieza cámara}{51}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Pieza sujección trasera}{51}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Pieza batería}{51}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Impresión y montaje}{51}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Snippets}{52}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Verbatim}{53}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Ecuaciones}{53}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Tablas o cuadros}{54}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Segunda sección}{54}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Números}{55}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Listas}{55}{subsection.5.10.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{55}{paragraph*.96}%
+\contentsline {chapter}{\numberline {6}Conclusiones}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{57}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Corrector ortográfico}{58}{section.6.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{59}{appendix*.97}%

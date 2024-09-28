@@ -149,8 +149,19 @@ Vega, J. (2019).
   {Acci\'on} 2019'.
 \newblock URJC, on-line newspaper interview.
 
-\bibitem[Vega and Ca\~nas, 2019]{vega19b}
-Vega, J. and Ca\~nas, J. (2019).
+\bibitem[Vega and Ca\~nas, 2018]{vega18c}
+Vega, J. and Ca\~nas, J. (2018).
+\newblock {PiBot}: An open low-cost robotic platform with camera for {STEM}
+  education.
+\newblock {\em Electronics}, 7:430--446.
+
+\bibitem[Vega and Ca\~nas, 2019a]{vega19d}
+Vega, J. and Ca\~nas, J. (2019a).
+\newblock Open vision system for low-cost {Robotics} education.
+\newblock {\em Electronics}, 8:1295--1315.
+
+\bibitem[Vega and Ca\~nas, 2019b]{vega19b}
+Vega, J. and Ca\~nas, J. (2019b).
 \newblock {PyBoKids}: An innovative python-based educational framework using
   real and simulated {Arduino} robots.
 \newblock {\em Electronics}, 8:899--915.
