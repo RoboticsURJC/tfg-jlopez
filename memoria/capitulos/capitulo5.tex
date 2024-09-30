@@ -17,49 +17,64 @@ Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proye
 
 En este apartado se detalla el proceso llevado a cabo para definir la idea y la forma elegida para el robot.
 
-La aplicación de este proyecto se encuentra dentro de los robots de campo y es por ello que estos tipos de robots son plataformas que trabajan en entornos no estructurados, como se comentó en el Capítulo 1. Por ello, es necesario que la estructura del robot se asemeje a esos tipos de robots y los más comunes son los robots con ruedas. 
+La aplicación de este proyecto se encuentra dentro de los robots de campo y es por ello que estos tipos de robots son mayoritariamente plataformas que trabajan en entornos no estructurados, como se comentó en el Capítulo 1. Por ello, es necesario que la estructura del robot se asemeje a esos tipos de robots y los más comunes son los robots con ruedas. 
 
-Sin embargo los robots de campo son de gran coste y grandes dimensiones, lo que hacía inviable que entidades con recursos limitados pudieran adquirirlos. Es por ello que se decidió apostar por los robots de bajo coste y gracias a mi tutor Julio Vega y a su Pibot pude centrarme en encontrar la solución final a mi proyecto. 
+Sin embargo los robots de campo son de gran coste y de grandes dimensiones, lo que hacía inviable que entidades con recursos limitados pudieran adquirirlos. Es por ello que se decidió apostar por los robots de bajo coste y gracias a Julio Vega y a su Pibot se pudo encontrar una primera idea hasta conseguir la solución final al proyecto. 
 
-Pibot es un proyecto descrito en \ref , trata de un robot de bajo coste (resumir lo del paper). Otra aplicación que ha encontrado es (nombrar el otro paper y una breve descripción)
+El artículo \cite{vega18c} presenta PiBot (Figura \ref{fig:pibot}), una plataforma robótica educativa  de 20x10x8 cm basada en Raspberry Pi 3 y PiCamera, diseñada para facilitar la enseñanza de robótica a estudiantes de secundaria. Ofrece una infraestructura de \textit{software} abierta en Python y comandos de alto nivel para facilitar el aprendizaje. Además, incluye un modelo 3D imprimible y una versión simulada en Gazebo, disponibles públicamente para que estudiantes y escuelas puedan aprender y practicar robótica sin necesidad del robot físico. 
 
-(incluir foto del robot) 
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=6cm]{figs/cap5/Original.png}
+	\end{center}
+	\caption{Pibot} 
+	\label{fig:pibot}
+\end{figure}
 
-
-Tiene los siguientes grados de libertad ... (incluir foto con ellos), dim 20x10x8 cm
-Para poder empezar a trabajar se decidió usar una pieza de aluminio para cambiar la disposición de la cámara y mirase para abajo.
-
-LA IDEA DE TENER QUE EL ROBOT FUERA ASÍ: 
-
-Describir la disposición geométrica de los sensores y cámaras, cubriendo su campo de visión, ángulo de captura o alcance. (espacio del trabajo aplicado al robot), simetría del roboT
-
-
-Los grados de libertad, centro de gravedad y explicar cómo es la estabilidad.
-
-ADAPTÉ AL PIBOT  PARA QUE CUMPLIESE CON EL OBJETIVO PRINCIPAL DEL CAPÍTULO 3 
+Para poder continuar con la investigación de este proyecto, se creó una estructura de metal para que la cámara cambiase su disposición, mirase hacia el suelo y estuviese del derecho para evitar futuros cálculos innecesarios. El diseño hasta ese momento quedó como muestra la Figura \ref{fig:pibotmetal}.
 
 
-A LO MEJOR HACER UN APARTADO PARA EL ESQUELETO DEL ROBOT 
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/cap5/new.png}
+	\end{center}
+	\caption{Pibot con cámara modificada} 
+	\label{fig:pibotmetal}
+\end{figure}
 
-Finalmente para poder cumplir con el objetivo principal es necesario definir el esqueleto del robot, los componentes electromecánicos, todos aquellos que no se pueden imprimir. 
 
-Distribuir los componentes (foto de fritzing): motores, sensores, cámaras (fotos mías)
+De este robot interesa que tiene dos grados de libertad para el movimiento del robot, ya que cuenta con dos ruedas con motores independientes y una rueda loca, lo que le permite desplazarse a lo largo del eje X como girar sobre sí misma. Otro grado de libertad que ha resultado útil para la aplicación de este proyecto es el giro sobre el eje Z del motor sobre el que está montada la cámara y poder aumentar el campo de visión. Así lo muestra la Figura \ref{fig:esquemaDOF}, señalados en rojo.
 
 
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=9cm]{figs/cap5/dof.jpg}
+	\end{center}
+	\caption{Esquema de los grados de libertad de Pibot} 
+	\label{fig:esquemaDOF}
+\end{figure}
+
+
+Para poder cumplir con el objetivo principal descrito en el Capítulo 3, es necesario añadir una serie de componentes \textit{hardware} para poder formar el esqueleto completo del robot.
 
 \section{Elección de componentes hardware}
 
-Explicar todos los componentes usados: 
+Una vez definida la geometría del robot, es necesario elegir los componentes que más se ajustan para poder confeccionar el esqueleto del robot. Para ellos se ha creado un esquema (Figura \ref{fig:fritzzing}) que muestra todos los componentes necesarios y sus conexiones. A continuación, se van a explicar cada uno de los componentes \textit{hardware} elegidos.  
 
-Si se incluyen imágenes que sean distintas a las del apartado de plataformas de desarrollo o no incluirlas. 
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=9cm]{figs/cap5/modelocompleto_bb.jpg}
+	\end{center}
+	\caption{Esquema de conexiones del robot} 
+	\label{fig:fritzzing}
+\end{figure}
 
-Fotos hechas por mí 
 
-Uso las características que he aprovechado del capítulo 4 
-
-\subsection{Raspberry Pi}
+\subsection{Raspberry Pi 4}
 
 Es muy usado en robótica, ordenador a bordo,....
+
+
 
 \subsection{Servomotores Parallax}
 La fuerza, la utilidad que hacen,...
@@ -68,7 +83,7 @@ La fuerza, la utilidad que hacen,...
 \subsection{Ruedas ActivityBot}
 La fuerza, la utilidad que hacen,...
 
-\subsection{Rueda/Bola Loca}
+\subsection{Rueda Loca}
 La fuerza, la utilidad que hacen,...
 
 \subsection{Raspberry Pi Cámara}
@@ -84,17 +99,103 @@ Utilidades, el nivel de cómputo que llega,... inferencias por segundo,tipo de m
 
 \subsection{Powerbank}
  
- Todo el día encendida y ejecutando, aguanta perfectamente... 
+ Todo el día encendida y ejecutando, aguanta perfectamente... \\
  
   
+  
+ Distribuir los componentes (foto de fritzing): motores, sensores, cámaras (fotos mías)
+ 
+ 
+ Explicar todos los componentes usados: 
+ 
+ Si se incluyen imágenes que sean distintas a las del apartado de plataformas de desarrollo o no incluirlas. 
+ 
+ Fotos hechas por mí 
+ 
+ Uso las características que he aprovechado del capítulo 4 
+ 
+ 
 \section{Bocetos}
 
-incluir los bocetos hechos a papel
+La realización de bocetos es una etapa fundamental en el proceso de diseño que se realiza antes de iniciar el modelado en 3D, ya que su propósito es obtener una visión clara de la estructura y disposición de los componentes que conforman el robot. Una vez que se ha definido el esqueleto completo que este necesitará, es el momento de crear una serie de bocetos (Figura \ref{fig:bocetos}) que permitirán afinar los detalles antes de realizar el diseño en 3D.
 
-incluir la maqueta creada con cartón ya que no disponía de una impresora 3D
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/prototipo_laser.jpeg}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/prototipo_sin_laser.jpeg}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_papel.jpeg}
+	\end{minipage}
+	\caption{Bocetos creados a mano}
+	\label{fig:bocetos}
+\end{figure}
+
+Antes de realizar el diseño \acs{CAD} de las piezas, se creó una maqueta a tamaño real (Figuras \ref{fig:maqueta1} y \ref{fig:maqueta2}) para poder tener una idea de cómo sería la aplicación final y así intentar no malgastar material de impresión. 
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton1.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton2.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton3.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Maqueta en proceso}
+	\label{fig:maqueta1}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.44\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton4.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton5.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton6.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/boceto_carton7.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Maqueta final}
+	\label{fig:maqueta2}
+\end{figure}
 
 \section{Diseño CAD}
 
+Para hacer el diseño CAD y la maqueta explicada en el apartado anterior fue necesario crear unos planos y usando un calibre(Fig) poder obtener medidas precisas de cada componente
 Incluir imágenes de los planos, de las piezas con las medidas,...
 
 Se decidió dividir en 4 piezas que tienen distintas finalidades:
@@ -160,6 +261,10 @@ Incluir imagen completa que incluya el Google Coral USB\\\\\\
 
 INCLUIR MUCHAS FOTOS\\\\\\
 
+
+
+CApítulo 6: incluir lo de openvision paper\\
+capitulo 7: explicar experimentos impresora \\
 
 \section{Snippets}
 
