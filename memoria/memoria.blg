@@ -3,6 +3,12 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: memoria.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
+Warning--I didn't find a database entry for "vega12e"
+Warning--I didn't find a database entry for "vega19b"
+Warning--I didn't find a database entry for "vega19a"
+Warning--I didn't find a database entry for "vega18b"
+Warning--I didn't find a database entry for "vega18a"
+Warning--I didn't find a database entry for "vega08b"
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1023 of file apalike.bst
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
@@ -12,48 +18,47 @@ Warning--empty journal in bidaudrobots
 Warning--there's a number but no volume in cuenca2023diseno
 Warning--empty journal in giri2020maquinas
 Warning--empty journal in llopis2020deterioros
-Warning--empty institution in vega15
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1098 of file apalike.bst
-You've used 31 entries,
+You've used 24 entries,
             1935 wiz_defined-function locations,
-            645 strings with 9295 characters,
-and the built_in function-call counts, 12307 in all, are:
-= -- 1185
-> -- 563
-< -- 24
-+ -- 198
-- -- 192
-* -- 1027
-:= -- 2176
-add.period$ -- 95
-call.type$ -- 31
-change.case$ -- 250
-chr.to.int$ -- 29
-cite$ -- 37
-duplicate$ -- 467
-empty$ -- 805
-format.name$ -- 240
-if$ -- 2401
-int.to.chr$ -- 3
+            619 strings with 8265 characters,
+and the built_in function-call counts, 10045 in all, are:
+= -- 956
+> -- 497
+< -- 17
++ -- 176
+- -- 172
+* -- 871
+:= -- 1766
+add.period$ -- 72
+call.type$ -- 24
+change.case$ -- 204
+chr.to.int$ -- 24
+cite$ -- 29
+duplicate$ -- 367
+empty$ -- 641
+format.name$ -- 211
+if$ -- 1952
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 27
-newline$ -- 157
-num.names$ -- 93
-pop$ -- 221
+missing$ -- 23
+newline$ -- 121
+num.names$ -- 72
+pop$ -- 178
 preamble$ -- 1
-purify$ -- 250
+purify$ -- 205
 quote$ -- 0
-skip$ -- 365
+skip$ -- 291
 stack$ -- 0
-substring$ -- 728
-swap$ -- 66
-text.length$ -- 5
+substring$ -- 595
+swap$ -- 53
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 182
-warning$ -- 6
-while$ -- 84
+type$ -- 142
+warning$ -- 5
+while$ -- 67
 width$ -- 0
-write$ -- 399
+write$ -- 308
 (There were 3 error messages)
