@@ -245,15 +245,52 @@ Para hacer el diseño \acs{CAD} y la maqueta explicada en el apartado anterior, 
 	\label{fig:calibre}
 \end{figure}
 
+\setcounter{footnote}{64}
 
-%% SEGUIR POR AQUÍ
-Se decidió dividir en 4 piezas que tienen distintas finalidades:
+Para el diseño de este robot, se ha empleado la herramienta de modelado FreeCAD\footnote{\url{https://www.freecad.org/}} con el objetivo de utilizar \textit{software} libre, permitiendo que cualquier persona pueda acceder y modificar las piezas. El diseño se ha dividido en cuatro partes, cada una con una finalidad específica, las cuales se describirán a continuación.
+
+Para llevar a cabo el diseño de todas las piezas, se han seguido los tutoriales de dos cursos de FreeCAD impartidos por Juan González (también conocido como Obijuan)\footnote{\url{https://www.youtube.com/watch?v=2_DbFzFV9D4&list=PLmnz0JqIMEzWQV-3ce9tVB_LFH9a91YHf}}, y el curso de FreeCAD para ingenieros de dcahue-ingeniería\footnote{\url{https://www.youtube.com/watch?v=4zp2DrWv8Wk&list=PLEpca2UUEwQeHp33w36SCzmCz_KKzaMKr&index=11}}, ambos fundamentales en el desarrollo del proyecto.
+
+Además, se han utilizado otros tutoriales específicos, como los dedicados a la creación de \textit{shape binders}\footnote{\url{https://www.youtube.com/watch?v=MCY5IrWrHrU}} y la realización de planos inclinados\footnote{\url{https://www.youtube.com/watch?v=T4hKW1mLrCw}}, esenciales para diseñar la inclinación de la cámara.
 
 \subsection{Pieza base}
-Esta parte es la que se encuentran los motores de las ruedas y de la cámara. También, he diseñado un rectángulo para poner la rueda loca que va pegada.
 
-Los 4 rectángulos que hay en los lados de la parte superior, se usa para poder pasar los cables y que no quede feo estéticamente desde fuera. Los 4 círculos son para poner posteriormente los tornillos y sujetar la parte superior.
 
+La pieza base ha sido diseñada para alojar los motores de las ruedas y de la cámara. En la parte trasera, incorpora un prisma rectangular destinado a la colocación de la rueda loca, mientras que en el lado izquierdo cuenta con un orificio circular para sujetar la \textit{powerbank}. En la parte superior, se han añadido seis aberturas rectangulares para permitir el paso ordenado de los cables, manteniendo una estética limpia y organizada desde el exterior.
+
+Además, dispone de cuatro orificios circulares que permiten fijar la pieza superior mediante tornillos. La Figura \ref{fig:pbase} muestra la pieza base desde distintas perspectivas, tal como será preparada para la impresión en una impresora 3D convencional. Por su parte, la Figura \ref{fig:} presenta nuevamente la pieza base, pero esta vez equipada con los componentes de \textit{hardware} necesarios.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/basevistasuperiorsin.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/basevistaladosin.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/basevistalateralsin.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/basetraserasin.png}
+		\caption*{\centering}
+	\end{minipage}
+
+	\caption{Pieza base}
+	\label{fig:pbase}
+\end{figure}
+
+Para
 \subsection{Pieza cámara}
 La cámara va sujeta de forma diagonal, ya que no hace falta poner los 4 tornillos. Esto ocure tanto en la parte de la cámara como en la base del servo que usa.
 
