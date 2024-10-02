@@ -73,15 +73,18 @@
 \contentsline {subsection}{\numberline {5.4.3}Pieza superior}{58}{subsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.4.4}Pieza sujección trasera}{59}{subsection.5.4.4}%
 \contentsline {section}{\numberline {5.5}Impresión y montaje}{61}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Snippets}{66}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Verbatim}{67}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Ecuaciones}{67}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Tablas o cuadros}{68}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Segunda sección}{68}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Números}{69}{subsection.5.10.1}%
-\contentsline {subsection}{\numberline {5.10.2}Listas}{69}{subsection.5.10.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{69}{paragraph*.121}%
-\contentsline {chapter}{\numberline {6}Conclusiones}{71}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{71}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Corrector ortográfico}{72}{section.6.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{73}{appendix*.122}%
+\contentsline {chapter}{\numberline {6}Implementación software del robot}{69}{chapter.6}%
+\contentsline {section}{\numberline {6.1}}{69}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Snippets}{69}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Verbatim}{70}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Ecuaciones}{70}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Tablas o cuadros}{71}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Segunda sección}{71}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Números}{72}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Listas}{72}{subsection.6.6.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{72}{paragraph*.125}%
+\contentsline {section}{\numberline {6.7}Corrector ortográfico}{73}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{74}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{74}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{75}{section.7.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{76}{appendix*.126}%

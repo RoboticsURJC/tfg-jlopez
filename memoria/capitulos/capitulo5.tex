@@ -511,7 +511,7 @@ Uno de los elementos a tener en cuenta para el montaje son los Hama Beads (Figur
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/cap5/hama.png}
+		\includegraphics[width=6cm]{figs/cap5/hama.png}
 	\end{center}
 	\caption{Hama Beads$^{\ref{note:enlace80}}$} 
 	\label{fig:hamabeads}
@@ -531,7 +531,7 @@ Otro aspecto a tener en cuenta es que para la placa del módulo GPS es necesario
 	\label{fig:soldar}
 \end{figure}
 
-Una vez tenido en cuenta todos los aspectos anteriores, es necesario empezar a atornillar todas las piezas. Para facilitar el trabajo, el Cuadro \ref{cuadro:tornillos} muestra toda la tornillería usada. Además, las Figuras \ref{fig:pbasemontada}, \ref{fig:pcamaramontada}, \ref{fig:psuperiormontada} y \ref{fig:traseracon} han sido tomadas gracias a un diseño creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd}}, de Pibotj completo, que muestra el lugar donde se sitúa la tornillería del robot y ayudará al usuario facilitar el ensamblaje. La Figura \ref{fig:robotfreecad} muestra el robot completo montado. Los tornillos, tuercas y arandelas se han obtenido a través de Amazon\footnote{\url{https://www.amazon.es/410-tornillos-M2-avellanados-hexagonales/dp/B0C1BLSBLW/}}. Se recomienda usar un fijador para evitar que se aflojen los tornillos.
+Una vez tenido en cuenta todos los aspectos anteriores, es necesario empezar a atornillar todas las piezas. Para facilitar el trabajo, el Cuadro \ref{cuadro:tornillos} muestra toda la tornillería necesaria. Además, las Figuras \ref{fig:pbasemontada}, \ref{fig:pcamaramontada}, \ref{fig:psuperiormontada} y \ref{fig:traseracon} han sido tomadas gracias a un diseño creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd}}, de Pibotj completo, que muestra el lugar donde se sitúa la tornillería del robot y ayudará al usuario facilitar el ensamblaje. La Figura \ref{fig:robotfreecad} muestra el robot completo montado. Los tornillos, tuercas y arandelas se han obtenido a través de Amazon\footnote{\url{https://www.amazon.es/410-tornillos-M2-avellanados-hexagonales/dp/B0C1BLSBLW/}}. Se recomienda usar un fijador para evitar que se aflojen los tornillos.
 
 \begin{table}[H]
 	\begin{center}
@@ -572,193 +572,85 @@ Una vez tenido en cuenta todos los aspectos anteriores, es necesario empezar a a
 
 Para sujetar el cable de alimentación de la Raspberry Pi, se ha utilizado una brida. Para optimizar el espacio ocupado por los cables, se han empleado gomas pequeñas. Además, se están utilizando diez cables macho-hembra para alimentar los dos motores y el módulo GPS, mientras que el motor de la cámara ha quedado sin conectar.
 
+En la realización de este proyecto se han probado dos tipos de ruedas: las del kit ActivityBot y las de goma azul. Según la aplicación, se puede optar por una u otra. A continuación, se explicará el montaje de cada tipo.
 
-%% SEGUIR POR AQUÍ RUEDAS
-
-
-Dependiendo de las ruedas que se quieran usar se puede seguir dos tipos de montaje: 
-
-- Activity bot: atornillarlo directamente (foto con las ruedas negras y google coral)
-
-- Ruedas azules: se tiene que hacer un agujero de 6mm para que el tornillo del motor entre y unos agujeros de 2mm para que los topes del motor puedan atornillarse bien (incluir fotos)   (foto con las ruedas azules y google coral)
-
-
-
- 1 pieza de cada una de las expuestas anteriormente(todas han usado las mismas características de impresión)
- 
-Para ilustrar las imágenes  (figuras montadas del apartado anterior) se ha seguido el siguiente tutorial cuya finalidad es facilitar a cualquier usuario pueda montar a Pibotj. Ilustra cada pieza necesaria al igual el lugar que ocupa.\\
-
-Los pasos seguidos 
-
-
-Finalmente , para resumir los materiales usados y el precio asociado son: .... como muestra el cuadro
-
-
-IMAGEN FINAL COMPLETA con los 2 tipos de ruedas \\\\\\
-
-
-EXplicar la intro del siguiente capítulo \\ 
-
-
- 
- 
-Capítulo 6: incluir lo de openvision paper\\
-capitulo 7: explicar experimentos impresora del instituto \\
-
-\section{Snippets}
-
-Puede resultar interesante, para clarificar la descripción, mostrar fragmentos de código (o \textit{snippets}) ilustrativos. En el Código \ref{cod:codejemplo} vemos un ejemplo escrito en \texttt{C++}.
-
-\begin{code}[h]
-\begin{lstlisting}[language=C++]
-void Memory::hypothesizeParallelograms () {
-  for(it1 = this->controller->segmentMemory.begin(); it1++) {
-    squareFound = false; it2 = it1; it2++;
-    while ((it2 != this->controller->segmentMemory.end()) && (!squareFound)) {
-      if (geometry::haveACommonVertex((*it1),(*it2),&square)) {
-        dist1 = geometry::distanceBetweenPoints3D ((*it1).start, (*it1).end);
-        dist2 = geometry::distanceBetweenPoints3D ((*it2).start, (*it2).end);
-      }
-    // [...]
-\end{lstlisting}
-\caption[Función para buscar elementos 3D en la imagen]{Función para buscar elementos 3D en la imagen}
-\label{cod:codejemplo}
-\end{code}
-
-En el Código \ref{cod:codejemplo2} vemos un ejemplo escrito en \texttt{Python}.
-
-\begin{code}[h]
-\begin{lstlisting}[language=Python]
-def mostrarValores():
-    print (w1.get(), w2.get())
-
-master = Tk()
-w1 = Scale(master, from_=0, to=42)
-w1.pack()
-w2 = Scale(master, from_=0, to=200, orient=HORIZONTAL)
-w2.pack()
-Button(master, text='Show', command=mostrarValores).pack()
-
-mainloop()
-\end{lstlisting}
-\caption[Cómo usar un Slider]{Cómo usar un Slider}
-\label{cod:codejemplo2}
-\end{code}
-
-\section{Verbatim}
-
-Para mencionar identificadores usados en el código ---como nombres de funciones o variables--- en el texto, usa el entorno literal o verbatim \verb|hypothesizeParallelograms()|. También se puede usar este entorno para varias líneas, como se ve a continuación:
-
-\begin{verbatim}
-void Memory::hypothesizeParallelograms () {
-  // add your code here
-}
-\end{verbatim}
-
-\section{Ecuaciones}
-
-Si necesitas insertar alguna ecuación, puedes hacerlo. Al igual que las figuras, no te olvides de referenciarlas. A continuación se exponen algunas ecuaciones de ejemplo: Ecuación \ref{ec:ec1} y Ecuación \ref{ec:ec2}.
-
-\begin{myequation}[h]
-\begin{equation}
-H = 1 - \frac{\sum_{i=0}^{N}\frac{(\frac{d_{j_s} + d_{j_e}}{2})}{N}}{M}
-\nonumber
-\label{ec:ec1}
-\end{equation}
-\caption[Ejemplo de ecuación con fracciones]{Ejemplo de ecuación con fracciones}
-\end{myequation} 
-
-\begin{myequation}[h]
-\begin{equation}
-v(entrada)= \left\{
-	\begin{array}{lcc}
-		0 & \mbox{if} & \epsilon_t < 0.1\\
-		K_p\cdot{(T_{t}-T)} & \mbox{if}& 0.1 \leq \epsilon_t < M_t\\
-		K_p \cdot M_t & \mbox{if}& M_t < \epsilon_t
-	\end{array}
-\right.
-\label{ec:ec2}
-\end{equation}
-\caption[Ejemplo de ecuación con array y letras y símbolos especiales]{Ejemplo de ecuación con array y letras y símbolos especiales}
-\end{myequation}
-
-\section{Tablas o cuadros}
-
-Si necesitas insertar una tabla, hazlo dígnamente usando las propias tablas de \LaTeX, no usando pantallazos e insertándolas como figuras... En el Cuadro \ref{cuadro:ejemplo} vemos un ejemplo.
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Parámetros} & \textbf{Valores} \\
-\hline
-Tipo de sensor & Sony IMX219PQ[7] CMOS 8-Mpx \\
-Tamaño del sensor & 3.674 x 2.760 mm (1/4" format) \\
-Número de pixels & 3280 x 2464 (active pixels) \\
-Tamaño de pixel & 1.12 x 1.12 um \\
-Lente & f=3.04 mm, f/2.0 \\
-Ángulo de visión & 62.2 x 48.8 degrees \\
-Lente SLR equivalente & 29 mm \\
-\hline
-\end{tabular}
-\caption{Parámetros intrínsecos de la cámara}
-\label{cuadro:ejemplo}
-\end{center}
-\end{table}
-
-En los textos puedes poner palabras en \textit{cursiva}, para aquellas expresiones en sentido \textit{figurado}, palabras como \textit{robota}, que está fuera del diccionario castellano, o bien para resaltar palabras de una colección: \textit{(a)} es la primera letra del abecedario, \textit{(b)} es la segunda, etc.\\
-
-Al poner las dos líneas del anterior párrafo, este aparecerá separado del anterior. Si no las pongo, los párrafos aparecerán pegados. Sigue el criterio que consideres más oportuno.
-
-\section{Segunda sección}
-\label{sec:segundaseccion}
-
-No olvides incluir imágenes y referenciarlas, como la Figura \ref{fig:roomba}.
+Para utilizar las ruedas del kit ActivityBot, simplemente es necesario atornillarlas al robot con el tornillo que viene incluido, ya que estas ruedas están diseñadas específicamente para motores Parallax. El robot tendría el aspecto que se muestra en la Figura \ref{fig:ab}.
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/roomba}
+		\includegraphics[width=12cm]{figs/cap5/ab.jpeg}
 	\end{center}
-	\caption{Robot aspirador Roomba de iRobot.}
-	\label{fig:roomba}
-\end{figure}\
+	\caption{Pibotj con ruedas de ActivityBot} 
+	\label{fig:ab}
+\end{figure}
 
-Ni tampoco olvides de poner las URLs como notas al pie. Por ejemplo, si hablo de la Robocup\footnote{\url{http://www.robocup.org}}.
+Por otro lado, si se prefieren ruedas como las de goma azul, se requerirán algunas modificaciones. En primer lugar, se deberá usar una sierra para cortar las partes sobrantes (Figura \ref{fig:rae}, izquierda). También será necesario perforar la rueda con un taladro para que el tornillo que conecta al motor encaje fácilmente. Luego, se deben colocar dos topes de motor sobre la superficie lisa de la rueda (Figura \ref{fig:rae}, derecha) y hacer los agujeros correspondientes para atornillarlos. En este caso, se han utilizado siete tornillos M2 de 8 mm. El robot con estas ruedas tendría el aspecto que se muestra en la Figura \ref{fig:ra}.
 
-\subsection{Números}
-\label{sec:subseccion}
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/creacionra1.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/creacionra2.jpeg}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Ensamblaje ruedas azules}
+	\label{fig:rae}
+\end{figure}
 
-En lugar de tener secciones interminables, como la Sección \ref{sec:robotica}, divídelas en subsecciones.
 
-Para hablar de números, mételos en el entorno \textit{math} de \LaTeX, por ejemplo, $1.5Kg$. También puedes usar el símbolo del Euro como aquí: 1.500\euro.
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap5/ra.jpeg}
+	\end{center}
+	\caption{Pibotj con ruedas azules} 
+	\label{fig:ra}
+\end{figure}
 
-\subsection{Listas}
 
-Cuando describas una colección, usa \texttt{itemize} para ítems o \texttt{enumerate} para enumerados. Por ejemplo:
+Para resumir lo explicado, el Cuadro \ref{cuadro:costetotal} enumera todos los componentes necesarios para construir a Pibotj, junto con sus precios respectivos.
 
-\begin{itemize}
-	\item \textit{Entorno de simulación.} Hemos usado dos entornos de simulación: uno en 3D y otro en 2D.
-	\item \textit{Entornos reales.} Dentro del campus, hemos realizado experimentos en Biblioteca y en el edificio de Gestión.
-\end{itemize}\
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			Componente & Precio \\
+			\hline
+			Motores Parallax & 34€ \\
+			\hline
+			Picamera &  18€ \\
+			\hline
+			Raspberry Pi & 65€ \\
+			\hline
+			Módulo GPS & 9€ \\
+			\hline
+			Ruedas ActivityBot/Azules & 9€ \\
+			\hline
+			Google Coral USB & 65€ \\
+			\hline
+			Powerbank & 30€ \\
+			\hline
+			Rueda Loca & 1,13€ \\
+			\hline
+			Tornillos, tuercas, arandelas y Hama Beads & 3€ \\
+			\hline
+			Cables, gomas y brida & 3€ \\
+			\hline
+			Rollo de PLA gastado & 10€ \\
+			\hline
+		\end{tabular}
+		\caption{Coste proyecto}
+		\label{cuadro:costetotal}
+	\end{center}
+\end{table}
 
-\begin{enumerate}
-	\item Primer elemento de la colección.
-	\item Segundo elemento de la colección.
-\end{enumerate}\
+El coste total del proyecto es de 247,13€ por lo que demuestra que está por debajo del límite establecido de 250€ y cumple con el objetivo establecido del Capítulo 3.\\\\\\\\\\
 
-\paragraph{Referencias bibliográficas}
-\label{sec:referencias}
 
-Cita, sobre todo en este capítulo, referencias bibliográficas que respalden tu argumento. Para citarlas basta con poner la instrucción \verb|\cite| con el identificador de la cita. Por ejemplo: libros como \cite{vega12e}, artículos como \cite{vega19b}, URLs como \cite{vega19a}, tesis como \cite{vega18b}, congresos como \cite{vega18a}, u otros trabajos fin de grado como \cite{vega08b}.
+Una vez alcanzado este punto, se ha completado el desarrollo del hardware necesario para la construcción de Pibotj. A continuación, se procederá a dar vida a este hardware para alcanzar el objetivo del proyecto, lo cual se detallará en el siguiente capítulo.
 
-Las referencias, con todo su contenido, están recogidas en el fichero \texttt{bibliografia.bib}. El contenido de estas referencias está en formato \texttt{BibTex}. Este formato se puede obtener en muchas ocasiones directamente, desde plataformas como \texttt{Google Scholar} u otros repositorios de recursos científicos.
-
-Existen numerosos estilos para reflejar una referencia bibliográfica. El estilo establecido por defecto en este documento es APA, que es uno de los estilos más comunes, pero lo puedes modificar en el archivo \texttt{memoria.tex}; concretamente, cambiando el campo \verb|apalike| a otro en la instrucción \verb|\bibliographystyle{apalike}|. 
-
-\
-
-\
-
-\
-
-Y, para terminar este capítulo, resume brevemente qué vas a contar en los siguientes.
