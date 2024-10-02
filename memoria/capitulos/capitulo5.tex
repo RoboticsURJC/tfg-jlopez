@@ -255,58 +255,198 @@ Además, se han utilizado otros tutoriales específicos, como los dedicados a la
 
 \subsection{Pieza base}
 
-
 La pieza base ha sido diseñada para alojar los motores de las ruedas y de la cámara. En la parte trasera, incorpora un prisma rectangular destinado a la colocación de la rueda loca, mientras que en el lado izquierdo cuenta con un orificio circular para sujetar la \textit{powerbank}. En la parte superior, se han añadido seis aberturas rectangulares para permitir el paso ordenado de los cables, manteniendo una estética limpia y organizada desde el exterior.
 
-Además, dispone de cuatro orificios circulares que permiten fijar la pieza superior mediante tornillos. La Figura \ref{fig:pbase} muestra la pieza base desde distintas perspectivas, tal como será preparada para la impresión en una impresora 3D convencional. Por su parte, la Figura \ref{fig:} presenta nuevamente la pieza base, pero esta vez equipada con los componentes de \textit{hardware} necesarios.
+Además, dispone de cuatro orificios circulares que permiten fijar la pieza superior mediante tornillos. Se puede encontrar tanto su versión compatible con FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/base.FCStd}} como con el formato de diseño 3D por excelencia, STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/base.stl}}. La Figura \ref{fig:pbase} muestra la pieza base desde distintas perspectivas, tal como será preparada para la impresión en una impresora 3D convencional. Por su parte, la Figura \ref{fig:pbasemontada} presenta nuevamente la pieza base, pero esta vez equipada con los componentes de \textit{hardware} necesarios.
 
 \begin{figure}[ht!]
 	\centering
 	\begin{minipage}{0.45\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/basevistasuperiorsin.png}
-		\caption*{\centering}
+		\caption*{\centering Vista superior}
 	\end{minipage}
 	\hspace{1cm}
 	\begin{minipage}{0.45\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/basevistaladosin.png}
-		\caption*{\centering}
+		\caption*{\centering Vista inferior}
 	\end{minipage}
 	\hspace{1cm}
 	\begin{minipage}{0.45\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/basevistalateralsin.png}
-		\caption*{\centering}
+		\caption*{\centering Vista lateral}
 	\end{minipage}
 	\hspace{1cm}
 	\begin{minipage}{0.45\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/basetraserasin.png}
-		\caption*{\centering}
+		\caption*{\centering Vista lateral izquierdo}
 	\end{minipage}
 
 	\caption{Pieza base}
 	\label{fig:pbase}
 \end{figure}
 
-Para
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/basecon1.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/basecon2.png}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Pieza base atornillada}
+	\label{fig:pbasemontada}
+\end{figure}
+
 \subsection{Pieza cámara}
-La cámara va sujeta de forma diagonal, ya que no hace falta poner los 4 tornillos. Esto ocure tanto en la parte de la cámara como en la base del servo que usa.
+
+ 
+Para posicionar la cámara de manera que mire hacia el suelo y pueda captar los baches, es necesario fijarla con una rotación sobre el eje y. En este caso, dicha rotación es de 50 grados, o 130 grados si se toma como referencia la base de la pieza que va atornillada al motor (Figura \ref{fig:rot}). Esta base cuenta con dos orificios diagonales que permiten su fijación al motor.
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/cap5/rot.png}
+	\end{center}
+	\caption{Inclinación de la cámara} 
+\label{fig:rot}
+\end{figure}
+
+La parte inclinada de la pieza incluye un orificio diseñado para alojar el sensor CMOS, garantizando una correcta alineación y visión. Además, esta sección tiene dos orificios adicionales para asegurar el sensor CMOS y mantenerlo firmemente en su lugar. Se puede encontrar tanto su versión compatible con FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/camara.FCStd}} como con el formato STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/camara.stl}}. La Figura \ref{fig:pcamara} muestra la pieza de la cámara desde distintas perspectivas, tal como será preparada para la impresión en una impresora 3D convencional. Por su parte, la Figura \ref{fig:pcamaramontada} presenta nuevamente la pieza de la cámara, pero esta vez atornillada sobre los componentes \textit{hardware} necesarios. 
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/camera2sin.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/camera3sin.png}
+		\caption*{\centering}
+	\end{minipage}
+	
+	\caption{Pieza cámara}
+	\label{fig:pcamara}
+\end{figure}
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/camera2con.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/camera3con.png}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Pieza cámara atornillada}
+	\label{fig:pcamaramontada}
+\end{figure}
+
+
+\subsection{Pieza superior}
+
+
+Esta pieza superior ha sido diseñada para alojar la placa Raspberry Pi, el módulo GPS y la \textit{powerbank} en su interior. En la cara superior se encuentran doce orificios circulares destinados a atornillar tanto la Raspberry Pi como el módulo GPS. Además, en esta misma cara hay seis aberturas que se conectan con la cara inferior, alineándose con las aberturas correspondientes de la pieza base para garantizar un paso de cables ordenado.
+
+La cara inferior, además de las seis aberturas, incluye cuatro orificios adicionales para permitir el atornillado de la pieza base. En el lateral izquierdo, la pieza está abierta para facilitar la inserción de la \textit{powerbank}, mientras que en el lado derecho cuenta con dos cuadrantes que permiten retirar la \textit{powerbank} cuando sea necesario. Esta pieza está disponible tanto en formato compatible con FreeCAD como en STL.
+
+La Figura \ref{fig:psuperior} muestra la pieza base desde varias perspectivas, lista para la impresión en una impresora 3D convencional. La Figura \ref{fig:psuperiormontada} presenta nuevamente la pieza base, pero equipada con los componentes de hardware necesarios.
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/superior1.png}
+		\caption*{\centering Vista superior}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/superior2.png}
+		\caption*{\centering Vista inferior}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/superior3.png}
+		\caption*{\centering Vista lateral}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/superior4.png}
+		\caption*{\centering Vista lateral izquierdo}
+	\end{minipage}
+	
+	\caption{Pieza superior}
+	\label{fig:psuperior}
+\end{figure}
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/superior1m.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/superior2m.png}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Pieza superior atornillada}
+	\label{fig:psuperiormontada}
+\end{figure}
 
 
 \subsection{Pieza sujección trasera}
-He creado esta prolongación que va fija con un tornillo para evitar que la batería se salga si el terreno no es regular. Tras imprimir y ensamblar la pieza, ha quedado así:
 
-\subsection{Pieza batería}
+Para asegurar que la \textit{powerbank} se mantenga en su lugar dentro del robot, se ha diseñado una pieza que se atornilla en el lado izquierdo de la base. Esta pieza es un prisma rectangular con más de 30 mm de altura, aproximadamente 5 mm de largo y 3 mm de ancho (Figura \ref{fig:ptrasera}). Su función es mantener la \textit{powerbank} en su hueco. La pieza debe colocarse en posición vertical para evitar que la \textit{powerbank} se deslice, y en posición horizontal cuando se desee retirarla. Existe una versión en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.FCStd}} y otra en formato STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl}}. La Figura \ref{fig:traseracon} muesta cómo quedaría montada la pieza sobre el robot.
 
-Esta pieza está diseñada para alojar en su interior una powerbank y he cread unas aberturas para poder sacar la powerbank cuando sea necesaria.
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/trasera1.png}
+		\caption*{\centering}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/trasera2.png}
+		\caption*{\centering}
+	\end{minipage}
+	\caption{Pieza sujección trasera}
+	\label{fig:ptrasera}
+\end{figure}
 
-Los huecos laterale son para almacenar los cables y poder unir esta pieza con la base.
 
-En su parte superior, hay 12 agujeros para poder ensamblar con tornillos: raspberry pi, módulo GPS y la antena.
-
-
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/cap5/traseracon.png}
+	\end{center}
+	\caption{Pieza sujección trasera montada} 
+	\label{fig:traseracon}
+\end{figure}
 
 \section{Impresión y montaje}
 
