@@ -59,13 +59,13 @@ Para poder cumplir con el objetivo principal descrito en el Capítulo 3, es nece
 
 \section{Elección de componentes hardware}
 
-Una vez definida la geometría del robot, es necesario elegir los componentes que más se ajustan para poder confeccionar el esqueleto del robot. Para ellos se ha creado un esquema (Figura \ref{fig:fritzzing}) que muestra todos los componentes necesarios y sus conexiones. A continuación, se van a explicar cada uno de los componentes \textit{hardware} elegidos.  
+Una vez definida la geometría del robot, bautizado como Pibotj, es necesario elegir los componentes que más se ajustan para poder confeccionar el esqueleto del robot. Para ellos se ha creado un esquema (Figura \ref{fig:fritzzing}) que muestra todos los componentes necesarios y sus conexiones. A continuación, se van a explicar cada uno de los componentes \textit{hardware} elegidos.  
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=9cm]{figs/cap5/modelocompleto_bb.jpg}
 	\end{center}
-	\caption{Esquema de conexiones del robot} 
+	\caption{Esquema de conexiones del Pibotj} 
 	\label{fig:fritzzing}
 \end{figure}
 
@@ -117,7 +117,7 @@ Utilidades, el nivel de cómputo que llega,... inferencias por segundo,tipo de m
  
 \section{Bocetos}
 
-La realización de bocetos es una etapa fundamental en el proceso de diseño que se realiza antes de iniciar el modelado en 3D, ya que su propósito es obtener una visión clara de la estructura y disposición de los componentes que conforman el robot. Una vez que se ha definido el esqueleto completo que este necesitará, es el momento de crear una serie de bocetos (Figura \ref{fig:bocetos}) que permitirán afinar los detalles antes de realizar el diseño en 3D.
+La realización de bocetos es una etapa fundamental en el proceso de diseño que se realiza antes de iniciar el modelado en 3D, ya que su propósito es obtener una visión clara de la estructura y disposición de los componentes que conforman el Pibotj. Una vez que se ha definido el esqueleto completo que este necesitará, es el momento de crear una serie de bocetos (Figura \ref{fig:bocetos}) que permitirán afinar los detalles antes de realizar el diseño en 3D.
 
 \begin{figure}[ht!]
 	\centering
@@ -193,6 +193,8 @@ Antes de realizar el diseño \acs{CAD} de las piezas, se creó una maqueta a tam
 	\label{fig:maqueta2}
 \end{figure}
 
+Tras tener una idea clara de cómo va a ser Pibotj, es el momento de empezar a diseñar cada una de las piezas. 
+
 \section{Diseño CAD}
 
 Para hacer el diseño \acs{CAD} y la maqueta explicada en el apartado anterior, se crearon unos planos a mano (Figura \ref{fig:planos}) de las diferentes piezas que estarían involucradas en el diseño. Estas medidas son precisas gracias al uso del calibre (Figura \ref{fig:calibre}).
@@ -247,7 +249,7 @@ Para hacer el diseño \acs{CAD} y la maqueta explicada en el apartado anterior, 
 
 \setcounter{footnote}{64}
 
-Para el diseño de este robot, se ha empleado la herramienta de modelado FreeCAD\footnote{\url{https://www.freecad.org/}} con el objetivo de utilizar \textit{software} libre, permitiendo que cualquier persona pueda acceder y modificar las piezas. El diseño se ha dividido en cuatro partes, cada una con una finalidad específica, las cuales se describirán a continuación.
+Para el diseño de Pibotj, se ha empleado la herramienta de modelado FreeCAD\footnote{\url{https://www.freecad.org/}} con el objetivo de utilizar \textit{software} libre, permitiendo que cualquier persona pueda acceder y modificar las piezas. El diseño se ha dividido en cuatro partes, cada una con una finalidad específica, las cuales se describirán a continuación.
 
 Para llevar a cabo el diseño de todas las piezas, se han seguido los tutoriales de dos cursos de FreeCAD impartidos por Juan González (también conocido como Obijuan)\footnote{\url{https://www.youtube.com/watch?v=2_DbFzFV9D4&list=PLmnz0JqIMEzWQV-3ce9tVB_LFH9a91YHf}}, y el curso de FreeCAD para ingenieros de dcahue-ingeniería\footnote{\url{https://www.youtube.com/watch?v=4zp2DrWv8Wk&list=PLEpca2UUEwQeHp33w36SCzmCz_KKzaMKr&index=11}}, ambos fundamentales en el desarrollo del proyecto.
 
@@ -364,7 +366,7 @@ La parte inclinada de la pieza incluye un orificio diseñado para alojar el sens
 
 Esta pieza superior ha sido diseñada para alojar la placa Raspberry Pi, el módulo GPS y la \textit{powerbank} en su interior. En la cara superior se encuentran doce orificios circulares destinados a atornillar tanto la Raspberry Pi como el módulo GPS. Además, en esta misma cara hay seis aberturas que se conectan con la cara inferior, alineándose con las aberturas correspondientes de la pieza base para garantizar un paso de cables ordenado.
 
-La cara inferior, además de las seis aberturas, incluye cuatro orificios adicionales para permitir el atornillado de la pieza base. En el lateral izquierdo, la pieza está abierta para facilitar la inserción de la \textit{powerbank}, mientras que en el lado derecho cuenta con dos cuadrantes que permiten retirar la \textit{powerbank} cuando sea necesario. Esta pieza está disponible tanto en formato compatible con FreeCAD como en STL.
+La cara inferior, además de las seis aberturas, incluye cuatro orificios adicionales para permitir el atornillado de la pieza base. En el lateral izquierdo, la pieza está abierta para facilitar la inserción de la \textit{powerbank}, mientras que en el lado derecho cuenta con dos cuadrantes que permiten retirar la \textit{powerbank} cuando sea necesario. Esta pieza está disponible tanto en formato compatible con FreeCADL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/parte-superior.FCStd}} como en STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/parte-superior.stl}}.
 
 La Figura \ref{fig:psuperior} muestra la pieza base desde varias perspectivas, lista para la impresión en una impresora 3D convencional. La Figura \ref{fig:psuperiormontada} presenta nuevamente la pieza base, pero equipada con los componentes de hardware necesarios.
 
@@ -439,7 +441,6 @@ Para asegurar que la \textit{powerbank} se mantenga en su lugar dentro del robot
 	\label{fig:ptrasera}
 \end{figure}
 
-
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=8cm]{figs/cap5/traseracon.png}
@@ -448,49 +449,76 @@ Para asegurar que la \textit{powerbank} se mantenga en su lugar dentro del robot
 	\label{fig:traseracon}
 \end{figure}
 
+Una vez detalladas cada una de las piezas \acs{CAD} diseñadas, es momento de describir el proceso de impresión y montaje que se ha seguido para obtener a Pibotj.
+  
 \section{Impresión y montaje}
 
 
-Dificultades imprimiendo: con la impresora del instituto. Incluir características de la impresora y de la impresión usada.
+Unas 50 horas de impresión.  1 pieza de cada una de las expuestas anteriormente(todas han usado las mismas características de impresión)
 
-Impresión de Gonzalo
-Características: 
+Impresora: FDM Creality Ender3 V2
 
-Impresora FDM Creality Ender3 V2
 Slicer Software: UltiMaker Cura
 
-QUALITY:
-Layer height: 0.2 mm
-Line width: 0.4 mm
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			Características & Parámetros\\
+			\hline
+			%\multirow{3}{4cm}{Métodos} & \multirow{2}{*}[3 mm] {Ventajas} & Desventajas\\
+			%\cline{3-3} % línea solo en la tercera columna
+			\multirow{2}{*}{Calidad} & \multirow{2}{*}{\shortstack{ Altura de capa: 0,2 mm \\ Ancho de línea: 0.4 mm}}\\
+			& \\
+			\hline
+			\multirow{4}{*}{Paredes} & \multirow{4}{*}{\shortstack{Grosor de pared: 0,8 mm \\ Cantidad de líneas de pared: 2 \\ Alineación de costura en Z: \textit{Esquina más afilada} \\ Preferencia de costura en esquina: \textit{Ocultación inteligente} }} \\
+			& \\
+			& \\
+			& \\
+			\hline
 
-WALLS: 
-Wall thickness: 0.8 mm
-Wall line count: 2
-Z sean alignment: "Sharpest corner"
-Seam corner preference: "Smart hiding"
+			\multirow{2}{*}{\shortstack{Relleno}} &  \multirow{2}{*}{\shortstack{Densidad de relleno: 15\% \\ Patrón de relleno: \textit{Gyroid} }}\\
+			& \\
+			\hline
+			\multirow{2}{*}{\shortstack{Velocidad}} &  \multirow{2}{*}{\shortstack{Velocidad de impresión: 50 mm/s\\ Velocidad de la primera capa: 20 mm/s}}\\
+			& \\
+			\hline
+			
+		\end{tabular}
+		\caption{Características usadas en la impresión}
+		\label{cuadro:cimpresion}
+	\end{center}
+\end{table}
 
-INFILL:
-Infill density: 15%
-Infill pattern: "Gyroid"
+Se han usado hama beads para evitar que los componentes toquen directamente la base impresa. 
 
-SPEED:
-Print speed: 50 mm/s
-Initial layer speed: 20 mm/s
+Lista de materiales usados para cada componente electromecánico (tornillos, arandelas, tuercas, hama ...)
+Lista materiales usados y su precio. 
+
+Precio total
+
+Explicar que para sujetar los cables se han usado gomas pequeñas de color naranja. 
+
+Para sujerar la alimentación a la base se ha usado una brida. 
+
+Soldar pines al módulo GPS y hacer agujeros más grandes con una taladradora para que entre en la antena (de M2) (incluir foto)
+
+Se recomienda usar un fijador para evitar que los tornillos se muevan.
+
+Los cables usados son el de la alimentación oficial de Raspberry Pi y 10 cables jumpers macho-hembra (el motor de la cámra se deja sin conectar)
+
+Dependiendo de las ruedas que se quieran usar se puede seguir dos tipos de montaje: 
+
+- Activity bot: atornillarlo directamente (foto con las ruedas negras y google coral)
+
+- Ruedas azules: se tiene que hacer un agujero de 6mm para que el tornillo del motor entre y unos agujeros de 2mm para que los topes del motor puedan atornillarse bien (incluir fotos)   (foto con las ruedas azules y google coral)
 
 
-Incluir una lista de los tornillos usados, hama  beads...\\\\
 
-
-
-Incluir imagen completa que incluya el Google Coral USB\\\\\\
-
-
-INCLUIR MUCHAS FOTOS\\\\\\
-
-
-
-CApítulo 6: incluir lo de openvision paper\\
-capitulo 7: explicar experimentos impresora \\
+Para ilustrar las imágenes  (figuras montadas del apartado anterior) se ha seguido el siguiente tutorial cuya finalidad es facilitar a cualquier usuario pueda montar a Pibotj. Ilustra cada pieza necesaria al igual el lugar que ocupa.\\
+ 
+Capítulo 6: incluir lo de openvision paper\\
+capitulo 7: explicar experimentos impresora del instituto \\
 
 \section{Snippets}
 
