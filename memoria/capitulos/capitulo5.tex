@@ -453,12 +453,20 @@ Una vez detalladas cada una de las piezas \acs{CAD} diseñadas, es momento de de
   
 \section{Impresión y montaje}
 
+En esta sección se presentan todos los detalles que deben considerarse para replicar este proyecto. 
 
-Unas 50 horas de impresión.  1 pieza de cada una de las expuestas anteriormente(todas han usado las mismas características de impresión)
+Para la impresión de Pibotj se ha usado la impresora FDM Creality Ender3 V2 (Figura \ref{fig:impresora}), un rollo de PLA convencional azul y Ultimaker Cura\footnote{\url{https://ultimaker.com/es/software/ultimaker-cura/}} como \textit{software} de impresión. Se ha usado para la impresión de todas las piezas las características que muestra el Cuadro \ref{cuadro:cimpresion}. En este proyecto es necesario imprimir una pieza de cada una explicada en el apartado de Diseño CAD, como muestra la Figura \ref{fig:piezasimpresas}. La duración de impresión es en torno a 50 horas.
+ 
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=7cm]{figs/cap5/impresora.jpg}
+	\end{center}
+	\caption{Impresora FDM Creality Ender3 V2$^{\ref{note:enlace79}}$} 
+	\label{fig:impresora}
+\end{figure}
 
-Impresora: FDM Creality Ender3 V2
-
-Slicer Software: UltiMaker Cura
+\setcounter{footnote}{79} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.creality.com/es/products/ender-3-v2-neo-3d-printer}\label{note:enlace79}}
 
 \begin{table}[H]
 	\begin{center}
@@ -466,8 +474,6 @@ Slicer Software: UltiMaker Cura
 			\hline
 			Características & Parámetros\\
 			\hline
-			%\multirow{3}{4cm}{Métodos} & \multirow{2}{*}[3 mm] {Ventajas} & Desventajas\\
-			%\cline{3-3} % línea solo en la tercera columna
 			\multirow{2}{*}{Calidad} & \multirow{2}{*}{\shortstack{ Altura de capa: 0,2 mm \\ Ancho de línea: 0.4 mm}}\\
 			& \\
 			\hline
@@ -476,36 +482,99 @@ Slicer Software: UltiMaker Cura
 			& \\
 			& \\
 			\hline
-
+			
 			\multirow{2}{*}{\shortstack{Relleno}} &  \multirow{2}{*}{\shortstack{Densidad de relleno: 15\% \\ Patrón de relleno: \textit{Gyroid} }}\\
 			& \\
 			\hline
 			\multirow{2}{*}{\shortstack{Velocidad}} &  \multirow{2}{*}{\shortstack{Velocidad de impresión: 50 mm/s\\ Velocidad de la primera capa: 20 mm/s}}\\
 			& \\
 			\hline
-			
 		\end{tabular}
-		\caption{Características usadas en la impresión}
+		\caption{Características usadas para la impresión}
 		\label{cuadro:cimpresion}
 	\end{center}
 \end{table}
 
-Se han usado hama beads para evitar que los componentes toquen directamente la base impresa. 
 
-Lista de materiales usados para cada componente electromecánico (tornillos, arandelas, tuercas, hama ...)
-Lista materiales usados y su precio. 
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=10cm]{figs/cap5/setcompleto.jpeg}
+	\end{center}
+	\caption{Piezas impresas} 
+	\label{fig:piezasimpresas}
+\end{figure}
 
-Precio total
 
-Explicar que para sujetar los cables se han usado gomas pequeñas de color naranja. 
+Una vez impresas todas las piezas y retirado sus soportes generados, es el momento del montaje; cuya duración es de dos horas aproximadamente, dependiendo de las habilidades del usuario.
 
-Para sujerar la alimentación a la base se ha usado una brida. 
+Uno de los elementos a tener en cuenta para el montaje son los Hama Beads (Figura \ref{fig:hamabeads}). Los Hama Beads son cilindros de plástico pequeños con un círulo en el centro usados comunmente para manualidades y para la creación de objetos de decoración. En este caso, se ha usado para evitar que tanto la Raspberry Pi como el módulo GPS toquen directamente la superficie impresa. Además, por su círculo interior pasan perfectamente los tornillos usados. 
 
-Soldar pines al módulo GPS y hacer agujeros más grandes con una taladradora para que entre en la antena (de M2) (incluir foto)
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/cap5/hama.png}
+	\end{center}
+	\caption{Hama Beads$^{\ref{note:enlace80}}$} 
+	\label{fig:hamabeads}
+\end{figure}
 
-Se recomienda usar un fijador para evitar que los tornillos se muevan.
+\setcounter{footnote}{80} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.hamabeads.es/}\label{note:enlace80}}
 
-Los cables usados son el de la alimentación oficial de Raspberry Pi y 10 cables jumpers macho-hembra (el motor de la cámra se deja sin conectar)
+
+Otro aspecto a tener en cuenta es que para la placa del módulo GPS es necesario soldarle unos pines (Figura \ref{fig:soldar}) para que posteriormente se pueda conectar los cables y evitar pérdida de señal. También es necesario agrandar con una taladradora los cuatro agujeros que tiene la antena del módulo para que puedan entrar bien los tornillos. 
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/cap5/soldar.jpeg}
+	\end{center}
+	\caption{Soldando pines al módulo GPS} 
+	\label{fig:soldar}
+\end{figure}
+
+Una vez tenido en cuenta todos los aspectos anteriores, es necesario empezar a atornillar todas las piezas. Para facilitar el trabajo, el Cuadro \ref{cuadro:tornillos} muestra toda la tornillería usada. Además, las Figuras \ref{fig:pbasemontada}, \ref{fig:pcamaramontada}, \ref{fig:psuperiormontada} y \ref{fig:traseracon} han sido tomadas gracias a un diseño creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd}}, de Pibotj completo, que muestra el lugar donde se sitúa la tornillería del robot y ayudará al usuario facilitar el ensamblaje. La Figura \ref{fig:robotfreecad} muestra el robot completo montado. Los tornillos, tuercas y arandelas se han obtenido a través de Amazon\footnote{\url{https://www.amazon.es/410-tornillos-M2-avellanados-hexagonales/dp/B0C1BLSBLW/}}. Se recomienda usar un fijador para evitar que se aflojen los tornillos.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			Componente & Tornillos & Tuercas & Arandelas & Hama Beads blancas\\
+			\hline
+			Motores & 12 M2 10mm & 12 & 24 &\\
+			\hline
+			Picamera (base) & 2 M2 10mm & 2 & 4 &\\
+			\hline
+			Picamera (cámara) & 2 M2 12mm & 2 & 12 &\\
+			\hline
+			Raspberry Pi & 4 M2 12mm & 4 & & 4\\
+			\hline
+			Placa GPS & 4 M2 16mm & 4 & 8 & 4\\
+			\hline
+			Antena GPS & 4 M2 16mm & 4 & & 4\\
+			\hline
+			Sujección entre placas & 4 M2 16mm & 4 & 8 &\\
+			\hline
+			Sujección trasera & 1 M2 16mm & 1 & 2 &\\
+			\hline
+		\end{tabular}
+		\caption{Tornillería necesaria}
+		\label{cuadro:tornillos}
+	\end{center}
+\end{table}
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap5/completo3.png}
+	\end{center}
+	\caption{Robot completo montado en FreeCAD} 
+	\label{fig:robotfreecad}
+\end{figure}
+
+
+Para sujetar el cable de alimentación de la Raspberry Pi, se ha utilizado una brida. Para optimizar el espacio ocupado por los cables, se han empleado gomas pequeñas. Además, se están utilizando diez cables macho-hembra para alimentar los dos motores y el módulo GPS, mientras que el motor de la cámara ha quedado sin conectar.
+
+
+%% SEGUIR POR AQUÍ RUEDAS
+
 
 Dependiendo de las ruedas que se quieran usar se puede seguir dos tipos de montaje: 
 
@@ -515,7 +584,23 @@ Dependiendo de las ruedas que se quieran usar se puede seguir dos tipos de monta
 
 
 
+ 1 pieza de cada una de las expuestas anteriormente(todas han usado las mismas características de impresión)
+ 
 Para ilustrar las imágenes  (figuras montadas del apartado anterior) se ha seguido el siguiente tutorial cuya finalidad es facilitar a cualquier usuario pueda montar a Pibotj. Ilustra cada pieza necesaria al igual el lugar que ocupa.\\
+
+Los pasos seguidos 
+
+
+Finalmente , para resumir los materiales usados y el precio asociado son: .... como muestra el cuadro
+
+
+IMAGEN FINAL COMPLETA con los 2 tipos de ruedas \\\\\\
+
+
+EXplicar la intro del siguiente capítulo \\ 
+
+
+ 
  
 Capítulo 6: incluir lo de openvision paper\\
 capitulo 7: explicar experimentos impresora del instituto \\
