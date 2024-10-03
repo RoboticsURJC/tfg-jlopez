@@ -36,25 +36,25 @@
 \contentsline {subsection}{\numberline {4.1.8}Rueda loca}{37}{subsection.4.1.8}%
 \contentsline {subsection}{\numberline {4.1.9}Ordenador principal}{37}{subsection.4.1.9}%
 \contentsline {section}{\numberline {4.2}Software}{38}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}FreeCAD}{38}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}FreeCAD}{39}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Python}{39}{subsection.4.2.2}%
 \contentsline {subsubsection}{Software matemático}{40}{subsubsection*.69}%
-\contentsline {subsubsection}{Software localización}{40}{subsubsection*.70}%
+\contentsline {subsubsection}{Software para localización}{40}{subsubsection*.70}%
 \contentsline {subsection}{\numberline {4.2.3}OpenCV}{41}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Ubuntu}{41}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}ROS 2}{42}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.4}Ubuntu}{42}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}ROS 2}{43}{subsection.4.2.5}%
 \contentsline {subsubsection}{ROS 2 Control}{43}{subsubsection*.77}%
 \contentsline {subsection}{\numberline {4.2.6}Gazebo}{44}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Herramientas de monitorización}{44}{subsection.4.2.7}%
-\contentsline {subsubsection}{Rviz}{44}{subsubsection*.79}%
+\contentsline {subsection}{\numberline {4.2.7}Herramientas de monitorización}{45}{subsection.4.2.7}%
+\contentsline {subsubsection}{Rviz}{45}{subsubsection*.79}%
 \contentsline {subsubsection}{RQT Image View}{45}{subsubsection*.81}%
-\contentsline {subsubsection}{Ros2cli}{45}{subsubsection*.82}%
-\contentsline {subsection}{\numberline {4.2.8}Google Colaboratory}{45}{subsection.4.2.8}%
+\contentsline {subsubsection}{Ros2cli}{46}{subsubsection*.82}%
+\contentsline {subsection}{\numberline {4.2.8}Google Colaboratory}{46}{subsection.4.2.8}%
 \contentsline {subsection}{\numberline {4.2.9}YOLOv8}{46}{subsection.4.2.9}%
-\contentsline {subsection}{\numberline {4.2.10}TensorFlow Lite}{46}{subsection.4.2.10}%
+\contentsline {subsection}{\numberline {4.2.10}TensorFlow Lite}{47}{subsection.4.2.10}%
 \contentsline {subsection}{\numberline {4.2.11}Interfaz Web}{47}{subsection.4.2.11}%
-\contentsline {subsubsection}{ROS2bridge Server}{47}{subsubsection*.88}%
-\contentsline {subsubsection}{OpenStreetMaps}{47}{subsubsection*.89}%
+\contentsline {subsubsection}{ROS2bridge Server}{48}{subsubsection*.88}%
+\contentsline {subsubsection}{OpenStreetMaps}{48}{subsubsection*.89}%
 \contentsline {chapter}{\numberline {5}Implementación hardware del robot}{49}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Geometría del robot}{49}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Elección de componentes hardware}{51}{section.5.2}%
