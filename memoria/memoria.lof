@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Algunos robots del siglo XX\relax }}{4}{figure.caption.15}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Robots industriales\relax }}{5}{figure.caption.16}%
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Robots de limpieza Roomba, de iRobot$^{\ref {note:enlace6}}$\relax }}{6}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Robótica enfocada al entretenimiento\relax }}{6}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Robótica enfocada al entretenimiento\relax }}{7}{figure.caption.21}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Robots de salud\relax }}{7}{figure.caption.23}%
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Robots de logística\relax }}{8}{figure.caption.25}%
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Robots de campo\relax }}{9}{figure.caption.26}%
@@ -20,57 +20,57 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Robot usado para la reconstrucción 3D de baches\relax }}{17}{figure.caption.41}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Proyecto HERON\relax }}{18}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Visualización de la señal en un mapa en eyesNroad\relax }}{19}{figure.caption.45}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Plataforma robótica diseñada para el sellado de grietas\relax }}{20}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Plataforma robótica diseñada para el sellado de grietas\relax }}{21}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Método PDCA\relax }}{29}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Método PDCA\relax }}{30}{figure.caption.52}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 4$^{\ref {note:enlace38}}$\relax }}{32}{figure.caption.54}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Raspberry Pi Cámara V2$^{\ref {note:enlace39}}$\relax }}{33}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Módulo GPS NEO 6M$^{\ref {note:enlace40}}$\relax }}{33}{figure.caption.57}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Servomotor Parallax$^{\ref {note:enlace41}}$\relax }}{34}{figure.caption.59}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Rueda ActivityBot$^{\ref {note:enlace42}}$\relax }}{34}{figure.caption.60}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Google Coral USB$^{\ref {note:enlace43}}$\relax }}{35}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Xiaomi Powerbank$^{\ref {note:enlace44}}$\relax }}{36}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Rueda loca$^{\ref {note:enlace45}}$\relax }}{36}{figure.caption.63}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces ASUS VivoBook 14$^{\ref {note:enlace46}}$\relax }}{37}{figure.caption.64}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo de Freecad $^{\ref {note:enlace47}}$\relax }}{38}{figure.caption.66}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Logo de Python $^{\ref {note:enlace48}}$\relax }}{39}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Logo de OpenCV $^{\ref {note:enlace49}}$\relax }}{40}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Logo de Ubuntu $^{\ref {note:enlace50}}$\relax }}{40}{figure.caption.71}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Distribuciones de \acs {ROS} 2 usadas\relax }}{42}{figure.caption.75}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Logo de Gazebo $^{\ref {note:enlace56}}$\relax }}{43}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Logo de Rviz $^{\ref {note:enlace57}}$\relax }}{44}{figure.caption.79}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Logo de Google Colab $^{\ref {note:enlace60}}$\relax }}{45}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Logo de YOLOv8 $^{\ref {note:enlace61}}$\relax }}{45}{figure.caption.85}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Logo de TensorFlow Lite $^{\ref {note:enlace62}}$\relax }}{46}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Logo de Open Street Maps $^{\ref {note:enlace64}}$\relax }}{47}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 4$^{\ref {note:enlace38}}$\relax }}{33}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Raspberry Pi Cámara V2$^{\ref {note:enlace39}}$\relax }}{34}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Módulo GPS NEO 6M$^{\ref {note:enlace40}}$\relax }}{34}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Servomotor Parallax$^{\ref {note:enlace41}}$\relax }}{35}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Rueda ActivityBot$^{\ref {note:enlace42}}$\relax }}{35}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Google Coral USB$^{\ref {note:enlace43}}$\relax }}{36}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Xiaomi Powerbank$^{\ref {note:enlace44}}$\relax }}{37}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Rueda loca$^{\ref {note:enlace45}}$\relax }}{37}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ASUS VivoBook 14$^{\ref {note:enlace46}}$\relax }}{38}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo de Freecad $^{\ref {note:enlace47}}$\relax }}{39}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Logo de Python $^{\ref {note:enlace48}}$\relax }}{40}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Logo de OpenCV $^{\ref {note:enlace49}}$\relax }}{41}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Logo de Ubuntu $^{\ref {note:enlace50}}$\relax }}{42}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Distribuciones de \acs {ROS} 2 usadas\relax }}{43}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Logo de Gazebo $^{\ref {note:enlace56}}$\relax }}{44}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Logo de Rviz $^{\ref {note:enlace57}}$\relax }}{45}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Logo de Google Colab $^{\ref {note:enlace60}}$\relax }}{46}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Logo de YOLOv8 $^{\ref {note:enlace61}}$\relax }}{46}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Logo de TensorFlow Lite $^{\ref {note:enlace62}}$\relax }}{47}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Logo de Open Street Maps $^{\ref {note:enlace64}}$\relax }}{48}{figure.caption.89}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pibot\relax }}{49}{figure.caption.90}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Pibot con cámara modificada\relax }}{49}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Esquema de los grados de libertad de Pibot\relax }}{50}{figure.caption.92}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema de conexiones del Pibotj\relax }}{51}{figure.caption.93}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Bocetos creados a mano\relax }}{52}{figure.caption.94}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Maqueta en proceso\relax }}{53}{figure.caption.95}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Maqueta final\relax }}{54}{figure.caption.96}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Planos de los componentes\relax }}{55}{figure.caption.97}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Usando el calibre\relax }}{56}{figure.caption.98}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Pieza base\relax }}{57}{figure.caption.99}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Pieza base atornillada\relax }}{57}{figure.caption.100}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Inclinación de la cámara\relax }}{58}{figure.caption.101}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Pieza cámara\relax }}{59}{figure.caption.102}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Pieza cámara atornillada\relax }}{59}{figure.caption.103}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Pieza superior\relax }}{60}{figure.caption.104}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Pieza superior atornillada\relax }}{60}{figure.caption.105}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Pieza sujección trasera\relax }}{61}{figure.caption.106}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Pieza sujección trasera montada\relax }}{61}{figure.caption.107}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace79}}$\relax }}{62}{figure.caption.108}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Piezas impresas\relax }}{63}{figure.caption.110}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Hama Beads$^{\ref {note:enlace80}}$\relax }}{63}{figure.caption.111}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Soldando pines al módulo GPS\relax }}{64}{figure.caption.112}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Robot completo montado en FreeCAD\relax }}{65}{figure.caption.114}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Pibotj con ruedas de ActivityBot\relax }}{66}{figure.caption.115}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Ensamblaje ruedas azules\relax }}{67}{figure.caption.116}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Pibotj con ruedas azules\relax }}{68}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pibot\relax }}{50}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Pibot con cámara modificada\relax }}{50}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Esquema de los grados de libertad de Pibot\relax }}{51}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema de conexiones del Pibotj\relax }}{52}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bocetos creados a mano\relax }}{54}{figure.caption.94}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Maqueta en proceso\relax }}{55}{figure.caption.95}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Maqueta final\relax }}{56}{figure.caption.96}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Planos de los componentes\relax }}{57}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Usando el calibre\relax }}{58}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Pieza base\relax }}{58}{figure.caption.99}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Pieza base atornillada\relax }}{59}{figure.caption.100}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Inclinación de la cámara\relax }}{59}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Pieza cámara\relax }}{60}{figure.caption.102}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Pieza cámara atornillada\relax }}{60}{figure.caption.103}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Pieza superior\relax }}{61}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Pieza superior atornillada\relax }}{61}{figure.caption.105}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Pieza sujección trasera\relax }}{62}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Pieza sujección trasera montada\relax }}{62}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace79}}$\relax }}{63}{figure.caption.108}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Piezas impresas\relax }}{64}{figure.caption.110}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Hama Beads$^{\ref {note:enlace80}}$\relax }}{65}{figure.caption.111}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Soldando pines al módulo GPS\relax }}{65}{figure.caption.112}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Robot completo montado en FreeCAD\relax }}{66}{figure.caption.114}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Pibotj con ruedas de ActivityBot\relax }}{67}{figure.caption.115}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Ensamblaje ruedas azules\relax }}{68}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Pibotj con ruedas azules\relax }}{69}{figure.caption.117}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{72}{figure.caption.124}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{74}{figure.caption.124}%
 \addvspace {10\p@ }
