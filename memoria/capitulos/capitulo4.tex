@@ -109,13 +109,11 @@ Este tipo de servo (Figura \ref{fig:parallax}) tiene un rango de rotación de 0 
 %\setcounter{footnote}{39} % Reiniciar la numeración de notas al pie
 %\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005004551539283.html?spm=a2g0o.productlist.main.15.bee4rd8Srd8SSO&algo_pvid}\label{note:enlace39}}
 
-
 \subsection{Ruedas}
 
 Para implementar las ruedas del prototipo robótico de este proyecto se decidió tomar las ruedas del kit robótico ActivityBot, que usa unas ruedas compatibles con los motores descritos anteriormente, además de ser muy ligeras y estables. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel} izquierda). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa, y el diámetro de la rueda es de 66mm. También se pueden adquirir individualmente, con un coste de 4,54€ la unidad.
 
 Para enriquecer el proyecto, se han empleado otro tipo de ruedas cuyo diámetro es igual a las ruedas del ActivityBot pero el grosor del neumático es superior y tiene un mayor agarre sobre la superficie. En este caso son ruedas con el neumático azul (Figura \ref{fig:wheel} derecha) pero existen de muchos tipos y con precio similar a las ruedas ActivityBot.
-
 
 \begin{figure}[ht!]
 	\centering
@@ -372,11 +370,15 @@ OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una bibl
 
 \subsection{ROS 2}
 
-Por sus siglas en inglés, ROS (Robot Operating System) se trata de un \textit{middleware} para programar robots. Un \textit{middleware} es una capa de software entre el sistema operativo y las aplicaciones de usuario que permiten llevar a cabo aplicaciones \textit{software} independiente del dominio que ese encuentre. Es decir, ROS aporta un conjunto de herramientas, bibliotecas y convenciones. También, ofrecen desarrollo, integración, ejecución y herramienta de monitorización. El número 2 indica que es la segunda generación de este middleware. 
+ROS, por sus siglas en inglés, \textit{Robot Operating System} se trata de un conjunto de bibliotecas y herramientas que ayudan a los desarrolladores a construir sistemas robóticos. ROS proporciona servicios de nivel bajo como abstracción de hardware, control de dispositivos, paso de mensajes entre procesos y gestión de paquetes, así como herramientas para simulación, pruebas y desarrollo de algoritmos.
 
-ROS 2 tiene tres diferentes dimensiones: la comunidad de ROS 2 que contribuye al desarrollo de aplicaciones es enorme, el grafo de computación de una aplicación en ROS 2 está formado por nodos conectados con distintos paradigmas de comunicación y el espacio de trabajo, también conocido como \textit{workspace}, es aquel que se trata del \textit{software} instalado que se divide a su vez en \textit{underlay} (la instalación básica de ROS 2) y \textit{overlay} (son el resto de programas que se desarrollan).
+ROS 2, la segunda generación de ROS, se ha rediseñado para superar las limitaciones de su predecesor. Está basado en un nuevo middleware llamado DDS (Data Distribution Service), que permite una mejor comunicación entre nodos, mayor seguridad, y más opciones de transporte y calidad de servicio (QoS). También mejora la escalabilidad, el soporte para sistemas distribuidos y la capacidad para aplicaciones en tiempo real. Además, ROS 2 es multiplataforma e interoperable; soportando múltiples lenguajes de programación, como C++ y Python.
 
-Según se ha explicado en el Apartado 4.2.4, debido a que he necesitado para este proyecto usar Ubuntu 20.04 y Ubuntu 22.04; he tenido que usar las dos distribuciones más estable de ROS para cada versión de Ubuntu: ROS 2 Foxy\footnote{\url{https://docs.ros.org/en/foxy/Installation.html}} y ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/index.html}} respectivamente (Figura \ref{fig:rosdis}).
+%de un \textit{middleware} para programar robots. Un \textit{middleware} es una capa de software entre el sistema operativo y las aplicaciones de usuario que permiten llevar a cabo aplicaciones \textit{software} independiente del dominio que ese encuentre. Es decir, ROS aporta un conjunto de herramientas, bibliotecas y convenciones. También, ofrecen desarrollo, integración, ejecución y herramienta de monitorización. El número 2 indica que es la segunda generación de este middleware. 
+
+%ROS 2 tiene tres diferentes dimensiones: la comunidad de ROS 2 que contribuye al desarrollo de aplicaciones es enorme, el grafo de computación de una aplicación en ROS 2 está formado por nodos conectados con distintos paradigmas de comunicación y el espacio de trabajo, también conocido como \textit{workspace}, es aquel que se trata del \textit{software} instalado que se divide a su vez en \textit{underlay} (la instalación básica de ROS 2) y \textit{overlay} (son el resto de programas que se desarrollan).
+
+Según se ha explicado en el Apartado 4.2.4, debido a que se ha necesitado para este proyecto usar Ubuntu 20.04 y Ubuntu 22.04; se ha tenido que usar las dos distribuciones más estable de ROS para cada versión de Ubuntu: ROS 2 Foxy\footnote{\url{https://docs.ros.org/en/foxy/Installation.html}} y ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/index.html}}, respectivamente (Figura \ref{fig:rosdis}).
 
 
 \begin{figure}[ht!]
@@ -494,7 +496,6 @@ Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \
 %\setcounter{footnote}{62} % Establecer la numeración de la siguiente nota al pie
 %\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace62}}
 
-
 \subsection{TensorFlow Lite}
 
 TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Concretamente, para poder ejecutar modelos en dispositivos como las Raspberry Pi,se usa la versión TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:tflite}), ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
@@ -509,7 +510,6 @@ TensorFlow es una plataforma de código abierto desarrollada por Google para el 
 
 %\setcounter{footnote}{63} % Establecer la numeración de la siguiente nota al pie
 %\footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace63}}
-
 
 \subsection{Interfaz Web}
 
@@ -530,9 +530,11 @@ OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} (Figura \ref{fig:os
 	\end{center}
 	\caption{Logo de Open Street Maps}  %$^{\ref{note:enlace65}}$
 	\label{fig:osm}
-\end{figure}
+\end{figure}\ 
 
 %\setcounter{footnote}{65} % Establecer la numeración de la siguiente nota al pie
 %\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace65}}
+
+
 
 Tras conocer todas las plataformas software y hardware empleadas para la realización del presente trabajo fin de grado, es el momento de describir el desarrollo completo llevado a cabo para la construcción hardware del robot que se explicará detalladamente en el siguiente capítulo.
