@@ -46,7 +46,7 @@ Esta cámara (Figura \ref{fig:raspberrycam}) tiene un tamaño de  23.86 x 25 x 9
 	\begin{center}
 		\includegraphics[width=6cm]{figs/campi.png}
 	\end{center}
-	\caption{Raspberry Pi Cámara V2$^{\ref{note:enlace39}}$} 
+	\caption{Raspberry PiCamera V2$^{\ref{note:enlace39}}$} 
 \label{fig:raspberrycam}
 \end{figure}
 
@@ -252,6 +252,47 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 
 En este apartado se van a describir los programas y librerías que han sido necesarios usar cumplir con los objetivos descritos en el Capítulo 3.
 
+\subsection{Ubuntu}
+
+Ubuntu\footnote{\url{https://ubuntu.com/}} (Figura \ref{fig:ubuntu}) es una de las muchas distribuciones del sistema operativo GNU/Linux; esta, concretamente, está basada en Debian GNU/Linux, y es mantenida por Canonical Ltd. Puede utilizarse en ordenadores y servidores. Está orientado al usuario promedio, con un fuerte enfoque en la facilidad de uso y en mejorar la experiencia del usuario; es por ello que se ha convertido en uno de los sistemas operativos más populares, cuenta con una amplia comunidad de soporte que le brinda continuamente actualizaciones, que incluyen parches de seguridad y mejoras.
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=4cm]{figs/ubuntu.png}
+	\end{center}
+	\caption{Logo de Ubuntu} %$^{\ref{note:enlace51}}$
+	\label{fig:ubuntu}
+\end{figure}
+
+%\setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
+%\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace51}}
+
+Entre todas las versiones existentes de Ubuntu, para la realización del proyecto se ha usado Ubuntu 22.04 LTS y Ubuntu 20.04 LTS. El ordenador usado (descrito en el Apartado 4.1.9) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB (descrito en el Apartado 4.1.6) es compatible con versiones de Python entre 3.6 y 3.9, y en Ubuntu 22.04 la versión de Python que se instala por defecto es la 3.10, y el intento de cambiar dicha versión genera numerosos problemas de dependencias, sobre todo con la versión de ROS 2 usada. Asimismo, en numerosos foros aconsejaban migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/}} que usa Python 3.8. En el Cuadro \ref{cuadro:ubuntu} se muestran algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Características} & \textbf{Ubuntu 20.04} & \textbf{Ubuntu 22.04} \\
+			\hline
+			Fecha de lanzamiento & Abril 2020 & Abril 2022\\
+			\hline
+			Soporte & Hasta Abril 2025 & Hasta Abril 2027\\
+			\hline
+			Kernel & Linux 5.4 & Linux 5.15 \\
+			\hline
+			Entorno de escritorio & GNOME 3.36 & GNOME 42\\
+			\hline
+			Python & Python 3.8 & Python 3.10\\
+			\hline
+			Soporte gráfico NVIDIA & Soporte estándar & Soporte mejorado con Wayland\\
+			\hline
+		\end{tabular}
+		\caption{Diferencias entre Ubuntu 20.04 y Ubuntu 22.04}
+		\label{cuadro:ubuntu}
+	\end{center}
+\end{table}
+
 \subsection{FreeCAD}
 
 Esta herramienta de código abierto\footnote{\url{https://www.freecad.org/}} (Figura \ref{fig:freecad}) es un \textit{software} de diseño asistido por ordenador utilizado principalmente para la creación de modelos 3D en diferentes áreas, como la ingeniería, arquitectura, y diseño de productos. Está diseñado para ser altamente modular, formado por \textit{workbenches}, lo que permite a los usuarios adaptar y extender su funcionalidad según sus necesidades.
@@ -316,7 +357,7 @@ Es este proyecto, se van a emplear las sentencias que contengan latitud y longit
 
 \subsection{OpenCV}
 
-OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una biblioteca de software de código abierto diseñada para la visión artificial y el procesamiento de imágenes. Fue desarrollada inicialmente por Intel en 1999 y ahora es mantenida por una gran comunidad de desarrolladores. OpenCV es ampliamente utilizada en aplicaciones que requieren análisis de imágenes, detección de objetos, reconocimiento de rostros, visión computacional, y mucho más. Gracias a su gran aplicación se ha decidido integrar en el TFG para la detección del bache y el cálculo del área.
+OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una biblioteca software de código abierto diseñada para la visión artificial y el procesamiento de imágenes. Fue desarrollada inicialmente por Intel en 1999 y ahora es mantenida por una gran comunidad de desarrolladores. OpenCV es ampliamente utilizada en aplicaciones que requieren análisis de imágenes, detección de objetos, reconocimiento de rostros, visión computacional, y mucho más. En este proyecto se ha usado concretamente para la detección del bache y el cálculo del área.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -328,49 +369,6 @@ OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una bibl
 
 %\setcounter{footnote}{50} % Establecer la numeración de la siguiente nota al pie
 %\footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace50}}
-
-
-\subsection{Ubuntu}
-
-Ubuntu\footnote{\url{https://ubuntu.com/}} (Figura \ref{fig:ubuntu}) es una distribución GNU/Linux basada en Debian GNU/Linux, que incluye principalmente software libre y de código abierto y es mantenida por Canonical Ltd. Puede utilizarse en ordenadores y servidores. Está orientado al usuario promedio, con un fuerte enfoque en la facilidad de uso y en mejorar la experiencia del usuario. Debido a ser software libre es uno de los sistemas operativos más populares y es conocido por su facilidad de uso, estabilidad, amplia comunidad de soporte y por sus actualizaciones periódicas.
-
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/ubuntu.png}
-	\end{center}
-	\caption{Logo de Ubuntu} %$^{\ref{note:enlace51}}$
-	\label{fig:ubuntu}
-\end{figure}
-
-%\setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace51}}
-
-Entre todas las versiones existentes para la realización del proyecto se ha usado Ubuntu 22.04 y Ubuntu 20.04. El ordenador usado (descrito en el Apartado 4.1.9) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB descrito en el Apartado 4.1.6 es compatible con versiones de Python entre 3.6 y 3.9 siendo en Ubuntu 22.04 la instalación de Python por defecto de 3.10 y el intento de cambiar dicha versión generó numerosos problemas de dependencias sobre todo con la versión de ROS2 usada. En muchos foros tampoco aconsejaban modificar las versiones de Python que vienen instaladas por defecto\footnote{\url{https://github.com/google-coral/pycoral/issues/81}} y que la Rasberry únicamente tuviese esta aplicación se recomienda migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/}} que usa Python 3.8. A continuación, se va a mostrar un Cuadro \ref{cuadro:ubuntu} con algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|}
-			\hline
-			\textbf{Características} & \textbf{Ubuntu 20.04} & \textbf{Ubuntu 22.04} \\
-			\hline
-			 Fecha de lanzamiento & Abril 2020 & Abril 2022\\
-			 \hline
-			 Soporte & Hasta Abril 2025 & Hasta Abril 2027\\
-			 \hline
-			 Kernel & Linux 5.4 & Linux 5.15 \\
-			 \hline
-			 Entorno de escritorio & GNOME 3.36 & GNOME 42\\
-			 \hline
-			 Python & Python 3.8 & Python 3.10\\
-			 \hline
-			 Soporte gráfico NVIDIA & Soporte estándar & Soporte mejorado con Wayland\\
-			\hline
-		\end{tabular}
-		\caption{Diferencias entre Ubuntu 20.04 y Ubuntu 22.04}
-		\label{cuadro:ubuntu}
-	\end{center}
-\end{table}
-
 
 \subsection{ROS 2}
 
@@ -386,14 +384,14 @@ Según se ha explicado en el Apartado 4.2.4, debido a que he necesitado para est
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/foxy.png}
-		\caption*{\centering Logo Ros2 Foxy} % $^{\ref{note:enlace54}}$
+		\caption*{\centering Logo ROS 2 Foxy} % $^{\ref{note:enlace54}}$
 	\end{minipage}
 	\hspace{2cm}
 	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/humble.png}
-		\caption*{\centering Logo Ros2 Humble} % $^{\ref{note:enlace55}}$
+		\caption*{\centering Logo ROS 2 Humble} % $^{\ref{note:enlace55}}$
 	\end{minipage}
 	\caption{Distribuciones de ROS 2 usadas}
 	\label{fig:rosdis}
@@ -417,7 +415,7 @@ Los componentes principales de ROS 2 Control son:
 	\item \textit{Resource Manager}. Abstrae y gestiona el hardware, permitiendo la reutilización flexible de componentes.
 	\item \textit{Controllers}. Utilizan la teoría de control para interactuar con el hardware.
 	\item \textit{User interface}. Pueden interactuar con el sistema mediante servicios y una interfaz de línea de comandos.
-	\item \textit{Hardware Components}. Realizan comunicación con hardware físico como puede ser: sistemas, sensores y actuadores.
+	\item \textit{Hardware Components}. Realizan comunicación con hardware físico, como puede ser: sistemas, sensores y actuadores.
 \end{itemize}\
 
 En este proyecto se ha decidido usar ROS 2 Control para crear un modelo del robot en simulación y poder trabajar con él usando la filosofía de ROS 2 Control.
@@ -425,7 +423,7 @@ En este proyecto se ha decidido usar ROS 2 Control para crear un modelo del robo
 
 \subsection{Gazebo}
 
-Gazebo\footnote{\url{https://gazebosim.org/home}} (Figura \ref{fig:gazebo}) es un simulador de robots que permite modelar entornos físicos tridimensionales y probar robots en ellos sin necesidad de tener el robot en físico y evitar así posibles caídas o golpes. Es ampliamente utilizado en la investigación y desarrollo de robótica, especialmente en combinación con ROS y ROS 2. Además, ofrece una simulación realista en un entorno 3D y por ello se decidió usar este simulador para el proyecto.
+Gazebo\footnote{\url{https://gazebosim.org/home}} (Figura \ref{fig:gazebo}) es un simulador de robots que permite modelar entornos físicos tridimensionales y probar robots en ellos sin necesidad de tener el robot físico y evitar así posibles caídas o golpes. Es ampliamente utilizado en la investigación y desarrollo de robótica, especialmente en combinación con ROS y ROS 2. Además, ofrece una simulación realista en un entorno 3D, y por ello se decidió usar este simulador para el proyecto.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -440,9 +438,11 @@ Gazebo\footnote{\url{https://gazebosim.org/home}} (Figura \ref{fig:gazebo}) es u
 
 \subsection{Herramientas de monitorización}
 
+Para el desarrollo del proyecto, se emplean diversas herramientas de monitorización que permiten visualizar y controlar los datos y procesos dentro del entorno de ROS 2, y para ello se ha decidido usar las herramientas que se describen a continuación.
+
 \subsubsection{Rviz}
 
-RViz\footnote{\url{http://wiki.ros.org/rviz}} (Figura \ref{fig:rviz}) es una herramienta de visualización en 3D utilizada en ROS y ROS 2 para representar información del sistema robótico. Permite a los usuarios ver datos en tiempo real como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorear el comportamiento del robot en simulación.\\
+RViz\footnote{\url{http://wiki.ros.org/rviz}} (Figura \ref{fig:rviz}) es una herramienta de visualización en 3D utilizada en ROS y ROS 2 para representar información del sistema robótico. Permite a los usuarios ver, en tiempo real, datos como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorear el comportamiento del robot en simulación.\\
 
 \begin{figure} [h!]
 	\begin{center}
@@ -457,16 +457,16 @@ RViz\footnote{\url{http://wiki.ros.org/rviz}} (Figura \ref{fig:rviz}) es una her
 
 \subsubsection{RQT Image View}
 
-RQt Image View \footnote{\url{http://wiki.ros.org/rqt_image_view}} es una herramienta gráfica dentro del ecosistema de ROS y ROS 2 que permite visualizar imágenes en tiempo real de un flujo de datos de imágenes publicado por una cámara en un sistema robótico. Se ha usado esta herramienta para monitorizar la cámara del robot físico.
+RQt Image View\footnote{\url{http://wiki.ros.org/rqt_image_view}} es una herramienta gráfica dentro del ecosistema de ROS y ROS 2 que permite visualizar imágenes en tiempo real de un flujo de datos de imágenes publicado por una cámara en un sistema robótico. Se ha usado esta herramienta para monitorizar la cámara del robot físico.
 
-\subsubsection{Ros2cli}
+\subsubsection{ROS2cli}
 
 ROS 2 \ac{CLI}\footnote{\url{https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools.html}} es una herramienta que permite interactuar con el sistema ROS 2 mediante comandos desde la terminal. Ofrece una forma rápida y sencilla de acceder a las funciones y características de ROS 2 sin necesidad de escribir o ejecutar código complejo. Ha sido la herramienta principal en este proyecto para ejecutar los distintos nodos, comprobar si estaban bien lanzados, si se producía buena comunicación entre ellos, entre otras aplicaciones.
 
 
 \subsection{Google Colaboratory}
 
-Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \ref{fig:googlecolab}) un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta se puede cumplir del apartado 3.2 de Requisitos, el número 4.
+Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \ref{fig:googlecolab}) es un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta, se puede cumplir el requisito nº.4 de los indicados en la sección 3.2.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -481,7 +481,7 @@ Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \
 
 \subsection{YOLOv8}
 
-\acs{YOLO}v8\footnote{\url{https://docs.ultralytics.com/es}} (Figura \ref{fig:yolov8}) desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas incluidos como EdgeTPU para dispositivos con recursos limitados como puede ser Raspberry Pi. Debido a todo lo anterior, esta herramienta ha sido elegida para la el entrenamiento del modelo de detección de baches. 
+\acs{YOLO}v8\footnote{\url{https://docs.ultralytics.com/es}} (Figura \ref{fig:yolov8}) desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas, incluidos como EdgeTPU, para dispositivos con recursos limitados como puede ser Raspberry Pi. Por todo lo anterior, esta herramienta ha sido elegida para el entrenamiento del modelo de detección de baches. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -497,7 +497,7 @@ Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \
 
 \subsection{TensorFlow Lite}
 
-TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Para poder ejecutar modelos en dispositivos una Raspberry se usa TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:tflite}) ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
+TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Concretamente, para poder ejecutar modelos en dispositivos como las Raspberry Pi,se usa la versión TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:tflite}), ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -513,15 +513,15 @@ TensorFlow es una plataforma de código abierto desarrollada por Google para el 
 
 \subsection{Interfaz Web}
 
-Para poder hacer más amigable la interacción humano-robot, se ha decidido plasmar los datos obtenidos a través de una interfaz web y para ello se ha decidido usar las siguientes herramientas: 
+Para poder hacer más amigable la interacción humano-robot, se ha decidido plasmar los datos obtenidos a través de una interfaz web, y para ello se ha decidido usar las herramientas que se describen a continuación.
  
 \subsubsection{ROS2bridge Server}
 
-ROS2bridge Server\footnote{\url{http://wiki.ros.org/rosbridge_server}} es parte de ros2bridge\_suite y ofrece una capa de transporte WebSocket para la comunicación bidireccional entre páginas web y ROS 2. Convierte mensajes JSON en llamadas a ROS 2 y viceversa, permitiendo que las páginas web interactúen con ROS 2. 
+ROS2bridge Server\footnote{\url{http://wiki.ros.org/rosbridge_server}} es parte de ros2bridge\_suite, y ofrece una capa de transporte WebSocket para la comunicación bidireccional entre páginas web y ROS 2. Convierte mensajes JSON en llamadas a ROS 2 y viceversa, permitiendo que las páginas web interactúen con ROS 2. 
 
 \subsubsection{OpenStreetMaps}
 
-OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} (Figura \ref{fig:osm}) un proyecto internacional colaborativo desde 2004 que proporciona datos geográficos gratuitos y abiertos, permitiendo la creación de mapas detallados y editables de cualquier parte del mundo por usuarios voluntarios que den crédito a OpenStreetMaps. OpenStreetMaps es utilizado en una amplia gama de aplicaciones, incluyendo navegación, análisis de datos geográficos, y proyectos de código abierto relacionados con mapas y geolocalización.
+OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} (Figura \ref{fig:osm}) es un proyecto internacional colaborativo desde 2004 que proporciona datos geográficos gratuitos y abiertos, permitiendo la creación de mapas detallados y editables de cualquier parte del mundo por usuarios voluntarios que den crédito a OpenStreetMaps. Esta herramienta es utilizada en una amplia gama de aplicaciones, incluyendo navegación, análisis de datos geográficos, y proyectos de código abierto relacionados con mapas y geolocalización.
 
 
 \begin{figure} [h!]
@@ -535,4 +535,4 @@ OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} (Figura \ref{fig:os
 %\setcounter{footnote}{65} % Establecer la numeración de la siguiente nota al pie
 %\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace65}}
 
-Tras conocer todas las plataformas de desarrollo para realizar el presente trabajo fin de grado, es el momento de contar el desarrollo completo llevado a cabo para la construcción hardware del robot que se explicará detalladamente en el siguiente capítulo.
+Tras conocer todas las plataformas software y hardware empleadas para la realización del presente trabajo fin de grado, es el momento de describir el desarrollo completo llevado a cabo para la construcción hardware del robot que se explicará detalladamente en el siguiente capítulo.
