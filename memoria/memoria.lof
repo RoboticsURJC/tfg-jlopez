@@ -46,32 +46,32 @@
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Logo de TensorFlow Lite\relax }}{47}{figure.caption.87}%
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Logo de Open Street Maps\relax }}{48}{figure.caption.90}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pibot\relax }}{50}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Pibot con cámara modificada\relax }}{50}{figure.caption.92}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Esquema de los grados de libertad de Pibot\relax }}{51}{figure.caption.93}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema de conexiones del Pibotj\relax }}{52}{figure.caption.94}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Bocetos creados a mano\relax }}{54}{figure.caption.95}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Maqueta en proceso\relax }}{55}{figure.caption.96}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Maqueta final\relax }}{56}{figure.caption.97}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Planos de los componentes\relax }}{57}{figure.caption.98}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Usando el calibre\relax }}{58}{figure.caption.99}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Pieza base\relax }}{58}{figure.caption.100}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Pieza base atornillada\relax }}{59}{figure.caption.101}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Inclinación de la cámara\relax }}{59}{figure.caption.102}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Pieza cámara\relax }}{60}{figure.caption.103}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Pieza cámara atornillada\relax }}{60}{figure.caption.104}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Pieza superior\relax }}{61}{figure.caption.105}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Pieza superior atornillada\relax }}{61}{figure.caption.106}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Pieza sujección trasera\relax }}{62}{figure.caption.107}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Pieza sujección trasera montada\relax }}{62}{figure.caption.108}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace80}}$\relax }}{63}{figure.caption.109}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Piezas impresas\relax }}{64}{figure.caption.111}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Hama Beads$^{\ref {note:enlace81}}$\relax }}{65}{figure.caption.112}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Soldando pines al módulo GPS\relax }}{65}{figure.caption.113}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Robot completo montado en FreeCAD\relax }}{66}{figure.caption.115}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Pibotj con ruedas de ActivityBot\relax }}{67}{figure.caption.116}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Ensamblaje ruedas azules\relax }}{68}{figure.caption.117}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Pibotj con ruedas azules\relax }}{69}{figure.caption.118}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces PiBot\relax }}{50}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces PiBot con cámara modificada\relax }}{50}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Esquema de los grados de libertad de PiBot\relax }}{51}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Esquema de conexiones del PiBotJ\relax }}{52}{figure.caption.94}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bocetos creados a mano\relax }}{53}{figure.caption.95}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Maqueta en proceso\relax }}{54}{figure.caption.96}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Maqueta final\relax }}{55}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Planos de los componentes\relax }}{56}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Usando el calibre\relax }}{57}{figure.caption.99}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Distintas vistas del chasis\relax }}{57}{figure.caption.100}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Distintas vistas del chasis atornillado\relax }}{58}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Inclinación de la cámara\relax }}{58}{figure.caption.102}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Distintas vistas de la pieza de la cámara\relax }}{59}{figure.caption.103}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Distintas vistas de la pieza de la cámara atornillada\relax }}{59}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Distintas vistas de la carcasa\relax }}{60}{figure.caption.105}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Distintas vistas de la carcasa atornillada\relax }}{61}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Distintas vistas de la pieza para la sujección trasera\relax }}{61}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Pieza para la sujección trasera atornillada\relax }}{62}{figure.caption.108}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace79}}$\relax }}{62}{figure.caption.109}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Piezas impresas\relax }}{63}{figure.caption.111}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Hama Beads$^{\ref {note:enlace80}}$\relax }}{64}{figure.caption.112}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Soldando pines al módulo GPS\relax }}{64}{figure.caption.113}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Robot completo montado en FreeCAD\relax }}{65}{figure.caption.115}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces PiBotJ con ruedas de ActivityBot\relax }}{66}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Ensamblaje ruedas azules\relax }}{67}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces PiBotJ con ruedas azules\relax }}{68}{figure.caption.118}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{74}{figure.caption.125}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{73}{figure.caption.125}%
 \addvspace {10\p@ }
