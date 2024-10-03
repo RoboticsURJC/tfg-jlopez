@@ -30,7 +30,7 @@ La Raspberry Pi es una computadora de bajo coste y, con su tamaño compacto, es 
 	\end{center}
 	\caption{Raspberry Pi 4$^{\ref{note:enlace38}}$} 
 \label{fig:raspberry}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{38} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/raspberry-pi-4-model-b/}\label{note:enlace38}}
@@ -48,7 +48,7 @@ Esta cámara (Figura \ref{fig:raspberrycam}) tiene un tamaño de  23.86 x 25 x 9
 	\end{center}
 	\caption{Raspberry Pi Cámara V2$^{\ref{note:enlace39}}$} 
 \label{fig:raspberrycam}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/camera-module-v2/}\label{note:enlace39}}
@@ -65,7 +65,7 @@ Tiene una precisión de aproximadamente 2.5 metros en condiciones abiertas. Sopo
 	\end{center}
 	\caption{Módulo GPS NEO 6M$^{\ref{note:enlace40}}$} 
 \label{fig:gps}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.u-blox.com/en/product/neo-6-series}\label{note:enlace40}}
@@ -100,7 +100,7 @@ Este tipo de servo (Figura \ref{fig:parallax}) tiene un rango de rotación de 0 
 	\end{center}
 	\caption{Servomotor Parallax$^{\ref{note:enlace41}}$} 
 	\label{fig:parallax}
-\end{figure}\
+\end{figure}
 
 
 \setcounter{footnote}{41} % Reiniciar la numeración de notas al pie
@@ -112,23 +112,24 @@ Este tipo de servo (Figura \ref{fig:parallax}) tiene un rango de rotación de 0 
 
 \subsection{Ruedas}
 
-Para implementar las ruedas de este robot se decidió tomar las ruedas del kit robótico ActivityBot, que usa este tipo de ruedas. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel}). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa y el diámetro de la rueda es de 66mm. Se pueden adquirir individualmente con un coste de 4,54€ la unidad.
+Para implementar las ruedas del prototipo robótico de este proyecto se decidió tomar las ruedas del kit robótico ActivityBot, que usa unas ruedas compatibles con los motores descritos anteriormente, además de ser muy ligeras y estables. Se trata de una rueda de plástico con neumático tipo junta tórica (Figura \ref{fig:wheel} izquierda). El perfil estrecho convierte a esta rueda en ideal para aplicaciones que requieren una dirección precisa, y el diámetro de la rueda es de 66mm. También se pueden adquirir individualmente, con un coste de 4,54€ la unidad.
+
+Para enriquecer el proyecto, se han empleado otro tipo de ruedas cuyo diámetro es igual a las ruedas del ActivityBot pero el grosor del neumático es superior y tiene un mayor agarre sobre la superficie. En este caso son ruedas con el neumático azul (Figura \ref{fig:wheel} derecha) pero existen de muchos tipos y con precio similar a las ruedas ActivityBot.
 
 
 \begin{figure}[ht!]
 	\centering
 	\begin{minipage}{0.4\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/wheel.png}
-		\caption*{\centering Rueda ActivityBot $^{\ref{note:enlace42}}$} 
-	\end{minipage}
+			\centering
+			\includegraphics[width=\linewidth]{figs/wheel.png}
+			\caption*{\centering Rueda ActivityBot $^{\ref{note:enlace42}}$} 
+		\end{minipage}
 	\hspace{2cm}
-
 	\begin{minipage}{0.38\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/wheel2.png}
-		\caption*{\centering Rueda Azul$^{\ref{note:enlace43}}$} 
-	\end{minipage}
+			\centering
+			\includegraphics[width=\linewidth]{figs/wheel2.png}
+			\caption*{\centering Rueda Azul $^{\ref{note:enlace43}}$} 
+		\end{minipage}
 	\caption{Ruedas utilizadas}
 	\label{fig:wheel}
 \end{figure}
@@ -138,14 +139,14 @@ Para implementar las ruedas de este robot se decidió tomar las ruedas del kit r
 \footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace42}}
 
 \setcounter{footnote}{43} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{}\label{note:enlace43}}
+\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005005145020093.html}\label{note:enlace43}}
 
 
 \subsection{Google Coral USB}
 
-El Google Coral USB Accelerator (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en TensorFlow Lite, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Sólo es compatible con  las versiones desde Python 3.6 hasta la versión 3.9.
+El Google Coral USB Accelerator (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en TensorFlow Lite, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Al ser una placa lanzada hace varios años al mercado, sólo es compatible con  las versiones de Python 3.6 hasta la 3.9.
 
-Gracias a todas esas características y para mejorar la detección de baches en tiempo real y solventar las limitaciones de la Raspberry Pi, se ha decidido incluir este componente en el proyecto. Su precio es de unos 65€.
+Por sus cualidadesdescritas, se ha decidido este componente para mejorar la detección de baches en tiempo real y solventar las limitaciones de la Raspberry Pi. Su precio es de unos 65€.
  
 \begin{figure} [h!]
 	\begin{center}
@@ -153,14 +154,14 @@ Gracias a todas esas características y para mejorar la detección de baches en 
 	\end{center}
 	\caption{Google Coral USB$^{\ref{note:enlace44}}$} 
 	\label{fig:googlecoral}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace44}}
 
 \subsection{Power bank}
 
-Para poder alimentar a todos los componentes se ha incluido en el prototipo robótico una \textit{power bank} de bastante capacidad para que permita la autonomía del robot durante un tiempo más que razonable. Para ello se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh, cuyas dimensiones son: 73,6 x 27,3 x 154 mm. Su precio ronda los 30€.
+Para poder alimentar a todos los componentes se ha incluido en el prototipo robótico una \textit{power bank} de gran capacidad para que permita la autonomía del robot durante un tiempo más que razonable. Concretamente, se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh, cuyas dimensiones son: 73,6 x 27,3 x 154 mm y tiene un peso de 400g. Su precio ronda los 20€.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -168,14 +169,14 @@ Para poder alimentar a todos los componentes se ha incluido en el prototipo rob�
 	\end{center}
 	\caption{Xiaomi Powerbank$^{\ref{note:enlace45}}$} 
 	\label{fig:powerbank}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://buy.mi.com/es/item/3202200053}\label{note:enlace45}}
+\footnotetext[\value{footnote}]{\url{https://ams.buy.mi.com/es/item/3202200053?&skupanel=1}\label{note:enlace45}}
 
 \subsection{Rueda loca}
 
-Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo para el robot, es necesario incluir al robot una rueda loca. Tras investigar para encontrar la que mejor encaja, se ha decidido incluir una rueda loca como la que aparece en la Figura \ref{fig:ruedaloca} que tiene las siguientes dimensiones: 5,3 x 2,9 x 2 cm. El precio de una de ellas es de 1,13€.
+Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo para el robot, es necesario incorporar al robot una rueda loca. Tras investigar qué rueda encajaba mejor, se ha decidido incluir una rueda loca como la que aparece en la Figura \ref{fig:ruedaloca}, que tiene las siguientes dimensiones: 5,3 x 2,9 x 2 cm. El precio de esta es de 1,13€.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -183,14 +184,14 @@ Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo 
 	\end{center}
 	\caption{Rueda loca$^{\ref{note:enlace46}}$} 
 	\label{fig:ruedaloca}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{46} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace46}}
 
 \subsection{Ordenador principal}
 
-Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la Raspberry Pi y poder comandar acciones al robot, ha sido necesario tener un ordenador principal que permita realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
+Para poder desarrollar programas, hacer pruebas en simulación, permitir conectarse por SSH a la Raspberry Pi y poder comandar acciones al robot, ha sido necesario tener un ordenador principal que permitiera realizar todas las tareas. El ordenador que aparece en la Figura \ref{fig:ordenador} es el que se ha empleado en este proyecto, y cumple las características descritas en el Cuadro \ref{cuadro:carac_ordena}.
 
 
 \begin{figure} [h!]
@@ -199,7 +200,7 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 	\end{center}
 	\caption{ASUS VivoBook 14$^{\ref{note:enlace47}}$} 
 	\label{fig:ordenador}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{47} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace47}}
@@ -210,17 +211,34 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 			\hline
 			\textbf{Características} & \textbf{Descripción} \\
 			\hline
-			Pantalla & 14 pulgadas, Full HD (1920x1080), tecnología LED, antirreflejo \\
+			\multirow{4}{*}{Pantalla} & \multirow{4}{*}{\shortstack{ 14 pulgadas \\ Full HD (1920x1080) \\ tecnología LED \\antirreflejo }}\\
+			& \\
+			& \\
+			& \\
+			\hline
 			Procesador (CPU) & Intel Core i7 de 10ª generación \\
+			\hline
 			Memoria RAM & 8GB \\
+			\hline
 			Almacenamiento & 512GB \\
-			Tarjeta gráfica (GPU) & Intel UHD Graphics de la serie Comet Lake-U GT2 \\
+			\hline
+			Tarjeta gráfica (GPU) & Intel UHD Graphics de Comet Lake-U GT2 \\
+			\hline
 			Sistema Operativo & Windows 10 y Ubuntu 22.04 \\
-			Puertos 1 & 1x USB 3.2 Gen 1 Tipo-A, 1x USB 3.2 Gen 1 Tipo-C, 2x USB 2.0\\  
-			Puertos 2 & 1x HDMI, lector de tarjetas microSD, entrada combo de audio \\
+			\hline
+			\multirow{6}{*}{Puertos} &\multirow{6}{*}{\shortstack{1x USB 3.2 Gen 1 Tipo-A \\1x USB 3.2 Gen 1 Tipo-C \\ 2x USB 2.0 \\ 1x HDMI \\lector de tarjetas microSD \\entrada combo de audio }}\\  
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			\hline
 			Conectividad & 	Wi-Fi 5 (802.11ac), Bluetooth 4.1 / 5.0 \\
+			\hline
 			Batería & 37 Whr \\
+			\hline
 			Peso & 1.4 kg \\
+			\hline
 			Dimensiones & 32.5 x 21.6 x 1.99 cm \\
 			\hline
 		\end{tabular}
@@ -232,24 +250,24 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 
 \section{Software}
 
-En este apartado se van a describir el conjunto de programas y librerías que han sido necesarios usar cumplir con los objetivos del Capítulo 3.
+En este apartado se van a describir los programas y librerías que han sido necesarios usar cumplir con los objetivos descritos en el Capítulo 3.
 
 \subsection{FreeCAD}
 
-Esta herramienta de código abierto (Figura \ref{fig:freecad}) es un \textit{software} de diseño asistido por computadora utilizado principalmente para la creación de modelos 3D en diferentes áreas como la ingeniería, arquitectura, y diseño de productos. Está diseñado para ser altamente modular formado por \textit{workbenches}, lo que permite a los usuarios adaptar y extender su funcionalidad según sus necesidades.
+Esta herramienta de código abierto (Figura \ref{fig:freecad}) es un \textit{software} de diseño asistido por ordenador utilizado principalmente para la creación de modelos 3D en diferentes áreas, como la ingeniería, arquitectura, y diseño de productos. Está diseñado para ser altamente modular, formado por \textit{workbenches}, lo que permite a los usuarios adaptar y extender su funcionalidad según sus necesidades.
 
-FreeCAD se basa en el concepto de modelado paramétrico, lo que permite modificar el diseño fácilmente. Los usuarios pueden retroceder en la historia de un modelo y cambiar parámetros que actualizan automáticamente el diseño. También FreeCAD es multiplataforma, cuenta con una consola de Python integrada y soporta una amplia gama de formatos de archivo como STL y SVG entre otros. Esta ha sido la herramienta elegida para hacer el diseño 3D de la pieza y la generación del formato STL para su posterior impresión. 
+FreeCAD\footnote{\url{https://www.freecad.org/}} se basa en el concepto de modelado paramétrico, lo que permite modificar el diseño fácilmente. Los usuarios pueden retroceder en la historia de un modelo y cambiar parámetros que actualizan automáticamente el diseño. También FreeCAD es multiplataforma, cuenta con una consola de Python integrada y soporta una amplia gama de formatos de archivo como STL y SVG, entre otros. Esta ha sido la herramienta elegida para hacer el diseño 3D de la pieza y la generación del formato STL para su posterior impresión. 
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=3cm]{figs/freecad.png}
 	\end{center}
-	\caption{Logo de Freecad $^{\ref{note:enlace48}}$} 
+	\caption{Logo de Freecad} % $^{\ref{note:enlace48}}$
 	\label{fig:freecad}
-\end{figure}\
+\end{figure}
 
-\setcounter{footnote}{48} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace48}}
+%\setcounter{footnote}{48} % Establecer la numeración de la siguiente nota al pie
+%\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace48}}
 
 \subsection{Python}
 
@@ -265,7 +283,7 @@ Debido a esa simplicidad y versatilidad en Raspberry Pi, se considera Python com
 	\end{center}
 	\caption{Logo de Python $^{\ref{note:enlace49}}$} 
 	\label{fig:python}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{49} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace49}}
@@ -296,7 +314,7 @@ OpenCV (Figura \ref{fig:opencv}) es una biblioteca de software de código abiert
 	\end{center}
 	\caption{Logo de OpenCV $^{\ref{note:enlace50}}$} 
 	\label{fig:opencv}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{50} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace50}}
@@ -312,7 +330,7 @@ Ubuntu (Figura \ref{fig:ubuntu}) es una distribución GNU/Linux basada en Debian
 	\end{center}
 	\caption{Logo de Ubuntu $^{\ref{note:enlace51}}$} 
 	\label{fig:ubuntu}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace51}}
@@ -401,7 +419,7 @@ Gazebo (Figura \ref{fig:gazebo}) es un simulador de robots que permite modelar e
 	\end{center}
 	\caption{Logo de Gazebo $^{\ref{note:enlace57}}$} 
 	\label{fig:gazebo}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{57} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace57}}
@@ -418,7 +436,7 @@ RViz (Figura \ref{fig:rviz}) es una herramienta de visualización en 3D utilizad
 	\end{center}
 	\caption{Logo de Rviz $^{\ref{note:enlace58}}$} 
 	\label{fig:rviz}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{58} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace58}}
@@ -442,7 +460,7 @@ Google Colaboratory (Figura \ref{fig:googlecolab}) un servicio en la nube propor
 	\end{center}
 	\caption{Logo de Google Colab $^{\ref{note:enlace61}}$} 
 	\label{fig:googlecolab}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{61} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace61}}
@@ -457,7 +475,7 @@ Google Colaboratory (Figura \ref{fig:googlecolab}) un servicio en la nube propor
 	\end{center}
 	\caption{Logo de YOLOv8 $^{\ref{note:enlace62}}$} 
 	\label{fig:yolov8}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{62} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace62}}
@@ -473,7 +491,7 @@ TensorFlow es una plataforma de código abierto desarrollada por Google para el 
 	\end{center}
 	\caption{Logo de TensorFlow Lite $^{\ref{note:enlace63}}$} 
 	\label{fig:tflite}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{63} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://ai.google.dev/edge/litert}\label{note:enlace63}}
@@ -498,7 +516,7 @@ OpenStreetMaps (Figura \ref{fig:osm}) un proyecto internacional colaborativo des
 	\end{center}
 	\caption{Logo de Open Street Maps $^{\ref{note:enlace65}}$} 
 	\label{fig:osm}
-\end{figure}\
+\end{figure}
 
 \setcounter{footnote}{65} % Establecer la numeración de la siguiente nota al pie
 \footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace65}}
