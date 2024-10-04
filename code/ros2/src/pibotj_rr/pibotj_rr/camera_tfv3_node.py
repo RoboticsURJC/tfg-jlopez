@@ -8,6 +8,7 @@ import tflite_runtime.interpreter as tflite
 from std_msgs.msg import String
 import signal
 import sys
+import time
 
 
 class CameraTFv3Node(Node):
@@ -53,6 +54,10 @@ class CameraTFv3Node(Node):
         print("set signal handler")
         
         self.ema_value = None  # Inicializa el valor EMA en el constructor
+
+        self.largest_contour = None  # Variable para almacenar el contorno más grande
+        self.largest_contour_time = None  # Para llevar el tiempo del contorno más grande
+
 
 
     def timer_callbackFunction(self):
@@ -112,39 +117,93 @@ class CameraTFv3Node(Node):
         # se usa media móvil exponencial para reducir los picos
         ema_value_updated = self.update_ema(max_value)
 
-        print("Value ", ema_value_updated)
+        #print("Value ", ema_value_updated)
 
-        if ema_value_updated > 0.6 :  
-
-            label = "Pothole detected"
+        
+        if ema_value_updated > 0.6:
             detection_message = String()
             detection_message.data = "Yes"
+            pixels = self.extract_contour_pixels(pothole_mask, resized_frame)
+
+            newframe = resized_frame.copy()
+
+            if pixels is not None:
+                current_time = time.time()
+                # se realiza si no hay ningún contorno o si el contorno recién detectado
+                # es más grande que el actual había almacenado 
+                if (self.largest_contour is None) or (len(pixels) > len(self.largest_contour)):
+                    # se actualiza al contorno más grande detectado 
+                    self.largest_contour = pixels
+                    # se fija 
+                    self.largest_contour_time = current_time
+
+                # Si han pasado menos de 3 segundos, mantén el contorno
+                if (current_time - self.largest_contour_time) < 3:
+                    cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
+                else:
+                    # Reiniciar si han pasado más de 3 segundos
+                    self.get_logger().info(f'Contorno más grande: {self.largest_contour}')
+                    self.largest_contour = None
+                    self.largest_contour_time = None
+
+                print(f"Tiempo transcurrido: {current_time - self.largest_contour_time if self.largest_contour_time else 'N/A'}")
+   
+
+                # el contorno se ha mantenido igula durante 3 segundos o más 
+                # por lo tanto se considera contorno válido y será con el que vamos a trabajar
+                #if (current_time - self.largest_contour_time) < 3:
+                    #self.get_logger().info(f'el contorno ha sido: {self.largest_contour}')
+                    # se dibuja el contorno
+
+                    #newframe = resized_frame.copy()
+
+                    #cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
+
+                    # se reinicia variables
+                    #self.largest_contour = None
+                    #self.largest_contour_time = None
+
+                # después de 3 segundos reiniciar 
+                #else: 
+                    #self.get_logger().info(f'el contorno ha sido: {self.largest_contour}')
+                    #self.largest_contour = None
+                    #self.largest_contour_time = None
+
+                #print(current_time - self.largest_contour_time)
+                    # Mantener el contorno más grande durante 3 segundos
+                    #self.get_logger().info(f'Manteniendo contorno más grande: {self.largest_contour}')
+                #else:
+                    # Después de 3 segundos, reiniciar
+                    #self.get_logger().info(f'el contorno ha sido: {self.largest_contour}')
+                    # dibujar las 
+                    #self.largest_contour = pixels
+                    #self.largest_contour_time = current_time
+                    #self.largest_contour = None
+                    #self.largest_contour_time = None
+
+            #newframe = resized_frame
+
+
+            # compara si el array obtenido es mayor o no al actual durante 3 segundos
+
+            # Pasados esos 3 segundos, dibujar el bache con el contorno más grande
             
-            # Dibuja una imagen con el contorno más grande de cada imagen detectada 
-            newframe = self.extract_pothole_contour(pothole_mask,resized_frame)
-            # mirar si devolver el contorno y dibujarlo más adelante con la lógica:
+            # Convertir las coordenadas con el modelo pinhole
 
-            # LÓGICA A SEGUIR: 
+            # Calcular área
 
-            # Detecta bache 
-            # Ver si el área es el más grande (aplicable para las 2)
-            # Calcula área (usando pinhole) y publica área a la localización
-            # Publica localización en la web y se segura que se recibe
-            # Opcional: espera x tiempo por si acaso. Terminar de pensar esto 
-            # Siga con el proceso
+            # Publicar área
 
+            # Publicar coordenadas del bache y asegurar que se reciben 
 
-
+            # Volver a empezar 
 
         else:
-            label = "No pothole"
             detection_message = String()
             detection_message.data = "No"
-
-            # resized_frame es la imagen de 192,192
             newframe = resized_frame
 
-
+   
         # Publicar el mensaje de detección  en formato string
         self.detection_publisher.publish(detection_message)
 
@@ -162,41 +221,6 @@ class CameraTFv3Node(Node):
         sys.exit(0)  
 
 
-    #def get_contours(self, img, img_contour):
-    #    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    #    for cnt in contours:
-    #        area = cv2.contourArea(cnt)
-    #        if area > 1500:  # Ignorar pequeños contornos para reducir ruido
-    #            cv2.drawContours(img_contour, cnt, -1,(255,0,255), 5)
-
-    #            peri = cv2.arcLength(cnt, True)
-    #            approx = cv2.approxPolyDP(cnt, 0.02 * peri, True)
-                
-                #print(len(approx))
-                #print(approx)
- 
-    #def get_pothole_coords(self, image):
-
-    #    img_blur = cv2.GaussianBlur(image,(7,7),1)
-    #    img_gray = cv2.cvtColor(img_blur, cv2.COLOR_BGR2GRAY)
-
-    #    height, width = img_gray.shape
-
-        # Se aplica el filtro Canny a la imagen reducida
-        # El valor más acercado es mínimo: 80 y máximo: 180
-    #    img_canny = cv2.Canny(img_gray, 80, 180)
-        #img_canny_masked = cv2.bitwise_and(img_canny, mask)
-    #    kernel = np.ones((5,5))
-        #img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
-    #    img_dilated = cv2.dilate(img_canny, kernel, iterations=1)
-
-    #    img_contour = image.copy()
-    #    self.get_contours(img_dilated,img_contour)
-        
-    #    return img_contour
-
-
     def update_ema(self,new_value):
 
         alpha = 0.08
@@ -208,7 +232,7 @@ class CameraTFv3Node(Node):
         return self.ema_value
 
 
-    def extract_pothole_contour(self, pothole_mask, resized_frame):
+    def extract_contour_pixels(self, pothole_mask, resized_frame):
         # Escalar para que aparezca en el tamaño correcto
         scale_factor = 192 / 48
 
@@ -219,7 +243,7 @@ class CameraTFv3Node(Node):
         contours, _ = cv2.findContours(binary_mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         # Dibujar los contornos en la imagen original
-        img_with_contours = resized_frame.copy()
+        #img_with_contours = resized_frame.copy()
         largest_contour = None
         largest_area = 0
 
@@ -240,19 +264,18 @@ class CameraTFv3Node(Node):
 
         # Dibujar solo el contorno más grande
         if largest_contour is not None:
-            cv2.drawContours(img_with_contours, [largest_contour], -1, (0, 255, 0), 2)
+            #cv2.drawContours(img_with_contours, [largest_contour], -1, (0, 255, 0), 2)
             # Convertir a una lista de píxeles (x, y)
             contour_pixels = largest_contour.reshape(-1, 2) 
-            print(f"Píxeles del contorno más grande: {contour_pixels}")
+
+            return contour_pixels
+
+            #print(f"Píxeles del contorno más grande: {contour_pixels}")
             # CALCULAR EL MODELO PIN HOLE AQUÍ
 
         # a lo mejor solo devolver el píxeles del contorno más grande
 
-        return img_with_contours
-
-
-
-
+        return None
 
     def __del__(self):
         self.camera.release()
