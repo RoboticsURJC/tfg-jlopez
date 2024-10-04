@@ -36,6 +36,8 @@ class CameraPinHoleV2Class(Node):
     def coords_callback(self, coords):
 
         #print(coords)
+        array3D = []
+
         for i, point in enumerate(coords.points):
         	# Access x, y, z coordinates of each point
         	#x = point.x
@@ -45,21 +47,42 @@ class CameraPinHoleV2Class(Node):
 			# Calcular la conversión de cada punto 
 
             pixel = Punto2D()
-            pixelOnGround3D = Punto3D()
+            pixel3D = Punto3D()
 
             pixel.x = point.x
             pixel.y = point.y
             pixel.h = 1
 
-            pixelOnGround3D = self.getIntersectionZ(pixel)
+            pixel3D = self.getIntersectionZ(pixel)
 
-            print(f"Coordenadas 3D: X={pixelOnGround3D.x}, Y={pixelOnGround3D.y}, Z={pixelOnGround3D.z}")
+            array3D.append(pixel3D)
+            print(f"Coordenadas 3D: X={pixel3D.x}, Y={pixel3D.y}, Z={pixel3D.z}")
 
 		# calcular el área total
 			# almacenar el array anterior  y calcular el área
 			# total usando shoelace method
-
         
+        area = 0
+        n = len(array3D)
+
+        for i in range(n):
+        	#x1, y1 = array3D[i]
+            x1 = array3D[i].x
+            y1 = array3D[i].y
+
+            x2 = array3D[(i + 1) % n].x
+            y2 = array3D[(i + 1) % n].y
+
+
+        	#x2, y2 = array3D[(i + 1) % n]  # Modulo to loop back to the first vertex
+        	
+            area += x1 * y2
+            area -= y1 * x2
+
+    	# Return absolute value of area divided by 2
+		# es lo que hay que usar para publicar en web 
+		# Publicarlo y está en mm2
+        print(abs(area) / 2)
         	# Print the coordinates
         	#print(f"Point {i}: x = {x}, y = {y}, z = {z}")
 
