@@ -7,6 +7,7 @@ from cv_bridge import CvBridge
 import signal
 import sys
 import numpy 
+from geometry_msgs.msg import Polygon, Point32
 
 ANCHO_IMAGEN = 640
 LARGO_IMAGEN = 480
@@ -21,45 +22,46 @@ myCamera = None
 class CameraPinHoleV2Class(Node):
     def __init__(self):
         super().__init__('camera_pinholev2_node')
-        #self.cameraDeviceNumber = 0
-        #self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
+
+        self.subscription = self.create_subscription(
+			Polygon, 
+			'pothole_coords',
+            self.coords_callback,
+            10)  # 10 es el tamaño del buffer de la cola de mensajes
         
-        #if not self.camera.isOpened():
-        #    self.get_logger().error('Failed to open camera device %d' % self.cameraDeviceNumber)
-        #    rclpy.shutdown()
-        #    sys.exit(1)  # Exit with an error code
-
-        #self.bridgeObject = CvBridge()
-        #self.topicNameFrames = 'camera_pinholev2'
-        #self.queueSize = 20
-        #self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
-        #self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
-        #self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
-        #self.i = 0
-
-        #self.loadCamera()
-
+        self.loadCamera()
         # Signal handler for cleanup
         signal.signal(signal.SIGINT, self.signal_handler)
 
-    def timer_callbackFunction(self):
-        #success, frame = self.camera.read()
-        #if not success:
-        #    self.get_logger().error('Failed to read frame from camera')
-        #    return
+    def coords_callback(self, coords):
 
-        #frame = cv2.resize(frame, (ANCHO_IMAGEN, LARGO_IMAGEN), interpolation=cv2.INTER_LINEAR)
+        #print(coords)
+        for i, point in enumerate(coords.points):
+        	# Access x, y, z coordinates of each point
+        	#x = point.x
+        	#y = point.y
+        	#z = point.z
+
+			# Calcular la conversión de cada punto 
+
+            pixel = Punto2D()
+            pixelOnGround3D = Punto3D()
+
+            pixel.x = point.x
+            pixel.y = point.y
+            pixel.h = 1
+
+            pixelOnGround3D = self.getIntersectionZ(pixel)
+
+            print(f"Coordenadas 3D: X={pixelOnGround3D.x}, Y={pixelOnGround3D.y}, Z={pixelOnGround3D.z}")
+
+		# calcular el área total
+			# almacenar el array anterior  y calcular el área
+			# total usando shoelace method
 
         
-        #self.getPoints(frame)
-
-        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
-        #self.publisher.publish(ROSImageMessage)
-        #self.get_logger().info('Publishing image number %d' % self.i)
-        #self.i += 1
-
-    def cleanup(self):
-        self.camera.release()
+        	# Print the coordinates
+        	#print(f"Point {i}: x = {x}, y = {y}, z = {z}")
 
     def signal_handler(self, sig, frame):
         self.get_logger().info('Interrupt received, shutting down...')

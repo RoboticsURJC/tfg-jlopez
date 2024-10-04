@@ -43,8 +43,10 @@ setup(
             # nodo que publica cámara + modelo pin Hole           
             'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main',
 
+            'camera_pinholev2_node = pibotj_rr.camera_pinholev2_node:main',
+
             # nodo controlador para controlar los motores por la interfaz web
-            'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main',
+            'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main'
             
         ],
     },

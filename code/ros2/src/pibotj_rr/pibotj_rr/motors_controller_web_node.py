@@ -29,14 +29,6 @@ class ControllerWebNode(Node):
         # Estado inicial de los servos
         #self.servos_moving = False
         self.stop()
-
-    #def move_servos(self):
-        #self.get_logger().info('Moving servos forward')
-        # motor izquierdo
-        #self.set_servo_angle(180, self.servos[0])
-        # motor derecho
-        #self.set_servo_angle(0, self.servos[1])
-        #self.servos_moving = True
     
     def forward(self):
         #self.get_logger().info('Moving forward')
