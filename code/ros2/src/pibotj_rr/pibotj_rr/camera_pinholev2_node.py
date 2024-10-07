@@ -11,6 +11,8 @@ from geometry_msgs.msg import Polygon, Point32
 
 ANCHO_IMAGEN = 640
 LARGO_IMAGEN = 480
+#ANCHO_IMAGEN = 192
+#LARGO_IMAGEN = 192
 FX = 497.66
 FY = 502.16
 CX = 325.3
@@ -35,60 +37,53 @@ class CameraPinHoleV2Class(Node):
 
     def coords_callback(self, coords):
 
-        #print(coords)
+        if not coords.points or len(coords.points) == 0:
+        	print("No hay puntos en coords.points")
+        	return
+
+		# Calcula la conversión de los puntos de coordenadas
+		# de la cámara en coordenadas del mundo real 
+		
         array3D = []
-
         for i, point in enumerate(coords.points):
-        	# Access x, y, z coordinates of each point
-        	#x = point.x
-        	#y = point.y
-        	#z = point.z
-
-			# Calcular la conversión de cada punto 
-
             pixel = Punto2D()
             pixel3D = Punto3D()
 
-            pixel.x = point.x
-            pixel.y = point.y
+            # convertir las coordenadas del sistema de 192x192 
+			# en imágenes de 640x480
+            pixel.x = point.x*640/192
+            pixel.y = point.y*480/192
             pixel.h = 1
 
             pixel3D = self.getIntersectionZ(pixel)
 
             array3D.append(pixel3D)
             print(f"Coordenadas 3D: X={pixel3D.x}, Y={pixel3D.y}, Z={pixel3D.z}")
+		
+        array3D.append(array3D[0])
 
-		# calcular el área total
-			# almacenar el array anterior  y calcular el área
-			# total usando shoelace method
-        
         area = 0
         n = len(array3D)
 
+		# Calcular el área usando el método shoelace 
         for i in range(n):
-        	#x1, y1 = array3D[i]
+
             x1 = array3D[i].x
             y1 = array3D[i].y
+
+            print(f"Coordenadas 3D: X={x1}, Y={y1}")
 
             x2 = array3D[(i + 1) % n].x
             y2 = array3D[(i + 1) % n].y
 
+            area += (x1 * y2) - (y1 * x2)
 
-        	#x2, y2 = array3D[(i + 1) % n]  # Modulo to loop back to the first vertex
-        	
-            area += x1 * y2
-            area -= y1 * x2
 
-    	# Return absolute value of area divided by 2
-		# es lo que hay que usar para publicar en web 
-		# Publicarlo y está en mm2
-        print(abs(area) / 2)
-        	# Print the coordinates
-        	#print(f"Point {i}: x = {x}, y = {y}, z = {z}")
+		# Imprimer el área y está en mm2
+        print(f"El área es: {abs(area) / 2} mm²")
 
     def signal_handler(self, sig, frame):
         self.get_logger().info('Interrupt received, shutting down...')
-        self.cleanup()
         sys.exit(0)  # Exit gracefully
 
     def loadCamera(self):
@@ -257,7 +252,7 @@ def main(args=None):
     except KeyboardInterrupt:
         publisherObject.get_logger().info('Keyboard interrupt received, shutting down...')
     finally:
-        publisherObject.cleanup()
+        #publisherObject.cleanup()
         publisherObject.destroy_node()
         rclpy.shutdown()
 
