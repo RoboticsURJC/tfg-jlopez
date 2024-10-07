@@ -94,9 +94,9 @@ class CameraPinHoleV2Class(Node):
     def loadCamera(self):
 	    global myCamera
 	    myCamera = PinholeCamera()
-	    thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
-	    thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
-	    thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+	    thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 50º sobre eje Y
+	    thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 50º sobre eje Y
+	    thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 50º sobre eje Y
 
 	    R_y = numpy.array ([(numpy.cos(thetaY),0,-numpy.sin(thetaY)),(0,1,0),(numpy.sin(thetaY),0,numpy.cos(thetaY))]) # R is a 3x3 rotation matrix
 	    R_z = numpy.array ([(numpy.cos(thetaZ),-numpy.sin(thetaZ),0),(numpy.sin(thetaZ),numpy.cos(thetaZ),0),(0,0,1)]) # R is a 3x3 rotation matrix
@@ -208,45 +208,45 @@ class CameraPinHoleV2Class(Node):
     #    return distancia
 
 
-    def detect_color(self,frame, lower_color, upper_color):
-        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        mask = cv2.inRange(hsv, lower_color, upper_color)
+    #def detect_color(self,frame, lower_color, upper_color):
+    #    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    #    mask = cv2.inRange(hsv, lower_color, upper_color)
         # Esto  hasido modificado 
-        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    #    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
-        if contours:
-            c = max(contours, key=cv2.contourArea)
-            M = cv2.moments(c)
-            if M["m00"] != 0:
-                centroid_x = int(M["m10"] / M["m00"])
-                centroid_y = int(M["m01"] / M["m00"])
-                return centroid_x, centroid_y
-        return None, None
+    #    if contours:
+    #        c = max(contours, key=cv2.contourArea)
+    #        M = cv2.moments(c)
+    #        if M["m00"] != 0:
+    #            centroid_x = int(M["m10"] / M["m00"])
+    #            centroid_y = int(M["m01"] / M["m00"])
+    #            return centroid_x, centroid_y
+    #    return None, None
 
 
-    def getPoints(self, frame):
+    #def getPoints(self, frame):
 
-        pixel = Punto2D()
-        pixelOnGround3D = Punto3D()
+    #    pixel = Punto2D()
+    #    pixelOnGround3D = Punto3D()
 
-        lower_color = numpy.array([150, 50, 50])
-        upper_color = numpy.array([170, 255, 255])
+    #    lower_color = numpy.array([150, 50, 50])
+    #    upper_color = numpy.array([170, 255, 255])
 	
-        centroid_x, centroid_y = self.detect_color(frame, lower_color, upper_color)
+    #    centroid_x, centroid_y = self.detect_color(frame, lower_color, upper_color)
 
 
-        if centroid_x is not None and centroid_y is not None:
-            cv2.circle(frame, (centroid_x, centroid_y), 5, (0, 255, 0), -1)
-            cv2.putText(frame, f"Centroide: ({centroid_x}, {centroid_y})", (centroid_x - 100, centroid_y - 20),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+    #    if centroid_x is not None and centroid_y is not None:
+    #        cv2.circle(frame, (centroid_x, centroid_y), 5, (0, 255, 0), -1)
+    #        cv2.putText(frame, f"Centroide: ({centroid_x}, {centroid_y})", (centroid_x - 100, centroid_y - 20),
+    #                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
             
-            pixel.x = centroid_x
-            pixel.y = centroid_y
-            pixel.h = 1
+    #        pixel.x = centroid_x
+    #        pixel.y = centroid_y
+    #        pixel.h = 1
 
-            pixelOnGround3D = self.getIntersectionZ(pixel)
+    #        pixelOnGround3D = self.getIntersectionZ(pixel)
 
-            print(f"Coordenadas 3D: X={pixelOnGround3D.x}, Y={pixelOnGround3D.y}, Z={pixelOnGround3D.z}")
+    #        print(f"Coordenadas 3D: X={pixelOnGround3D.x}, Y={pixelOnGround3D.y}, Z={pixelOnGround3D.z}")
 
 
 def main(args=None):

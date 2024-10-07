@@ -176,17 +176,6 @@ class CameraTFv3Node(Node):
             if self.detected:
                 self.reset_detection()
 
-        
-            # Convertir las coordenadas con el modelo pinhole
-
-            # Calcular área
-
-            # Publicar área
-
-            # Publicar coordenadas del bache y asegurar que se reciben 
-
-            # Volver a empezar 
-
         # Publicar las coordenadas y que el nodo de pinhole las convierta
         self.polygon_publisher.publish(polygon_coords)
         # Publicar el mensaje de detección  en formato string
