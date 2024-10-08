@@ -60,9 +60,7 @@ class CameraPinHoleV2Class(Node):
 			pixel.h = 1
 
 			pixel3D = self.getIntersectionZ(pixel)
-
 			array3D.append(pixel3D)
-			#print(f"Coordenadas 3D: X={pixel3D.x}, Y={pixel3D.y}, Z={pixel3D.z}")
 		
 		# importante añadir en las coordenadas la primera de todas al final
 		array3D.append(array3D[0])
@@ -188,7 +186,6 @@ class CameraPinHoleV2Class(Node):
 			return
 
 		# Quiero que intersecte con el Plano Z = 0 
-		#zfinal = 0.0
 		zfinal = 0.0
 
 		# Linear equation (X-x)/(p3d.X-x) = (Y-y)/(p3d.Y-y) = (Z-z)/(p3d.Z-z)
@@ -210,7 +207,6 @@ def main(args=None):
 	except KeyboardInterrupt:
 		publisherObject.get_logger().info('Keyboard interrupt received, shutting down...')
 	finally:
-		#publisherObject.cleanup()
 		publisherObject.destroy_node()
 		rclpy.shutdown()
 

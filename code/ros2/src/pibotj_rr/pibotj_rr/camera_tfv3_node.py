@@ -28,10 +28,6 @@ class CameraTFv3Node(Node):
         self.queueSize = 10
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
 
-        # Publicador que publica string 
-        #self.topicNameDetection = 'pothole_detected' 
-        #self.detection_publisher = self.create_publisher(String, 'pothole_detected', self.queueSize)
-
         # Publicador del array con coordenadas
         self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
 
@@ -61,10 +57,8 @@ class CameraTFv3Node(Node):
         self.ema_value = None  # Inicializa el valor EMA en el constructor
 
         self.largest_contour = None  # Variable para almacenar el contorno más grande
-        #self.largest_contour_time = None  # Para llevar el tiempo del contorno más grande
         self.detected = False
         self.detect_time = 0
-
 
 
     def timer_callbackFunction(self):
@@ -112,22 +106,16 @@ class CameraTFv3Node(Node):
 
             # Descuantificar la máscara de baches mirando el canal 0 es la clase que buscamos
             pothole_mask = (prediction1[:, :, 0].astype(np.float32) - zero_point) * scale
-
-
         else:
             self.get_logger().error('Unexpected number of channels in prediction output')
             return
 
-        
         # Determinar si se ha detectado un bache
         max_value = np.max(pothole_mask)
         # se usa media móvil exponencial para reducir los picos
         ema_value_updated = self.update_ema(max_value)
 
-        #detection_message = String()
         newframe = resized_frame.copy()
-        #detection_message.data = "No"
-
         polygon_coords = Polygon()
 
         current_time = time.time()
@@ -153,12 +141,8 @@ class CameraTFv3Node(Node):
 
                 # Dibuja el contorno más grande en la imagen
                 cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
-                #print(f"Tiempo transcurrido: {current_time - self.detect_time}")
                 # Comprobar si han pasado 4 segundos
                 if (current_time - self.detect_time) > 4:
-                    #detection_message.data = "Yes"
-                    #self.get_logger().info(f'Contorno más grande: {self.largest_contour}')
-
                     # Convertir las coordenadas al formato del publicador 
                     polygon_coords = self.convert_coords(self.largest_contour)
 
@@ -179,8 +163,6 @@ class CameraTFv3Node(Node):
 
         # Publicar las coordenadas y que el nodo de pinhole las convierta
         self.polygon_publisher.publish(polygon_coords)
-        # Publicar el mensaje de detección  en formato string
-        #self.detection_publisher.publish(detection_message)
 
         # Convertir y publicar la imagen
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
@@ -262,9 +244,7 @@ class CameraTFv3Node(Node):
             contour_pixels = largest_contour.reshape(-1, 2) 
 
             return contour_pixels
-
-          
-
+       
         return None
 
     def __del__(self):

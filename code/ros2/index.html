@@ -34,7 +34,7 @@
         .arrow-controls {
             display: flex;
             justify-content: space-between;
-            width: 150px; /* Ajusta el ancho para que las flechas estén alineadas */
+            width: 150px;
         }
         button {
             padding: 20px;
@@ -83,29 +83,85 @@
             maxZoom: 18,
         }).addTo(map);
 
+        // Array para mantener los marcadores
+        let markers = [];  
+
+        // Variables para GPS y área calculada
+        let gpsCoordinates = null;
+        let currentArea = null;
+
         // Conectar a rosbridge
         const ros = new ROSLIB.Ros({
             url: 'ws://raspberrypi.local:9090'
         });
 
-        // Suscribirse al topic 'gps_data' para ver las coordenadas del gps
+        // Suscribirse al topic 'gps_data' para recibir las coordenadas GPS
         const gpsListener = new ROSLIB.Topic({
             ros: ros,
             name: '/gps_data',
             messageType: 'std_msgs/String'
         });
 
+        // Suscribirse al tópico 'area_calculated' para obtener el área
+        const areaListener = new ROSLIB.Topic({
+            ros: ros,
+            name: '/area_calculated',
+            messageType: 'std_msgs/Float32'
+        });
+
+        // Almacenar el área cuando se recibe
+        areaListener.subscribe(function(message) {
+            currentArea = message.data;  // Guardar el área calculada
+            //console.log("Área calculada recibida:", currentArea);
+
+            // Si ya se tienen las coordenadas GPS, crear el marcador
+            //if (gpsCoordinates) {
+            //    addMarker(gpsCoordinates.lat, gpsCoordinates.lon, currentArea);
+            //}
+        });
+
+        // Almacenar las coordenadas GPS cuando se reciben
         gpsListener.subscribe(function(message) {
-            console.log("Received message:", message.data);
+            //console.log("Localización recibida:", message.data);
 
             // Extraer latitud y longitud del mensaje
             const data = message.data.split(',');
             const lat = parseFloat(data[0].split(':')[1].trim());
             const lon = parseFloat(data[1].split(':')[1].trim());
 
-            const newMarker = L.marker([lat, lon]).addTo(map);
-            newMarker.bindPopup(`Latitud: ${lat}, Longitud: ${lon}`).openPopup();
+            // Guardar las coordenadas GPS
+            gpsCoordinates = { lat: lat, lon: lon };  
+
+            // Si ya se ha recibido el área calculada, crear el marcador
+            if (currentArea !== null) {
+                console.log("Localización recibida:", message.data);
+                console.log("Área calculada recibida:", currentArea);
+
+                addMarker(lat, lon, currentArea);
+            }
         });
+
+        // Función para añadir un marcador en el mapa
+        function addMarker(lat, lon, area) {
+            // Crear nuevo marcador
+            const newMarker = L.marker([lat, lon]).addTo(map);
+
+            // Mostrar el área en el popup
+            newMarker.bindPopup(`Área calculada: ${area} mm²`).openPopup();
+
+            // Agregar el nuevo marcador al array de marcadores
+            markers.push(newMarker);
+
+            // Limitar el número de marcadores a 50
+            if (markers.length > 50) {
+                const oldMarker = markers.shift();  // Eliminar el marcador más antiguo
+                map.removeLayer(oldMarker);  // Removerlo del mapa
+            }
+
+            // Limpiar las coordenadas GPS y el área después de crear el marcador
+            gpsCoordinates = null;
+            currentArea = null;
+        }
 
         // MOTORES
 
@@ -117,22 +173,17 @@
 
         let commandInterval;
 
-
         // manda la dirección 'forward', 'backward', 'left', right
         function startMovement(direction) {
             sendCommand(direction);
-            // REVISAR ESTO
-            //commandInterval = setInterval(() => {
 
             commandInterval = setTimeout(() => {
                 sendCommand(direction);  
             }, 100); 
-            //console.log("Intervalo iniciado con ID:", commandInterval); 
         }
 
         function stopMovement() {
             clearInterval(commandInterval); 
-            //console.log("Intervalo finalizado con ID:", commandInterval);
             sendCommand("stop");  
         }
 
