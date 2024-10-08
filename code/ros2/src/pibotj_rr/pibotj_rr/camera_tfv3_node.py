@@ -25,12 +25,12 @@ class CameraTFv3Node(Node):
 
         self.bridgeObject = CvBridge()
         self.topicNameFrames = 'camera_tf3'
-        self.queueSize = 20
+        self.queueSize = 10
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
 
         # Publicador que publica string 
         #self.topicNameDetection = 'pothole_detected' 
-        self.detection_publisher = self.create_publisher(String, 'pothole_detected', self.queueSize)
+        #self.detection_publisher = self.create_publisher(String, 'pothole_detected', self.queueSize)
 
         # Publicador del array con coordenadas
         self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
@@ -43,19 +43,20 @@ class CameraTFv3Node(Node):
         self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
 
         self.interpreter = tflite.Interpreter(model_path=self.model_path, experimental_delegates=[tflite.load_delegate('/usr/lib/aarch64-linux-gnu/libedgetpu.so.1')])
-        print("loaded interpreter")
+        self.get_logger().info('loaded interpreter')
 
         self.interpreter.allocate_tensors()
-        print("allocated tensors")
+        self.get_logger().info('allocated tensors')
+        
 
         # Obtener detalles de entrada y salida del modelo
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
-        print("set input and output details")
+        self.get_logger().info('set input and output details')
 
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
-        print("set signal handler")
+        self.get_logger().info('set signal handler')
         
         self.ema_value = None  # Inicializa el valor EMA en el constructor
 
@@ -123,9 +124,9 @@ class CameraTFv3Node(Node):
         # se usa media móvil exponencial para reducir los picos
         ema_value_updated = self.update_ema(max_value)
 
-        detection_message = String()
+        #detection_message = String()
         newframe = resized_frame.copy()
-        detection_message.data = "No"
+        #detection_message.data = "No"
 
         polygon_coords = Polygon()
 
@@ -152,11 +153,11 @@ class CameraTFv3Node(Node):
 
                 # Dibuja el contorno más grande en la imagen
                 cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
-                print(f"Tiempo transcurrido: {current_time - self.detect_time}")
+                #print(f"Tiempo transcurrido: {current_time - self.detect_time}")
                 # Comprobar si han pasado 4 segundos
                 if (current_time - self.detect_time) > 4:
-                    detection_message.data = "Yes"
-                    self.get_logger().info(f'Contorno más grande: {self.largest_contour}')
+                    #detection_message.data = "Yes"
+                    #self.get_logger().info(f'Contorno más grande: {self.largest_contour}')
 
                     # Convertir las coordenadas al formato del publicador 
                     polygon_coords = self.convert_coords(self.largest_contour)
@@ -179,7 +180,7 @@ class CameraTFv3Node(Node):
         # Publicar las coordenadas y que el nodo de pinhole las convierta
         self.polygon_publisher.publish(polygon_coords)
         # Publicar el mensaje de detección  en formato string
-        self.detection_publisher.publish(detection_message)
+        #self.detection_publisher.publish(detection_message)
 
         # Convertir y publicar la imagen
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
@@ -197,9 +198,12 @@ class CameraTFv3Node(Node):
         
         for pixel in coords:
             point = Point32()
-            point.x = float(pixel[0])  # Coordenada X
-            point.y = float(pixel[1])  # Coordenada Y
-            point.z = 0.0  # Z puede ser 0 ya que es un contorno 2D
+            # Coordenada X
+            point.x = float(pixel[0])  
+            # Coordenada Y
+            point.y = float(pixel[1])  
+            # Z puede ser 0 ya que es un contorno 2D
+            point.z = 0.0  
 
             pol.points.append(point)
 
