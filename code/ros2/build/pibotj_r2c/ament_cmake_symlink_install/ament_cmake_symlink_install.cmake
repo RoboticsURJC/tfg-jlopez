@@ -310,8 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "config" "description" "launch" "worlds" "meshes" "DESTINATION" "share/pibotj_r2c")
-ament_cmake_symlink_install_directory("/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_r2c" DIRECTORY "config" "description" "launch" "worlds" "meshes" "DESTINATION" "share/pibotj_r2c")
+# install(DIRECTORY "config" "description" "launch" "meshes" "DESTINATION" "share/pibotj_r2c")
+ament_cmake_symlink_install_directory("/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_r2c" DIRECTORY "config" "description" "launch" "meshes" "DESTINATION" "share/pibotj_r2c")
 
 # install(FILES "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/pibotj_r2c" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_r2c" FILES "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/pibotj_r2c" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

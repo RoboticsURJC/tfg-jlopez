@@ -10,12 +10,12 @@
     <link name="gps_frame">
         <visual>
              <geometry>
-                <mesh filename="package://pibotj_r2c/meshes/GY-NEO6MV2 NEO-6M.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://pibotj_r2c/meshes/GY-NEO6MV2NEO-6M.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://pibotj_r2c/meshes/GY-NEO6MV2 NEO-6M.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://pibotj_r2c/meshes/GY-NEO6MV2NEO-6M.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
