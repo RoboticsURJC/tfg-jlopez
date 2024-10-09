@@ -11,10 +11,10 @@
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/launch/camera.launch.py
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/launch/launch_sim.launch.py
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/launch/rsp.launch.py
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/GY-NEO6MV2NEO-6M.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/base.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/bolaloca.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/camara.stl
+/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/gps.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/meshes/wheel_ring.stl
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/ament_index/resource_index/package_run_dependencies/pibotj_r2c
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/ament_index/resource_index/parent_prefix_path/pibotj_r2c

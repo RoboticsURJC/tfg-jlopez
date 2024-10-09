@@ -1,45 +1,28 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-    <!--joint name="camera_joint" type="fixed">
-        <parent link="chassis"/>
-        <child link="camera_link"/>
-        <origin xyz="0.276 0 0.181" rpy="0 0.18 0"/>
-    </joint-->
-
-
     <joint name="camera_joint" type="revolute">
         <parent link="chassis"/>
         <child link="camera_link"/>
-        <!--origin xyz="0.04 0.025 0.05" rpy="0 0 0"/-->
-        <!--origin xyz="0.03 0.01 0.05" rpy="0 0 0"/ last -->
         <origin xyz="0.02 0.01 0.05" rpy="0 0 0"/>
 
         <axis xyz="0 0 1"/>
-    <!--limit effort="0.0" lower="0.0" upper="3.14" velocity="0.0"/-->
         <limit effort="2.0" lower="${-pi/2}" upper="${pi/2}" velocity="0.5"/>
        <dynamics damping="0.05" friction="0.05"/>
     </joint>
 
     <link name="camera_link">
         <visual>
-            <!--origin xyz="-0.033 0.0 0.04" rpy="0 0 ${PI}"/-->
-            <!--origin xyz="0.0 0.0 0.0 " rpy="0 0 ${-pi/2}" last /--> 
-            <!--origin xyz="0.01 0.01 0.0 " rpy="0 0 ${-pi/2}"/-->
             <origin xyz="0.02 0.01 0.0 " rpy="0 0 ${-pi/2}"/>
-
-
             <geometry>
-            <!--mesh filename="package://${package_name}/meshes/base_plate.stl" scale="1 1 1"/-->
                 <mesh filename="package://pibotj_r2c/meshes/camara.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="Blue"> <!-- Color in Rviz2 (inside visual tag) -->
+            <material name="Blue"> <!-- Color en Rviz2-->
                 <color rgba="${0/255} ${0/255} ${255/255} 1.0"/>
             </material>
         </visual>
 
         <!-- NECESARIO AÑADIRLO PARA QUE GAZEBO NO NOS IGNORE-->
-        <!-- Collision tag added to stabilize the robot -->
         <collision> 
             <origin xyz="0.0 0.0 0.0 " rpy="0 0 ${-pi/2}"/>
             <geometry>
@@ -62,8 +45,6 @@
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
         <child link="camera_link_optical"/>
-        <!--origin xyz="0.016 -0.018 0.02" rpy="0.8726 0 0"/-->
-         <!--origin xyz="0.016 -0.016 0.02" rpy="0 0.8726 0"/-->
         <origin xyz="0.04 -0.006 0.018" rpy="0 0.8726 0"/>
     </joint>
 
@@ -71,7 +52,6 @@
     <!-- Cubo añadido donde va a ir la cámara-->
     <link name="camera_link_optical">
         <visual>
-            <!--origin xyz="0.016 -0.018 0.02" rpy="0.8726 0 0"/-->
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <box size="0.01 0.01 0.01"/>
