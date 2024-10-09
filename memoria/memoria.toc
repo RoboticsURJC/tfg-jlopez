@@ -66,16 +66,17 @@
 \contentsline {subsection}{\numberline {5.4.4}Pieza para la sujección trasera}{60}{subsection.5.4.4}%
 \contentsline {section}{\numberline {5.5}Impresión y montaje}{62}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Soporte software del robot}{70}{chapter.6}%
-\contentsline {section}{\numberline {6.1}}{70}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Snippets}{70}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Verbatim}{70}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Ecuaciones}{71}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Tablas o cuadros}{72}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Segunda sección}{72}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Números}{73}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Listas}{73}{subsection.6.6.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{73}{paragraph*.126}%
-\contentsline {section}{\numberline {6.7}Corrector ortográfico}{74}{section.6.7}%
+\contentsline {section}{\numberline {6.1}Simulación}{70}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Vida real}{70}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Snippets}{70}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Verbatim}{71}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Ecuaciones}{71}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Tablas o cuadros}{72}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Segunda sección}{73}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Números}{73}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Listas}{73}{subsection.6.7.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{74}{paragraph*.126}%
+\contentsline {section}{\numberline {6.8}Corrector ortográfico}{74}{section.6.8}%
 \contentsline {chapter}{\numberline {7}Experimentos}{75}{chapter.7}%
 \contentsline {section}{\numberline {7.1}}{75}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Corrector ortográfico}{75}{section.7.2}%
