@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  9 OCT 2024 10:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  10 OCT 2024 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1543,22 +1543,16 @@ Overfull \hbox (14.22635pt too wide) in paragraph at lines 118--119
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-[]\OT1/cmr/m/n/12 https://clarivate.com/products/scientific-and-academic-resear
-ch/research-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 131--131
 [][][][]$\OT1/cmtt/m/n/10 https : / / clarivate . com / products / scientific-[
 ]and-[]academic-[]research /
  []
 
-LaTeX Info: Redefining \. on input line 132.
-LaTeX Info: Redefining \% on input line 132.
+LaTeX Info: Redefining \. on input line 133.
+LaTeX Info: Redefining \% on input line 133.
 [29]
-LaTeX Info: Redefining \. on input line 140.
-LaTeX Info: Redefining \% on input line 140.
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
  [30 <./figs/PDCA.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
@@ -2422,7 +2416,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (96 pages, 50306301 bytes).
+Output written on memoria.pdf (96 pages, 50305615 bytes).
 PDF statistics:
  1933 PDF objects out of 2073 (max. 8388607)
  1560 compressed objects within 16 object streams
