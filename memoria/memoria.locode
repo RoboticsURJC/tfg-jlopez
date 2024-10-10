@@ -4,7 +4,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {code}{\numberline {6.1}{\ignorespaces Función para buscar elementos 3D en la imagen}}{71}{code.caption.120}%
-\contentsline {code}{\numberline {6.2}{\ignorespaces Cómo usar un Slider}}{71}{code.caption.121}%
+\contentsline {code}{\numberline {6.1}{\ignorespaces Macro que define \textit {fixed joint}}}{71}{code.caption.121}%
+\contentsline {code}{\numberline {6.2}{\ignorespaces Macro que define una \textit {mesh link}}}{72}{code.caption.122}%
+\contentsline {code}{\numberline {6.3}{\ignorespaces Macro que permite a Gazebo simular una cámara}}{73}{code.caption.124}%
+\contentsline {code}{\numberline {6.4}{\ignorespaces Función para buscar elementos 3D en la imagen}}{75}{code.caption.128}%
+\contentsline {code}{\numberline {6.5}{\ignorespaces Cómo usar un Slider}}{76}{code.caption.129}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

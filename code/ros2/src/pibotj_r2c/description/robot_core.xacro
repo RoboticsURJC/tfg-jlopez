@@ -10,10 +10,6 @@
         <color rgba="1 1 1 1" />
     </material>
 
-    <!--material name="orange">
-        <color rgba="1 0.3 0.1 1"/>
-    </material-->
-
     <material name="blue">
         <color rgba="0.2 0.2 1 1"/>
     </material>
@@ -21,10 +17,6 @@
     <material name="black">
         <color rgba="0 0 0 1"/>
     </material>
-
-    <!--material name="red">
-        <color rgba="1 0 0 1"/>
-    </material-->
 
     <!-- BASE LINK -->
     <!-- se encuentra en el centro a la altura de la unión de las ruedas -->

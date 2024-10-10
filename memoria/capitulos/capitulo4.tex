@@ -413,12 +413,12 @@ ROS 2 Control\footnote{\url{https://control.ros.org/rolling/doc/getting_started/
 Los componentes principales de ROS 2 Control son:
 
 \begin{itemize}
+	%\item \textit{User interface}. Pueden interactuar con el sistema mediante servicios y una interfaz de línea de comandos.
+	\item \textit{Hardware Components/Interfaces}. Realizan comunicación con \textit{hardware} físico y pueden ser: sistemas, sensores y actuadores. Cada \textit{hardware} tendrá una serie de \textit{command interfaces} o de \textit{state interfaces} que permitirán monitorizar o interactuar con cada componente.
+	\item \textit{Resource Manager}. Abstrae y gestiona los \textit{hardware interfaces}, permitiendo la abstracción de los \textit{state interfaces} y los \textit{command interfaces}.
 	\item\textit{Controller Manager}. Gestiona controladores e interfaces de hardware en el framework ROS 2 Control.
-	\item \textit{Resource Manager}. Abstrae y gestiona el hardware, permitiendo la reutilización flexible de componentes.
-	\item \textit{Controllers}. Utilizan la teoría de control para interactuar con el hardware.
-	\item \textit{User interface}. Pueden interactuar con el sistema mediante servicios y una interfaz de línea de comandos.
-	\item \textit{Hardware Components}. Realizan comunicación con hardware físico, como puede ser: sistemas, sensores y actuadores.
-\end{itemize}\
+	\item \textit{Controllers}. Utilizan la teoría de control para interactuar con el hardware. Pueden ser creados desde cero o usar los que viene por defecto de la librería de ROS 2 Control, que suplen las necesidades en la mayoría de las ocasiones.
+\end{itemize}
 
 En este proyecto se ha decidido usar ROS 2 Control para crear un modelo del robot en simulación y poder trabajar con él usando la filosofía de ROS 2 Control.
 

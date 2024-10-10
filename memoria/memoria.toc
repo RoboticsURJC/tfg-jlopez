@@ -67,20 +67,27 @@
 \contentsline {section}{\numberline {5.5}Impresión y montaje}{62}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Soporte software del robot}{70}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Simulación}{70}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Vida real}{70}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Snippets}{70}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Verbatim}{71}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Ecuaciones}{71}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Tablas o cuadros}{72}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Segunda sección}{73}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Números}{73}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Listas}{73}{subsection.6.7.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{74}{paragraph*.126}%
-\contentsline {section}{\numberline {6.8}Corrector ortográfico}{74}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Experimentos}{75}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{75}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{75}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{76}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{76}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{77}{section.8.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{78}{appendix*.127}%
+\contentsline {subsection}{\numberline {6.1.1}URDF/Xacro}{71}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{74}{subsection.6.1.2}%
+\contentsline {subsubsection}{Hardware Components/Interfaces}{74}{subsubsection*.126}%
+\contentsline {subsubsection}{Controllers}{74}{subsubsection*.127}%
+\contentsline {subsection}{\numberline {6.1.3}Robot State Publisher }{75}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Launcher}{75}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Ejemplo en funcionamiento}{75}{subsection.6.1.5}%
+\contentsline {section}{\numberline {6.2}Vida real}{75}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Snippets}{75}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Verbatim}{76}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Ecuaciones}{76}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Tablas o cuadros}{77}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Segunda sección}{77}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Números}{78}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Listas}{78}{subsection.6.7.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{78}{paragraph*.134}%
+\contentsline {section}{\numberline {6.8}Corrector ortográfico}{79}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Experimentos}{80}{chapter.7}%
+\contentsline {section}{\numberline {7.1}}{80}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{80}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{81}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{81}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{82}{section.8.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{83}{appendix*.135}%

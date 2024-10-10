@@ -51,6 +51,7 @@
 \newacro{YOLO}[\AC@hyperlink{YOLO}{YOLO}]{\emph  {You Only Look Once}}
 \newacro{RCE}[\AC@hyperlink{RCE}{RCE}]{\emph  {Red de Carreteras del Estado}}
 \newacro{DIY}[\AC@hyperlink{DIY}{DIY}]{\emph  {Do It by Yourself}}
+\newacro{URDF}[\AC@hyperlink{URDF}{URDF}]{\emph  {Unified Robot Description Format}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -435,53 +436,75 @@
 \@writefile{lomyequation}{\addvspace {10\p@ }}
 \newlabel{cap:capitulo6}{{6}{70}{Soporte software del robot}{chapter.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}Simulación}{70}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Vida real}{70}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Snippets}{70}{section.6.3}\protected@file@percent }
-\@writefile{locode}{\contentsline {code}{\numberline {6.1}{\ignorespaces Función para buscar elementos 3D en la imagen}}{71}{code.caption.120}\protected@file@percent }
-\newlabel{cod:codejemplo}{{6.1}{71}{Función para buscar elementos 3D en la imagen}{code.caption.120}{}}
-\@writefile{locode}{\contentsline {code}{\numberline {6.2}{\ignorespaces Cómo usar un Slider}}{71}{code.caption.121}\protected@file@percent }
-\newlabel{cod:codejemplo2}{{6.2}{71}{Cómo usar un Slider}{code.caption.121}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Verbatim}{71}{section.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Ecuaciones}{71}{section.6.5}\protected@file@percent }
-\newlabel{ec:ec1}{{6.1}{72}{Ecuaciones}{equation.6.5.1}{}}
-\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.1}{\ignorespaces Ejemplo de ecuación con fracciones}}{72}{myequation.caption.122}\protected@file@percent }
-\newlabel{ec:ec2}{{6.2}{72}{Ecuaciones}{equation.6.5.2}{}}
-\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.2}{\ignorespaces Ejemplo de ecuación con array y letras y símbolos especiales}}{72}{myequation.caption.123}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Tablas o cuadros}{72}{section.6.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Parámetros intrínsecos de la cámara\relax }}{72}{table.caption.124}\protected@file@percent }
-\newlabel{cuadro:ejemplo}{{6.1}{72}{Parámetros intrínsecos de la cámara\relax }{table.caption.124}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}Segunda sección}{73}{section.6.7}\protected@file@percent }
-\newlabel{sec:segundaseccion}{{6.7}{73}{Segunda sección}{section.6.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{73}{figure.caption.125}\protected@file@percent }
-\newlabel{fig:roomba}{{6.1}{73}{Robot aspirador Roomba de iRobot.\relax }{figure.caption.125}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Números}{73}{subsection.6.7.1}\protected@file@percent }
-\newlabel{sec:subseccion}{{6.7.1}{73}{Números}{subsection.6.7.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}Listas}{73}{subsection.6.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}URDF/Xacro}{71}{subsection.6.1.1}\protected@file@percent }
+\AC@undonewlabel{acro:URDF}
+\newlabel{acro:URDF}{{6.1.1}{71}{URDF/Xacro}{section*.120}{}}
+\acronymused{URDF}
+\acronymused{URDF}
+\@writefile{locode}{\contentsline {code}{\numberline {6.1}{\ignorespaces Macro que define \textit  {fixed joint}}}{71}{code.caption.121}\protected@file@percent }
+\newlabel{cod:fj}{{6.1}{71}{Macro que define \textit {fixed joint}}{code.caption.121}{}}
+\@writefile{locode}{\contentsline {code}{\numberline {6.2}{\ignorespaces Macro que define una \textit  {mesh link}}}{72}{code.caption.122}\protected@file@percent }
+\newlabel{cod:ml}{{6.2}{72}{Macro que define una \textit {mesh link}}{code.caption.122}{}}
+\AC@undonewlabel{acro:GPS}
+\newlabel{acro:GPS}{{6.1.1}{72}{URDF/Xacro}{section*.123}{}}
+\acronymused{GPS}
+\@writefile{locode}{\contentsline {code}{\numberline {6.3}{\ignorespaces Macro que permite a Gazebo simular una cámara}}{73}{code.caption.124}\protected@file@percent }
+\newlabel{cod:gazebo}{{6.3}{73}{Macro que permite a Gazebo simular una cámara}{code.caption.124}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Sistemas de Coordenadas de PiBotJ\relax }}{73}{figure.caption.125}\protected@file@percent }
+\newlabel{fig:links}{{6.1}{73}{Sistemas de Coordenadas de PiBotJ\relax }{figure.caption.125}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{74}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Hardware Components/Interfaces}{74}{subsubsection*.126}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Controllers}{74}{subsubsection*.127}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Robot State Publisher }{75}{subsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Launcher}{75}{subsection.6.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.5}Ejemplo en funcionamiento}{75}{subsection.6.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Vida real}{75}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Snippets}{75}{section.6.3}\protected@file@percent }
+\@writefile{locode}{\contentsline {code}{\numberline {6.4}{\ignorespaces Función para buscar elementos 3D en la imagen}}{75}{code.caption.128}\protected@file@percent }
+\newlabel{cod:codejemplo}{{6.4}{75}{Función para buscar elementos 3D en la imagen}{code.caption.128}{}}
+\@writefile{locode}{\contentsline {code}{\numberline {6.5}{\ignorespaces Cómo usar un Slider}}{76}{code.caption.129}\protected@file@percent }
+\newlabel{cod:codejemplo2}{{6.5}{76}{Cómo usar un Slider}{code.caption.129}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Verbatim}{76}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Ecuaciones}{76}{section.6.5}\protected@file@percent }
+\newlabel{ec:ec1}{{6.1}{76}{Ecuaciones}{equation.6.5.1}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.1}{\ignorespaces Ejemplo de ecuación con fracciones}}{76}{myequation.caption.130}\protected@file@percent }
+\newlabel{ec:ec2}{{6.2}{76}{Ecuaciones}{equation.6.5.2}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.2}{\ignorespaces Ejemplo de ecuación con array y letras y símbolos especiales}}{76}{myequation.caption.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Tablas o cuadros}{77}{section.6.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Parámetros intrínsecos de la cámara\relax }}{77}{table.caption.132}\protected@file@percent }
+\newlabel{cuadro:ejemplo}{{6.1}{77}{Parámetros intrínsecos de la cámara\relax }{table.caption.132}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Segunda sección}{77}{section.6.7}\protected@file@percent }
+\newlabel{sec:segundaseccion}{{6.7}{77}{Segunda sección}{section.6.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{77}{figure.caption.133}\protected@file@percent }
+\newlabel{fig:roomba}{{6.2}{77}{Robot aspirador Roomba de iRobot.\relax }{figure.caption.133}{}}
 \citation{vega12e}
 \citation{vega19b}
 \citation{vega19a}
 \citation{vega18b}
 \citation{vega18a}
 \citation{vega08b}
-\@writefile{toc}{\contentsline {paragraph}{Referencias bibliográficas}{74}{paragraph*.126}\protected@file@percent }
-\newlabel{sec:referencias}{{6.7.2}{74}{Referencias bibliográficas}{paragraph*.126}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.8}Corrector ortográfico}{74}{section.6.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Experimentos}{75}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Números}{78}{subsection.6.7.1}\protected@file@percent }
+\newlabel{sec:subseccion}{{6.7.1}{78}{Números}{subsection.6.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}Listas}{78}{subsection.6.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Referencias bibliográficas}{78}{paragraph*.134}\protected@file@percent }
+\newlabel{sec:referencias}{{6.7.2}{78}{Referencias bibliográficas}{paragraph*.134}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Corrector ortográfico}{79}{section.6.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Experimentos}{80}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{locode}{\addvspace {10\p@ }}
 \@writefile{lomyequation}{\addvspace {10\p@ }}
-\newlabel{cap:capitulo7}{{7}{75}{Experimentos}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}}{75}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Corrector ortográfico}{75}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusiones}{76}{chapter.8}\protected@file@percent }
+\newlabel{cap:capitulo7}{{7}{80}{Experimentos}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}}{80}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Corrector ortográfico}{80}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusiones}{81}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{locode}{\addvspace {10\p@ }}
 \@writefile{lomyequation}{\addvspace {10\p@ }}
-\newlabel{cap:capitulo8}{{8}{76}{Conclusiones}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusiones}{76}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Corrector ortográfico}{77}{section.8.2}\protected@file@percent }
+\newlabel{cap:capitulo8}{{8}{81}{Conclusiones}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusiones}{81}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Corrector ortográfico}{82}{section.8.2}\protected@file@percent }
 \citation{*}
 \bibstyle{apalike}
 \bibdata{bibliografia}
@@ -495,7 +518,7 @@
 \bibcite{s20020451}{Du et\unhbox \voidb@x \nobreak  \ al., 2020}
 \bibcite{earnest2012stanfordcart}{Earnest, 2012}
 \bibcite{ELZAATARI2019162}{{El Zaatari} et\unhbox \voidb@x \nobreak  \ al., 2019}
-\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{78}{appendix*.127}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{83}{appendix*.135}\protected@file@percent }
 \bibcite{giri2020maquinas}{Giri, 2020}
 \bibcite{10.1145/3529190.3534746}{Katsamenis et\unhbox \voidb@x \nobreak  \ al., 2022}
 \bibcite{app12115320}{Kim et\unhbox \voidb@x \nobreak  \ al., 2022}
@@ -510,4 +533,4 @@
 \bibcite{vega19d}{Vega and Ca\~nas, 2019}
 \bibcite{WANG2023132499}{Wang et\unhbox \voidb@x \nobreak  \ al., 2023}
 \bibcite{doi:10.1080/14680629.2019.1615533}{Wanli\unhbox \voidb@x \nobreak  \ Ye and Xiao, 2021}
-\gdef \@abspage@last{96}
+\gdef \@abspage@last{101}
