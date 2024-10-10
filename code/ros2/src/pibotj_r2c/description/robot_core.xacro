@@ -10,9 +10,9 @@
         <color rgba="1 1 1 1" />
     </material>
 
-    <material name="orange">
+    <!--material name="orange">
         <color rgba="1 0.3 0.1 1"/>
-    </material>
+    </material-->
 
     <material name="blue">
         <color rgba="0.2 0.2 1 1"/>
@@ -22,12 +22,12 @@
         <color rgba="0 0 0 1"/>
     </material>
 
-    <material name="red">
+    <!--material name="red">
         <color rgba="1 0 0 1"/>
-    </material>
+    </material-->
 
     <!-- BASE LINK -->
-
+    <!-- se encuentra en el centro a la altura de la unión de las ruedas -->
     <link name="base_link">
 
     </link>
@@ -57,7 +57,7 @@
             <geometry>
                 <mesh filename="package://pibotj_r2c/meshes/base.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="Blue"> <!-- Color in Rviz2 (inside visual tag) -->
+            <material name="blue"> 
                 <color rgba="${0/255} ${0/255} ${255/255} 1.0"/>
             </material>
         </visual>
@@ -100,7 +100,7 @@
             <geometry>
                 <mesh filename="package://pibotj_r2c/meshes/wheel_ring.stl" scale="0.9 0.9 0.9"/>
             </geometry>
-            <material name="white"/> <!-- Color in Rviz2 (inside visual tag) -->
+            <material name="white"/> 
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -130,11 +130,11 @@
 
     <link name="right_wheel">
         <visual>
-            <origin xyz="0 0 -0.015" rpy="${pi} 0 0"/> <!-- -z and r=PI for the other wheel -->
+            <origin xyz="0 0 -0.015" rpy="${pi} 0 0"/> <!-- -zy r=PI para la otra rueda-->
             <geometry>
                 <mesh filename="package://pibotj_r2c/meshes/wheel_ring.stl" scale="0.9 0.9 0.9"/>
             </geometry>
-            <material name="white"/> <!-- Color en Rviz2-->
+            <material name="white"/> 
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>

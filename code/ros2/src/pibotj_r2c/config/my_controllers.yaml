@@ -1,22 +1,26 @@
 controller_manager:
   ros__parameters:
-    update_rate: 30
+    update_rate: 30 # Hz
     use_sim_time: true
 
     # define controllers
     diff_cont:
+      # fija el tipo de controller que se usa existente
       type: diff_drive_controller/DiffDriveController
 
-    joint_broad: # muestra el estado de las joints
+    # Este no hace nada 
+    # \robot_state_publisher necesita de \joint_state topic
+    # de forma que se puedan hacer las transformaciones de forma correcta
+    joint_broad: 
       type: joint_state_broadcaster/JointStateBroadcaster
 
     pos_cont: 
       type: position_controllers/JointGroupPositionController
 
-
     vel_cont: 
       type: velocity_controllers/JointGroupVelocityController
 
+# Parámetros del control diferencial
 diff_cont:
   ros__parameters:
 
@@ -24,6 +28,7 @@ diff_cont:
 
     base_frame_id: base_link
 
+    # las joints usadas
     left_wheel_names: ['left_wheel_joint']
     right_wheel_names: ['right_wheel_joint']
     wheel_separation: 0.297
@@ -31,8 +36,10 @@ diff_cont:
 
     use_stamped_vel: false
 
+# Parámetros del control por posición
 pos_cont:
   ros__parameters:
-    joints: ['camera_joint']  # Aquí debes especificar las joints
+    # las joints usadas
+    joints: ['camera_joint']  
     publish_rate: 50.0
 

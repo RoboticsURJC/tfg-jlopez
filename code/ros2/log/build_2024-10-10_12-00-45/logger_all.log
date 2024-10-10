@@ -1,0 +1,886 @@
+[0.130s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'pibotj_r2c'][0m
+[0.130s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['pibotj_r2c'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72280e6f2830>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72280e8032e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72280e8032e0>>)[0m
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.362s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2'
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.363s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.383s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.384s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.385s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/old) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/old) by extension 'ignore'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/old) ignored
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extension 'ignore'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extension 'ignore_ament_install'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extensions ['colcon_pkg']
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extension 'colcon_pkg'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extensions ['colcon_meta']
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extension 'colcon_meta'
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extensions ['ros']
+[0.386s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_r2c) by extension 'ros'
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/pibotj_r2c' with type 'ros.ament_cmake' and name 'pibotj_r2c'[0m
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extensions ['ignore', 'ignore_ament_install']
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extension 'ignore'
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extension 'ignore_ament_install'
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extensions ['colcon_pkg']
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extension 'colcon_pkg'
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extensions ['colcon_meta']
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extension 'colcon_meta'
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extensions ['ros']
+[0.389s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pibotj_rr) by extension 'ros'
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/pibotj_rr' with type 'ros.ament_python' and name 'pibotj_rr'[0m
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extensions ['ignore', 'ignore_ament_install']
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'ignore'
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'ignore_ament_install'
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extensions ['colcon_pkg']
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'colcon_pkg'
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extensions ['colcon_meta']
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'colcon_meta'
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extensions ['ros']
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'ros'
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extensions ['cmake', 'python']
+[0.390s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'cmake'
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'python'
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extensions ['python_setup_py']
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls) by extension 'python_setup_py'
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/control_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/control_msgs) by extension 'ignore'
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/control_msgs) ignored
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/control_toolbox) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/control_toolbox) by extension 'ignore'
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/control_toolbox) ignored
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gazebo_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gazebo_ros2_control) by extension 'ignore'
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gazebo_ros2_control) ignored
+[0.391s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'ignore'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'ignore_ament_install'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extensions ['colcon_pkg']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'colcon_pkg'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extensions ['colcon_meta']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'colcon_meta'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extensions ['ros']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'ros'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extensions ['cmake', 'python']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'cmake'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'python'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extensions ['python_setup_py']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control) by extension 'python_setup_py'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extensions ['ignore', 'ignore_ament_install']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'ignore'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'ignore_ament_install'
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extensions ['colcon_pkg']
+[0.392s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'colcon_pkg'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extensions ['colcon_meta']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'colcon_meta'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extensions ['ros']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'ros'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extensions ['cmake', 'python']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'cmake'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'python'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extensions ['python_setup_py']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/Dockerfile) by extension 'python_setup_py'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'ignore'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'ignore_ament_install'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extensions ['colcon_pkg']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'colcon_pkg'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extensions ['colcon_meta']
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'colcon_meta'
+[0.393s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extensions ['ros']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'ros'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extensions ['cmake', 'python']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'cmake'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'python'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extensions ['python_setup_py']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc) by extension 'python_setup_py'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'ignore'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'ignore_ament_install'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extensions ['colcon_pkg']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'colcon_pkg'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extensions ['colcon_meta']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'colcon_meta'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extensions ['ros']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'ros'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extensions ['cmake', 'python']
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'cmake'
+[0.394s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'python'
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extensions ['python_setup_py']
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/doc/img) by extension 'python_setup_py'
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore'
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore_ament_install'
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_pkg']
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_pkg'
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_meta']
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_meta'
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extensions ['ros']
+[0.395s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/gz_ros2_control_tests) by extension 'ros'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/gz_ros2_control/gz_ros2_control_tests' with type 'ros.ament_cmake' and name 'gz_ros2_control_tests'[0m
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extension 'ignore'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extension 'ignore_ament_install'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extensions ['colcon_pkg']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extension 'colcon_pkg'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extensions ['colcon_meta']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extension 'colcon_meta'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extensions ['ros']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control) by extension 'ros'
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/gz_ros2_control/ign_ros2_control' with type 'ros.ament_cmake' and name 'ign_ros2_control'[0m
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore'
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore_ament_install'
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_pkg']
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_pkg'
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_meta']
+[0.403s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_meta'
+[0.404s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extensions ['ros']
+[0.404s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/gz_ros2_control/ign_ros2_control_demos) by extension 'ros'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/gz_ros2_control/ign_ros2_control_demos' with type 'ros.ament_cmake' and name 'ign_ros2_control_demos'[0m
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'ignore'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'ignore_ament_install'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extensions ['colcon_pkg']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'colcon_pkg'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extensions ['colcon_meta']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'colcon_meta'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extensions ['ros']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'ros'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extensions ['cmake', 'python']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'cmake'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'python'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extensions ['python_setup_py']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface) by extension 'python_setup_py'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extension 'ignore'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extension 'ignore_ament_install'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extensions ['colcon_pkg']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extension 'colcon_pkg'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extensions ['colcon_meta']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extension 'colcon_meta'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extensions ['ros']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface) by extension 'ros'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/kinematics_interface/kinematics_interface' with type 'ros.ament_cmake' and name 'kinematics_interface'[0m
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extensions ['ignore', 'ignore_ament_install']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extension 'ignore'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extension 'ignore_ament_install'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extensions ['colcon_pkg']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extension 'colcon_pkg'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extensions ['colcon_meta']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extension 'colcon_meta'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extensions ['ros']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/kinematics_interface/kinematics_interface_kdl) by extension 'ros'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/kinematics_interface/kinematics_interface_kdl' with type 'ros.ament_cmake' and name 'kinematics_interface_kdl'[0m
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extension 'ignore'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extension 'ignore_ament_install'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extensions ['colcon_pkg']
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extension 'colcon_pkg'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extensions ['colcon_meta']
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extension 'colcon_meta'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extensions ['ros']
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/realtime_tools) by extension 'ros'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/realtime_tools' with type 'ros.ament_cmake' and name 'realtime_tools'[0m
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'ignore'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'ignore_ament_install'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extensions ['colcon_pkg']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'colcon_pkg'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extensions ['colcon_meta']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'colcon_meta'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extensions ['ros']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'ros'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extensions ['cmake', 'python']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'cmake'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'python'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extensions ['python_setup_py']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control) by extension 'python_setup_py'
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extension 'ignore'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extension 'ignore_ament_install'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extensions ['colcon_pkg']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extension 'colcon_pkg'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extensions ['colcon_meta']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extension 'colcon_meta'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extensions ['ros']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_interface) by extension 'ros'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/controller_interface' with type 'ros.ament_cmake' and name 'controller_interface'[0m
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_manager) by extension 'ignore'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_manager) ignored
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_manager_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_manager_msgs) by extension 'ignore'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/controller_manager_msgs) ignored
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'ignore'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'ignore_ament_install'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extensions ['colcon_pkg']
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'colcon_pkg'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extensions ['colcon_meta']
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'colcon_meta'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extensions ['ros']
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'ros'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extensions ['cmake', 'python']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'cmake'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'python'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extensions ['python_setup_py']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/doc) by extension 'python_setup_py'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface) by extension 'ignore'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface) ignored
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extensions ['ignore', 'ignore_ament_install']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extension 'ignore'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extension 'ignore_ament_install'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extensions ['colcon_pkg']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extension 'colcon_pkg'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extensions ['colcon_meta']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extension 'colcon_meta'
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extensions ['ros']
+[0.413s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/hardware_interface_testing) by extension 'ros'
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/hardware_interface_testing' with type 'ros.ament_cmake' and name 'hardware_interface_testing'[0m
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extensions ['ignore', 'ignore_ament_install']
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extension 'ignore'
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extension 'ignore_ament_install'
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extensions ['colcon_pkg']
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extension 'colcon_pkg'
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extensions ['colcon_meta']
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extension 'colcon_meta'
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extensions ['ros']
+[0.415s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits) by extension 'ros'
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/joint_limits' with type 'ros.ament_cmake' and name 'joint_limits'[0m
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits_interface) by extension 'ignore'
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/joint_limits_interface) ignored
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extension 'ignore'
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extension 'ignore_ament_install'
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extensions ['colcon_pkg']
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extension 'colcon_pkg'
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extensions ['colcon_meta']
+[0.416s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extension 'colcon_meta'
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extensions ['ros']
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control) by extension 'ros'
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/ros2_control' with type 'ros.ament_cmake' and name 'ros2_control'[0m
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extensions ['ignore', 'ignore_ament_install']
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extension 'ignore'
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extension 'ignore_ament_install'
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extensions ['colcon_pkg']
+[0.417s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extension 'colcon_pkg'
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extensions ['colcon_meta']
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extension 'colcon_meta'
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extensions ['ros']
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2_control_test_assets) by extension 'ros'
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/ros2_control_test_assets' with type 'ros.ament_cmake' and name 'ros2_control_test_assets'[0m
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2controlcli) by extensions ['ignore', 'ignore_ament_install']
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2controlcli) by extension 'ignore'
+[0.418s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/ros2controlcli) ignored
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extension 'ignore'
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extension 'ignore_ament_install'
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extensions ['colcon_pkg']
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extension 'colcon_pkg'
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extensions ['colcon_meta']
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extension 'colcon_meta'
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extensions ['ros']
+[0.419s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/rqt_controller_manager) by extension 'ros'
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/rqt_controller_manager' with type 'ros.ament_python' and name 'rqt_controller_manager'[0m
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extension 'ignore'
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extension 'ignore_ament_install'
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extensions ['colcon_pkg']
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extension 'colcon_pkg'
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extensions ['colcon_meta']
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extension 'colcon_meta'
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extensions ['ros']
+[0.420s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control/transmission_interface) by extension 'ros'
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control/transmission_interface' with type 'ros.ament_cmake' and name 'transmission_interface'[0m
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'ignore'
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'ignore_ament_install'
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extensions ['colcon_pkg']
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'colcon_pkg'
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extensions ['colcon_meta']
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'colcon_meta'
+[0.421s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extensions ['ros']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'ros'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extensions ['cmake', 'python']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'cmake'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'python'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extensions ['python_setup_py']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos) by extension 'python_setup_py'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extensions ['ignore', 'ignore_ament_install']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'ignore'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'ignore_ament_install'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extensions ['colcon_pkg']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'colcon_pkg'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extensions ['colcon_meta']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'colcon_meta'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extensions ['ros']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'ros'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extensions ['cmake', 'python']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'cmake'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'python'
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extensions ['python_setup_py']
+[0.422s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/Dockerfile) by extension 'python_setup_py'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'ignore'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'ignore_ament_install'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extensions ['colcon_pkg']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'colcon_pkg'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extensions ['colcon_meta']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'colcon_meta'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extensions ['ros']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'ros'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extensions ['cmake', 'python']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'cmake'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'python'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extensions ['python_setup_py']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/doc) by extension 'python_setup_py'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extension 'ignore'
+[0.423s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extension 'ignore_ament_install'
+[0.424s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extensions ['colcon_pkg']
+[0.424s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extension 'colcon_pkg'
+[0.424s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extensions ['colcon_meta']
+[0.424s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extension 'colcon_meta'
+[0.424s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extensions ['ros']
+[0.424s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_1) by extension 'ros'
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_1' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_1'[0m
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extension 'ignore'
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extension 'ignore_ament_install'
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extensions ['colcon_pkg']
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extension 'colcon_pkg'
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extensions ['colcon_meta']
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extension 'colcon_meta'
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extensions ['ros']
+[0.425s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_10) by extension 'ros'
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_10' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_10'[0m
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extensions ['ignore', 'ignore_ament_install']
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extension 'ignore'
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extension 'ignore_ament_install'
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extensions ['colcon_pkg']
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extension 'colcon_pkg'
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extensions ['colcon_meta']
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extension 'colcon_meta'
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extensions ['ros']
+[0.427s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_11) by extension 'ros'
+[0.428s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_11' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_11'[0m
+[0.428s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extension 'ignore'
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extension 'ignore_ament_install'
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extensions ['colcon_pkg']
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extension 'colcon_pkg'
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extensions ['colcon_meta']
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extension 'colcon_meta'
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extensions ['ros']
+[0.429s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_12) by extension 'ros'
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_12' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_12'[0m
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extensions ['ignore', 'ignore_ament_install']
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extension 'ignore'
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extension 'ignore_ament_install'
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extensions ['colcon_pkg']
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extension 'colcon_pkg'
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extensions ['colcon_meta']
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extension 'colcon_meta'
+[0.430s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extensions ['ros']
+[0.431s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_14) by extension 'ros'
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_14' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_14'[0m
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extensions ['ignore', 'ignore_ament_install']
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extension 'ignore'
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extension 'ignore_ament_install'
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extensions ['colcon_pkg']
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extension 'colcon_pkg'
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extensions ['colcon_meta']
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extension 'colcon_meta'
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extensions ['ros']
+[0.432s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_15) by extension 'ros'
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_15' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_15'[0m
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extensions ['ignore', 'ignore_ament_install']
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extension 'ignore'
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extension 'ignore_ament_install'
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extensions ['colcon_pkg']
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extension 'colcon_pkg'
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extensions ['colcon_meta']
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extension 'colcon_meta'
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extensions ['ros']
+[0.434s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_2) by extension 'ros'
+[0.435s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_2' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_2'[0m
+[0.435s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extensions ['ignore', 'ignore_ament_install']
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extension 'ignore'
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extension 'ignore_ament_install'
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extensions ['colcon_pkg']
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extension 'colcon_pkg'
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extensions ['colcon_meta']
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extension 'colcon_meta'
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extensions ['ros']
+[0.436s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_3) by extension 'ros'
+[0.437s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_3' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_3'[0m
+[0.437s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extensions ['ignore', 'ignore_ament_install']
+[0.437s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extension 'ignore'
+[0.437s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extension 'ignore_ament_install'
+[0.438s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extensions ['colcon_pkg']
+[0.438s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extension 'colcon_pkg'
+[0.438s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extensions ['colcon_meta']
+[0.438s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extension 'colcon_meta'
+[0.438s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extensions ['ros']
+[0.438s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_4) by extension 'ros'
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_4' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_4'[0m
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extensions ['ignore', 'ignore_ament_install']
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extension 'ignore'
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extension 'ignore_ament_install'
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extensions ['colcon_pkg']
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extension 'colcon_pkg'
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extensions ['colcon_meta']
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extension 'colcon_meta'
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extensions ['ros']
+[0.439s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_5) by extension 'ros'
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_5' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_5'[0m
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extensions ['ignore', 'ignore_ament_install']
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extension 'ignore'
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extension 'ignore_ament_install'
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extensions ['colcon_pkg']
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extension 'colcon_pkg'
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extensions ['colcon_meta']
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extension 'colcon_meta'
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extensions ['ros']
+[0.441s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_6) by extension 'ros'
+[0.442s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_6' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_6'[0m
+[0.442s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extension 'ignore'
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extension 'ignore_ament_install'
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extensions ['colcon_pkg']
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extension 'colcon_pkg'
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extensions ['colcon_meta']
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extension 'colcon_meta'
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extensions ['ros']
+[0.443s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_7) by extension 'ros'
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_7' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_7'[0m
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extensions ['ignore', 'ignore_ament_install']
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extension 'ignore'
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extension 'ignore_ament_install'
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extensions ['colcon_pkg']
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extension 'colcon_pkg'
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extensions ['colcon_meta']
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extension 'colcon_meta'
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extensions ['ros']
+[0.445s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_8) by extension 'ros'
+[0.446s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_8' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_8'[0m
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extension 'ignore'
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extension 'ignore_ament_install'
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extensions ['colcon_pkg']
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extension 'colcon_pkg'
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extensions ['colcon_meta']
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extension 'colcon_meta'
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extensions ['ros']
+[0.447s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/example_9) by extension 'ros'
+[0.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/example_9' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_9'[0m
+[0.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extensions ['ignore', 'ignore_ament_install']
+[0.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extension 'ignore'
+[0.448s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extension 'ignore_ament_install'
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extensions ['colcon_pkg']
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extension 'colcon_pkg'
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extensions ['colcon_meta']
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extension 'colcon_meta'
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extensions ['ros']
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_description) by extension 'ros'
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/ros2_control_demo_description' with type 'ros.ament_cmake' and name 'ros2_control_demo_description'[0m
+[0.449s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extensions ['ignore', 'ignore_ament_install']
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extension 'ignore'
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extension 'ignore_ament_install'
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extensions ['colcon_pkg']
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extension 'colcon_pkg'
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extensions ['colcon_meta']
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extension 'colcon_meta'
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extensions ['ros']
+[0.450s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demo_testing) by extension 'ros'
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/ros2_control_demo_testing' with type 'ros.ament_python' and name 'ros2_control_demo_testing'[0m
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extension 'ignore'
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extension 'ignore_ament_install'
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extensions ['colcon_pkg']
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extension 'colcon_pkg'
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extensions ['colcon_meta']
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extension 'colcon_meta'
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extensions ['ros']
+[0.451s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_control_demos/ros2_control_demos) by extension 'ros'
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_control_demos/ros2_control_demos' with type 'ros.ament_cmake' and name 'ros2_control_demos'[0m
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'ignore'
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'ignore_ament_install'
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extensions ['colcon_pkg']
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'colcon_pkg'
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extensions ['colcon_meta']
+[0.452s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'colcon_meta'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extensions ['ros']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'ros'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extensions ['cmake', 'python']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'cmake'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'python'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extensions ['python_setup_py']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers) by extension 'python_setup_py'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extension 'ignore'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extension 'ignore_ament_install'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extensions ['colcon_pkg']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extension 'colcon_pkg'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extensions ['colcon_meta']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extension 'colcon_meta'
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extensions ['ros']
+[0.453s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ackermann_steering_controller) by extension 'ros'
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/ackermann_steering_controller' with type 'ros.ament_cmake' and name 'ackermann_steering_controller'[0m
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extension 'ignore'
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extension 'ignore_ament_install'
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extensions ['colcon_pkg']
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extension 'colcon_pkg'
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extensions ['colcon_meta']
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extension 'colcon_meta'
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extensions ['ros']
+[0.455s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/admittance_controller) by extension 'ros'
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/admittance_controller' with type 'ros.ament_cmake' and name 'admittance_controller'[0m
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extension 'ignore'
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extension 'ignore_ament_install'
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extensions ['colcon_pkg']
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extension 'colcon_pkg'
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extensions ['colcon_meta']
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extension 'colcon_meta'
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extensions ['ros']
+[0.458s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/bicycle_steering_controller) by extension 'ros'
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/bicycle_steering_controller' with type 'ros.ament_cmake' and name 'bicycle_steering_controller'[0m
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/diff_drive_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/diff_drive_controller) by extension 'ignore'
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/diff_drive_controller) ignored
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'ignore'
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'ignore_ament_install'
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extensions ['colcon_pkg']
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'colcon_pkg'
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extensions ['colcon_meta']
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'colcon_meta'
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extensions ['ros']
+[0.460s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'ros'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extensions ['cmake', 'python']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'cmake'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'python'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extensions ['python_setup_py']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc) by extension 'python_setup_py'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extensions ['ignore', 'ignore_ament_install']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'ignore'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'ignore_ament_install'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extensions ['colcon_pkg']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'colcon_pkg'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extensions ['colcon_meta']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'colcon_meta'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extensions ['ros']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'ros'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extensions ['cmake', 'python']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'cmake'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'python'
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extensions ['python_setup_py']
+[0.461s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/doc/images) by extension 'python_setup_py'
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extension 'ignore'
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extension 'ignore_ament_install'
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extensions ['colcon_pkg']
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extension 'colcon_pkg'
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extensions ['colcon_meta']
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extension 'colcon_meta'
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extensions ['ros']
+[0.462s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/effort_controllers) by extension 'ros'
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/effort_controllers' with type 'ros.ament_cmake' and name 'effort_controllers'[0m
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/force_torque_sensor_broadcaster) by extensions ['ignore', 'ignore_ament_install']
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/force_torque_sensor_broadcaster) by extension 'ignore'
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/force_torque_sensor_broadcaster) ignored
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extension 'ignore'
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extension 'ignore_ament_install'
+[0.463s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extensions ['colcon_pkg']
+[0.464s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extension 'colcon_pkg'
+[0.464s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extensions ['colcon_meta']
+[0.464s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extension 'colcon_meta'
+[0.464s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extensions ['ros']
+[0.464s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/forward_command_controller) by extension 'ros'
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/forward_command_controller' with type 'ros.ament_cmake' and name 'forward_command_controller'[0m
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extension 'ignore'
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extension 'ignore_ament_install'
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extensions ['colcon_pkg']
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extension 'colcon_pkg'
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extensions ['colcon_meta']
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extension 'colcon_meta'
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extensions ['ros']
+[0.465s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/gripper_controllers) by extension 'ros'
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/gripper_controllers' with type 'ros.ament_cmake' and name 'gripper_controllers'[0m
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/imu_sensor_broadcaster) by extensions ['ignore', 'ignore_ament_install']
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/imu_sensor_broadcaster) by extension 'ignore'
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/imu_sensor_broadcaster) ignored
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/joint_state_broadcaster) by extensions ['ignore', 'ignore_ament_install']
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/joint_state_broadcaster) by extension 'ignore'
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/joint_state_broadcaster) ignored
+[0.467s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/joint_trajectory_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/joint_trajectory_controller) by extension 'ignore'
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/joint_trajectory_controller) ignored
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extension 'ignore'
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extension 'ignore_ament_install'
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extensions ['colcon_pkg']
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extension 'colcon_pkg'
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extensions ['colcon_meta']
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extension 'colcon_meta'
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extensions ['ros']
+[0.468s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/pid_controller) by extension 'ros'
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/pid_controller' with type 'ros.ament_cmake' and name 'pid_controller'[0m
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/position_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/position_controllers) by extension 'ignore'
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/position_controllers) ignored
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extension 'ignore'
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extension 'ignore_ament_install'
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extensions ['colcon_pkg']
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extension 'colcon_pkg'
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extensions ['colcon_meta']
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extension 'colcon_meta'
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extensions ['ros']
+[0.470s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/range_sensor_broadcaster) by extension 'ros'
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/range_sensor_broadcaster' with type 'ros.ament_cmake' and name 'range_sensor_broadcaster'[0m
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extension 'ignore'
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extension 'ignore_ament_install'
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extensions ['colcon_pkg']
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extension 'colcon_pkg'
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extensions ['colcon_meta']
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extension 'colcon_meta'
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extensions ['ros']
+[0.472s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers) by extension 'ros'
+[0.473s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/ros2_controllers' with type 'ros.ament_cmake' and name 'ros2_controllers'[0m
+[0.473s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extension 'ignore'
+[0.473s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extension 'ignore_ament_install'
+[0.473s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extensions ['colcon_pkg']
+[0.473s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extension 'colcon_pkg'
+[0.474s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extensions ['colcon_meta']
+[0.474s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extension 'colcon_meta'
+[0.474s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extensions ['ros']
+[0.474s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/ros2_controllers_test_nodes) by extension 'ros'
+[0.474s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/ros2_controllers_test_nodes' with type 'ros.ament_python' and name 'ros2_controllers_test_nodes'[0m
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extension 'ignore'
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extension 'ignore_ament_install'
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extensions ['colcon_pkg']
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extension 'colcon_pkg'
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extensions ['colcon_meta']
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extension 'colcon_meta'
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extensions ['ros']
+[0.475s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller) by extension 'ros'
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller' with type 'ros.ament_python' and name 'rqt_joint_trajectory_controller'[0m
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extension 'ignore'
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extension 'ignore_ament_install'
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extensions ['colcon_pkg']
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extension 'colcon_pkg'
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extensions ['colcon_meta']
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extension 'colcon_meta'
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extensions ['ros']
+[0.476s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/steering_controllers_library) by extension 'ros'
+[0.478s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/steering_controllers_library' with type 'ros.ament_cmake' and name 'steering_controllers_library'[0m
+[0.478s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extension 'ignore'
+[0.478s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extension 'ignore_ament_install'
+[0.478s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extensions ['colcon_pkg']
+[0.479s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extension 'colcon_pkg'
+[0.479s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extensions ['colcon_meta']
+[0.479s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extension 'colcon_meta'
+[0.479s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extensions ['ros']
+[0.479s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_controller) by extension 'ros'
+[0.480s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/tricycle_controller' with type 'ros.ament_cmake' and name 'tricycle_controller'[0m
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extension 'ignore'
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extension 'ignore_ament_install'
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extensions ['colcon_pkg']
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extension 'colcon_pkg'
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extensions ['colcon_meta']
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extension 'colcon_meta'
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extensions ['ros']
+[0.481s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/tricycle_steering_controller) by extension 'ros'
+[0.482s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/tricycle_steering_controller' with type 'ros.ament_cmake' and name 'tricycle_steering_controller'[0m
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extension 'ignore'
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extension 'ignore_ament_install'
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extensions ['colcon_pkg']
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extension 'colcon_pkg'
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extensions ['colcon_meta']
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extension 'colcon_meta'
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extensions ['ros']
+[0.483s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ros-controls/ros2_controllers/velocity_controllers) by extension 'ros'
+[0.484s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/ros-controls/ros2_controllers/velocity_controllers' with type 'ros.ament_cmake' and name 'velocity_controllers'[0m
+[0.484s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.484s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.484s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.484s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.484s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.532s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'controller_interface' in 'src/ros-controls/ros2_control/controller_interface'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ign_ros2_control' in 'src/ros-controls/gz_ros2_control/ign_ros2_control'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'joint_limits' in 'src/ros-controls/ros2_control/joint_limits'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'kinematics_interface' in 'src/ros-controls/kinematics_interface/kinematics_interface'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'pibotj_rr' in 'src/pibotj_rr'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'realtime_tools' in 'src/ros-controls/realtime_tools'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_description' in 'src/ros-controls/ros2_control_demos/ros2_control_demo_description'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_testing' in 'src/ros-controls/ros2_control_demos/ros2_control_demo_testing'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_test_assets' in 'src/ros-controls/ros2_control/ros2_control_test_assets'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_controllers_test_nodes' in 'src/ros-controls/ros2_controllers/ros2_controllers_test_nodes'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'rqt_controller_manager' in 'src/ros-controls/ros2_control/rqt_controller_manager'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'rqt_joint_trajectory_controller' in 'src/ros-controls/ros2_controllers/rqt_joint_trajectory_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'transmission_interface' in 'src/ros-controls/ros2_control/transmission_interface'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'gz_ros2_control_tests' in 'src/ros-controls/gz_ros2_control/gz_ros2_control_tests'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'hardware_interface_testing' in 'src/ros-controls/ros2_control/hardware_interface_testing'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'kinematics_interface_kdl' in 'src/ros-controls/kinematics_interface/kinematics_interface_kdl'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control' in 'src/ros-controls/ros2_control/ros2_control'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_2' in 'src/ros-controls/ros2_control_demos/example_2'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_7' in 'src/ros-controls/ros2_control_demos/example_7'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'steering_controllers_library' in 'src/ros-controls/ros2_controllers/steering_controllers_library'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ackermann_steering_controller' in 'src/ros-controls/ros2_controllers/ackermann_steering_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'admittance_controller' in 'src/ros-controls/ros2_controllers/admittance_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'bicycle_steering_controller' in 'src/ros-controls/ros2_controllers/bicycle_steering_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'forward_command_controller' in 'src/ros-controls/ros2_controllers/forward_command_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'gripper_controllers' in 'src/ros-controls/ros2_controllers/gripper_controllers'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'pid_controller' in 'src/ros-controls/ros2_controllers/pid_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'range_sensor_broadcaster' in 'src/ros-controls/ros2_controllers/range_sensor_broadcaster'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'tricycle_controller' in 'src/ros-controls/ros2_controllers/tricycle_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'tricycle_steering_controller' in 'src/ros-controls/ros2_controllers/tricycle_steering_controller'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'effort_controllers' in 'src/ros-controls/ros2_controllers/effort_controllers'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_1' in 'src/ros-controls/ros2_control_demos/example_1'
+[0.533s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_10' in 'src/ros-controls/ros2_control_demos/example_10'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_11' in 'src/ros-controls/ros2_control_demos/example_11'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_12' in 'src/ros-controls/ros2_control_demos/example_12'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_14' in 'src/ros-controls/ros2_control_demos/example_14'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_4' in 'src/ros-controls/ros2_control_demos/example_4'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_5' in 'src/ros-controls/ros2_control_demos/example_5'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_6' in 'src/ros-controls/ros2_control_demos/example_6'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_8' in 'src/ros-controls/ros2_control_demos/example_8'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_9' in 'src/ros-controls/ros2_control_demos/example_9'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'velocity_controllers' in 'src/ros-controls/ros2_controllers/velocity_controllers'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ign_ros2_control_demos' in 'src/ros-controls/gz_ros2_control/ign_ros2_control_demos'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_15' in 'src/ros-controls/ros2_control_demos/example_15'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demo_example_3' in 'src/ros-controls/ros2_control_demos/example_3'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_controllers' in 'src/ros-controls/ros2_controllers/ros2_controllers'
+[0.534s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'ros2_control_demos' in 'src/ros-controls/ros2_control_demos/ros2_control_demos'
+[0.534s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.534s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.540s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 64 installed packages in /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install[0m
+[0.542s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 499 installed packages in /opt/ros/humble[0m
+[0.547s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.615s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'cmake_args' from command line to 'None'
+[0.615s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'cmake_target' from command line to 'None'
+[0.615s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.615s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'cmake_clean_cache' from command line to 'False'
+[0.615s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'cmake_clean_first' from command line to 'False'
+[0.616s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'cmake_force_configure' from command line to 'False'
+[0.616s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'ament_cmake_args' from command line to 'None'
+[0.616s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'catkin_cmake_args' from command line to 'None'
+[0.616s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pibotj_r2c' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.616s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'pibotj_r2c' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c', 'merge_install': False, 'path': '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_r2c', 'symlink_install': False, 'test_result_base': None}[0m
+[0.616s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.617s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.617s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_r2c' with build type 'ament_cmake'
+[0.617s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/pibotj_r2c'
+[0.620s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.620s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.620s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.636s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c -- -j8 -l8[0m
+[0.687s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr:/opt/ros/humble /usr/bin/cmake --build /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c -- -j8 -l8[0m
+[0.740s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c[0m
+[0.768s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(pibotj_r2c)
+[0.769s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_joint_trajectory_controller:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/rqt_controller_manager:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2controlcli:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_controllers_test_nodes:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/ros2_control_demo_testing:/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_rr:/opt/ros/humble /usr/bin/cmake --install /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c[0m
+[0.771s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c' for CMake module files
+[0.772s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c' for CMake config files
+[0.772s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('pibotj_r2c', 'cmake_prefix_path')
+[0.772s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/hook/cmake_prefix_path.ps1'
+[0.773s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/hook/cmake_prefix_path.dsv'
+[0.773s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/hook/cmake_prefix_path.sh'
+[0.774s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/bin'
+[0.774s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/lib/pkgconfig/pibotj_r2c.pc'
+[0.774s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/lib/python3.10/site-packages'
+[0.775s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/bin'
+[0.775s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.ps1'
+[0.776s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.dsv'
+[0.776s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.sh'
+[0.777s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.bash'
+[0.777s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.zsh'
+[0.778s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/colcon-core/packages/pibotj_r2c)
+[0.814s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(pibotj_r2c)
+[0.814s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c' for CMake module files
+[0.814s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c' for CMake config files
+[0.815s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('pibotj_r2c', 'cmake_prefix_path')
+[0.815s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/hook/cmake_prefix_path.ps1'
+[0.815s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/hook/cmake_prefix_path.dsv'
+[0.816s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/hook/cmake_prefix_path.sh'
+[0.816s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/bin'
+[0.816s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/lib/pkgconfig/pibotj_r2c.pc'
+[0.816s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/lib/python3.10/site-packages'
+[0.817s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/bin'
+[0.817s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.ps1'
+[0.818s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.dsv'
+[0.818s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.sh'
+[0.818s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.bash'
+[0.819s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/package.zsh'
+[0.819s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/colcon-core/packages/pibotj_r2c)
+[0.819s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[0.820s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[0.820s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[0.820s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[0.825s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.826s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.826s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[0.836s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[0.837s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.ps1'
+[0.837s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/_local_setup_util_ps1.py'
+[0.839s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.ps1'
+[0.843s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.sh'
+[0.843s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/_local_setup_util_sh.py'
+[0.844s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.sh'
+[0.847s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.bash'
+[0.847s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.bash'
+[0.851s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/local_setup.zsh'
+[0.851s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/setup.zsh'

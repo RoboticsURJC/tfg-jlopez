@@ -3,7 +3,6 @@
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/config/my_controllers.yaml
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/config/twist_mux.yaml
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/camera.xacro
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/gazebo_control.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/gps.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/robot.urdf.xacro
 /home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/pibotj_r2c/share/pibotj_r2c/description/robot_core.xacro
