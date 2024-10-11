@@ -172,37 +172,82 @@ El \textit{launcher} que se decidió crear para este proyecto parte del creado p
 \end{figure}
 
 
+\subsection{Simulación puesta en funcionamiento}
 
-\subsection{Ejemplo en funcionamiento}
+Para poner en funcionamiento el modelo, únicamente había que escribir los siguientes comandos:
+\begin{verbatim}
+	colcon build --packages-select pibotj_r2c   # compila los paquetes
+	source ./install/setup.bash                 # configura variables 
+	ros2 launch pibotj_r2c launch_sim.launch.py
+\end{verbatim} 
 
-Para poner en funcionamiento el modelo, únicamente hay que escribir los siguientes comandos: 
+Si la primera vez que se lance el robot ocurre algún error, es normal y hay que reiniciar el proceso. Para demostrar que todos los topics que forman parte del robot se han inicializado correctamente, hay que escribir el siguiente comando:  \verb|ros2 topic list| y su salida se puede ver en la Figura \ref{fig:topic}.
 
-La primera vez que se decide lanzar el modelo, es común que surja algún error por lo tanto, hayy que reiniciarlo.
-
-En una ventana aparte, se puede comprobar todos los topics en funcionamiento 
-
-comando 
-
-(captura de pantalla)
-
-Si se quiere ver cómo se mueve el robot se puede usar 
-
-
-ros2 topic pub, ros2 teleop, ros\_robot\_steering
-
-
-Si se quiere ver qué está emitiendo la pantalla 
-
-comando y captura de pantalla 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap6/topic.png}
+	\end{center}
+	\caption{Topics disponibles al lanzar el robot}
+	\label{fig:topic}
+\end{figure}
 
 
-Si se quiere ver los valores que devuelve el gps
+De todos esos topics, para poder conseguir el objetivo propuesto en el Capítulo 3, es necesario únicamente utilizar \verb|/camera/image_raw| para ver la imagen de la cámara, \verb|/cmd_vel| para mover las ruedas, \verb|/gps/data| para ver los valores de posición del \acs{GPS}, y \verb|/pos_cont/commands| para mover el motor de la cámara.
 
-comando y captura de pantalla
+Para mover las ruedas hay muchas formas de hacerlo pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view| que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, el módulo \acs{GPS} se puede visualizar sus valores usando \verb|ros2 topic echo /gps/data| como muestra la Figura \ref{fig:echogps}. Finalmente para mover el motor de la cámara por posición, es necesario usar el comando: 
+
+\begin{verbatim}
+	ros2 topic pub /pos_cont/commands std_msgs/msg/Float64MultiArray \
+	 "data: [-0.5]"
+\end{verbatim} 
+
+Siendo los valores que van dentro de data desde 3 (giro hacia la izquierda) hasta -3 (giro hacia la derecha). En la Figura \ref{fig:camararot} se pueden ver los dos casos descritos previamente. 
 
 
-En este video se puede ver el funcionamiento completo de PiBotJ en simulación, y ya se puede pasar al dar soporte al robot físico
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=6cm]{figs/cap6/steering.png}
+	\end{center}
+	\caption{Herramienta usada para mover las ruedas}
+	\label{fig:steering}
+\end{figure}
 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap6/rqtimage.png}
+	\end{center}
+	\caption{Herramienta usada para visualizar la cámara}
+	\label{fig:rqtimage}
+\end{figure}
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap6/echogps.png}
+	\end{center}
+	\caption{Herramienta usada para visualizar los valores del GPS}
+	\label{fig:echogps}
+\end{figure}
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/rotizq.png}
+		\caption*{\centering Rotación hacia la izquierda} 
+	\end{minipage}
+	\hspace{0.25cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/rotder.png}
+		\caption*{\centering Rotación hacia la derecha} 
+	\end{minipage}
+	\caption{Herramienta usada para rotar la cámara}
+	\label{fig:camararot}
+\end{figure}
+
+
+Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
 
 \section{Vida real}
 

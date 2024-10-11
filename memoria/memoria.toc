@@ -71,21 +71,21 @@
 \contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{74}{subsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{75}{subsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.1.4}Launcher}{75}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Ejemplo en funcionamiento}{76}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.5}Simulación puesta en funcionamiento}{76}{subsection.6.1.5}%
 \contentsline {section}{\numberline {6.2}Vida real}{77}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Snippets}{77}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Verbatim}{78}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Ecuaciones}{78}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Tablas o cuadros}{79}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Segunda sección}{79}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Números}{80}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Listas}{80}{subsection.6.7.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{80}{paragraph*.134}%
-\contentsline {section}{\numberline {6.8}Corrector ortográfico}{81}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Experimentos}{82}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{82}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{82}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{83}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{83}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{84}{section.8.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{85}{appendix*.135}%
+\contentsline {section}{\numberline {6.3}Snippets}{79}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Verbatim}{79}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Ecuaciones}{80}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Tablas o cuadros}{81}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Segunda sección}{81}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Números}{82}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Listas}{82}{subsection.6.7.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{82}{paragraph*.139}%
+\contentsline {section}{\numberline {6.8}Corrector ortográfico}{83}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Experimentos}{84}{chapter.7}%
+\contentsline {section}{\numberline {7.1}}{84}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{84}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{85}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{85}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{86}{section.8.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{87}{appendix*.140}%

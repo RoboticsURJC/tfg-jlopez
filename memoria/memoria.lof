@@ -77,6 +77,11 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Interfaces que tiene definidas PiBotJ\relax }}{74}{figure.caption.125}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Diagrama de robot\_state\_publisher\relax }}{75}{figure.caption.126}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Esquema de launch\_sim.launch.py\relax }}{76}{figure.caption.127}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{79}{figure.caption.133}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Topics disponibles al lanzar el robot\relax }}{77}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Herramienta usada para mover las ruedas\relax }}{78}{figure.caption.129}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Herramienta usada para visualizar la cámara\relax }}{78}{figure.caption.130}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Herramienta usada para visualizar los valores del GPS\relax }}{79}{figure.caption.131}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Herramienta usada para rotar la cámara\relax }}{79}{figure.caption.132}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{82}{figure.caption.138}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
