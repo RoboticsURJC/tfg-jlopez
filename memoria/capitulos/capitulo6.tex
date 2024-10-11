@@ -81,7 +81,7 @@ En relación a los \textit{link}, obligatoriamente tienen que tener las macros d
 \end{code}
 
 
-Una vez definidas las distintas partes del robot, fue el momento de incluir en los distintos ficheros las interacciones del robot con el simulador y para ello se usa la macro \verb|<gazebo>|.En el presente proyecto, se ha simulado el sensor cámara y el módulo \ac{GPS}. Existen muchos tipos de interacciones pero el Código \ref{cod:gazebo} muestra cómo simular el sensor cámara. Para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Si se quiere tratar más ejemplos, se puede consultar la siguiente fuente\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
+Una vez fueron definidas las distintas partes del robot, fue el momento de incluir en los distintos ficheros las interacciones del robot con el simulador y para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}. Existen muchos tipos de interacciones pero el Código \ref{cod:gazebo} muestra cómo simular el sensor cámara. Para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Si se quiere tratar más ejemplos, se puede consultar la siguiente fuente\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 
 \begin{code}[h]
 	\begin{lstlisting}[language=xml]
@@ -117,80 +117,91 @@ En el presente proyecto se han definido los sistemas de coordenadas que aparecen
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/links.png}
+		\includegraphics[width=13cm]{figs/cap6/links.png}
 	\end{center}
 	\caption{Sistemas de Coordenadas de PiBotJ}
 	\label{fig:links}
-\end{figure}\
+\end{figure}
 
 
 \subsection{ROS 2 Control}
 
-\subsubsection{Hardware Components/Interfaces}
+Como se explicó en el Capítulo 4, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
 
- Tienen una comunicación directa con el hardware y existen tres tipos; en este caso, se decidió declarar todo el robot como un sistema para no limitar así el número de sensores y actuadores. 
+Este proyecto se definió un sistema llamado \textit{GazeboSystem} para el \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En este caso se decidió controlar a \textit{left\_wheel\_joint}, \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellas joints que tenían asignados en la vida real un motor. 
+
+Si se ejecuta: \verb|ros2 control list_hardware_interfaces|, se puede ver las interfaces asociadas de lectura/escritura y de monitorización que tiene cada \textit{joint} a controlar. En la figura \ref{fig:ros2control} se puede ver las interfaces que tiene PiBotJ y por ende, cómo se van a controlar cada interfaz.
+
+ \begin{figure} [h!]
+ 	\begin{center}
+ 		\includegraphics[width=14cm]{figs/cap6/interfaces.png}
+ 	\end{center}
+ 	\caption{Interfaces que tiene definidas PiBotJ}
+ 	\label{fig:ros2control}
+ \end{figure}
+
+Tras definir las \textit{joints} a controlar, era necesario definir en un fichero YAML, el tipo de controladores que utilizaba el \textit{controller manager}. Dentro de cada controlador, había que asignar las \textit{joints} definidas previamente al controlador que necesite cada una. En este caso, se asignaron las ruedas a un control diferencial y la cámara se decidió controlar por posición, usando el topic: \verb|\pos_cont|. Para más información, se puede consultar la siguiente fuente\footnote{\url{https://control.ros.org/humble/index.html}}.
+
+Una vez el robot estaba completamente definido en los diferentes ficheros \textit{Xacro}, era necesario unirlos todos en otro fichero llamado \verb|robot.urdf.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot.urdf.xacro}} para poder facilitar el publicar el estado del robot y eso se consigue usando \verb|robot_state_publisher|.
  
- Si se quiere comprobar los hardware interfaces que tiene cualquier sistema, se puede hacer usando el siguiente comando: 
- \verb|ros2 control list_hardware_interfaces|
+\subsection{Robot State Publisher}
 
- 
- Se puede ver que hay: (mostrar foto de output)
- 
- %command interfaces
- %camera_joint/position [available] [claimed]
- %left_wheel_joint/velocity [available] [claimed]
- %right_wheel_joint/velocity [available] [claimed]
- %state interfaces
- %camera_joint/position
- %left_wheel_joint/position
- %left_wheel_joint/velocity
- %right_wheel_joint/position
- %right_wheel_joint/velocity
- 
- Cada una de las command interfaces y state interfaces han sido definidas  para que el resource manager lo pueda usar gracias a la etiqueta <ros2\_control>. Dentro de esas etiquetas se asigna a cada joint el tipo de controller que se quiere usar. 
- 
- Cada Hardware interface se configura usando un URDF. 
- 
- 
-\subsubsection{Controllers}
+En la Web oficial de ROS\footnote{\url{http://wiki.ros.org/robot_state_publisher}} se explica que \verb|robot_state_publisher| es esencial para publicar las transformaciones (tf) entre los diferentes \textit{links} del robot y para proporcionar información sobre el estado de sus \textit{joints} a cualquier componente en el sistema. Aunque pueda parecer complicado, la Figura \ref{fig:rsp}, obtenida de la web de Articulated Robotics\footnote{\url{https://articulatedrobotics.xyz/tutorials/mobile-robot/concept-design/concept-urdf\#quick-recap}}, resume muy bien los pasos que sigue \verb|robot_state_publisher|.
 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap6/rsp.png}
+	\end{center}
+	\caption{Diagrama de robot\_state\_publisher}
+	\label{fig:rsp}
+\end{figure}
 
-Existen muchos tipos de controllers ya definidos, pero para este proyecto vamos a usar 2 tipos: diferencial y por posición. Para ello, es necesario definir sus parámetros a través de .yaml. 
-En este caso, se llama my\_controllers.yaml. 
-
-
-
-La rotación de la cámara (imagen y explicar cómo va)
-ros2 Control  explicarlo
-
-
-Creación de los topics que se quiera, la cámara por posición 
-
-los topics que hay que lanzar 
-
-he tenido que incluir el topic de la cámara, gps y de los motores
-
-una vez se lanza el robot por primera vez puede fallar o tardar mucho, volver a lanzarlo
-
-
-Explicar los topics que aparecen una vez ejecutado. 
-
-Mostrar el video con el resultado final (rehacerlo)
-
-
-\subsection{Robot State Publisher }
+Una vez todos los elementos a utilizar estaban listos, era el momento de aglutinarlos todos y crear un launcher que los inicializara y los pusiera en ejecución.
 
 \subsection{Launcher}
+
+El \textit{launcher} que se decidió crear para este proyecto parte del creado por Johnewans\footnote{\url{https://github.com/joshnewans/articubot_one/blob/main/launch/launch_sim.launch.py}}, creador de Articulated Robotics y fue modificado según las necesidades, siendo finalmente el resultante \verb|launch_sim.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/launch/launch_sim.launch.py}}. Para facilitar su entendimiento, la Figura \ref{fig:launcherdiagram} explica los componentes que forman parte del \textit{launcher}. LLegados a este punto, PiBotJ ya estaba listo para ejecutarse completamente.
+
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=14cm]{figs/cap6/diagram.png}
+	\end{center}
+	\caption{Esquema de launch\_sim.launch.py}
+	\label{fig:launcherdiagram}
+\end{figure}
 
 
 
 \subsection{Ejemplo en funcionamiento}
 
+Para poner en funcionamiento el modelo, únicamente hay que escribir los siguientes comandos: 
+
+La primera vez que se decide lanzar el modelo, es común que surja algún error por lo tanto, hayy que reiniciarlo.
+
+En una ventana aparte, se puede comprobar todos los topics en funcionamiento 
+
+comando 
+
+(captura de pantalla)
+
+Si se quiere ver cómo se mueve el robot se puede usar 
 
 
+ros2 topic pub, ros2 teleop, ros\_robot\_steering
 
 
+Si se quiere ver qué está emitiendo la pantalla 
 
+comando y captura de pantalla 
+
+
+Si se quiere ver los valores que devuelve el gps
+
+comando y captura de pantalla
+
+
+En este video se puede ver el funcionamiento completo de PiBotJ en simulación, y ya se puede pasar al dar soporte al robot físico
 
 
 \section{Vida real}
