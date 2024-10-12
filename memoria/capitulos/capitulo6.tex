@@ -10,7 +10,7 @@ Bill Gates\\
 \end{flushright}
 
 \vspace{1cm}
-\setcounter{footnote}{81}
+\setcounter{footnote}{84}
 
 Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico, en este capítulo se aborda el soporte software en el robot para ponerlo en funcionamiento tanto en simulación como en la vida real.
 
@@ -31,9 +31,9 @@ Una vez instalado todos los programas, fue el momento de empezar a desarrollar e
 
 \subsection{URDF/Xacro}
 
-Primero de todo fue necesario definir las estructuras y propiedades del robot. Para ello, se decidió usar el formato \ac{URDF}\footnote{\url{http://wiki.ros.org/urdf}} y \textit{Xacro}\footnote{\url{http://wiki.ros.org/xacro}}, muy comunes en aplicaciones robóticas. \acs{URDF} usa un formato de ficheros XML y describe al robot como un conjunto de \textit{links} (enlaces), que están conectadas por una serie de \textit{joints} (uniones). Mientras que \textit{Xacro} usa también un formato de ficheros XML que permite crear URDF de manera más modular, reutilizable y eficiente mediante el uso de macros y propiedades. Para más información se puede consultar la siguiente fuente\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/}}.
+Primero de todo fue necesario definir las estructuras y propiedades del robot. Para ello, se decidió usar el formato \ac{URDF}\footnote{\url{http://wiki.ros.org/urdf}} y \textit{Xacro}\footnote{\url{http://wiki.ros.org/xacro}}, muy comunes en aplicaciones robóticas. \acs{URDF} usa un formato de ficheros XML y describe al robot como un conjunto de \textit{links} (enlaces), que están conectadas por una serie de \textit{joints} (articulaciones). Mientras que \textit{Xacro}, usa también un formato de ficheros XML que permite crear URDF de manera más modular, reutilizable y eficiente mediante el uso de macros y propiedades. Para más información se puede consultar la siguiente fuente\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/}}.
 
-En este proyecto se decidió crear una serie de ficheros \textit{Xacro}, cada uno dedicado a las distintas partes del robot (\verb|camera.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/camera.xacro}}, \verb|gps.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/gps.xacro}} y \verb|robot_core.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot_core.xacro}}). Cada fichero \textit{Xacro} sigue siempre la mismas etiquetas de \verb|<joint>| y \verb|<link>|, empleadas según convenga. Es importante tener en cuenta herramientas como validadores de XML\footnote{\url{https://www.xmlvalidation.com/index.php?id=1&L=0\#xml-9-6--1732781305}} para evitar problemas.
+En este proyecto se decidió crear una serie de ficheros \textit{Xacro}, cada uno dedicado a las distintas partes del robot (\verb|camera.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/camera.xacro}}, \verb|gps.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/gps.xacro}} y \verb|robot_core.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot_core.xacro}}). Cada fichero \textit{Xacro} necesita siempre tener la mismas etiquetas de \verb|<joint>| y \verb|<link>|, empleadas según convenga. Es importante tener en cuenta herramientas como validadores de XML\footnote{\url{https://www.xmlvalidation.com/index.php?id=1&L=0\#xml-9-6--1732781305}} para evitar problemas.
 
 Existen cuatro tipos de \textit{joint}: \textit{prismatic}, \textit{continuous}, \textit{revolute} y \textit{fixed}. En el Código \ref{cod:fj} se puede ver la definición de una \textit{fixed joint}; si se quiere usar otro tipo de \textit{joint}, hay que añadir algunos campos\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#joint-tags}}.
 
@@ -160,7 +160,7 @@ Una vez todos los elementos a utilizar estaban listos, era el momento de aglutin
 
 \subsection{Launcher}
 
-El \textit{launcher} que se decidió crear para este proyecto parte del creado por Johnewans\footnote{\url{https://github.com/joshnewans/articubot_one/blob/main/launch/launch_sim.launch.py}}, creador de Articulated Robotics y fue modificado según las necesidades, siendo finalmente el resultante \verb|launch_sim.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/launch/launch_sim.launch.py}}. Para facilitar su entendimiento, la Figura \ref{fig:launcherdiagram} explica los componentes que forman parte del \textit{launcher}. LLegados a este punto, PiBotJ ya estaba listo para ejecutarse completamente.
+El \textit{launcher} que se decidió crear para este proyecto parte del creado por Johnewans\footnote{\url{https://github.com/joshnewans/articubot_one/blob/main/launch/launch_sim.launch.py}}, creador de Articulated Robotics y fue modificado según las necesidades, siendo finalmente el resultante \verb|launch_sim.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/launch/launch_sim.launch.py}}. Para facilitar su entendimiento, la Figura \ref{fig:launcherdiagram} explica los componentes que forman parte del \textit{launcher}. Llegados a este punto, PiBotJ ya estaba listo para ejecutarse completamente.
 
 
  \begin{figure} [h!]
@@ -194,7 +194,7 @@ Si la primera vez que se lance el robot ocurre algún error, es normal y hay que
 
 De todos esos topics, para poder conseguir el objetivo propuesto en el Capítulo 3, es necesario únicamente utilizar \verb|/camera/image_raw| para ver la imagen de la cámara, \verb|/cmd_vel| para mover las ruedas, \verb|/gps/data| para ver los valores de posición del \acs{GPS}, y \verb|/pos_cont/commands| para mover el motor de la cámara.
 
-Para mover las ruedas hay muchas formas de hacerlo pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view| que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, el módulo \acs{GPS} se puede visualizar sus valores usando \verb|ros2 topic echo /gps/data| como muestra la Figura \ref{fig:echogps}. Finalmente para mover el motor de la cámara por posición, es necesario usar el comando: 
+Para mover las ruedas hay muchas formas de hacerlo pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view| que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, el módulo \acs{GPS} se puede visualizar sus valores usando \verb|ros2 topic echo /gps/data|, como muestra la Figura \ref{fig:echogps}. Finalmente para mover el motor de la cámara por posición, es necesario usar el comando: 
 
 \begin{verbatim}
 	ros2 topic pub /pos_cont/commands std_msgs/msg/Float64MultiArray \
