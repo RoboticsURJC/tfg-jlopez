@@ -168,17 +168,31 @@ class CameraVFFNode(Node):
         # Convertir y publicar la imagen
         #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
 
-        #self.detect_lane_side(resized_frame)
-        #ret,thresh = cv2.threshold(resized_frame,120,255,cv2.THRESH_BINARY)
 
+
+        # Filtro que detecta bien el entorno conocido
         gray = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2GRAY)
         th1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,23,-50)
 
-        # Invertir la imagen binaria
-        #inverted_th1 = cv2.bitwise_not(th1)
-
-        kernel = np.ones((3, 3), np.uint8)  # Kernel para la operación de apertura
+        # ayuda a quitar los últimos picos blancos de la imagen
+        kernel = np.ones((3, 3), np.uint8) 
         opened_th1 = cv2.morphologyEx(th1, cv2.MORPH_OPEN, kernel)
+
+        contours, _ = cv2.findContours(opened_th1, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+        # Filtrar los contornos pequeños o irrelevantes
+        #line_contours = []
+        min_contour_length = 50 
+        num_lines = 0
+        for contour in contours:
+            if cv2.arcLength(contour, True) > min_contour_length:
+                #line_contours.append(contour)
+                num_lines += 1
+
+        # Contar las líneas detectadas
+        #num_lines_detected = len(line_contours)
+
+        print(num_lines)
 
         bgr_image = cv2.cvtColor(opened_th1, cv2.COLOR_GRAY2BGR)
 
