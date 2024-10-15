@@ -181,7 +181,7 @@ class CameraVFFNode(Node):
         contours, _ = cv2.findContours(opened_th1, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         # Filtrar los contornos pequeños o irrelevantes
-        #line_contours = []
+        line_positions = []
         min_contour_length = 50 
         num_lines = 0
         for contour in contours:
@@ -189,10 +189,44 @@ class CameraVFFNode(Node):
                 #line_contours.append(contour)
                 num_lines += 1
 
-        # Contar las líneas detectadas
-        #num_lines_detected = len(line_contours)
+                # Calcular los momentos para encontrar el centro del contorno
+                M = cv2.moments(contour)
+                if M["m00"] != 0:  # Evitar división por cero
+                    cX = int(M["m10"] / M["m00"])  # Coordenada X del centro
+                    cY = int(M["m01"] / M["m00"])  # Coordenada Y del centro
+            
+                    line_positions.append((cX, cY))  # Almacenar la posición
+            
+                    # Dibujar el centro del contorno en la imagen (opcional)
+                    #cv2.circle(resized_frame, (cX, cY), 5, (0, 255, 0), -1)  # Color verde
 
-        print(num_lines)
+
+        # Contar las líneas detectadas
+        num_lines_detected = len(line_positions)
+        print(num_lines_detected)
+
+        # si la línea es 1 hay que mirar por donde se encuentra la línea para
+        # cambiar la trayectoria 
+        if(num_lines_detected == 1):
+
+            # Analizar las posiciones de las líneas
+            width = resized_frame.shape[1]  # Ancho de la imagen
+            for position in line_positions:
+                cX, cY = position
+                if cX < width // 3:
+                    print("Línea detectada a la izquierda")
+                elif cX > (2 * width) // 3:
+                    print("Línea detectada a la derecha")
+                else:
+                    print("Línea detectada en el centro")
+
+
+
+        
+
+
+
+
 
         bgr_image = cv2.cvtColor(opened_th1, cv2.COLOR_GRAY2BGR)
 
@@ -281,76 +315,6 @@ class CameraVFFNode(Node):
     def __del__(self):
         self.camera.release()
 
-    
-    def detect_lane_side(self,image):
-
-        # Convertir a escala de grises
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    
-        # Aplicar suavizado y detectar bordes con Canny
-        blur = cv2.GaussianBlur(gray, (5, 5), 0)
-        edges = cv2.Canny(blur, 30, 100)
-
-        # Definir una región de interés para enfocarse en la carretera
-        height, width = edges.shape
-        region_of_interest = np.array([[
-            (0, height),
-            (width // 2, height // 2),
-            (width, height)
-        ]], dtype=np.int32)
-
-        mask = np.zeros_like(edges)
-        cv2.fillPoly(mask, region_of_interest, 255)
-        masked_edges = cv2.bitwise_and(edges, mask)
-
-        # Detectar líneas con la Transformada de Hough
-        lines = cv2.HoughLinesP(masked_edges, 1, np.pi / 180, 50, minLineLength=50, maxLineGap=100)
-
-        if lines is not None:
-            left_lines = []
-            right_lines = []
-
-            # Clasificar líneas como izquierda o derecha
-            for line in lines:
-                x1, y1, x2, y2 = line[0]
-                slope = (y2 - y1) / (x2 - x1)  # Pendiente de la línea
-
-                if slope < 0:  # Líneas del lado izquierdo
-                    left_lines.append(line)
-                elif slope > 0:  # Líneas del lado derecho
-                    right_lines.append(line)
-
-            # Si hay líneas a la izquierda y derecha
-            if left_lines and right_lines:
-                # Tomar la posición media de las líneas
-                left_x_mean = np.mean([line[0][0] for line in left_lines])  # Coordenada X del lado izquierdo
-                right_x_mean = np.mean([line[0][0] for line in right_lines])  # Coordenada X del lado derecho
-
-                print(left_x_mean)
-                print(right_x_mean)
-            
-                # Centro de la imagenresized_frame
-                center_x = width // 2
-                print(center_x)
-
-
-                # Comparar la posición de las líneas con el centro de la imagen
-                if center_x < left_x_mean:
-                    print("El robot está en el lado izquierdo de la carretera.")
-                elif center_x > right_x_mean:
-                    print("El robot está en el lado derecho de la carretera.")
-                else:
-                    print("El robot está en el centro del carril.")
-            else:
-                print("No se detectaron suficientes líneas para determinar la posición.")
-        else:
-            print("No se detectaron líneas.")
-
-        # Mostrar la imagen con bordes y líneas detectadas
-        if lines is not None:
-            for line in lines:
-                x1, y1, x2, y2 = line[0]
-                cv2.line(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
 
 def main(args=None):
