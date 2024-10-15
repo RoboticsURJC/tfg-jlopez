@@ -40,14 +40,19 @@ setup(
             # publica un array con las coordenadas detectadas de la máscara   
             'camera_tfv3_node = pibotj_rr.camera_tfv3_node:main',
 
+
+            # nodo que te dice en qué lado se sitúa el robot en función de la detección de las líneas
+            'camera_vff_node = pibotj_rr.camera_vff_node:main',
+
             # nodo que publica cámara + modelo pin Hole           
             'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main',
 
+            # nodo que publica cámara + modelo pin Hole + área funcionando
             'camera_pinholev2_node = pibotj_rr.camera_pinholev2_node:main',
 
             # nodo controlador para controlar los motores por la interfaz web
             'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main'
-            
+
         ],
     },
 )
