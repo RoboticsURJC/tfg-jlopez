@@ -16,17 +16,17 @@ class CameraClass(Node):
         if not self.camera.isOpened():
             self.get_logger().error('Failed to open camera device %d' % self.cameraDeviceNumber)
             rclpy.shutdown()
-            sys.exit(1)  # Exit with an error code
+            sys.exit(1) 
 
         self.bridgeObject = CvBridge()
         self.topicNameFrames = 'camera'
         self.queueSize = 20
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
-        self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
+        # Frecuencia a 10 Hz
+        self.periodCommunication = 0.1
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
         self.i = 0
 
-        # Signal handler for cleanup
         signal.signal(signal.SIGINT, self.signal_handler)
 
     def timer_callbackFunction(self):
@@ -48,7 +48,7 @@ class CameraClass(Node):
     def signal_handler(self, sig, frame):
         self.get_logger().info('Interrupt received, shutting down...')
         self.cleanup()
-        sys.exit(0)  # Exit gracefully
+        sys.exit(0)
 
 def main(args=None):
     rclpy.init(args=args)

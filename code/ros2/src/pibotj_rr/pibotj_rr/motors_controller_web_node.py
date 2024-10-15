@@ -14,12 +14,14 @@ class ControllerWebNode(Node):
         # Inicializa los servomotores
         self.servos = []
         for pin in self.servo_pins:
-            GPIO.setup(pin, GPIO.OUT)  # Configura el pin como salida
-            servo = GPIO.PWM(pin, 20)  # Inicializa PWM en el pin con frecuencia de 50Hz
-            servo.start(0)  # Comienza el PWM con un ciclo de trabajo de 0%
+            # Configura el pin como salida
+            GPIO.setup(pin, GPIO.OUT)  
+            # Inicializa PWM en el pin con frecuencia de 50Hz
+            servo = GPIO.PWM(pin, 20)  
+            # Comienza el PWM con un ciclo de trabajo de 0%
+            servo.start(0) 
             self.servos.append(servo)
 
-        # Suscripción al tópico 'servo_command'
         self.subscription = self.create_subscription(
             String,
             'move_controller',
@@ -27,60 +29,40 @@ class ControllerWebNode(Node):
             10)  # 10 es el tamaño del buffer de la cola de mensajes
         
         # Estado inicial de los servos
-        #self.servos_moving = False
         self.stop()
     
     def forward(self):
-        #self.get_logger().info('Moving forward')
         # motor izquierdo
         self.set_servo_angle(180, self.servos[0])
         # motor derecho
         self.set_servo_angle(0, self.servos[1])
-        #self.servos_moving = True
 
     def backward(self):
-        #self.get_logger().info('Moving backward')
         # motor izquierdo
         self.set_servo_angle(0, self.servos[0])
         # motor derecho
         self.set_servo_angle(180, self.servos[1])
-        #self.servos_moving = True
 
     def left(self):
-        #self.get_logger().info('Moving left')
         # motor izquierdo
-        #self.set_servo_angle(90, self.servos[0])
-
         self.servos[0].ChangeDutyCycle(1) 
         # motor derecho
         self.set_servo_angle(0, self.servos[1])
 
-        #self.servos_moving = True
-
     def right(self):
-        #self.get_logger().info('Moving right')
         # motor izquierdo
         self.set_servo_angle(180, self.servos[0])
         # motor derecho
         self.set_servo_angle(90, self.servos[1])
-        #self.servos_moving = True
 
     def stop(self):
-        # Detiene los servos en su posición actual
-        #self.get_logger().info('Stopping servos')
-
         # Desactiva PWM de los 2 motores para pararlos
         self.servos[0].ChangeDutyCycle(0) 
         self.servos[1].ChangeDutyCycle(0) 
-        #self.servos_moving = False
 
-    
-    
     def command_callback(self, msg):
         # Obtiene el contenido del mensaje
         command = msg.data  
-        #self.get_logger().info(f'Received command: {command}') 
-
 
         if command == "forward":
             self.forward()
@@ -92,27 +74,26 @@ class ControllerWebNode(Node):
             self.left()
         elif command == "stop":
             self.stop()
-        #else:
-        #    self.stop()
-
 
     def set_servo_angle(self, angle, servo):
         # Ajusta el ángulo del servomotor dado un ángulo específico
-        duty = float(angle) / 18.0 + 2.5  # Calcula el ciclo de trabajo necesario
-        servo.ChangeDutyCycle(duty)  # Ajusta el ciclo de trabajo del servomotor
+        # Calcula el ciclo de trabajo necesario
+        duty = float(angle) / 18.0 + 2.5 
+        servo.ChangeDutyCycle(duty) 
 
     def __del__(self):
         # Limpia y detiene los servomotores y la configuración de GPIO cuando el nodo se destruye
         for servo in self.servos:
             servo.stop()
-        GPIO.cleanup()  # Limpia la configuración de los pines GPIO
+        # Limpia la configuración de los pines GPIO
+        GPIO.cleanup()  
 
 def main(args=None):
-    rclpy.init(args=args)  # Inicializa el cliente ROS 2
-    controller_node = ControllerWebNode()  # Crea una instancia del nodo ControllerNode
-    rclpy.spin(controller_node)  # Mantiene el nodo en ejecución
-    controller_node.destroy_node()  # Destruye el nodo cuando termina
-    rclpy.shutdown()  # Apaga ROS 2
+    rclpy.init(args=args) 
+    controller_node = ControllerWebNode()  
+    rclpy.spin(controller_node) 
+    controller_node.destroy_node() 
+    rclpy.shutdown() 
 
 if __name__ == '__main__':
-    main()  # Ejecuta la función principal si el archivo se ejecuta directamente
+    main()  

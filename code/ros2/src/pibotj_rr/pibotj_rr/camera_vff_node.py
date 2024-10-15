@@ -29,36 +29,36 @@ class CameraVFFNode(Node):
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
 
         # Publicador del array con coordenadas
-        #self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
+        self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
 
         # Usa 10 Hz
         self.periodCommunication = 0.1  
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
   
         # Cargar el modelo TFLite
-        #self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
+        self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
 
-        #self.interpreter = tflite.Interpreter(model_path=self.model_path, experimental_delegates=[tflite.load_delegate('/usr/lib/aarch64-linux-gnu/libedgetpu.so.1')])
-        #self.get_logger().info('loaded interpreter')
+        self.interpreter = tflite.Interpreter(model_path=self.model_path, experimental_delegates=[tflite.load_delegate('/usr/lib/aarch64-linux-gnu/libedgetpu.so.1')])
+        self.get_logger().info('loaded interpreter')
 
-        #self.interpreter.allocate_tensors()
-        #self.get_logger().info('allocated tensors')
+        self.interpreter.allocate_tensors()
+        self.get_logger().info('allocated tensors')
         
 
         # Obtener detalles de entrada y salida del modelo
-        #self.input_details = self.interpreter.get_input_details()
-        ##self.output_details = self.interpreter.get_output_details()
-        #self.get_logger().info('set input and output details')
+        self.input_details = self.interpreter.get_input_details()
+        self.output_details = self.interpreter.get_output_details()
+        self.get_logger().info('set input and output details')
 
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
         self.get_logger().info('set signal handler')
         
-        #self.ema_value = None  # Inicializa el valor EMA en el constructor
+        self.ema_value = None  # Inicializa el valor EMA en el constructor
 
-        #self.largest_contour = None  # Variable para almacenar el contorno más grande
-        #self.detected = False
-        #self.detect_time = 0
+        self.largest_contour = None  # Variable para almacenar el contorno más grande
+        self.detected = False
+        self.detect_time = 0
 
 
     def timer_callbackFunction(self):
@@ -67,170 +67,105 @@ class CameraVFFNode(Node):
             self.get_logger().error('Failed to read frame from camera')
             return
 
-        #height, width, channels = frame.shape
-        resized_frame = cv2.resize(frame, (192, 192))
+        height, width, channels = frame.shape
 
         # Redimensionar el marco a las dimensiones requeridas por el modelo
-        #input_shape = self.input_details[0]['shape']
-        #height, width = input_shape[1], input_shape[2]
-        #resized_frame = cv2.resize(frame, (width, height))
+        input_shape = self.input_details[0]['shape']
+        height, width = input_shape[1], input_shape[2]
+        resized_frame = cv2.resize(frame, (width, height))
 
         # Convertir la imagen a formato adecuado
-        #input_data = np.expand_dims(resized_frame, axis=0).astype(np.float32)
+        input_data = np.expand_dims(resized_frame, axis=0).astype(np.float32)
         # Normalización 
-        #input_data = (input_data - 127.5) / 127.5 
+        input_data = (input_data - 127.5) / 127.5 
 
         # convertir la imagen a int8
-        #scale, zero_point = self.input_details[0]['quantization']
-        #input_data = (input_data / scale + zero_point).astype(np.int8)
+        scale, zero_point = self.input_details[0]['quantization']
+        input_data = (input_data / scale + zero_point).astype(np.int8)
 
         # Establecer el tensor deentrada y realizar la inferencia
         # self.input_details[0]['index'] devuelve 0
-        #self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
-        #self.interpreter.invoke()
+        self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
+        self.interpreter.invoke()
 
         # Salida 0: tiene forma [1,38,756] y se supone que esta clase no nos hace falta 
         #output_data0 = self.interpreter.get_tensor(self.output_details[0]['index'])
         #prediction0 = np.squeeze(output_data0)
 
         # Salida 1: tiene forma [1, 48, 48, 32] y esta clase sí se trata del modelo entrenado
-        #output_data1 = self.interpreter.get_tensor(self.output_details[1]['index'])
+        output_data1 = self.interpreter.get_tensor(self.output_details[1]['index'])
         # elimina la dimensión del batch
-        #prediction1 = np.squeeze(output_data1)
+        prediction1 = np.squeeze(output_data1)
     
 
         # Esto se hace para asegurarse de que el tensor tiene al menos dos canales en su última dimensión. 
-        #if prediction1.shape[-1] > 1:
+        if prediction1.shape[-1] > 1:
 
             # Obtener la escala y el punto cero del tensor de salida
-            #scale, zero_point = self.output_details[1]['quantization']
+            scale, zero_point = self.output_details[1]['quantization']
 
             # Descuantificar la máscara de baches mirando el canal 0 es la clase que buscamos
-            #pothole_mask = (prediction1[:, :, 0].astype(np.float32) - zero_point) * scale
-        #else:
-        #    self.get_logger().error('Unexpected number of channels in prediction output')
-        #    return
+            pothole_mask = (prediction1[:, :, 0].astype(np.float32) - zero_point) * scale
+        else:
+            self.get_logger().error('Unexpected number of channels in prediction output')
+            return
 
         # Determinar si se ha detectado un bache
-        #max_value = np.max(pothole_mask)
+        max_value = np.max(pothole_mask)
         # se usa media móvil exponencial para reducir los picos
-        #ema_value_updated = self.update_ema(max_value)
+        ema_value_updated = self.update_ema(max_value)
 
-        #newframe = resized_frame.copy()
-        #polygon_coords = Polygon()
+        newframe = resized_frame.copy()
+        polygon_coords = Polygon()
 
-        #current_time = time.time()
+        current_time = time.time()
         
         # si se detecta bache, se dibuja el contorno más grande detectado pero sólo 
         # se almacena el contorno más grande detectado en esos 4 segundos
-        #if ema_value_updated > 0.6:
-        #    pixels = self.extract_contour_pixels(pothole_mask, resized_frame)
+        if ema_value_updated > 0.6:
+            pixels = self.extract_contour_pixels(pothole_mask, resized_frame)
 
             # si hay contorno detectado 
-        #    if pixels is not None:
+            if pixels is not None:
                 # si no estaba detectado, se asigna como contorno más grande el actual
-        #        if not self.detected:
-        #            self.detected = True
-        #            self.detect_time = current_time
-        #            self.largest_contour = pixels  
+                if not self.detected:
+                    self.detected = True
+                    self.detect_time = current_time
+                    self.largest_contour = pixels  
 
                 # Ya ha sido detectado
-        #        else: 
+                else: 
                     # Comprobar si el contorno sigue siendo el más grande
-        #            if len(pixels) > len(self.largest_contour):
-        #                self.largest_contour = pixels
+                    if len(pixels) > len(self.largest_contour):
+                        self.largest_contour = pixels
 
                 # Dibuja el contorno más grande en la imagen
-        #        cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
+                cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
                 # Comprobar si han pasado 4 segundos
-        #        if (current_time - self.detect_time) > 4:
+                if (current_time - self.detect_time) > 4:
                     # Convertir las coordenadas al formato del publicador 
-        #            polygon_coords = self.convert_coords(self.largest_contour)
+                    polygon_coords = self.convert_coords(self.largest_contour)
 
-        #            self.reset_detection()  # Reinicia la detección
+                    self.reset_detection()  # Reinicia la detección
 
             # No se ha encontrado un contorno
-        #    else:  
-        #        # Si se había detectado previamente
-        #        if self.detected:  
+            else:  
+                # Si se había detectado previamente
+                if self.detected:  
                     # resetea la detección
-        #            self.reset_detection()
+                    self.reset_detection()
 
         # Si no hay detección
-        #else:  
+        else:  
             # si no hay detección y estaba detectado previamente, resetear la detección
-        #    if self.detected:
-        #        self.reset_detection()
+            if self.detected:
+                self.reset_detection()
 
         # Publicar las coordenadas y que el nodo de pinhole las convierta
-        #self.polygon_publisher.publish(polygon_coords)
+        self.polygon_publisher.publish(polygon_coords)
 
         # Convertir y publicar la imagen
-        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
-
-
-
-        # Filtro que detecta bien el entorno conocido
-        gray = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2GRAY)
-        th1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,23,-50)
-
-        # ayuda a quitar los últimos picos blancos de la imagen
-        kernel = np.ones((3, 3), np.uint8) 
-        opened_th1 = cv2.morphologyEx(th1, cv2.MORPH_OPEN, kernel)
-
-        contours, _ = cv2.findContours(opened_th1, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        # Filtrar los contornos pequeños o irrelevantes
-        line_positions = []
-        min_contour_length = 50 
-        num_lines = 0
-        for contour in contours:
-            if cv2.arcLength(contour, True) > min_contour_length:
-                #line_contours.append(contour)
-                num_lines += 1
-
-                # Calcular los momentos para encontrar el centro del contorno
-                M = cv2.moments(contour)
-                if M["m00"] != 0:  # Evitar división por cero
-                    cX = int(M["m10"] / M["m00"])  # Coordenada X del centro
-                    cY = int(M["m01"] / M["m00"])  # Coordenada Y del centro
-            
-                    line_positions.append((cX, cY))  # Almacenar la posición
-            
-                    # Dibujar el centro del contorno en la imagen (opcional)
-                    #cv2.circle(resized_frame, (cX, cY), 5, (0, 255, 0), -1)  # Color verde
-
-
-        # Contar las líneas detectadas
-        num_lines_detected = len(line_positions)
-        print(num_lines_detected)
-
-        # si la línea es 1 hay que mirar por donde se encuentra la línea para
-        # cambiar la trayectoria 
-        if(num_lines_detected == 1):
-
-            # Analizar las posiciones de las líneas
-            width = resized_frame.shape[1]  # Ancho de la imagen
-            for position in line_positions:
-                cX, cY = position
-                if cX < width // 3:
-                    print("Línea detectada a la izquierda")
-                elif cX > (2 * width) // 3:
-                    print("Línea detectada a la derecha")
-                else:
-                    print("Línea detectada en el centro")
-
-
-
-        
-
-
-
-
-
-        bgr_image = cv2.cvtColor(opened_th1, cv2.COLOR_GRAY2BGR)
-
-        ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(bgr_image, encoding="bgr8")
+        ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
 
         self.publisher.publish(ROSImageMessage)
 
@@ -314,8 +249,6 @@ class CameraVFFNode(Node):
 
     def __del__(self):
         self.camera.release()
-
-
 
 def main(args=None):
     rclpy.init(args=args)

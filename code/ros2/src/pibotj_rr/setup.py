@@ -36,15 +36,17 @@ setup(
             # nodo que publica cámara + tflite + Coral           
             'camera_tfv2_node = pibotj_rr.camera_tfv2_node:main',
 
-            # nodo que publica cámara + tflite + Coral  en funcionamiento y detecta bache en función de la máscara
+            # nodo que publica cámara + tflite + Coral en funcionamiento y detecta bache en función de la máscara
             # publica un array con las coordenadas detectadas de la máscara   
             'camera_tfv3_node = pibotj_rr.camera_tfv3_node:main',
 
-
             # nodo que te dice en qué lado se sitúa el robot en función de la detección de las líneas
+            'camera_dl_node = pibotj_rr.camera_dl_node:main',
+
+            # nodo que ejecuta vff
             'camera_vff_node = pibotj_rr.camera_vff_node:main',
 
-            # nodo que publica cámara + modelo pin Hole           
+            # nodo que publica cámara + modelo pin hole (usando post-it)          
             'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main',
 
             # nodo que publica cámara + modelo pin Hole + área funcionando

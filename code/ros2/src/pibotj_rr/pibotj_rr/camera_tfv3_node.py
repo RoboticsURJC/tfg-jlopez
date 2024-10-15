@@ -50,13 +50,13 @@ class CameraTFv3Node(Node):
         self.output_details = self.interpreter.get_output_details()
         self.get_logger().info('set input and output details')
 
-        # Maneja la señal de Ctrl+C
+        # Maneja la señal de Ctrl +C
         signal.signal(signal.SIGINT, self.signal_handler)
         self.get_logger().info('set signal handler')
         
-        self.ema_value = None  # Inicializa el valor EMA en el constructor
+        self.ema_value = None 
 
-        self.largest_contour = None  # Variable para almacenar el contorno más grande
+        self.largest_contour = None 
         self.detected = False
         self.detect_time = 0
 

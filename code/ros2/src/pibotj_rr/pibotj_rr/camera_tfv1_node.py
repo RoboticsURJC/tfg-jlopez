@@ -4,7 +4,6 @@ from sensor_msgs.msg import Image
 from rclpy.node import Node
 from cv_bridge import CvBridge
 import numpy as np
-#import tensorflow as tf
 import tflite_runtime.interpreter as tflite
 import tflite_runtime.interpreter as interpreter
 from std_msgs.msg import String
@@ -77,9 +76,6 @@ class CameraTFv1Node(Node):
         # Obtener el valor máximo del array de predicción
         max_value = np.max(prediction)
 
-        # MODIFICAR ESTO PARA QUE LA LÓGICA SEA CONSISTENTE
-        # ES DECIR, QUE SI VARIOS MENSAJES SON VERDAD, SE CONSIDERE UN BACHE
-
         if max_value > 0.90:  
             label = "Pothole detected"
             detection_message = String()
@@ -87,8 +83,6 @@ class CameraTFv1Node(Node):
             
             # Crea una función que saque el contorno de la imagen y sus píxeles 
             newframe = self.get_pothole_coords(frame)
-            # para canny y dilate si que necesitamos la linea de debajo
-            #newframe = cv2.cvtColor(newframe, cv2.COLOR_GRAY2BGR)
 
         else:
             label = "No pothole"
@@ -121,7 +115,8 @@ class CameraTFv1Node(Node):
 
         for cnt in contours:
             area = cv2.contourArea(cnt)
-            if area > 1500:  # Ignorar pequeños contornos para reducir ruido
+            # Ignorar pequeños contornos para reducir ruido
+            if area > 1500: 
                 cv2.drawContours(img_contour, cnt, -1,(255,0,255), 5)
 
                 peri = cv2.arcLength(cnt, True)
@@ -147,9 +142,7 @@ class CameraTFv1Node(Node):
         # Se aplica el filtro Canny a la imagen reducida
         # El valor más acercado es mínimo: 80 y máximo: 180
         img_canny = cv2.Canny(img_gray, 80, 180)
-        #img_canny_masked = cv2.bitwise_and(img_canny, mask)
         kernel = np.ones((5,5))
-        #img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
         img_dilated = cv2.dilate(img_canny, kernel, iterations=1)
 
         img_contour = image.copy()

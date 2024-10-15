@@ -29,21 +29,8 @@ class CameraTFv2Node(Node):
         self.topicNameDetection = 'pothole_detected' 
         self.detection_publisher = self.create_publisher(String, self.topicNameDetection, self.queueSize)
 
-        
         self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
-        #self.i = 0
-
-        # Inicializa el Filtro de Kalman
-        #self.x_k = np.array([[0]])  # Estado inicial (magnitud del bache, por ejemplo)
-        #self.P_k = np.array([[1]])  # Covarianza inicial (incertidumbre sobre el estado)
-        #self.A = np.array([[1]])    # Matriz de transición de estado
-        #self.B = np.array([[0]])    # Matriz de control (sin control externo)
-        #self.H = np.array([[1]])    # Matriz de observación
-        #self.Q = np.array([[0.001]])  # Covarianza del proceso (ajústalo según tu sistema)
-        #self.R = np.array([[0.1]])    # Covarianza de las mediciones (ajústalo según el ruido de las mediciones)
-        #self.u_k = np.array([[0]])    # Sin control externo
-
 
         # Cargar el modelo TFLite
         self.model_path = '/home/juloau/robot_ws/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite'
@@ -58,9 +45,6 @@ class CameraTFv2Node(Node):
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
         print("set input and output details")
-        #print(self.input_details)
-        #print(self.output_details)
-
 
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
@@ -121,39 +105,19 @@ class CameraTFv2Node(Node):
         max_value = np.max(pothole_mask)
         print("Max value after ", max_value)
 
-        # Predicción del filtro de Kalman
-        #x_k_pred, P_k_pred = self.kalman_predict()
-
-        # Actualización con la nueva medición (max_value)
-        #z_k = np.array([[max_value]])  # Medición actual del sistema
-        #self.x_k, self.P_k = self.kalman_update(x_k_pred, P_k_pred, z_k)
-
-        #print("Kalman", self.x_k[0][0])
-
-        # MODIFICAR ESTO PARA QUE LA LÓGICA SEA CONSISTENTE
-        # ES DECIR, QUE SI VARIOS MENSAJES SON VERDAD, SE CONSIDERE UN BACHE
-
         if max_value > 1.0 :  
-        #if self.x_k[0][0] > 1.0:  
 
             label = "Pothole detected"
             detection_message = String()
             detection_message.data = "Yes"
             
-            # Crea una función que saque el contorno de la imagen y sus píxeles 
-            #newframe = self.get_pothole_coords(frame)
-            
             newframe = self.get_pothole_coords(resized_frame)
-
-            # para canny y dilate si que necesitamos la linea de debajo
-            #newframe = cv2.cvtColor(newframe, cv2.COLOR_GRAY2BGR)
 
         else:
             label = "No pothole"
             detection_message = String()
             detection_message.data = "No"
 
-            #newframe = frame
             newframe = resized_frame
 
 
@@ -163,10 +127,6 @@ class CameraTFv2Node(Node):
         # Añadir la etiqueta al marco
         cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
-
-
-        # Convertir y publicar la imagen con la etiqueta
-        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
  
         self.publisher.publish(ROSImageMessage)
@@ -190,9 +150,7 @@ class CameraTFv2Node(Node):
 
                 peri = cv2.arcLength(cnt, True)
                 approx = cv2.approxPolyDP(cnt, 0.02 * peri, True)
-                
-                #print(len(approx))
-                #print(approx)
+
  
     def get_pothole_coords(self, image):
 
@@ -201,17 +159,10 @@ class CameraTFv2Node(Node):
 
         height, width = img_gray.shape
 
-        # Excluye 100 píxeles en la parte superior e inferior no de los lados
-        #min_distance_from_top_bottom = 100  # pixels
-        #mask = np.zeros_like(img_gray)
-        #mask[min_distance_from_top_bottom:height - min_distance_from_top_bottom, 0:width] = 255
-
         # Se aplica el filtro Canny a la imagen reducida
         # El valor más acercado es mínimo: 80 y máximo: 180
         img_canny = cv2.Canny(img_gray, 80, 180)
-        #img_canny_masked = cv2.bitwise_and(img_canny, mask)
         kernel = np.ones((5,5))
-        #img_dilated = cv2.dilate(img_canny_masked, kernel, iterations=1)
         img_dilated = cv2.dilate(img_canny, kernel, iterations=1)
 
         img_contour = image.copy()
@@ -219,23 +170,6 @@ class CameraTFv2Node(Node):
         
         return img_contour    
 
-    def kalman_predict(self):
-        # Predicción del estado
-        x_k_pred = self.A @ self.x_k + self.B @ self.u_k
-        # Predicción de la covarianza
-        P_k_pred = self.A @ self.P_k @ self.A.T + self.Q
-        return x_k_pred, P_k_pred
-
-    def kalman_update(self, x_k_pred, P_k_pred, z_k):
-        # Ganancia de Kalman
-        K = P_k_pred @ self.H.T @ np.linalg.inv(self.H @ P_k_pred @ self.H.T + self.R)
-        # Actualización del estado
-        x_k_new = x_k_pred + K @ (z_k - self.H @ x_k_pred)
-        # Actualización de la covarianza
-        P_k_new = (np.eye(P_k_pred.shape[0]) - K @ self.H) @ P_k_pred
-        return x_k_new, P_k_new
-
-    
     def __del__(self):
         self.camera.release()
 
