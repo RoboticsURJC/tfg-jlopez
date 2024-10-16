@@ -43,7 +43,6 @@ class CameraPinHoleV2Class(Node):
 	def coords_callback(self, coords):
 
 		if not coords.points or len(coords.points) == 0:
-			#print("No hay puntos en coords.points")
 			return
 
 		# Calcula la conversión de los puntos de coordenadas
