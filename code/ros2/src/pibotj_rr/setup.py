@@ -53,7 +53,10 @@ setup(
             'camera_pinholev2_node = pibotj_rr.camera_pinholev2_node:main',
 
             # nodo controlador para controlar los motores por la interfaz web
-            'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main'
+            'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main',
+
+            # nodo controlador para controlar los motores en el entorno controlado
+            'motors_vff_node = pibotj_rr.motors_vff_node:main'
 
         ],
     },
