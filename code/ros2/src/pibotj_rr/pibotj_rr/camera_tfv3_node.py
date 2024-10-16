@@ -31,6 +31,9 @@ class CameraTFv3Node(Node):
         # Publicador del array con coordenadas
         self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
 
+        # Publicador del array con coordenadas
+        self.polygon_vff_publisher = self.create_publisher(Polygon, 'pothole_vff_coords', self.queueSize)
+
         # Usa 10 Hz
         self.periodCommunication = 0.1  
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
@@ -117,6 +120,7 @@ class CameraTFv3Node(Node):
 
         newframe = resized_frame.copy()
         polygon_coords = Polygon()
+        polygon_vff_coords = Polygon()
 
         current_time = time.time()
         
@@ -148,6 +152,7 @@ class CameraTFv3Node(Node):
 
                     self.reset_detection()  # Reinicia la detección
 
+                polygon_vff_coords = self.convert_coords(pixels)
             # No se ha encontrado un contorno
             else:  
                 # Si se había detectado previamente
@@ -163,6 +168,8 @@ class CameraTFv3Node(Node):
 
         # Publicar las coordenadas y que el nodo de pinhole las convierta
         self.polygon_publisher.publish(polygon_coords)
+
+        self.polygon_vff_publisher.publish(polygon_vff_coords)
 
         # Convertir y publicar la imagen
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
