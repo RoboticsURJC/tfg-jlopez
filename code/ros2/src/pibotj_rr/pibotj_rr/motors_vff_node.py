@@ -21,7 +21,7 @@ class MotorsVFFNode(Node):
             # Configura el pin como salida
             GPIO.setup(pin, GPIO.OUT)  
             # Inicializa PWM en el pin con frecuencia de 50Hz
-            servo = GPIO.PWM(pin, 20)  
+            servo = GPIO.PWM(pin, 10)  
             # Comienza el PWM con un ciclo de trabajo de 0%
             servo.start(0) 
             self.servos.append(servo)
@@ -83,27 +83,27 @@ class MotorsVFFNode(Node):
             # angular es NEGATIVA
             lvalue = 0
             rvalue = 0
+            #reduction_factor = 0.01
             if vel.linear.x >= 0:
 
                 if vel.angular.z > 0:
                     # gira hacia la izquierda
                     print("girar hacia la izquierda")
-                    lvalue = self.get_left_degree_value(0.0)
+                    lvalue = 0.0
                     rvalue = self.get_right_degree_value(abs(vel.angular.z))
 
                 elif vel.angular.z < 0:
                     # gira hacia la derecha
                     print("girar hacia la derecha")
                     lvalue = self.get_left_degree_value(abs(vel.angular.z))
-                    rvalue = self.get_right_degree_value(0.0)
+                    rvalue = 0.0
 
                 else: 
                     # va recto
-                    print("girar hacia la recto")
-                    lvalue = self.get_left_degree_value(vel.linear.x)
-                    rvalue = self.get_right_degree_value(vel.angular.z)
+                    print("ir recto")
+                    lvalue = 6.25
+                    rvalue = 1.25
 
-                #print("linea " + str(lvalue) + "Motor derecho " + str(rvalue))
                 print("Motor izquierdo " + str(lvalue) + "Motor derecho " + str(rvalue))
                 self.set_motors_vel(lvalue,rvalue)
             else: 
@@ -112,71 +112,35 @@ class MotorsVFFNode(Node):
 
     def get_left_degree_value(self, value_decimal):
 
-        return (value_decimal + 0.5) * 180
+        return (13/2 *(value_decimal + 6/13))
 
     def get_right_degree_value(self, value_decimal):
 
-        return -(value_decimal - 0.5) * 180
+        return (value_decimal/0.4)
 
     def set_motors_vel(self, lval, rval):
         
         # motor izquierdo
-        self.set_servo_angle(lval, self.servos[0])
+        #self.set_servo_angle(lval, self.servos[0])
+        self.servos[0].ChangeDutyCycle(lval) 
+
         # motor derecho
-        self.set_servo_angle(rval, self.servos[1])
-
-    
-    #def command_callback(self, msg):
-        # Obtiene el contenido del mensaje
-    #    command = msg.data  
-
-    #    if command == "forward":
-    #        self.forward()
-    #    elif command == "backward":
-    #        self.backward()
-    #    elif command == "right":
-    #        self.right()
-    #    elif command == "left":
-    #        self.left()
-    #    elif command == "stop":
-    #        self.stop()
+        #self.set_servo_angle(rval, self.servos[1])
+        self.servos[1].ChangeDutyCycle(rval) 
 
 
-    #def forward(self):
-        # motor izquierdo
-    #    self.set_servo_angle(180, self.servos[0])
-        # motor derecho
-    #    self.set_servo_angle(0, self.servos[1])
-
-    #def backward(self):
-        # motor izquierdo
-    #    self.set_servo_angle(0, self.servos[0])
-        # motor derecho
-    #    self.set_servo_angle(180, self.servos[1])
-
-    #def left(self):
-        # motor izquierdo
-    #    self.servos[0].ChangeDutyCycle(1) 
-        # motor derecho
-    #    self.set_servo_angle(0, self.servos[1])
-
-    #def right(self):
-        # motor izquierdo
-    #    self.set_servo_angle(180, self.servos[0])
-        # motor derecho
-    #    self.set_servo_angle(90, self.servos[1])
 
     def stop(self):
         # Desactiva PWM de los 2 motores para pararlos
         self.servos[0].ChangeDutyCycle(0) 
         self.servos[1].ChangeDutyCycle(0) 
 
-   
-    def set_servo_angle(self, angle, servo):
+    # te tenid que cambiarlo porque he pasado de 20 a 10 Hz
+    #def set_servo_angle(self, angle, servo):
         # Ajusta el ángulo del servomotor dado un ángulo específico
         # Calcula el ciclo de trabajo necesario
-        duty = float(angle) / 18.0 + 2.5 
-        servo.ChangeDutyCycle(duty) 
+    #    duty = float(angle) / 18.0 + 2.5 
+    #    servo.ChangeDutyCycle(duty) 
 
     def __del__(self):
         # Limpia y detiene los servomotores y la configuración de GPIO cuando el nodo se destruye

@@ -54,12 +54,7 @@ class CameraDLNode(Node):
     def camera_callback(self, msg):
 
         resized_frame = self.bridgeObject.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        #success, frame = self.camera.read()
-        #if not success:
-        #    self.get_logger().error('Failed to read frame from camera')
-        #    return
-
-        #resized_frame = cv2.resize(frame, (192, 192))
+       
         # Filtro que detecta bien el entorno conocido
         gray = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2GRAY)
         th1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,23,-50)
@@ -116,14 +111,14 @@ class CameraDLNode(Node):
                 # gira hacia la derecha
                 # angular es NEGATIVA
                 twist.linear.x = 0.5  
-                twist.angular.z = -0.125 
+                twist.angular.z = -0.25 
 
             elif cX > (2 * width) // 3:
                 print("Línea detectada a la derecha")
                 # gira hacia la izquierda
                 # angular es POSITIVA
                 twist.linear.x = 0.5  
-                twist.angular.z = 0.125 
+                twist.angular.z = 0.25 
             else:
                 print("Línea detectada en el centro")
                 # seguir recto
@@ -134,15 +129,13 @@ class CameraDLNode(Node):
 
         if(num_lines_detected == 0): 
             print("Seguir recto durante 3s y luego girar")
-            # lineal: 0.5
-            # angular 0.0
+            
             # durante 3 segundos y empezar a girar 
             if not self.detected:
                 self.detected = True
                 self.detect_time = current_time
             else: 
                 # ya ha sido detectado 
-                # asignar el valor de 0.5 0.0
                 twist.linear.x = 0.5  
                 twist.angular.z = 0.0
             
@@ -160,16 +153,9 @@ class CameraDLNode(Node):
 
         self.publisher.publish(ROSImageMessage)
 
-    #def cleanup(self):
-    #    self.camera.release()
-
     def signal_handler(self, sig, frame):
         self.get_logger().info('Interrupt received, shutting down...')
-        #self.cleanup()
         sys.exit(0)  
-
-    #def __del__(self):
-    #    self.camera.release()
 
     def reset_detection(self):
         self.detected = False
@@ -185,7 +171,7 @@ def main(args=None):
     except KeyboardInterrupt:
         publisherObject.get_logger().info('Keyboard interrupt received, shutting down...')
     finally:
-        publisherObject.cleanup()
+        #publisherObject.cleanup()
         publisherObject.destroy_node()
         rclpy.shutdown()
 
