@@ -4,12 +4,12 @@ from sensor_msgs.msg import Image
 from rclpy.node import Node
 from cv_bridge import CvBridge
 import numpy as np
-import tflite_runtime.interpreter as tflite
-from std_msgs.msg import String
+#import tflite_runtime.interpreter as tflite
+#from std_msgs.msg import String
 import signal
 import sys
 import time
-from geometry_msgs.msg import Polygon, Point32
+#from geometry_msgs.msg import Polygon, Point32
 from geometry_msgs.msg import Twist
 
 class CameraDLNode(Node):
