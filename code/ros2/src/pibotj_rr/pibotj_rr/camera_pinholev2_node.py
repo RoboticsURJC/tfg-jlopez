@@ -101,6 +101,10 @@ class CameraPinHoleV2Class(Node):
     def coords_vff_callback(self, coords):
 
         if not coords.points or len(coords.points) == 0:
+            posenone = Pose2D()
+            posenone.x = 0.0
+            posenone.y = 0.0
+            self.min_coords_publisher.publish(posenone)
             return
 
         # Calcula la conversión de los puntos de coordenadas

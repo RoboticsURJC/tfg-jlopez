@@ -19,7 +19,7 @@ class CameraVFFNode(Node):
             self.queueSize)
 
         # Publicar comandos de velocidad
-        self.vel_publisher = self.create_publisher(Twist, 'vff_vel', 10)
+        self.vel_publisher = self.create_publisher(Twist, 'vff_vel', self.queueSize)
 
         # Inicialización de variables
         self.min_coord = None 
@@ -29,7 +29,8 @@ class CameraVFFNode(Node):
         self.vff_gain = 1.0 
 
         # Configuración de la frecuencia de publicación
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        # Cada 0.1 segundos se publica = 10 Hz
+        #self.timer = self.create_timer(0.1, self.timer_callback)
 
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
@@ -40,60 +41,64 @@ class CameraVFFNode(Node):
         # Actualizar las coordenadas del bache
         self.min_coord = msg
 
-    def timer_callback(self):
+        #print(self.min_coord)
 
-        # Bucle de control VFF
-        attractive_force = self.compute_attractive_force()
-        repulsive_force = self.compute_repulsive_force()
+    #def timer_callback(self):
+        if (self.min_coord.x > 0.0 and self.min_coord.y > 0.0):
 
-        # Sumar las fuerzas
-        resultant_force = [attractive_force[0] + repulsive_force[0],
+            # Bucle de control VFF
+            attractive_force = self.compute_attractive_force()
+            repulsive_force = self.compute_repulsive_force()
+
+            # Sumar las fuerzas
+            resultant_force = [attractive_force[0] + repulsive_force[0],
                            attractive_force[1] + repulsive_force[1]]
 
-        # Convertir la fuerza resultante en una dirección
-        angle = math.atan2(resultant_force[1], resultant_force[0])
-        linear_speed = min(math.sqrt(resultant_force[0] ** 2 + resultant_force[1] ** 2), 0.5)  # Limitar la velocidad
+            # Convertir la fuerza resultante en una dirección
+            angle = math.atan2(resultant_force[1], resultant_force[0])
+            linear_speed = min(math.sqrt(resultant_force[0] ** 2 + resultant_force[1] ** 2), 0.5)  # Limitar la velocidad
 
-        # Publicar la velocidad
-        twist = Twist()
-        twist.linear.x = linear_speed
-        # Ajustar la orientación del robot
-        twist.angular.z = angle - self.robot_orientation 
+            # Publicar la velocidad
+            twist = Twist()
+            twist.linear.x = linear_speed
+            # Ajustar la orientación del robot
+            twist.angular.z = angle - self.robot_orientation 
 
-        if(twist.linear.x > 0.5):
-            twist.linear.x = 0.5
+            if(twist.linear.x > 0.5):
+                twist.linear.x = 0.5
 
-        self.vel_publisher.publish(twist)
+            self.vel_publisher.publish(twist)
 
-        # Actualizar la posición del robot
-        self.update_robot_position()
+            # Actualizar la posición del robot
+            self.update_robot_position()
 
 
     def compute_repulsive_force(self):
         # Calcular la fuerza repulsiva basada en la posición del bache (si existe)
         repulsive_force = [0.0, 0.0]
-        if self.min_coord:
+        distance = 0
+        #if self.min_coord:
            
             # la coordenada es la del mundo real más cercana al bache detectado
             # (usando modelo pinhole)
-            pothole_x = self.min_coord.x
-            pothole_y = self.min_coord.y
+        pothole_x = self.min_coord.x
+        pothole_y = self.min_coord.y
 
             # Calcular la distancia al bache
-            distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
+        distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
                                      (pothole_y - self.robot_position[1]) ** 2)
-            print(distance)
+        print(distance)
             
             # si el bache está a menos de 7 cm aplicar la repulsión
-            if distance < 70.0:  
-                # Inversamente proporcional a la distancia
-                force_magnitude = self.vff_gain / distance 
-                angle_to_pothole = math.atan2(pothole_y - self.robot_position[1],
+        if distance < 70.0:  
+            # Inversamente proporcional a la distancia
+            force_magnitude = self.vff_gain / distance 
+            angle_to_pothole = math.atan2(pothole_y - self.robot_position[1],
                                                   pothole_x - self.robot_position[0])
 
-                # Descomponer la fuerza en componentes x e y
-                repulsive_force[0] -= force_magnitude * math.cos(angle_to_pothole)
-                repulsive_force[1] -= force_magnitude * math.sin(angle_to_pothole)
+            # Descomponer la fuerza en componentes x e y
+            repulsive_force[0] -= force_magnitude * math.cos(angle_to_pothole)
+            repulsive_force[1] -= force_magnitude * math.sin(angle_to_pothole)
 
                 # otra opción es (y, -x) como lo de unibotics
 

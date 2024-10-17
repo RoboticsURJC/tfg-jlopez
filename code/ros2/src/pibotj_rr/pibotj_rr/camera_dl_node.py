@@ -12,24 +12,36 @@ from geometry_msgs.msg import Twist
 class CameraDLNode(Node):
     def __init__(self):
         super().__init__('camera_dl_node')
-        self.cameraDeviceNumber = 0
-        self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
+        #self.cameraDeviceNumber = 0
+        #self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
         
-        if not self.camera.isOpened():
-            self.get_logger().error('Failed to open camera device %d' % self.cameraDeviceNumber)
-            rclpy.shutdown()
-            return
+        #if not self.camera.isOpened():
+        #    self.get_logger().error('Failed to open camera device %d' % self.cameraDeviceNumber)
+        #    rclpy.shutdown()
+        #    return
+
+        # suscriba a la imagen de la cámara
+
+        self.queueSize = 10
+
+        self.subscription = self.create_subscription(
+            Image,
+            '/camera_tf3',
+            self.camera_callback,
+            self.queueSize) 
+
+
 
         self.bridgeObject = CvBridge()
         self.topicNameFrames = 'camera_dl'
-        self.queueSize = 10
+        #self.queueSize = 10
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
 
         self.vel_publisher = self.create_publisher(Twist, 'dl_vel', self.queueSize)
 
-        # Usa 10 Hz
-        self.periodCommunication = 0.1  
-        self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
+        # Cada 0.1 segundos se publica = 10Hz
+        #self.periodCommunication = 0.1  
+        #self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
   
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
@@ -39,13 +51,15 @@ class CameraDLNode(Node):
         self.detect_time = 0
         
 
-    def timer_callbackFunction(self):
-        success, frame = self.camera.read()
-        if not success:
-            self.get_logger().error('Failed to read frame from camera')
-            return
+    def camera_callback(self, msg):
 
-        resized_frame = cv2.resize(frame, (192, 192))
+        resized_frame = self.bridgeObject.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        #success, frame = self.camera.read()
+        #if not success:
+        #    self.get_logger().error('Failed to read frame from camera')
+        #    return
+
+        #resized_frame = cv2.resize(frame, (192, 192))
         # Filtro que detecta bien el entorno conocido
         gray = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2GRAY)
         th1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,23,-50)
@@ -146,16 +160,16 @@ class CameraDLNode(Node):
 
         self.publisher.publish(ROSImageMessage)
 
-    def cleanup(self):
-        self.camera.release()
+    #def cleanup(self):
+    #    self.camera.release()
 
     def signal_handler(self, sig, frame):
         self.get_logger().info('Interrupt received, shutting down...')
-        self.cleanup()
+        #self.cleanup()
         sys.exit(0)  
 
-    def __del__(self):
-        self.camera.release()
+    #def __del__(self):
+    #    self.camera.release()
 
     def reset_detection(self):
         self.detected = False
