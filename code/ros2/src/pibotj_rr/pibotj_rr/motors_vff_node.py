@@ -20,7 +20,7 @@ class MotorsVFFNode(Node):
         for pin in self.servo_pins:
             # Configura el pin como salida
             GPIO.setup(pin, GPIO.OUT)  
-            # Inicializa PWM en el pin con frecuencia de 50Hz
+            # Inicializa PWM en el pin con frecuencia de 10Hz
             servo = GPIO.PWM(pin, 10)  
             # Comienza el PWM con un ciclo de trabajo de 0%
             servo.start(0) 
@@ -79,8 +79,6 @@ class MotorsVFFNode(Node):
     def set_vel(self, vel):
         # Asegúrate de que vel no es None y contiene valores válidos
         if vel is not None:
-            # gira hacia la derecha
-            # angular es NEGATIVA
             lvalue = 0
             rvalue = 0
             #reduction_factor = 0.01
@@ -104,7 +102,7 @@ class MotorsVFFNode(Node):
                     lvalue = 6.25
                     rvalue = 1.25
 
-                print("Motor izquierdo " + str(lvalue) + "Motor derecho " + str(rvalue))
+                print("Motor izquierdo " + str(lvalue) + " Motor derecho " + str(rvalue))
                 self.set_motors_vel(lvalue,rvalue)
             else: 
                 self.stop()

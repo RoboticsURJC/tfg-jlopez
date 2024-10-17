@@ -33,11 +33,11 @@ class CameraPinHoleV2Class(Node):
             self.coords_callback,
             self.queueSize)
 
-        self.vffsubscription = self.create_subscription(
-            Polygon, 
-            'pothole_vff_coords',
-            self.coords_vff_callback,
-            self.queueSize)  
+        #self.vffsubscription = self.create_subscription(
+        #    Polygon, 
+        #    'pothole_vff_coords',
+        #    self.coords_vff_callback,
+        #    self.queueSize)  
         
         self.loadCamera()
 
@@ -53,6 +53,10 @@ class CameraPinHoleV2Class(Node):
     def coords_callback(self, coords):
 
         if not coords.points or len(coords.points) == 0:
+            posenone = Pose2D()
+            posenone.x = 0.0
+            posenone.y = 0.0
+            self.min_coords_publisher.publish(posenone)
             return
 
         # Calcula la conversión de los puntos de coordenadas
@@ -76,9 +80,9 @@ class CameraPinHoleV2Class(Node):
         array3D.append(array3D[0])
 
         # publica la coordenada que está detectada más cerca del robot
-        #pose = Pose2D()
-        #pose = self.get_min_coords(array3D)
-        #self.min_coords_publisher.publish(pose)
+        pose = Pose2D()
+        pose = self.get_min_coords(array3D)
+        self.min_coords_publisher.publish(pose)
 
         area = 0
         n = len(array3D)

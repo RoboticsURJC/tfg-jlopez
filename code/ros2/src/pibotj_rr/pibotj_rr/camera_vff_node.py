@@ -41,9 +41,11 @@ class CameraVFFNode(Node):
         # Actualizar las coordenadas del bache
         self.min_coord = msg
 
-        #print(self.min_coord)
+        #print(self.min_coord.x)
+        #print(self.min_coord.y)
 
-    #def timer_callback(self):
+
+    #def timer_callback(self):print(self.min_coord.x)
         if (self.min_coord.x > 0.0 and self.min_coord.y > 0.0):
 
             # Bucle de control VFF
@@ -87,10 +89,11 @@ class CameraVFFNode(Node):
             # Calcular la distancia al bache
         distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
                                      (pothole_y - self.robot_position[1]) ** 2)
-        print(distance)
+        print(pothole_x)
             
             # si el bache está a menos de 7 cm aplicar la repulsión
-        if distance < 70.0:  
+        # if distance < 70.0
+        if pothole_x < 150.0:  
             # Inversamente proporcional a la distancia
             force_magnitude = self.vff_gain / distance 
             angle_to_pothole = math.atan2(pothole_y - self.robot_position[1],

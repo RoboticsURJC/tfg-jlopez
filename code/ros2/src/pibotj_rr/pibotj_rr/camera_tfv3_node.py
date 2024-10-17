@@ -146,7 +146,7 @@ class CameraTFv3Node(Node):
                 # Dibuja el contorno más grande en la imagen
                 cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
                 # Comprobar si han pasado 4 segundos
-                if (current_time - self.detect_time) > 4:
+                if (current_time - self.detect_time) > 3:
                     # Convertir las coordenadas al formato del publicador 
                     polygon_coords = self.convert_coords(self.largest_contour)
 
