@@ -2,14 +2,17 @@ import RPi.GPIO as GPIO
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+from geometry_msgs.msg import Twist
 
 class MotorsVFFNode(Node):
     def __init__(self):
         super().__init__('motors_vff_node')
 
         # Configuración de los servomotores
-        self.servo_pins = [4, 18]  # Pines GPIO para los dos servos
-        GPIO.setmode(GPIO.BCM)  # Configura el modo de numeración de los pines GPIO
+        # Pines GPIO para los dos servos
+        self.servo_pins = [4, 18] 
+        # Configura el modo de numeración de los pines GPIO
+        GPIO.setmode(GPIO.BCM) 
 
         # Inicializa los servomotores
         self.servos = []
@@ -24,7 +27,7 @@ class MotorsVFFNode(Node):
 
         # se tiene que suscribir a velocidad lineal y angular /vff_vel /dl_vel
         self.subscription = self.create_subscription(
-            String,
+            Twist,
             'move_controller',
             self.command_callback,
             10)  # 10 es el tamaño del buffer de la cola de mensajes

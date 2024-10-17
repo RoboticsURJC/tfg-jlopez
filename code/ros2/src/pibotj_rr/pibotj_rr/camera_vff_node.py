@@ -22,10 +22,11 @@ class CameraVFFNode(Node):
         self.vel_publisher = self.create_publisher(Twist, 'vff_vel', 10)
 
         # Inicialización de variables
-        self.min_coord = None  # Almacenar las coordenadas del bache
-        self.robot_position = [0.0, 0.0]  # Posición inicial del robot
-        self.robot_orientation = 0.0  # Orientación inicial del robot en radianes
-        self.vff_gain = 1.0  # Factor de ganancia del VFF
+        self.min_coord = None 
+        self.robot_position = [0.0, 0.0] 
+        # orientación en radianes
+        self.robot_orientation = 0.0  
+        self.vff_gain = 1.0 
 
         # Configuración de la frecuencia de publicación
         self.timer = self.create_timer(0.1, self.timer_callback)
@@ -56,13 +57,15 @@ class CameraVFFNode(Node):
         # Publicar la velocidad
         twist = Twist()
         twist.linear.x = linear_speed
-        twist.angular.z = angle - self.robot_orientation  # Ajustar la orientación del robot
+        # Ajustar la orientación del robot
+        twist.angular.z = angle - self.robot_orientation 
 
-        #print(twist.linear.x, twist.angular.z)
-        #self.velocity_publisher.publish(twist)
+        if(twist.linear.x > 0.5):
+            twist.linear.x = 0.5
+
         self.vel_publisher.publish(twist)
 
-        # Actualizar la posición del robot (simulación)
+        # Actualizar la posición del robot
         self.update_robot_position()
 
 
@@ -70,27 +73,21 @@ class CameraVFFNode(Node):
         # Calcular la fuerza repulsiva basada en la posición del bache (si existe)
         repulsive_force = [0.0, 0.0]
         if self.min_coord:
-            #min_distance = 0.0
-            #for point in self.pothole_polygon:
-                # Convertir las coordenadas de imagen a coordenadas del robot
-                # habrá que usar el modelo pin hole de nuevo
+           
+            # la coordenada es la del mundo real más cercana al bache detectado
+            # (usando modelo pinhole)
             pothole_x = self.min_coord.x
             pothole_y = self.min_coord.y
 
-                # Calcular la distancia al bache
+            # Calcular la distancia al bache
             distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
                                      (pothole_y - self.robot_position[1]) ** 2)
             print(distance)
-                #if (min_distance == 0):
-               #     min_distance = distance
-                #else:
-                #    if (distance < min_distance):
-                #        min_distance = distance
-
-            #print(min_distance)
-            # si está a menos de 7 cm cm aplicar la repulsión
-            if distance < 70.0:  # Si el bache está cerca, aplicar fuerza repulsiva
-                force_magnitude = self.vff_gain / distance  # Inversamente proporcional a la distancia
+            
+            # si el bache está a menos de 7 cm aplicar la repulsión
+            if distance < 70.0:  
+                # Inversamente proporcional a la distancia
+                force_magnitude = self.vff_gain / distance 
                 angle_to_pothole = math.atan2(pothole_y - self.robot_position[1],
                                                   pothole_x - self.robot_position[0])
 
@@ -100,19 +97,18 @@ class CameraVFFNode(Node):
 
                 # otra opción es (y, -x) como lo de unibotics
 
-            #self.min_coord = None
-
         return repulsive_force
 
     def compute_attractive_force(self):
-        # Calcular la fuerza atractiva hacia un punto adelante del robot (dinámico)
+        # Calcular la fuerza atractiva hacia un punto adelante del robot
         attractive_force = [0.0, 0.0]
         
         # El objetivo está 1 metro adelante en la dirección del robot
         target_x = self.robot_position[0] + 1.0 * math.cos(self.robot_orientation)
         target_y = self.robot_position[1] + 1.0 * math.sin(self.robot_orientation)
 
-        force_magnitude = self.vff_gain  # Mantener constante la fuerza atractiva
+        # Mantener constante la fuerza atractiva
+        force_magnitude = self.vff_gain 
         angle_to_target = math.atan2(target_y - self.robot_position[1],
                                      target_x - self.robot_position[0])
 
@@ -125,6 +121,7 @@ class CameraVFFNode(Node):
     def update_robot_position(self):
         # Simular actualización de posición del robot (en un caso real, usaría odometría)
         # Esto es un simple ejemplo que podría reemplazarse con lecturas de odometría o posición real del robot
+        # REVISAR ESTO POR SI CAMBIAR LA ORIENTACIÓN DEL ROBOT
         self.robot_position[0] += 0.1 * math.cos(self.robot_orientation)
         self.robot_position[1] += 0.1 * math.sin(self.robot_orientation)
 
