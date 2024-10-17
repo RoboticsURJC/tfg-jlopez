@@ -35,6 +35,9 @@ class CameraDLNode(Node):
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
         self.get_logger().info('set signal handler')
+
+        self.detected = False
+        self.detect_time = 0
         
 
     def timer_callbackFunction(self):
@@ -70,23 +73,66 @@ class CameraDLNode(Node):
             
         # Contar las líneas detectadas
         num_lines_detected = len(line_positions)
-        print(num_lines_detected)
+        #print(num_lines_detected)
+
+        # inicializar las velocidades 
+        # lineal: 0.0
+        # angular: 0.0
+
+        current_time = time.time()
+
+        if(num_lines_detected == 2):
+
+            self.reset_detection()
+
+            print("Seguir recto")
+            # lineal: 0.5
+            # angular 0.0
 
         # si la línea es 1 hay que mirar por donde se encuentra 
         # la línea para cambiar la trayectoria 
         if(num_lines_detected == 1):
 
+           self.reset_detection()
             # Analizar las posiciones de las líneas
-            width = resized_frame.shape[1]  # Ancho de la imagen
+            # Ancho de la imagen
+            width = resized_frame.shape[1] 
             #for position in line_positions:
             cX, cY = line_positions[0]
             if cX < width // 3:
                 print("Línea detectada a la izquierda")
+                # gira hacia la derecha
+                # angular es NEGATIVA
+
             elif cX > (2 * width) // 3:
                 print("Línea detectada a la derecha")
+                # gira hacia la izquierda
+                # angular es POSITIVA
             else:
                 print("Línea detectada en el centro")
+                # seguir recto
+                # lineal: 0.5
+                # angular 0.0
 
+        if(num_lines_detected == 0): 
+            print("Seguir recto durante 3s y luego girar")
+            # lineal: 0.5
+            # angular 0.0
+            # durante 3 segundos y empezar a girar 
+            if not self.detected:
+                self.detected = True
+                self.detect_time = current_time
+            else: 
+                # ya ha sido detectado 
+                # asignar el valor de 0.5 0.0
+            
+            if (current_time - self.detect_time) > 3:
+                # mandar girar 
+                   
+
+
+
+        # Publicar velocidad angular y lineal
 
         bgr_image = cv2.cvtColor(opened_th1, cv2.COLOR_GRAY2BGR)
 
@@ -104,6 +150,10 @@ class CameraDLNode(Node):
 
     def __del__(self):
         self.camera.release()
+
+    def reset_detection(self):
+        self.detected = False
+        self.detect_time = 0
 
 
 def main(args=None):
