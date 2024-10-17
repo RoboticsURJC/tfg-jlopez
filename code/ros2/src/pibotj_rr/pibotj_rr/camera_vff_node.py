@@ -19,7 +19,7 @@ class CameraVFFNode(Node):
             self.queueSize)
 
         # Publicar comandos de velocidad
-        self.velocity_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.vel_publisher = self.create_publisher(Twist, 'vff_vel', 10)
 
         # Inicialización de variables
         self.min_coord = None  # Almacenar las coordenadas del bache
@@ -57,8 +57,10 @@ class CameraVFFNode(Node):
         twist = Twist()
         twist.linear.x = linear_speed
         twist.angular.z = angle - self.robot_orientation  # Ajustar la orientación del robot
-        print(twist.linear.x, twist.angular.z)
+
+        #print(twist.linear.x, twist.angular.z)
         #self.velocity_publisher.publish(twist)
+        self.vel_publisher.publish(twist)
 
         # Actualizar la posición del robot (simulación)
         self.update_robot_position()

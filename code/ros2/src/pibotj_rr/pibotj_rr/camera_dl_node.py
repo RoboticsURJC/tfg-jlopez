@@ -10,7 +10,7 @@ import signal
 import sys
 import time
 from geometry_msgs.msg import Polygon, Point32
-
+from geometry_msgs.msg import Twist
 
 class CameraDLNode(Node):
     def __init__(self):
@@ -27,6 +27,8 @@ class CameraDLNode(Node):
         self.topicNameFrames = 'camera_dl'
         self.queueSize = 10
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
+
+        self.vel_publisher = self.create_publisher(Twist, 'dl_vel', self.queueSize)
 
         # Usa 10 Hz
         self.periodCommunication = 0.1  
@@ -73,11 +75,10 @@ class CameraDLNode(Node):
             
         # Contar las líneas detectadas
         num_lines_detected = len(line_positions)
-        #print(num_lines_detected)
 
-        # inicializar las velocidades 
-        # lineal: 0.0
-        # angular: 0.0
+        twist = Twist()
+        twist.linear.x = 0.0  
+        twist.angular.z = 0.0  
 
         current_time = time.time()
 
@@ -86,14 +87,14 @@ class CameraDLNode(Node):
             self.reset_detection()
 
             print("Seguir recto")
-            # lineal: 0.5
-            # angular 0.0
+            twist.linear.x = 0.5  
+            twist.angular.z = 0.0  
 
         # si la línea es 1 hay que mirar por donde se encuentra 
         # la línea para cambiar la trayectoria 
         if(num_lines_detected == 1):
 
-           self.reset_detection()
+            self.reset_detection()
             # Analizar las posiciones de las líneas
             # Ancho de la imagen
             width = resized_frame.shape[1] 
@@ -103,16 +104,22 @@ class CameraDLNode(Node):
                 print("Línea detectada a la izquierda")
                 # gira hacia la derecha
                 # angular es NEGATIVA
+                twist.linear.x = 0.5  
+                twist.angular.z = -0.125 
 
             elif cX > (2 * width) // 3:
                 print("Línea detectada a la derecha")
                 # gira hacia la izquierda
                 # angular es POSITIVA
+                twist.linear.x = 0.5  
+                twist.angular.z = 0.125 
             else:
                 print("Línea detectada en el centro")
                 # seguir recto
                 # lineal: 0.5
                 # angular 0.0
+                twist.linear.x = 0.5  
+                twist.angular.z = 0.0
 
         if(num_lines_detected == 0): 
             print("Seguir recto durante 3s y luego girar")
@@ -125,14 +132,16 @@ class CameraDLNode(Node):
             else: 
                 # ya ha sido detectado 
                 # asignar el valor de 0.5 0.0
+                twist.linear.x = 0.5  
+                twist.angular.z = 0.0
             
             if (current_time - self.detect_time) > 3:
                 # mandar girar 
+                twist.linear.x = 0.5  
+                twist.angular.z = -0.125
                    
-
-
-
         # Publicar velocidad angular y lineal
+        self.vel_publisher.publish(twist)
 
         bgr_image = cv2.cvtColor(opened_th1, cv2.COLOR_GRAY2BGR)
 
