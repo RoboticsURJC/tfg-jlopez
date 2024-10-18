@@ -149,7 +149,7 @@ Para enriquecer el proyecto, se han empleado otro tipo de ruedas cuyo diámetro 
 \subsection{Google Coral USB}
 \label{subsec:googlecoral}
 
-El Google Coral USB Accelerator (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con hardware especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en TensorFlow Lite, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Al ser una placa lanzada hace varios años al mercado, sólo es compatible con  las versiones de Python 3.6 hasta la 3.9.
+El Google Coral USB Accelerator (Figura \ref{fig:googlecoral}) es un dispositivo que permite acelerar tareas de \ac{IA} en dispositivos que no cuentan con \textit{hardware} especializado para ello. Está diseñado para ejecutarse con modelos de aprendizaje automático utilizando la unidad de procesamiento de tensores de Google, lo que mejora significativamente la velocidad de inferencia en aplicaciones de \acs{IA}. Está optimizado para ejecutar modelos preentrenados en TensorFlow Lite, la versión ligera de TensorFlow diseñado para dispositivos con recursos limitados. Al ser una placa lanzada hace varios años al mercado, sólo es compatible con  las versiones de Python 3.6 hasta la 3.9.
 
 Por sus cualidades descritas, se ha decidido este componente para mejorar la detección de baches en tiempo real y solventar las limitaciones de la Raspberry Pi. Su precio es de unos 65€.
  
@@ -372,7 +372,7 @@ Es este proyecto, se van a emplear las sentencias que contengan latitud y longit
 \subsection{OpenCV}
 \label{subsec:opencv}
 
-OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una biblioteca software de código abierto diseñada para la visión artificial y el procesamiento de imágenes. Fue desarrollada inicialmente por Intel en 1999 y ahora es mantenida por una gran comunidad de desarrolladores. OpenCV es ampliamente utilizada en aplicaciones que requieren análisis de imágenes, detección de objetos, reconocimiento de rostros, visión computacional, y mucho más. En este proyecto se ha usado concretamente para la detección del bache y el cálculo del área.
+OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una biblioteca \textit{software} de código abierto diseñada para la visión artificial y el procesamiento de imágenes. Fue desarrollada inicialmente por Intel en 1999 y ahora es mantenida por una gran comunidad de desarrolladores. OpenCV es ampliamente utilizada en aplicaciones que requieren análisis de imágenes, detección de objetos, reconocimiento de rostros, visión computacional, y mucho más. En este proyecto se ha usado concretamente para la detección del bache y el cálculo del área.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -388,7 +388,7 @@ OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una bibl
 \subsection{ROS 2}
 \label{subsec:ros2}
 
-ROS, por sus siglas en inglés, \textit{Robot Operating System} se trata de un conjunto de bibliotecas y herramientas que ayudan a los desarrolladores a construir sistemas robóticos. ROS proporciona servicios de nivel bajo como abstracción de hardware, control de dispositivos, paso de mensajes entre procesos y gestión de paquetes, así como herramientas para simulación, pruebas y desarrollo de algoritmos.
+ROS, por sus siglas en inglés, \textit{Robot Operating System} se trata de un conjunto de bibliotecas y herramientas que ayudan a los desarrolladores a construir sistemas robóticos. ROS proporciona servicios de nivel bajo como abstracción de \textit{hardware}, control de dispositivos, paso de mensajes entre procesos y gestión de paquetes, así como herramientas para simulación, pruebas y desarrollo de algoritmos.
 
 ROS 2, la segunda generación de ROS, se ha rediseñado para superar las limitaciones de su predecesor. Está basado en un nuevo middleware llamado DDS (Data Distribution Service), que permite una mejor comunicación entre nodos, mayor seguridad, y más opciones de transporte y calidad de servicio (QoS). También mejora la escalabilidad, el soporte para sistemas distribuidos y la capacidad para aplicaciones en tiempo real. Además, ROS 2 es multiplataforma e interoperable; soportando múltiples lenguajes de programación, como C++ y Python.
 
@@ -396,7 +396,7 @@ ROS 2, la segunda generación de ROS, se ha rediseñado para superar las limitac
 
 %ROS 2 tiene tres diferentes dimensiones: la comunidad de ROS 2 que contribuye al desarrollo de aplicaciones es enorme, el grafo de computación de una aplicación en ROS 2 está formado por nodos conectados con distintos paradigmas de comunicación y el espacio de trabajo, también conocido como \textit{workspace}, es aquel que se trata del \textit{software} instalado que se divide a su vez en \textit{underlay} (la instalación básica de ROS 2) y \textit{overlay} (son el resto de programas que se desarrollan).
 
-Según se ha explicado en el Apartado 4.2.4, debido a que se ha necesitado para este proyecto usar Ubuntu 20.04 y Ubuntu 22.04; se ha tenido que usar las dos distribuciones más estable de ROS para cada versión de Ubuntu: ROS 2 Foxy\footnote{\url{https://docs.ros.org/en/foxy/Installation.html}} y ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/index.html}}, respectivamente (Figura \ref{fig:rosdis}).
+Según se ha explicado en el Apartado \ref{subsec:ubuntu}, debido a que se ha necesitado para este proyecto usar Ubuntu 20.04 LTS y Ubuntu 22.04 LTS; se ha tenido que usar las dos distribuciones más estable de ROS para cada versión de Ubuntu: ROS 2 Foxy\footnote{\url{https://docs.ros.org/en/foxy/Installation.html}} y ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/index.html}}, respectivamente (Figura \ref{fig:rosdis}).
 
 
 \begin{figure}[ht!]
@@ -436,8 +436,8 @@ Los componentes principales de ROS 2 Control son:
 	%\item \textit{User interface}. Pueden interactuar con el sistema mediante servicios y una interfaz de línea de comandos.
 	\item \textit{Hardware Components/Interfaces}. Realizan comunicación con \textit{hardware} físico y pueden ser: sistemas, sensores y actuadores. Cada \textit{hardware} tendrá una serie de \textit{command interfaces} o de \textit{state interfaces} que permitirán monitorizar o interactuar con cada componente.
 	\item \textit{Resource Manager}. Abstrae y gestiona los \textit{hardware interfaces}, permitiendo la abstracción de los \textit{state interfaces} y los \textit{command interfaces}.
-	\item\textit{Controller Manager}. Gestiona controladores e interfaces de hardware en el framework ROS 2 Control.
-	\item \textit{Controllers}. Utilizan la teoría de control para interactuar con el hardware. Pueden ser creados desde cero o usar los que viene por defecto de la librería de ROS 2 Control, que suplen las necesidades en la mayoría de las ocasiones.
+	\item\textit{Controller Manager}. Gestiona controladores e interfaces de \textit{hardware} en el framework ROS 2 Control.
+	\item \textit{Controllers}. Utilizan la teoría de control para interactuar con el \textit{hardware}. Pueden ser creados desde cero o usar los que viene por defecto de la librería de ROS 2 Control, que suplen las necesidades en la mayoría de las ocasiones.
 \end{itemize}
 
 En este proyecto se ha decidido usar ROS 2 Control para crear un modelo del robot en simulación y poder trabajar con él usando la filosofía de ROS 2 Control.
@@ -483,7 +483,7 @@ RViz\footnote{\url{http://wiki.ros.org/rviz}} (Figura \ref{fig:rviz}) es una her
 \subsubsection{RQT Image View}
 \label{subsubsec:rqtimage}
 
-RQt Image View\footnote{\url{http://wiki.ros.org/rqt_image_view}} es una herramienta gráfica dentro del ecosistema de ROS y ROS 2 que permite visualizar imágenes en tiempo real de un flujo de datos de imágenes publicado por una cámara en un sistema robótico. Se ha usado esta herramienta para monitorizar la cámara del robot físico.
+RQT Image View\footnote{\url{http://wiki.ros.org/rqt_image_view}} es una herramienta gráfica dentro del ecosistema de ROS y ROS 2 que permite visualizar imágenes en tiempo real de un flujo de datos de imágenes publicado por una cámara en un sistema robótico. Se ha usado esta herramienta para monitorizar la cámara del robot físico.
 
 \subsubsection{ROS2cli}
 \label{subsubsec:ros2cli}
@@ -494,7 +494,7 @@ ROS 2 \ac{CLI}\footnote{\url{https://docs.ros.org/en/humble/Tutorials/Beginner-C
 \subsection{Google Colaboratory}
 \label{subsec:googlecolab}
 
-Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \ref{fig:googlecolab}) es un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta, se puede cumplir el requisito nº.4 de los indicados en la sección 3.2.
+Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \ref{fig:googlecolab}) es un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta, se puede cumplir el requisito nº.4 de los indicados en la Sección \ref{sec:requisitos}.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -526,7 +526,7 @@ Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \
 \subsection{TensorFlow Lite}
 \label{subsec:tflite}
 
-TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Concretamente, para poder ejecutar modelos en dispositivos como las Raspberry Pi,se usa la versión TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:tflite}), ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
+TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Concretamente, para poder ejecutar modelos en dispositivos como las Raspberry Pi, se usa la versión TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:tflite}), ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -568,4 +568,4 @@ OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} (Figura \ref{fig:os
 
 
 
-Tras conocer todas las plataformas software y hardware empleadas para la realización del presente trabajo fin de grado, es el momento de describir el desarrollo completo llevado a cabo para la construcción hardware del robot  y su correspondiente soporte software, lo que se explicará detalladamente en los siguientes capítulos.
+Tras conocer todas las plataformas \textit{software} y \textit{hardware} empleadas para la realización del presente trabajo fin de grado, es el momento de describir el desarrollo completo llevado a cabo para la construcción \textit{hardware} del robot y su correspondiente soporte \textit{software}, lo que se explicará detalladamente en los siguientes capítulos.
