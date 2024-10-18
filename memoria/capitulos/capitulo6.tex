@@ -15,6 +15,7 @@ Bill Gates\\
 Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico, en este capítulo se aborda el soporte software en el robot para ponerlo en funcionamiento tanto en simulación como en la vida real.
 
 \section{Simulación}
+\label{sec:simulacion}
 
 En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación, en concreto usando Gazebo. Esta parte ha sido desarrollada en el ordenador principal que se ha usado para este proyecto, explicado en el Capítulo 4, y por tanto, usa Ubuntu 22.04 LTS y ROS 2 Humble. Para conseguir la simulación, ha sido necesario tener instalado ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}} y seguir los siguientes pasos de instalación: 
 
@@ -30,6 +31,7 @@ En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ
 Una vez instalado todos los programas, fue el momento de empezar a desarrollar el código. 
 
 \subsection{URDF/Xacro}
+\label{subsec:urdf}
 
 Primero de todo fue necesario definir las estructuras y propiedades del robot. Para ello, se decidió usar el formato \ac{URDF}\footnote{\url{http://wiki.ros.org/urdf}} y \textit{Xacro}\footnote{\url{http://wiki.ros.org/xacro}}, muy comunes en aplicaciones robóticas. \acs{URDF} usa un formato de ficheros XML y describe al robot como un conjunto de \textit{links} (enlaces), que están conectadas por una serie de \textit{joints} (articulaciones). Mientras que \textit{Xacro}, usa también un formato de ficheros XML que permite crear URDF de manera más modular, reutilizable y eficiente mediante el uso de macros y propiedades. Para más información se puede consultar la siguiente fuente\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/}}.
 
@@ -125,6 +127,7 @@ En el presente proyecto se han definido los sistemas de coordenadas que aparecen
 
 
 \subsection{ROS 2 Control}
+\label{subsec:cap6ros2control}
 
 Como se explicó en el Capítulo 4, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
 
@@ -145,6 +148,7 @@ Tras definir las \textit{joints} a controlar, era necesario definir en un ficher
 Una vez el robot estaba completamente definido en los diferentes ficheros \textit{Xacro}, era necesario unirlos todos en otro fichero llamado \verb|robot.urdf.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot.urdf.xacro}} para poder facilitar el publicar el estado del robot y eso se consigue usando \verb|robot_state_publisher|.
  
 \subsection{Robot State Publisher}
+\label{subsec:robotstatepublisher}
 
 En la Web oficial de ROS\footnote{\url{http://wiki.ros.org/robot_state_publisher}} se explica que \verb|robot_state_publisher| es esencial para publicar las transformaciones (tf) entre los diferentes \textit{links} del robot y para proporcionar información sobre el estado de sus \textit{joints} a cualquier componente en el sistema. Aunque pueda parecer complicado, la Figura \ref{fig:rsp}, obtenida de la web de Articulated Robotics\footnote{\url{https://articulatedrobotics.xyz/tutorials/mobile-robot/concept-design/concept-urdf\#quick-recap}}, resume muy bien los pasos que sigue \verb|robot_state_publisher|.
 
@@ -159,6 +163,7 @@ En la Web oficial de ROS\footnote{\url{http://wiki.ros.org/robot_state_publisher
 Una vez todos los elementos a utilizar estaban listos, era el momento de aglutinarlos todos y crear un launcher que los inicializara y los pusiera en ejecución.
 
 \subsection{Launcher}
+\label{subsec:launcher}
 
 El \textit{launcher} que se decidió crear para este proyecto parte del creado por Johnewans\footnote{\url{https://github.com/joshnewans/articubot_one/blob/main/launch/launch_sim.launch.py}}, creador de Articulated Robotics y fue modificado según las necesidades, siendo finalmente el resultante \verb|launch_sim.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/launch/launch_sim.launch.py}}. Para facilitar su entendimiento, la Figura \ref{fig:launcherdiagram} explica los componentes que forman parte del \textit{launcher}. Llegados a este punto, PiBotJ ya estaba listo para ejecutarse completamente.
 
@@ -173,6 +178,7 @@ El \textit{launcher} que se decidió crear para este proyecto parte del creado p
 
 
 \subsection{Simulación puesta en funcionamiento}
+\label{subsec:funsimulacion}
 
 Para poner en funcionamiento el modelo, únicamente había que escribir los siguientes comandos:
 \begin{verbatim}
@@ -250,6 +256,7 @@ Siendo los valores que van dentro de data desde 3 (giro hacia la izquierda) hast
 Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
 
 \section{Configuración del robot físico}
+\label{sec:robotfisico}
 
 \subsection{Cámara}
 

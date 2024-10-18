@@ -14,6 +14,7 @@ Antoine de Saint-Exupéry\\
 Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proyecto, en este capítulo se describirá el proceso paso a paso, desde la concepción inicial hasta la construcción y ensamblaje, para que el robot sea completamente operativo.
 
 \section{Geometría del robot}
+\label{sec:geometriarobot}
 
 En este apartado se detalla el proceso llevado a cabo para definir la idea y la forma elegida para el robot. La aplicación de este proyecto se encuentra dentro de los robots de campo, y es por ello que estos tipos de robots son mayoritariamente plataformas que trabajan en entornos no estructurados, como se comentó en el Capítulo 1. Por ello, es necesario que la estructura del robot se asemeje a esos tipos de robots y los más comunes son los robots con ruedas. 
 
@@ -54,6 +55,7 @@ De PiBot interesa que tiene dos grados de libertad para el movimiento del robot,
 Una vez puesto en marcha el PiBot, se realizaron una serie de modificaciones hardware para poder cumplir con el objetivo principal descrito en el Capítulo 3; fue necesario añadir una serie de componentes \textit{hardware} a PiBot para poder formar el esqueleto completo del nuevo prototipo robótico, que fue bautizado como PiBotJ. A continuación se describen detalladamente los distintos componentes hardware.
 
 \section{Disposición de los componentes hardware}
+\label{sec:disposicionhardware}
 
 Una vez conocido las características que eran útiles de PiBot para PiBotJ, se definió la disposición de los componentes \textit{hardware}, descritos en el Capítulo 4, para poder confeccionar el esqueleto completo. La Figura \ref{fig:fritzzing} muestra todas la conexiones que fueron necesarias usar en la Raspberry Pi para dar soporte a todos los componentes del PiBotJ. 
 
@@ -70,6 +72,7 @@ La alimentación a la placa se realiza a través del puerto USB-C. En uno de los
 
  
 \section{Bocetos}
+\label{sec:bocetos}
 
 La realización de bocetos es una etapa fundamental en el proceso de diseño, que se realiza antes de iniciar el modelado en 3D, ya que su propósito es obtener una visión clara de la estructura y disposición de los componentes que conforman el PiBotJ. Una vez que se definió el esqueleto completo que este necesitaba, se creó una serie de bocetos (Figura \ref{fig:bocetos}) que permitieron afinar los detalles antes de realizar el diseño en 3D.
 
@@ -149,6 +152,7 @@ Antes de realizar el diseño \acs{CAD} de las piezas se creó una maqueta a tama
 
 
 \section{Diseño CAD}
+\label{sec:diseñocad}
 
 Para hacer el diseño \acs{CAD} y la maqueta explicada en el apartado anterior, se crearon unos planos a mano (Figura \ref{fig:planos}) de las diferentes piezas involucradas en el diseño. Las medidas fueron precisas gracias al uso del calibre (Figura \ref{fig:calibre}).
 
@@ -207,6 +211,7 @@ Para el diseño de PiBotJ se empleó la herramienta de modelado FreeCAD\footnote
 Para llevar a cabo el diseño de todas las piezas se han seguido los tutoriales de dos cursos de FreeCAD: el del profesor Juan González (también conocido como Obijuan)\footnote{\url{https://www.youtube.com/watch?v=2_DbFzFV9D4&list=PLmnz0JqIMEzWQV-3ce9tVB_LFH9a91YHf}}, y el de dcahue-ingeniería\footnote{\url{https://www.youtube.com/watch?v=4zp2DrWv8Wk&list=PLEpca2UUEwQeHp33w36SCzmCz_KKzaMKr&index=11}}, ambos fundamentales en el desarrollo del proyecto. Además, se han utilizado otros tutoriales específicos, como los dedicados a la creación de \textit{shape binders}\footnote{\url{https://www.youtube.com/watch?v=MCY5IrWrHrU}} y la realización de planos inclinados\footnote{\url{https://www.youtube.com/watch?v=T4hKW1mLrCw}}, esenciales para diseñar la inclinación de la cámara.
 
 \subsection{Chasis}
+\label{subsec:chasis}
 
 La estructura principal, que da soporte al robot, fue diseñada para alojar los motores de las ruedas y de la cámara. En la parte trasera se incorporó un prisma rectangular, destinado a la colocación de la rueda loca, mientras que en el lado izquierdo se le dotó con un orificio circular para sujetar la \textit{power bank}. En la parte superior se añadieron seis aberturas rectangulares, para permitir el paso ordenado de los cables, manteniendo una estética limpia y organizada desde el exterior.
 
@@ -261,6 +266,7 @@ Además, a este chasis se le dotó de cuatro orificios circulares, que permitier
 \end{figure}
 
 \subsection{Soporte de la cámara}
+\label{subsec:soportecamara}
 
 Para posicionar la cámara de manera que mire hacia el suelo y pueda captar los baches, fue necesario fijarla con una rotación sobre el eje y. En este caso, dicha rotación fue de 50 grados, o 130 grados si se toma como referencia la base de la pieza que va atornillada al motor (Figura \ref{fig:rot}). Esta base fue dotada con dos orificios diagonales que permiten su fijación al motor.
 
@@ -312,7 +318,7 @@ A la parte inclinada de la pieza se le incluyó un orificio diseñado para aloja
 
 
 \subsection{Carcasa}
-
+\label{subsec:carcasa}
 
 Esta carcasa fue diseñada para alojar la placa Raspberry Pi, el módulo GPS y la \textit{power bank} en su interior. La cara superior fue dotada de doce orificios circulares, destinados a atornillar tanto la Raspberry Pi como el módulo GPS, y seis aberturas que se conectaban con la cara inferior, alineándose con las aberturas correspondientes del chasis, para garantizar un paso de cables ordenado.
 
@@ -371,6 +377,7 @@ La Figura \ref{fig:psuperior} muestra la carcasa desde varias perspectivas, list
 
 
 \subsection{Sujección trasera}
+\label{subsec:sujecciontrasera}
 
 Para asegurar que la \textit{power bank} se mantenga en su lugar dentro del robot, se diseñó una pieza que se atornilla en el lado izquierdo del chasis. Esta pieza fue definida como un prisma rectangular con más de 30 mm de altura, aproximadamente 5 mm de largo y 3 mm de ancho (Figura \ref{fig:ptrasera}). La pieza debe colocarse en posición vertical para evitar que la \textit{power bank} se deslice, y en posición horizontal cuando se desea extraer esta. Existe una versión en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.FCStd}} y otra en formato STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl}}. La Figura \ref{fig:traseracon} muesta cómo quedaría montada la pieza sobre el robot.
 
@@ -402,6 +409,7 @@ Para asegurar que la \textit{power bank} se mantenga en su lugar dentro del robo
 Una vez detalladas cada una de las piezas \acs{CAD} diseñadas, se continúa ?? era el momento del proceso de impresión y montaje que se ha seguido para conseguir finalmente el prototipo robótico PiBotJ.
   
 \section{Impresión y montaje}
+\label{sec:impresionmontaje}
 
 En esta sección se presentan todos los detalles que deben considerarse para replicar este proyecto mediante impresión 3D. 
 

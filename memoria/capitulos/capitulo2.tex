@@ -17,9 +17,10 @@ En el presente capítulo se van a describir algunos de los prototipos y posibles
 
 
 \subsubsection{Sistema de reconstrucción 3D de baches}
+\label{subsubsec:sistema1}
 
 \setcounter{footnote}{27} 
-Este sistema, explicado en \cite{s23135860}, es creado como parte del proyecto Infrarob\footnote{\url{https://infrarobproject.com/}} y desarrollado en el marco del proyecto europeo Horizon 2020, utiliza una \textit{Raspberry Pi 4B} acoplada a un robot autónomo para capturar imágenes usando una cámara y coordenadas \acs{GPS}, usando el módulo  de baches en carreteras. Las imágenes, tomadas desde diferentes ángulos, son procesadas mediante técnicas fotogramétricas para generar modelos 3D de los baches, permitiendo calcular con precisión el volumen que debe ser rellenado. El sistema también integra un \ac{SIG} para mejorar la gestión del mantenimiento de pavimentos. (Figura \ref{fig:infrarob})
+Este sistema, explicado en \cite{s23135860}, es creado como parte del proyecto Infrarob\footnote{\url{https://infrarobproject.com/}} y desarrollado en el marco del proyecto europeo Horizon 2020, utiliza una Raspberry Pi 4B acoplada a un robot autónomo para capturar imágenes usando una cámara y coordenadas \acs{GPS}, usando el módulo  de baches en carreteras. Las imágenes, tomadas desde diferentes ángulos, son procesadas mediante técnicas fotogramétricas para generar modelos 3D de los baches, permitiendo calcular con precisión el volumen que debe ser rellenado. El sistema también integra un \ac{SIG} para mejorar la gestión del mantenimiento de pavimentos. (Figura \ref{fig:infrarob})
 
 \begin{figure} [h!]
 	\begin{center}
@@ -31,7 +32,7 @@ Este sistema, explicado en \cite{s23135860}, es creado como parte del proyecto I
 
 Las ventajas de este proyecto son las siguientes: 
 \begin{itemize}
-	\item \textit{Bajo coste}. Utiliza componentes de bajo coste como: \textit{Raspberry Pi}, \textit{Raspberry Pi Camera} y el módulo \textit{GPS NEO-6M}, que también es \textit{low-cost}. 
+	\item \textit{Bajo coste}. Utiliza componentes de bajo coste como: Raspberry Pi, Raspberry PiCamera y el módulo GPS NEO-6M, que también es \textit{low-cost}. 
 	\item \textit{Precisión en la detección}. Capacidad para detectar baches de hasta 75 cm de diámetro y crear modelos 3D precisos.
 	\item \textit{Integración con \acs{SIG}}. Facilita la planificación de reparaciones.
 	
@@ -40,12 +41,13 @@ Las ventajas de este proyecto son las siguientes:
 Las desventajas de este proyecto son las siguientes: 
 \begin{itemize}
 	\item \textit{Limitaciones climáticas}. No puede operar en condiciones adversas ni durante la noche.
-	\item \textit{Uso de software de pago}. Utiliza \textit{ContextCapture}, que es de pago, para el procesamiento fotogramétrico.
+	\item \textit{Uso de software de pago}. Utiliza ContextCapture, que es de pago, para el procesamiento fotogramétrico.
 	\item \textit{Movimiento circular para detección del volumen}. Una vez detectado el bache, es necesario moverse alrededor de él para que el algoritmo de fotogametría sea capaz de encontrar su volumen, lo que ralentiza el cálculo.
 	
 \end{itemize}\
 
 \subsubsection{El proyecto Herón}
+\label{subsubsec:sistema2}
 
 En \cite{10.1145/3529190.3534746} se habla del Proyecto HERON\footnote{\url{https://www.heron-h2020.eu/}} que también parte del programa Horizon 2020. Este proyecto propone una solución integral para el mantenimiento de infraestructuras viales mediante el uso de vehículos modulares robóticos autónomos y drones. El sistema está diseñado para optimizar la eficiencia y seguridad de las operaciones de mantenimiento, utilizando sensores y escáneres para crear mapas 3D, inteligencia artificial para coordinar flujos de trabajo, y módulos de análisis de imágenes para detectar defectos. Todavía está en etapa de desarrollo. (Figura \ref{fig:heron})
 
@@ -75,6 +77,7 @@ Las desventajas de este proyecto son las siguientes:
 
 
 \subsubsection{EyesNroad}
+\label{subsubsec:sistema3}
 
 EyesNroad es una plataforma que emplea \ac{IA} y \textit{Machine Learning} para identificar baches, señalización y otros deterioros en carreteras a partir de videos capturados por cámaras georreferenciadas instaladas en vehículos. La plataforma genera inventarios detallados y reportes del estado de las carreteras, facilitando el control y mantenimiento de las mismas. Esta aplicación ha sido desarrollada para participar en los XX premios de conservación de carreteras de \ac{ACEX} (año 2024)\footnote{\url{https://www.acex.eu/candidatura-3-4/}}, que ha resultado ganadora en la en la categoría general. Se puede ver su aspecto en la Figura \ref{fig:enr}.
 
@@ -106,6 +109,7 @@ Las desventajas de este proyecto son las siguientes:
 
 
 \subsubsection{El proyecto OMICRÓN}
+\label{subsubsec:sistema4}
 
 En este proyecto se ha creado un sistema robótico que busca automatizar y robotizar el proceso de sellado de grietas en pavimentos, con el objetivo de eliminar la exposición de los operarios a condiciones peligrosas. El sistema integra un brazo robótico y herramientas de inteligencia artificial para detectar grietas y realizar el sellado de manera autónoma, mejorando así la seguridad y eficiencia en las operaciones de mantenimiento. Esta aplicación ha sido desarrollada para participar en los XX premios de conservación de carreteras de \ac{ACEX} (año 2024)\footnote{\url{https://www.acex.eu/candidatura-12-5/}}, que ha resultado ganadora en la en la categoría asociados. Puedes ver su aspecto en la Figura \ref{fig:omicron}.
 
@@ -135,9 +139,9 @@ Las desventajas de este proyecto son las siguientes:
 \end{itemize}\
 
 \subsubsection{Sistemas de reconstrucción 3D usando SFM y aprendizaje profundo}
+\label{subsubsec:sistema5}
 
-
-Este sistema, descrito en \cite{WANG2023132499}, propone una solución innovadora para la reconstrucción y segmentación 3D de baches en pavimentos. El enfoque aborda las limitaciones de los métodos tradicionales basados en imágenes 2D al utilizar técnicas de fotogrametría para generar perfiles 3D detallados de los baches. El sistema se compone de un método de reconstrucción conocido como Estructura Desde el Movimiento de Pavimentos (PP-SFM) y una red de segmentación 3D, Trans-3D-Seg, que incorpora módulos de transformadores para mejorar la precisión de la segmentación de nubes de puntos 3D. El sistema muestra una alta precisión, con una puntuación F1 del 92.58\% y una precisión general del 93.44\%. Además, se ha demostrado su robustez en diferentes condiciones, como distintas alturas de adquisición y en luz oscura. Otro sistema muy parecido que cumple con todo lo anterior expuesto y que además incorpora un láser para conseguir una segmentación más robusta, está definido en \cite{9345528}.
+Este sistema, descrito en \cite{WANG2023132499}, propone una solución innovadora para la reconstrucción y segmentación 3D de baches en pavimentos. El enfoque aborda las limitaciones de los métodos tradicionales basados en imágenes 2D al utilizar técnicas de fotogrametría para generar perfiles 3D detallados de los baches. El sistema se compone de un método de reconstrucción conocido como Estructura Desde el Movimiento de Pavimentos (PP-SFM) y una red de segmentación 3D, Trans-3D-Seg, que incorpora módulos de transformadores para mejorar la precisión de la segmentación de nubes de puntos 3D. El sistema muestra una alta precisión, con una puntuación F1 del 92,58\% y una precisión general del 93,44\%. Además, se ha demostrado su robustez en diferentes condiciones, como distintas alturas de adquisición y en luz oscura. Otro sistema muy parecido que cumple con todo lo anterior expuesto y que además incorpora un láser para conseguir una segmentación más robusta, está definido en \cite{9345528}.
 
 Las ventajas de estos proyectos son las siguientes:
 
@@ -186,9 +190,9 @@ En relación a la detección de los baches se pueden encontrar métodos que se p
 
 
 En visión se puede encontrar el método de \cite{app112311229}, que usa modelos de YOLOv4, YOLOv4-tiny y YOLOv5, un dataset total de 665 imágenes (70\% entrenamiento, 10\% validación, 20\% pruebas) y aplicado sobre 
-Tesla K80 GPU (12 GB) en \textit{Google Colab}. Otro método es el de \cite{doi:10.1080/14680629.2019.1615533}, que utiliza un modelo de \textit{prepooling CNN} con un dataset de 96,000 imágenes (72,000 entrenamiento, 24,000 pruebas), una precisión optimizada hasta de 0.9825. Todo ello probado sobre un Intel Core i7, 32 GB RAM, GeForce GTX 1080 (8 GB).
+Tesla K80 GPU (12 GB) en Google Colab. Otro método es el de \cite{doi:10.1080/14680629.2019.1615533}, que utiliza un modelo de prepooling CNN con un dataset de 96.000 imágenes (72.000 entrenamiento, 24.000 pruebas), una precisión optimizada hasta de 0,9825. Todo ello probado sobre un Intel Core i7, 32 GB RAM, GeForce GTX 1080 (8 GB).
 
-En vibración se puede encontrar el método de \cite{s20020451}, que usa un filtro \textit{Butterworth}, un modelo gaussiano mejorado y un algoritmo de \textit{k-nearest neighbor}. Se usan unas 118 muestras de bultos, 174 muestras de planos y 103 de bache. Tiene una precisión de 0.96 para baches y 0.94 para bultos. Se usa un Cavalier con un smartphone Redmi Note 8 Pro con frecuencia de muestreo de 400 Hz. Otro método es el de \cite{7922534} que usa un filtro paso bajo, con transformada de Fourier. Para clasificar se usa un árbol de decisión C4.5 (0.9860), SVM (0.9525)y Naïve Bayes (0.9690). Todo ello se ha probado sobre un smartphone Galaxy Alpha con frecuencia de muestreo de 50 Hz.
+En vibración se puede encontrar el método de \cite{s20020451}, que usa un filtro \textit{Butterworth}, un modelo gaussiano mejorado y un algoritmo de \textit{k-nearest neighbor}. Se usan unas 118 muestras de bultos, 174 muestras de planos y 103 de bache. Tiene una precisión de 0,96 para baches y 0,94 para bultos. Se usa un Cavalier con un smartphone Redmi Note 8 Pro con frecuencia de muestreo de 400 Hz. Otro método es el de \cite{7922534} que usa un filtro paso bajo, con transformada de Fourier. Para clasificar se usa un árbol de decisión C4.5 (0,9860), SVM (0,9525) y Naïve Bayes (0,9690). Todo ello se ha probado sobre el smartphone Samsung Galaxy Alpha con frecuencia de muestreo de 50 Hz.
 
 Finalmente, para la reconstrucción 3D se puede encontrar el método de \cite{8788687}, que usa visión estéreo de un solo marco, fusión de múltiples marcos, aprendizaje por transferencia con Mask R-CNN y aprendizaje por transferencia con YOLOv2, todo ello usando una GeForce GTX 1080 y un Tesla K80. Otro método es el de \cite{8638822}, que usa un filtro de paso-alto, una ecualización de histograma, una combinación de \textit{waypoints} con triangulación estéreo. Este método ha sido probado en dos webcams A4Tech PKS-732 montadas en un trípode o en la parte trasera de un coche usando un ordenador con sistema operativo Windows.
 
