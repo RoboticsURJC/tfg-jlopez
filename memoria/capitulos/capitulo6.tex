@@ -12,12 +12,12 @@ Bill Gates\\
 \vspace{1cm}
 \setcounter{footnote}{84}
 
-Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico, en este capítulo se aborda el soporte software en el robot para ponerlo en funcionamiento tanto en simulación como en la vida real.
+Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico, en este capítulo se aborda el soporte \textit{software} en el robot para ponerlo en funcionamiento tanto en simulación como en la vida real.
 
 \section{Simulación}
 \label{sec:simulacion}
 
-En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación, en concreto usando Gazebo. Esta parte ha sido desarrollada en el ordenador principal que se ha usado para este proyecto, explicado en el Capítulo 4, y por tanto, usa Ubuntu 22.04 LTS y ROS 2 Humble. Para conseguir la simulación, ha sido necesario tener instalado ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}} y seguir los siguientes pasos de instalación: 
+En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación, en concreto usando Gazebo. Esta parte ha sido desarrollada en el ordenador principal que se ha usado para este proyecto, explicado en el Apartado \ref{subsec:ordenador}, y por tanto, usa Ubuntu 22.04 LTS y ROS 2 Humble. Para conseguir la simulación, ha sido necesario tener instalado ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}} y seguir los siguientes pasos de instalación: 
 
 \begin{verbatim}
 	sudo apt update && sudo apt upgrade
@@ -129,9 +129,9 @@ En el presente proyecto se han definido los sistemas de coordenadas que aparecen
 \subsection{ROS 2 Control}
 \label{subsec:cap6ros2control}
 
-Como se explicó en el Capítulo 4, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
+Como se explicó en el Apartado \ref{subsec:ros2control}, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
 
-Este proyecto se definió un sistema llamado \textit{GazeboSystem} para el \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En este caso se decidió controlar a \textit{left\_wheel\_joint}, \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellas joints que tenían asignados en la vida real un motor. 
+Este proyecto se definió un sistema llamado \textit{GazeboSystem} para el \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En este caso se decidió controlar a \textit{left\_wheel\_joint}, \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellas \textit{joints} que tenían asignados en la vida real un motor. 
 
 Si se ejecuta: \verb|ros2 control list_hardware_interfaces|, se puede ver las interfaces asociadas de lectura/escritura y de monitorización que tiene cada \textit{joint} a controlar. En la figura \ref{fig:ros2control} se puede ver las interfaces que tiene PiBotJ y por ende, cómo se van a controlar cada interfaz.
 
@@ -198,7 +198,7 @@ Si la primera vez que se lance el robot ocurre algún error, es normal y hay que
 \end{figure}
 
 
-De todos esos topics, para poder conseguir el objetivo propuesto en el Capítulo 3, es necesario únicamente utilizar \verb|/camera/image_raw| para ver la imagen de la cámara, \verb|/cmd_vel| para mover las ruedas, \verb|/gps/data| para ver los valores de posición del \acs{GPS}, y \verb|/pos_cont/commands| para mover el motor de la cámara.
+De todos esos topics, para poder conseguir el objetivo propuesto en la Sección \ref{sec:descripcion}, es necesario únicamente utilizar \verb|/camera/image_raw| para ver la imagen de la cámara, \verb|/cmd_vel| para mover las ruedas, \verb|/gps/data| para ver los valores de posición del \acs{GPS}, y \verb|/pos_cont/commands| para mover el motor de la cámara.
 
 Para mover las ruedas hay muchas formas de hacerlo pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view| que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, el módulo \acs{GPS} se puede visualizar sus valores usando \verb|ros2 topic echo /gps/data|, como muestra la Figura \ref{fig:echogps}. Finalmente para mover el motor de la cámara por posición, es necesario usar el comando: 
 
