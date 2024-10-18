@@ -72,20 +72,32 @@
 \contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{75}{subsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.1.4}Launcher}{75}{subsection.6.1.4}%
 \contentsline {subsection}{\numberline {6.1.5}Simulación puesta en funcionamiento}{76}{subsection.6.1.5}%
-\contentsline {section}{\numberline {6.2}Vida real}{77}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Snippets}{79}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Verbatim}{79}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Ecuaciones}{80}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Tablas o cuadros}{81}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Segunda sección}{81}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Números}{82}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Listas}{82}{subsection.6.7.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{82}{paragraph*.139}%
-\contentsline {section}{\numberline {6.8}Corrector ortográfico}{83}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Experimentos}{84}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{84}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{84}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{85}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{85}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{86}{section.8.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{87}{appendix*.140}%
+\contentsline {section}{\numberline {6.2}Configuración del robot físico}{79}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Cámara}{79}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Google Coral}{79}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{79}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Motores}{79}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{79}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Modelo Pin Hole}{80}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Shoelace method}{80}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}IA: yolov8}{80}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}VFF}{80}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Interfaz Web}{80}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Módulo GPS}{80}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Detección de líneas}{80}{subsection.6.3.7}%
+\contentsline {section}{\numberline {6.4}Snippets}{80}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Verbatim}{81}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Ecuaciones}{81}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Tablas o cuadros}{82}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Segunda sección}{82}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Números}{83}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Listas}{83}{subsection.6.8.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{83}{paragraph*.139}%
+\contentsline {section}{\numberline {6.9}Corrector ortográfico}{84}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Experimentos}{85}{chapter.7}%
+\contentsline {section}{\numberline {7.1}}{85}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{85}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{86}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{86}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{87}{section.8.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{88}{appendix*.140}%
