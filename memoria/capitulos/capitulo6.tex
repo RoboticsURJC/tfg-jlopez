@@ -256,39 +256,385 @@ Siendo los valores que van dentro de data desde 3 (giro hacia la izquierda) hast
 Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
 
 \section{Configuración del robot físico}
-\label{sec:robotfisico}
+\label{sec:configrf}
+
+Como tiene instalado Ubuntu 20.04 server LTS como se explicó en el capítulo 4... 
+
+conectarse por ssh instalar en el ordenador cliente (descrito en el apartdo del cap 4...) 
+
+sudo apt-get install openssh-client
+
+(incluir enlace del video  https://www.youtube.com/watch?v=QDq1diLoPYs ) 
+
+
+ssh nombreususario@ip por ejemplo: ssh juloau@192.168.5.73 y a continuación escribir la contraseña y el prompt tiene que cambiar 
+ 
+
+scp -r para ir actualizando el repo.
 
 \subsection{Cámara}
+\label{subsec:configcamara}
+
+Como estoy usando ROS2 los nodos dentro de una misma red están visibles desde cualquier dispositivo, así que lanzando el nodo de la cámara desde el robot, he podido lanzar rqt\_image\_view desde el ordenador y ver que la cámara funciona perfectamente.
+
+
+Fuente de información: 
+
+https://www.youtube.com/watch?v=6e94ZnYnO\_U
+
+
+Parámetros intrínsecos
+
+Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes en tanto no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Los provee el fabricante de la cámara, o bien se pueden estimar.
+
+- Teóricos 
+
+Fuentes consultadas:
+
+Elinux: https://elinux.org/Rpi\_Camera\_Module\#Technical\_Parameters\_.28v.2\_board.29
+
+Spiedigitallibrary: https://www.spiedigitallibrary.org/journals/journal-of-electronic-imaging/volume-26/issue-01/013014/Laying-the-foundation-to-use-Raspberry-Pi-3-V2-camera/10.1117/1.JEI.26.1.013014.full?SSO=1
+
+Waveshare: https://www.waveshare.com/rpi-camera-v2.htm?sku=11633
+
+
+Pi supply: https://uk.pi-supply.com/products/raspberry-pi-camera-board-v2-1-8mp-1080p
+
+
+Multiple View Geometry in Computer Vision (a partir página 155)
+
+
+
+Incluir imagen de los valores teóricos obtenidos (está en ros2 humble)
+
+
+
+
+- Prácticos 
+
+Para poder obtenerlos necesitamos mirar sus páginas de documentación y calcularlo usando normalmente un patrón estilo tablero de ajedrez que está bien definido. Para poder conseguirlo se va a aplicar algún algoritmo de los ya hechos. He creado los siguientes programas para ello:calibration.py y process.py De todas las calibraciones, finalmente nos quedamos con la media de los 10 últimos tests:
+
+Incluir fotos de los valores prácricos obtenidos
+
+
+
+Podemos ver que lo teórico difiere de la realidad ya que existen muchos factores que pueden influir y aunque el fabricante decida poner unos valores,cada cámara termina teniendo los suyos propios
+
+
+Parámetros extrínsecos
+
+Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real.
+
+Usando reglas podemos obtener los parámetros extrínsecos de la cámara:
+
+Traslación: la cámara se encuentra a 9,8cm del suelo (terminar de confirmar altura... comprobar), la rotación sobre el eje y... incluir matriz de rotación
+ 
+
 
 \subsection{Google Coral}
+\label{subsec:configgcoral}
+
+
+Pasos de instalación de googgle coral
+https://coral.ai/docs/accelerator/get-started/\#pycoral-on-mac-win
 
 \subsection{Módulo GPS}
+\label{subsec:configgps}
+
+El receptor GPS usa la diferencia de tiempo entre la transmisión y la recepción para calcular la distancia. El receptor debe tener en cuenta los retrasos en la propagación o en la disminución de la velocidad de la señal producidos por la ionosfera y la troposfera. Conociendo horario y la posición de 3 satélites (trilateración) el receptor puede calcular su posición en los ejes x,y,z. ( información más completa aquí -> https://www.gps.gov/spanish.php)
+
+Fuentes de información: 
+https://www.youtube.com/watch?v=3ysOqliO6F8 (habla de la configuración -> Carlos)
+
+
+Sabiendo que para hacer funcionar el sensor necesitamos usar el puerto serie, tenemos que encontrarlo en la raspberry:
+
+Incluir imagen de esta web -> https://solectroshop.com/es/content/60-5-pines-gpio-y-su-programacion
+
+
+-----------PASOS DE INSTALACIÓN USANDO RASPBIAN Y PARTE DE ROS2 (REVISAR)-----------------------
+
+Una vez conectado el sensor a la placa, es necesario configurar el puerto serie de la Raspberry pi (fuente 1 y fuente 2):
+
+fuente 1: https://www.youtube.com/watch?v=TCtx0M9uVG8
+
+fuente 2: https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/
+
+Abre raspberry config:
+
+sudo raspi-config
+
+Ve a interfacing Options -> Serial (deshabilitar login shell -> no y habilitar el serial interface -> yes) -> Aceptar
+
+Reinicia la pi:
+
+sudo reboot
+
+Es necesario editar /boot/config.txt:
+
+¡¡¡ATENCIÓN!!! para el SO más actual (raspbian bookworm) habrá que editar /boot/firmware/config.txt
+
+sudo nano /boot/config.txt \# sudo nano /boot/firmware/config.txt
+
+Al final de este fichero hay que añadir las siguientes líneas:
+
+dtparam=spi=on
+dtoverlay=pi3-disable-bt
+core\_freq=250
+enable\_uart=1
+force\_turbo=1
+
+Ajecuta:
+
+ls -l /dev
+
+y tienes que comprobar en qué orden están definido el serial0 o serial1 y a qué apunta serial 0:
+
+Si serial0->ttyAMA0 entonces ejecuta:
+
+sudo systemctl stop serial-getty@ttyAMA0.service
+sudo systemctl disable serial-getty@ttyAMA0.service
+
+Si serial0->ttyS0 entonces ejecuta:
+
+sudo systemctl stop serial-getty@ttyS0.service
+sudo systemctl disable serial-getty@ttyS0.service
+
+¡¡¡ATENCIÓN!!! si solo aparece un serial definido cuando se miran los dispositivos en el S0 más actual (raspbian bookworm), no pasa nada siempre y cuando se haga:
+
+cat /dev/ttyAMA0 \# o cat /dev/ttyS0
+
+y aparezcan datos.
+
+Otra opción para comprobar si funcionan los puerto series es usando la herramienta minicom.
+
+sudo minicom -b 9600 -o -D /dev/ttyAMA0
+
+Reinicia la pi:
+
+sudo reboot
+
+Librerías usadas
+
+pynmea2: pynmea2 es una biblioteca de Python para analizar datos en formato NMEA (National Marine Electronics Association), utilizado comúnmente en dispositivos GPS y otros dispositivos de navegación. Te permite interpretar y trabajar con datos específicos como posición GPS, velocidad, altitud, etc.
+
+Funcionalidad principal: Parsear (interpretar) mensajes NMEA recibidos desde dispositivos GPS para extraer información como latitud, longitud, tiempo, número de satélites, etc.
+
+----------- FIN PASOS DE INSTALACIÓN USANDO RASPBIAN Y PARTE DE ROS2 (REVISAR)-----------------------
+
+
+----------- PASOS DE INSTALACIÓN ROS2 HUMBLE (HAY COSAS QUE PUEDO NECESITAR)-----------------------
+
+
+Conectar el GPS una vez se ha logueado en el robot. Existe un error
+ 
+----------- FIN PASOS DE INSTALACIÓN ROS2 HUMBLE (HAY COSAS QUE PUEDO NECESITAR)-----------------------
+
+
+Si se enciende el led azul, significa que el sensor funciona y recibe datos. !!!!  CONSEJO: dejarlo fuera unos 10 mins y cuando empiece a parpadear la luz azul significa que recibe datos y está funcionando. Ya puedes volver a casa/oficina y puedes seguir trabajando desde ahí recibiendo datos correctos de la ubicación. 
+
+Incluir ejemplo de la web que daba bien los valores. De los valores obenidos al hacer CAT se puede demostrar que el sensor da valores correctos. 
+
+
 
 \subsection{Motores}
-
+\label{subsec:configmotores}
 
 Explicar paso a paso y explicar y demostrar que todas las partes funcionan.
 
+Seguí investigando y es importante tener en cuenta cómo funciona los servomotores, qué es la frecuencia y qué es PWM. (explicar todo eso del pwm... enlace: https://raspberrypi-espana.es/servo-frambuesa-pi/   más enlaces: https://www.youtube.com/watch?v=CHbUgggVQpA   otro enlace: https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38)
+
+Meter foto del movimiento de la rueda (que hice yo)
+
+
+HUMBLE: detectar los pines -> añadir dialout a groups y hay que inicializar el demonio: sudo pigpiod
+
 
 \section{Software aplicado al robot físico}
+\label{sec:softwarerf}
+
+La idea era hacer un hardware interface pero no lo conseguí y decidí usar nodos publicadores y suscriptores.
+
+COMENTAR TODO ESTE APARTADO A PARTIR DE LAS LÍNEAS DE CÓDIGO DE CADA FICHERO  
+
+
+
 
 Capítulo 6: incluir lo de openvision paper\\
 
 \subsection{Modelo Pin Hole}
+\label{subsec:softwarepinhole}
+
+Enlace donde se encuentra toda la información: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Hip\%C3\%B3tesis-suelo
 
 \subsection{Shoelace method}
+\label{subsec:softwareshoelace}
+
+
+
+Para calcular el área se ha decidido usar la fórmula "shoelace" (cordón de zapato). Es un algoritmo matemático para calcular el área de un polígono que se describe por sus coordenadas cartesianas (2D). El nombre de este algoritmo es debido a que tiene forma de atarse los cordones. Los puntos se tienen que colocar en sentido horario y el primer punto se tiene que duplicar y su segunda copia se sitúa al final de todos (como para cerrar el círculo).
+
+Ejemplo de aplicación:
+
+Cuadrado: (-140,-45), (-140,45), (140,45), (140,-45), (-140,-45)
+
+Código en python:
+
+def shoelace(coords):
+n = len(coords)
+area = 0.0
+
+for i in range(n - 1):
+x1, y1 = coords[i]
+x2, y2 = coords[i + 1]
+area += (x1 * y2) - (x2 * y1)
+
+\# Agregar el último segmento
+x1, y1 = coords[-1]
+x2, y2 = coords[0]
+area += (x1 * y2) - (x2 * y1)
+
+return abs(area) / 2.0
+
+El resultado es de 25200 mm²
+
+La fórmula del rectángulo: base x altura
+
+280*90 = 25200mm²
+
+Coincide con la fórmula de "shoelace"
+
+Algunas fuentes de información:
+
+https://en.wikipedia.org/wiki/Shoelace\_formula
+
+https://www.youtube.com/watch?v=iKIpraBC-Nw
+
+https://www.youtube.com/watch?v=0KjG8Pg6LGk
+
 
 Incluir lo del volumen medio de 40 mm de la RAC Foundation
 
-\subsection{IA: yolov8}
+\subsection{IA: yolov8 y aplicación a detectar baches}
+
+\label{subsec:softwareiayolo}
+
+
+Video de ultralytics que explica la instalación: https://www.youtube.com/watch?v=w4yHORvDBw0
+
+Explicación del tipo de ia usada para este proyecto.
+
+Tutoriales seguidos para conseguir el objetivo final: 
+
+https://www.youtube.com/watch?v=1d\_JB-trK78
+
+https://www.youtube.com/watch?v=XZ7FYAMCc4M
+
+
+Inicialmente usaba LabelImg para definir dónde se encontraba los baches gracias a este tutorial he podido soclucionar un problema que tenía con este programa.  https://www.youtube.com/watch?v=5jHPuwo8z1o\&t=502s
+
+AL FINAL USABA UN DATASET DE IMÁGENES CON MAYOR CANTIDAD PARA QUE LOS VALORES FUESEN MÁS EXACTOS
+
+Guardé los datos como phdetect2.zip en Google Drive (que no acepta directamente subir un .zip y tuve que usar algún truquito) y gracias a seguir los pasos del tutorial2 en la parte de entrenarlo pude crear mi primera versión.
+
+
+detect.tflite -> v1 usando CPU
+
+detect\_edgetpu.tflite -> v1 convertida pero usa CPU
+
+best\_....edge.tflite -> v2 muy pesada NO VA
+bestv2.....edge.tflite -> v2 que sí va 
+
+REVISAR NOMBRES 
+
+
+Cuenta el paso a paso hasta conseguir la ia funcionando: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Aprendizaje-Autom\%C3\%A1tico\#v2-de-la-ia-google-coral-usb-accelerator 
+
+Explicacion de camera\_tfv3\_node (parte de tflite): https://github.com/RoboticsURJC/tfg-jlopez/wiki/Aprendizaje-Autom\%C3\%A1tico\#explicaci\%C3\%B3n-del-c\%C3\%B3digo (explica el código también. Fuente: https://www.youtube.com/watch?v=DGzQ7XIQyE8)
+
+
+Explicar paso a paso el filtro de opencv para la detección correcta
+
+
+TensorFlow Lite Inference
+
+Sigue los siguientes pasos:
+
+Cargar el .tflite modelo en memoria que contiene el grafo de ejecución del modelo
+
+Transformar datos de la imagen para que sea compatible con el modelo .tflite
+
+Hacer la inferencia. Este proceso sigue varios pasos como puede ser: crear un intérprete y fijar los tensores
+
+Interpretar la salida según al gusto del desarrollador
+
+
+
+CONTAR LO DE UPDATE EMA: https://admiralmarkets.com/es  (media movil exponencial)
+
 
 \subsection{VFF}
+\label{subsec:softwarevff}
+
+Se ha usado la pendiente de la recta para hacer las conversiones .... Mirar los papeles y código: 
+
+https://www.google.com/search?client=ubuntu-sn\&channel=fs\&q=pendiente+de+la+recta+#vhid=HhxrPc0n8LdJsM\&vssid=l
+
+Ejemplos en funcionamiento del vff:
+https://gsyc.urjc.es/jmvega/research/webs/2019.html#.21
+
+
+Usar locks para evitar que haya condiciones de carrera: https://realpython.com/intro-to-python-threading/
+
+
+Explicación del código que usa vff y desarrollé para rob servicios: https://robmovjuloau2022.blogspot.com/
 
 \subsection{Interfaz Web}
+\label{subsec:softwareweb}
+
+O también conocido como HRI, se decidió usarla para facilitar el funcionamiento ...
+
+Fuentes de información: 
+https://en.wikipedia.org/wiki/Human\%E2\%80\%93robot\_interaction
+
+https://journals.sagepub.com/doi/full/10.1177/0018720816644364
+
+
+En Raspbian  hay que instalar apache... (como recordatorio, no incluirlo)
+
+
+------ EN ROS2 HUMBLE --------------------------------------------------
+He descubierto que en ros existe rosbridge\_server y trata de dar comunicación bidireccional entre clientes (buscadores web) y servidores usando una conexión Websocket. Para poder usarlo, primero hay que instalarlo y ejecutarlo en mi Raspberry:
+
+sudo apt-get install ros-humble-rosbridge-suite
+ros2 launch rosbridge\_server rosbridge\_websocket\_launch.xml
+
+Para comprobar que escucha bien en el puerto 9090 rosbridge:
+
+sudo lsof -i TCP:9090 | grep LISTEN
+
+En otra terminal de la Raspberry , abre la ejecución del publicador del nodo gps:
+
+source ./install/setup.bash
+ros2 run pibotj\_rr gps\_node
+
+En otra terminal de la Raspberry , crea un fichero .xml como este y ejecútalo en el directorio donde se encuentre (evita que sea dentro de ./src!!) de la siguiente forma:
+
+python3 -m http.server 8000
+
+En una nueva ventana del navegador insertar lo mismo que la imagen de abajo, cambiando la ip de tu raspberry.
+
+Resultado final: Incluir imagen
 
 \subsection{Módulo GPS}
+\label{subsec:softwaregps}
 
 \subsection{Detección de líneas}
+\label{subsec:softwaredl}
+
+Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
+
+\subsection{¿Aplicación Completa?}
 
 
 ¿Teleoperado y entorno controlado van en experimentos?
