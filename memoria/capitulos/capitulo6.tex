@@ -306,7 +306,7 @@ Para posteriores cálculos, era necesario conocer tanto los parámetros intríns
 \subsubsection{Parámetros intrínsecos}
 \label{subsubsec:intrinsecoscamara}
 
-Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes en tanto no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, o bien se pueden estimar y se decidió calcular las dos posibles opciones.
+Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes en tanto no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, o bien se pueden estimar, y se decidió calcular las dos posibles opciones.
 
 Para los cálculos teóricos se decidió consultar en numerosas fuentes de información y gracias a \textit{Elinux}\footnote{\url{https://elinux.org/Rpi_Camera_Module\#Technical_Parameters_.28v.2_board.29}} se pudo obtener sus parámetros técnicos y partiendo del libro \cite{Hartley2004} (a partir de la página 155) y cálculos básicos matemáticos, se pudo encontrar las fórmulas de la distancia focal (Ecuación \ref{ec:distfocal}) y del centro de la imagen (Ecuación \ref{ec:cenimagen}).
 
@@ -314,10 +314,10 @@ Para los cálculos teóricos se decidió consultar en numerosas fuentes de infor
 \begin{myequation}[h]
 	\begin{align}
 		f_x &= \text{Res. horizontal} \cdot \frac{F}{\text{tam. sensor horizontal}} \quad
-		f_x = 640 \cdot \frac{3.04}{3.674} = 529,56 px \\
+		f_x = 640 \cdot \frac{3.04}{3.674} = 529,56 \\
 		\hspace{1cm}
 		f_y &= \text{Res. vertical} \cdot \frac{F}{\text{tam. sensor vertical}} \quad
-		f_y = 480 \cdot \frac{3.04}{2.760} = 528,69 px
+		f_y = 480 \cdot \frac{3.04}{2.760} = 528,69
 	\end{align}
 	\caption[Fórmula para calcular la distancia focal teórica]{Fórmula para calcular la distancia focal teórica}
 	\label{ec:distfocal}
@@ -336,29 +336,41 @@ Para los cálculos teóricos se decidió consultar en numerosas fuentes de infor
 \end{myequation}
 
 
-Para los parámetros 
-- Prácticos 
+Para los cálculos prácticos se ha creado los ficheros de \verb|calibration.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/camera/calibration/calibration.py}} y \verb|process.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/camera/calibration/process.py}} partiendo del tutorial\footnote{\url{https://www.youtube.com/watch?v=XFBKwme5HYk}}. El fichero \verb|calibration.py| generaba las imágenes en base a el patrón de ajedrez y el fichero \verb|process.py| generaba la matriz de parámetros intrínsecos y de distorsión. El proceso se repitió diez veces y finalmente la matriz resultante fue la media de las diez matrices de parámetros intrínsecos y sus valores se muestran en la Figura \ref{fig:meanintrinseco}. Los valores son: $f_x$ = 497,66 $f_y$ = 502,16 $c_x$ = 325,3 y $c_y$ = 240,18
 
-Para poder obtenerlos necesitamos mirar sus páginas de documentación y calcularlo usando normalmente un patrón estilo tablero de ajedrez que está bien definido. Para poder conseguirlo se va a aplicar algún algoritmo de los ya hechos. He creado los siguientes programas para ello:calibration.py y process.py De todas las calibraciones, finalmente nos quedamos con la media de los 10 últimos tests:
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/intrinsicmedia.png}
+	\end{center}
+	\caption{Media de la matriz de intrínsecos}
+	\label{fig:meanintrinseco}
+\end{figure}
 
-Incluir fotos de los valores prácricos obtenidos
 
-
-
-Podemos ver que lo teórico difiere de la realidad ya que existen muchos factores que pueden influir y aunque el fabricante decida poner unos valores,cada cámara termina teniendo los suyos propios
+Podemos ver que los valores teóricos difieren de la realidad y es debido a que existen muchos factores que pueden influir y aunque el fabricante decida poner unos valores, cada cámara termina teniendo los suyos propios.
 
 
 \subsubsection{Parámetros extrínsecos}
 \label{subsubsec:extrinsecoscamara}
 
+Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real. Dichos parámetros englobban la rotación y la traslación de la cámara. En este caso la cámara tiene una rotación sobre el eje Y de 50º (Figura \ref{fig:extrinseco} izquierda) y está trasladada 8,8 cm en el eje Z (Figura \ref{fig:extrinseco} derecha). 
 
-
-Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real.
-
-Usando reglas podemos obtener los parámetros extrínsecos de la cámara:
-
-Traslación: la cámara se encuentra a 9,8cm del suelo (terminar de confirmar altura... comprobar), la rotación sobre el eje y... incluir matriz de rotación
- 
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/rotation.jpeg}
+		\caption*{\centering Rotación de la cámara} 
+	\end{minipage}
+	\hspace{0.25cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/traslacion.jpeg}
+		\caption*{\centering Traslación de la cámara} 
+	\end{minipage}
+	\caption{Parámetros extrínsecos}
+	\label{fig:extrinseco}
+\end{figure}
 
 
 \subsection{Google Coral}
