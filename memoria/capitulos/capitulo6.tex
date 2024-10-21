@@ -17,7 +17,7 @@ Una vez contado todo el proceso llevado a cabo para el diseño y construcción d
 \section{Simulación}
 \label{sec:simulacion}
 
-En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación, en concreto usando Gazebo. Esta parte ha sido desarrollada en el ordenador principal que se ha usado para este proyecto, explicado en el Apartado \ref{subsec:ordenador}, y por tanto, usa Ubuntu 22.04 LTS y ROS 2 Humble. Para conseguir la simulación, ha sido necesario tener instalado ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}} y seguir los siguientes pasos de instalación: 
+En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación, en concreto usando Gazebo. Esta parte ha sido desarrollada en el ordenador principal que se ha usado para este proyecto, explicado en el Apartado \ref{subsec:ordenador}, y por tanto, usa Ubuntu 22.04 \acs{LTS} y ROS 2 Humble. Para conseguir la simulación, ha sido necesario tener instalado ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}} y seguir los siguientes pasos de instalación: 
 
 \begin{verbatim}
 	sudo apt update && sudo apt upgrade
@@ -258,58 +258,85 @@ Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este vid
 \section{Configuración del robot físico}
 \label{sec:configrf}
 
-Como tiene instalado Ubuntu 20.04 server LTS como se explicó en el capítulo 4... 
+Como se explicó en la sección anterior, el robot ya estaba listo en simulación para, a través de los topics definidos en el apartado anterior, poder definir y monitorear su comportamiento. Después de eso, era momento de poner al robot físico también listo para operar.    
 
-conectarse por ssh instalar en el ordenador cliente (descrito en el apartdo del cap 4...) 
+En la Raspberry Pi se decidió instalar Ubuntu 20.04 Server \acs{LTS}, como se explicó en el Apartado \ref{subsec:ubuntu}, y para ello, fue necesario instalar en el ordenador principal, que actuaba como cliente, el siguiente programa:  \verb|sudo apt-get install openssh-client|. Como en Ubuntu 20.04 la distribución de ROS 2 era foxy, había que seguir los pasos de instalación de la Sección \ref{sec:simulacion} pero cambiando humble por foxy. 
 
-sudo apt-get install openssh-client
+Por otro lado, ahora desde una terminal del ordenador, se puede conectar al robot a través de ssh, escribiendo \verb|ssh usuario@ip_dispositivo| y posteriormente, introduciendo la constraseña creada en el proceso de instalación. Esta era la forma de comunicación con el robot ya que esta distribución, no tenía interfaz gráfica. De las variante de ssh se usaba scp -r para copiar directorios entre el robot y el ordenador local y permitir subir los cambios a Github, y para desarrollar código se usaba un \textit{plugin} de VSCode que permite usar VSCode conectándose al robot usando ssh\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}. 
 
-(incluir enlace del video  https://www.youtube.com/watch?v=QDq1diLoPYs ) 
+Es importante recordar que al usar ROS 2, todos los nodos que estén ejecutando dentro de una red Wifi, serán visibles para cualquier dispositivo que esté conectado dentro de esa red Wifi. Gracias a eso, se facilitó la depuración y monitorización de cada sensor y actuador de PiBotJ. 
 
-
-ssh nombreususario@ip por ejemplo: ssh juloau@192.168.5.73 y a continuación escribir la contraseña y el prompt tiene que cambiar 
- 
-
-scp -r para ir actualizando el repo.
+Una vez dentro del robot y conociendo todas las posibles formas de estar comunicados con él, era el momento de configurar cada dispositivo que conformaba a PiBotJ.
 
 \subsection{Cámara}
 \label{subsec:configcamara}
 
-Como estoy usando ROS2 los nodos dentro de una misma red están visibles desde cualquier dispositivo, así que lanzando el nodo de la cámara desde el robot, he podido lanzar rqt\_image\_view desde el ordenador y ver que la cámara funciona perfectamente.
+La cámara fue conectada en el puerto CSI y para hacerla funcionar fue necesario instalar los siguientes programas: 
+
+\begin{verbatim}
+	sudo apt-get install gstreamer1.0-tools \ 
+	gstreamer1.0-plugins-base gstreamer1.0-plugins-good \ 
+	gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+\end{verbatim}
+
+Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.txt| añadiendo \verb|start_x=1| al final y se tuvo que reiniciar la Raspberry Pi. Para comprobar que la configuración fue correcta, era necesario usar el comando \verb|v4l2-ctl --list-devices|  que comprueba la lista de dispositivos de video y media que están disponibles en el sistema. En la Figura \ref{fig:v4l2} se puede ver el resultado de dicho comando y  muestra que la cámara se encontraba conectada en el dispositivo \verb|/dev/video0|.
+
+ 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=9cm]{figs/cap6/vl.png}
+	\end{center}
+	\caption{Dispositivos de video y media disponibles en PiBotJ}
+	\label{fig:v4l2}
+\end{figure}
 
 
-Fuente de información: 
+Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente la imagen se pudiera ver correctamente. Para ello, partiendo del \verb|cameraPublisher.py| de este tutorial\footnote{\url{https://www.youtube.com/watch?v=6e94ZnYnO_U}}, se pudo crear un nodo llamado \verb|camera_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera.py}} que permitía leer y publicar la imagen del dispositivo de la cámara. Se podía monitorizar usando las mismas herramientas que en el Apartado \ref{subsec:funsimulacion} para controlar la cámara en simulación (Figura \ref{fig:camararr}).
 
-https://www.youtube.com/watch?v=6e94ZnYnO\_U
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap6/camerarr.png}
+	\end{center}
+	\caption{Cámara de PiBotJ en funcionamiento}
+	\label{fig:camararr}
+\end{figure}
 
+Para posteriores cálculos, era necesario conocer tanto los parámetros intrínsecos como extrínsecos de la cámara.  
 
-Parámetros intrínsecos
+\subsubsection{Parámetros intrínsecos}
+\label{subsubsec:intrinsecoscamara}
 
-Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes en tanto no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Los provee el fabricante de la cámara, o bien se pueden estimar.
+Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes en tanto no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, o bien se pueden estimar y se decidió calcular las dos posibles opciones.
 
-- Teóricos 
-
-Fuentes consultadas:
-
-Elinux: https://elinux.org/Rpi\_Camera\_Module\#Technical\_Parameters\_.28v.2\_board.29
-
-Spiedigitallibrary: https://www.spiedigitallibrary.org/journals/journal-of-electronic-imaging/volume-26/issue-01/013014/Laying-the-foundation-to-use-Raspberry-Pi-3-V2-camera/10.1117/1.JEI.26.1.013014.full?SSO=1
-
-Waveshare: https://www.waveshare.com/rpi-camera-v2.htm?sku=11633
-
-
-Pi supply: https://uk.pi-supply.com/products/raspberry-pi-camera-board-v2-1-8mp-1080p
+Para los cálculos teóricos se decidió consultar en numerosas fuentes de información y gracias a \textit{Elinux}\footnote{\url{https://elinux.org/Rpi_Camera_Module\#Technical_Parameters_.28v.2_board.29}} se pudo obtener sus parámetros técnicos y partiendo del libro \cite{Hartley2004} (a partir de la página 155) y cálculos básicos matemáticos, se pudo encontrar las fórmulas de la distancia focal (Ecuación \ref{ec:distfocal}) y del centro de la imagen (Ecuación \ref{ec:cenimagen}).
 
 
-Multiple View Geometry in Computer Vision (a partir página 155)
+\begin{myequation}[h]
+	\begin{align}
+		f_x &= \text{Res. horizontal} \cdot \frac{F}{\text{tam. sensor horizontal}} \quad
+		f_x = 640 \cdot \frac{3.04}{3.674} = 529,56 px \\
+		\hspace{1cm}
+		f_y &= \text{Res. vertical} \cdot \frac{F}{\text{tam. sensor vertical}} \quad
+		f_y = 480 \cdot \frac{3.04}{2.760} = 528,69 px
+	\end{align}
+	\caption[Fórmula para calcular la distancia focal teórica]{Fórmula para calcular la distancia focal teórica}
+	\label{ec:distfocal}
+\end{myequation}
+
+\begin{myequation}[h]
+	\begin{align}
+		c_x &= \frac{\text{Res. horizontal}}{2} \quad
+		c_x = \frac{640}{2} = 320 \\
+		\hspace{1cm}
+		c_y &= \frac{\text{Res. vertical}}{2} \quad
+		c_y =  \frac{480}{2} = 240
+	\end{align}
+	\caption[Fórmula para calcular el centro de la imagen]{Fórmula para calcular el centro de la imagen}
+	\label{ec:cenimagen}
+\end{myequation}
 
 
-
-Incluir imagen de los valores teóricos obtenidos (está en ros2 humble)
-
-
-
-
+Para los parámetros 
 - Prácticos 
 
 Para poder obtenerlos necesitamos mirar sus páginas de documentación y calcularlo usando normalmente un patrón estilo tablero de ajedrez que está bien definido. Para poder conseguirlo se va a aplicar algún algoritmo de los ya hechos. He creado los siguientes programas para ello:calibration.py y process.py De todas las calibraciones, finalmente nos quedamos con la media de los 10 últimos tests:
@@ -321,7 +348,10 @@ Incluir fotos de los valores prácricos obtenidos
 Podemos ver que lo teórico difiere de la realidad ya que existen muchos factores que pueden influir y aunque el fabricante decida poner unos valores,cada cámara termina teniendo los suyos propios
 
 
-Parámetros extrínsecos
+\subsubsection{Parámetros extrínsecos}
+\label{subsubsec:extrinsecoscamara}
+
+
 
 Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real.
 
@@ -578,10 +608,10 @@ CONTAR LO DE UPDATE EMA: https://admiralmarkets.com/es  (media movil exponencial
 
 Se ha usado la pendiente de la recta para hacer las conversiones .... Mirar los papeles y código: 
 
-https://www.google.com/search?client=ubuntu-sn\&channel=fs\&q=pendiente+de+la+recta+#vhid=HhxrPc0n8LdJsM\&vssid=l
+https://www.google.com/search?client=ubuntu-sn\&channel=fs\&q=pendiente+de+la+recta+\#vhid=HhxrPc0n8LdJsM\&vssid=l
 
 Ejemplos en funcionamiento del vff:
-https://gsyc.urjc.es/jmvega/research/webs/2019.html#.21
+https://gsyc.urjc.es/jmvega/research/webs/2019.html\#.21
 
 
 Usar locks para evitar que haya condiciones de carrera: https://realpython.com/intro-to-python-threading/

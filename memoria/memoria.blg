@@ -20,45 +20,45 @@ Warning--empty journal in giri2020maquinas
 Warning--empty journal in llopis2020deterioros
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1098 of file apalike.bst
-You've used 24 entries,
+You've used 25 entries,
             1935 wiz_defined-function locations,
-            619 strings with 8265 characters,
-and the built_in function-call counts, 10045 in all, are:
-= -- 956
-> -- 497
-< -- 17
-+ -- 176
-- -- 172
-* -- 871
-:= -- 1766
-add.period$ -- 72
-call.type$ -- 24
-change.case$ -- 204
-chr.to.int$ -- 24
-cite$ -- 29
-duplicate$ -- 367
-empty$ -- 641
-format.name$ -- 211
-if$ -- 1952
+            625 strings with 8410 characters,
+and the built_in function-call counts, 10369 in all, are:
+= -- 987
+> -- 510
+< -- 18
++ -- 180
+- -- 176
+* -- 896
+:= -- 1824
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 211
+chr.to.int$ -- 25
+cite$ -- 30
+duplicate$ -- 381
+empty$ -- 664
+format.name$ -- 218
+if$ -- 2016
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 121
-num.names$ -- 72
-pop$ -- 178
+missing$ -- 25
+newline$ -- 126
+num.names$ -- 75
+pop$ -- 186
 preamble$ -- 1
-purify$ -- 205
+purify$ -- 212
 quote$ -- 0
-skip$ -- 291
+skip$ -- 301
 stack$ -- 0
-substring$ -- 595
-swap$ -- 53
+substring$ -- 607
+swap$ -- 54
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
+type$ -- 146
 warning$ -- 5
-while$ -- 67
+while$ -- 69
 width$ -- 0
-write$ -- 308
+write$ -- 321
 (There were 3 error messages)

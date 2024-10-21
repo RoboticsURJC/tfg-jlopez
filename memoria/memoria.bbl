@@ -64,6 +64,11 @@ Giri, L.~A. (2020).
 \newblock M{\'a}quinas t{\'e}rmicas desde la antig{\"u}edad al siglo xvii:
   an{\'a}lisis hist{\'o}rico desde la filosof{\'\i}a de la t{\'e}cnica.
 
+\bibitem[Hartley and Zisserman, 2004]{Hartley2004}
+Hartley, R.~I. and Zisserman, A. (2004).
+\newblock {\em Multiple View Geometry in Computer Vision}.
+\newblock Cambridge University Press, ISBN: 0521540518, second edition.
+
 \bibitem[Katsamenis et~al., 2022]{10.1145/3529190.3534746}
 Katsamenis, I., Bimpas, M., Protopapadakis, E., Zafeiropoulos, C., Kalogeras,
   D., Doulamis, A., Doulamis, N., Mart\'{\i}n-Portugu\'{e}s~Montoliu, C.,
