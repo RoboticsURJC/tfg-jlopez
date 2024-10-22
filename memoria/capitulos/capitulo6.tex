@@ -590,27 +590,22 @@ Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout
 	\label{fig:motorlogic}
 \end{figure}
 
-Todos los componentes ya estaban configurados correctamentes y ya era el momento que poder desarrollar el código necesario para cumplir con el objetivo principal descrito en el Apartado \ref{sec:descripcion}.
+Todos los componentes ya estaban configurados correctamente y ya era el momento que poder desarrollar el código necesario para cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}.
 
 
 \section{Software aplicado al robot físico}
 \label{sec:softwarerf}
 
-La idea era hacer un hardware interface pero no lo conseguí y decidí usar nodos publicadores y suscriptores.
-
-COMENTAR TODO ESTE APARTADO A PARTIR DE LAS LÍNEAS DE CÓDIGO DE CADA FICHERO  
+PiBotJ ya estaba listo para poder recibir la inteligencia que necesitaba para conseguir el objetivo principal descrito en la Sección \ref{sec:descripcion}. A diferencia del Apartado \ref{subsec:cap6ros2control} que empleaba ROS 2 control, en este caso al estar todo configurado a bajo nivel, se decidió usar una arquitectura de nodos con \textit{topics} publicadores y suscriptores.
 
 
-
-
-Capítulo 6: incluir lo de openvision paper\\
-
-\subsection{IA: yolov8 y aplicación a detectar baches}
-
+\subsection{Red neuronal para la detección de baches}
 \label{subsec:softwareiayolo}
 
+entrenamiento de un modelo de aprendizaje supervisado que detecta baches
 
 
+IA: yolov8 y aplicación a detectar baches
 Video de ultralytics que explica la instalación: https://www.youtube.com/watch?v=w4yHORvDBw0
 
 Explicación del tipo de ia usada para este proyecto.

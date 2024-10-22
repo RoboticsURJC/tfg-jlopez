@@ -80,19 +80,22 @@
 \contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{84}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Servomotores}{88}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{89}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Modelo Pin Hole}{90}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Shoelace method}{90}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}IA: yolov8 y aplicación a detectar baches}{91}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}VFF}{92}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Interfaz Web}{93}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}Detección de líneas}{93}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}¿Aplicación Completa?}{94}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{90}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Código para explicar los valores de tflite}{91}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Lógica usada para sacar el contorno}{91}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Modelo Pin Hole}{91}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Shoelace method}{92}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Detección de líneas}{92}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}VFF}{93}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}Teleoperado}{93}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.9}Interfaz Web}{93}{subsection.6.3.9}%
+\contentsline {subsection}{\numberline {6.3.10}¿Aplicación Completa?}{94}{subsection.6.3.10}%
 \contentsline {section}{\numberline {6.4}Snippets}{94}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Verbatim}{94}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Ecuaciones}{95}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Tablas o cuadros}{95}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Segunda sección}{96}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Números}{96}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.1}Números}{97}{subsection.6.8.1}%
 \contentsline {subsection}{\numberline {6.8.2}Listas}{97}{subsection.6.8.2}%
 \contentsline {paragraph}{Referencias bibliográficas}{97}{paragraph*.152}%
 \contentsline {section}{\numberline {6.9}Corrector ortográfico}{98}{section.6.9}%
