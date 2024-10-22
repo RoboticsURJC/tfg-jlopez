@@ -384,20 +384,19 @@ En su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}
 
 
 \begin{lstlisting}[language=bash]
- echo "deb https://packages.cloud.google.com/apt \
- coral-edgetpu-stable main" | \
- sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
-
- curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
-  | sudo apt-key add -
-
- sudo apt-get update	
-
- sudo apt-get install libedgetpu1-std
-
- # Conecta el USB en uno de los puertos 3.0
-
- sudo apt-get install python3-pycoral
+	echo "deb https://packages.cloud.google.com/apt \
+	coral-edgetpu-stable main" | \
+	sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+	
+	curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+	| sudo apt-key add -
+	
+	sudo apt-get update	
+	sudo apt-get install libedgetpu1-std
+	
+	# Conecta el USB en uno de los puertos 3.0
+	
+	sudo apt-get install python3-pycoral
 \end{lstlisting}
 
 Finalmente, el proceso se debería haber completado cuando la salida del último comando se debería ver como muestra la Figura \ref{fig:outcoral}.
@@ -414,7 +413,7 @@ Finalmente, el proceso se debería haber completado cuando la salida del último
 \subsection{Módulo GPS}
 \label{subsec:configgps}
 
-El módulo \acs{GPS} utiliza una comunicación \ac{UART}, o también conocido como en serie, mediante pin de transmisión TX y pin de recepción RX y se utiliza en los pines tratados en la Sección \ref{sec:disposicionhardware} y para habilitarlos, era necesario seguir los siguientes pasos de configuración.
+El módulo \acs{GPS} utiliza una comunicación \acs{UART}, o también conocido como en serie, mediante pin de transmisión TX y pin de recepción RX y se utiliza en los pines tratados en la Sección \ref{sec:disposicionhardware} y para habilitarlos, era necesario seguir los siguientes pasos de configuración.
 
 La estructura seguida en este tutorial\footnote{\url{https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/}} ha sido de gran ayuda para configurar el módulo \acs{GPS}, que para esta arquitectura, ha sido necesario seguir los siguientes pasos: 
 
@@ -562,20 +561,37 @@ Debido a la distribución de Ubuntu usada, hay problemas con encender la Raspber
 El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es, dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
 
 
-\subsection{Motores}
+\subsection{Servomotores}
 \label{subsec:configmotores}
 
+Los últimos componentes que faltaban por configurar son los motores, que van conectados a los pines GPIO y para ello hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 
 
-Explicar paso a paso y explicar y demostrar que todas las partes funcionan.
+\begin{verbatim}
+	sudo apt-get update
+	sudo apt-get install rpi.gpio-common python3-pigpio python3-gpiozero \
+	 python3-rpi.gpio
+\end{verbatim}
 
-Seguí investigando y es importante tener en cuenta cómo funciona los servomotores, qué es la frecuencia y qué es PWM. (explicar todo eso del pwm... enlace: https://raspberrypi-espana.es/servo-frambuesa-pi/   más enlaces: https://www.youtube.com/watch?v=CHbUgggVQpA   otro enlace: https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38)
+Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups} y ya importando la librería \verb|RPi.GPIO| se podían operar directamente con ellos. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación por ancho de pulsos (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()| que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo y en la Figura \ref{fig:motorlogic} se muestra los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia detrás, girar hacia la izquierda mientras avanza hacia adelante y girar hacia la derecha mientras avanza hacia adelante.
 
-Meter foto del movimiento de la rueda (que hice yo)
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=12cm]{figs/cap6/pwm.png}
+	\end{center}
+	\caption{Diagrama para la posición central del servo}
+	\label{fig:pwm}
+\end{figure}
 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=6cm]{figs/cap6/motorlogic.png}
+	\end{center}
+	\caption{Distintas direcciones de PiBotJ}
+	\label{fig:motorlogic}
+\end{figure}
 
-HUMBLE: detectar los pines -> añadir dialout a groups y hay que inicializar el demonio: sudo pigpiod
+Todos los componentes ya estaban configurados correctamentes y ya era el momento que poder desarrollar el código necesario para cumplir con el objetivo principal descrito en el Apartado \ref{sec:descripcion}.
 
-Contar lo de articulard robotics y que se intentó hacer ros2 control
 
 \section{Software aplicado al robot físico}
 \label{sec:softwarerf}

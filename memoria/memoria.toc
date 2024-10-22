@@ -78,28 +78,28 @@
 \contentsline {subsubsection}{Parámetros extrínsecos}{82}{subsubsection*.139}%
 \contentsline {subsection}{\numberline {6.2.2}Google Coral USB}{83}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{84}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Motores}{88}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.4}Servomotores}{88}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{89}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Modelo Pin Hole}{89}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Shoelace method}{89}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}IA: yolov8 y aplicación a detectar baches}{90}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}VFF}{91}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Interfaz Web}{91}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}Detección de líneas}{92}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}¿Aplicación Completa?}{92}{subsection.6.3.7}%
-\contentsline {section}{\numberline {6.4}Snippets}{92}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Verbatim}{93}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Ecuaciones}{94}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Tablas o cuadros}{94}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Segunda sección}{95}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Números}{95}{subsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.8.2}Listas}{95}{subsection.6.8.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{96}{paragraph*.150}%
-\contentsline {section}{\numberline {6.9}Corrector ortográfico}{96}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Experimentos}{97}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{97}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{97}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{98}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{98}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{99}{section.8.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{100}{appendix*.151}%
+\contentsline {subsection}{\numberline {6.3.1}Modelo Pin Hole}{90}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Shoelace method}{90}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}IA: yolov8 y aplicación a detectar baches}{91}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}VFF}{92}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Interfaz Web}{93}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Detección de líneas}{93}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}¿Aplicación Completa?}{94}{subsection.6.3.7}%
+\contentsline {section}{\numberline {6.4}Snippets}{94}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Verbatim}{94}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Ecuaciones}{95}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Tablas o cuadros}{95}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Segunda sección}{96}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Números}{96}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Listas}{97}{subsection.6.8.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{97}{paragraph*.152}%
+\contentsline {section}{\numberline {6.9}Corrector ortográfico}{98}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Experimentos}{99}{chapter.7}%
+\contentsline {section}{\numberline {7.1}}{99}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{99}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{100}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{100}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{101}{section.8.2}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{102}{appendix*.153}%
