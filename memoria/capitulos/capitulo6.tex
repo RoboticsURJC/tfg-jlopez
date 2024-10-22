@@ -605,62 +605,10 @@ COMENTAR TODO ESTE APARTADO A PARTIR DE LAS LÍNEAS DE CÓDIGO DE CADA FICHERO
 
 Capítulo 6: incluir lo de openvision paper\\
 
-\subsection{Modelo Pin Hole}
-\label{subsec:softwarepinhole}
-
-Enlace donde se encuentra toda la información: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Hip\%C3\%B3tesis-suelo
-
-\subsection{Shoelace method}
-\label{subsec:softwareshoelace}
-
-
-
-Para calcular el área se ha decidido usar la fórmula "shoelace" (cordón de zapato). Es un algoritmo matemático para calcular el área de un polígono que se describe por sus coordenadas cartesianas (2D). El nombre de este algoritmo es debido a que tiene forma de atarse los cordones. Los puntos se tienen que colocar en sentido horario y el primer punto se tiene que duplicar y su segunda copia se sitúa al final de todos (como para cerrar el círculo).
-
-Ejemplo de aplicación:
-
-Cuadrado: (-140,-45), (-140,45), (140,45), (140,-45), (-140,-45)
-
-Código en python:
-
-def shoelace(coords):
-n = len(coords)
-area = 0.0
-
-for i in range(n - 1):
-x1, y1 = coords[i]
-x2, y2 = coords[i + 1]
-area += (x1 * y2) - (x2 * y1)
-
-\# Agregar el último segmento
-x1, y1 = coords[-1]
-x2, y2 = coords[0]
-area += (x1 * y2) - (x2 * y1)
-
-return abs(area) / 2.0
-
-El resultado es de 25200 mm²
-
-La fórmula del rectángulo: base x altura
-
-280*90 = 25200mm²
-
-Coincide con la fórmula de "shoelace"
-
-Algunas fuentes de información:
-
-https://en.wikipedia.org/wiki/Shoelace\_formula
-
-https://www.youtube.com/watch?v=iKIpraBC-Nw
-
-https://www.youtube.com/watch?v=0KjG8Pg6LGk
-
-
-Incluir lo del volumen medio de 40 mm de la RAC Foundation
-
 \subsection{IA: yolov8 y aplicación a detectar baches}
 
 \label{subsec:softwareiayolo}
+
 
 
 Video de ultralytics que explica la instalación: https://www.youtube.com/watch?v=w4yHORvDBw0
@@ -715,9 +663,81 @@ Interpretar la salida según al gusto del desarrollador
 
 CONTAR LO DE UPDATE EMA: https://admiralmarkets.com/es  (media movil exponencial)
 
+\subsection{Código para explicar los valores de tflite}
+\label{subsec:valorestflite}
+
+Tensores de entrada, de salida...
+
+\subsection{Lógica usada para sacar el contorno}
+\label{subsec:contorno}
+
+4s..
+
+
+\subsection{Modelo Pin Hole}
+\label{subsec:softwarepinhole}
+
+Enlace donde se encuentra toda la información: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Hip\%C3\%B3tesis-suelo
+
+\subsection{Shoelace method}
+\label{subsec:softwareshoelace}
+
+
+
+Para calcular el área se ha decidido usar la fórmula "shoelace" (cordón de zapato). Es un algoritmo matemático para calcular el área de un polígono que se describe por sus coordenadas cartesianas (2D). El nombre de este algoritmo es debido a que tiene forma de atarse los cordones. Los puntos se tienen que colocar en sentido horario y el primer punto se tiene que duplicar y su segunda copia se sitúa al final de todos (como para cerrar el círculo).
+
+Ejemplo de aplicación:
+
+Cuadrado: (-140,-45), (-140,45), (140,45), (140,-45), (-140,-45)
+
+Código en python:
+
+def shoelace(coords):
+n = len(coords)
+area = 0.0
+
+for i in range(n - 1):
+x1, y1 = coords[i]
+x2, y2 = coords[i + 1]
+area += (x1 * y2) - (x2 * y1)
+
+\# Agregar el último segmento
+x1, y1 = coords[-1]
+x2, y2 = coords[0]
+area += (x1 * y2) - (x2 * y1)
+
+return abs(area) / 2.0
+
+El resultado es de 25200 mm²
+
+La fórmula del rectángulo: base x altura
+
+280*90 = 25200mm²
+
+Coincide con la fórmula de "shoelace"
+
+Algunas fuentes de información:
+
+https://en.wikipedia.org/wiki/Shoelace\_formula
+
+https://www.youtube.com/watch?v=iKIpraBC-Nw
+
+https://www.youtube.com/watch?v=0KjG8Pg6LGk
+
+
+Incluir lo del volumen medio de 40 mm de la RAC Foundation
+
+
+\subsection{Detección de líneas}
+\label{subsec:softwaredl}
+
+Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
+
 
 \subsection{VFF}
 \label{subsec:softwarevff}
+
+TANTO PARA LOS MOTORES COMO PARA LA CÁMARA
 
 Se ha usado la pendiente de la recta para hacer las conversiones .... Mirar los papeles y código: 
 
@@ -731,6 +751,12 @@ Usar locks para evitar que haya condiciones de carrera: https://realpython.com/i
 
 
 Explicación del código que usa vff y desarrollé para rob servicios: https://robmovjuloau2022.blogspot.com/
+
+
+\subsection{Teleoperado}
+\label{subsec:teleoperado}
+
+Movimiento motores
 
 \subsection{Interfaz Web}
 \label{subsec:softwareweb}
@@ -769,11 +795,6 @@ En una nueva ventana del navegador insertar lo mismo que la imagen de abajo, cam
 
 Resultado final: Incluir imagen
 
-
-\subsection{Detección de líneas}
-\label{subsec:softwaredl}
-
-Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
 
 \subsection{¿Aplicación Completa?}
 
