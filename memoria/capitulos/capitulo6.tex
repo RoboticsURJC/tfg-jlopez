@@ -14,30 +14,30 @@ Bill Gates\\
 \vspace{1cm}
 \setcounter{footnote}{84}
 
-Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico, en este capítulo se aborda el soporte \textit{software} en el robot para ponerlo en funcionamiento tanto en simulación como en la vida real.
+Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico descrito, en este capítulo se explica la implementación \textit{software} desarrrollado para dar soporte a dicho prototipo.
 
 \section{Simulación}
 \label{sec:simulacion}
 
-En esta sección se va a tratar el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación, en concreto usando Gazebo. Esta parte ha sido desarrollada en el ordenador principal que se ha usado para este proyecto, explicado en el Apartado \ref{subsec:ordenador}, y por tanto, usa Ubuntu 22.04 \acs{LTS} y ROS 2 Humble. Para conseguir la simulación, ha sido necesario tener instalado ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}} y seguir los siguientes pasos de instalación: 
+En esta sección se describe el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación; en concreto, a través del simulador Gazebo. Esta parte ha sido desarrollada en el ordenador principal, explicado en la Sección \ref{subsec:ordenador}, apoyándose en el sistema ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}}.
 
-\begin{verbatim}
-	sudo apt update && sudo apt upgrade
-	sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
-	sudo apt install ros-humble-rviz2
-	sudo apt install ros-humble-gazebo-ros-pkgs
-	sudo apt install ros-humble-xacro ros-humble-robot-state-publisher 
-	sudo apt install ros-humble-joint-state-publisher
-\end{verbatim}
+%\begin{verbatim}
+%	sudo apt update && sudo apt upgrade
+%	sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
+%	sudo apt install ros-humble-rviz2
+%	sudo apt install ros-humble-gazebo-ros-pkgs
+%	sudo apt install ros-humble-xacro ros-humble-robot-state-publisher 
+%	sudo apt install ros-humble-joint-state-publisher
+%\end{verbatim}
 
-Una vez instalado todos los programas, fue el momento de empezar a desarrollar el código. 
+%Una vez instalado todos los programas, fue el momento de empezar a desarrollar el código. 
 
 \subsection{URDF/Xacro}
 \label{subsec:urdf}
 
-Primero de todo fue necesario definir las estructuras y propiedades del robot. Para ello, se decidió usar el formato \ac{URDF}\footnote{\url{http://wiki.ros.org/urdf}} y \textit{Xacro}\footnote{\url{http://wiki.ros.org/xacro}}, muy comunes en aplicaciones robóticas. \acs{URDF} usa un formato de ficheros XML y describe al robot como un conjunto de \textit{links} (enlaces), que están conectadas por una serie de \textit{joints} (articulaciones). Mientras que \textit{Xacro}, usa también un formato de ficheros XML que permite crear URDF de manera más modular, reutilizable y eficiente mediante el uso de macros y propiedades. Para más información se puede consultar la siguiente fuente\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/}}.
+Primero de todo fue necesario definir las estructuras y propiedades del robot. Para ello, se decidió usar el formato \ac{URDF}\footnote{\url{http://wiki.ros.org/urdf}} y \textit{Xacro}\footnote{\url{http://wiki.ros.org/xacro}}, muy comunes en aplicaciones robóticas. \acs{URDF} usa un formato de ficheros XML y describe al robot como un conjunto de \textit{links} (enlaces), que están conectadas por una serie de \textit{joints} (articulaciones); mientras que \textit{Xacro} usa también un formato de ficheros XML que permite crear URDF de manera más modular, reutilizable y eficiente mediante el uso de macros y propiedades\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/}}.
 
-En este proyecto se decidió crear una serie de ficheros \textit{Xacro}, cada uno dedicado a las distintas partes del robot (\verb|camera.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/camera.xacro}}, \verb|gps.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/gps.xacro}} y \verb|robot_core.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot_core.xacro}}). Cada fichero \textit{Xacro} necesita siempre tener la mismas etiquetas de \verb|<joint>| y \verb|<link>|, empleadas según convenga. Es importante tener en cuenta herramientas como validadores de XML\footnote{\url{https://www.xmlvalidation.com/index.php?id=1&L=0\#xml-9-6--1732781305}} para evitar problemas.
+En este proyecto se decidió crear una serie de ficheros \textit{Xacro}, cada uno dedicado a las distintas partes del robot (\verb|camera.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/camera.xacro}}, \verb|gps.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/gps.xacro}} y \verb|robot_core.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot_core.xacro}}). Cada fichero \textit{Xacro} necesita siempre tener la mismas etiquetas de \verb|<joint>| y \verb|<link>|, empleadas según convenga. Es importante usar herramientas como validadores de XML\footnote{\url{https://www.xmlvalidation.com/index.php?id=1&L=0\#xml-9-6--1732781305}} para evitar problemas.
 
 Existen cuatro tipos de \textit{joint}: \textit{prismatic}, \textit{continuous}, \textit{revolute} y \textit{fixed}. En el Código \ref{cod:fj} se puede ver la definición de una \textit{fixed joint}; si se quiere usar otro tipo de \textit{joint}, hay que añadir algunos campos\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#joint-tags}}.
 
@@ -53,7 +53,7 @@ Existen cuatro tipos de \textit{joint}: \textit{prismatic}, \textit{continuous},
 	\label{cod:fj}
 			\end{code}
 
-En relación a los \textit{link}, obligatoriamente tienen que tener las macros de \verb|<visual>|, \verb|<collision>| e \verb|<inertial>|, sino pueden surgir errores\footnote{\url{https://answers.gazebosim.org//question/25166/problem-changing-joint-from-fixed-to-revolute/}}. Existen cuatro tipos de geometría: \textit{box}, \textit{cylinder}, \textit{sphere} y \textit{mesh}. El Código \ref{cod:ml} muestra un ejemplo de una \textit{mesh link} pero si se quiere tratar más ejemplos, se puede consultar la siguiente fuente\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}.
+En relación a los \textit{link}, obligatoriamente tienen que tener las macros de \verb|<visual>|, \verb|<collision>| e \verb|<inertial>|, si no pueden surgir errores\footnote{\url{https://answers.gazebosim.org//question/25166/problem-changing-joint-from-fixed-to-revolute/}}. Existen cuatro tipos de geometría: \textit{box}, \textit{cylinder}, \textit{sphere} y \textit{mesh}. El Código \ref{cod:ml} muestra un ejemplo de una \textit{mesh link}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}.
 
 \begin{code}[h]
 	\begin{lstlisting}[language=xml]
@@ -85,7 +85,7 @@ En relación a los \textit{link}, obligatoriamente tienen que tener las macros d
 \end{code}
 
 
-Una vez fueron definidas las distintas partes del robot, fue el momento de incluir en los distintos ficheros las interacciones del robot con el simulador y para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}. Existen muchos tipos de interacciones pero el Código \ref{cod:gazebo} muestra cómo simular el sensor cámara. Para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Si se quiere tratar más ejemplos, se puede consultar la siguiente fuente\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
+Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}. Existen muchos tipos de interacciones; en el Código \ref{cod:gazebo} se muestra; a modo de ejemplo, cómo simular el sensor cámara. Por su parte, para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 
 \begin{code}[h]
 	\begin{lstlisting}[language=xml]
@@ -117,7 +117,7 @@ Una vez fueron definidas las distintas partes del robot, fue el momento de inclu
 	\label{cod:gazebo}
 \end{code}
 
-En el presente proyecto se han definido los sistemas de coordenadas que aparecen en la Figura \ref{fig:links}. Una vez se definió el robot y los sensores necesarios para que Gazebo interactuara con el modelo, era el momento de usar ROS 2 Control. 
+Asimismo, se han definido los sistemas de coordenadas que aparecen en la Figura \ref{fig:links}. Una vez se definió el robot y los sensores necesarios para que Gazebo interactuara con el modelo, se hizo uso de ROS 2 Control. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -131,11 +131,11 @@ En el presente proyecto se han definido los sistemas de coordenadas que aparecen
 \subsection{ROS 2 Control}
 \label{subsec:cap6ros2control}
 
-Como se explicó en el Apartado \ref{subsec:ros2control}, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
+Como se explicó en la Sección \ref{subsec:ros2control}, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente, y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
 
-Este proyecto se definió un sistema llamado \textit{GazeboSystem} para el \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En este caso se decidió controlar a \textit{left\_wheel\_joint}, \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellas \textit{joints} que tenían asignados en la vida real un motor. 
+Para este proyecto se definió un sistema llamado \textit{GazeboSystem}, encargado del \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En muchos casos, se decidió controlar a \textit{left\_wheel\_joint}, \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellos \textit{joints} que tenían asignados un motor en la vida real. 
 
-Si se ejecuta: \verb|ros2 control list_hardware_interfaces|, se puede ver las interfaces asociadas de lectura/escritura y de monitorización que tiene cada \textit{joint} a controlar. En la figura \ref{fig:ros2control} se puede ver las interfaces que tiene PiBotJ y por ende, cómo se van a controlar cada interfaz.
+Al ejecutar \verb|ros2 control list_hardware_interfaces| se puede ver las interfaces asociadas de lectura/escritura y de monitorización que tiene cada \textit{joint} a controlar. En la Figura \ref{fig:ros2control} se pueden ver las interfaces que tiene PiBotJ y, por ende, cómo se va a controlar cada interfaz.
 
  \begin{figure} [h!]
  	\begin{center}
@@ -145,9 +145,9 @@ Si se ejecuta: \verb|ros2 control list_hardware_interfaces|, se puede ver las in
  	\label{fig:ros2control}
  \end{figure}
 
-Tras definir las \textit{joints} a controlar, era necesario definir en un fichero YAML, el tipo de controladores que utilizaba el \textit{controller manager}. Dentro de cada controlador, había que asignar las \textit{joints} definidas previamente al controlador que necesite cada una. En este caso, se asignaron las ruedas a un control diferencial y la cámara se decidió controlar por posición, usando el topic: \verb|\pos_cont|. Para más información, se puede consultar la siguiente fuente\footnote{\url{https://control.ros.org/humble/index.html}}.
+Tras definir los \textit{joints} a controlar, era necesario definir en un fichero YAML el tipo de controladores que utilizaba el \textit{controller manager}. Dentro de cada controlador había que asignar los \textit{joints} definidos previamente al controlador que necesite cada una. En este caso, se asignaron las ruedas a un control diferencial y, la cámara, se decidió controlar por posición, usando el \textit{topic} \verb|\pos_cont|\footnote{\url{https://control.ros.org/humble/index.html}}.
 
-Una vez el robot estaba completamente definido en los diferentes ficheros \textit{Xacro}, era necesario unirlos todos en otro fichero llamado \verb|robot.urdf.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot.urdf.xacro}} para poder facilitar el publicar el estado del robot y eso se consigue usando \verb|robot_state_publisher|.
+Una vez el robot estaba completamente definido en los diferentes ficheros \textit{Xacro}, era necesario unirlos todos en otro fichero llamado \verb|robot.urdf.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot.urdf.xacro}} para poder facilitar la publicación del estado del robot, y eso se consigue usando \verb|robot_state_publisher|.
  
 \subsection{Robot State Publisher}
 \label{subsec:robotstatepublisher}
@@ -167,7 +167,7 @@ Una vez todos los elementos a utilizar estaban listos, era el momento de aglutin
 \subsection{Launcher}
 \label{subsec:launcher}
 
-El \textit{launcher} que se decidió crear para este proyecto parte del creado por Johnewans\footnote{\url{https://github.com/joshnewans/articubot_one/blob/main/launch/launch_sim.launch.py}}, creador de Articulated Robotics y fue modificado según las necesidades, siendo finalmente el resultante \verb|launch_sim.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/launch/launch_sim.launch.py}}. Para facilitar su entendimiento, la Figura \ref{fig:launcherdiagram} explica los componentes que forman parte del \textit{launcher}. Llegados a este punto, PiBotJ ya estaba listo para ejecutarse completamente.
+El \textit{launcher} que se decidió crear para este proyecto parte del creado por Johnewans\footnote{\url{https://github.com/joshnewans/articubot_one/blob/main/launch/launch_sim.launch.py}}, creador de Articulated Robotics, y fue modificado según las necesidades, siendo finalmente el resultante \verb|launch_sim.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/launch/launch_sim.launch.py}}. Para facilitar su entendimiento, la Figura \ref{fig:launcherdiagram} explica los componentes que forman parte del \textit{launcher}. Con esto, ya podemos ejecutar al completo el PiBotJ.
 
 
  \begin{figure} [h!]
@@ -179,17 +179,10 @@ El \textit{launcher} que se decidió crear para este proyecto parte del creado p
 \end{figure}
 
 
-\subsection{Simulación puesta en funcionamiento}
+\subsection{Ejecución en simulador}
 \label{subsec:funsimulacion}
 
-Para poner en funcionamiento el modelo, únicamente había que escribir los siguientes comandos:
-\begin{verbatim}
-	colcon build --packages-select pibotj_r2c   # compila los paquetes
-	source ./install/setup.bash                 # configura variables 
-	ros2 launch pibotj_r2c launch_sim.launch.py
-\end{verbatim} 
-
-Si la primera vez que se lance el robot ocurre algún error, es normal y hay que reiniciar el proceso. Para demostrar que todos los topics que forman parte del robot se han inicializado correctamente, hay que escribir el siguiente comando:  \verb|ros2 topic list| y su salida se puede ver en la Figura \ref{fig:topic}.
+Para mostrar todos los \textit{topics} que forman parte del robot, lanza el siguiente comando:  \verb|ros2 topic list|, y su salida se puede ver en la Figura \ref{fig:topic}.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -200,17 +193,17 @@ Si la primera vez que se lance el robot ocurre algún error, es normal y hay que
 \end{figure}
 
 
-De todos esos topics, para poder conseguir el objetivo propuesto en la Sección \ref{sec:descripcion}, es necesario únicamente utilizar \verb|/camera/image_raw| para ver la imagen de la cámara, \verb|/cmd_vel| para mover las ruedas, \verb|/gps/data| para ver los valores de posición del \acs{GPS}, y \verb|/pos_cont/commands| para mover el motor de la cámara.
+De todos esos \textit{topics}, para conseguir el objetivo propuesto en la Sección \ref{sec:descripcion}, es necesario utilizar únicamente: \verb|/camera/image_raw|, para ver la imagen de la cámara; \verb|/cmd_vel|, para mover las ruedas; \verb|/gps/data|, para ver los valores de posición del \acs{GPS}; y \verb|/pos_cont/commands|, para mover el motor de la cámara.
 
-Para mover las ruedas hay muchas formas de hacerlo pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view| que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, el módulo \acs{GPS} se puede visualizar sus valores usando \verb|ros2 topic echo /gps/data|, como muestra la Figura \ref{fig:echogps}. Finalmente para mover el motor de la cámara por posición, es necesario usar el comando: 
+Para mover las ruedas hay muchas formas de hacerlo, pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view|, que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, los datos vertidos por el módulo \acs{GPS} se pueden visualizar usando \verb|ros2 topic echo /gps/data|, como muestra la Figura \ref{fig:echogps} y finalmente, para mover el motor de la cámara por posición, es necesario usar el comando siguiente: 
 
 \begin{verbatim}
 	ros2 topic pub /pos_cont/commands std_msgs/msg/Float64MultiArray \
 	 "data: [-0.5]"
 \end{verbatim} 
 
-Siendo los valores que van dentro de data desde 3 (giro hacia la izquierda) hasta -3 (giro hacia la derecha). En la Figura \ref{fig:camararot} se pueden ver los dos casos descritos previamente. 
-
+Siendo los valores que van dentro de \textit{data} desde 3 (giro hacia la izquierda) hasta -3 (giro hacia la derecha). 
+%En la Figura \ref{fig:camararot} se pueden ver los dos casos descritos previamente. 
 
  \begin{figure} [h!]
 	\begin{center}
@@ -237,15 +230,17 @@ Siendo los valores que van dentro de data desde 3 (giro hacia la izquierda) hast
 \end{figure}
 
 
+El resultado final, con el robot de PiBotJ funcionando en simulación, se puede apreciar en la secuencia mostrada en la Figura \ref{fig:camararot}, pudiéndose ver la ejecución completa en el vídeo\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}. 
+
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.45\linewidth}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/rotizq.png}
 		\caption*{\centering Rotación hacia la izquierda} 
 	\end{minipage}
-	\hspace{0.25cm}
-	\begin{minipage}{0.45\linewidth}
+	\hspace{2cm}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/rotder.png}
 		\caption*{\centering Rotación hacia la derecha} 
@@ -255,12 +250,12 @@ Siendo los valores que van dentro de data desde 3 (giro hacia la izquierda) hast
 \end{figure}
 
 
-Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
+%Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
 
 \section{Configuración del robot físico}
 \label{sec:configrf}
 
-Como se explicó en la sección anterior, el robot ya estaba listo en simulación para, a través de los topics definidos en el apartado anterior, poder definir y monitorear su comportamiento. Después de eso, era momento de poner al robot físico también listo para operar.    
+Como se explicó en la sección anterior, el robot ya estaba listo en simulación para, a través de los \textit{topics} definidos en el apartado anterior, poder definir y monitorear su comportamiento. Después de eso, era momento de poner al robot físico también listo para operar.    
 
 En la Raspberry Pi se decidió instalar Ubuntu 20.04 Server \acs{LTS}, como se explicó en el Apartado \ref{subsec:ubuntu}, y para ello, fue necesario instalar en el ordenador principal, que actuaba como cliente, el siguiente programa:  \verb|sudo apt-get install openssh-client|. Como en Ubuntu 20.04 la distribución de ROS 2 era foxy, había que seguir los pasos de instalación de la Sección \ref{sec:simulacion} pero cambiando humble por foxy. 
 

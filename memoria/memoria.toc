@@ -67,45 +67,47 @@
 \contentsline {section}{\numberline {5.5}Impresión y montaje}{62}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Soporte software del robot}{70}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Simulación}{70}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}URDF/Xacro}{71}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{74}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{75}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.1}URDF/Xacro}{70}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{72}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{74}{subsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.1.4}Launcher}{75}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Simulación puesta en funcionamiento}{76}{subsection.6.1.5}%
-\contentsline {section}{\numberline {6.2}Configuración del robot físico}{77}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Cámara}{80}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.1.5}Ejecución en simulador}{75}{subsection.6.1.5}%
+\contentsline {section}{\numberline {6.2}Configuración del robot físico}{78}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Cámara}{79}{subsection.6.2.1}%
 \contentsline {subsubsection}{Parámetros intrínsecos}{81}{subsubsection*.135}%
 \contentsline {subsubsection}{Parámetros extrínsecos}{82}{subsubsection*.139}%
 \contentsline {subsection}{\numberline {6.2.2}Google Coral USB}{83}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{84}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Servomotores}{88}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{89}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{90}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{88}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{89}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Código para explicar los valores de tflite}{91}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Lógica usada para sacar el contorno}{91}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Modelo Pin Hole}{91}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Shoelace method}{92}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.5}Shoelace method}{91}{subsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.3.6}Detección de líneas}{92}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}VFF}{93}{subsection.6.3.7}%
-\contentsline {subsection}{\numberline {6.3.8}Teleoperado}{93}{subsection.6.3.8}%
-\contentsline {subsection}{\numberline {6.3.9}Interfaz Web}{93}{subsection.6.3.9}%
-\contentsline {subsection}{\numberline {6.3.10}¿Aplicación Completa?}{94}{subsection.6.3.10}%
-\contentsline {section}{\numberline {6.4}Snippets}{94}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Verbatim}{94}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Ecuaciones}{95}{section.6.6}%
+\contentsline {subsection}{\numberline {6.3.7}VFF}{92}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}Teleoperado}{92}{subsection.6.3.8}%
+\contentsline {subsection}{\numberline {6.3.9}Interfaz Web}{92}{subsection.6.3.9}%
+\contentsline {subsection}{\numberline {6.3.10}¿Aplicación Completa?}{93}{subsection.6.3.10}%
+\contentsline {section}{\numberline {6.4}Snippets}{93}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Verbatim}{93}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Ecuaciones}{94}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Tablas o cuadros}{95}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Segunda sección}{96}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Números}{97}{subsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.8.2}Listas}{97}{subsection.6.8.2}%
+\contentsline {section}{\numberline {6.8}Segunda sección}{95}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Números}{96}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Listas}{96}{subsection.6.8.2}%
 \contentsline {paragraph}{Referencias bibliográficas}{97}{paragraph*.152}%
-\contentsline {section}{\numberline {6.9}Corrector ortográfico}{98}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Experimentos}{99}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{99}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{99}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{100}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{100}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{101}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Anexo}{102}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Conclusiones}{102}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Corrector ortográfico}{103}{section.9.2}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{104}{appendix*.153}%
+\contentsline {section}{\numberline {6.9}Corrector ortográfico}{97}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Experimentos}{98}{chapter.7}%
+\contentsline {section}{\numberline {7.1}}{98}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{98}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{99}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{99}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{100}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Anexo}{101}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Simulación}{101}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Ejecución en simulador}{101}{subsection.9.1.1}%
+\contentsline {section}{\numberline {9.2}Conclusiones}{102}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Corrector ortográfico}{102}{section.9.3}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{103}{appendix*.153}%

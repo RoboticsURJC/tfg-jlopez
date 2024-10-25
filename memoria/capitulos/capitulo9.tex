@@ -3,15 +3,42 @@
 
 \begin{flushright}
 \begin{minipage}[]{10cm}
-\emph{La mente lo es todo. En lo que piensas, te conviertes}\\
+\emph{Las ideas no duran mucho. Hay que hacer algo con ellas}\\
 \end{minipage}\\
 
-Buda\\
+Santiago Ramón y Cajal\\
 \end{flushright}
 
 \vspace{1cm}
 
-Escribe aquí un párrafo explicando brevemente lo que vas a contar en este capítulo, que básicamente será una recapitulación de los problemas que has abordado, las soluciones que has prouesto, así como los experimentos llevados a cabo para validarlos. Y con esto, cierras la memoria.
+En este apartado se va a tratar los pasos necesarios para conseguir replicar este proyecto 
+
+%incluir enlace del tutorial de construir el robot en físico
+
+\section{Simulación}
+
+\begin{verbatim}
+	sudo apt update && sudo apt upgrade
+	sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
+	sudo apt install ros-humble-rviz2
+	sudo apt install ros-humble-gazebo-ros-pkgs
+	sudo apt install ros-humble-xacro ros-humble-robot-state-publisher 
+	sudo apt install ros-humble-joint-state-publisher
+\end{verbatim}
+
+Una vez instalado todos los programas, fue el momento de empezar a desarrollar el código. 
+
+\subsection{Ejecución en simulador}
+
+Para poner en funcionamiento el modelo, únicamente había que escribir los siguientes comandos:
+\begin{verbatim}
+	colcon build --packages-select pibotj_r2c   # compila los paquetes
+	source ./install/setup.bash                 # configura variables 
+	ros2 launch pibotj_r2c launch_sim.launch.py
+\end{verbatim} 
+
+Si la primera vez que se lance el robot ocurre algún error, es normal y hay que reiniciar el proceso.
+
 
 \section{Conclusiones}
 
