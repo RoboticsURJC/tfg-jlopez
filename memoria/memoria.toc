@@ -106,8 +106,7 @@
 \contentsline {section}{\numberline {8.1}Conclusiones}{99}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Corrector ortográfico}{100}{section.8.2}%
 \contentsline {chapter}{\numberline {9}Anexo}{101}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Simulación}{101}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Ejecución en simulador}{101}{subsection.9.1.1}%
-\contentsline {section}{\numberline {9.2}Conclusiones}{102}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Corrector ortográfico}{102}{section.9.3}%
+\contentsline {section}{\numberline {9.1}Construcción del robot}{101}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{101}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Configuración del robot real}{102}{section.9.3}%
 \contentsline {chapter}{Bibliograf\'{\i }a}{103}{appendix*.153}%

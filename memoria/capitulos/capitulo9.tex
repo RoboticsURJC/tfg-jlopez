@@ -11,11 +11,16 @@ Santiago Ramón y Cajal\\
 
 \vspace{1cm}
 
-En este apartado se va a tratar los pasos necesarios para conseguir replicar este proyecto 
+En este anexo se van a tratar los pasos necesarios para conseguir replicar este proyecto.
+
+\section{Construcción del robot} 
 
 %incluir enlace del tutorial de construir el robot en físico
 
-\section{Simulación}
+
+\section{Ejecución del robot en simulación}
+
+Es necesario instalar los siguientes programas: 
 
 \begin{verbatim}
 	sudo apt update && sudo apt upgrade
@@ -25,12 +30,8 @@ En este apartado se va a tratar los pasos necesarios para conseguir replicar est
 	sudo apt install ros-humble-xacro ros-humble-robot-state-publisher 
 	sudo apt install ros-humble-joint-state-publisher
 \end{verbatim}
-
-Una vez instalado todos los programas, fue el momento de empezar a desarrollar el código. 
-
-\subsection{Ejecución en simulador}
-
-Para poner en funcionamiento el modelo, únicamente había que escribir los siguientes comandos:
+ 
+Una vez instalado los programas, es el momento de ponerlo en ejecución y para ello, únicamente hay que escribir los siguientes comandos:
 \begin{verbatim}
 	colcon build --packages-select pibotj_r2c   # compila los paquetes
 	source ./install/setup.bash                 # configura variables 
@@ -39,21 +40,5 @@ Para poner en funcionamiento el modelo, únicamente había que escribir los sigu
 
 Si la primera vez que se lance el robot ocurre algún error, es normal y hay que reiniciar el proceso.
 
+\section{Configuración del robot real}
 
-\section{Conclusiones}
-
-Enumera los objetivos y cómo los has cumplido.\\
-
-Enumera también los requisitos implícitos en la consecución de esos objetivos, y cómo se han satisfecho.\\
-
-No olvides dedicar un par de párrafos para hacer un balance global de qué has conseguido, y por qué es un avance respecto a lo que tenías inicialmente. Haz mención expresa de alguna limitación o peculiaridad de tu sistema y por qué es así. Y también, qué has aprendido desarrollando este trabajo.\\
-
-Por último, añade otro par de párrafos de líneas futuras; esto es, cómo se puede continuar tu trabajo para abarcar una solución más amplia, o qué otras ramas de la investigación podrían seguirse partiendo de este trabajo, o cómo se podría mejorar para conseguir una aplicación real de este desarrollo (si es que no se ha llegado a conseguir).
-
-\section{Corrector ortográfico}
-
-Una vez tengas todo, no olvides pasar el corrector ortográfico de \LaTeX a todos tus ficheros \textit{.tex}. En \texttt{Windows}, el propio editor \texttt{TeXworks} incluye el corrector. En \texttt{Linux}, usa \texttt{aspell} ejecutando el siguiente comando en tu terminal:
-
-\begin{verbatim}
-aspell --lang=es --mode=tex check capitulo1.tex
-\end{verbatim}
