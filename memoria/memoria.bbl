@@ -104,6 +104,12 @@ Plaza, J. M.~C. (2022-2023).
 \newblock Robótica de servicio: Robots de limpieza.
 \newblock Consultado el 19 de julio de 2024.
 
+\bibitem[RoadCrack, 2022]{tazin_dataset}
+RoadCrack (2022).
+\newblock tazin dataset.
+\newblock \url{ https://universe.roboflow.com/roadcrack/tazin }.
+\newblock visited on 2024-10-23.
+
 \bibitem[Shaw and Pathak, 2024]{shaw2024leap}
 Shaw, K. and Pathak, D. (2024).
 \newblock {LEAP} hand v2: Dexterous, low-cost anthropomorphic hybrid rigid soft
