@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  26 OCT 2024 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  26 OCT 2024 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -935,7 +935,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 
 Package newfloat Info: `float' package detected.
  (./portada/indice.tex (./portada/portada.tex
-<figs/logo_urjc.jpg, id=388, 525.965pt x 210.7875pt>
+<figs/logo_urjc.jpg, id=380, 525.965pt x 210.7875pt>
 File: figs/logo_urjc.jpg Graphic file (type jpg)
 <use figs/logo_urjc.jpg>
 Package pdftex.def Info: figs/logo_urjc.jpg  used on input line 5.
@@ -946,7 +946,7 @@ Package pdftex.def Info: figs/logo_urjc.jpg  used on input line 5.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figs/logo_urjc.jpg>])
 (./portada/licencia.tex
-<figs/by-nc-sa.png, id=398, 97.0827pt x 33.9669pt>
+<figs/by-nc-sa.png, id=390, 97.0827pt x 33.9669pt>
 File: figs/by-nc-sa.png Graphic file (type png)
 <use figs/by-nc-sa.png>
 Package pdftex.def Info: figs/by-nc-sa.png  used on input line 8.
@@ -1053,8 +1053,8 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
  [9]
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
  [10])
 \tf@toc=\write6
 \openout6 = `memoria.toc'.
@@ -2569,145 +2569,188 @@ File: figs/cap6/motorlogic.png Graphic file (type png)
 <use figs/cap6/motorlogic.png>
 Package pdftex.def Info: figs/cap6/motorlogic.png  used on input line 594.
 (pdftex.def)             Requested size: 170.71652pt x 241.45709pt.
-LaTeX Info: Redefining \. on input line 609.
-LaTeX Info: Redefining \% on input line 609.
+LaTeX Info: Redefining \. on input line 608.
+LaTeX Info: Redefining \% on input line 608.
 
 [84 <./figs/cap6/pwm.png> <./figs/cap6/motorlogic.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 644--645
+Underfull \hbox (badness 1546) in paragraph at lines 613--614
+[]\OT1/cmr/m/n/12 Para poder entrenar dicho modelo, fue necesario usar un \OT1/
+cmr/m/it/12 dataset \OT1/cmr/m/n/12 tomado
+ []
+
+<figs/cap6/results.png, id=2195, 1790.69pt x 1189.44376pt>
+File: figs/cap6/results.png Graphic file (type png)
+<use figs/cap6/results.png>
+Package pdftex.def Info: figs/cap6/results.png  used on input line 617.
+(pdftex.def)             Requested size: 426.79134pt x 283.49405pt.
+<figs/cap6/results1.png, id=2196, 1754.555pt x 1179.40625pt>
+File: figs/cap6/results1.png Graphic file (type png)
+<use figs/cap6/results1.png>
+Package pdftex.def Info: figs/cap6/results1.png  used on input line 626.
+(pdftex.def)             Requested size: 426.79134pt x 286.8785pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 633.
+LaTeX Info: Redefining \% on input line 633.
+[85 <./figs/cap6/results.png>]
+Package acronym Info: Label `acro:mAP' newly defined as it shall be overridden
+although it is yet undefined on input line 634.
+<figs/cap6/train_results.jpg, id=2214, 1927.2pt x 1927.2pt>
+File: figs/cap6/train_results.jpg Graphic file (type jpg)
+<use figs/cap6/train_results.jpg>
+Package pdftex.def Info: figs/cap6/train_results.jpg  used on input line 640.
+(pdftex.def)             Requested size: 426.79134pt x 426.77895pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 649--650
+[]\OT1/cmr/m/n/12 Video de ultralytics que explica la exportaci^^Son de yolo a 
+tflite 192:
+ []
+
+LaTeX Info: Redefining \. on input line 652.
+LaTeX Info: Redefining \% on input line 652.
+[86 <./figs/cap6/results1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
 []\OT1/cmr/m/n/12 Cuenta el paso a paso hasta conseguir
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 646--647
+LaTeX Info: Redefining \. on input line 665.
+LaTeX Info: Redefining \% on input line 665.
+[87 <./figs/cap6/train_results.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 []\OT1/cmr/m/n/12 Explicacion de camera[]-tfv3[]-node
  []
 
 
-Underfull \hbox (badness 3942) in paragraph at lines 646--647
+Underfull \hbox (badness 3942) in paragraph at lines 666--667
 \OT1/cmr/m/n/12 (parte de tflite): https://github.com/RoboticsURJC/tfg-jlopez/w
 iki/Aprendizaje-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--647
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 \OT1/cmr/m/n/12 Autom$ $%C3$ $%A1tico#explicaci$ $%C3$ $%B3n-del-c$ $%C3$ $%B3d
 igo (explica el c^^Sodigo
  []
 
-LaTeX Info: Redefining \. on input line 654.
-LaTeX Info: Redefining \% on input line 654.
-[85]
-Underfull \hbox (badness 10000) in paragraph at lines 682--683
+
+Underfull \hbox (badness 10000) in paragraph at lines 694--695
 []\OT1/cmr/m/n/12 Enlace donde se encuentra toda la informaci^^Son:
  []
 
 LaTeX Info: Redefining \. on input line 705.
 LaTeX Info: Redefining \% on input line 705.
-[86]
-Underfull \hbox (badness 10000) in paragraph at lines 746--747
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 758--759
 []\OT1/cmr/m/n/12 https://www.google.com/search?client=ubuntu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 748--750
+Underfull \hbox (badness 10000) in paragraph at lines 760--762
 []\OT1/cmr/m/n/12 Ejemplos en funcionamiento del vff:
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 752--753
+LaTeX Info: Redefining \. on input line 764.
+LaTeX Info: Redefining \% on input line 764.
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 []\OT1/cmr/m/n/12 Usar locks para evitar que haya condiciones de carrera:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--756
+Underfull \hbox (badness 10000) in paragraph at lines 767--768
 []\OT1/cmr/m/n/12 Explicaci^^Son del c^^Sodigo que usa vff y desarroll^^Se para
  rob servicios:
  []
 
-LaTeX Info: Redefining \. on input line 758.
-LaTeX Info: Redefining \% on input line 758.
-[87]
-Underfull \hbox (badness 10000) in paragraph at lines 768--770
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--782
 []\OT1/cmr/m/n/12 Fuentes de informaci^^Son:
  []
 
 
-Underfull \hbox (badness 3138) in paragraph at lines 780--782
+Underfull \hbox (badness 3138) in paragraph at lines 792--794
 []\OT1/cmr/m/n/12 sudo apt-get install ros-humble-rosbridge-suite ros2 launch r
 osbridge[]-server
  []
 
-LaTeX Info: Redefining \. on input line 826.
-LaTeX Info: Redefining \% on input line 826.
-[88]
-Underfull \hbox (badness 3514) in paragraph at lines 850--851
+LaTeX Info: Redefining \. on input line 820.
+LaTeX Info: Redefining \% on input line 820.
+[90]
+Underfull \hbox (badness 3514) in paragraph at lines 862--863
 []\OT1/cmr/m/n/12 Para mencionar identificadores usados en el c^^Sodigo ---como
  nombres de
  []
 
 
-Underfull \hbox (badness 7832) in paragraph at lines 850--851
+Underfull \hbox (badness 7832) in paragraph at lines 862--863
 \OT1/cmr/m/n/12 funciones o variables--- en el texto, usa el entorno literal o 
 verbatim
  []
 
-LaTeX Info: Redefining \. on input line 856.
-LaTeX Info: Redefining \% on input line 856.
-[89]
-Underfull \hbox (badness 10000) in paragraph at lines 909--910
+LaTeX Info: Redefining \. on input line 863.
+LaTeX Info: Redefining \% on input line 863.
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
 
  []
 
-LaTeX Info: Redefining \. on input line 910.
-LaTeX Info: Redefining \% on input line 910.
-[90pdfTeX warning (ext4): destination with the same identifier (name{equation.6
+LaTeX Info: Redefining \. on input line 922.
+LaTeX Info: Redefining \% on input line 922.
+[92pdfTeX warning (ext4): destination with the same identifier (name{equation.6
 .6.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.910 			
+l.922 			
          ]
-<figs/roomba.jpg, id=2249, 669.50125pt x 342.27875pt>
+<figs/roomba.jpg, id=2284, 669.50125pt x 342.27875pt>
 File: figs/roomba.jpg Graphic file (type jpg)
 <use figs/roomba.jpg>
-Package pdftex.def Info: figs/roomba.jpg  used on input line 920.
+Package pdftex.def Info: figs/roomba.jpg  used on input line 932.
 (pdftex.def)             Requested size: 227.62204pt x 116.368pt.
-LaTeX Info: Redefining \. on input line 941.
-LaTeX Info: Redefining \% on input line 941.
- [91 <./figs/roomba.jpg>]
+LaTeX Info: Redefining \. on input line 952.
+LaTeX Info: Redefining \% on input line 952.
+ [93 <./figs/roomba.jpg>]
 
-LaTeX Warning: Citation `vega12e' on page 92 undefined on input line 952.
-
-
-LaTeX Warning: Citation `vega19b' on page 92 undefined on input line 952.
+LaTeX Warning: Citation `vega12e' on page 94 undefined on input line 964.
 
 
-LaTeX Warning: Citation `vega19a' on page 92 undefined on input line 952.
+LaTeX Warning: Citation `vega19b' on page 94 undefined on input line 964.
 
 
-LaTeX Warning: Citation `vega18b' on page 92 undefined on input line 952.
+LaTeX Warning: Citation `vega19a' on page 94 undefined on input line 964.
 
 
-LaTeX Warning: Citation `vega18a' on page 92 undefined on input line 952.
+LaTeX Warning: Citation `vega18b' on page 94 undefined on input line 964.
 
 
-LaTeX Warning: Citation `vega08b' on page 92 undefined on input line 952.
+LaTeX Warning: Citation `vega18a' on page 94 undefined on input line 964.
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 952--953
+LaTeX Warning: Citation `vega08b' on page 94 undefined on input line 964.
+
+
+Underfull \hbox (badness 4981) in paragraph at lines 964--965
 [] []\OT1/cmr/bx/n/12 Referencias bibliogr^^Saficas[] \OT1/cmr/m/n/12 Cita, sob
 re todo en este cap^^S^^Ptulo, referencias
  []
 
 
-Underfull \hbox (badness 6047) in paragraph at lines 954--955
+Underfull \hbox (badness 6047) in paragraph at lines 966--967
 []\OT1/cmr/m/n/12 Las referencias, con todo su contenido, est^^San recogidas en
  el fichero
  []
 
-) (./capitulos/capitulo7.tex
+LaTeX Info: Redefining \. on input line 982.
+LaTeX Info: Redefining \% on input line 982.
+[94]) (./capitulos/capitulo7.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [92]
+ [95]
 Cap\'{\i }tulo 7.
 
 Underfull \hbox (badness 6032) in paragraph at lines 6--7
@@ -2740,7 +2783,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 (dise~no
  []
 
-) (./capitulos/capitulo8.tex [93
+) (./capitulos/capitulo8.tex [96
 
 ]
 Cap\'{\i }tulo 8.
@@ -2764,19 +2807,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[94
+[97
 
 ]) (./capitulos/capitulo9.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [95]
+ [98]
 Cap\'{\i }tulo 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[96
+[99
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
@@ -2795,7 +2838,7 @@ Underfull \hbox (badness 2142) in paragraph at lines 65--66
 sar el comando
  []
 
-<figs/cap6/vl.png, id=2287, 493.845pt x 309.155pt>
+<figs/cap6/vl.png, id=2325, 493.845pt x 309.155pt>
 File: figs/cap6/vl.png Graphic file (type png)
 <use figs/cap6/vl.png>
 Package pdftex.def Info: figs/cap6/vl.png  used on input line 70.
@@ -2805,13 +2848,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 84.
 LaTeX Info: Redefining \% on input line 84.
-[97] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[100] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<figs/cap6/pycoralinstalled.png, id=2295, 800.9925pt x 503.8825pt>
+<figs/cap6/pycoralinstalled.png, id=2332, 800.9925pt x 503.8825pt>
 File: figs/cap6/pycoralinstalled.png Graphic file (type png)
 <use figs/cap6/pycoralinstalled.png>
 Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 106
@@ -2828,13 +2871,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--116
 
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
-[98 <./figs/cap6/vl.png>]
+[101 <./figs/cap6/vl.png>]
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
- [99 <./figs/cap6/pycoralinstalled.png>]
+ [102 <./figs/cap6/pycoralinstalled.png>]
 LaTeX Info: Redefining \. on input line 190.
 LaTeX Info: Redefining \% on input line 190.
- [100]
+ [103]
 Underfull \hbox (badness 10000) in paragraph at lines 241--241
 [][][][]$\OT1/cmtt/m/n/10 https : / / cms . gutow . uwosh . edu / Gutow / usefu
 l-[]chemistry-[]links /
@@ -2848,17 +2891,17 @@ w-[]tos /
 
 LaTeX Info: Redefining \. on input line 243.
 LaTeX Info: Redefining \% on input line 243.
-[101])
+[104])
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
- [102]
+ [105]
 No file memoria.ind.
 (./memoria.bbl
 Underfull \hbox (badness 1803) in paragraph at lines 35--39
 []\OT1/cmr/m/n/12 Cuenca S^^Sanchez, A., Farinango Galeano, W., and
  []
 
-[103
+[106
 
 
 ]
@@ -2866,12 +2909,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--80
 []\OT1/cmr/m/n/12 Katsamenis, I.,
  []
 
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
-[104])
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+[107])
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
- [105] (./memoria.aux
+ [108] (./memoria.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -2879,13 +2922,13 @@ LaTeX Info: Redefining \% on input line 26.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 60751A28B404B9D3CCBE1EB53CECDF17;13299.
+(rerunfilecheck)             Checksum: DE18A2A5399D5DD0F0C564451AE2C740;12750.
  ) 
 Here is how much of TeX's memory you used:
- 30870 strings out of 480112
- 577007 string characters out of 5892631
- 1120083 words of memory out of 5000000
- 47386 multiletter control sequences out of 15000+600000
+ 30907 strings out of 480112
+ 577821 string characters out of 5892631
+ 1120692 words of memory out of 5000000
+ 47408 multiletter control sequences out of 15000+600000
  477505 words of font info for 58 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  89i,15n,92p,1373b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2907,10 +2950,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (123 pages, 52030436 bytes).
+Output written on memoria.pdf (126 pages, 53002960 bytes).
 PDF statistics:
- 2705 PDF objects out of 2984 (max. 8388607)
- 2258 compressed objects within 23 object streams
- 743 named destinations out of 1000 (max. 500000)
- 1468 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2743 PDF objects out of 2984 (max. 8388607)
+ 2288 compressed objects within 23 object streams
+ 755 named destinations out of 1000 (max. 500000)
+ 1467 words of extra memory for PDF output out of 10000 (max. 10000000)
 

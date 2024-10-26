@@ -88,6 +88,13 @@ Kim, Y.-M., Kim, Y.-G., Son, S.-Y., Lim, S.-Y., Choi, B.-Y., and Choi, D.-H.
 Llopis~Castell{\'o}, D. and P{\'e}rez~Zuriaga, A.~M. (2020).
 \newblock Deterioros en pavimentos urbanos.
 
+\bibitem[moinfaisal, 2023]{pothole-detection-project-new_dataset}
+moinfaisal (2023).
+\newblock Pothole detection project new dataset.
+\newblock \url{
+  https://universe.roboflow.com/moinfaisal/pothole-detection-project-new }.
+\newblock visited on 2024-10-26.
+
 \bibitem[Nilsson et~al., 1984]{nilsson1984shakey}
 Nilsson, N.~J. et~al. (1984).
 \newblock {\em Shakey the robot}, volume 323.
@@ -103,12 +110,6 @@ Park, S.-S., Tran, V.-T., and Lee, D.-E. (2021).
 Plaza, J. M.~C. (2022-2023).
 \newblock Robótica de servicio: Robots de limpieza.
 \newblock Consultado el 19 de julio de 2024.
-
-\bibitem[RoadCrack, 2022]{tazin_dataset}
-RoadCrack (2022).
-\newblock tazin dataset.
-\newblock \url{ https://universe.roboflow.com/roadcrack/tazin }.
-\newblock visited on 2024-10-23.
 
 \bibitem[Shaw and Pathak, 2024]{shaw2024leap}
 Shaw, K. and Pathak, D. (2024).

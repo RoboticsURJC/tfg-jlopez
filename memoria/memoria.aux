@@ -52,6 +52,7 @@
 \newacro{RCE}[\AC@hyperlink{RCE}{RCE}]{\emph  {Red de Carreteras del Estado}}
 \newacro{DIY}[\AC@hyperlink{DIY}{DIY}]{\emph  {Do It by Yourself}}
 \newacro{URDF}[\AC@hyperlink{URDF}{URDF}]{\emph  {Unified Robot Description Format}}
+\newacro{mAP}[\AC@hyperlink{mAP}{mAP}]{\emph  {Mean Average Precision}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -577,96 +578,108 @@
 \newlabel{fig:motorlogic}{{6.16}{84}{Distintas direcciones de PiBotJ\relax }{figure.caption.143}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{84}{section.6.3}\protected@file@percent }
 \newlabel{sec:softwarerf}{{6.3}{84}{Software aplicado al robot físico}{section.6.3}{}}
+\citation{pothole-detection-project-new_dataset}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{85}{subsection.6.3.1}\protected@file@percent }
 \newlabel{subsec:softwareiayolo}{{6.3.1}{85}{Red neuronal para la detección de baches}{subsection.6.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Código para explicar los valores de tflite}{86}{subsection.6.3.2}\protected@file@percent }
-\newlabel{subsec:valorestflite}{{6.3.2}{86}{Código para explicar los valores de tflite}{subsection.6.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Lógica usada para sacar el contorno}{86}{subsection.6.3.3}\protected@file@percent }
-\newlabel{subsec:contorno}{{6.3.3}{86}{Lógica usada para sacar el contorno}{subsection.6.3.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Modelo Pin Hole}{86}{subsection.6.3.4}\protected@file@percent }
-\newlabel{subsec:softwarepinhole}{{6.3.4}{86}{Modelo Pin Hole}{subsection.6.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}Shoelace method}{86}{subsection.6.3.5}\protected@file@percent }
-\newlabel{subsec:softwareshoelace}{{6.3.5}{86}{Shoelace method}{subsection.6.3.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Detección de líneas}{87}{subsection.6.3.6}\protected@file@percent }
-\newlabel{subsec:softwaredl}{{6.3.6}{87}{Detección de líneas}{subsection.6.3.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.7}VFF}{87}{subsection.6.3.7}\protected@file@percent }
-\newlabel{subsec:softwarevff}{{6.3.7}{87}{VFF}{subsection.6.3.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.8}Teleoperado}{88}{subsection.6.3.8}\protected@file@percent }
-\newlabel{subsec:teleoperado}{{6.3.8}{88}{Teleoperado}{subsection.6.3.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.9}Interfaz Web}{88}{subsection.6.3.9}\protected@file@percent }
-\newlabel{subsec:softwareweb}{{6.3.9}{88}{Interfaz Web}{subsection.6.3.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.10}¿Aplicación Completa?}{88}{subsection.6.3.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Snippets}{89}{section.6.4}\protected@file@percent }
-\@writefile{locode}{\contentsline {code}{\numberline {6.4}{\ignorespaces Función para buscar elementos 3D en la imagen}}{89}{code.caption.144}\protected@file@percent }
-\newlabel{cod:codejemplo}{{6.4}{89}{Función para buscar elementos 3D en la imagen}{code.caption.144}{}}
-\@writefile{locode}{\contentsline {code}{\numberline {6.5}{\ignorespaces Cómo usar un Slider}}{89}{code.caption.145}\protected@file@percent }
-\newlabel{cod:codejemplo2}{{6.5}{89}{Cómo usar un Slider}{code.caption.145}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Verbatim}{89}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Ecuaciones}{90}{section.6.6}\protected@file@percent }
-\newlabel{ec:ec1}{{6.5}{90}{Ecuaciones}{equation.6.6.5}{}}
-\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.3}{\ignorespaces Ejemplo de ecuación con fracciones}}{90}{myequation.caption.146}\protected@file@percent }
-\newlabel{ec:ec2}{{6.5}{90}{Ecuaciones}{equation.6.6.5}{}}
-\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.4}{\ignorespaces Ejemplo de ecuación con array y letras y símbolos especiales}}{90}{myequation.caption.147}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}Tablas o cuadros}{90}{section.6.7}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Parámetros intrínsecos de la cámara\relax }}{90}{table.caption.148}\protected@file@percent }
-\newlabel{cuadro:ejemplo}{{6.1}{90}{Parámetros intrínsecos de la cámara\relax }{table.caption.148}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.8}Segunda sección}{91}{section.6.8}\protected@file@percent }
-\newlabel{sec:segundaseccion}{{6.8}{91}{Segunda sección}{section.6.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{91}{figure.caption.149}\protected@file@percent }
-\newlabel{fig:roomba}{{6.17}{91}{Robot aspirador Roomba de iRobot.\relax }{figure.caption.149}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}Números}{91}{subsection.6.8.1}\protected@file@percent }
-\newlabel{sec:subseccion}{{6.8.1}{91}{Números}{subsection.6.8.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.2}Listas}{91}{subsection.6.8.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Gráficas de resultados del entrenamiento\relax }}{85}{figure.caption.144}\protected@file@percent }
+\newlabel{fig:iares}{{6.17}{85}{Gráficas de resultados del entrenamiento\relax }{figure.caption.144}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Gráficas de resultados del entrenamiento: métricas\relax }}{86}{figure.caption.145}\protected@file@percent }
+\newlabel{fig:iares2}{{6.18}{86}{Gráficas de resultados del entrenamiento: métricas\relax }{figure.caption.145}{}}
+\AC@undonewlabel{acro:mAP}
+\newlabel{acro:mAP}{{6.3.1}{86}{Red neuronal para la detección de baches}{section*.146}{}}
+\acronymused{mAP}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Demostración del modelo funcionando\relax }}{87}{figure.caption.147}\protected@file@percent }
+\newlabel{fig:trainex}{{6.19}{87}{Demostración del modelo funcionando\relax }{figure.caption.147}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Valores obtenidos del modelo}{87}{subsubsection*.148}\protected@file@percent }
+\newlabel{subsec:valoresmodelotflite}{{6.3.1}{87}{Valores obtenidos del modelo}{subsubsection*.148}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Aplicación del modelo}{88}{subsubsection*.149}\protected@file@percent }
+\newlabel{subsec:aplicacionmodelo}{{6.3.1}{88}{Aplicación del modelo}{subsubsection*.149}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Obtención del contorno y coordenadas}{88}{subsubsection*.150}\protected@file@percent }
+\newlabel{subsec:contornoycoordenadas}{{6.3.1}{88}{Obtención del contorno y coordenadas}{subsubsection*.150}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Modelo Pin Hole}{88}{subsection.6.3.2}\protected@file@percent }
+\newlabel{subsec:softwarepinhole}{{6.3.2}{88}{Modelo Pin Hole}{subsection.6.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Shoelace method}{88}{subsection.6.3.3}\protected@file@percent }
+\newlabel{subsec:softwareshoelace}{{6.3.3}{88}{Shoelace method}{subsection.6.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Detección de líneas}{89}{subsection.6.3.4}\protected@file@percent }
+\newlabel{subsec:softwaredl}{{6.3.4}{89}{Detección de líneas}{subsection.6.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.5}VFF}{89}{subsection.6.3.5}\protected@file@percent }
+\newlabel{subsec:softwarevff}{{6.3.5}{89}{VFF}{subsection.6.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.6}Teleoperado}{90}{subsection.6.3.6}\protected@file@percent }
+\newlabel{subsec:teleoperado}{{6.3.6}{90}{Teleoperado}{subsection.6.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.7}Interfaz Web}{90}{subsection.6.3.7}\protected@file@percent }
+\newlabel{subsec:softwareweb}{{6.3.7}{90}{Interfaz Web}{subsection.6.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.8}¿Aplicación Completa?}{91}{subsection.6.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Snippets}{91}{section.6.4}\protected@file@percent }
+\@writefile{locode}{\contentsline {code}{\numberline {6.4}{\ignorespaces Función para buscar elementos 3D en la imagen}}{91}{code.caption.151}\protected@file@percent }
+\newlabel{cod:codejemplo}{{6.4}{91}{Función para buscar elementos 3D en la imagen}{code.caption.151}{}}
+\@writefile{locode}{\contentsline {code}{\numberline {6.5}{\ignorespaces Cómo usar un Slider}}{91}{code.caption.152}\protected@file@percent }
+\newlabel{cod:codejemplo2}{{6.5}{91}{Cómo usar un Slider}{code.caption.152}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Verbatim}{91}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Ecuaciones}{92}{section.6.6}\protected@file@percent }
+\newlabel{ec:ec1}{{6.5}{92}{Ecuaciones}{equation.6.6.5}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.3}{\ignorespaces Ejemplo de ecuación con fracciones}}{92}{myequation.caption.153}\protected@file@percent }
+\newlabel{ec:ec2}{{6.5}{92}{Ecuaciones}{equation.6.6.5}{}}
+\@writefile{lomyequation}{\contentsline {myequation}{\numberline {6.4}{\ignorespaces Ejemplo de ecuación con array y letras y símbolos especiales}}{92}{myequation.caption.154}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Tablas o cuadros}{92}{section.6.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Parámetros intrínsecos de la cámara\relax }}{92}{table.caption.155}\protected@file@percent }
+\newlabel{cuadro:ejemplo}{{6.1}{92}{Parámetros intrínsecos de la cámara\relax }{table.caption.155}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Segunda sección}{93}{section.6.8}\protected@file@percent }
+\newlabel{sec:segundaseccion}{{6.8}{93}{Segunda sección}{section.6.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{93}{figure.caption.156}\protected@file@percent }
+\newlabel{fig:roomba}{{6.20}{93}{Robot aspirador Roomba de iRobot.\relax }{figure.caption.156}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}Números}{93}{subsection.6.8.1}\protected@file@percent }
+\newlabel{sec:subseccion}{{6.8.1}{93}{Números}{subsection.6.8.1}{}}
 \citation{vega12e}
 \citation{vega19b}
 \citation{vega19a}
 \citation{vega18b}
 \citation{vega18a}
 \citation{vega08b}
-\@writefile{toc}{\contentsline {paragraph}{Referencias bibliográficas}{92}{paragraph*.150}\protected@file@percent }
-\newlabel{sec:referencias}{{6.8.2}{92}{Referencias bibliográficas}{paragraph*.150}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.9}Corrector ortográfico}{92}{section.6.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Experimentos}{93}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.2}Listas}{94}{subsection.6.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Referencias bibliográficas}{94}{paragraph*.157}\protected@file@percent }
+\newlabel{sec:referencias}{{6.8.2}{94}{Referencias bibliográficas}{paragraph*.157}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.9}Corrector ortográfico}{95}{section.6.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Experimentos}{96}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{locode}{\addvspace {10\p@ }}
 \@writefile{lomyequation}{\addvspace {10\p@ }}
-\newlabel{cap:capitulo7}{{7}{93}{Experimentos}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}}{93}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Corrector ortográfico}{93}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusiones}{94}{chapter.8}\protected@file@percent }
+\newlabel{cap:capitulo7}{{7}{96}{Experimentos}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}}{96}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Corrector ortográfico}{96}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusiones}{97}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{locode}{\addvspace {10\p@ }}
 \@writefile{lomyequation}{\addvspace {10\p@ }}
-\newlabel{cap:capitulo8}{{8}{94}{Conclusiones}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusiones}{94}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Corrector ortográfico}{95}{section.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Anexo}{96}{chapter.9}\protected@file@percent }
+\newlabel{cap:capitulo8}{{8}{97}{Conclusiones}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusiones}{97}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Corrector ortográfico}{98}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Anexo}{99}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{locode}{\addvspace {10\p@ }}
 \@writefile{lomyequation}{\addvspace {10\p@ }}
-\newlabel{cap:capitulo9}{{9}{96}{Anexo}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Construcción del robot}{96}{section.9.1}\protected@file@percent }
-\newlabel{subsec:anexoconstruccion}{{9.1}{96}{Construcción del robot}{section.9.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{96}{section.9.2}\protected@file@percent }
-\newlabel{subsec:anexosimulacion}{{9.2}{96}{Ejecución del robot en simulación}{section.9.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.3}Configuración del robot real}{97}{section.9.3}\protected@file@percent }
-\newlabel{subsec:anexoconfig}{{9.3}{97}{Configuración del robot real}{section.9.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Cámara}{97}{subsection.9.3.1}\protected@file@percent }
-\newlabel{subsec:anexocamara}{{9.3.1}{97}{Cámara}{subsection.9.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{98}{figure.caption.151}\protected@file@percent }
-\newlabel{fig:v4l2}{{9.1}{98}{Dispositivos de video y media disponibles en PiBotJ\relax }{figure.caption.151}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Google Coral}{98}{subsection.9.3.2}\protected@file@percent }
-\newlabel{subsec:anexogooglecoral}{{9.3.2}{98}{Google Coral}{subsection.9.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{98}{subsection.9.3.3}\protected@file@percent }
-\newlabel{subsec:anexogps}{{9.3.3}{98}{Módulo GPS}{subsection.9.3.3}{}}
+\newlabel{cap:capitulo9}{{9}{99}{Anexo}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Construcción del robot}{99}{section.9.1}\protected@file@percent }
+\newlabel{subsec:anexoconstruccion}{{9.1}{99}{Construcción del robot}{section.9.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{99}{section.9.2}\protected@file@percent }
+\newlabel{subsec:anexosimulacion}{{9.2}{99}{Ejecución del robot en simulación}{section.9.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Configuración del robot real}{100}{section.9.3}\protected@file@percent }
+\newlabel{subsec:anexoconfig}{{9.3}{100}{Configuración del robot real}{section.9.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Cámara}{100}{subsection.9.3.1}\protected@file@percent }
+\newlabel{subsec:anexocamara}{{9.3.1}{100}{Cámara}{subsection.9.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{101}{figure.caption.158}\protected@file@percent }
+\newlabel{fig:v4l2}{{9.1}{101}{Dispositivos de video y media disponibles en PiBotJ\relax }{figure.caption.158}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Google Coral}{101}{subsection.9.3.2}\protected@file@percent }
+\newlabel{subsec:anexogooglecoral}{{9.3.2}{101}{Google Coral}{subsection.9.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{101}{subsection.9.3.3}\protected@file@percent }
+\newlabel{subsec:anexogps}{{9.3.3}{101}{Módulo GPS}{subsection.9.3.3}{}}
 \acronymused{GPS}
-\@writefile{lof}{\contentsline {figure}{\numberline {9.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{99}{figure.caption.152}\protected@file@percent }
-\newlabel{fig:outcoral}{{9.2}{99}{Configuración exitosa del Google Coral\relax }{figure.caption.152}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{102}{subsection.9.3.4}\protected@file@percent }
-\newlabel{subsec:anexomotores}{{9.3.4}{102}{Módulo GPS}{subsection.9.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{102}{figure.caption.159}\protected@file@percent }
+\newlabel{fig:outcoral}{{9.2}{102}{Configuración exitosa del Google Coral\relax }{figure.caption.159}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{105}{subsection.9.3.4}\protected@file@percent }
+\newlabel{subsec:anexomotores}{{9.3.4}{105}{Módulo GPS}{subsection.9.3.4}{}}
 \citation{*}
 \bibstyle{apalike}
 \bibdata{bibliografia}
@@ -680,16 +693,16 @@
 \bibcite{s20020451}{Du et\unhbox \voidb@x \nobreak  \ al., 2020}
 \bibcite{earnest2012stanfordcart}{Earnest, 2012}
 \bibcite{ELZAATARI2019162}{{El Zaatari} et\unhbox \voidb@x \nobreak  \ al., 2019}
-\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{103}{appendix*.153}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{106}{appendix*.160}\protected@file@percent }
 \bibcite{giri2020maquinas}{Giri, 2020}
 \bibcite{Hartley2004}{Hartley and Zisserman, 2004}
 \bibcite{10.1145/3529190.3534746}{Katsamenis et\unhbox \voidb@x \nobreak  \ al., 2022}
 \bibcite{app12115320}{Kim et\unhbox \voidb@x \nobreak  \ al., 2022}
 \bibcite{llopis2020deterioros}{Llopis\unhbox \voidb@x \nobreak  \ Castell{\'o} and P{\'e}rez\unhbox \voidb@x \nobreak  \ Zuriaga, 2020}
+\bibcite{pothole-detection-project-new_dataset}{moinfaisal, 2023}
 \bibcite{nilsson1984shakey}{Nilsson et\unhbox \voidb@x \nobreak  \ al., 1984}
 \bibcite{app112311229}{Park et\unhbox \voidb@x \nobreak  \ al., 2021}
 \bibcite{plaza_robotica_servicio}{Plaza, 2023}
-\bibcite{tazin_dataset}{RoadCrack, 2022}
 \bibcite{shaw2024leap}{Shaw and Pathak, 2024}
 \bibcite{thorpe2003field}{Thorpe and Durrant-Whyte, 2003}
 \bibcite{8638822}{Ul\unhbox \voidb@x \nobreak  \ Haq et\unhbox \voidb@x \nobreak  \ al., 2019}
@@ -697,4 +710,4 @@
 \bibcite{vega19d}{Vega and Ca\~nas, 2019}
 \bibcite{WANG2023132499}{Wang et\unhbox \voidb@x \nobreak  \ al., 2023}
 \bibcite{doi:10.1080/14680629.2019.1615533}{Wanli\unhbox \voidb@x \nobreak  \ Ye and Xiao, 2021}
-\gdef \@abspage@last{123}
+\gdef \@abspage@last{126}

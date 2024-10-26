@@ -22,7 +22,7 @@ Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and
 while executing---line 1098 of file apalike.bst
 You've used 26 entries,
             1935 wiz_defined-function locations,
-            633 strings with 8563 characters,
+            633 strings with 8637 characters,
 and the built_in function-call counts, 10623 in all, are:
 = -- 1015
 > -- 517

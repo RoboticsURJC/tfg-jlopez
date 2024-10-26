@@ -603,43 +603,63 @@ Una vez configurados todos los componentes del robot, ya se puede pasar a desarr
 \section{Software aplicado al robot físico}
 \label{sec:softwarerf}
 
-PiBotJ ya estaba listo para poder recibir la inteligencia que necesitaba para conseguir el objetivo principal descrito en la Sección \ref{sec:descripcion}. A diferencia del Apartado \ref{subsec:cap6ros2control} que empleaba ROS 2 control, en este caso al estar todo configurado a bajo nivel, se decidió usar una arquitectura de nodos con \textit{topics} publicadores y suscriptores.
-
+PiBotJ ya estaba listo para poder recibir la inteligencia que necesitaba para conseguir el objetivo principal descrito en la Sección \ref{sec:descripcion}. A diferencia de la Sección \ref{subsec:cap6ros2control} que empleaba ROS 2 control, en este caso al estar todo configurado a bajo nivel, se decidió usar una arquitectura de nodos con \textit{topics} publicadores y suscriptores.
 
 \subsection{Red neuronal para la detección de baches}
 \label{subsec:softwareiayolo}
 
-entrenamiento de un modelo de aprendizaje supervisado que detecta baches
+Para conseguir la detección, se procedió al entrenamiento de un modelo de aprendizaje supervisado que detectaba baches. Se decidió usar YOLOv8, el cual hace uso de una única red neuronal convolucional para detectar objetos en imágenes en tiempo real y con facilidad de exportación a diferentes dispositivos.
+
+Para poder entrenar dicho modelo, fue necesario usar un \textit{dataset} tomado de \cite{pothole-detection-project-new_dataset} que estaba formado por 202 imágenes ya segmentadas. El entrenamiento duró alrededor de una hora y con una duración de 120 \textit{epochs}. Una vez pasada esa hora, se pudo obtener el modelo entrenado en formato .pt y todos los resultados del entrenamiento aparecen mostrados en la Figura \ref{fig:iares} y \ref{fig:iares2}.
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/results.png}
+	\end{center}
+	\caption{Gráficas de resultados del entrenamiento}
+	\label{fig:iares}
+\end{figure}
 
 
-IA: yolov8 y aplicación a detectar baches
-Video de ultralytics que explica la instalación: https://www.youtube.com/watch?v=w4yHORvDBw0
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/results1.png}
+	\end{center}
+	\caption{Gráficas de resultados del entrenamiento: métricas}
+	\label{fig:iares2}
+\end{figure}
 
-Explicación del tipo de ia usada para este proyecto.
+En la Figura \ref{fig:iares} se puede ver que aparecen cuatro gráficas en la parte superior midiendo el error obtenido durante el entrenamiento del modelo y se puede apreciar que disminuye a medida que pasa el tiempo y por lo tanto, se puede decir que existe un correcto entrenamiento. Por otro lado, las cuatro imágenes que aparecen debajo se tratan de las pérdidas calculadas en el conjunto de validación. Si las pérdidas en validación aumentan mientras las pérdidas de entrenamiento disminuyen, puede ser una señal de \textit{overfitting} (sobreajuste), en este caso al solo usar una imagen de validación el valor permanece constante sobre el 0.
 
-Tutoriales seguidos para conseguir el objetivo final: 
+En la Figura \ref{fig:iares2}, en concreto, en la parte superior, se puede ver las métricas de precisión y exhaustividad (\textit{recall}) que evalúan la capacidad del modelo para identificar correctamente las instancias de cada clase ya que valores son crecientes. En la parte inferior, la métrica \ac{mAP} es creciente e indica que el modelo está mejorando en la detección y clasificación ya que, evalúa el equilibrio entre precisión y exhaustividad.
 
-https://www.youtube.com/watch?v=1d\_JB-trK78
+Para comprobar que el modelo funciona correctamente, se ha aplicado sobre una serie de imágenes mostradas en la Figura \ref{fig:trainex} y sobre un video\footnote{\url{https://www.youtube.com/watch?v=Gnwciv4pWf0}}. Todo está documentado en un Jupyter Notebook\footnote{\url{}} basado en el tutorial de Muhammad Moin\footnote{\url{https://www.youtube.com/watch?v=bAlObHUIErM}}.
 
-https://www.youtube.com/watch?v=XZ7FYAMCc4M
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/train_results.jpg}
+	\end{center}
+	\caption{Demostración del modelo funcionando}
+	\label{fig:trainex}
+\end{figure}
 
 
-Inicialmente usaba LabelImg para definir dónde se encontraba los baches gracias a este tutorial he podido soclucionar un problema que tenía con este programa.  https://www.youtube.com/watch?v=5jHPuwo8z1o\&t=502s
+Convertir de yolo a tflite
 
-AL FINAL USABA UN DATASET DE IMÁGENES CON MAYOR CANTIDAD PARA QUE LOS VALORES FUESEN MÁS EXACTOS
-
-Guardé los datos como phdetect2.zip en Google Drive (que no acepta directamente subir un .zip y tuve que usar algún truquito) y gracias a seguir los pasos del tutorial2 en la parte de entrenarlo pude crear mi primera versión.
+Video de ultralytics que explica la exportación de yolo a tflite 192: https://www.youtube.com/watch?v=w4yHORvDBw0
 
 
-detect.tflite -> v1 usando CPU
+Mostar el código usado 
 
-detect\_edgetpu.tflite -> v1 convertida pero usa CPU
+\subsubsection{Valores obtenidos del modelo}
+\label{subsec:valoresmodelotflite}
+Tensores de entrada, de salida...
 
-best\_....edge.tflite -> v2 muy pesada NO VA
-bestv2.....edge.tflite -> v2 que sí va 
+\subsubsection{Aplicación del modelo}
+\label{subsec:aplicacionmodelo}
 
-REVISAR NOMBRES 
-
+\subsubsection{Obtención del contorno y coordenadas}
+\label{subsec:contornoycoordenadas}
 
 Cuenta el paso a paso hasta conseguir la ia funcionando: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Aprendizaje-Autom\%C3\%A1tico\#v2-de-la-ia-google-coral-usb-accelerator 
 
@@ -665,15 +685,7 @@ Interpretar la salida según al gusto del desarrollador
 
 CONTAR LO DE UPDATE EMA: https://admiralmarkets.com/es  (media movil exponencial)
 
-\subsection{Código para explicar los valores de tflite}
-\label{subsec:valorestflite}
 
-Tensores de entrada, de salida...
-
-\subsection{Lógica usada para sacar el contorno}
-\label{subsec:contorno}
-
-4s..
 
 
 \subsection{Modelo Pin Hole}
