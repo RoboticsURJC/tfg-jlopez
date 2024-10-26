@@ -252,60 +252,68 @@ El resultado final, con el robot de PiBotJ funcionando en simulación, se puede 
 
 %Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
 
-\section{Configuración del robot físico}
+\section{Ejecución del entorno real}
 \label{sec:configrf}
 
-Como se explicó en la sección anterior, el robot ya estaba listo en simulación para, a través de los \textit{topics} definidos en el apartado anterior, poder definir y monitorear su comportamiento. Después de eso, era momento de poner al robot físico también listo para operar.    
+Una vez definido el robot a través de sus topics, ya se puede lanzar su ejecución (usando la RPi 4 como núcleo computacional) para realizar su tarea.
 
-En la Raspberry Pi se decidió instalar Ubuntu 20.04 Server \acs{LTS}, como se explicó en el Apartado \ref{subsec:ubuntu}, y para ello, fue necesario instalar en el ordenador principal, que actuaba como cliente, el siguiente programa:  \verb|sudo apt-get install openssh-client|. Como en Ubuntu 20.04 la distribución de ROS 2 era foxy, había que seguir los pasos de instalación de la Sección \ref{sec:simulacion} pero cambiando humble por foxy. 
+%Como se explicó en la sección anterior, el robot ya estaba listo en simulación para, a través de los \textit{topics} definidos en el apartado anterior, poder definir y monitorear su comportamiento. Después de eso, era momento de poner al robot físico también listo para operar. 
+El sistema operativo instalado en la placa controladora fue Ubuntu 20.04 Server \acs{LTS} y la distribución Foxy de ROS2, como se explicó en la Sección \ref{subsec:ubuntu} y \ref{subsec:ros2} respectivamente. Se hizo uso de SSH a efectos de usar el PC principal como cliente. Para ello, se instaló el paquete de openssh-client.
 
-Por otro lado, ahora desde una terminal del ordenador, se puede conectar al robot a través de ssh, escribiendo \verb|ssh usuario@ip_dispositivo| y posteriormente, introduciendo la constraseña creada en el proceso de instalación. Esta era la forma de comunicación con el robot ya que esta distribución, no tenía interfaz gráfica. De las variante de ssh se usaba scp -r para copiar directorios entre el robot y el ordenador local y permitir subir los cambios a Github, y para desarrollar código se usaba un \textit{plugin} de VSCode que permite usar VSCode conectándose al robot usando ssh\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}. 
+%En la Raspberry Pi se decidió instalar Ubuntu 20.04 Server \acs{LTS}, como se explicó en el Apartado \ref{subsec:ubuntu}, y para ello, fue necesario instalar en el ordenador principal, que actuaba como cliente, el siguiente programa:  \verb|sudo apt-get install openssh-client|. Como en Ubuntu 20.04 la distribución de ROS 2 era foxy, había que seguir los pasos de instalación de la Sección \ref{sec:simulacion} pero cambiando humble por foxy. 
 
-Es importante recordar que al usar ROS 2, todos los nodos que estén ejecutando dentro de una red Wifi, serán visibles para cualquier dispositivo que esté conectado dentro de esa red Wifi. Gracias a eso, se facilitó la depuración y monitorización de cada sensor y actuador de PiBotJ. 
+%Por otro lado, ahora desde una terminal del ordenador, se puede conectar al robot a través de ssh, escribiendo \verb|ssh usuario@ip_dispositivo| y posteriormente, introduciendo la constraseña creada en el proceso de instalación. Esta era la forma de comunicación con el robot ya que esta distribución, no tenía interfaz gráfica. De las variante de ssh se usaba scp -r para copiar directorios entre el robot y el ordenador local y permitir subir los cambios a Github, y para desarrollar código se usaba un \textit{plugin} de VSCode que permite usar VSCode conectándose al robot usando ssh\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}. 
 
-Una vez dentro del robot y conociendo todas las posibles formas de estar comunicados con él, era el momento de configurar cada dispositivo que conformaba a PiBotJ.
+Es importante recordar que, al usar ROS 2, todos los nodos que estén ejecutándose dentro de una red Wifi, serán visibles para cualquier dispositivo que esté conectado dentro de esa red Wifi. Gracias a eso, se facilitó la depuración y monitorización de cada sensor y actuador de PiBotJ. 
+
+En los siguientes apartados se detalla cómo se ha configurado cada dispositivo que conforma el PiBotJ. 
+
+%Una vez dentro del robot y conociendo todas las posibles formas de estar comunicados con él, era el momento de configurar cada dispositivo que conformaba a PiBotJ.
 
 \subsection{Cámara}
 \label{subsec:configcamara}
 
-La cámara fue conectada en el puerto CSI y para hacerla funcionar fue necesario instalar los siguientes programas: 
+%La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan los siguientes programas: 
 
-\begin{verbatim}
-	sudo apt-get install gstreamer1.0-tools \ 
-	gstreamer1.0-plugins-base gstreamer1.0-plugins-good \ 
-	gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
-\end{verbatim}
+%\begin{verbatim}
+%	sudo apt-get install gstreamer1.0-tools \ 
+%	gstreamer1.0-plugins-base gstreamer1.0-plugins-good \ 
+%	gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+%\end{verbatim}
 
-Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.txt| añadiendo \verb|start_x=1| al final y se tuvo que reiniciar la Raspberry Pi. Para comprobar que la configuración fue correcta, era necesario usar el comando \verb|v4l2-ctl --list-devices|  que comprueba la lista de dispositivos de video y media que están disponibles en el sistema. En la Figura \ref{fig:v4l2} se puede ver el resultado de dicho comando y  muestra que la cámara se encontraba conectada en el dispositivo \verb|/dev/video0|.
+%Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.txt| añadiendo \verb|start_x=1| al final y se tuvo que reiniciar la Raspberry Pi. Para comprobar que la configuración fue correcta, era necesario usar el comando \verb|v4l2-ctl --list-devices|  que comprueba la lista de dispositivos de video y media que están disponibles en el sistema. En la Figura \ref{fig:v4l2} se puede ver el resultado de dicho comando y  muestra que la cámara se encontraba conectada en el dispositivo \verb|/dev/video0|.
 
  
+% \begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=9cm]{figs/cap6/vl.png}
+%	\end{center}
+%	\caption{Dispositivos de video y media disponibles en PiBotJ}
+%	\label{fig:v4l2}
+%\end{figure}
+
+
+%Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente la imagen se pudiera ver correctamente. Para ello, 
+
+Partiendo del \verb|cameraPublisher.py| de este tutorial\footnote{\url{https://www.youtube.com/watch?v=6e94ZnYnO_U}}, se pudo crear un nodo llamado \verb|camera_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera.py}} que permitía leer y publicar la imagen del dispositivo de la cámara. También se puede monitorizar usando las mismas herramientas que en la Sección \ref{subsec:funsimulacion} para controlar la cámara en simulación (Figura \ref{fig:camararr}).
+
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=9cm]{figs/cap6/vl.png}
-	\end{center}
-	\caption{Dispositivos de video y media disponibles en PiBotJ}
-	\label{fig:v4l2}
-\end{figure}
-
-
-Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente la imagen se pudiera ver correctamente. Para ello, partiendo del \verb|cameraPublisher.py| de este tutorial\footnote{\url{https://www.youtube.com/watch?v=6e94ZnYnO_U}}, se pudo crear un nodo llamado \verb|camera_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera.py}} que permitía leer y publicar la imagen del dispositivo de la cámara. Se podía monitorizar usando las mismas herramientas que en el Apartado \ref{subsec:funsimulacion} para controlar la cámara en simulación (Figura \ref{fig:camararr}).
-
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/camerarr.png}
+		\includegraphics[width=8cm]{figs/cap6/camerarr.png}
 	\end{center}
 	\caption{Cámara de PiBotJ en funcionamiento}
 	\label{fig:camararr}
 \end{figure}
 
-Para posteriores cálculos, era necesario conocer tanto los parámetros intrínsecos como extrínsecos de la cámara.  
+Para conformar un modelo teórico de la cámara se necesitan conocer sus parámetros intrínsecos.
+%Para posteriores cálculos, era necesario conocer tanto los parámetros intrínsecos como extrínsecos de la cámara.  
 
 \subsubsection{Parámetros intrínsecos}
 \label{subsubsec:intrinsecoscamara}
 
-Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes en tanto no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, o bien se pueden estimar, y se decidió calcular las dos posibles opciones.
+Los parámetros intrínsecos definen la geometría interna, la óptica y extrínsecos de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes mientras no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, aunque se pueden obtener mediante un proceso de calibración.
 
-Para los cálculos teóricos se decidió consultar en numerosas fuentes de información y gracias a \textit{Elinux}\footnote{\url{https://elinux.org/Rpi_Camera_Module\#Technical_Parameters_.28v.2_board.29}} se pudo obtener sus parámetros técnicos y partiendo del libro \cite{Hartley2004} (final paǵina 156 y principio de la página 157) y cálculos básicos matemáticos, se pudo encontrar las fórmulas de la distancia focal (Ecuación \ref{ec:distfocal}) y del centro de la imagen (Ecuación \ref{ec:cenimagen}).
+Para los cálculos teóricos se decidió consultar en numerosas fuentes de información y gracias a la Web \textit{Elinux}\footnote{\url{https://elinux.org/Rpi_Camera_Module\#Technical_Parameters_.28v.2_board.29}}, se pudieron obtener, sus parámetros técnicos. Asimismo, siguiendo el libro \cite{Hartley2004} se consiguieron las fórmulas correspondientes a la distancia focal (Ecuación \ref{ec:distfocal}) y al centro de la imagen (Ecuación \ref{ec:cenimagen}).
 
 
 \begin{myequation}[h]
@@ -332,8 +340,7 @@ Para los cálculos teóricos se decidió consultar en numerosas fuentes de infor
 	\label{ec:cenimagen}
 \end{myequation}
 
-
-Para los cálculos prácticos, ha sido necesario seguir los pasos de calibración creando los ficheros de \verb|calibration.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/camera/calibration/calibration.py}} y \verb|process.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/camera/calibration/process.py}} partiendo del tutorial\footnote{\url{https://www.youtube.com/watch?v=XFBKwme5HYk}}. El fichero \verb|calibration.py| capturaba las imágenes con el patrón de ajedrez y el fichero \verb|process.py| generaba la matriz de parámetros intrínsecos y de distorsión. El proceso se repitió diez veces y finalmente la matriz resultante fue la media de las diez matrices de parámetros intrínsecos y sus valores se muestran en la Figura \ref{fig:meanintrinseco}. Los valores son: $f_x$ = 497,66 , $f_y$ = 502,16 , $c_x$ = 325,3 y $c_y$ = 240,18
+Para los cálculos prácticos ha sido necesario seguir los pasos de calibración creando los ficheros \verb|calibration.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/camera/calibration/calibration.py}} y \verb|process.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/camera/calibration/process.py}} siguiendo el tutorial\footnote{\url{https://www.youtube.com/watch?v=XFBKwme5HYk}}. El fichero \verb|calibration.py| captura las imágenes con un patrón de ajedrez, y el fichero \verb|process.py| genera la matriz de parámetros intrínsecos y de distorsión. El proceso se repitió diez veces, siendo la matriz resultante la obtenida como media de las diez matrices. Sus valores son: $f_x$ = 497,66 , $f_y$ = 502,16 , $c_x$ = 325,3 y $c_y$ = 240,18 (Figura \ref{fig:meanintrinseco})
 
  \begin{figure} [h!]
 	\begin{center}
@@ -344,23 +351,23 @@ Para los cálculos prácticos, ha sido necesario seguir los pasos de calibració
 \end{figure}
 
 
-Podemos ver que los valores teóricos difieren de la realidad y es debido a que existen muchos factores que pueden influir y aunque el fabricante decida poner unos valores, cada cámara termina teniendo los suyos propios, creando un margen de error.
+Podemos ver que los valores de fábrica difieren de los obtenidos empíricamente. Esto es debido a que cada cámara tiene sus pequeñas diferencias, propias del proceso de calibración.
 
 
 \subsubsection{Parámetros extrínsecos}
 \label{subsubsec:extrinsecoscamara}
 
-Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real. Dichos parámetros engloban la rotación y la traslación de la cámara. En este caso la cámara tiene una rotación sobre el eje Y de 50º (Figura \ref{fig:extrinseco} izquierda) y está trasladada 8,8 cm en el eje Z (Figura \ref{fig:extrinseco} derecha). 
+Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real. Dichos parámetros incluyen la rotación y la traslación de la cámara. En este caso, la cámara tiene una rotación sobre el eje Y de 50º (Figura \ref{fig:extrinseco} izquierda) y está trasladada 8,8 cm en el eje Z (Figura \ref{fig:extrinseco} derecha). 
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.45\linewidth}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/rotation.jpeg}
 		\caption*{\centering Rotación de la cámara} 
 	\end{minipage}
-	\hspace{0.25cm}
-	\begin{minipage}{0.45\linewidth}
+	\hspace{2 cm}
+	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/traslacion.jpeg}
 		\caption*{\centering Traslación de la cámara} 
@@ -373,165 +380,168 @@ Los parámetros extrínsecos relacionan los sistemas de referencia del mundo rea
 \subsection{Google Coral USB}
 \label{subsec:configgcoral}
 
-Una vez la cámara estaba lista para operar y se conoce que existen muchas limitaciones cuando se trata de acelerar tareas en dispositivos que no cuentan con \textit{hardware} para ello, como se comentó en el Apartado \ref{subsec:googlecoral}, se decidió incluir el dispositivo USB Google Coral y para ello, es necesario configurarlo.
+Como se comentó en la Sección \ref{subsec:googlecoral}, existen severas limitaciones al tratar de acelerar tareas en dispositivos que no cuentan con hardware específico para ello. Por ello, se decidió incluir el dispositivo USB Google Coral. Para su configuración se han seguido los pasos indicados en su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}. 
 
-En su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}} se pueden encontrar diferentes pasos de instalación dependiendo de las necesidades del usuario, pero se pueden resumir para cumplir con las características de la arquitectura de este dispositivo de la siguiente manera:
+%Una vez la cámara estaba lista para operar y se conoce que existen muchas limitaciones cuando se trata de acelerar tareas en dispositivos que no cuentan con \textit{hardware} para ello, como se comentó en el Apartado \ref{subsec:googlecoral}, se decidió incluir el dispositivo USB Google Coral y para ello, es necesario configurarlo.
 
+%En su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}} se pueden encontrar diferentes pasos de instalación dependiendo de las necesidades del usuario, pero se pueden resumir para cumplir con las características de la arquitectura de este dispositivo de la siguiente manera:
 
-\begin{lstlisting}[language=bash]
-	echo "deb https://packages.cloud.google.com/apt \
-	coral-edgetpu-stable main" | \
-	sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+%
+%\begin{lstlisting}[language=bash]
+%	echo "deb https://packages.cloud.google.com/apt \
+%	coral-edgetpu-stable main" | \
+%	sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
 	
-	curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
-	| sudo apt-key add -
+%	curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+%	| sudo apt-key add -
 	
-	sudo apt-get update	
-	sudo apt-get install libedgetpu1-std
+%	sudo apt-get update	
+%	sudo apt-get install libedgetpu1-std
 	
-	# Conecta el USB en uno de los puertos 3.0
+%	# Conecta el USB en uno de los puertos 3.0
 	
-	sudo apt-get install python3-pycoral
-\end{lstlisting}
+%	sudo apt-get install python3-pycoral
+%\end{lstlisting}
 
-Finalmente, el proceso se debería haber completado cuando la salida del último comando se debería ver como muestra la Figura \ref{fig:outcoral}.
+%Finalmente, el proceso se debería haber completado cuando la salida del último comando se debería ver como muestra la Figura \ref{fig:outcoral}.
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/pycoralinstalled.png}
-	\end{center}
-	\caption{Configuración exitosa del Google Coral}
-	\label{fig:outcoral}
-\end{figure}
+ %\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=12cm]{figs/cap6/pycoralinstalled.png}
+%	\end{center}
+%	\caption{Configuración exitosa del Google Coral}
+%	\label{fig:outcoral}
+%\end{figure}
 
 
 \subsection{Módulo GPS}
 \label{subsec:configgps}
 
-El módulo \acs{GPS} utiliza una comunicación \acs{UART}, o también conocido como en serie, mediante pin de transmisión TX y pin de recepción RX y se utiliza en los pines tratados en la Sección \ref{sec:disposicionhardware} y para habilitarlos, era necesario seguir los siguientes pasos de configuración.
-
-La estructura seguida en este tutorial\footnote{\url{https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/}} ha sido de gran ayuda para configurar el módulo \acs{GPS}, que para esta arquitectura, ha sido necesario seguir los siguientes pasos: 
-
-Crea el fichero \verb|/etc/udev/rules.d/99-ttyAMA0.rules| que tiene que contener: \verb|KERNEL=="ttyAMA0", MODE="0666", GROUP="dialout"| y para que se actualicen en el sistema es necesario recargar las reglas, escribiendo por terminal lo siguiente: 
-
-\begin{verbatim}
-	sudo udevadm control --reload-rules
-	sudo udevadm trigger
-\end{verbatim}
-
-Como esta distribución no tiene interfaz web, no tiene instalado por defecto \verb|raspi-config| y para ellos se ha seguido el siguiente tutorial\footnote{\url{https://github.com/EmilGus/install_raspi-config/tree/master}} y una vez instalado, hay que ejecutarlo usando \verb|sudo raspi-config|. Dentro de \textit{raspi-config} hay que desplazarse hasta \textit{Interfacing options} y textit{serial}, hay que desabilitar \textit{serial login shell}, habilitar \textit{serial interface} y reiniciar con \verb|sudo reboot|.
-
-Finalmente los siguientes ficheros tienen que contener la siguiente información: 
+El módulo \acs{GPS} utiliza una comunicación \acs{UART}, o comunicación serial, mediante puerto de transmisión TX y puerto de recepción RX. En nuestro caso, se utilizan los pines tratados en la Sección \ref{sec:disposicionhardware}.
 
 
-\begin{lstlisting}[language=bash]
-cat /boot/firmware/config.txt 
+%La estructura seguida en este tutorial\footnote{\url{https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/}} ha sido de gran ayuda para configurar el módulo \acs{GPS} que, para esta arquitectura, supone seguir los siguientes pasos: 
 
-# Please DO NOT modify this file; if you need to modify the boot config,
-# the "usercfg.txt" file is the place to include user changes. Please 
-# refer to the README file for a description of the various configuration 
-# files on the boot partition.
+%Crea el fichero \verb|/etc/udev/rules.d/99-ttyAMA0.rules| que tiene que contener: \verb|KERNEL=="ttyAMA0", MODE="0666", GROUP="dialout"| y para que se actualicen en el sistema es necesario recargar las reglas, escribiendo por terminal lo siguiente: 
 
-# The unusual ordering below is deliberate; older firmwares (in particular 
-# the version initially shipped with bionic) don't understand the conditional
-# [sections] below and simply ignore them. The Pi4 doesn't boot at all 
-# with firmwares this old so it's safe to place at the top. Of the Pi2 and 
-# Pi3, the Pi3 uboot happens to work happily on the Pi2, so it needs to go 
-# at the bottom to support old firmwares.
+%\begin{verbatim}
+%	sudo udevadm control --reload-rules
+%	sudo udevadm trigger
+%\end{verbatim}
 
-[pi4]
-kernel=uboot_rpi_4.bin
+%Como esta distribución no tiene interfaz web, no tiene instalado por defecto \verb|raspi-config|. Así, para su instalación se ha seguido el siguiente tutorial\footnote{\url{https://github.com/EmilGus/install_raspi-config/tree/master}} y, una vez instalado, hay que ejecutarlo usando \verb|sudo raspi-config|. Dentro de \textit{raspi-config} hay que desplazarse hasta \textit{Interfacing options} y \textit{serial}, hay que desabilitar \textit{serial login shell}, habilitar \textit{serial interface} y reiniciar con \verb|sudo reboot|.
 
-[pi2]
-kernel=uboot_rpi_2.bin
+%Finalmente los siguientes ficheros tienen que contener la siguiente información: 
 
-[pi3]
-kernel=uboot_rpi_3.bin
 
-[pi0]
-kernel=uboot_rpi_3.bin
+%\begin{lstlisting}[language=bash]
+%cat /boot/firmware/config.txt 
 
-[all]
-device_tree_address=0x03000000
+%# Please DO NOT modify this file; if you need to modify the boot config,
+%# the "usercfg.txt" file is the place to include user changes. Please 
+%# refer to the README file for a description of the various configuration 
+%# files on the boot partition.
 
-[pi4]
-max_framebuffers=2
-arm_boost=1
+%# The unusual ordering below is deliberate; older firmwares (in particular 
+%# the version initially shipped with bionic) don't understand the conditional
+%# [sections] below and simply ignore them. The Pi4 doesn't boot at all 
+%# with firmwares this old so it's safe to place at the top. Of the Pi2 and 
+%# Pi3, the Pi3 uboot happens to work happily on the Pi2, so it needs to go 
+%# at the bottom to support old firmwares.
 
-[all]
-# Enable the audio output, I2C and SPI interfaces on the GPIO header. As these
-# parameters related to the base device-tree they must appear *before* any
-# other dtoverlay= specification
-dtparam=audio=on
-dtparam=i2c_arm=on
-dtparam=spi=on
+%[pi4]
+%kernel=uboot_rpi_4.bin
 
-# Comment out the following line if the edges of the desktop appear outside
-# the edges of your display
-disable_overscan=1
+%[pi2]
+%kernel=uboot_rpi_2.bin
 
-# If you have issues with audio, you may try uncommenting the following line
-# which forces the HDMI output into HDMI mode instead of DVI (which doesn't
-# support audio output)
-#hdmi_drive=2
+%[pi3]
+%kernel=uboot_rpi_3.bin
 
-# Config settings specific to arm64
-arm_64bit=1
-dtoverlay=dwc2
+%[pi0]
+%kernel=uboot_rpi_3.bin
 
-[cm4]
-# Enable the USB2 outputs on the IO board (assuming your CM4 is plugged into
-# such a board)
-dtoverlay=dwc2,dr_mode=host
+%[all]
+%device_tree_address=0x03000000
 
-[all]
+%[pi4]
+%max_framebuffers=2
+%arm_boost=1
 
-# The following settings are "defaults" expected to be overridden by the
-# included configuration. The only reason they are included is, again, to
-# support old firmwares which don't understand the "include" command.
+%[all]
+%# Enable the audio output, I2C and SPI interfaces on the GPIO header. As these
+%# parameters related to the base device-tree they must appear *before* any
+%# other dtoverlay= specification
+%dtparam=audio=on
+%dtparam=i2c_arm=on
+%dtparam=spi=on
 
-enable_uart=1
-cmdline=cmdline.txt
+%# Comment out the following line if the edges of the desktop appear outside
+%# the edges of your display
+%disable_overscan=1
 
-include syscfg.txt
-include usercfg.txt
+%# If you have issues with audio, you may try uncommenting the following line
+%# which forces the HDMI output into HDMI mode instead of DVI (which doesn't
+%# support audio output)
+%#hdmi_drive=2
 
-start_x=1
-\end{lstlisting}
+%# Config settings specific to arm64
+%arm_64bit=1
+%dtoverlay=dwc2
 
-\begin{lstlisting}[language=bash]
-cat /boot/firmware/cmdline.txt 
+%[cm4]
+%# Enable the USB2 outputs on the IO board (assuming your CM4 is plugged into
+%# such a board)
+%dtoverlay=dwc2,dr_mode=host
 
-elevator=deadline net.ifnames=0 dwc_otg.lpm_enable=0 root=LABEL=writable \
- rootfstype=ext4 rootwait fixrtc quiet splash cfg80211.ieee80211_regdom=GB
-\end{lstlisting}
+%[all]
 
-\begin{lstlisting}[language=bash]
-cat /boot/firmware/usercfg.txt 
+%# The following settings are "defaults" expected to be overridden by the
+%# included configuration. The only reason they are included is, again, to
+%# support old firmwares which don't understand the "include" command.
+
+%enable_uart=1
+%cmdline=cmdline.txt
+
+%include syscfg.txt
+%include usercfg.txt
+
+%start_x=1
+%\end{lstlisting}
+
+%\begin{lstlisting}[language=bash]
+%cat /boot/firmware/cmdline.txt 
+
+%elevator=deadline net.ifnames=0 dwc_otg.lpm_enable=0 root=LABEL=writable \
+% rootfstype=ext4 rootwait fixrtc quiet splash cfg80211.ieee80211_regdom=GB
+%\end{lstlisting}
+
+%\begin{lstlisting}[language=bash]
+%cat /boot/firmware/usercfg.txt 
 	
-# Place "config.txt" changes (dtparam, dtoverlay, disable_overscan, etc.) in
-# this file. Please refer to the README file for a description of the various
-# configuration files on the boot partition.
-dtoverlay=pi3-disable-bt
-\end{lstlisting}
+%# Place "config.txt" changes (dtparam, dtoverlay, disable_overscan, etc.) in
+%# this file. Please refer to the README file for a description of the various
+%# configuration files on the boot partition.
+%dtoverlay=pi3-disable-bt
+%\end{lstlisting}
 
-\begin{lstlisting}[language=bash]
- cat /boot/firmware/syscfg.txt 
+%\begin{lstlisting}[language=bash]
+% cat /boot/firmware/syscfg.txt 
  
-# This file is intended to be modified by the pibootctl utility. User
-# configuration changes should be placed in "usercfg.txt". Please refer to the
-# README file for a description of the various configuration files on the boot
-# partition.
+%# This file is intended to be modified by the pibootctl utility. User
+%# configuration changes should be placed in "usercfg.txt". Please refer to the
+%# README file for a description of the various configuration files on the boot
+%# partition.
 
-enable_uart=1
-dtparam=audio=on
-dtparam=i2c_arm=on
-dtparam=spi=on
-cmdline=cmdline.txt	
-\end{lstlisting}
+%enable_uart=1
+%dtparam=audio=on
+%dtparam=i2c_arm=on
+%dtparam=spi=on
+%cmdline=cmdline.txt	
+%\end{lstlisting}
 
 
-Finalmente había que reiniciar y el serial se encontraba configurado correctamente en \verb|/dev/ttyAMA0| como muestra la Figura \ref{fig:nmea} y para tratar la información obtenida se decidió usar la librería llamada PyNMEA2, tratada en el Apartado \ref{subsec:pynmea} y que se desarrolló el código del nodo \verb|gps_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/gps_node.py}} para parsear la información y únicamente publicar la latitud y longitud como muestra la Figura \ref{fig:gpsnode}. De esos valores obtenidos, se decidió usar un conversor de coordenadas\footnote{\url{https://www.coordenadas-gps.com/convertidor-de-coordenadas-gps}} para demostrar que los valores recibidos eran correctos, como muestra la Figura \ref{fig:demogpsnode}.
+EL serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias a los pasos de instalación descritos en el Anexo ..., como muestra la Figura \ref{fig:nmea}. Para tratar la información obtenida, se decidió usar la librería llamada PyNMEA2, detallada en la Sección \ref{subsec:pynmea}, y que se desarrolló con el código del nodo \verb|gps_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/gps_node.py}} para parsear la información y únicamente publicar la latitud y longitud, como muestra la Figura \ref{fig:gpsnode}. De los valores obtenidos, se decidió usar un conversor de coordenadas\footnote{\url{https://www.coordenadas-gps.com/convertidor-de-coordenadas-gps}} para demostrar que los valores recibidos eran correctos, como muestra la Figura \ref{fig:demogpsnode}.
 
 
  \begin{figure} [h!]
@@ -551,23 +561,25 @@ Finalmente había que reiniciar y el serial se encontraba configurado correctame
 	\label{fig:demogpsnode}
 \end{figure}
 
-Debido a la distribución de Ubuntu usada, hay problemas con encender la Raspberry Pi si está conectado algo en el puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}} pero las sugerencias no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada fue desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
+Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada fue desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
 
-El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es, dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
+El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
 
 
 \subsection{Servomotores}
 \label{subsec:configmotores}
 
-Los últimos componentes que faltaban por configurar son los motores, que van conectados a los pines GPIO y para ello hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 
+Los últimos componentes que faltaban por configurar son los motores, que van conectados a los pines GPIO 
+%y para ello hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 
 
-\begin{verbatim}
-	sudo apt-get update
-	sudo apt-get install rpi.gpio-common python3-pigpio python3-gpiozero \
-	 python3-rpi.gpio
-\end{verbatim}
+%\begin{verbatim}
+%	sudo apt-get update
+%	sudo apt-get install rpi.gpio-common python3-pigpio python3-gpiozero \
+%	 python3-rpi.gpio
+%\end{verbatim}
 
-Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups} y ya importando la librería \verb|RPi.GPIO| se podían operar directamente con ellos. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación por ancho de pulsos (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()| que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo y en la Figura \ref{fig:motorlogic} se muestra los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia detrás, girar hacia la izquierda mientras avanza hacia adelante y girar hacia la derecha mientras avanza hacia adelante.
+%Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups} y ya 
+Tras seguir los pasos de configuración del Anexo.., importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -583,10 +595,10 @@ Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout
 	\end{center}
 	\caption{Distintas direcciones de PiBotJ}
 	\label{fig:motorlogic}
-\end{figure}
+\end{figure}\
 
-Todos los componentes ya estaban configurados correctamente y ya era el momento que poder desarrollar el código necesario para cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}.
-
+Una vez configurados todos los componentes del robot, ya se puede pasar a desarrollar el \textit{software} que conforma el comportamiento final de este. 
+ 
 
 \section{Software aplicado al robot físico}
 \label{sec:softwarerf}

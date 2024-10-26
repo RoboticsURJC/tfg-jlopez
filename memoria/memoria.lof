@@ -82,16 +82,16 @@
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Herramienta usada para visualizar la cámara\relax }}{77}{figure.caption.130}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Herramienta usada para visualizar los valores del GPS\relax }}{78}{figure.caption.131}%
 \contentsline {figure}{\numberline {6.9}{\ignorespaces Herramienta usada para rotar la cámara\relax }}{78}{figure.caption.132}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{80}{figure.caption.133}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Cámara de PiBotJ en funcionamiento\relax }}{80}{figure.caption.134}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Media de la matriz de intrínsecos\relax }}{82}{figure.caption.138}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Parámetros extrínsecos\relax }}{82}{figure.caption.140}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Configuración exitosa del Google Coral\relax }}{83}{figure.caption.141}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Valores publicados de latitud y longitud captados del GPS\relax }}{87}{figure.caption.142}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Demostración de una correcta localización\relax }}{87}{figure.caption.143}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Diagrama para la posición central del servo\relax }}{89}{figure.caption.144}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Distintas direcciones de PiBotJ\relax }}{89}{figure.caption.145}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{96}{figure.caption.151}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Cámara de PiBotJ en funcionamiento\relax }}{79}{figure.caption.133}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Media de la matriz de intrínsecos\relax }}{81}{figure.caption.137}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Parámetros extrínsecos\relax }}{81}{figure.caption.139}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Valores publicados de latitud y longitud captados del GPS\relax }}{82}{figure.caption.140}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Demostración de una correcta localización\relax }}{83}{figure.caption.141}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Diagrama para la posición central del servo\relax }}{84}{figure.caption.142}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Distintas direcciones de PiBotJ\relax }}{84}{figure.caption.143}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{91}{figure.caption.149}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{98}{figure.caption.151}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{99}{figure.caption.152}%
