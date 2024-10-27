@@ -86,19 +86,19 @@
 \contentsline {subsubsection}{Obtención del contorno y coordenadas}{90}{subsubsection*.153}%
 \contentsline {subsection}{\numberline {6.3.2}Modelo Pin Hole}{90}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Shoelace method}{90}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Detección de líneas}{91}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}VFF}{91}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.4}Detección de líneas}{92}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}VFF}{92}{subsection.6.3.5}%
 \contentsline {subsection}{\numberline {6.3.6}Teleoperado}{92}{subsection.6.3.6}%
 \contentsline {subsection}{\numberline {6.3.7}Interfaz Web}{92}{subsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.3.8}¿Aplicación Completa?}{93}{subsection.6.3.8}%
 \contentsline {section}{\numberline {6.4}Snippets}{93}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Verbatim}{93}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Ecuaciones}{94}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Tablas o cuadros}{94}{section.6.7}%
+\contentsline {section}{\numberline {6.7}Tablas o cuadros}{95}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Segunda sección}{95}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Números}{95}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.1}Números}{96}{subsection.6.8.1}%
 \contentsline {subsection}{\numberline {6.8.2}Listas}{96}{subsection.6.8.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{96}{paragraph*.160}%
+\contentsline {paragraph}{Referencias bibliográficas}{96}{paragraph*.161}%
 \contentsline {section}{\numberline {6.9}Corrector ortográfico}{97}{section.6.9}%
 \contentsline {chapter}{\numberline {7}Experimentos}{98}{chapter.7}%
 \contentsline {section}{\numberline {7.1}}{98}{section.7.1}%
@@ -114,4 +114,4 @@
 \contentsline {subsection}{\numberline {9.3.2}Google Coral}{103}{subsection.9.3.2}%
 \contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{103}{subsection.9.3.3}%
 \contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{107}{subsection.9.3.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{108}{appendix*.163}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{108}{appendix*.164}%
