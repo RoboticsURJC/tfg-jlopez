@@ -81,37 +81,37 @@
 \contentsline {subsection}{\numberline {6.2.4}Servomotores}{83}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Software aplicado al robot físico}{84}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{85}{subsection.6.3.1}%
-\contentsline {subsubsection}{Valores obtenidos del modelo}{87}{subsubsection*.148}%
-\contentsline {subsubsection}{Aplicación del modelo}{88}{subsubsection*.149}%
-\contentsline {subsubsection}{Obtención del contorno y coordenadas}{88}{subsubsection*.150}%
-\contentsline {subsection}{\numberline {6.3.2}Modelo Pin Hole}{88}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Shoelace method}{88}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Detección de líneas}{89}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}VFF}{89}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}Teleoperado}{90}{subsection.6.3.6}%
-\contentsline {subsection}{\numberline {6.3.7}Interfaz Web}{90}{subsection.6.3.7}%
-\contentsline {subsection}{\numberline {6.3.8}¿Aplicación Completa?}{91}{subsection.6.3.8}%
-\contentsline {section}{\numberline {6.4}Snippets}{91}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Verbatim}{91}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Ecuaciones}{92}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Tablas o cuadros}{92}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Segunda sección}{93}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Números}{93}{subsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.8.2}Listas}{94}{subsection.6.8.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{94}{paragraph*.157}%
-\contentsline {section}{\numberline {6.9}Corrector ortográfico}{95}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Experimentos}{96}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{96}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{96}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{97}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{97}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{98}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Anexo}{99}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Construcción del robot}{99}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{99}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Configuración del robot real}{100}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Cámara}{100}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Google Coral}{101}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{101}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{105}{subsection.9.3.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{106}{appendix*.160}%
+\contentsline {subsubsection}{Valores obtenidos del modelo}{88}{subsubsection*.148}%
+\contentsline {subsubsection}{Aplicación del modelo}{89}{subsubsection*.149}%
+\contentsline {subsubsection}{Obtención del contorno y coordenadas}{90}{subsubsection*.153}%
+\contentsline {subsection}{\numberline {6.3.2}Modelo Pin Hole}{90}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Shoelace method}{90}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Detección de líneas}{91}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}VFF}{91}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Teleoperado}{92}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Interfaz Web}{92}{subsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.3.8}¿Aplicación Completa?}{93}{subsection.6.3.8}%
+\contentsline {section}{\numberline {6.4}Snippets}{93}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Verbatim}{93}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Ecuaciones}{94}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Tablas o cuadros}{94}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Segunda sección}{95}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Números}{95}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Listas}{96}{subsection.6.8.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{96}{paragraph*.160}%
+\contentsline {section}{\numberline {6.9}Corrector ortográfico}{97}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Experimentos}{98}{chapter.7}%
+\contentsline {section}{\numberline {7.1}}{98}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Corrector ortográfico}{98}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{99}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{99}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{100}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Anexo}{101}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Construcción del robot}{101}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{101}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Configuración del robot real}{102}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Cámara}{102}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Google Coral}{103}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{103}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{107}{subsection.9.3.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{108}{appendix*.163}%
