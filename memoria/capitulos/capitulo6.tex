@@ -761,65 +761,50 @@ Para conseguir los píxeles, se toma la máscara binarizada usando el umbral def
 \subsection{Modelo Pin Hole}
 \label{subsec:softwarepinhole}
 
-Enlace donde se encuentra toda la información: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Hip\%C3\%B3tesis-suelo
+%Enlace donde se encuentra toda la información: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Hip\%C3\%B3tesis-suelo
 
-\subsection{Shoelace method}
+\subsection{Algoritmo de la lazada}
 \label{subsec:softwareshoelace}
 
+Para calcular el área de las coordenadas del mundo real, se ha obtado por seguir el algoritmo de la lazada\footnote{\url{https://es.wikipedia.org/wiki/F\%C3\%B3rmula_del_\%C3\%A1rea_de_Gauss}} o también conocido como el área de Gauss. Este algoritmo matemático es usado para calcular el área de un polígono simple cuyos vértices están descritos como pares de coordenadas en el plano. Tiene múltiples aplicaciones en agrimensura y topografía.
+
+El nombre de este algoritmo es debido al constante cruce de productos de las coordenadas que simula atarse los cordones, como muestra la \ref{ec:shoelace}.
+\begin{myequation}[h]
+	\begin{equation}
+		A = \frac{1}{2}\abs{\sum_{i=1}^{n-1}x_i y_{i+1} + x_n y_1 - \sum_{i=1}^{n-1}x_{i+1} y_{i} - x_1 y_n}
+		\nonumber
+		\label{ec:shoelace}
+	\end{equation}
+	\caption[Fórmula del algoritmo de la lazada]{Fórmula del algoritmo de la lazada}
+\end{myequation} 
+
+Donde A es el área del polígono, n es el número de lados del polígono y $(x_i, y_i)$ , i = 1,2,...,n son los vértices del polígono de forma alternativa.
+
+Un ejemplo que ilustra estre proceso y demuestra que se cumple el algoritmo de la lazada con respecto a la fórmula usada para calcular el área de un rectángulo, se puede apreciar en la Figura \ref{fig:demoshoelace}.
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/demoshoelace.png}
+	\end{center}
+	\caption{Demostración del algoritmo de la lazada}
+	\label{fig:demoshoelace}
+\end{figure}
 
 
-Para calcular el área se ha decidido usar la fórmula "shoelace" (cordón de zapato). Es un algoritmo matemático para calcular el área de un polígono que se describe por sus coordenadas cartesianas (2D). El nombre de este algoritmo es debido a que tiene forma de atarse los cordones. Los puntos se tienen que colocar en sentido horario y el primer punto se tiene que duplicar y su segunda copia se sitúa al final de todos (como para cerrar el círculo).
+Este algoritmo aparece aplicado una vez que se ha convertido las coordenadas al sistema del mundo real en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
 
-Ejemplo de aplicación:
+\subsection{Teleoperado}
+\label{subsec:teleoperado}
+Movimiento motores
 
-Cuadrado: (-140,-45), (-140,45), (140,45), (140,-45), (-140,-45)
+\subsection{Autónomo}
+\label{subsec:autonomo}
 
-Código en python:
+\subsubsection{Detección de líneas}
+\label{subsubsec:softwaredl}
 
-def shoelace(coords):
-n = len(coords)
-area = 0.0
-
-for i in range(n - 1):
-x1, y1 = coords[i]
-x2, y2 = coords[i + 1]
-area += (x1 * y2) - (x2 * y1)
-
-\# Agregar el último segmento
-x1, y1 = coords[-1]
-x2, y2 = coords[0]
-area += (x1 * y2) - (x2 * y1)
-
-return abs(area) / 2.0
-
-El resultado es de 25200 mm²
-
-La fórmula del rectángulo: base x altura
-
-280*90 = 25200mm²
-
-Coincide con la fórmula de "shoelace"
-
-Algunas fuentes de información:
-
-https://en.wikipedia.org/wiki/Shoelace\_formula
-
-https://www.youtube.com/watch?v=iKIpraBC-Nw
-
-https://www.youtube.com/watch?v=0KjG8Pg6LGk
-
-
-Incluir lo del volumen medio de 40 mm de la RAC Foundation !! en el código también
-
-
-\subsection{Detección de líneas}
-\label{subsec:softwaredl}
-
-Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
-
-
-\subsection{VFF}
-\label{subsec:softwarevff}
+\subsubsection{VFF}
+\label{subsubsec:vff}
 
 TANTO PARA LOS MOTORES COMO PARA LA CÁMARA
 
@@ -837,10 +822,9 @@ Usar locks para evitar que haya condiciones de carrera: https://realpython.com/i
 Explicación del código que usa vff y desarrollé para rob servicios: https://robmovjuloau2022.blogspot.com/
 
 
-\subsection{Teleoperado}
-\label{subsec:teleoperado}
 
-Movimiento motores
+%Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
+
 
 \subsection{Interfaz Web}
 \label{subsec:softwareweb}
