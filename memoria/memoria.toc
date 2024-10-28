@@ -84,17 +84,16 @@
 \contentsline {subsubsection}{Valores obtenidos del modelo}{88}{subsubsection*.148}%
 \contentsline {subsubsection}{Aplicación del modelo}{89}{subsubsection*.149}%
 \contentsline {subsubsection}{Obtención del contorno y coordenadas}{90}{subsubsection*.153}%
-\contentsline {subsection}{\numberline {6.3.2}Modelo Pin Hole}{90}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.2}Hipótesis suelo}{90}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{90}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{91}{subsection.6.3.4}%
-\contentsline {subsubsection}{Teleoperado}{92}{subsubsection*.158}%
-\contentsline {subsection}{\numberline {6.3.5}Autónomo}{93}{subsection.6.3.5}%
-\contentsline {subsubsection}{Detección de líneas}{93}{subsubsection*.159}%
-\contentsline {subsubsection}{VFF}{93}{subsubsection*.160}%
+\contentsline {subsection}{\numberline {6.3.5}Autónomo}{92}{subsection.6.3.5}%
+\contentsline {subsubsection}{Detección de líneas}{92}{subsubsection*.159}%
+\contentsline {subsubsection}{VFF}{92}{subsubsection*.160}%
 \contentsline {subsection}{\numberline {6.3.6}¿Aplicación Completa?}{93}{subsection.6.3.6}%
-\contentsline {section}{\numberline {6.4}Snippets}{94}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Snippets}{93}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Verbatim}{94}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Ecuaciones}{95}{section.6.6}%
+\contentsline {section}{\numberline {6.6}Ecuaciones}{94}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Tablas o cuadros}{95}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Segunda sección}{96}{section.6.8}%
 \contentsline {subsection}{\numberline {6.8.1}Números}{96}{subsection.6.8.1}%
