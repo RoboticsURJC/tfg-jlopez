@@ -102,38 +102,38 @@ class CameraPinHoleV2Class(Node):
         msg.data = abs(area) / 2
         self.area_publisher.publish(msg)
 
-    def coords_vff_callback(self, coords):
+    #def coords_vff_callback(self, coords):
 
-        if not coords.points or len(coords.points) == 0:
-            posenone = Pose2D()
-            posenone.x = 0.0
-            posenone.y = 0.0
-            self.min_coords_publisher.publish(posenone)
-            return
+    #    if not coords.points or len(coords.points) == 0:
+    #        posenone = Pose2D()
+    #        posenone.x = 0.0
+    #        posenone.y = 0.0
+    #        self.min_coords_publisher.publish(posenone)
+    #        return
 
         # Calcula la conversión de los puntos de coordenadas
         # de la cámara en coordenadas del mundo real 
-        array3D = []
-        for i, point in enumerate(coords.points):
-            pixel = Punto2D()
-            pixel3D = Punto3D()
+    #    array3D = []
+    #    for i, point in enumerate(coords.points):
+    #        pixel = Punto2D()
+    #        pixel3D = Punto3D()
 
             # convertir las coordenadas del sistema de 192x192 
             # en imágenes de 640x480
-            pixel.x = point.x*640/192
-            pixel.y = point.y*480/192
-            pixel.h = 1
+    #        pixel.x = point.x*640/192
+    #        pixel.y = point.y*480/192
+    #        pixel.h = 1
 
-            pixel3D = self.getIntersectionZ(pixel)
+    #        pixel3D = self.getIntersectionZ(pixel)
             #print(pixel3D.x, pixel3D.y)
-            array3D.append(pixel3D)
+    #        array3D.append(pixel3D)
         
         # importante añadir en las coordenadas la primera de todas al final
 
         # publica la coordenada que está detectada más cerca del robot
-        pose = Pose2D()
-        pose = self.get_min_coords(array3D)
-        self.min_coords_publisher.publish(pose)
+    #    pose = Pose2D()
+    #    pose = self.get_min_coords(array3D)
+    #    self.min_coords_publisher.publish(pose)
 
 
     def signal_handler(self, sig, frame):

@@ -32,7 +32,7 @@ class CameraTFv3Node(Node):
         self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
 
         # Publicador del array con coordenadas
-        self.polygon_vff_publisher = self.create_publisher(Polygon, 'pothole_vff_coords', self.queueSize)
+        #self.polygon_vff_publisher = self.create_publisher(Polygon, 'pothole_vff_coords', self.queueSize)
 
         # Usa 10 Hz
         self.periodCommunication = 0.1  
@@ -51,6 +51,7 @@ class CameraTFv3Node(Node):
         # Obtener detalles de entrada y salida del modelo
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
+
         self.get_logger().info('set input and output details')
 
         # Maneja la señal de Ctrl +C
@@ -72,7 +73,7 @@ class CameraTFv3Node(Node):
 
         height, width, channels = frame.shape
 
-        # Redimensionar el marco a las dimensiones requeridas por el modelo
+        # Redimensionar la iamgen a las dimensiones requeridas por el modelo
         input_shape = self.input_details[0]['shape']
         height, width = input_shape[1], input_shape[2]
         resized_frame = cv2.resize(frame, (width, height))
@@ -86,8 +87,7 @@ class CameraTFv3Node(Node):
         scale, zero_point = self.input_details[0]['quantization']
         input_data = (input_data / scale + zero_point).astype(np.int8)
 
-        # Establecer el tensor deentrada y realizar la inferencia
-        # self.input_details[0]['index'] devuelve 0
+        # Establecer el tensor de entrada y realizar la inferencia
         self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
         self.interpreter.invoke()
 
@@ -107,58 +107,43 @@ class CameraTFv3Node(Node):
             # Obtener la escala y el punto cero del tensor de salida
             scale, zero_point = self.output_details[1]['quantization']
 
-            # Descuantificar la máscara de baches mirando el canal 0 es la clase que buscamos
-            pothole_mask = (prediction1[:, :, 0].astype(np.float32) - zero_point) * scale
+            # Descuantifica la máscara de baches mirando el canal 0
+            pothole_mask_class0 = (prediction1[:, :, 0].astype(np.float32) - zero_point) * scale
+            # Descuantifica la máscara de baches mirando el canal 1
+            pothole_mask_class1 = (prediction1[:, :, 1].astype(np.float32) - zero_point) * scale
+
         else:
             self.get_logger().error('Unexpected number of channels in prediction output')
             return
 
         # Determinar si se ha detectado un bache
-        max_value = np.max(pothole_mask)
+        max_value_class0 = np.max(pothole_mask_class0)
+
+        max_value_class1 = np.max(pothole_mask_class1)
+
         # se usa media móvil exponencial para reducir los picos
-        ema_value_updated = self.update_ema(max_value)
+        ema_value_updated_class0 = self.update_ema(max_value_class0)
+
+        ema_value_updated_class1= self.update_ema(max_value_class1)
+
+        print("el valor de la clase 0 es: " + str(ema_value_updated_class0))
+        print("el valor de la clase 1 es: " + str(ema_value_updated_class1))
+
 
         newframe = resized_frame.copy()
         polygon_coords = Polygon()
-        polygon_vff_coords = Polygon()
+        #polygon_vff_coords = Polygon()
 
         current_time = time.time()
         
+        pixels = None
         # si se detecta bache, se dibuja el contorno más grande detectado pero sólo 
         # se almacena el contorno más grande detectado en esos 4 segundos
-        if ema_value_updated > 0.6:
-            pixels = self.extract_contour_pixels(pothole_mask, resized_frame)
+        if ema_value_updated_class0 > 0.6:
+            pixels = self.extract_contour_pixels(pothole_mask_class0, resized_frame)
 
-            # si hay contorno detectado 
-            if pixels is not None:
-                # si no estaba detectado, se asigna como contorno más grande el actual
-                if not self.detected:
-                    self.detected = True
-                    self.detect_time = current_time
-                    self.largest_contour = pixels  
-
-                # Ya ha sido detectado
-                else: 
-                    # Comprobar si el contorno sigue siendo el más grande
-                    if len(pixels) > len(self.largest_contour):
-                        self.largest_contour = pixels
-
-                # Dibuja el contorno más grande en la imagen
-                cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
-                # Comprobar si han pasado 4 segundos
-                if (current_time - self.detect_time) > 3:
-                    # Convertir las coordenadas al formato del publicador 
-                    polygon_coords = self.convert_coords(self.largest_contour)
-
-                    self.reset_detection()  # Reinicia la detección
-
-                polygon_vff_coords = self.convert_coords(pixels)
-            # No se ha encontrado un contorno
-            else:  
-                # Si se había detectado previamente
-                if self.detected:  
-                    # resetea la detección
-                    self.reset_detection()
+        elif ema_value_updated_class1 > 0.6:
+            pixels = self.extract_contour_pixels(pothole_mask_class1, resized_frame)
 
         # Si no hay detección
         else:  
@@ -166,10 +151,47 @@ class CameraTFv3Node(Node):
             if self.detected:
                 self.reset_detection()
 
+        # si hay contorno detectado 
+        if pixels is not None:
+            # si no estaba detectado, se asigna como contorno más grande el actual
+            if not self.detected:
+                self.detected = True
+                self.detect_time = current_time
+                self.largest_contour = pixels  
+
+            # Ya ha sido detectado
+            else: 
+                # Comprobar si el contorno sigue siendo el más grande
+                if len(pixels) > len(self.largest_contour):
+                    self.largest_contour = pixels
+
+            # Dibuja el contorno más grande en la imagen
+            cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
+            # Comprobar si han pasado 3 segundos
+            if (current_time - self.detect_time) > 3:
+                # Convertir las coordenadas al formato del publicador 
+                polygon_coords = self.convert_coords(self.largest_contour)
+
+                self.reset_detection()  # Reinicia la detección
+
+                #polygon_vff_coords = self.convert_coords(pixels)
+        # No se ha encontrado un contorno
+        else:  
+            # Si se había detectado previamente
+            if self.detected:  
+                # resetea la detección
+                self.reset_detection()
+
+        # Si no hay detección
+        #else:  
+            # si no hay detección y estaba detectado previamente, resetear la detección
+        #    if self.detected:
+        #        self.reset_detection()
+
         # Publicar las coordenadas y que el nodo de pinhole las convierta
         self.polygon_publisher.publish(polygon_coords)
 
-        self.polygon_vff_publisher.publish(polygon_vff_coords)
+        #self.polygon_vff_publisher.publish(polygon_vff_coords)
 
         # Convertir y publicar la imagen
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
