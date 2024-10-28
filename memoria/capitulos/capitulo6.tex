@@ -763,6 +763,8 @@ Para conseguir los píxeles, se toma la máscara binarizada usando el umbral def
 
 %Enlace donde se encuentra toda la información: https://github.com/RoboticsURJC/tfg-jlopez/wiki/Hip\%C3\%B3tesis-suelo
 
+Mirar lo subrayado del paper 
+
 \subsection{Algoritmo de la lazada}
 \label{subsec:softwareshoelace}
 
@@ -793,9 +795,48 @@ Un ejemplo que ilustra estre proceso y demuestra que se cumple el algoritmo de l
 
 Este algoritmo aparece aplicado una vez que se ha convertido las coordenadas al sistema del mundo real en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
 
-\subsection{Teleoperado}
-\label{subsec:teleoperado}
-Movimiento motores
+
+\subsection{Interfaz Web}
+\label{subsec:softwareweb}
+La forma que se decidió usar la \ac{HRI} para poder cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}, fue a través de una interfaz web. Dicha interfaz web, ha sido creada gracias a las herramientas descritas en la Sección \ref{subsec:interfazweb}. \verb|Rosbridge_server'| permite a las páginas web (que actúan como clientes) comunicarse con el servidor (que en este caso se inicializa en PiBotJ).
+Una vez habilitada esa comunicación, se decidió incluir un mapa, usando OpenStreetMaps, en el que apareciese un marcador que tiene asociado el valor de área/volumen por cada bache detectado. Por otro lado, se decidió incluir una botonera para poder ser capaz de controlar el movimiento de las ruedas de PiBotJ.
+
+Dicha botonera se conforma de cuatro botones que publican los distintos movimientos al robot y cuando se deja de pulsar, el robot se para.
+
+
+\subsubsection{Teleoperado}
+\label{subsubsec:teleoperado}
+
+Movimiento motores en base a las imágenes
+
+
+
+
+
+
+------ EN ROS2 HUMBLE --------------------------------------------------
+He descubierto que en ros existe rosbridge\_server y trata de dar comunicación bidireccional entre clientes (buscadores web) y servidores usando una conexión Websocket. Para poder usarlo, primero hay que instalarlo y ejecutarlo en mi Raspberry:
+
+sudo apt-get install ros-humble-rosbridge-suite
+ros2 launch rosbridge\_server rosbridge\_websocket\_launch.xml
+
+Para comprobar que escucha bien en el puerto 9090 rosbridge:
+
+sudo lsof -i TCP:9090 | grep LISTEN
+
+En otra terminal de la Raspberry , abre la ejecución del publicador del nodo gps:
+
+source ./install/setup.bash
+ros2 run pibotj\_rr gps\_node
+
+En otra terminal de la Raspberry , crea un fichero .xml como este y ejecútalo en el directorio donde se encuentre (evita que sea dentro de ./src!!) de la siguiente forma:
+
+python3 -m http.server 8000
+
+En una nueva ventana del navegador insertar lo mismo que la imagen de abajo, cambiando la ip de tu raspberry.
+
+Resultado final: Incluir imagen
+
 
 \subsection{Autónomo}
 \label{subsec:autonomo}
@@ -824,44 +865,6 @@ Explicación del código que usa vff y desarrollé para rob servicios: https://r
 
 
 %Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
-
-
-\subsection{Interfaz Web}
-\label{subsec:softwareweb}
-
-O también conocido como HRI, se decidió usarla para facilitar el funcionamiento ...
-
-Fuentes de información: 
-https://en.wikipedia.org/wiki/Human\%E2\%80\%93robot\_interaction
-
-https://journals.sagepub.com/doi/full/10.1177/0018720816644364
-
-
-En Raspbian  hay que instalar apache... (como recordatorio, no incluirlo)
-
-
------- EN ROS2 HUMBLE --------------------------------------------------
-He descubierto que en ros existe rosbridge\_server y trata de dar comunicación bidireccional entre clientes (buscadores web) y servidores usando una conexión Websocket. Para poder usarlo, primero hay que instalarlo y ejecutarlo en mi Raspberry:
-
-sudo apt-get install ros-humble-rosbridge-suite
-ros2 launch rosbridge\_server rosbridge\_websocket\_launch.xml
-
-Para comprobar que escucha bien en el puerto 9090 rosbridge:
-
-sudo lsof -i TCP:9090 | grep LISTEN
-
-En otra terminal de la Raspberry , abre la ejecución del publicador del nodo gps:
-
-source ./install/setup.bash
-ros2 run pibotj\_rr gps\_node
-
-En otra terminal de la Raspberry , crea un fichero .xml como este y ejecútalo en el directorio donde se encuentre (evita que sea dentro de ./src!!) de la siguiente forma:
-
-python3 -m http.server 8000
-
-En una nueva ventana del navegador insertar lo mismo que la imagen de abajo, cambiando la ip de tu raspberry.
-
-Resultado final: Incluir imagen
 
 
 \subsection{¿Aplicación Completa?}
