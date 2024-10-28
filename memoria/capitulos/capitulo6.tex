@@ -760,8 +760,24 @@ Para conseguir los píxeles, se toma la máscara binarizada usando el umbral def
 
 \subsection{Hipótesis suelo}
 \label{subsec:softwarehsuelo}
- 
 
+Extraer información de la cámara no es fácil
+En \cite{vega19d} se presenta un sistema de visión de código abierto que simplifica el uso de cámaras en la robótica educativa
+
+El primer paso del sistema es el análisis en 2D: Los píxeles obtenidos del contorno del bache están sobre imágenes de 192x192 pero la cámara está calibrada con imágenes de 640x480 (hay que hacer conversión). 
+
+El algoritmo de reconstrucción 3D (pasar de 2D a 3D), fija esos puntos en el espacio 3D (en el mundo real) de acuerdo con la hiótesis suelo, esto es, suponemos que todos los objetos están en el suelo. Debido a que tenemos solo una cámara, necesitamos una restricción que nos permitirá estimar la tercera dimensión y por ello, todos los objetos están pegados al suelo: z = 0.
+
+El número de sistemas de coordenadas (incluir imagen y enlazarlas)
+
+El modelo de la cámara, asume que es una cámara ideal,se llama modelo pin-hole(cámara estenopeica). Cuando una imagen se toma usando cámara pin-hole, perdemos informaciónpor su conversión de 3D a 2D. Es importante encontrar información de la profundidad
+
+
+
+
+Explicar que lo he tomado del apartado anterior \ref{subsec:configcamara}
+ 
+(mirar el código de camera\_pinholev2\_node y de projGeo)
 \subsection{Algoritmo de la lazada}
 \label{subsec:softwareshoelace}
 
