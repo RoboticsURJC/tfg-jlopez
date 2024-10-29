@@ -864,7 +864,7 @@ Una vez habilitada esa comunicación, ya se podía apreciar la página web\footn
 \label{subsec:autonomo}
 PiBotJ ya se ha visto que se puede controlar de forma teleoperada, usando la botonera definida en la Sección \ref{subsec:softwareweb} pero, para tener otra alternativa con respecto a la navegación de PiBotJ, se ha decidido implementar una lógica para que su movimiento sea autónomo. 
 
-Lo ideal para este caso es que PiBotJ fuera capaz de navegar  autónomamente por carreteras pero debido a la imposibilidad de probarlo en ese entorno, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 7,69\% sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
+Lo ideal para este caso es que PiBotJ fuera capaz de navegar  autónomamente por carreteras pero debido a la imposibilidad de probarlo en ese entorno, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
 
 \begin{figure}[ht!]
 	\centering
@@ -896,7 +896,45 @@ Una vez definido el entorno donde se iba a trabajar, era el momento de definir l
 \subsubsection{Detección de líneas}
 \label{subsubsec:softwaredl}
 
-Incluir una imagen con los distintos casos que puede detectar
+Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente cuando no haya bache en el entorno controlado. Para conseguirlo, es necesario procesar la imagen en escala de grises para detectar los contornos de las líneas, usando una umbralización adaptativa para destacar los bordes y una operación de apertura morfológica para eliminar pequeños puntos blancos que representan ruido en la imagen binaria (Código \ref{cod:dl}). El resultado final queda reflejado en la Figura \ref{fig:camaradlines}.
+
+
+\begin{code}[h]
+	\begin{lstlisting}[language=Python]
+	# Convierte la imagen a escala de grises
+	gray = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2GRAY)
+	# Aplica un umbral para destacar los bordes
+	th1 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,23,-50)
+		
+	# Elimina ruido
+	kernel = np.ones((3, 3), np.uint8) 
+	opened_th1 = cv2.morphologyEx(th1, cv2.MORPH_OPEN, kernel)
+	\end{lstlisting}
+	\caption[Filtro para obtener las líneas blancas]{Filtro para obtener las líneas blancas}
+	\label{cod:dl}
+\end{code}
+
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=9cm]{figs/cap6/camaradlines.png}
+	\end{center}
+	\caption{Filtro resultante aplicado para la detección de líneas}
+	\label{fig:camaradlines}
+\end{figure}
+
+
+%Incluir una imagen detectando las líneas. Incluir un video detectando las lineas
+En la Figura \ref{fig:dlines} se puede ver los distintos tipos de situaciones a las que se enfrenta PiBotJ cuando detecta líneas y dependiendo de la situación, PiBotJ reaccionaría de una forma u otra. Cuando detecta las dos líneas, PiBotJ sigue recto mientras que si detecta únicamente una línea, deberá avanzar hacia adelante y si dicha línea no se encuentra en el centro de la imagen, PiBotJ giraría hasta que se situase en el centro. Por otro lado, si no detecta líneas avanzaría recto durante 3 segundos y empezaría a girar. Este video\footnote{\url{}} demuestra el proceso explicado. 
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/casosdlines.png}
+	\end{center}
+	\caption{Distintos casos de la detección de líneas}
+	\label{fig:dlines}
+\end{figure}
+
 \subsubsection{VFF}
 \label{subsubsec:vff}
 

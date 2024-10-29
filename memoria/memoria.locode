@@ -8,8 +8,9 @@
 \contentsline {code}{\numberline {6.2}{\ignorespaces Macro que define una \textit {mesh link}}}{72}{code.caption.122}%
 \contentsline {code}{\numberline {6.3}{\ignorespaces Macro que permite a Gazebo simular una cámara}}{73}{code.caption.123}%
 \contentsline {code}{\numberline {6.4}{\ignorespaces Cómo convertir los datos del modelo a un formato adecuado}}{89}{code.caption.150}%
-\contentsline {code}{\numberline {6.5}{\ignorespaces Función para buscar elementos 3D en la imagen}}{97}{code.caption.168}%
-\contentsline {code}{\numberline {6.6}{\ignorespaces Cómo usar un Slider}}{98}{code.caption.169}%
+\contentsline {code}{\numberline {6.5}{\ignorespaces Filtro para obtener las líneas blancas}}{97}{code.caption.167}%
+\contentsline {code}{\numberline {6.6}{\ignorespaces Función para buscar elementos 3D en la imagen}}{99}{code.caption.171}%
+\contentsline {code}{\numberline {6.7}{\ignorespaces Cómo usar un Slider}}{99}{code.caption.172}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
