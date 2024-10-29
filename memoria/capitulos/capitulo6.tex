@@ -758,32 +758,66 @@ Para conseguir los píxeles, se toma la máscara binarizada usando el umbral def
 	\label{fig:contornobache}
 \end{figure}
 
-\subsection{Hipótesis suelo}
+\subsection{Cámara pinhole}
 \label{subsec:softwarehsuelo}
 
-Extraer información de la cámara no es fácil
-En \cite{vega19d} se presenta un sistema de visión de código abierto que simplifica el uso de cámaras en la robótica educativa
+Extraer información de la cámara no es fácil y por ello se decidió simplificar la cámara definiéndola como una cámara \textit{pinhole}, o también conocida como una cámara estenopeica. El modelo \textit{pinhole} describe una cámara (sin lente) y con una pequeña apertura. Los rayos de luz atraviesan la apertura y proyectan una versión invertida de lo que se capta en el fondo de la cámara (o el plano de la imagen) (Figura \ref{fig:pinhole}).
 
-El primer paso del sistema es el análisis en 2D: Los píxeles obtenidos del contorno del bache están sobre imágenes de 192x192 pero la cámara está calibrada con imágenes de 640x480 (hay que hacer conversión). 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=8cm]{figs/cap6/pinhole.png}
+	\end{center}
+	\caption{Funcionamiento de una cámara esteneopeica $^{\ref{note:enlace124}}$}
+	\label{fig:pinhole}
+\end{figure}
 
-El algoritmo de reconstrucción 3D (pasar de 2D a 3D), fija esos puntos en el espacio 3D (en el mundo real) de acuerdo con la hiótesis suelo, esto es, suponemos que todos los objetos están en el suelo. Debido a que tenemos solo una cámara, necesitamos una restricción que nos permitirá estimar la tercera dimensión y por ello, todos los objetos están pegados al suelo: z = 0.
-
-El número de sistemas de coordenadas (incluir imagen y enlazarlas)
-
-El modelo de la cámara, asume que es una cámara ideal,se llama modelo pin-hole(cámara estenopeica). Cuando una imagen se toma usando cámara pin-hole, perdemos informaciónpor su conversión de 3D a 2D. Es importante encontrar información de la profundidad
+% Definir la primera nota al pie con el número 124
+\setcounter{footnote}{124} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/C\%C3\%A1mara_estenopeica}\label{note:enlace124}}
 
 
+Este modelo explica cómo se realiza la proyección de un punto en el espacio tridimensional hacia el plano bidimensional de una imagen. En otras palabras, el modelo de cámara define una fórmula matemática que, a partir de las coordenadas de un punto en el espacio 3D, con referencia a la cámara, permite calcular las coordenadas en las que ese punto aparecería en una fotografía. Un resumen de fórmulas matemáticas aparecen en la Figura \ref{fig:pinholeformula}.
 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/esquema_pinhole_matrices.jpg}
+	\end{center}
+	\caption{Relación de fórmulas del modelo pinhole}
+	\label{fig:pinholeformula}
+\end{figure}
+  
+En la Figura \ref{fig:pinholeformula} se pueden ver los pámetros intrínsecos y extrínsecos que son tomados de la calibración de la cámara, descritos en la Sección \ref{subsec:configcamara}. Dicha calibración se realizó sobre imágenes de 640x480 y los píxeles del contorno del bache está en base de imágenes de 192x192, por lo que era necesario aplicar otro factor de conversión. 
 
-Explicar que lo he tomado del apartado anterior \ref{subsec:configcamara}
- 
-(mirar el código de camera\_pinholev2\_node y de projGeo)
+Una vez se conoce cómo funciona el modelo pinhole, es importante destacar que para poder convertir los píxeles del mundo 2D al mundo real, hay que tener en cuenta que hay tres sistemas de coordenadas diferentes como muestra la Figura \ref{fig:siscoordenadas} que ha sido obtenida del artículo \cite{unknown} y que el modelo pinhole únicamente es capaz de convertir del sistema de coordenadas del mundo real al sistema de coordenadas de la cámara, algo a tener en cuenta.  
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap6/pinholecoordinates.png}
+	\end{center}
+	\caption{Sistemas de coordenadas}
+	\label{fig:siscoordenadas}
+\end{figure}
+
+Otro dato importante a tener en cuenta es que solo disponemos de una cámara, y por tanto, el sistema no puede encontrar el punto 3D asociado en una imagen debido a que cada punto de la línea OX proyecta al mismo píxel en el plano imagen; se pierde el valor de la profundidad (eje Z). Además, al hacer la conversión entre los distintos sistemas de coordenadas del modelo \textit{pinhole}, el valor de profundidad (de Z) también se pierde. Es por todo lo dicho anteriormente que hay que emplear la hipótesis suelo. 
+
+La hipótesis suelo (Figura \ref{fig:hipotesissuelo} tomada del artículo \cite{vega19d}) supone que todos los objetos del mundo en 3D están pegados al suelo, por lo tanto, asumiendo que Z = 0, nos permitirá estimar la conversión de 2D a 3D con una sola cámara.  
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=9cm]{figs/cap6/hipotesissuelo.png}
+	\end{center}
+	\caption{La hipótesis suelo asume que todos los objetos están en el suelo}
+	\label{fig:hipotesissuelo}
+\end{figure}
+
+Para conseguir la solución a este problema la tomamos del artículo \cite{vega19d}, donde los autores nos presentan un sistema de visión de código abierto que simplifica el uso de cámaras en la robótica educativa. En él se detallan todos los pasos que se han explicado previamente y el código asociado con la obtención de los píxeles en coordenadas del mundo en 3D, se encuentra definido en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
+
 \subsection{Algoritmo de la lazada}
 \label{subsec:softwareshoelace}
 
 Para calcular el área de las coordenadas del mundo real, se ha obtado por seguir el algoritmo de la lazada\footnote{\url{https://es.wikipedia.org/wiki/F\%C3\%B3rmula_del_\%C3\%A1rea_de_Gauss}} o también conocido como el área de Gauss. Este algoritmo matemático es usado para calcular el área de un polígono simple cuyos vértices están descritos como pares de coordenadas en el plano. Tiene múltiples aplicaciones en agrimensura y topografía.
 
-El nombre de este algoritmo es debido al constante cruce de productos de las coordenadas que simula atarse los cordones, como muestra la \ref{ec:shoelace}.
+El nombre de este algoritmo es debido al constante cruce de productos de las coordenadas, que simula atarse los cordones, como muestra la \ref{ec:shoelace}.
 \begin{myequation}[h]
 	\begin{equation}
 		A = \frac{1}{2}\abs{\sum_{i=1}^{n-1}x_i y_{i+1} + x_n y_1 - \sum_{i=1}^{n-1}x_{i+1} y_{i} - x_1 y_n}
@@ -817,7 +851,7 @@ Una vez habilitada esa comunicación, ya se podía apreciar la página web\footn
 
 % PENSAR SI INCLUIR VIDEO DEL MODO TELEOPERADO O NO O UN VIDEO DONDE SE MUEVA ÚNICAMENTE LAS RUEDAS.
 
- \begin{figure} [h!]
+\begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=15cm]{figs/cap6/interfazweb.png}
 	\end{center}
@@ -828,10 +862,41 @@ Una vez habilitada esa comunicación, ya se podía apreciar la página web\footn
 
 \subsection{Autónomo}
 \label{subsec:autonomo}
+PiBotJ ya se ha visto que se puede controlar de forma teleoperada, usando la botonera definida en la Sección \ref{subsec:softwareweb} pero, para tener otra alternativa con respecto a la navegación de PiBotJ, se ha decidido implementar una lógica para que su movimiento sea autónomo. 
+
+Lo ideal para este caso es que PiBotJ fuera capaz de navegar  autónomamente por carreteras pero debido a la imposibilidad de probarlo en ese entorno, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 7,69\% sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/medidas_reales.jpg}
+		\caption*{\centering Medidas reales} 
+	\end{minipage}
+	\hspace{1 cm}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/medidas_ficticias.jpg}
+		\caption*{\centering Medidas para la cartulina}
+	\end{minipage}
+	\caption{Conversión de medidas de la carretera}
+	\label{fig:medidascarretera}
+\end{figure}
+
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=6cm, height=6cm]{figs/cap6/carretera.png}
+	\end{center}
+	\caption{Carretera creada en cartulina}
+	\label{fig:carreteracartulina}
+\end{figure}
+
+Una vez definido el entorno donde se iba a trabajar, era el momento de definir la lógica a usar y se decidió unir un algoritmo de detección de líneas junto a la técnica de navegación local conocida como \ac{VFF}. 
 
 \subsubsection{Detección de líneas}
 \label{subsubsec:softwaredl}
 
+Incluir una imagen con los distintos casos que puede detectar
 \subsubsection{VFF}
 \label{subsubsec:vff}
 

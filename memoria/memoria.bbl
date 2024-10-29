@@ -105,6 +105,11 @@ Nilsson, N.~J. et~al. (1984).
 \newblock {\em Shakey the robot}, volume 323.
 \newblock Sri International Menlo Park, California.
 
+\bibitem[Ortiz et~al., 2017]{unknown}
+Ortiz, L., Gonçalves, L., and Cabrera, E. (2017).
+\newblock A generic approach for error estimation of depth data from (stereo
+  and rgb-d) 3d sensors.
+
 \bibitem[Park et~al., 2021]{app112311229}
 Park, S.-S., Tran, V.-T., and Lee, D.-E. (2021).
 \newblock Application of various yolo models for computer vision-based

@@ -93,11 +93,17 @@
 \contentsline {figure}{\numberline {6.18}{\ignorespaces Gráficas de resultados del entrenamiento: métricas\relax }}{86}{figure.caption.145}%
 \contentsline {figure}{\numberline {6.19}{\ignorespaces Demostración del modelo funcionando\relax }}{87}{figure.caption.147}%
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Contorno del baches detectados\relax }}{91}{figure.caption.154}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Demostración del algoritmo de la lazada\relax }}{92}{figure.caption.156}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Interfaz web\relax }}{93}{figure.caption.158}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{96}{figure.caption.166}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Funcionamiento de una cámara esteneopeica $^{\ref {note:enlace124}}$\relax }}{91}{figure.caption.155}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Relación de fórmulas del modelo pinhole\relax }}{92}{figure.caption.156}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Sistemas de coordenadas\relax }}{92}{figure.caption.157}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{93}{figure.caption.158}%
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Demostración del algoritmo de la lazada\relax }}{94}{figure.caption.160}%
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Interfaz web\relax }}{95}{figure.caption.162}%
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Conversión de medidas de la carretera\relax }}{96}{figure.caption.163}%
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Carretera creada en cartulina\relax }}{96}{figure.caption.164}%
+\contentsline {figure}{\numberline {6.29}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{99}{figure.caption.173}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{104}{figure.caption.168}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{105}{figure.caption.169}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{107}{figure.caption.175}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{108}{figure.caption.176}%

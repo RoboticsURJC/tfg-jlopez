@@ -3,6 +3,8 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: memoria.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
+Warning--entry type for "unknown" isn't style-file defined
+--line 367 of file bibliografia.bib
 Warning--I didn't find a database entry for "vega12e"
 Warning--I didn't find a database entry for "vega19b"
 Warning--I didn't find a database entry for "vega19a"
@@ -20,45 +22,45 @@ Warning--empty journal in giri2020maquinas
 Warning--empty journal in llopis2020deterioros
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1098 of file apalike.bst
-You've used 27 entries,
+You've used 28 entries,
             1935 wiz_defined-function locations,
-            639 strings with 8773 characters,
-and the built_in function-call counts, 11022 in all, are:
-= -- 1054
-> -- 524
+            642 strings with 8923 characters,
+and the built_in function-call counts, 11328 in all, are:
+= -- 1083
+> -- 542
 < -- 21
-+ -- 186
-- -- 180
-* -- 935
-:= -- 1937
-add.period$ -- 82
-call.type$ -- 27
-change.case$ -- 223
-chr.to.int$ -- 27
-cite$ -- 32
-duplicate$ -- 414
-empty$ -- 715
-format.name$ -- 224
-if$ -- 2152
++ -- 194
+- -- 186
+* -- 960
+:= -- 1996
+add.period$ -- 84
+call.type$ -- 28
+change.case$ -- 231
+chr.to.int$ -- 28
+cite$ -- 33
+duplicate$ -- 424
+empty$ -- 730
+format.name$ -- 231
+if$ -- 2206
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 26
-newline$ -- 137
-num.names$ -- 81
-pop$ -- 197
+newline$ -- 141
+num.names$ -- 84
+pop$ -- 204
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 232
 quote$ -- 0
-skip$ -- 326
+skip$ -- 334
 stack$ -- 0
-substring$ -- 645
+substring$ -- 659
 swap$ -- 60
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
+type$ -- 164
 warning$ -- 5
-while$ -- 75
+while$ -- 77
 width$ -- 0
-write$ -- 348
+write$ -- 358
 (There were 3 error messages)
