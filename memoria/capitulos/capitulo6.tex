@@ -896,7 +896,7 @@ Una vez definido el entorno donde se iba a trabajar, era el momento de definir l
 \subsubsection{Detección de líneas}
 \label{subsubsec:softwaredl}
 
-Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente cuando no haya bache en el entorno controlado. Para conseguirlo, es necesario procesar la imagen en escala de grises para detectar los contornos de las líneas, usando una umbralización adaptativa para destacar los bordes y una operación de apertura morfológica para eliminar pequeños puntos blancos que representan ruido en la imagen binaria (Código \ref{cod:dl}). El resultado final queda reflejado en la Figura \ref{fig:camaradlines}.
+Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente cuando no haya bache en el entorno controlado. Para conseguirlo, es necesario procesar la imagen en escala de grises para detectar los contornos de las líneas, usando una umbralización adaptativa para destacar los bordes y una operación de apertura morfológica para eliminar pequeños puntos blancos que representan ruido en la imagen binaria (Código \ref{cod:dl}). El resultado final queda reflejado en la Figura \ref{fig:camaradlines} y el código está plasmado en \verb|camera_dl_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_dl_node.py}}.
 
 
 \begin{code}[h]
@@ -925,7 +925,7 @@ Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente 
 
 
 %Incluir una imagen detectando las líneas. Incluir un video detectando las lineas
-En la Figura \ref{fig:dlines} se puede ver los distintos tipos de situaciones a las que se enfrenta PiBotJ cuando detecta líneas y dependiendo de la situación, PiBotJ reaccionaría de una forma u otra. Cuando detecta las dos líneas, PiBotJ sigue recto mientras que si detecta únicamente una línea, deberá avanzar hacia adelante y si dicha línea no se encuentra en el centro de la imagen, PiBotJ giraría hasta que se situase en el centro. Por otro lado, si no detecta líneas avanzaría recto durante 3 segundos y empezaría a girar. Este video\footnote{\url{}} demuestra el proceso explicado. 
+En la Figura \ref{fig:dlines} se puede ver los distintos tipos de situaciones a las que se enfrenta PiBotJ cuando detecta líneas y dependiendo de la situación, PiBotJ reaccionaría de una forma u otra. Cuando detecta las dos líneas, PiBotJ sigue recto mientras que si detecta únicamente una línea, deberá avanzar hacia adelante y si dicha línea no se encuentra en el centro de la imagen, PiBotJ giraría hasta que se situase en el centro. Por otro lado, si no detecta líneas avanzaría recto durante 3 segundos y empezaría a girar.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -935,199 +935,28 @@ En la Figura \ref{fig:dlines} se puede ver los distintos tipos de situaciones a 
 	\label{fig:dlines}
 \end{figure}
 
-\subsubsection{VFF}
+\subsubsection{Virtual Force Field}
 \label{subsubsec:vff}
 
-TANTO PARA LOS MOTORES COMO PARA LA CÁMARA
+Es un método de navegación local para que un robot autónomo evite obstáculos en su entorno. Este método se compone de una fuerza repulsiva para evitar el obstáculo y de una fuerza atractiva para alcanzar el destino objetivo\footnote{\url{https://robmovjuloau2022.blogspot.com/2022/11/task-3-local-navigation-with-vff.html}}. Estas fuerzas se suman vectorialmente para obtener una fuerza resultante, que indica la dirección y velocidad de movimiento del robot. Esta fuerza resultante se puede calcular siguiendo la Ecuacion \ref{ec:vff}.
 
-Se ha usado la pendiente de la recta para hacer las conversiones .... Mirar los papeles y código: 
+\begin{myequation}[h]
+	\begin{equation}
+		F_{resultante} = \alpha \cdot F_{atractiva} + \beta \cdot F_{repulsiva}
+		\nonumber
+		\label{ec:vff}
+	\end{equation}
+	\caption[Ecuación de VFF]{Ecuación de VFF}
+\end{myequation} 
 
-https://www.google.com/search?client=ubuntu-sn\&channel=fs\&q=pendiente+de+la+recta+\#vhid=HhxrPc0n8LdJsM\&vssid=l
-
-Ejemplos en funcionamiento del vff:
-https://gsyc.urjc.es/jmvega/research/webs/2019.html\#.21
-
-
-Usar locks para evitar que haya condiciones de carrera: https://realpython.com/intro-to-python-threading/
-
-
-Explicación del código que usa vff y desarrollé para rob servicios: https://robmovjuloau2022.blogspot.com/
+El robot se mueve en la dirección de la fuerza resultante, ajustando su trayectoria en tiempo real según las posiciones del obstáculo y el objetivo. En este caso, se decidió fijar como objetivo, un punto siempre hacia adelante y como repulsión, el punto más cercano detectado del contorno al robot, en coordenadas del mundo real, y aplicar la fuerza repulsiva respecto a él. La Figura \ref{fig:vfffuerzas} muestra la dirección de las distintas fuerzas. Todo está documentado en \verb|camera_vff_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_vff_node.py}}.
 
 
+ \begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=10cm]{figs/cap6/vff.png}
+	\end{center}
+	\caption{Diagrama de fuerzas del algoritmo VFF}
+	\label{fig:vfffuerzas}
+\end{figure}
 
-%Umbralización:  https://kipunaec.com/umbralizacion-o-thresholding-con-python-y-opencv/
-
-
-\subsection{¿Aplicación Completa?}
-
-
-¿Teleoperado y entorno controlado van en experimentos?
-
-
-
-\section{Snippets}
-
-Puede resultar interesante, para clarificar la descripción, mostrar fragmentos de código (o \textit{snippets}) ilustrativos. En el Código \ref{cod:codejemplo} vemos un ejemplo escrito en \texttt{C++}.
-
-\begin{code}[h]
-	\begin{lstlisting}[language=C++]
-		void Memory::hypothesizeParallelograms () {
-			for(it1 = this->controller->segmentMemory.begin(); it1++) {
-				squareFound = false; it2 = it1; it2++;
-				while ((it2 != this->controller->segmentMemory.end()) && (!squareFound)) {
-					if (geometry::haveACommonVertex((*it1),(*it2),&square)) {
-						dist1 = geometry::distanceBetweenPoints3D ((*it1).start, (*it1).end);
-						dist2 = geometry::distanceBetweenPoints3D ((*it2).start, (*it2).end);
-					}
-					// [...]
-				\end{lstlisting}
-				\caption[Función para buscar elementos 3D en la imagen]{Función para buscar elementos 3D en la imagen}
-				\label{cod:codejemplo}
-			\end{code}
-			
-			En el Código \ref{cod:codejemplo2} vemos un ejemplo escrito en \texttt{Python}.
-			
-			\begin{code}[h]
-				\begin{lstlisting}[language=Python]
-					def mostrarValores():
-					print (w1.get(), w2.get())
-					
-					master = Tk()
-					w1 = Scale(master, from_=0, to=42)
-					w1.pack()
-					w2 = Scale(master, from_=0, to=200, orient=HORIZONTAL)
-					w2.pack()
-					Button(master, text='Show', command=mostrarValores).pack()
-					
-					mainloop()
-				\end{lstlisting}
-				\caption[Cómo usar un Slider]{Cómo usar un Slider}
-				\label{cod:codejemplo2}
-			\end{code}
-			
-			\section{Verbatim}
-			
-			Para mencionar identificadores usados en el código ---como nombres de funciones o variables--- en el texto, usa el entorno literal o verbatim \verb|hypothesizeParallelograms()|. También se puede usar este entorno para varias líneas, como se ve a continuación:
-			
-			\begin{verbatim}
-				void Memory::hypothesizeParallelograms () {
-					// add your code here
-				}
-			\end{verbatim}
-			
-			\section{Ecuaciones}
-			
-			Si necesitas insertar alguna ecuación, puedes hacerlo. Al igual que las figuras, no te olvides de referenciarlas. A continuación se exponen algunas ecuaciones de ejemplo: Ecuación \ref{ec:ec1} y Ecuación \ref{ec:ec2}.
-			
-			\begin{myequation}[h]
-				\begin{equation}
-					H = 1 - \frac{\sum_{i=0}^{N}\frac{(\frac{d_{j_s} + d_{j_e}}{2})}{N}}{M}
-					\nonumber
-					\label{ec:ec1}
-				\end{equation}
-				\caption[Ejemplo de ecuación con fracciones]{Ejemplo de ecuación con fracciones}
-			\end{myequation} 
-			
-			\begin{myequation}[h]
-				\begin{equation}
-					v(entrada)= \left\{
-					\begin{array}{lcc}
-						0 & \mbox{if} & \epsilon_t < 0.1\\
-						K_p\cdot{(T_{t}-T)} & \mbox{if}& 0.1 \leq \epsilon_t < M_t\\
-						K_p \cdot M_t & \mbox{if}& M_t < \epsilon_t
-					\end{array}
-					\right.
-					\label{ec:ec2}
-				\end{equation}
-				\caption[Ejemplo de ecuación con array y letras y símbolos especiales]{Ejemplo de ecuación con array y letras y símbolos especiales}
-			\end{myequation}
-			
-			\section{Tablas o cuadros}
-			
-			Si necesitas insertar una tabla, hazlo dígnamente usando las propias tablas de \LaTeX, no usando pantallazos e insertándolas como figuras... En el Cuadro \ref{cuadro:ejemplo} vemos un ejemplo.
-			
-			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|}
-						\hline
-						\textbf{Parámetros} & \textbf{Valores} \\
-						\hline
-						Tipo de sensor & Sony IMX219PQ[7] CMOS 8-Mpx \\
-						Tamaño del sensor & 3.674 x 2.760 mm (1/4" format) \\
-						Número de pixels & 3280 x 2464 (active pixels) \\
-						Tamaño de pixel & 1.12 x 1.12 um \\
-						Lente & f=3.04 mm, f/2.0 \\
-						Ángulo de visión & 62.2 x 48.8 degrees \\
-						Lente SLR equivalente & 29 mm \\
-						\hline
-					\end{tabular}
-					\caption{Parámetros intrínsecos de la cámara}
-					\label{cuadro:ejemplo}
-				\end{center}
-			\end{table}
-			
-			En los textos puedes poner palabras en \textit{cursiva}, para aquellas expresiones en sentido \textit{figurado}, palabras como \textit{robota}, que está fuera del diccionario castellano, o bien para resaltar palabras de una colección: \textit{(a)} es la primera letra del abecedario, \textit{(b)} es la segunda, etc.\\
-			
-			Al poner las dos líneas del anterior párrafo, este aparecerá separado del anterior. Si no las pongo, los párrafos aparecerán pegados. Sigue el criterio que consideres más oportuno.
-			
-			\section{Segunda sección}
-			\label{sec:segundaseccion}
-			
-			No olvides incluir imágenes y referenciarlas, como la Figura \ref{fig:roomba}.
-			
-			\begin{figure} [h!]
-				\begin{center}
-					\includegraphics[width=8cm]{figs/roomba}
-				\end{center}
-				\caption{Robot aspirador Roomba de iRobot.}
-				\label{fig:roomba}
-			\end{figure}\
-			
-			Ni tampoco olvides de poner las URLs como notas al pie. Por ejemplo, si hablo de la Robocup\footnote{\url{http://www.robocup.org}}.
-			
-			\subsection{Números}
-			\label{sec:subseccion}
-			
-			En lugar de tener secciones interminables, como la Sección \ref{sec:robotica}, divídelas en subsecciones.
-			
-			Para hablar de números, mételos en el entorno \textit{math} de \LaTeX, por ejemplo, $1.5Kg$. También puedes usar el símbolo del Euro como aquí: 1.500\euro.
-			
-			\subsection{Listas}
-			
-			Cuando describas una colección, usa \texttt{itemize} para ítems o \texttt{enumerate} para enumerados. Por ejemplo:
-			
-			\begin{itemize}
-				\item \textit{Entorno de simulación.} Hemos usado dos entornos de simulación: uno en 3D y otro en 2D.
-				\item \textit{Entornos reales.} Dentro del campus, hemos realizado experimentos en Biblioteca y en el edificio de Gestión.
-			\end{itemize}\
-			
-			\begin{enumerate}
-				\item Primer elemento de la colección.
-				\item Segundo elemento de la colección.
-			\end{enumerate}\
-			
-			\paragraph{Referencias bibliográficas}
-			\label{sec:referencias}
-			
-			Cita, sobre todo en este capítulo, referencias bibliográficas que respalden tu argumento. Para citarlas basta con poner la instrucción \verb|\cite| con el identificador de la cita. Por ejemplo: libros como \cite{vega12e}, artículos como \cite{vega19b}, URLs como \cite{vega19a}, tesis como \cite{vega18b}, congresos como \cite{vega18a}, u otros trabajos fin de grado como \cite{vega08b}.
-			
-			Las referencias, con todo su contenido, están recogidas en el fichero \texttt{bibliografia.bib}. El contenido de estas referencias está en formato \texttt{BibTex}. Este formato se puede obtener en muchas ocasiones directamente, desde plataformas como \texttt{Google Scholar} u otros repositorios de recursos científicos.
-			
-			Existen numerosos estilos para reflejar una referencia bibliográfica. El estilo establecido por defecto en este documento es APA, que es uno de los estilos más comunes, pero lo puedes modificar en el archivo \texttt{memoria.tex}; concretamente, cambiando el campo \verb|apalike| a otro en la instrucción \verb|\bibliographystyle{apalike}|. 
-			
-			\
-			
-			\
-			
-			\
-			
-			Y, para terminar este capítulo, resume brevemente qué vas a contar en los siguientes.
-
-
-\section{Corrector ortográfico}
-
-Una vez tengas todo, no olvides pasar el corrector ortográfico de \LaTeX a todos tus ficheros \textit{.tex}. En \texttt{Windows}, el propio editor \texttt{TeXworks} incluye el corrector. En \texttt{Linux}, usa \texttt{aspell} ejecutando el siguiente comando en tu terminal:
-
-\begin{verbatim}
-aspell --lang=es --mode=tex check capitulo1.tex
-\end{verbatim}

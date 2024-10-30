@@ -89,29 +89,27 @@
 \contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{94}{subsection.6.3.4}%
 \contentsline {subsection}{\numberline {6.3.5}Autónomo}{95}{subsection.6.3.5}%
 \contentsline {subsubsection}{Detección de líneas}{96}{subsubsection*.166}%
-\contentsline {subsubsection}{VFF}{98}{subsubsection*.170}%
-\contentsline {subsection}{\numberline {6.3.6}¿Aplicación Completa?}{98}{subsection.6.3.6}%
-\contentsline {section}{\numberline {6.4}Snippets}{99}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Verbatim}{99}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Ecuaciones}{100}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Tablas o cuadros}{100}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Segunda sección}{101}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Números}{101}{subsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.8.2}Listas}{101}{subsection.6.8.2}%
-\contentsline {paragraph}{Referencias bibliográficas}{102}{paragraph*.177}%
-\contentsline {section}{\numberline {6.9}Corrector ortográfico}{102}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Experimentos}{103}{chapter.7}%
-\contentsline {section}{\numberline {7.1}}{103}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Corrector ortográfico}{103}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{104}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{104}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{105}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Anexo}{106}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Construcción del robot}{106}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{106}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Configuración del robot real}{107}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Cámara}{107}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Google Coral}{108}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{108}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{112}{subsection.9.3.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{113}{appendix*.180}%
+\contentsline {subsubsection}{Virtual Force Field}{98}{subsubsection*.170}%
+\contentsline {chapter}{\numberline {7}Experimentos}{100}{chapter.7}%
+\contentsline {section}{\numberline {7.1}¿Aplicación Completa?}{100}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Snippets}{100}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Verbatim}{101}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Ecuaciones}{101}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Tablas o cuadros}{102}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Segunda sección}{103}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Números}{103}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Listas}{103}{subsection.7.6.2}%
+\contentsline {paragraph}{Referencias bibliográficas}{104}{paragraph*.179}%
+\contentsline {section}{\numberline {7.7}Corrector ortográfico}{104}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{105}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusiones}{105}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corrector ortográfico}{106}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Anexo}{107}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Construcción del robot}{107}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Ejecución del robot en simulación}{107}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Configuración del robot real}{108}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Cámara}{108}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Google Coral}{109}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Módulo GPS}{109}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Módulo GPS}{113}{subsection.9.3.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{114}{appendix*.182}%
