@@ -305,13 +305,13 @@ Partiendo del \verb|cameraPublisher.py| de este tutorial\footnote{\url{https://w
 	\label{fig:camararr}
 \end{figure}
 
-Para conformar un modelo teórico de la cámara se necesitan conocer sus parámetros intrínsecos.
+Para conformar un modelo teórico de la cámara se necesitan conocer sus parámetros intrínsecos y extrínsecos.
 %Para posteriores cálculos, era necesario conocer tanto los parámetros intrínsecos como extrínsecos de la cámara.  
 
 \subsubsection{Parámetros intrínsecos}
 \label{subsubsec:intrinsecoscamara}
 
-Los parámetros intrínsecos definen la geometría interna, la óptica y extrínsecos de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes mientras no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, aunque se pueden obtener mediante un proceso de calibración.
+Los parámetros intrínsecos definen la geometría interna y la óptica de la cámara. Estos determinan cómo la cámara proyecta los puntos del mundo 3D al plano de la imagen en 2D, siendo constantes mientras no varíen las características y posiciones relativas entre la óptica y el sensor imagen. Estos parámetros los provee el fabricante de la cámara, aunque se pueden obtener mediante un proceso de calibración.
 
 Para los cálculos teóricos se decidió consultar en numerosas fuentes de información y gracias a la Web \textit{Elinux}\footnote{\url{https://elinux.org/Rpi_Camera_Module\#Technical_Parameters_.28v.2_board.29}}, se pudieron obtener, sus parámetros técnicos. Asimismo, siguiendo el libro \cite{Hartley2004} se consiguieron las fórmulas correspondientes a la distancia focal (Ecuación \ref{ec:distfocal}) y al centro de la imagen (Ecuación \ref{ec:cenimagen}).
 
@@ -541,7 +541,7 @@ El módulo \acs{GPS} utiliza una comunicación \acs{UART}, o comunicación seria
 %\end{lstlisting}
 
 
-EL serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias a los pasos de instalación descritos en el Anexo ..., como muestra la Figura \ref{fig:nmea}. Para tratar la información obtenida, se decidió usar la librería llamada PyNMEA2, detallada en la Sección \ref{subsec:pynmea}, y que se desarrolló con el código del nodo \verb|gps_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/gps_node.py}} para parsear la información y únicamente publicar la latitud y longitud, como muestra la Figura \ref{fig:gpsnode}. De los valores obtenidos, se decidió usar un conversor de coordenadas\footnote{\url{https://www.coordenadas-gps.com/convertidor-de-coordenadas-gps}} para demostrar que los valores recibidos eran correctos, como muestra la Figura \ref{fig:demogpsnode}.
+El serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias a los pasos de instalación descritos en el \hyperref[cap:capitulo9]{Anexo}, como muestra la Figura \ref{fig:nmea}. Para tratar la información obtenida, se decidió usar la librería llamada PyNMEA2, detallada en la Sección \ref{subsec:pynmea}, y que se desarrolló con el código del nodo \verb|gps_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/gps_node.py}} para parsear la información y únicamente publicar la latitud y longitud, como muestra la Figura \ref{fig:gpsnode}. De los valores obtenidos, se decidió usar un conversor de coordenadas\footnote{\url{https://www.coordenadas-gps.com/convertidor-de-coordenadas-gps}} para demostrar que los valores recibidos eran correctos, como muestra la Figura \ref{fig:demogpsnode}.
 
 
  \begin{figure} [h!]
@@ -579,7 +579,7 @@ Los últimos componentes que faltaban por configurar son los motores, que van co
 %\end{verbatim}
 
 %Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups} y ya 
-Tras seguir los pasos de configuración del Anexo.., importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
+Tras seguir los pasos de configuración del \hyperref[cap:capitulo9]{Anexo}, importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
 
  \begin{figure} [h!]
 	\begin{center}

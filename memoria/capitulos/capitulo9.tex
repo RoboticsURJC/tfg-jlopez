@@ -1,4 +1,4 @@
-\chapter{Anexo}
+\chapter*{Anexo: Pasos de instalación}
 \label{cap:capitulo9}
 
 \begin{flushright}
@@ -13,13 +13,13 @@ Santiago Ramón y Cajal\\
 
 En este anexo se van a tratar los pasos necesarios para conseguir replicar este proyecto.
 
-\section{Construcción del robot} 
+\section*{Construcción del robot} 
 \label{subsec:anexoconstruccion}
 
 %incluir enlace del tutorial de construir el robot en físico
 
 
-\section{Ejecución del robot en simulación}
+\section*{Ejecución del robot en simulación}
 \label{subsec:anexosimulacion}
 
 Es necesario instalar los siguientes programas: 
@@ -42,7 +42,7 @@ Una vez instalado los programas, es el momento de ponerlo en ejecución y para e
 
 Si la primera vez que se lance el robot ocurre algún error, es normal y hay que reiniciar el proceso.
 
-\section{Configuración del robot real}
+\section*{Configuración del robot real}
 \label{subsec:anexoconfig}
 
 En este apartado es importante instalar Ubuntu 20.04 y ROS 2 Foxy en vez de simulación que fue Ubuntu 22.04 y ROS2 Humble (como se puede ver en el apartado anterior).
@@ -51,7 +51,7 @@ Se va a trabajar conectándose por ssh al robot, escribiendo \verb|ssh usuario@i
  
 En los siguientes apartados se detalla cómo se ha configurado cada dispositivo que conforma el PiBotJ.
 
-\subsection{Cámara}
+\subsection*{Cámara}
 \label{subsec:anexocamara}
 
 La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan los siguientes programas: 
@@ -77,7 +77,7 @@ Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.
 Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente la imagen se pudiera ver correctamente.
 
 
-\subsection{Google Coral}
+\subsection*{Google Coral}
 \label{subsec:anexogooglecoral}
 
 Se pueden encontrar diferentes pasos de instalación dependiendo de las necesidades del usuario, pero se pueden resumir para cumplir con las características de la arquitectura de este dispositivo de la siguiente manera:
@@ -109,7 +109,7 @@ Finalmente, el proceso se debería haber completado cuando la salida del último
 	\label{fig:outcoral}
 \end{figure} 
 
-\subsection{Módulo GPS}
+\subsection*{Módulo GPS}
 \label{subsec:anexogps}
 
 
@@ -234,9 +234,8 @@ Finalmente los siguientes ficheros tienen que contener la siguiente información
 \end{lstlisting}
 
 
-\subsection{Módulo GPS}
+\subsection*{Módulo GPS}
 \label{subsec:anexomotores}
-
 
 Hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 
 
@@ -246,4 +245,4 @@ Hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.
 	python3-rpi.gpio
 \end{verbatim}
 
-Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups}.
+Hay que añadir \textit{dialout} a \textit{groups}.
