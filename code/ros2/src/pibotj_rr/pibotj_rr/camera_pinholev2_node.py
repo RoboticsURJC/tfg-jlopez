@@ -33,12 +33,6 @@ class CameraPinHoleV2Class(Node):
             self.coords_callback,
             self.queueSize)
 
-        #self.vffsubscription = self.create_subscription(
-        #    Polygon, 
-        #    'pothole_vff_coords',
-        #    self.coords_vff_callback,
-        #    self.queueSize)  
-        
         self.loadCamera()
 
         # Publicador del area calculado 
@@ -102,40 +96,6 @@ class CameraPinHoleV2Class(Node):
         msg.data = abs(area) / 2
         self.area_publisher.publish(msg)
 
-    #def coords_vff_callback(self, coords):
-
-    #    if not coords.points or len(coords.points) == 0:
-    #        posenone = Pose2D()
-    #        posenone.x = 0.0
-    #        posenone.y = 0.0
-    #        self.min_coords_publisher.publish(posenone)
-    #        return
-
-        # Calcula la conversión de los puntos de coordenadas
-        # de la cámara en coordenadas del mundo real 
-    #    array3D = []
-    #    for i, point in enumerate(coords.points):
-    #        pixel = Punto2D()
-    #        pixel3D = Punto3D()
-
-            # convertir las coordenadas del sistema de 192x192 
-            # en imágenes de 640x480
-    #        pixel.x = point.x*640/192
-    #        pixel.y = point.y*480/192
-    #        pixel.h = 1
-
-    #        pixel3D = self.getIntersectionZ(pixel)
-            #print(pixel3D.x, pixel3D.y)
-    #        array3D.append(pixel3D)
-        
-        # importante añadir en las coordenadas la primera de todas al final
-
-        # publica la coordenada que está detectada más cerca del robot
-    #    pose = Pose2D()
-    #    pose = self.get_min_coords(array3D)
-    #    self.min_coords_publisher.publish(pose)
-
-
     def signal_handler(self, sig, frame):
         self.get_logger().info('Interrupt received, shutting down...')
         sys.exit(0)  # Exit gracefully
@@ -154,7 +114,9 @@ class CameraPinHoleV2Class(Node):
         R_subt = numpy.dot (R_y, R_z)
         R_tot = numpy.dot (R_subt, R_x)
 
-        T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-110)]) # T is a 3x4 traslation matrix
+        #T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-110)]) # T is a 3x4 traslation matrix
+        T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-88)]) # T is a 3x4 traslation matrix
+
         Res = numpy.dot (R_tot,T)
         RT = numpy.append(Res, [[0,0,0,1]], axis=0) # RT is a 4x4 matrix
         K = numpy.array ([(FX,0,CX,0),(0,FY,CY,0),(0,0,1,0)]) # K is a 3x4 matrix

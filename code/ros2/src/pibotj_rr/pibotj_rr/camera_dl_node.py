@@ -26,9 +26,15 @@ class CameraDLNode(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            '/camera_tf3',
+            '/camera_tf4',
             self.camera_callback,
             self.queueSize) 
+        
+        #self.subscription = self.create_subscription(
+        #    Image,
+        #    '/camera_tf3',
+        #    self.camera_callback,
+        #    self.queueSize) 
 
 
 

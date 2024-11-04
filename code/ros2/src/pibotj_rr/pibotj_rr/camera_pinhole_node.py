@@ -67,116 +67,118 @@ class CameraPinHoleClass(Node):
         sys.exit(0)  # Exit gracefully
 
     def loadCamera(self):
-	    global myCamera
-	    myCamera = PinholeCamera()
-	    thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
-	    thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
-	    thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+        global myCamera
+        myCamera = PinholeCamera()
+        thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+        thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+        thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 
-	    R_y = numpy.array ([(numpy.cos(thetaY),0,-numpy.sin(thetaY)),(0,1,0),(numpy.sin(thetaY),0,numpy.cos(thetaY))]) # R is a 3x3 rotation matrix
-	    R_z = numpy.array ([(numpy.cos(thetaZ),-numpy.sin(thetaZ),0),(numpy.sin(thetaZ),numpy.cos(thetaZ),0),(0,0,1)]) # R is a 3x3 rotation matrix
-	    R_x = numpy.array ([(1,0,0),(0,numpy.cos(thetaX),numpy.sin(thetaX)),(0, -numpy.sin(thetaX),numpy.cos(thetaX))]) # R is a 3x3 rotation matrix
+        R_y = numpy.array ([(numpy.cos(thetaY),0,-numpy.sin(thetaY)),(0,1,0),(numpy.sin(thetaY),0,numpy.cos(thetaY))]) # R is a 3x3 rotation matrix
+        R_z = numpy.array ([(numpy.cos(thetaZ),-numpy.sin(thetaZ),0),(numpy.sin(thetaZ),numpy.cos(thetaZ),0),(0,0,1)]) # R is a 3x3 rotation matrix
+        R_x = numpy.array ([(1,0,0),(0,numpy.cos(thetaX),numpy.sin(thetaX)),(0, -numpy.sin(thetaX),numpy.cos(thetaX))]) # R is a 3x3 rotation matrix
 
-	    R_subt = numpy.dot (R_y, R_z)
-	    R_tot = numpy.dot (R_subt, R_x)
+        R_subt = numpy.dot (R_y, R_z)
+        R_tot = numpy.dot (R_subt, R_x)
 
-	    T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-110)]) # T is a 3x4 traslation matrix
-	    Res = numpy.dot (R_tot,T)
-	    RT = numpy.append(Res, [[0,0,0,1]], axis=0) # RT is a 4x4 matrix
-	    K = numpy.array ([(FX,0,CX,0),(0,FY,CY,0),(0,0,1,0)]) # K is a 3x4 matrix
-	    # -------------------------------------------------------------
+        #T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-110)]) # T is a 3x4 traslation matrix
+        T = numpy.array ([(1,0,0,0),(0,1,0,0),(0,0,1,-88)]) # T is a 3x4 traslation matrix
 
-	    # -------------------------------------------------------------
-	    # LOADING BOTH CAMERA MODELS JUST TO TEST THEM
-	    # -------------------------------------------------------------
-	    # A) PROGEO CAMERA
-	    # -------------------------------------------------------------
-	    myCamera.position.x = 0
-	    myCamera.position.y = 0
-	    myCamera.position.z = -88
-	    myCamera.position.h = 1
+        Res = numpy.dot (R_tot,T)
+        RT = numpy.append(Res, [[0,0,0,1]], axis=0) # RT is a 4x4 matrix
+        K = numpy.array ([(FX,0,CX,0),(0,FY,CY,0),(0,0,1,0)]) # K is a 3x4 matrix
+        # -------------------------------------------------------------
 
-	    # K intrinsec parameters matrix (values got from the PiCamCalibration.py)
-	    myCamera.k11 = K[0,0]
-	    myCamera.k12 = K[0,1]
-	    myCamera.k13 = K[0,2]
-	    myCamera.k14 = K[0,3]
+        # -------------------------------------------------------------
+        # LOADING BOTH CAMERA MODELS JUST TO TEST THEM
+        # -------------------------------------------------------------
+        # A) PROGEO CAMERA
+        # -------------------------------------------------------------
+        myCamera.position.x = 0
+        myCamera.position.y = 0
+        myCamera.position.z = -88
+        myCamera.position.h = 1
 
-	    myCamera.k21 = K[1,0]
-	    myCamera.k22 = K[1,1]
-	    myCamera.k23 = K[1,2]
-	    myCamera.k24 = K[1,3]
+        # K intrinsec parameters matrix (values got from the PiCamCalibration.py)
+        myCamera.k11 = K[0,0]
+        myCamera.k12 = K[0,1]
+        myCamera.k13 = K[0,2]
+        myCamera.k14 = K[0,3]
 
-	    myCamera.k31 = K[2,0]
-	    myCamera.k32 = K[2,1]
-	    myCamera.k33 = K[2,2]
-	    myCamera.k34 = K[2,3]
+        myCamera.k21 = K[1,0]
+        myCamera.k22 = K[1,1]
+        myCamera.k23 = K[1,2]
+        myCamera.k24 = K[1,3]
 
-	    # RT rotation-traslation matrix
-	    myCamera.rt11 = RT[0,0]
-	    myCamera.rt12 = RT[0,1]
-	    myCamera.rt13 = RT[0,2]
-	    myCamera.rt14 = RT[0,3]
+        myCamera.k31 = K[2,0]
+        myCamera.k32 = K[2,1]
+        myCamera.k33 = K[2,2]
+        myCamera.k34 = K[2,3]
 
-	    myCamera.rt21 = RT[1,0]
-	    myCamera.rt22 = RT[1,1]
-	    myCamera.rt23 = RT[1,2]
-	    myCamera.rt24 = RT[1,3]
+        # RT rotation-traslation matrix
+        myCamera.rt11 = RT[0,0]
+        myCamera.rt12 = RT[0,1]
+        myCamera.rt13 = RT[0,2]
+        myCamera.rt14 = RT[0,3]
 
-	    myCamera.rt31 = RT[2,0]
-	    myCamera.rt32 = RT[2,1]
-	    myCamera.rt33 = RT[2,2]
-	    myCamera.rt34 = RT[2,3]
+        myCamera.rt21 = RT[1,0]
+        myCamera.rt22 = RT[1,1]
+        myCamera.rt23 = RT[1,2]
+        myCamera.rt24 = RT[1,3]
 
-	    myCamera.rt41 = RT[3,0]
-	    myCamera.rt42 = RT[3,1]
-	    myCamera.rt43 = RT[3,2]
-	    myCamera.rt44 = RT[3,3]
+        myCamera.rt31 = RT[2,0]
+        myCamera.rt32 = RT[2,1]
+        myCamera.rt33 = RT[2,2]
+        myCamera.rt34 = RT[2,3]
 
-	    myCamera.fdistx = K[0,0] 
-	    myCamera.fdisty = K[1,1] 
-	    myCamera.u0 = K[0,2] 
-	    myCamera.v0 = K[1,2] 
-	    myCamera.rows = LARGO_IMAGEN
-	    myCamera.columns = ANCHO_IMAGEN
+        myCamera.rt41 = RT[3,0]
+        myCamera.rt42 = RT[3,1]
+        myCamera.rt43 = RT[3,2]
+        myCamera.rt44 = RT[3,3]
+
+        myCamera.fdistx = K[0,0] 
+        myCamera.fdisty = K[1,1] 
+        myCamera.u0 = K[0,2] 
+        myCamera.v0 = K[1,2] 
+        myCamera.rows = LARGO_IMAGEN
+        myCamera.columns = ANCHO_IMAGEN
 
     def pixel2optical(self, p2d):
-	    aux = p2d.x
-	    p2d.x = LARGO_IMAGEN-1-p2d.y
-	    p2d.y = aux
-	    p2d.h = 1
+        aux = p2d.x
+        p2d.x = LARGO_IMAGEN-1-p2d.y
+        p2d.y = aux
+        p2d.h = 1
 
-	    return p2d
+        return p2d
         
     def getIntersectionZ(self, p2d):
-	    p3d = Punto3D ()
-	    res = Punto3D ()
-	    p2d_ = Punto2D ()
+        p3d = Punto3D ()
+        res = Punto3D ()
+        p2d_ = Punto2D ()
 
-	    x = myCamera.position.x
-	    y = myCamera.position.y
-	    z = myCamera.position.z
+        x = myCamera.position.x
+        y = myCamera.position.y
+        z = myCamera.position.z
 
-	    p2d_ = self.pixel2optical(p2d)
-	    result, p3d = backproject(p2d_, myCamera)
+        p2d_ = self.pixel2optical(p2d)
+        result, p3d = backproject(p2d_, myCamera)
 
-	    # Check division by zero
-	    if((p3d.z-z) == 0.0):
-		    res.h = 0.0
-		    return
+        # Check division by zero
+        if((p3d.z-z) == 0.0):
+            res.h = 0.0
+            return
 
-	    zfinal = 0. # Quiero que intersecte con el Plano Z = 0
+        zfinal = 0. # Quiero que intersecte con el Plano Z = 0
 
-	    # Linear equation (X-x)/(p3d.X-x) = (Y-y)/(p3d.Y-y) = (Z-z)/(p3d.Z-z)
-	    xfinal = x + (p3d.x - x)*(zfinal - z)/(p3d.z-z)
-	    yfinal = y + (p3d.y - y)*(zfinal - z)/(p3d.z-z)	
+        # Linear equation (X-x)/(p3d.X-x) = (Y-y)/(p3d.Y-y) = (Z-z)/(p3d.Z-z)
+        xfinal = x + (p3d.x - x)*(zfinal - z)/(p3d.z-z)
+        yfinal = y + (p3d.y - y)*(zfinal - z)/(p3d.z-z)	
 
-	    res.x = xfinal
-	    res.y = yfinal
-	    res.z = zfinal
-	    res.h = 1.0
+        res.x = xfinal
+        res.y = yfinal
+        res.z = zfinal
+        res.h = 1.0
 
-	    return res
+        return res
 
     #def calcular_distancia_3d(x_cam, y_cam, z_cam, x_punto, y_punto, z_punto):
     #    distancia = numpy.sqrt((x_punto - x_cam)**2 + (y_punto - y_cam)**2 + (z_punto - z_cam)**2)
@@ -206,7 +208,7 @@ class CameraPinHoleClass(Node):
 
         lower_color = numpy.array([150, 50, 50])
         upper_color = numpy.array([170, 255, 255])
-	
+    
         centroid_x, centroid_y = self.detect_color(frame, lower_color, upper_color)
 
 
