@@ -13,9 +13,6 @@ George Bernard Shaw\\
 
 En el presente capítulo se van a describir algunos de los prototipos y posibles aplicaciones más destacables sobre la detección y mantenimiento del pavimento de las carreteras usando inteligencia artificial y técnicas robóticas. En este estado del arte se revisan más de diez soluciones tecnológicas innovadoras desarrolladas recientemente.
   
-%En este estado del arte se revisan cuatro soluciones tecnológicas innovadoras desarrolladas recientemente: el sistema robotizado basado en \textit{Raspberry Pi} para la reconstrucción 3D de baches (Infrarob), el Proyecto HERON para el mantenimiento robótico de carreteras, la plataforma EyesNroad para la detección de deterioros viales mediante \ac{IA}, y el proyecto OMICRON para la automatización del sellado de grietas.
-
-
 \subsubsection{Sistema de reconstrucción 3D de baches}
 \label{subsubsec:sistema1}
 
@@ -138,28 +135,28 @@ Las desventajas de este proyecto son las siguientes:
 	\item \textit{Complejidad técnica}. Ya que se trata de una automatización completa, necesita un alto nivel de precisión y coordinación, lo que supone un gran desafío para su implementación.
 \end{itemize}\
 
-\subsubsection{Sistemas de reconstrucción 3D usando SFM y aprendizaje profundo}
-\label{subsubsec:sistema5}
+%\subsubsection{Sistemas de reconstrucción 3D usando SFM y aprendizaje profundo}
+%\label{subsubsec:sistema5}
 
-Este sistema, descrito en \cite{WANG2023132499}, propone una solución innovadora para la reconstrucción y segmentación 3D de baches en pavimentos. El enfoque aborda las limitaciones de los métodos tradicionales basados en imágenes 2D al utilizar técnicas de fotogrametría para generar perfiles 3D detallados de los baches. El sistema se compone de un método de reconstrucción conocido como Estructura Desde el Movimiento de Pavimentos (PP-SFM) y una red de segmentación 3D, Trans-3D-Seg, que incorpora módulos de transformadores para mejorar la precisión de la segmentación de nubes de puntos 3D. El sistema muestra una alta precisión, con una puntuación F1 del 92,58\% y una precisión general del 93,44\%. Además, se ha demostrado su robustez en diferentes condiciones, como distintas alturas de adquisición y en luz oscura. Otro sistema muy parecido que cumple con todo lo anterior expuesto y que además incorpora un láser para conseguir una segmentación más robusta, está definido en \cite{9345528}.
+%Este sistema, descrito en \cite{WANG2023132499}, propone una solución innovadora para la reconstrucción y segmentación 3D de baches en pavimentos. El enfoque aborda las limitaciones de los métodos tradicionales basados en imágenes 2D al utilizar técnicas de fotogrametría para generar perfiles 3D detallados de los baches. El sistema se compone de un método de reconstrucción conocido como Estructura Desde el Movimiento de Pavimentos (PP-SFM) y una red de segmentación 3D, Trans-3D-Seg, que incorpora módulos de transformadores para mejorar la precisión de la segmentación de nubes de puntos 3D. El sistema muestra una alta precisión, con una puntuación F1 del 92,58\% y una precisión general del 93,44\%. Además, se ha demostrado su robustez en diferentes condiciones, como distintas alturas de adquisición y en luz oscura. Otro sistema muy parecido que cumple con todo lo anterior expuesto y que además incorpora un láser para conseguir una segmentación más robusta, está definido en \cite{9345528}.
 
-Las ventajas de estos proyectos son las siguientes:
+%Las ventajas de estos proyectos son las siguientes:
 
-\begin{itemize}
-	\item \textit{Alta precisión}. Los sistemas proporcionan una segmentación precisa de baches, evidenciada por las altas puntuaciones en la precisión y la puntuación F1.
-	\item \textit{Robustez}. Los métodos son robustos en diversas condiciones, incluyendo iluminación variable y diferentes alturas de adquisición, lo cual es crucial para aplicaciones prácticas en el terreno.
-	\item \textit{Facilidad para la integración}. Ya que los sistemas están preparados para operar en cualquier cámara, facilitan la integración.
+%\begin{itemize}
+%	\item \textit{Alta precisión}. Los sistemas proporcionan una segmentación precisa de baches, evidenciada por las altas puntuaciones en la precisión y la puntuación F1.
+%	\item \textit{Robustez}. Los métodos son robustos en diversas condiciones, incluyendo iluminación variable y diferentes alturas de adquisición, lo cual es crucial para aplicaciones prácticas en el terreno.
+%	\item \textit{Facilidad para la integración}. Ya que los sistemas están preparados para operar en cualquier cámara, facilitan la integración.
 	
-\end{itemize}\
+%\end{itemize}\
 
 
-Las desventajas de estos proyectos son las siguientes:
-\begin{itemize}
-	\item \textit{Alto coste computacional}. Debido a la complejidad de las aplicaciones, necesitan un procesamiento intensivo. 
-	\item \textit{Hardware potente}. La implementación del sistema necesita \textit{hardware} potente y recursos computacionales considerables para el procesamiento de imágenes y la ejecución de modelos de aprendizaje profundo.
-	\item \textit{Movimiento circular para detección del volumen}. Una vez detectado el bache, es necesario moverse alrededor de él para que el algoritmo de fotogametría sea capaz de encontrar su volumen, lo que ralentiza el cálculo.
+%Las desventajas de estos proyectos son las siguientes:
+%\begin{itemize}
+%	\item \textit{Alto coste computacional}. Debido a la complejidad de las aplicaciones, necesitan un procesamiento intensivo. 
+%	\item \textit{Hardware potente}. La implementación del sistema necesita \textit{hardware} potente y recursos computacionales considerables para el procesamiento de imágenes y la ejecución de modelos de aprendizaje profundo.
+%	\item \textit{Movimiento circular para detección del volumen}. Una vez detectado el bache, es necesario moverse alrededor de él para que el algoritmo de fotogametría sea capaz de encontrar su volumen, lo que ralentiza el cálculo.
 	
-\end{itemize}\
+%\end{itemize}\
 
 
 En relación a la detección de los baches se pueden encontrar métodos que se pueden enmarcar en tres distintas categorías, descritas en \cite{app12115320}, y que se dividen en: baches detectados por visión, baches detectados por vibración y baches detectados por reconstrucción 3D. Cada categoría tiene una serie de ventajas y desventajas, que es importante conocer a la hora de elegir el tipo de método a usar, y que aparecen descritas en el Cuadro \ref{cuadro:vyd}. A continuación se enumeran alguno de los métodos de cada categoría.
