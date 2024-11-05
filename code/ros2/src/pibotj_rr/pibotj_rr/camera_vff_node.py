@@ -24,16 +24,10 @@ class CameraVFFNode(Node):
         # Inicialización de variables
         self.min_coord = None 
         # el robot siempre va a tener esta posición
-        self.robot_position = [0.0, 0.0] 
-        # orientación en radianes
-        #self.robot_orientation = 0.0  
+        self.robot_position = [0.0, 0.0]
+
         self.vff_attractive_gain = 1.0
         self.vff_repulsive_gain = 3.0
-
-
-        # Configuración de la frecuencia de publicación
-        # Cada 0.1 segundos se publica = 10 Hz
-        #self.timer = self.create_timer(0.1, self.timer_callback)
 
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
@@ -48,18 +42,16 @@ class CameraVFFNode(Node):
         attractive_force = self.compute_attractive_force()
         repulsive_force = self.compute_repulsive_force()
 
-        print("Fuerza atractiva" + str(attractive_force) + " Fuerza repulsiva " + str(repulsive_force))
-
         # Sumar las fuerzas
         resultant_force = [attractive_force[0] + repulsive_force[0],
                            attractive_force[1] + repulsive_force[1]]
 
         # Convertir la fuerza resultante en una dirección
+        #angle = math.atan2(resultant_force[1], resultant_force[0])
         angle = math.atan2(resultant_force[1], resultant_force[0])
-        # Como mucho irá a 0.5 la velocidad lineal
-        linear_speed = min(math.sqrt(resultant_force[0] ** 2 + resultant_force[1] ** 2), 0.5) 
 
-        print("Vel angular: " + str(angle) + "Vel lineal: " + str(linear_speed))
+        # Como mucho irá a 0.4 la velocidad lineal
+        linear_speed = min(math.sqrt(resultant_force[0] ** 2 + resultant_force[1] ** 2), 0.5) 
 
         twist = Twist()
         twist.linear.x = linear_speed
@@ -81,7 +73,6 @@ class CameraVFFNode(Node):
             # Calcular la distancia al bache
             distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
                                      (pothole_y - self.robot_position[1]) ** 2)
-            print(pothole_x)
    
             # si el bache está a menos de 15 cm aplicar la repulsión 
             if pothole_x < 150.0:  

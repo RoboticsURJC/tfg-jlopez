@@ -12,15 +12,6 @@ from geometry_msgs.msg import Twist
 class CameraDLNode(Node):
     def __init__(self):
         super().__init__('camera_dl_node')
-        #self.cameraDeviceNumber = 0
-        #self.camera = cv2.VideoCapture(self.cameraDeviceNumber)
-        
-        #if not self.camera.isOpened():
-        #    self.get_logger().error('Failed to open camera device %d' % self.cameraDeviceNumber)
-        #    rclpy.shutdown()
-        #    return
-
-        # suscriba a la imagen de la cámara
 
         self.queueSize = 10
 
@@ -30,25 +21,12 @@ class CameraDLNode(Node):
             self.camera_callback,
             self.queueSize) 
         
-        #self.subscription = self.create_subscription(
-        #    Image,
-        #    '/camera_tf3',
-        #    self.camera_callback,
-        #    self.queueSize) 
-
-
-
         self.bridgeObject = CvBridge()
         self.topicNameFrames = 'camera_dl'
-        #self.queueSize = 10
         self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
 
         self.vel_publisher = self.create_publisher(Twist, 'dl_vel', self.queueSize)
 
-        # Cada 0.1 segundos se publica = 10Hz
-        #self.periodCommunication = 0.1  
-        #self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
-  
         # Maneja la señal de Ctrl+C
         signal.signal(signal.SIGINT, self.signal_handler)
         self.get_logger().info('set signal handler')
@@ -117,14 +95,18 @@ class CameraDLNode(Node):
                 # gira hacia la derecha
                 # angular es NEGATIVA
                 twist.linear.x = 0.5  
-                twist.angular.z = -0.25 
+                #twist.angular.z = -0.25 
+                twist.angular.z = -0.5
+
 
             elif cX > (2 * width) // 3:
                 print("Línea detectada a la derecha")
                 # gira hacia la izquierda
                 # angular es POSITIVA
                 twist.linear.x = 0.5  
-                twist.angular.z = 0.25 
+                #twist.angular.z = 0.25 
+                twist.angular.z = 0.5 
+
             else:
                 print("Línea detectada en el centro")
                 # seguir recto
@@ -148,7 +130,9 @@ class CameraDLNode(Node):
             if (current_time - self.detect_time) > 3:
                 # mandar girar 
                 twist.linear.x = 0.5  
-                twist.angular.z = -0.125
+                #twist.angular.z = -0.125
+                twist.angular.z = -0.5
+
                    
         # Publicar velocidad angular y lineal
         self.vel_publisher.publish(twist)

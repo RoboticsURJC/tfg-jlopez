@@ -60,7 +60,11 @@ setup(
             'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main',
 
             # nodo controlador para controlar los motores en el entorno controlado
-            'motors_vff_node = pibotj_rr.motors_vff_node:main'
+            'motors_vff_node = pibotj_rr.motors_vff_node:main',
+
+            # nodo controlador para controlar los motores en el entorno controlado
+            # PROBANDO DE OTRA FORMA
+            'motors_vffv2_node = pibotj_rr.motors_vffv2_node:main'
 
         ],
     },
