@@ -5,6 +5,7 @@ import math
 import signal
 import sys
 from geometry_msgs.msg import Pose2D
+import time
 
 class CameraVFFNode(Node):
     def __init__(self):
@@ -33,6 +34,9 @@ class CameraVFFNode(Node):
         signal.signal(signal.SIGINT, self.signal_handler)
         self.get_logger().info('set signal handler')
 
+        self.last_non_zero_angular = 0.0
+        self.last_non_zero_time = 0.0
+
 
     def pothole_callback(self, msg: Pose2D):
         # Actualizar las coordenadas del bache
@@ -52,6 +56,17 @@ class CameraVFFNode(Node):
 
         # Como mucho irá a 0.4 la velocidad lineal
         linear_speed = min(math.sqrt(resultant_force[0] ** 2 + resultant_force[1] ** 2), 0.5) 
+
+        # Si la velocidad angular es distinta de 0, almacenarla y registrar el tiempo
+        current_time = time.time()
+        if angle != 0.0:
+            self.last_non_zero_angular = angle
+            self.last_non_zero_time = current_time
+        # Si la velocidad angular es 0, pero ha pasado menos de 1.5 segundo desde el último valor distinto de 0, usar el último valor
+        elif current_time - self.last_non_zero_time < 1.0:
+            angle = self.last_non_zero_angular
+        else:
+            angle = 0.0  # Reiniciar si ha pasado más de 1 segundo sin cambios
 
         twist = Twist()
         twist.linear.x = linear_speed
@@ -74,8 +89,8 @@ class CameraVFFNode(Node):
             distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
                                      (pothole_y - self.robot_position[1]) ** 2)
    
-            # si el bache está a menos de 15 cm aplicar la repulsión 
-            if pothole_x < 150.0:  
+            # si el bache está a menos de 20 cm aplicar la repulsión 
+            if pothole_x < 200.0:  
                 # Inversamente proporcional a la distancia
                 force_magnitude = self.vff_repulsive_gain / distance 
                 angle_to_pothole = math.atan2(pothole_y - self.robot_position[1],
