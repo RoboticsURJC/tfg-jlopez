@@ -68,9 +68,9 @@
 \contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{62}{subsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.1.4}Launcher}{63}{subsection.6.1.4}%
 \contentsline {subsection}{\numberline {6.1.5}Ejecución en simulador}{64}{subsection.6.1.5}%
-\contentsline {section}{\numberline {6.2}Ejecución del entorno real}{66}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Ejecución del robot real}{66}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Cámara}{66}{subsection.6.2.1}%
-\contentsline {subsubsection}{Parámetros intrínsecos}{67}{subsubsection*.104}%
+\contentsline {subsubsection}{Parámetros intrínsecos}{66}{subsubsection*.104}%
 \contentsline {subsubsection}{Parámetros extrínsecos}{68}{subsubsection*.108}%
 \contentsline {subsection}{\numberline {6.2.2}Google Coral USB}{69}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{69}{subsection.6.2.3}%
@@ -81,11 +81,11 @@
 \contentsline {subsubsection}{Aplicación del modelo}{76}{subsubsection*.119}%
 \contentsline {subsubsection}{Obtención del contorno y coordenadas}{76}{subsubsection*.123}%
 \contentsline {subsection}{\numberline {6.3.2}Cámara pinhole}{77}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{81}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{82}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Autónomo}{83}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{80}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{81}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Autónomo}{82}{subsection.6.3.5}%
 \contentsline {subsubsection}{Detección de líneas}{84}{subsubsection*.136}%
-\contentsline {subsubsection}{Virtual Force Field}{84}{subsubsection*.140}%
+\contentsline {subsubsection}{Virtual Force Field}{85}{subsubsection*.140}%
 \contentsline {chapter}{\numberline {7}Experimentos}{87}{chapter.7}%
 \contentsline {section}{\numberline {7.1}¿Aplicación Completa?}{87}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Snippets}{87}{section.7.2}%

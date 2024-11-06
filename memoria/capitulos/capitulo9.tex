@@ -80,6 +80,8 @@ Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente
 \subsection*{Google Coral}
 \label{subsec:anexogooglecoral}
 
+Para su configuración se han seguido los pasos indicados en su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}. 
+
 Se pueden encontrar diferentes pasos de instalación dependiendo de las necesidades del usuario, pero se pueden resumir para cumplir con las características de la arquitectura de este dispositivo de la siguiente manera:
 
 
@@ -234,7 +236,12 @@ Finalmente los siguientes ficheros tienen que contener la siguiente información
 \end{lstlisting}
 
 
-\subsection*{Módulo GPS}
+Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada fue desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
+
+El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
+
+
+\subsection*{Servomotores}
 \label{subsec:anexomotores}
 
 Hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 

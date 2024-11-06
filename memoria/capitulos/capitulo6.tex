@@ -259,7 +259,7 @@ El resultado final, con el robot de PiBotJ funcionando en simulación, se puede 
 
 %Una vez se ha demostrado el funcionamiento de PiBotJ en simulación con este video\footnote{\url{https://www.youtube.com/watch?v=A0yi7YlLpq0}}, ya se puede dar soporte al robot físico.
 
-\section{Ejecución del entorno real}
+\section{Ejecución del robot real}
 \label{sec:configrf}
 
 Una vez definido el robot a través de sus topics, ya se puede lanzar su ejecución (usando la RPi 4 como núcleo computacional) para realizar su tarea.
@@ -273,7 +273,9 @@ El sistema operativo instalado en la placa controladora fue Ubuntu 20.04 Server 
 
 Es importante recordar que, al usar ROS 2, todos los nodos que estén ejecutándose dentro de una red Wifi, serán visibles para cualquier dispositivo que esté conectado dentro de esa red Wifi. Gracias a eso, se facilitó la depuración y monitorización de cada sensor y actuador de PiBotJ. 
 
-En los siguientes apartados se detalla cómo se ha configurado cada dispositivo que conforma el PiBotJ. 
+%En los siguientes apartados se detalla cómo se ha configurado cada dispositivo que conforma el PiBotJ.
+
+En los siguientes apartados se detalla cómo cada dispositivo que conforma el PiBotJ está en funcionamiento. Para conocer todos los pasos seguidos para poder configurar cada componente, se puede ver en el \hyperref[cap:capitulo9]{Anexo}.  
 
 %Una vez dentro del robot y conociendo todas las posibles formas de estar comunicados con él, era el momento de configurar cada dispositivo que conformaba a PiBotJ.
 
@@ -387,7 +389,9 @@ Los parámetros extrínsecos relacionan los sistemas de referencia del mundo rea
 \subsection{Google Coral USB}
 \label{subsec:configgcoral}
 
-Como se comentó en la Sección \ref{subsec:googlecoral}, existen severas limitaciones al tratar de acelerar tareas en dispositivos que no cuentan con hardware específico para ello. Por ello, se decidió incluir el dispositivo USB Google Coral. Para su configuración se han seguido los pasos indicados en su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}. 
+Como se comentó en la Sección \ref{subsec:googlecoral}, existen severas limitaciones al tratar de acelerar tareas en dispositivos que no cuentan con hardware específico para ello. Por ello, se decidió incluir el dispositivo USB Google Coral y se puede demostrar que está en funcionamiento si la luz que tiene el dispositivo parpadea. 
+
+%Para su configuración se han seguido los pasos indicados en su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}. 
 
 %Una vez la cámara estaba lista para operar y se conoce que existen muchas limitaciones cuando se trata de acelerar tareas en dispositivos que no cuentan con \textit{hardware} para ello, como se comentó en el Apartado \ref{subsec:googlecoral}, se decidió incluir el dispositivo USB Google Coral y para ello, es necesario configurarlo.
 
@@ -568,6 +572,7 @@ El serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias 
 	\label{fig:demogpsnode}
 \end{figure}
 
+%% Preguntar si dejarlo o no
 Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada fue desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
 
 El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 

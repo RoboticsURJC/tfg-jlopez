@@ -61,14 +61,14 @@
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Herramientas usadas\relax }}{65}{figure.caption.100}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Herramienta usada para visualizar los valores del GPS\relax }}{65}{figure.caption.101}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Herramienta usada para rotar la cámara\relax }}{65}{figure.caption.102}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Cámara de PiBotJ en funcionamiento\relax }}{66}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Cámara de PiBotJ en funcionamiento\relax }}{67}{figure.caption.103}%
 \contentsline {figure}{\numberline {6.10}{\ignorespaces Media de la matriz de intrínsecos\relax }}{68}{figure.caption.107}%
 \contentsline {figure}{\numberline {6.11}{\ignorespaces Parámetros extrínsecos\relax }}{68}{figure.caption.109}%
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Valores publicados de latitud y longitud captados del GPS\relax }}{69}{figure.caption.110}%
 \contentsline {figure}{\numberline {6.13}{\ignorespaces Demostración de una correcta localización\relax }}{70}{figure.caption.111}%
 \contentsline {figure}{\numberline {6.14}{\ignorespaces Diagrama para la posición central del servo\relax }}{71}{figure.caption.112}%
 \contentsline {figure}{\numberline {6.15}{\ignorespaces Distintas direcciones de PiBotJ\relax }}{71}{figure.caption.113}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Gráficas de resultados del entrenamiento\relax }}{73}{figure.caption.114}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Gráficas de resultados del entrenamiento\relax }}{72}{figure.caption.114}%
 \contentsline {figure}{\numberline {6.17}{\ignorespaces Gráficas de resultados del entrenamiento: métricas\relax }}{73}{figure.caption.115}%
 \contentsline {figure}{\numberline {6.18}{\ignorespaces Demostración del modelo funcionando\relax }}{74}{figure.caption.117}%
 \contentsline {figure}{\numberline {6.19}{\ignorespaces Contorno del baches detectados\relax }}{78}{figure.caption.124}%
@@ -80,7 +80,7 @@
 \contentsline {figure}{\numberline {6.25}{\ignorespaces Interfaz web\relax }}{82}{figure.caption.132}%
 \contentsline {figure}{\numberline {6.26}{\ignorespaces Conversión de medidas de la carretera\relax }}{83}{figure.caption.133}%
 \contentsline {figure}{\numberline {6.27}{\ignorespaces Carretera creada en cartulina\relax }}{83}{figure.caption.134}%
-\contentsline {figure}{\numberline {6.28}{\ignorespaces Filtro resultante aplicado para la detección de líneas\relax }}{85}{figure.caption.138}%
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Filtro resultante aplicado para la detección de líneas\relax }}{84}{figure.caption.138}%
 \contentsline {figure}{\numberline {6.29}{\ignorespaces Distintos casos de la detección de líneas\relax }}{85}{figure.caption.139}%
 \contentsline {figure}{\numberline {6.30}{\ignorespaces Diagrama de fuerzas del algoritmo VFF\relax }}{86}{figure.caption.142}%
 \addvspace {10\p@ }
