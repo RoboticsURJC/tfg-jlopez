@@ -39,16 +39,26 @@ Si la primera vez que se lance el robot ocurre algún error no te preocupes, es 
 \section{Robot real}
 \label{subsec:anexoconfig}
 
-En este apartado es importante instalar Ubuntu 20.04 y ROS 2 Foxy en vez de simulación que fue Ubuntu 22.04 y ROS2 Humble (como se puede ver en el apartado anterior).
- 
-Se va a trabajar conectándose por ssh al robot, escribiendo \verb|ssh usuario@ip_dispositivo| y posteriormente, introduciendo la constraseña creada en el proceso de instalación. Esta era la forma de comunicación con el robot ya que esta distribución, no tenía interfaz gráfica. De las variante de ssh se usaba scp -r para copiar directorios entre el robot y el ordenador local y permitir subir los cambios a Github, y para desarrollar código se usaba un \textit{plugin} de VSCode que permite usar VSCode conectándose al robot usando ssh\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}. 
- 
-En los siguientes apartados se detalla cómo se ha configurado cada dispositivo que conforma el PiBotJ.
+Hay que seguir los siguientes pasos: 
+
+\begin{enumerate}
+	\item Instalar \textit{Raspberry Pi Imager}: \verb|sudo apt install rpi-imager|.
+	\item Descargar la imagen de Ubuntu 20.04 Server\footnote{\url{https://releases.ubuntu.com/20.04.6/}}.
+	\item Abrir \textit{rpi-imager} y seguir los pasos que aparecen por pantalla.
+	\item Conectarse al robot usando \verb|ssh usuario@ip_dispositivo| con la contraseña introducida en el Paso 3.
+	\item Ya estás dentro del robot y puedes operar con él.
+	\item Tienes que instalar ROS 2 Foxy\footnote{\url{https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html}}.
+	\item Ya puedes configurar cada uno de los componentes del robot.
+\end{enumerate}
+
+Al no tener disponible interfaz gráfica, la única forma de comunicarse con el robot es a través de ssh y  variantes de esta como scp para copiar directorios entre el robot y el ordenador local.
+
+Otra opción para poder desarrollar código es usar un \textit{plugin} de VSCode (desde el ordenador local) que permite usar VSCode conectándose al robot usando ssh\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}.
 
 \subsection{Cámara}
 \label{subsec:anexocamara}
 
-La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan los siguientes programas: 
+La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan  instalar los siguientes programas: 
 
 \begin{verbatim}
 	sudo apt-get install gstreamer1.0-tools \ 
@@ -56,8 +66,15 @@ La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan
 	gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 \end{verbatim}
 
-Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.txt| añadiendo \verb|start_x=1| al final y se tuvo que reiniciar la Raspberry Pi. Para comprobar que la configuración fue correcta, era necesario usar el comando \verb|v4l2-ctl --list-devices|  que comprueba la lista de dispositivos de video y media que están disponibles en el sistema. En la Figura \ref{fig:v4l2} se puede ver el resultado de dicho comando y  muestra que la cámara se encontraba conectada en el dispositivo \verb|/dev/video0|.
+Una vez instalados, hay que seguir los siguientes pasos: 
 
+\begin{enumerate}
+	\item Editar el fichero \verb|/boot/firmware/config.txt| añadiendo \verb|start_x=1| al final.
+	\item Reiniciar la Raspberry: \verb|sudo reboot|.
+	\item Comprobar que la cofiguración es correcta: \verb|v4l2-ctl --list-devices|.
+\end{enumerate}\
+
+En la Figura \ref{fig:v4l2} se puede ver el resultado del Paso 3 y muestra que la cámara se encontraba conectada en el dispositivo \verb|/dev/video0|.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -68,34 +85,31 @@ Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.
 \end{figure}
 
 
-Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente la imagen se pudiera ver correctamente.
-
-
 \subsection{Google Coral}
 \label{subsec:anexogooglecoral}
 
-Para su configuración se han seguido los pasos indicados en su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}. 
 
-Se pueden encontrar diferentes pasos de instalación dependiendo de las necesidades del usuario, pero se pueden resumir para cumplir con las características de la arquitectura de este dispositivo de la siguiente manera:
+Para su configuración hay que seguir los siguientes pasos: 
 
+\begin{enumerate}
+	\item 
+	\begin{lstlisting}[language=bash]
+		echo "deb https://packages.cloud.google.com/apt \
+		coral-edgetpu-stable main" | \
+		sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+	\end{lstlisting}.
+	\item
+	\begin{lstlisting}[language=bash]
+		curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+		| sudo apt-key add -
+	\end{lstlisting}
+	\item \verb|sudo apt-get update|.
+	\item \verb|sudo apt-get install libedgetpu1-std|.
+	\item Conecta el USB en uno de los puertos 3.0.
+	\item \verb|sudo apt-get install python3-pycoral|.
+\end{enumerate}\
 
-\begin{lstlisting}[language=bash]
-	echo "deb https://packages.cloud.google.com/apt \
-	coral-edgetpu-stable main" | \
-	sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
-	
-	curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
-	| sudo apt-key add -
-	
-	sudo apt-get update	
-	sudo apt-get install libedgetpu1-std
-	
-	# Conecta el USB en uno de los puertos 3.0
-	
-	sudo apt-get install python3-pycoral
-\end{lstlisting}
-
-Finalmente, el proceso se debería haber completado cuando la salida del último comando se debería ver como muestra la Figura \ref{fig:outcoral}.
+Finalmente, el proceso se debería haber completado de forma exitosa cuando la salida del último comando se debería ver como muestra la Figura \ref{fig:outcoral}.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -105,23 +119,26 @@ Finalmente, el proceso se debería haber completado cuando la salida del último
 	\label{fig:outcoral}
 \end{figure} 
 
+
 \subsection{Módulo GPS}
 \label{subsec:anexogps}
 
+Hay que seguir los siguientes pasos: 
 
-La estructura seguida en este tutorial\footnote{\url{https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/}} ha sido de gran ayuda para configurar el módulo \acs{GPS} que, para esta arquitectura, supone seguir los siguientes pasos: 
-
-Crea el fichero \verb|/etc/udev/rules.d/99-ttyAMA0.rules| que tiene que contener: \verb|KERNEL=="ttyAMA0", MODE="0666", GROUP="dialout"| y para que se actualicen en el sistema es necesario recargar las reglas, escribiendo por terminal lo siguiente: 
-
-\begin{verbatim}
-	sudo udevadm control --reload-rules
-	sudo udevadm trigger
-\end{verbatim}
-
-Como esta distribución no tiene interfaz web, no tiene instalado por defecto \verb|raspi-config|. Así, para su instalación se ha seguido el siguiente tutorial\footnote{\url{https://github.com/EmilGus/install_raspi-config/tree/master}} y, una vez instalado, hay que ejecutarlo usando \verb|sudo raspi-config|. Dentro de \textit{raspi-config} hay que desplazarse hasta \textit{Interfacing options} y \textit{serial}, hay que desabilitar \textit{serial login shell}, habilitar \textit{serial interface} y reiniciar con \verb|sudo reboot|.
+\begin{enumerate}
+	\item Crear el fichero \verb|/etc/udev/rules.d/99-ttyAMA0.rules|.
+	\item Añádele: \verb|KERNEL=="ttyAMA0", MODE="0666", GROUP="dialout"|.
+	\item \verb|sudo udevadm control --reload-rules|.
+	\item \verb|sudo udevadm trigger|.
+	\item Las reglas se habrán actualizado. 
+	\item Instalar \verb|raspi-config|\footnote{\url{https://github.com/EmilGus/install_raspi-config/tree/master}}.
+	\item Ejecuta \verb|raspi-config| usando \verb|sudo raspi-config|
+	\item Dentro de \textit{raspi-config} hay que desplazarse hasta \textit{Interfacing options} y \textit{serial}.
+	\item Desabilita \textit{serial login shell} y habilita \textit{serial interface}.
+	\item Reiniciar la Raspberry: \verb|sudo reboot|
+\end{enumerate}\
 
 Finalmente los siguientes ficheros tienen que contener la siguiente información: 
-
 
 \begin{lstlisting}[language=bash]
 	cat /boot/firmware/config.txt 
@@ -230,20 +247,20 @@ Finalmente los siguientes ficheros tienen que contener la siguiente información
 \end{lstlisting}
 
 
-Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada fue desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
+Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada es desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
 
 El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
-
 
 \subsection{Servomotores}
 \label{subsec:anexomotores}
 
-Hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 
+Hay que seguir los siguientes pasos:
 
-\begin{verbatim}
-	sudo apt-get update
-	sudo apt-get install rpi.gpio-common python3-pigpio python3-gpiozero \
-	python3-rpi.gpio
-\end{verbatim}
+\begin{enumerate}
+	\item \verb|sudo apt-get update|.
+	\item \verb|sudo apt-get install rpi.gpio-common python3-pigpio|
+	\item \verb|sudo apt-get install python3-gpiozero python3-rpi.gpio|.
+	\item Hay que añadir \textit{dialout} a \textit{groups}.
+	\item Los motores ya estarán listos para usarse importando la librería \verb|RPi.GPIO|.
+\end{enumerate}\
 
-Hay que añadir \textit{dialout} a \textit{groups}.

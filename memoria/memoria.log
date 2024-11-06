@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  6 NOV 2024 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  6 NOV 2024 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2716,77 +2716,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-[]\OT1/cmr/m/n/12 Se va a
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 59--60
-[]\OT1/cmr/m/n/12 a~nadiendo [][]\OT1/cmtt/m/n/12 start_x=1 []\OT1/cmr/m/n/12 a
-l final y se tuvo que reiniciar la Raspberry Pi. Para
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 59--60
-\OT1/cmr/m/n/12 comprobar que la configuraci^^Son fue correcta, era necesario u
-sar el comando
- []
-
-<figs/cap6/vl.png, id=2240, 493.845pt x 309.155pt>
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+ [96]
+<figs/cap6/vl.png, id=2260, 493.845pt x 309.155pt>
 File: figs/cap6/vl.png Graphic file (type png)
 <use figs/cap6/vl.png>
-Package pdftex.def Info: figs/cap6/vl.png  used on input line 64.
+Package pdftex.def Info: figs/cap6/vl.png  used on input line 81.
 (pdftex.def)             Requested size: 256.0748pt x 160.30394pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 79.
-LaTeX Info: Redefining \% on input line 79.
-[96] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<figs/cap6/pycoralinstalled.png, id=2250, 800.9925pt x 503.8825pt>
+<figs/cap6/pycoralinstalled.png, id=2262, 800.9925pt x 503.8825pt>
 File: figs/cap6/pycoralinstalled.png Graphic file (type png)
 <use figs/cap6/pycoralinstalled.png>
-Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 102
+Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 116
 .
 (pdftex.def)             Requested size: 341.43306pt x 214.78923pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
-[][][][]$\OT1/cmtt/m/n/10 https :
- []
-
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
 [97 <./figs/cap6/vl.png>]
-LaTeX Info: Redefining \. on input line 132.
-LaTeX Info: Redefining \% on input line 132.
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
  [98 <./figs/cap6/pycoralinstalled.png>]
-LaTeX Info: Redefining \. on input line 178.
-LaTeX Info: Redefining \% on input line 178.
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
  [99]
-LaTeX Info: Redefining \. on input line 229.
-LaTeX Info: Redefining \% on input line 229.
- [100]
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
-[][][][]$\OT1/cmtt/m/n/10 https : / / cms . gutow . uwosh . edu / Gutow / usefu
-l-[]chemistry-[]links /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
-\OT1/cmtt/m/n/10 software-[]tools-[]and-[]coding / computer-[]and-[]coding-[]ho
-w-[]tos /
- []
-
-) (./memoria.bbl
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+ [100])
+(./memoria.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [101]
@@ -2817,10 +2783,10 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 (rerunfilecheck)             Checksum: 6FD8294F9565DF70E01857407A2B796E;12939.
  ) 
 Here is how much of TeX's memory you used:
- 32381 strings out of 480112
- 600436 string characters out of 5892631
- 1193250 words of memory out of 5000000
- 48896 multiletter control sequences out of 15000+600000
+ 32392 strings out of 480112
+ 600408 string characters out of 5892631
+ 1204447 words of memory out of 5000000
+ 48884 multiletter control sequences out of 15000+600000
  477207 words of font info for 57 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  89i,15n,92p,1397b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2842,10 +2808,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (123 pages, 47721529 bytes).
+Output written on memoria.pdf (123 pages, 47721306 bytes).
 PDF statistics:
- 2664 PDF objects out of 2984 (max. 8388607)
- 2275 compressed objects within 23 object streams
- 744 named destinations out of 1000 (max. 500000)
+ 2686 PDF objects out of 2984 (max. 8388607)
+ 2297 compressed objects within 23 object streams
+ 767 named destinations out of 1000 (max. 500000)
  1326 words of extra memory for PDF output out of 10000 (max. 10000000)
 
