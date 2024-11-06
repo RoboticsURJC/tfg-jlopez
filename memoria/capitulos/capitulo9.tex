@@ -1,4 +1,4 @@
-\chapter*{Anexo: Pasos de instalación}
+\chapter{Configuración de PiBotJ}
 \label{cap:capitulo9}
 
 \begin{flushright}
@@ -11,18 +11,12 @@ Santiago Ramón y Cajal\\
 
 \vspace{1cm}
 
-En este anexo se van a tratar los pasos necesarios para conseguir replicar este proyecto.
+Una vez el robot ya está construido, es necesario configurarlo tanto para simulación como para poder ejecutarlo en la vida real. Para ello, es necesario seguir los siguientes pasos: 
 
-\section*{Construcción del robot} 
-\label{subsec:anexoconstruccion}
-
-%incluir enlace del tutorial de construir el robot en físico
-
-
-\section*{Ejecución del robot en simulación}
+\section{Simulación}
 \label{subsec:anexosimulacion}
 
-Es necesario instalar los siguientes programas: 
+Primero de todo, hay que instalar los siguientes programas: 
 
 \begin{verbatim}
 	sudo apt update && sudo apt upgrade
@@ -33,16 +27,16 @@ Es necesario instalar los siguientes programas:
 	sudo apt install ros-humble-joint-state-publisher
 \end{verbatim}
  
-Una vez instalado los programas, es el momento de ponerlo en ejecución y para ello, únicamente hay que escribir los siguientes comandos:
+Una vez instalados, únicamente hay que ejecutar el programa que permita que el robot en simulación se inicalice. Para ello, únicamente hay que escribir los siguientes comandos:
 \begin{verbatim}
 	colcon build --packages-select pibotj_r2c   # compila los paquetes
 	source ./install/setup.bash                 # configura variables 
 	ros2 launch pibotj_r2c launch_sim.launch.py
 \end{verbatim} 
 
-Si la primera vez que se lance el robot ocurre algún error, es normal y hay que reiniciar el proceso.
+Si la primera vez que se lance el robot ocurre algún error no te preocupes, es normal. Tienes que volver a escribir los comandos, de nuevo, en la terminal.
 
-\section*{Configuración del robot real}
+\section{Robot real}
 \label{subsec:anexoconfig}
 
 En este apartado es importante instalar Ubuntu 20.04 y ROS 2 Foxy en vez de simulación que fue Ubuntu 22.04 y ROS2 Humble (como se puede ver en el apartado anterior).
@@ -51,7 +45,7 @@ Se va a trabajar conectándose por ssh al robot, escribiendo \verb|ssh usuario@i
  
 En los siguientes apartados se detalla cómo se ha configurado cada dispositivo que conforma el PiBotJ.
 
-\subsection*{Cámara}
+\subsection{Cámara}
 \label{subsec:anexocamara}
 
 La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan los siguientes programas: 
@@ -77,7 +71,7 @@ Una vez instalados, fue necesario editar el fichero \verb|/boot/firmware/config.
 Sabiendo que la cámara estaba disponible, era necesario comprobar que realmente la imagen se pudiera ver correctamente.
 
 
-\subsection*{Google Coral}
+\subsection{Google Coral}
 \label{subsec:anexogooglecoral}
 
 Para su configuración se han seguido los pasos indicados en su web oficial\footnote{\url{https://coral.ai/docs/accelerator/get-started/}}. 
@@ -111,7 +105,7 @@ Finalmente, el proceso se debería haber completado cuando la salida del último
 	\label{fig:outcoral}
 \end{figure} 
 
-\subsection*{Módulo GPS}
+\subsection{Módulo GPS}
 \label{subsec:anexogps}
 
 
@@ -241,7 +235,7 @@ Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberr
 El módulo GPS realmente capta información válida cuando se enciende el LED azul que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
 
 
-\subsection*{Servomotores}
+\subsection{Servomotores}
 \label{subsec:anexomotores}
 
 Hay que instalar los siguientes programas\footnote{\url{https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04}}: 
