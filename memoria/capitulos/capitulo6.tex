@@ -1,8 +1,6 @@
 \chapter{Soporte software del robot}
 \label{cap:capitulo6}
 
-
-
 \begin{flushright}
 \begin{minipage}[]{10cm}
 \emph{El software es una gran combinación entre arte e ingeniería}\\
@@ -12,7 +10,7 @@ Bill Gates\\
 \end{flushright}
 
 \vspace{1cm}
-\setcounter{footnote}{84}
+\setcounter{footnote}{72}
 
 Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico descrito, en este capítulo se explica la implementación \textit{software} desarrrollado para dar soporte a dicho prototipo.
 
@@ -20,17 +18,6 @@ Una vez contado todo el proceso llevado a cabo para el diseño y construcción d
 \label{sec:simulacion}
 
 En esta sección se describe el proceso seguido para conseguir poner a PiBotJ en funcionamiento a través de simulación; en concreto, a través del simulador Gazebo. Esta parte ha sido desarrollada en el ordenador principal, explicado en la Sección \ref{subsec:ordenador}, apoyándose en el sistema ROS 2 Humble\footnote{\url{https://docs.ros.org/en/humble/Installation.html}}.
-
-%\begin{verbatim}
-%	sudo apt update && sudo apt upgrade
-%	sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers
-%	sudo apt install ros-humble-rviz2
-%	sudo apt install ros-humble-gazebo-ros-pkgs
-%	sudo apt install ros-humble-xacro ros-humble-robot-state-publisher 
-%	sudo apt install ros-humble-joint-state-publisher
-%\end{verbatim}
-
-%Una vez instalado todos los programas, fue el momento de empezar a desarrollar el código. 
 
 \subsection{URDF/Xacro}
 \label{subsec:urdf}
@@ -53,69 +40,71 @@ Existen cuatro tipos de \textit{joint}: \textit{prismatic}, \textit{continuous},
 	\label{cod:fj}
 			\end{code}
 
-En relación a los \textit{link}, obligatoriamente tienen que tener las macros de \verb|<visual>|, \verb|<collision>| e \verb|<inertial>|, si no pueden surgir errores\footnote{\url{https://answers.gazebosim.org//question/25166/problem-changing-joint-from-fixed-to-revolute/}}. Existen cuatro tipos de geometría: \textit{box}, \textit{cylinder}, \textit{sphere} y \textit{mesh}. El Código \ref{cod:ml} muestra un ejemplo de una \textit{mesh link}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}.
+En relación a los \textit{link}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}, obligatoriamente tienen que tener las macros de \verb|<visual>|, \verb|<collision>| e \verb|<inertial>|, si no pueden surgir errores\footnote{\url{https://answers.gazebosim.org//question/25166/problem-changing-joint-from-fixed-to-revolute/}}. Existen cuatro tipos de geometría: \textit{box}, \textit{cylinder}, \textit{sphere} y \textit{mesh}. 
+%El Código \ref{cod:ml} muestra un ejemplo de una \textit{mesh link}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}.
 
-\begin{code}[h]
-	\begin{lstlisting}[language=xml]
-		<link name="camera_link">
-			<visual>
-				<origin xyz="0.02 0.01 0.0 " rpy="0 0 ${-pi/2}"/>
-				<geometry>
-					<mesh filename="package://pibotj_r2c/meshes/camara.stl" scale="0.001 0.001 0.001"/>
-				</geometry>
-				<material name="Blue">
-					<color rgba="${0/255} ${0/255} ${255/255} 1.0"/>
-				</material>
-			</visual>
-			<collision> 
-				<origin xyz="0.0 0.0 0.0 " rpy="0 0 ${-pi/2}"/>
-				<geometry>
-					<mesh filename="package://pibotj_r2c/meshes/camara.stl" scale="0.001 0.001 0.001"/>
-				</geometry>
-			</collision>
-			<inertial>
-				<origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
-				<mass value="0.03"/> <!--30g-->
-				<inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
-			</inertial>
-		</link>
-	\end{lstlisting}
-	\caption[Macro que define una \textit{mesh link}]{Macro que define una \textit{mesh link}}
-	\label{cod:ml}
-\end{code}
+%\begin{code}[h]
+%	\begin{lstlisting}[language=xml]
+%		<link name="camera_link">
+%			<visual>
+%				<origin xyz="0.02 0.01 0.0 " rpy="0 0 ${-pi/2}"/>
+%				<geometry>
+%					<mesh filename="package://pibotj_r2c/meshes/camara.stl" scale="0.001 0.001 0.001"/>
+%				</geometry>
+%				<material name="Blue">
+%					<color rgba="${0/255} ${0/255} ${255/255} 1.0"/>
+%				</material>
+%			</visual>
+%			<collision> 
+%				<origin xyz="0.0 0.0 0.0 " rpy="0 0 ${-pi/2}"/>
+%				<geometry>
+%					<mesh filename="package://pibotj_r2c/meshes/camara.stl" scale="0.001 0.001 0.001"/>
+%				</geometry>
+%			</collision>
+%			<inertial>
+%				<origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+%				<mass value="0.03"/> <!--30g-->
+%				<inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+%			</inertial>
+%		</link>
+%	\end{lstlisting}
+%	\caption[Macro que define una \textit{mesh link}]{Macro que define una \textit{mesh link}}
+%	\label{cod:ml}
+%\end{code}
 
 
-Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}. Existen muchos tipos de interacciones; en el Código \ref{cod:gazebo} se muestra; a modo de ejemplo, cómo simular el sensor cámara. Por su parte, para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
+Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}.Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
+%Existen muchos tipos de interacciones; en el Código \ref{cod:gazebo} se muestra; a modo de ejemplo, cómo simular el sensor cámara. Por su parte, para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 
-\begin{code}[h]
-	\begin{lstlisting}[language=xml]
-		<gazebo reference="camera_link_optical">
-		<material>Gazebo/Blue</material>
-			<sensor name="camera" type="camera">
-				<pose> 0 0 0 0 0 0 </pose>
-				<visualize>true</visualize>
-				<update_rate>10</update_rate>
-				<camera>
-					<horizontal_fov>1.089</horizontal_fov>
-					<image>
-						<format>R8G8B8</format>
-						<width>640</width>
-						<height>480</height>
-					</image>
-					<clip>
-						<near>0.05</near>
-						<far>8.0</far>
-					</clip>
-				</camera>
-				<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-					<frame_name>camera_link_optical</frame_name>
-				</plugin>
-			</sensor>
-		</gazebo>
-	\end{lstlisting}
-	\caption[Macro que permite a Gazebo simular una cámara]{Macro que permite a Gazebo simular una cámara}
-	\label{cod:gazebo}
-\end{code}
+%\begin{code}[h]
+%	\begin{lstlisting}[language=xml]
+%		<gazebo reference="camera_link_optical">
+%		<material>Gazebo/Blue</material>
+%			<sensor name="camera" type="camera">
+%				<pose> 0 0 0 0 0 0 </pose>
+%				<visualize>true</visualize>
+%				<update_rate>10</update_rate>
+%				<camera>
+%					<horizontal_fov>1.089</horizontal_fov>
+%					<image>
+%						<format>R8G8B8</format>
+%						<width>640</width>
+%						<height>480</height>
+%					</image>
+%					<clip>
+%						<near>0.05</near>
+%						<far>8.0</far>
+%					</clip>
+%				</camera>
+%				<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+%					<frame_name>camera_link_optical</frame_name>
+%				</plugin>
+%			</sensor>
+%		</gazebo>
+%	\end{lstlisting}
+%	\caption[Macro que permite a Gazebo simular una cámara]{Macro que permite a Gazebo simular una cámara}
+%	\label{cod:gazebo}
+%\end{code}
 
 Asimismo, se han definido los sistemas de coordenadas que aparecen en la Figura \ref{fig:links}. Una vez se definió el robot y los sensores necesarios para que Gazebo interactuara con el modelo, se hizo uso de ROS 2 Control. 
 
@@ -182,9 +171,11 @@ El \textit{launcher} que se decidió crear para este proyecto parte del creado p
 \subsection{Ejecución en simulador}
 \label{subsec:funsimulacion}
 
-Para mostrar todos los \textit{topics} que forman parte del robot, lanza el siguiente comando:  \verb|ros2 topic list|, y su salida se puede ver en la Figura \ref{fig:topic}.
+%Para mostrar todos los \textit{topics} que forman parte del robot, lanza el siguiente comando:  \verb|ros2 topic list|, y su salida se puede ver en la Figura \ref{fig:topic}.
 
- \begin{figure} [h!]
+La Figura \ref{fig:topic} muestra todos los \textit{topics} que forman parte del robot y para conseguir el objetivo propuesto en la Sección \ref{sec:descripcion}, es necesario utilizar únicamente: \verb|/camera/image_raw|, para ver la imagen de la cámara; \verb|/cmd_vel|, para mover las ruedas; \verb|/gps/data|, para ver los valores de posición del \acs{GPS}; y \verb|/pos_cont/commands|, para mover el motor de la cámara.
+
+\begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=12cm]{figs/cap6/topic.png}
 	\end{center}
@@ -193,9 +184,7 @@ Para mostrar todos los \textit{topics} que forman parte del robot, lanza el sigu
 \end{figure}
 
 
-De todos esos \textit{topics}, para conseguir el objetivo propuesto en la Sección \ref{sec:descripcion}, es necesario utilizar únicamente: \verb|/camera/image_raw|, para ver la imagen de la cámara; \verb|/cmd_vel|, para mover las ruedas; \verb|/gps/data|, para ver los valores de posición del \acs{GPS}; y \verb|/pos_cont/commands|, para mover el motor de la cámara.
-
-Para mover las ruedas hay muchas formas de hacerlo, pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:steering}. Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view|, que fue el comando usado para probar su funcionamiento (Figura \ref{fig:rqtimage}). Por otro lado, los datos vertidos por el módulo \acs{GPS} se pueden visualizar usando \verb|ros2 topic echo /gps/data|, como muestra la Figura \ref{fig:echogps} y finalmente, para mover el motor de la cámara por posición, es necesario usar el comando siguiente: 
+Para mover las ruedas hay muchas formas de hacerlo, pero en este caso se usó \verb|rqt_robot_steering|, como muestra la Figura \ref{fig:hercym} (izquierda). Si se quiere visualizar la cámara, se puede usar \verb|rviz2| o \verb|ros2 run rqt_image_view rqt_image_view|, que fue el comando usado para probar su funcionamiento (Figura \ref{fig:hercym} derecha). Por otro lado, los datos vertidos por el módulo \acs{GPS} se pueden visualizar usando \verb|ros2 topic echo /gps/data|, como muestra la Figura \ref{fig:echogps} y finalmente, para mover el motor de la cámara por posición, es necesario usar el comando siguiente: 
 
 \begin{verbatim}
 	ros2 topic pub /pos_cont/commands std_msgs/msg/Float64MultiArray \
@@ -205,25 +194,43 @@ Para mover las ruedas hay muchas formas de hacerlo, pero en este caso se usó \v
 Siendo los valores que van dentro de \textit{data} desde 3 (giro hacia la izquierda) hasta -3 (giro hacia la derecha). 
 %En la Figura \ref{fig:camararot} se pueden ver los dos casos descritos previamente. 
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=6cm]{figs/cap6/steering.png}
-	\end{center}
-	\caption{Herramienta usada para mover las ruedas}
-	\label{fig:steering}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.28\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/steering.png}
+		\caption*{\centering Mover las ruedas} 
+	\end{minipage}
+	\hspace{0.5 cm}
+	\begin{minipage}{0.65\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/rqtimage.png}
+		\caption*{\centering Visualizar la cámara} 
+	\end{minipage}
+	\caption{Herramientas usadas}
+	\label{fig:hercym}
 \end{figure}
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm]{figs/cap6/steering.png}
+%	\end{center}
+%	\caption{Herramienta usada para mover las ruedas}
+%	\label{fig:steering}
+%\end{figure}
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=12cm]{figs/cap6/rqtimage.png}
+%	\end{center}
+%	\caption{Herramienta usada para visualizar la cámara}
+%	\label{fig:rqtimage}
+%\end{figure}
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/rqtimage.png}
-	\end{center}
-	\caption{Herramienta usada para visualizar la cámara}
-	\label{fig:rqtimage}
-\end{figure}
-
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/echogps.png}
+		\includegraphics[width=11cm]{figs/cap6/echogps.png}
 	\end{center}
 	\caption{Herramienta usada para visualizar los valores del GPS}
 	\label{fig:echogps}
