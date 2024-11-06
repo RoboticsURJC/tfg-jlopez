@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  6 NOV 2024 12:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  6 NOV 2024 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1102,46 +1102,6 @@ LaTeX Warning: Hyper reference `acro:BSA' on page \es@scroman {vi} undefined on
  input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:AGV' on page \es@scroman {vi} undefined on
- input line 10.
-
-
-LaTeX Warning: Hyper reference `acro:AGV' on page \es@scroman {vi} undefined on
- input line 10.
-
-
-LaTeX Warning: Hyper reference `acro:AMR' on page \es@scroman {vi} undefined on
- input line 11.
-
-
-LaTeX Warning: Hyper reference `acro:AMR' on page \es@scroman {vi} undefined on
- input line 11.
-
-
-LaTeX Warning: Hyper reference `acro:MITMA' on page \es@scroman {vi} undefined 
-on input line 12.
-
-
-LaTeX Warning: Hyper reference `acro:MITMA' on page \es@scroman {vi} undefined 
-on input line 12.
-
-
-LaTeX Warning: Hyper reference `acro:CEDEX' on page \es@scroman {vi} undefined 
-on input line 13.
-
-
-LaTeX Warning: Hyper reference `acro:CEDEX' on page \es@scroman {vi} undefined 
-on input line 13.
-
-
-LaTeX Warning: Hyper reference `acro:AEC' on page \es@scroman {vi} undefined on
- input line 14.
-
-
-LaTeX Warning: Hyper reference `acro:AEC' on page \es@scroman {vi} undefined on
- input line 14.
-
-
 LaTeX Warning: Hyper reference `acro:GPS' on page \es@scroman {vi} undefined on
  input line 18.
 
@@ -1156,20 +1116,19 @@ LaTeX Warning: Hyper reference `acro:CAD' on page \es@scroman {vi} undefined on
 
 LaTeX Warning: Hyper reference `acro:CAD' on page \es@scroman {vi} undefined on
  input line 20.
+
+
+LaTeX Warning: Hyper reference `acro:RCE' on page \es@scroman {vi} undefined on
+ input line 29.
+
+
+LaTeX Warning: Hyper reference `acro:RCE' on page \es@scroman {vi} undefined on
+ input line 29.
 
 [6
 
 
-]
-
-LaTeX Warning: Hyper reference `acro:RCE' on page \es@scroman {vii} undefined o
-n input line 29.
-
-
-LaTeX Warning: Hyper reference `acro:RCE' on page \es@scroman {vii} undefined o
-n input line 29.
-
-)
+])
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
  [7] (./memoria.toc
@@ -1199,16 +1158,16 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 58.
 LaTeX Info: Redefining \% on input line 58.
  [13]
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
  [14])
 \tf@lof=\write7
 \openout7 = `memoria.lof'.
 
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
- [15]
-(./memoria.locode)
+
+[15] (./memoria.locode)
 \tf@locode=\write8
 \openout8 = `memoria.locode'.
 
@@ -1227,10 +1186,10 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write10
 \openout10 = `memoria.lot'.
 
- [18
 
-])
-(./capitulos/capitulo1.tex
+[18
+
+]) (./capitulos/capitulo1.tex
 Cap\'{\i }tulo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
@@ -1242,22 +1201,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
 
 ]
-<figs/memnon.jpeg, id=819, 1654.983pt x 1103.322pt>
+<figs/memnon.jpeg, id=812, 1654.983pt x 1103.322pt>
 File: figs/memnon.jpeg Graphic file (type jpg)
 <use figs/memnon.jpeg>
 Package pdftex.def Info: figs/memnon.jpeg  used on input line 31.
 (pdftex.def)             Requested size: 176.40439pt x 117.59468pt.
-<figs/terracota.png, id=822, 410.53375pt x 309.155pt>
+<figs/terracota.png, id=815, 410.53375pt x 309.155pt>
 File: figs/terracota.png Graphic file (type png)
 <use figs/terracota.png>
 Package pdftex.def Info: figs/terracota.png  used on input line 37.
 (pdftex.def)             Requested size: 154.35889pt x 116.23946pt.
-<figs/arquimedes.png, id=830, 455.7025pt x 405.515pt>
+<figs/arquimedes.png, id=823, 455.7025pt x 405.515pt>
 File: figs/arquimedes.png Graphic file (type png)
 <use figs/arquimedes.png>
 Package pdftex.def Info: figs/arquimedes.png  used on input line 60.
 (pdftex.def)             Requested size: 132.30666pt x 117.73865pt.
-<figs/eolipila.png, id=831, 342.27875pt x 398.48875pt>
+<figs/eolipila.png, id=824, 342.27875pt x 398.48875pt>
 File: figs/eolipila.png Graphic file (type png)
 <use figs/eolipila.png>
 Package pdftex.def Info: figs/eolipila.png  used on input line 67.
@@ -1266,7 +1225,7 @@ LaTeX Info: Redefining \. on input line 75.
 LaTeX Info: Redefining \% on input line 75.
  [2 <./figs/memnon.jpeg> <./figs/terracota.png> <./figs/arquimedes.png> <./figs
 /eolipila.png>]
-<figs/electro-sparko.png, id=847, 227.85126pt x 316.18124pt>
+<figs/electro-sparko.png, id=840, 227.85126pt x 316.18124pt>
 File: figs/electro-sparko.png Graphic file (type png)
 <use figs/electro-sparko.png>
 Package pdftex.def Info: figs/electro-sparko.png  used on input line 79.
@@ -1276,22 +1235,22 @@ although it is yet undefined on input line 88.
 LaTeX Info: Redefining \. on input line 92.
 LaTeX Info: Redefining \% on input line 92.
  [3 <./figs/electro-sparko.png>]
-<figs/shakey.png, id=862, 234.8775pt x 359.3425pt>
+<figs/shakey.png, id=855, 234.8775pt x 359.3425pt>
 File: figs/shakey.png Graphic file (type png)
 <use figs/shakey.png>
 Package pdftex.def Info: figs/shakey.png  used on input line 98.
 (pdftex.def)             Requested size: 154.35889pt x 236.15239pt.
-<figs/stanford.png, id=863, 363.3575pt x 389.455pt>
+<figs/stanford.png, id=856, 363.3575pt x 389.455pt>
 File: figs/stanford.png Graphic file (type png)
 <use figs/stanford.png>
 Package pdftex.def Info: figs/stanford.png  used on input line 104.
 (pdftex.def)             Requested size: 216.1011pt x 231.6246pt.
-<figs/brazoIRB140.png, id=870, 269.005pt x 224.84pt>
+<figs/brazoIRB140.png, id=863, 269.005pt x 224.84pt>
 File: figs/brazoIRB140.png Graphic file (type png)
 <use figs/brazoIRB140.png>
 Package pdftex.def Info: figs/brazoIRB140.png  used on input line 122.
 (pdftex.def)             Requested size: 194.04887pt x 162.19pt.
-<figs/cobot.png, id=873, 275.0275pt x 256.96pt>
+<figs/cobot.png, id=866, 275.0275pt x 256.96pt>
 File: figs/cobot.png Graphic file (type png)
 <use figs/cobot.png>
 Package pdftex.def Info: figs/cobot.png  used on input line 129.
@@ -1299,12 +1258,12 @@ Package pdftex.def Info: figs/cobot.png  used on input line 129.
 LaTeX Info: Redefining \. on input line 135.
 LaTeX Info: Redefining \% on input line 135.
  [4 <./figs/shakey.png> <./figs/stanford.png>]
-<figs/gama-baja.png, id=884, 187.70125pt x 124.465pt>
+<figs/gama-baja.png, id=877, 187.70125pt x 124.465pt>
 File: figs/gama-baja.png Graphic file (type png)
 <use figs/gama-baja.png>
 Package pdftex.def Info: figs/gama-baja.png  used on input line 157.
 (pdftex.def)             Requested size: 132.30666pt x 87.73833pt.
-<figs/gama-alta.png, id=885, 193.72375pt x 148.555pt>
+<figs/gama-alta.png, id=878, 193.72375pt x 148.555pt>
 File: figs/gama-alta.png Graphic file (type png)
 <use figs/gama-alta.png>
 Package pdftex.def Info: figs/gama-alta.png  used on input line 163.
@@ -1314,12 +1273,12 @@ LaTeX Info: Redefining \% on input line 168.
  [5 <./figs/brazoIRB140.png> <./figs/cobot.png>]
 Package acronym Info: Label `acro:FLL' newly defined as it shall be overridden
 although it is yet undefined on input line 176.
-<figs/FLL_TO19.jpg, id=909, 205.93324pt x 115.77702pt>
+<figs/FLL_TO19.jpg, id=902, 205.93324pt x 115.77702pt>
 File: figs/FLL_TO19.jpg Graphic file (type jpg)
 <use figs/FLL_TO19.jpg>
 Package pdftex.def Info: figs/FLL_TO19.jpg  used on input line 185.
 (pdftex.def)             Requested size: 154.35889pt x 86.78484pt.
-<figs/spot.jpg, id=914, 827.4915pt x 551.661pt>
+<figs/spot.jpg, id=907, 827.4915pt x 551.661pt>
 File: figs/spot.jpg Graphic file (type jpg)
 <use figs/spot.jpg>
 Package pdftex.def Info: figs/spot.jpg  used on input line 192.
@@ -1327,22 +1286,22 @@ Package pdftex.def Info: figs/spot.jpg  used on input line 192.
 LaTeX Info: Redefining \. on input line 293.
 LaTeX Info: Redefining \% on input line 293.
  [6 <./figs/gama-baja.png> <./figs/gama-alta.png>]
-<figs/strawberry.png, id=932, 623.32875pt x 416.55624pt>
+<figs/strawberry.png, id=925, 623.32875pt x 416.55624pt>
 File: figs/strawberry.png Graphic file (type png)
 <use figs/strawberry.png>
 Package pdftex.def Info: figs/strawberry.png  used on input line 308.
 (pdftex.def)             Requested size: 132.30666pt x 88.41374pt.
-<figs/komatsu.jpeg, id=935, 173.448pt x 96.36pt>
+<figs/komatsu.jpeg, id=928, 173.448pt x 96.36pt>
 File: figs/komatsu.jpeg Graphic file (type jpg)
 <use figs/komatsu.jpeg>
 Package pdftex.def Info: figs/komatsu.jpeg  used on input line 315.
 (pdftex.def)             Requested size: 132.30666pt x 73.50781pt.
-<figs/tello.png, id=938, 860.21375pt x 667.49374pt>
+<figs/tello.png, id=931, 860.21375pt x 667.49374pt>
 File: figs/tello.png Graphic file (type png)
 <use figs/tello.png>
 Package pdftex.def Info: figs/tello.png  used on input line 321.
 (pdftex.def)             Requested size: 132.30666pt x 102.66602pt.
-<figs/perseverance.jpg, id=941, 321.2pt x 240.9pt>
+<figs/perseverance.jpg, id=934, 321.2pt x 240.9pt>
 File: figs/perseverance.jpg Graphic file (type jpg)
 <use figs/perseverance.jpg>
 Package pdftex.def Info: figs/perseverance.jpg  used on input line 327.
@@ -1357,7 +1316,7 @@ LaTeX Info: Redefining \. on input line 345.
 LaTeX Info: Redefining \% on input line 345.
 [7 <./figs/FLL_TO19.jpg> <./figs/spot.jpg> <./figs/strawberry.png> <./figs/koma
 tsu.jpeg> <./figs/tello.png> <./figs/perseverance.jpg>]
-<figs/handlowcost.png, id=957, 848.16875pt x 431.6125pt>
+<figs/handlowcost.png, id=950, 848.16875pt x 431.6125pt>
 File: figs/handlowcost.png Graphic file (type png)
 <use figs/handlowcost.png>
 Package pdftex.def Info: figs/handlowcost.png  used on input line 364.
@@ -1406,7 +1365,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
 Package acronym Info: Label `acro:SIG' newly defined as it shall be overridden
 although it is yet undefined on input line 20.
-<figs/infrarob.png, id=986, 470.75874pt x 383.4325pt>
+<figs/infrarob.png, id=979, 470.75874pt x 383.4325pt>
 File: figs/infrarob.png Graphic file (type png)
 <use figs/infrarob.png>
 Package pdftex.def Info: figs/infrarob.png  used on input line 24.
@@ -1420,7 +1379,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 50.
 LaTeX Info: Redefining \% on input line 50.
  [13 <./figs/infrarob.png>]
-<figs/heron.png, id=1008, 762.85pt x 331.2375pt>
+<figs/heron.png, id=1001, 762.85pt x 331.2375pt>
 File: figs/heron.png Graphic file (type png)
 <use figs/heron.png>
 Package pdftex.def Info: figs/heron.png  used on input line 54.
@@ -1436,7 +1395,7 @@ although it is yet undefined on input line 79.
 LaTeX Info: Redefining \. on input line 80.
 LaTeX Info: Redefining \% on input line 80.
 [14 <./figs/heron.png>]
-<figs/enr.png, id=1019, 1020.81375pt x 527.9725pt>
+<figs/enr.png, id=1012, 1020.81375pt x 527.9725pt>
 File: figs/enr.png Graphic file (type png)
 <use figs/enr.png>
 Package pdftex.def Info: figs/enr.png  used on input line 83.
@@ -1449,7 +1408,7 @@ Overfull \hbox (14.22635pt too wide) in paragraph at lines 83--84
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
 [15 <./figs/enr.png>]
-<figs/omicron.png, id=1031, 704.6325pt x 475.7775pt>
+<figs/omicron.png, id=1024, 704.6325pt x 475.7775pt>
 File: figs/omicron.png Graphic file (type png)
 <use figs/omicron.png>
 Package pdftex.def Info: figs/omicron.png  used on input line 115.
@@ -1543,7 +1502,7 @@ LaTeX Info: Redefining \% on input line 97.
 Package acronym Info: Label `acro:PDCA' newly defined as it shall be overridden
 
 although it is yet undefined on input line 106.
-<figs/PDCA.png, id=1119, 679.03688pt x 491.58656pt>
+<figs/PDCA.png, id=1112, 679.03688pt x 491.58656pt>
 File: figs/PDCA.png Graphic file (type png)
 <use figs/PDCA.png>
 Package pdftex.def Info: figs/PDCA.png  used on input line 121.
@@ -1608,7 +1567,7 @@ Underfull \hbox (badness 1472) in paragraph at lines 24--25
 ucaci^^Son. Permite la
  []
 
-<figs/raspberrypi4.png, id=1162, 710.655pt x 390.45876pt>
+<figs/raspberrypi4.png, id=1155, 710.655pt x 390.45876pt>
 File: figs/raspberrypi4.png Graphic file (type png)
 <use figs/raspberrypi4.png>
 Package pdftex.def Info: figs/raspberrypi4.png  used on input line 33.
@@ -1616,7 +1575,7 @@ Package pdftex.def Info: figs/raspberrypi4.png  used on input line 33.
 [27
 
 ]
-<figs/campi.png, id=1172, 415.5525pt x 291.0875pt>
+<figs/campi.png, id=1165, 415.5525pt x 291.0875pt>
 File: figs/campi.png Graphic file (type png)
 <use figs/campi.png>
 Package pdftex.def Info: figs/campi.png  used on input line 52.
@@ -1627,14 +1586,14 @@ although it is yet undefined on input line 64.
 LaTeX Info: Redefining \. on input line 65.
 LaTeX Info: Redefining \% on input line 65.
  [28 <./figs/raspberrypi4.png> <./figs/campi.png>]
-<figs/GPSNEO6MV2.jpeg, id=1184, 225.84375pt x 225.84375pt>
+<figs/GPSNEO6MV2.jpeg, id=1177, 225.84375pt x 225.84375pt>
 File: figs/GPSNEO6MV2.jpeg Graphic file (type jpg)
 <use figs/GPSNEO6MV2.jpeg>
 Package pdftex.def Info: figs/GPSNEO6MV2.jpeg  used on input line 72.
 (pdftex.def)             Requested size: 113.81102pt x 113.81412pt.
 Package acronym Info: Label `acro:PWM' newly defined as it shall be overridden
 although it is yet undefined on input line 85.
-<figs/parallax.png, id=1190, 288.07625pt x 432.61626pt>
+<figs/parallax.png, id=1183, 288.07625pt x 432.61626pt>
 File: figs/parallax.png Graphic file (type png)
 <use figs/parallax.png>
 Package pdftex.def Info: figs/parallax.png  used on input line 89.
@@ -1646,12 +1605,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 105.
 LaTeX Info: Redefining \% on input line 105.
 [29 <./figs/GPSNEO6MV2.jpeg>]
-<figs/wheel.png, id=1201, 429.605pt x 412.54124pt>
+<figs/wheel.png, id=1194, 429.605pt x 412.54124pt>
 File: figs/wheel.png Graphic file (type png)
 <use figs/wheel.png>
 Package pdftex.def Info: figs/wheel.png  used on input line 110.
 (pdftex.def)             Requested size: 132.30666pt x 127.04924pt.
-<figs/wheel2.png, id=1204, 2589.675pt x 2581.645pt>
+<figs/wheel2.png, id=1197, 2589.675pt x 2581.645pt>
 File: figs/wheel2.png Graphic file (type png)
 <use figs/wheel2.png>
 Package pdftex.def Info: figs/wheel2.png  used on input line 116.
@@ -1665,12 +1624,12 @@ os-[]para-[]kits-[]de-[]desarrollo / 8430897 ?
 LaTeX Info: Redefining \. on input line 135.
 LaTeX Info: Redefining \% on input line 135.
 [30 <./figs/parallax.png> <./figs/wheel.png> <./figs/wheel2.png>]
-<figs/googlecoral.png, id=1220, 232.87pt x 217.81375pt>
+<figs/googlecoral.png, id=1213, 232.87pt x 217.81375pt>
 File: figs/googlecoral.png Graphic file (type png)
 <use figs/googlecoral.png>
 Package pdftex.def Info: figs/googlecoral.png  used on input line 140.
 (pdftex.def)             Requested size: 113.81102pt x 106.45049pt.
-<figs/powerbank.png, id=1224, 225.84375pt x 225.84375pt>
+<figs/powerbank.png, id=1217, 225.84375pt x 225.84375pt>
 File: figs/powerbank.png Graphic file (type png)
 <use figs/powerbank.png>
 Package pdftex.def Info: figs/powerbank.png  used on input line 156.
@@ -1678,7 +1637,7 @@ Package pdftex.def Info: figs/powerbank.png  used on input line 156.
 LaTeX Info: Redefining \. on input line 169.
 LaTeX Info: Redefining \% on input line 169.
  [31 <./figs/googlecoral.png> <./figs/powerbank.png>]
-<figs/ruedaloca.png, id=1234, 379.4175pt x 416.55624pt>
+<figs/ruedaloca.png, id=1227, 379.4175pt x 416.55624pt>
 File: figs/ruedaloca.png Graphic file (type png)
 <use figs/ruedaloca.png>
 Package pdftex.def Info: figs/ruedaloca.png  used on input line 172.
@@ -1695,7 +1654,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--179
 e = cm _ sw _ r _ mwn _ dp _
  []
 
-<figs/ordenador.png, id=1240, 225.84375pt x 225.84375pt>
+<figs/ordenador.png, id=1233, 225.84375pt x 225.84375pt>
 File: figs/ordenador.png Graphic file (type png)
 <use figs/ordenador.png>
 Package pdftex.def Info: figs/ordenador.png  used on input line 189.
@@ -1708,7 +1667,7 @@ although it is yet undefined on input line 259.
 LaTeX Info: Redefining \. on input line 260.
 LaTeX Info: Redefining \% on input line 260.
  [33]
-<figs/freecad.png, id=1268, 225.84375pt x 225.84375pt>
+<figs/freecad.png, id=1261, 225.84375pt x 225.84375pt>
 File: figs/freecad.png Graphic file (type png)
 <use figs/freecad.png>
 Package pdftex.def Info: figs/freecad.png  used on input line 294.
@@ -1716,7 +1675,7 @@ Package pdftex.def Info: figs/freecad.png  used on input line 294.
 LaTeX Info: Redefining \. on input line 304.
 LaTeX Info: Redefining \% on input line 304.
  [34 <./figs/freecad.png>]
-<figs/workinggps.png, id=1278, 617.30624pt x 384.43625pt>
+<figs/workinggps.png, id=1271, 617.30624pt x 384.43625pt>
 File: figs/workinggps.png Graphic file (type png)
 <use figs/workinggps.png>
 Package pdftex.def Info: figs/workinggps.png  used on input line 333.
@@ -1728,7 +1687,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 349.
 LaTeX Info: Redefining \% on input line 349.
 [35]
-<figs/opencv.png, id=1289, 233.87375pt x 216.81pt>
+<figs/opencv.png, id=1282, 233.87375pt x 216.81pt>
 File: figs/opencv.png Graphic file (type png)
 <use figs/opencv.png>
 Package pdftex.def Info: figs/opencv.png  used on input line 356.
@@ -1736,12 +1695,12 @@ Package pdftex.def Info: figs/opencv.png  used on input line 356.
 LaTeX Info: Redefining \. on input line 366.
 LaTeX Info: Redefining \% on input line 366.
  [36 <./figs/workinggps.png> <./figs/opencv.png>]
-<figs/foxy.png, id=1303, 661.0061pt x 785.27524pt>
+<figs/foxy.png, id=1296, 661.0061pt x 785.27524pt>
 File: figs/foxy.png Graphic file (type png)
 <use figs/foxy.png>
 Package pdftex.def Info: figs/foxy.png  used on input line 380.
 (pdftex.def)             Requested size: 154.35889pt x 183.37741pt.
-<figs/humble.png, id=1304, 633.94737pt x 773.09882pt>
+<figs/humble.png, id=1297, 633.94737pt x 773.09882pt>
 File: figs/humble.png Graphic file (type png)
 <use figs/humble.png>
 Package pdftex.def Info: figs/humble.png  used on input line 386.
@@ -1762,7 +1721,7 @@ although it is yet undefined on input line 459.
 LaTeX Info: Redefining \. on input line 466.
 LaTeX Info: Redefining \% on input line 466.
  [39]
-<figs/googlecolab.png, id=1348, 187.70125pt x 176.66pt>
+<figs/googlecolab.png, id=1341, 187.70125pt x 176.66pt>
 File: figs/googlecolab.png Graphic file (type png)
 <use figs/googlecolab.png>
 Package pdftex.def Info: figs/googlecolab.png  used on input line 469.
@@ -1770,7 +1729,7 @@ Package pdftex.def Info: figs/googlecolab.png  used on input line 469.
 Package acronym Info: Label `acro:YOLO' newly defined as it shall be overridden
 
 although it is yet undefined on input line 478.
-<figs/tflite.png, id=1356, 301.125pt x 168.63pt>
+<figs/tflite.png, id=1349, 301.125pt x 168.63pt>
 File: figs/tflite.png Graphic file (type png)
 <use figs/tflite.png>
 Package pdftex.def Info: figs/tflite.png  used on input line 496.
@@ -1801,7 +1760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-<figs/cap5/Original.png, id=1379, 480.79625pt x 538.01pt>
+<figs/cap5/Original.png, id=1372, 480.79625pt x 538.01pt>
 File: figs/cap5/Original.png Graphic file (type png)
 <use figs/cap5/Original.png>
 Package pdftex.def Info: figs/cap5/Original.png  used on input line 25.
@@ -1809,12 +1768,12 @@ Package pdftex.def Info: figs/cap5/Original.png  used on input line 25.
 [42
 
 ]
-<figs/cap5/new.png, id=1386, 3481.005pt x 2881.76625pt>
+<figs/cap5/new.png, id=1379, 3481.005pt x 2881.76625pt>
 File: figs/cap5/new.png Graphic file (type png)
 <use figs/cap5/new.png>
 Package pdftex.def Info: figs/cap5/new.png  used on input line 36.
 (pdftex.def)             Requested size: 227.62204pt x 188.42068pt.
-<figs/cap5/dof.jpg, id=1388, 1331.97626pt x 971.63pt>
+<figs/cap5/dof.jpg, id=1381, 1331.97626pt x 971.63pt>
 File: figs/cap5/dof.jpg Graphic file (type jpg)
 <use figs/cap5/dof.jpg>
 Package pdftex.def Info: figs/cap5/dof.jpg  used on input line 48.
@@ -1822,7 +1781,7 @@ Package pdftex.def Info: figs/cap5/dof.jpg  used on input line 48.
 LaTeX Info: Redefining \. on input line 52.
 LaTeX Info: Redefining \% on input line 52.
  [43 <./figs/cap5/Original.png> <./figs/cap5/new.png>]
-<figs/cap5/modelocompleto_bb3.png, id=1399, 405.78267pt x 499.19833pt>
+<figs/cap5/modelocompleto_bb3.png, id=1392, 405.78267pt x 499.19833pt>
 File: figs/cap5/modelocompleto_bb3.png Graphic file (type png)
 <use figs/cap5/modelocompleto_bb3.png>
 Package pdftex.def Info: figs/cap5/modelocompleto_bb3.png  used on input line 6
@@ -1835,30 +1794,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 72.
 LaTeX Info: Redefining \% on input line 72.
 [44 <./figs/cap5/dof.jpg>]
-<figs/cap5/prototipo_laser.jpeg, id=1405, 1483.5425pt x 1221.56375pt>
+<figs/cap5/prototipo_laser.jpeg, id=1398, 1483.5425pt x 1221.56375pt>
 File: figs/cap5/prototipo_laser.jpeg Graphic file (type jpg)
 <use figs/cap5/prototipo_laser.jpeg>
 Package pdftex.def Info: figs/cap5/prototipo_laser.jpeg  used on input line 83.
 
 (pdftex.def)             Requested size: 176.40439pt x 145.23927pt.
-<figs/cap5/prototipo_sin_laser.jpeg, id=1406, 690.20276pt x 517.04578pt>
+<figs/cap5/prototipo_sin_laser.jpeg, id=1399, 690.20276pt x 517.04578pt>
 File: figs/cap5/prototipo_sin_laser.jpeg Graphic file (type jpg)
 <use figs/cap5/prototipo_sin_laser.jpeg>
 Package pdftex.def Info: figs/cap5/prototipo_sin_laser.jpeg  used on input line
  88.
 (pdftex.def)             Requested size: 176.40439pt x 132.14867pt.
-<figs/cap5/boceto_papel.jpeg, id=1407, 941.5175pt x 917.4275pt>
+<figs/cap5/boceto_papel.jpeg, id=1400, 941.5175pt x 917.4275pt>
 File: figs/cap5/boceto_papel.jpeg Graphic file (type jpg)
 <use figs/cap5/boceto_papel.jpeg>
 Package pdftex.def Info: figs/cap5/boceto_papel.jpeg  used on input line 93.
 (pdftex.def)             Requested size: 220.50887pt x 214.86755pt.
-<figs/cap5/boceto_carton5.jpeg, id=1410, 1279.78125pt x 1526.70375pt>
+<figs/cap5/boceto_carton5.jpeg, id=1403, 1279.78125pt x 1526.70375pt>
 File: figs/cap5/boceto_carton5.jpeg Graphic file (type jpg)
 <use figs/cap5/boceto_carton5.jpeg>
 Package pdftex.def Info: figs/cap5/boceto_carton5.jpeg  used on input line 134.
 
 (pdftex.def)             Requested size: 176.40439pt x 210.4291pt.
-<figs/cap5/boceto_carton7.jpeg, id=1411, 1233.60875pt x 1467.4825pt>
+<figs/cap5/boceto_carton7.jpeg, id=1404, 1233.60875pt x 1467.4825pt>
 File: figs/cap5/boceto_carton7.jpeg Graphic file (type jpg)
 <use figs/cap5/boceto_carton7.jpeg>
 Package pdftex.def Info: figs/cap5/boceto_carton7.jpeg  used on input line 146.
@@ -1867,30 +1826,27 @@ Package pdftex.def Info: figs/cap5/boceto_carton7.jpeg  used on input line 146.
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
  [45 <./figs/cap5/modelocompleto_bb3.png>]
-
-LaTeX Warning: Text page 46 contains only floats.
-
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
-[46 <./figs/cap5/prototipo_laser.jpeg> <./figs/cap5/prototipo_sin_laser.jpeg> <
-./figs/cap5/boceto_papel.jpeg> <./figs/cap5/boceto_carton5.jpeg> <./figs/cap5/b
-oceto_carton7.jpeg>]
-<figs/cap5/planos1.jpeg, id=1424, 1427.3325pt x 1634.105pt>
+ [46 <./figs/cap5/prototipo_laser.jpeg> <./figs/cap5/prototipo_sin_laser.jpeg> 
+<./figs/cap5/boceto_papel.jpeg> <./figs/cap5/boceto_carton5.jpeg> <./figs/cap5/
+boceto_carton7.jpeg>]
+<figs/cap5/planos1.jpeg, id=1417, 1427.3325pt x 1634.105pt>
 File: figs/cap5/planos1.jpeg Graphic file (type jpg)
 <use figs/cap5/planos1.jpeg>
 Package pdftex.def Info: figs/cap5/planos1.jpeg  used on input line 164.
 (pdftex.def)             Requested size: 198.45662pt x 227.20227pt.
-<figs/cap5/planos2.jpeg, id=1425, 1326.9575pt x 1726.45pt>
+<figs/cap5/planos2.jpeg, id=1418, 1326.9575pt x 1726.45pt>
 File: figs/cap5/planos2.jpeg Graphic file (type jpg)
 <use figs/cap5/planos2.jpeg>
 Package pdftex.def Info: figs/cap5/planos2.jpeg  used on input line 170.
 (pdftex.def)             Requested size: 198.45662pt x 258.19237pt.
-<figs/cap5/planos3.jpeg, id=1426, 1411.2725pt x 1862.96pt>
+<figs/cap5/planos3.jpeg, id=1419, 1411.2725pt x 1862.96pt>
 File: figs/cap5/planos3.jpeg Graphic file (type jpg)
 <use figs/cap5/planos3.jpeg>
 Package pdftex.def Info: figs/cap5/planos3.jpeg  used on input line 176.
 (pdftex.def)             Requested size: 198.45662pt x 261.94968pt.
-<figs/cap5/planos4.jpeg, id=1427, 1506.62875pt x 1761.58125pt>
+<figs/cap5/planos4.jpeg, id=1420, 1506.62875pt x 1761.58125pt>
 File: figs/cap5/planos4.jpeg Graphic file (type jpg)
 <use figs/cap5/planos4.jpeg>
 Package pdftex.def Info: figs/cap5/planos4.jpeg  used on input line 182.
@@ -1899,13 +1855,13 @@ LaTeX Info: Redefining \. on input line 210.
 LaTeX Info: Redefining \% on input line 210.
  [47 <./figs/cap5/planos1.jpeg> <./figs/cap5/planos2.jpeg> <./figs/cap5/planos3
 .jpeg> <./figs/cap5/planos4.jpeg>]
-<figs/cap5/basevistasuperiorsin.png, id=1448, 732.7375pt x 475.7775pt>
+<figs/cap5/basevistasuperiorsin.png, id=1441, 732.7375pt x 475.7775pt>
 File: figs/cap5/basevistasuperiorsin.png Graphic file (type png)
 <use figs/cap5/basevistasuperiorsin.png>
 Package pdftex.def Info: figs/cap5/basevistasuperiorsin.png  used on input line
  224.
 (pdftex.def)             Requested size: 198.45662pt x 128.86092pt.
-<figs/cap5/basecon2.png, id=1449, 487.8225pt x 608.2725pt>
+<figs/cap5/basecon2.png, id=1442, 487.8225pt x 608.2725pt>
 File: figs/cap5/basecon2.png Graphic file (type png)
 <use figs/cap5/basecon2.png>
 Package pdftex.def Info: figs/cap5/basecon2.png  used on input line 230.
@@ -1913,7 +1869,7 @@ Package pdftex.def Info: figs/cap5/basecon2.png  used on input line 230.
 LaTeX Info: Redefining \. on input line 289.
 LaTeX Info: Redefining \% on input line 289.
  [48]
-<figs/cap5/rot.png, id=1462, 641.39626pt x 469.755pt>
+<figs/cap5/rot.png, id=1455, 641.39626pt x 469.755pt>
 File: figs/cap5/rot.png Graphic file (type png)
 <use figs/cap5/rot.png>
 Package pdftex.def Info: figs/cap5/rot.png  used on input line 292.
@@ -1922,121 +1878,96 @@ LaTeX Info: Redefining \. on input line 299.
 LaTeX Info: Redefining \% on input line 299.
  [49 <./figs/cap5/basevistasuperiorsin.png> <./figs/cap5/basecon2.png> <./figs/
 cap5/rot.png>]
-<figs/cap5/camera3sin.png, id=1478, 1214.5375pt x 728.7225pt>
+<figs/cap5/camera3sin.png, id=1472, 1214.5375pt x 728.7225pt>
 File: figs/cap5/camera3sin.png Graphic file (type png)
 <use figs/cap5/camera3sin.png>
 Package pdftex.def Info: figs/cap5/camera3sin.png  used on input line 304.
 (pdftex.def)             Requested size: 198.45662pt x 119.06648pt.
-<figs/cap5/camera2con.png, id=1479, 1214.5375pt x 728.7225pt>
+<figs/cap5/camera2con.png, id=1473, 1214.5375pt x 728.7225pt>
 File: figs/cap5/camera2con.png Graphic file (type png)
 <use figs/cap5/camera2con.png>
 Package pdftex.def Info: figs/cap5/camera2con.png  used on input line 310.
 (pdftex.def)             Requested size: 198.45662pt x 119.06648pt.
-<figs/cap5/superior2.png, id=1486, 622.325pt x 463.7325pt>
+<figs/cap5/superior2.png, id=1480, 622.325pt x 463.7325pt>
 File: figs/cap5/superior2.png Graphic file (type png)
 <use figs/cap5/superior2.png>
-Package pdftex.def Info: figs/cap5/superior2.png  used on input line 416.
+Package pdftex.def Info: figs/cap5/superior2.png  used on input line 415.
 (pdftex.def)             Requested size: 198.45662pt x 147.88087pt.
-<figs/cap5/superior1m.png, id=1487, 638.385pt x 614.295pt>
+<figs/cap5/superior1m.png, id=1481, 638.385pt x 614.295pt>
 File: figs/cap5/superior1m.png Graphic file (type png)
 <use figs/cap5/superior1m.png>
-Package pdftex.def Info: figs/cap5/superior1m.png  used on input line 422.
+Package pdftex.def Info: figs/cap5/superior1m.png  used on input line 421.
 (pdftex.def)             Requested size: 198.45662pt x 190.96376pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
 [][][][]$\OT1/cmtt/m/n/10 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
 [][][][]$\OT1/cmtt/m/n/10 https :
  []
 
-LaTeX Info: Redefining \. on input line 434.
-LaTeX Info: Redefining \% on input line 434.
+LaTeX Info: Redefining \. on input line 433.
+LaTeX Info: Redefining \% on input line 433.
 [50 <./figs/cap5/camera3sin.png> <./figs/cap5/camera2con.png>]
-<figs/cap5/trasera2.png, id=1503, 598.235pt x 470.75874pt>
+<figs/cap5/trasera2.png, id=1496, 598.235pt x 470.75874pt>
 File: figs/cap5/trasera2.png Graphic file (type png)
 <use figs/cap5/trasera2.png>
-Package pdftex.def Info: figs/cap5/trasera2.png  used on input line 464.
+Package pdftex.def Info: figs/cap5/trasera2.png  used on input line 463.
 (pdftex.def)             Requested size: 198.45662pt x 156.16974pt.
-<figs/cap5/traseracon.png, id=1504, 815.045pt x 517.935pt>
+<figs/cap5/traseracon.png, id=1497, 815.045pt x 517.935pt>
 File: figs/cap5/traseracon.png Graphic file (type png)
 <use figs/cap5/traseracon.png>
-Package pdftex.def Info: figs/cap5/traseracon.png  used on input line 470.
+Package pdftex.def Info: figs/cap5/traseracon.png  used on input line 469.
 (pdftex.def)             Requested size: 198.45662pt x 126.10883pt.
-LaTeX Info: Redefining \. on input line 485.
-LaTeX Info: Redefining \% on input line 485.
- [51 <./figs/cap5/superior2.png> <./figs/cap5/superior1m.png>]
-<figs/cap5/impresora.jpg, id=1523, 885.3075pt x 1003.75pt>
+LaTeX Info: Redefining \. on input line 483.
+LaTeX Info: Redefining \% on input line 483.
+ [51 <./figs/cap5/superior2.png> <./figs/cap5/superior1m.png> <./figs/cap5/tras
+era2.png> <./figs/cap5/traseracon.png>]
+<figs/cap5/impresora.jpg, id=1517, 885.3075pt x 1003.75pt>
 File: figs/cap5/impresora.jpg Graphic file (type jpg)
 <use figs/cap5/impresora.jpg>
-Package pdftex.def Info: figs/cap5/impresora.jpg  used on input line 488.
+Package pdftex.def Info: figs/cap5/impresora.jpg  used on input line 487.
 (pdftex.def)             Requested size: 199.16928pt x 225.80338pt.
-LaTeX Info: Redefining \. on input line 523.
-LaTeX Info: Redefining \% on input line 523.
- [52 <./figs/cap5/trasera2.png> <./figs/cap5/traseracon.png> <./figs/cap5/impre
-sora.jpg>]
-<figs/cap5/setcompleto.jpeg, id=1534, 1295.84125pt x 940.51375pt>
+LaTeX Info: Redefining \. on input line 522.
+LaTeX Info: Redefining \% on input line 522.
+ [52 <./figs/cap5/impresora.jpg>]
+<figs/cap5/setcompleto.jpeg, id=1526, 1295.84125pt x 940.51375pt>
 File: figs/cap5/setcompleto.jpeg Graphic file (type jpg)
 <use figs/cap5/setcompleto.jpeg>
-Package pdftex.def Info: figs/cap5/setcompleto.jpeg  used on input line 527.
+Package pdftex.def Info: figs/cap5/setcompleto.jpeg  used on input line 526.
 (pdftex.def)             Requested size: 284.52756pt x 206.51183pt.
-LaTeX Info: Redefining \. on input line 553.
-LaTeX Info: Redefining \% on input line 553.
+LaTeX Info: Redefining \. on input line 552.
+LaTeX Info: Redefining \% on input line 552.
  [53 <./figs/cap5/setcompleto.jpeg>]
-<figs/cap5/soldar.jpeg, id=1541, 1541.76pt x 2055.68pt>
+<figs/cap5/soldar.jpeg, id=1536, 1541.76pt x 2055.68pt>
 File: figs/cap5/soldar.jpeg Graphic file (type jpg)
 <use figs/cap5/soldar.jpeg>
-Package pdftex.def Info: figs/cap5/soldar.jpeg  used on input line 556.
-(pdftex.def)             Requested size: 227.62204pt x 303.47679pt.
-
-
-LaTeX Warning: Reference `fig:pbasemontada' on page 54 undefined on input line 
-564.
-
-
-LaTeX Warning: Reference `fig:pcamaramontada' on page 54 undefined on input lin
-e 564.
-
-
-LaTeX Warning: Reference `fig:psuperiormontada' on page 54 undefined on input l
-ine 564.
-
-
-LaTeX Warning: Reference `fig:traseracon' on page 54 undefined on input line 56
-4.
-
-LaTeX Info: Redefining \. on input line 565.
-LaTeX Info: Redefining \% on input line 565.
-[54 <./figs/cap5/soldar.jpeg>]
-<figs/cap5/completo3.png, id=1562, 772.8875pt x 510.90875pt>
+Package pdftex.def Info: figs/cap5/soldar.jpeg  used on input line 555.
+(pdftex.def)             Requested size: 199.16928pt x 265.55396pt.
+LaTeX Info: Redefining \. on input line 591.
+LaTeX Info: Redefining \% on input line 591.
+ [54 <./figs/cap5/soldar.jpeg>]
+<figs/cap5/completo3.png, id=1558, 772.8875pt x 510.90875pt>
 File: figs/cap5/completo3.png Graphic file (type png)
 <use figs/cap5/completo3.png>
-Package pdftex.def Info: figs/cap5/completo3.png  used on input line 596.
+Package pdftex.def Info: figs/cap5/completo3.png  used on input line 595.
 (pdftex.def)             Requested size: 341.43306pt x 225.69707pt.
-LaTeX Info: Redefining \. on input line 606.
-LaTeX Info: Redefining \% on input line 606.
+LaTeX Info: Redefining \. on input line 608.
+LaTeX Info: Redefining \% on input line 608.
  [55 <./figs/cap5/completo3.png>]
-<figs/cap5/ab.jpeg, id=1572, 1541.76pt x 2055.68pt>
-File: figs/cap5/ab.jpeg Graphic file (type jpg)
-<use figs/cap5/ab.jpeg>
-Package pdftex.def Info: figs/cap5/ab.jpeg  used on input line 611.
-(pdftex.def)             Requested size: 341.43306pt x 455.23088pt.
-LaTeX Info: Redefining \. on input line 618.
-LaTeX Info: Redefining \% on input line 618.
- [56 <./figs/cap5/ab.jpeg>]
-<figs/cap5/creacionra1.jpeg, id=1580, 1541.76pt x 2055.68pt>
+<figs/cap5/creacionra1.jpeg, id=1569, 1541.76pt x 2055.68pt>
 File: figs/cap5/creacionra1.jpeg Graphic file (type jpg)
 <use figs/cap5/creacionra1.jpeg>
 Package pdftex.def Info: figs/cap5/creacionra1.jpeg  used on input line 623.
 (pdftex.def)             Requested size: 198.45662pt x 264.58157pt.
-<figs/cap5/creacionra2.jpeg, id=1581, 1541.76pt x 2055.68pt>
+<figs/cap5/creacionra2.jpeg, id=1570, 1541.76pt x 2055.68pt>
 File: figs/cap5/creacionra2.jpeg Graphic file (type jpg)
 <use figs/cap5/creacionra2.jpeg>
 Package pdftex.def Info: figs/cap5/creacionra2.jpeg  used on input line 629.
 (pdftex.def)             Requested size: 198.45662pt x 264.58157pt.
-<figs/cap5/ra.jpeg, id=1582, 1541.76pt x 2055.68pt>
+<figs/cap5/ra.jpeg, id=1571, 1541.76pt x 2055.68pt>
 File: figs/cap5/ra.jpeg Graphic file (type jpg)
 <use figs/cap5/ra.jpeg>
 Package pdftex.def Info: figs/cap5/ra.jpeg  used on input line 639.
@@ -2047,23 +1978,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 680.
 LaTeX Info: Redefining \% on input line 680.
-[57 <./figs/cap5/creacionra1.jpeg> <./figs/cap5/creacionra2.jpeg>]
+[56 <./figs/cap5/creacionra1.jpeg> <./figs/cap5/creacionra2.jpeg>]
 Overfull \vbox (22.6475pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 680.
 LaTeX Info: Redefining \% on input line 680.
 
-[58 <./figs/cap5/ra.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 681--682
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 681--682
-
- []
-
-
+[57 <./figs/cap5/ra.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 681--682
 
  []
@@ -2081,7 +2002,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 681--682
 ) (./capitulos/capitulo6.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [59]
+ [58]
 Cap\'{\i }tulo 6.
 
 Underfull \hbox (badness 1072) in paragraph at lines 8--9
@@ -2096,7 +2017,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 Package acronym Info: Label `acro:URDF' newly defined as it shall be overridden
 
 although it is yet undefined on input line 38.
-[60
+[59
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 40--40
@@ -2142,8 +2063,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
-[61]
-<figs/cap6/links.png, id=1664, 861.2175pt x 596.2275pt>
+[60]
+<figs/cap6/links.png, id=1652, 861.2175pt x 596.2275pt>
 File: figs/cap6/links.png Graphic file (type png)
 <use figs/cap6/links.png>
 Package pdftex.def Info: figs/cap6/links.png  used on input line 124.
@@ -2160,14 +2081,14 @@ z / blob / main / code / ros2 / src / pibotj _ r2c /
 
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
-[62]
+[61]
 
-LaTeX Warning: Text page 63 contains only floats.
+LaTeX Warning: Text page 62 contains only floats.
 
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
-[63 <./figs/cap6/links.png>]
-<figs/cap6/interfaces.png, id=1728, 875.27pt x 197.73875pt>
+[62 <./figs/cap6/links.png>]
+<figs/cap6/interfaces.png, id=1717, 875.27pt x 197.73875pt>
 File: figs/cap6/interfaces.png Graphic file (type png)
 <use figs/cap6/interfaces.png>
 Package pdftex.def Info: figs/cap6/interfaces.png  used on input line 142.
@@ -2190,7 +2111,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--155
 obile-[]robot / concept-[]design /
  []
 
-<figs/cap6/rsp.png, id=1738, 947.4597pt x 453.8556pt>
+<figs/cap6/rsp.png, id=1727, 947.4597pt x 453.8556pt>
 File: figs/cap6/rsp.png Graphic file (type png)
 <use figs/cap6/rsp.png>
 Package pdftex.def Info: figs/cap6/rsp.png  used on input line 159.
@@ -2223,8 +2144,8 @@ ado seg^^Sun las
 
 LaTeX Info: Redefining \. on input line 171.
 LaTeX Info: Redefining \% on input line 171.
-[64 <./figs/cap6/interfaces.png>]
-<figs/cap6/diagram.png, id=1756, 807.7678pt x 699.36281pt>
+[63 <./figs/cap6/interfaces.png>]
+<figs/cap6/diagram.png, id=1745, 807.7678pt x 699.36281pt>
 File: figs/cap6/diagram.png Graphic file (type png)
 <use figs/cap6/diagram.png>
 Package pdftex.def Info: figs/cap6/diagram.png  used on input line 175.
@@ -2233,7 +2154,7 @@ Package pdftex.def Info: figs/cap6/diagram.png  used on input line 175.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/cap6/topic.png, id=1758, 691.58376pt x 401.5pt>
+<figs/cap6/topic.png, id=1747, 691.58376pt x 401.5pt>
 File: figs/cap6/topic.png Graphic file (type png)
 <use figs/cap6/topic.png>
 Package pdftex.def Info: figs/cap6/topic.png  used on input line 189.
@@ -2243,21 +2164,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 200.
 LaTeX Info: Redefining \% on input line 200.
-[65 <./figs/cap6/rsp.png>]
+[64 <./figs/cap6/rsp.png>]
 LaTeX Info: Redefining \. on input line 203.
 LaTeX Info: Redefining \% on input line 203.
- [66 <./figs/cap6/diagram.png> <./figs/cap6/topic.png>]
-<figs/cap6/steering.png, id=1779, 262.9825pt x 380.42125pt>
+ [65 <./figs/cap6/diagram.png> <./figs/cap6/topic.png>]
+<figs/cap6/steering.png, id=1768, 262.9825pt x 380.42125pt>
 File: figs/cap6/steering.png Graphic file (type png)
 <use figs/cap6/steering.png>
 Package pdftex.def Info: figs/cap6/steering.png  used on input line 210.
 (pdftex.def)             Requested size: 170.71652pt x 246.96321pt.
-<figs/cap6/rqtimage.png, id=1780, 1069.9975pt x 654.445pt>
+<figs/cap6/rqtimage.png, id=1769, 1069.9975pt x 654.445pt>
 File: figs/cap6/rqtimage.png Graphic file (type png)
 <use figs/cap6/rqtimage.png>
 Package pdftex.def Info: figs/cap6/rqtimage.png  used on input line 218.
 (pdftex.def)             Requested size: 341.43306pt x 208.82751pt.
-<figs/cap6/echogps.png, id=1781, 775.89874pt x 432.61626pt>
+<figs/cap6/echogps.png, id=1770, 775.89874pt x 432.61626pt>
 File: figs/cap6/echogps.png Graphic file (type png)
 <use figs/cap6/echogps.png>
 Package pdftex.def Info: figs/cap6/echogps.png  used on input line 226.
@@ -2266,36 +2187,36 @@ Package pdftex.def Info: figs/cap6/echogps.png  used on input line 226.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/cap6/rotizq.png, id=1785, 472.76625pt x 618.31pt>
+<figs/cap6/rotizq.png, id=1774, 472.76625pt x 618.31pt>
 File: figs/cap6/rotizq.png Graphic file (type png)
 <use figs/cap6/rotizq.png>
 Package pdftex.def Info: figs/cap6/rotizq.png  used on input line 239.
 (pdftex.def)             Requested size: 154.35889pt x 201.8824pt.
-<figs/cap6/rotder.png, id=1786, 555.07375pt x 734.745pt>
+<figs/cap6/rotder.png, id=1775, 555.07375pt x 734.745pt>
 File: figs/cap6/rotder.png Graphic file (type png)
 <use figs/cap6/rotder.png>
 Package pdftex.def Info: figs/cap6/rotder.png  used on input line 245.
 (pdftex.def)             Requested size: 154.35889pt x 204.32578pt.
 LaTeX Info: Redefining \. on input line 250.
 LaTeX Info: Redefining \% on input line 250.
-[67 <./figs/cap6/steering.png> <./figs/cap6/rqtimage.png>]
+[66 <./figs/cap6/steering.png> <./figs/cap6/rqtimage.png>]
 LaTeX Info: Redefining \. on input line 262.
 LaTeX Info: Redefining \% on input line 262.
- [68 <./figs/cap6/echogps.png> <./figs/cap6/rotizq.png> <./figs/cap6/rotder.png
+ [67 <./figs/cap6/echogps.png> <./figs/cap6/rotizq.png> <./figs/cap6/rotder.png
 >]
 Underfull \hbox (badness 10000) in paragraph at lines 298--298
 [][][][]$\OT1/cmtt/m/n/10 https : / / github . com / RoboticsURJC / tfg-[]jlope
 z / blob / main / code / ros2 / src / pibotj _ rr /
  []
 
-<figs/cap6/camerarr.png, id=1811, 635.37375pt x 506.89375pt>
+<figs/cap6/camerarr.png, id=1800, 635.37375pt x 506.89375pt>
 File: figs/cap6/camerarr.png Graphic file (type png)
 <use figs/cap6/camerarr.png>
 Package pdftex.def Info: figs/cap6/camerarr.png  used on input line 302.
 (pdftex.def)             Requested size: 227.62204pt x 181.59213pt.
 LaTeX Info: Redefining \. on input line 315.
 LaTeX Info: Redefining \% on input line 315.
-[69 <./figs/cap6/camerarr.png>]
+[68 <./figs/cap6/camerarr.png>]
 Underfull \hbox (badness 1565) in paragraph at lines 316--317
 \OT1/cmr/m/n/12 y gracias a la Web \OT1/cmr/m/it/12 Elinux[][][]\OT1/cmr/m/n/12
  , se pudieron obtener, sus par^^Sametros t^^Secnicos.
@@ -2314,7 +2235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 343--343
 [][][][]$\OT1/cmtt/m/n/10 https :
  []
 
-<figs/cap6/intrinsicmedia.png, id=1833, 860.21375pt x 64.24pt>
+<figs/cap6/intrinsicmedia.png, id=1822, 860.21375pt x 64.24pt>
 File: figs/cap6/intrinsicmedia.png Graphic file (type png)
 <use figs/cap6/intrinsicmedia.png>
 Package pdftex.def Info: figs/cap6/intrinsicmedia.png  used on input line 347.
@@ -2324,33 +2245,33 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 361.
 LaTeX Info: Redefining \% on input line 361.
-[70]
-<figs/cap6/rotation.jpeg, id=1854, 1541.76pt x 2055.68pt>
+[69]
+<figs/cap6/rotation.jpeg, id=1843, 1541.76pt x 2055.68pt>
 File: figs/cap6/rotation.jpeg Graphic file (type jpg)
 <use figs/cap6/rotation.jpeg>
 Package pdftex.def Info: figs/cap6/rotation.jpeg  used on input line 366.
 (pdftex.def)             Requested size: 154.35889pt x 205.7996pt.
-<figs/cap6/traslacion.jpeg, id=1855, 1541.76pt x 2055.68pt>
+<figs/cap6/traslacion.jpeg, id=1844, 1541.76pt x 2055.68pt>
 File: figs/cap6/traslacion.jpeg Graphic file (type jpg)
 <use figs/cap6/traslacion.jpeg>
 Package pdftex.def Info: figs/cap6/traslacion.jpeg  used on input line 372.
 (pdftex.def)             Requested size: 154.35889pt x 205.7996pt.
 LaTeX Info: Redefining \. on input line 421.
 LaTeX Info: Redefining \% on input line 421.
- [71 <./figs/cap6/intrinsicmedia.png> <./figs/cap6/rotation.jpeg> <./figs/cap6/
+ [70 <./figs/cap6/intrinsicmedia.png> <./figs/cap6/rotation.jpeg> <./figs/cap6/
 traslacion.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 544--544
 [][][][]$\OT1/cmtt/m/n/10 https : / / github . com / RoboticsURJC / tfg-[]jlope
 z / blob / main / code / ros2 / src / pibotj _ rr /
  []
 
-<figs/cap6/echo_gps_controller.png, id=1879, 737.75626pt x 487.8225pt>
+<figs/cap6/echo_gps_controller.png, id=1868, 737.75626pt x 487.8225pt>
 File: figs/cap6/echo_gps_controller.png Graphic file (type png)
 <use figs/cap6/echo_gps_controller.png>
 Package pdftex.def Info: figs/cap6/echo_gps_controller.png  used on input line 
 549.
 (pdftex.def)             Requested size: 341.43306pt x 225.76324pt.
-<figs/cap6/localizacion.png, id=1880, 1176.395pt x 615.29875pt>
+<figs/cap6/localizacion.png, id=1869, 1176.395pt x 615.29875pt>
 File: figs/cap6/localizacion.png Graphic file (type png)
 <use figs/cap6/localizacion.png>
 Package pdftex.def Info: figs/cap6/localizacion.png  used on input line 558.
@@ -2360,16 +2281,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 567.
 LaTeX Info: Redefining \% on input line 567.
-[72 <./figs/cap6/echo_gps_controller.png>]
-<figs/cap6/pwm.png, id=1903, 633.36626pt x 271.0125pt>
+[71 <./figs/cap6/echo_gps_controller.png>]
+<figs/cap6/pwm.png, id=1892, 633.36626pt x 271.0125pt>
 File: figs/cap6/pwm.png Graphic file (type png)
 <use figs/cap6/pwm.png>
 Package pdftex.def Info: figs/cap6/pwm.png  used on input line 586.
 (pdftex.def)             Requested size: 341.43306pt x 146.10057pt.
 LaTeX Info: Redefining \. on input line 590.
 LaTeX Info: Redefining \% on input line 590.
- [73 <./figs/cap6/localizacion.png>]
-<figs/cap6/motorlogic.png, id=1912, 597.60106pt x 845.26315pt>
+ [72 <./figs/cap6/localizacion.png>]
+<figs/cap6/motorlogic.png, id=1900, 597.60106pt x 845.26315pt>
 File: figs/cap6/motorlogic.png Graphic file (type png)
 <use figs/cap6/motorlogic.png>
 Package pdftex.def Info: figs/cap6/motorlogic.png  used on input line 594.
@@ -2377,18 +2298,18 @@ Package pdftex.def Info: figs/cap6/motorlogic.png  used on input line 594.
 LaTeX Info: Redefining \. on input line 608.
 LaTeX Info: Redefining \% on input line 608.
 
-[74 <./figs/cap6/pwm.png> <./figs/cap6/motorlogic.png>]
+[73 <./figs/cap6/pwm.png> <./figs/cap6/motorlogic.png>]
 Underfull \hbox (badness 1546) in paragraph at lines 613--614
 []\OT1/cmr/m/n/12 Para poder entrenar dicho modelo, fue necesario usar un \OT1/
 cmr/m/it/12 dataset \OT1/cmr/m/n/12 tomado
  []
 
-<figs/cap6/results.png, id=1924, 1790.69pt x 1189.44376pt>
+<figs/cap6/results.png, id=1913, 1790.69pt x 1189.44376pt>
 File: figs/cap6/results.png Graphic file (type png)
 <use figs/cap6/results.png>
 Package pdftex.def Info: figs/cap6/results.png  used on input line 617.
 (pdftex.def)             Requested size: 426.79134pt x 283.49405pt.
-<figs/cap6/results1.png, id=1925, 1754.555pt x 1179.40625pt>
+<figs/cap6/results1.png, id=1914, 1754.555pt x 1179.40625pt>
 File: figs/cap6/results1.png Graphic file (type png)
 <use figs/cap6/results1.png>
 Package pdftex.def Info: figs/cap6/results1.png  used on input line 626.
@@ -2398,7 +2319,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 633.
 LaTeX Info: Redefining \% on input line 633.
-[75 <./figs/cap6/results.png>]
+[74 <./figs/cap6/results.png>]
 Package acronym Info: Label `acro:mAP' newly defined as it shall be overridden
 although it is yet undefined on input line 634.
 
@@ -2406,7 +2327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 636--636
 [][][][]$\OT1/cmtt/m/n/10 https :
  []
 
-<figs/cap6/train_results.jpg, id=1942, 1927.2pt x 1927.2pt>
+<figs/cap6/train_results.jpg, id=1931, 1927.2pt x 1927.2pt>
 File: figs/cap6/train_results.jpg Graphic file (type jpg)
 <use figs/cap6/train_results.jpg>
 Package pdftex.def Info: figs/cap6/train_results.jpg  used on input line 640.
@@ -2427,10 +2348,10 @@ z / blob / main / code / ros2 / src / pibotj _ rr /
 
 LaTeX Info: Redefining \. on input line 647.
 LaTeX Info: Redefining \% on input line 647.
-[76 <./figs/cap6/results1.png>]
+[75 <./figs/cap6/results1.png>]
 LaTeX Info: Redefining \. on input line 653.
 LaTeX Info: Redefining \% on input line 653.
- [77 <./figs/cap6/train_results.jpg>]
+ [76 <./figs/cap6/train_results.jpg>]
 Overfull \hbox (3.58249pt too wide) in paragraph at lines 661--661
 []\OT1/cmtt/m/n/12 array([  1, 192, 192,   3], dtype=int32), 'dtype': <class 'n
 umpy.int8'>,[] 
@@ -2444,23 +2365,23 @@ parameters':[]
 
 LaTeX Info: Redefining \. on input line 685.
 LaTeX Info: Redefining \% on input line 685.
-[78]
+[77]
 Package acronym Info: Label `acro:EMA' newly defined as it shall be overridden
 although it is yet undefined on input line 725.
 LaTeX Info: Redefining \. on input line 726.
 LaTeX Info: Redefining \% on input line 726.
- [79]
-<figs/cap6/contornobache1.png, id=2015, 692.5875pt x 839.135pt>
+ [78]
+<figs/cap6/contornobache1.png, id=2003, 692.5875pt x 839.135pt>
 File: figs/cap6/contornobache1.png Graphic file (type png)
 <use figs/cap6/contornobache1.png>
 Package pdftex.def Info: figs/cap6/contornobache1.png  used on input line 750.
 (pdftex.def)             Requested size: 176.40439pt x 213.7269pt.
-<figs/cap6/contornobache2.png, id=2016, 692.5875pt x 839.135pt>
+<figs/cap6/contornobache2.png, id=2004, 692.5875pt x 839.135pt>
 File: figs/cap6/contornobache2.png Graphic file (type png)
 <use figs/cap6/contornobache2.png>
 Package pdftex.def Info: figs/cap6/contornobache2.png  used on input line 755.
 (pdftex.def)             Requested size: 176.40439pt x 213.7269pt.
-<figs/cap6/pinhole.png, id=2018, 301.125pt x 205.76875pt>
+<figs/cap6/pinhole.png, id=2006, 301.125pt x 205.76875pt>
 File: figs/cap6/pinhole.png Graphic file (type png)
 <use figs/cap6/pinhole.png>
 Package pdftex.def Info: figs/cap6/pinhole.png  used on input line 768.
@@ -2471,8 +2392,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 780.
 LaTeX Info: Redefining \% on input line 780.
-[80]
-<figs/cap6/esquema_pinhole_matrices.jpg, id=2031, 895.345pt x 433.62pt>
+[79]
+<figs/cap6/esquema_pinhole_matrices.jpg, id=2020, 895.345pt x 433.62pt>
 File: figs/cap6/esquema_pinhole_matrices.jpg Graphic file (type jpg)
 <use figs/cap6/esquema_pinhole_matrices.jpg>
 Package pdftex.def Info: figs/cap6/esquema_pinhole_matrices.jpg  used on input 
@@ -2484,9 +2405,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 792.
 LaTeX Info: Redefining \% on input line 792.
-[81 <./figs/cap6/contornobache1.png> <./figs/cap6/contornobache2.png> <./figs/c
+[80 <./figs/cap6/contornobache1.png> <./figs/cap6/contornobache2.png> <./figs/c
 ap6/pinhole.png>]
-<figs/cap6/pinholecoordinates.png, id=2044, 843.15pt x 631.35875pt>
+<figs/cap6/pinholecoordinates.png, id=2033, 843.15pt x 631.35875pt>
 File: figs/cap6/pinholecoordinates.png Graphic file (type png)
 <use figs/cap6/pinholecoordinates.png>
 Package pdftex.def Info: figs/cap6/pinholecoordinates.png  used on input line 7
@@ -2494,9 +2415,9 @@ Package pdftex.def Info: figs/cap6/pinholecoordinates.png  used on input line 7
 (pdftex.def)             Requested size: 426.79134pt x 319.5899pt.
 LaTeX Info: Redefining \. on input line 802.
 LaTeX Info: Redefining \% on input line 802.
- [82 <./figs/cap6/esquema_pinhole_matrices.jpg> <./figs/cap6/pinholecoordinates
+ [81 <./figs/cap6/esquema_pinhole_matrices.jpg> <./figs/cap6/pinholecoordinates
 .png>]
-<figs/cap6/hipotesissuelo.png, id=2052, 399.4925pt x 201.75375pt>
+<figs/cap6/hipotesissuelo.png, id=2041, 399.4925pt x 201.75375pt>
 File: figs/cap6/hipotesissuelo.png Graphic file (type png)
 <use figs/cap6/hipotesissuelo.png>
 Package pdftex.def Info: figs/cap6/hipotesissuelo.png  used on input line 807.
@@ -2539,8 +2460,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \. on input line 831.
 LaTeX Info: Redefining \% on input line 831.
-[83 <./figs/cap6/hipotesissuelo.png>]
-<figs/cap6/demoshoelace.png, id=2069, 657.95813pt x 314.67563pt>
+[82 <./figs/cap6/hipotesissuelo.png>]
+<figs/cap6/demoshoelace.png, id=2058, 657.95813pt x 314.67563pt>
 File: figs/cap6/demoshoelace.png Graphic file (type png)
 <use figs/cap6/demoshoelace.png>
 Package pdftex.def Info: figs/cap6/demoshoelace.png  used on input line 836.
@@ -2555,27 +2476,27 @@ Package acronym Info: Label `acro:HRI' newly defined as it shall be overridden
 although it is yet undefined on input line 848.
 LaTeX Info: Redefining \. on input line 849.
 LaTeX Info: Redefining \% on input line 849.
-[84 <./figs/cap6/demoshoelace.png>]
-<figs/cap6/interfazweb.png, id=2086, 1084.05pt x 688.07062pt>
+[83 <./figs/cap6/demoshoelace.png>]
+<figs/cap6/interfazweb.png, id=2074, 1084.05pt x 688.07062pt>
 File: figs/cap6/interfazweb.png Graphic file (type png)
 <use figs/cap6/interfazweb.png>
 Package pdftex.def Info: figs/cap6/interfazweb.png  used on input line 856.
 (pdftex.def)             Requested size: 426.79134pt x 270.89774pt.
 LaTeX Info: Redefining \. on input line 868.
 LaTeX Info: Redefining \% on input line 868.
- [85 <./figs/cap6/interfazweb.png>]
-<figs/cap6/medidas_reales.jpg, id=2100, 1152.305pt x 956.57375pt>
+ [84 <./figs/cap6/interfazweb.png>]
+<figs/cap6/medidas_reales.jpg, id=2088, 1152.305pt x 956.57375pt>
 File: figs/cap6/medidas_reales.jpg Graphic file (type jpg)
 <use figs/cap6/medidas_reales.jpg>
 Package pdftex.def Info: figs/cap6/medidas_reales.jpg  used on input line 873.
 (pdftex.def)             Requested size: 198.45662pt x 164.74641pt.
-<figs/cap6/medidas_ficticias.jpg, id=2101, 1155.31625pt x 1004.75375pt>
+<figs/cap6/medidas_ficticias.jpg, id=2089, 1155.31625pt x 1004.75375pt>
 File: figs/cap6/medidas_ficticias.jpg Graphic file (type jpg)
 <use figs/cap6/medidas_ficticias.jpg>
 Package pdftex.def Info: figs/cap6/medidas_ficticias.jpg  used on input line 87
 9.
 (pdftex.def)             Requested size: 198.45662pt x 172.5843pt.
-<figs/cap6/carretera.png, id=2102, 779.91376pt x 1827.82875pt>
+<figs/cap6/carretera.png, id=2090, 779.91376pt x 1827.82875pt>
 File: figs/cap6/carretera.png Graphic file (type png)
 <use figs/cap6/carretera.png>
 Package pdftex.def Info: figs/cap6/carretera.png  used on input line 888.
@@ -2590,21 +2511,21 @@ z / blob / main / code / ros2 / src / pibotj _ rr /
 
 LaTeX Info: Redefining \. on input line 900.
 LaTeX Info: Redefining \% on input line 900.
-[86 <./figs/cap6/medidas_reales.jpg> <./figs/cap6/medidas_ficticias.jpg> <./fig
+[85 <./figs/cap6/medidas_reales.jpg> <./figs/cap6/medidas_ficticias.jpg> <./fig
 s/cap6/carretera.png>]
-<figs/cap6/camaradlines.png, id=2115, 746.79pt x 630.355pt>
+<figs/cap6/camaradlines.png, id=2104, 746.79pt x 630.355pt>
 File: figs/cap6/camaradlines.png Graphic file (type png)
 <use figs/cap6/camaradlines.png>
 Package pdftex.def Info: figs/cap6/camaradlines.png  used on input line 920.
 (pdftex.def)             Requested size: 256.0748pt x 216.14536pt.
-<figs/cap6/casosdlines.png, id=2117, 1445.4pt x 813.0375pt>
+<figs/cap6/casosdlines.png, id=2106, 1445.4pt x 813.0375pt>
 File: figs/cap6/casosdlines.png Graphic file (type png)
 <use figs/cap6/casosdlines.png>
 Package pdftex.def Info: figs/cap6/casosdlines.png  used on input line 932.
 (pdftex.def)             Requested size: 426.79134pt x 240.06729pt.
 LaTeX Info: Redefining \. on input line 936.
 LaTeX Info: Redefining \% on input line 936.
- [87 <./figs/cap6/camaradlines.png>]
+ [86 <./figs/cap6/camaradlines.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 941--941
 [][][][]$\OT1/cmtt/m/n/10 https :
  []
@@ -2635,18 +2556,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 952--952
 z / blob / main / code / ros2 / src / pibotj _ rr /
  []
 
-<figs/cap6/vff.png, id=2140, 969.6225pt x 990.70125pt>
+<figs/cap6/vff.png, id=2129, 969.6225pt x 990.70125pt>
 File: figs/cap6/vff.png Graphic file (type png)
 <use figs/cap6/vff.png>
 Package pdftex.def Info: figs/cap6/vff.png  used on input line 957.
 (pdftex.def)             Requested size: 284.52756pt x 290.71242pt.
 LaTeX Info: Redefining \. on input line 961.
 LaTeX Info: Redefining \% on input line 961.
-[88 <./figs/cap6/casosdlines.png (PNG copy)>]) (./capitulos/capitulo7.tex
+[87 <./figs/cap6/casosdlines.png (PNG copy)>]) (./capitulos/capitulo7.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-[89 <./figs/cap6/vff.png>]
+[88 <./figs/cap6/vff.png>]
 Cap\'{\i }tulo 7.
 
 Underfull \hbox (badness 6032) in paragraph at lines 6--7
@@ -2697,24 +2618,24 @@ Underfull \hbox (badness 7832) in paragraph at lines 74--75
 verbatim
  []
 
-[90
+[89
 
 ]
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
- [91]
+ [90]
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-<figs/roomba.jpg, id=2193, 669.50125pt x 342.27875pt>
+<figs/roomba.jpg, id=2180, 669.50125pt x 342.27875pt>
 File: figs/roomba.jpg Graphic file (type jpg)
 <use figs/roomba.jpg>
 Package pdftex.def Info: figs/roomba.jpg  used on input line 144.
 (pdftex.def)             Requested size: 227.62204pt x 116.368pt.
 LaTeX Info: Redefining \. on input line 148.
 LaTeX Info: Redefining \% on input line 148.
-[92pdfTeX warning (ext4): destination with the same identifier (name{equation.7
+[91pdfTeX warning (ext4): destination with the same identifier (name{equation.7
 .4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -2722,24 +2643,24 @@ l.148 			\end{figure}
                      \]
 LaTeX Info: Redefining \. on input line 173.
 LaTeX Info: Redefining \% on input line 173.
- [93 <./figs/roomba.jpg>]
+ [92 <./figs/roomba.jpg>]
 
-LaTeX Warning: Citation `vega12e' on page 94 undefined on input line 176.
-
-
-LaTeX Warning: Citation `vega19b' on page 94 undefined on input line 176.
+LaTeX Warning: Citation `vega12e' on page 93 undefined on input line 176.
 
 
-LaTeX Warning: Citation `vega19a' on page 94 undefined on input line 176.
+LaTeX Warning: Citation `vega19b' on page 93 undefined on input line 176.
 
 
-LaTeX Warning: Citation `vega18b' on page 94 undefined on input line 176.
+LaTeX Warning: Citation `vega19a' on page 93 undefined on input line 176.
 
 
-LaTeX Warning: Citation `vega18a' on page 94 undefined on input line 176.
+LaTeX Warning: Citation `vega18b' on page 93 undefined on input line 176.
 
 
-LaTeX Warning: Citation `vega08b' on page 94 undefined on input line 176.
+LaTeX Warning: Citation `vega18a' on page 93 undefined on input line 176.
+
+
+LaTeX Warning: Citation `vega08b' on page 93 undefined on input line 176.
 
 
 Underfull \hbox (badness 4981) in paragraph at lines 176--177
@@ -2756,7 +2677,7 @@ Underfull \hbox (badness 6047) in paragraph at lines 178--179
 ) (./capitulos/capitulo8.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [94]
+ [93]
 Cap\'{\i }tulo 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
@@ -2778,17 +2699,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[95
+[94
 
 ]) (./capitulos/capitulo9.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [96]
+ [95]
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[97
+[96
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
@@ -2807,7 +2728,7 @@ Underfull \hbox (badness 2142) in paragraph at lines 65--66
 sar el comando
  []
 
-<figs/cap6/vl.png, id=2233, 493.845pt x 309.155pt>
+<figs/cap6/vl.png, id=2221, 493.845pt x 309.155pt>
 File: figs/cap6/vl.png Graphic file (type png)
 <use figs/cap6/vl.png>
 Package pdftex.def Info: figs/cap6/vl.png  used on input line 70.
@@ -2817,13 +2738,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 84.
 LaTeX Info: Redefining \% on input line 84.
-[98] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[97] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<figs/cap6/pycoralinstalled.png, id=2240, 800.9925pt x 503.8825pt>
+<figs/cap6/pycoralinstalled.png, id=2229, 800.9925pt x 503.8825pt>
 File: figs/cap6/pycoralinstalled.png Graphic file (type png)
 <use figs/cap6/pycoralinstalled.png>
 Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 106
@@ -2840,13 +2761,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--116
 
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
-[99 <./figs/cap6/vl.png>]
+[98 <./figs/cap6/vl.png>]
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
- [100 <./figs/cap6/pycoralinstalled.png>]
+ [99 <./figs/cap6/pycoralinstalled.png>]
 LaTeX Info: Redefining \. on input line 190.
 LaTeX Info: Redefining \% on input line 190.
- [101]
+ [100]
 Underfull \hbox (badness 10000) in paragraph at lines 240--240
 [][][][]$\OT1/cmtt/m/n/10 https : / / cms . gutow . uwosh . edu / Gutow / usefu
 l-[]chemistry-[]links /
@@ -2860,17 +2781,17 @@ w-[]tos /
 
 LaTeX Info: Redefining \. on input line 242.
 LaTeX Info: Redefining \% on input line 242.
-[102])
+[101])
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
- [103]
+ [102]
 No file memoria.ind.
 (./memoria.bbl
 Underfull \hbox (badness 1803) in paragraph at lines 35--39
 []\OT1/cmr/m/n/12 Cuenca S^^Sanchez, A., Farinango Galeano, W., and
  []
 
-[104
+[103
 
 
 ]
@@ -2880,10 +2801,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--85
 
 LaTeX Info: Redefining \. on input line 123.
 LaTeX Info: Redefining \% on input line 123.
-[105])
+[104])
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
- [106] (./memoria.aux
+ [105] (./memoria.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
@@ -2891,13 +2812,13 @@ LaTeX Info: Redefining \% on input line 27.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 2CF999417A85C1E9D37AF935FE7C0920;10911.
+(rerunfilecheck)             Checksum: 24E0B850E586FB0367426628F078B09E;10911.
  ) 
 Here is how much of TeX's memory you used:
- 32506 strings out of 480112
- 602169 string characters out of 5892631
- 1165403 words of memory out of 5000000
- 48980 multiletter control sequences out of 15000+600000
+ 32478 strings out of 480112
+ 601813 string characters out of 5892631
+ 1164925 words of memory out of 5000000
+ 48958 multiletter control sequences out of 15000+600000
  477505 words of font info for 58 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  89i,15n,92p,1397b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2920,10 +2841,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (124 pages, 48034588 bytes).
+Output written on memoria.pdf (123 pages, 47727720 bytes).
 PDF statistics:
- 2661 PDF objects out of 2984 (max. 8388607)
- 2269 compressed objects within 23 object streams
- 784 named destinations out of 1000 (max. 500000)
- 1203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2649 PDF objects out of 2984 (max. 8388607)
+ 2259 compressed objects within 23 object streams
+ 778 named destinations out of 1000 (max. 500000)
+ 1198 words of extra memory for PDF output out of 10000 (max. 10000000)
 
