@@ -21,7 +21,9 @@ En este apartado se van a describir el conjunto de componentes \textit{hardware}
 \subsection{Raspberry Pi 4}
 \label{subsec:raspberry}
 
-La Raspberry Pi es una computadora de bajo coste y, con su tamaño compacto, es ideal para proyectos de electrónica, programación y educación. Esta placa, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50 GHz fabricado en 28 nm, y con tres configuraciones de memoria. Su alimentación la recibe por el puerto USB-C, tiene dos conectores micro HDMI, conexión Wi-Fi, Bluetooh 5.0, dos USB 2.0 y dos USB 3.0. Permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de cuarenta pines y el conector \ac{CSI}. Gracias a esos cuarenta pines, el usuario puede interactuar con una amplia variedad de dispositivos externos, como sensores, LEDs y motores, lo que la hace excelente para proyectos de automatización y robótica. 
+La Raspberry Pi es una computadora de bajo coste y, con su tamaño compacto, es ideal para proyectos de electrónica, programación y educación. Permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de cuarenta pines y el conector \ac{CSI}. Gracias a esos cuarenta pines, el usuario puede interactuar con una amplia variedad de dispositivos externos, como sensores, LEDs y motores, lo que la hace excelente para proyectos de automatización y robótica. 
+
+%La Raspberry Pi es una computadora de bajo coste y, con su tamaño compacto, es ideal para proyectos de electrónica, programación y educación. Esta placa, en su cuarta versión, dispone de un procesador ARM Cortex-A72 de cuatro núcleos a 1,50 GHz fabricado en 28 nm, y con tres configuraciones de memoria. Su alimentación la recibe por el puerto USB-C, tiene dos conectores micro HDMI, conexión Wi-Fi, Bluetooh 5.0, dos USB 2.0 y dos USB 3.0. Permite la compatibilidad con la mayoría de accesorios gracias al conector GPIO de cuarenta pines y el conector \ac{CSI}. Gracias a esos cuarenta pines, el usuario puede interactuar con una amplia variedad de dispositivos externos, como sensores, LEDs y motores, lo que la hace excelente para proyectos de automatización y robótica. 
 
 Sin embargo, la Raspberry Pi usa procesadores ARM, que, aunque eficientes energéticamente, no están optimizados para realizar tareas intensivas de \ac{IA}, como entrenar modelos de redes neuronales o ejecutar inferencias en tiempo real a gran escala. En la Figura \ref{fig:raspberry} se puede ver una imagen de la placa con referencia a las distintas partes de la misma. Esta placa tiene un coste de unos 65€. 
 
@@ -30,12 +32,12 @@ Sin embargo, la Raspberry Pi usa procesadores ARM, que, aunque eficientes energ�
 	\begin{center}
 		\includegraphics[width=14cm]{figs/raspberrypi4.png}
 	\end{center}
-	\caption{Raspberry Pi 4$^{\ref{note:enlace38}}$} 
+	\caption{Raspberry Pi 4$^{\ref{note:enlace32}}$} 
 \label{fig:raspberry}
 \end{figure}
 
-\setcounter{footnote}{38} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/raspberry-pi-4-model-b/}\label{note:enlace38}}
+\setcounter{footnote}{32} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/raspberry-pi-4-model-b/}\label{note:enlace32}}
 
 \subsection{Raspberry PiCamera}
 \label{subsec:picamera}
@@ -49,30 +51,32 @@ Esta cámara (Figura \ref{fig:raspberrycam}) tiene un tamaño de 23,86 x 25 x 9 
 	\begin{center}
 		\includegraphics[width=6cm]{figs/campi.png}
 	\end{center}
-	\caption{Raspberry PiCamera V2$^{\ref{note:enlace39}}$} 
+	\caption{Raspberry PiCamera V2$^{\ref{note:enlace33}}$} 
 \label{fig:raspberrycam}
 \end{figure}
 
-\setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/camera-module-v2/}\label{note:enlace39}}
+\setcounter{footnote}{33} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.raspberrypi.com/products/camera-module-v2/}\label{note:enlace33}}
 
 \subsection{GPS NEO 6M}
 \label{subsec:gps}
 
-Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Este módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad. Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones) que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
+Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Tiene una precisión de aproximadamente 2,5 metros en condiciones abiertas. Soporta hasta veintidós satélites simultáneamente, lo que le permite ofrecer posicionamiento (latitud, longitud, altitud y velocidad) confiable y estable. Asimismo, utiliza comunicación por \ac{UART}, comunmente a 9.600 bps, lo que facilita su integración con muchas placas del mercado.
 
-Tiene una precisión de aproximadamente 2,5 metros en condiciones abiertas. Soporta hasta veintidós satélites simultáneamente, lo que le permite ofrecer posicionamiento confiable y estable. Asimismo, utiliza comunicación por \ac{UART}, comunmente a 9.600 bps, lo que facilita su integración con muchas placas del mercado.
+%Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Este módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad. Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones) que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
+
+%Tiene una precisión de aproximadamente 2,5 metros en condiciones abiertas. Soporta hasta veintidós satélites simultáneamente, lo que le permite ofrecer posicionamiento confiable y estable. Asimismo, utiliza comunicación por \ac{UART}, comunmente a 9.600 bps, lo que facilita su integración con muchas placas del mercado.
 
 \begin{figure} [h!]
 	\begin{center}
 		\includegraphics[width=4cm]{figs/GPSNEO6MV2.jpeg}
 	\end{center}
-	\caption{Módulo GPS NEO 6M$^{\ref{note:enlace40}}$} 
+	\caption{Módulo GPS NEO 6M$^{\ref{note:enlace34}}$} 
 \label{fig:gps}
 \end{figure}
 
-\setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.u-blox.com/en/product/neo-6-series}\label{note:enlace40}}
+\setcounter{footnote}{34} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.u-blox.com/en/product/neo-6-series}\label{note:enlace34}}
 
 
 \subsection{Sevomotor estándar Parallax}
@@ -103,13 +107,13 @@ Este tipo de servo (Figura \ref{fig:parallax}) tiene un rango de rotación de 0 
 	\begin{center}
 		\includegraphics[width=4cm]{figs/parallax.png}
 	\end{center}
-	\caption{Servomotor Parallax$^{\ref{note:enlace41}}$} 
+	\caption{Servomotor Parallax$^{\ref{note:enlace35}}$} 
 	\label{fig:parallax}
 \end{figure}
 
 
-\setcounter{footnote}{41} % Reiniciar la numeración de notas al pie
-\footnotetext[\value{footnote}]{\url{https://www.parallax.com/product/parallax-standard-servo/}\label{note:enlace41}}
+\setcounter{footnote}{35} % Reiniciar la numeración de notas al pie
+\footnotetext[\value{footnote}]{\url{https://www.parallax.com/product/parallax-standard-servo/}\label{note:enlace35}}
 
 %\setcounter{footnote}{39} % Reiniciar la numeración de notas al pie
 %\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005004551539283.html?spm=a2g0o.productlist.main.15.bee4rd8Srd8SSO&algo_pvid}\label{note:enlace39}}
@@ -123,27 +127,27 @@ Para enriquecer el proyecto, se han empleado otro tipo de ruedas cuyo diámetro 
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.4\linewidth}
+	\begin{minipage}{0.3\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{figs/wheel.png}
-			\caption*{\centering Rueda \textit{ActivityBot} $^{\ref{note:enlace42}}$} 
+			\caption*{\centering Rueda \textit{ActivityBot} $^{\ref{note:enlace36}}$} 
 		\end{minipage}
 	\hspace{2cm}
-	\begin{minipage}{0.38\linewidth}
+	\begin{minipage}{0.28\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{figs/wheel2.png}
-			\caption*{\centering Rueda azul genérica $^{\ref{note:enlace43}}$} 
+			\caption*{\centering Rueda azul genérica $^{\ref{note:enlace37}}$} 
 		\end{minipage}
 	\caption{Ruedas utilizadas}
 	\label{fig:wheel}
 \end{figure}
 
 
-\setcounter{footnote}{42} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace42}}
+\setcounter{footnote}{36} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.rs-online.com/web/p/accesorios-para-kits-de-desarrollo/8430897?srsltid=AfmBOorv3a6_tQNdqAoKx_21Mn1m2MAum68oApyvr5mq8ExPTuh_CVNy}\label{note:enlace36}}
 
-\setcounter{footnote}{43} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005005145020093.html}\label{note:enlace43}}
+\setcounter{footnote}{37} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://es.aliexpress.com/item/1005005145020093.html}\label{note:enlace37}}
 
 
 \subsection{Google Coral USB}
@@ -157,12 +161,12 @@ Por sus cualidades descritas, se ha decidido este componente para mejorar la det
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecoral.png}
 	\end{center}
-	\caption{Google Coral USB$^{\ref{note:enlace44}}$} 
+	\caption{Google Coral USB$^{\ref{note:enlace38}}$} 
 	\label{fig:googlecoral}
 \end{figure}
 
-\setcounter{footnote}{44} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace44}}
+\setcounter{footnote}{38} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://coral.ai/products/accelerator/}\label{note:enlace38}}
 
 \subsection{Power bank}
 \label{subsec:powerbank}
@@ -173,12 +177,12 @@ Para poder alimentar a todos los componentes se ha incluido en el prototipo rob�
 	\begin{center}
 		\includegraphics[width=5cm]{figs/powerbank.png}
 	\end{center}
-	\caption{Xiaomi power bank$^{\ref{note:enlace45}}$} 
+	\caption{Xiaomi power bank$^{\ref{note:enlace39}}$} 
 	\label{fig:powerbank}
 \end{figure}
 
-\setcounter{footnote}{45} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://ams.buy.mi.com/es/item/3202200053?&skupanel=1}\label{note:enlace45}}
+\setcounter{footnote}{39} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://ams.buy.mi.com/es/item/3202200053?&skupanel=1}\label{note:enlace39}}
 
 \subsection{Rueda loca}
 \label{subsec:ruedaloca}
@@ -189,12 +193,12 @@ Para poder conseguir un movimiento correcto y poder encontrar el punto de apoyo 
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ruedaloca.png}
 	\end{center}
-	\caption{Rueda loca$^{\ref{note:enlace46}}$} 
+	\caption{Rueda loca$^{\ref{note:enlace40}}$} 
 	\label{fig:ruedaloca}
 \end{figure}
 
-\setcounter{footnote}{46} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace46}}
+\setcounter{footnote}{40} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.amazon.es/dp/B0BZZCJJT8?ref=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&ref_=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&social_share=cm_sw_r_mwn_dp_N64JV6SGENWN4YPSD849&language=es-ES}\label{note:enlace40}}
 
 \subsection{Ordenador principal}
 \label{subsec:ordenador}
@@ -206,12 +210,12 @@ Para poder desarrollar programas, hacer pruebas en simulación, permitir conecta
 	\begin{center}
 		\includegraphics[width=4cm]{figs/ordenador.png}
 	\end{center}
-	\caption{ASUS VivoBook 14$^{\ref{note:enlace47}}$} 
+	\caption{ASUS VivoBook 14$^{\ref{note:enlace41}}$} 
 	\label{fig:ordenador}
 \end{figure}
 
-\setcounter{footnote}{47} % Establecer la numeración de la siguiente nota al pie
-\footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace47}}
+\setcounter{footnote}{41} % Establecer la numeración de la siguiente nota al pie
+\footnotetext[\value{footnote}]{\url{https://www.asus.com/es/laptops/for-home/vivobook/vivobook-14-k413/}\label{note:enlace41}}
 
 \begin{table}[H]
 	\begin{center}
@@ -264,20 +268,17 @@ En este apartado se van a describir los programas y librerías que han sido nece
 \subsection{Ubuntu}
 \label{subsec:ubuntu}
 
-Ubuntu\footnote{\url{https://ubuntu.com/}} (Figura \ref{fig:ubuntu}) es una de las muchas distribuciones del sistema operativo GNU/Linux; esta, concretamente, está basada en Debian GNU/Linux, y es mantenida por Canonical Ltd. Puede utilizarse en ordenadores y servidores. Está orientado al usuario promedio, con un fuerte enfoque en la facilidad de uso y en mejorar la experiencia del usuario; es por ello que se ha convertido en uno de los sistemas operativos más populares, cuenta con una amplia comunidad de soporte que le brinda continuamente actualizaciones, que incluyen parches de seguridad y mejoras.
+%Ubuntu\footnote{\url{https://ubuntu.com/}} (Figura \ref{fig:ubuntu}) es una de las muchas distribuciones del sistema operativo GNU/Linux; esta, concretamente, está basada en Debian GNU/Linux, y es mantenida por Canonical Ltd. Puede utilizarse en ordenadores y servidores. Está orientado al usuario promedio, con un fuerte enfoque en la facilidad de uso y en mejorar la experiencia del usuario; es por ello que se ha convertido en uno de los sistemas operativos más populares, cuenta con una amplia comunidad de soporte que le brinda continuamente actualizaciones, que incluyen parches de seguridad y mejoras.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/ubuntu.png}
-	\end{center}
-	\caption{Logo de Ubuntu} %$^{\ref{note:enlace51}}$
-	\label{fig:ubuntu}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/ubuntu.png}
+%	\end{center}
+%	\caption{Logo de Ubuntu} 
+%	\label{fig:ubuntu}
+%\end{figure}
 
-%\setcounter{footnote}{51} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://ubuntu.com/}\label{note:enlace51}}
-
-Entre todas las versiones existentes de Ubuntu, para la realización del proyecto se ha usado Ubuntu 22.04 LTS y Ubuntu 20.04 LTS. El ordenador usado (descrito en la Sección \ref{subsec:ordenador}) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB (descrito en la Sección \ref{subsec:googlecoral}) es compatible con versiones de Python entre 3.6 y 3.9, y en Ubuntu 22.04 la versión de Python que se instala por defecto es la 3.10, y el intento de cambiar dicha versión genera numerosos problemas de dependencias, sobre todo con la versión de ROS 2 usada. Asimismo, en numerosos foros aconsejaban migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/}} que usa Python 3.8. En el Cuadro \ref{cuadro:ubuntu} se muestran algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
+Ubuntu\footnote{\url{https://ubuntu.com/}} es una de las muchas distribuciones del sistema operativo GNU/Linux; esta, concretamente, está basada en Debian GNU/Linux, y es mantenida por Canonical Ltd. Entre todas las versiones existentes de Ubuntu, para la realización del proyecto se ha usado Ubuntu 22.04 LTS y Ubuntu 20.04 LTS. El ordenador usado (descrito en la Sección \ref{subsec:ordenador}) tiene instalado Ubuntu 22.04 \ac{LTS} pero el robot inicialmente usaba Ubuntu 22.04 y finalmente está usando Ubuntu 20.04 \acs{LTS} Server, una versión de Ubuntu sin interfaz gráfica. La decisión de usar Ubuntu 20.04 es debido a que el dispositivo Google Coral USB (descrito en la Sección \ref{subsec:googlecoral}) es compatible con versiones de Python entre 3.6 y 3.9, y en Ubuntu 22.04 la versión de Python que se instala por defecto es la 3.10, y el intento de cambiar dicha versión genera numerosos problemas de dependencias, sobre todo con la versión de ROS 2 usada. Asimismo, en numerosos foros aconsejaban migrar a Ubuntu 20.04\footnote{\url{https://robotics.stackexchange.com/questions/104413/}} que usa Python 3.8. En el Cuadro \ref{cuadro:ubuntu} se muestran algunas de las diferencias entre Ubuntu 22.04 y Ubuntu 20.04.
 
 \begin{table}[H]
 	\begin{center}
@@ -314,32 +315,30 @@ FreeCAD se basa en el concepto de modelado paramétrico, lo que permite modifica
 	\begin{center}
 		\includegraphics[width=3cm]{figs/freecad.png}
 	\end{center}
-	\caption{Logo de Freecad} % $^{\ref{note:enlace48}}$
+	\caption{Logo de Freecad} 
 	\label{fig:freecad}
 \end{figure}
-
-%\setcounter{footnote}{48} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://www.freecad.org/}\label{note:enlace48}}
 
 \subsection{Python}
 \label{subsec:python}
 
-Python\footnote{\url{https://es.python.org/}} (Figura \ref{fig:python}) es un lenguaje de programación de alto nivel, interpretado y de propósito general, ampliamente reconocido por su simplicidad y legibilidad. Fue creado por Guido van Rossum y lanzado por primera vez en 1991, y ha crecido rápidamente en popularidad debido a su versatilidad y facilidad de uso, tanto para principiantes como para programadores experimentados, lo que le convierte en un lenguaje multiplataforma y multiparadigma.
-
-Python es un lenguaje interpretado, lo que significa que el código se ejecuta línea a línea sin necesidad de ser compilado. Esto facilita el desarrollo rápido y la depuración. Tiene una sintaxis sencilla, legible y es ampliamente utilizado en áreas como: desarrollo web (Django y Flask), ciencia de datos y aprendizaje automático (NumPy, Pandas, TensorFlow, y PyTorch), automatización y scripting, entre otros.
+Python\footnote{\url{https://es.python.org/}} es un lenguaje de programación de alto nivel, interpretado y de propósito general, ampliamente reconocido por su simplicidad y legibilidad. Esto facilita el desarrollo rápido y la depuración. Tiene una sintaxis sencilla, legible y es ampliamente utilizado en áreas como: desarrollo web (Django y Flask), ciencia de datos y aprendizaje automático (NumPy, Pandas, TensorFlow, y PyTorch), automatización y scripting, entre otros.
 
 Debido a esa simplicidad y versatilidad, en Raspberry Pi se considera Python como uno de los lenguajes de programación oficiales recomendados, y es por ello que se ha decidido usar este lenguaje para este proyecto.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/python.png}
-	\end{center}
-	\caption{Logo de Python}  % $^{\ref{note:enlace49}}$
-	\label{fig:python}
-\end{figure}
+%Python\footnote{\url{https://es.python.org/}} (Figura \ref{fig:python}) es un lenguaje de programación de alto nivel, interpretado y de propósito general, ampliamente reconocido por su simplicidad y legibilidad. Fue creado por Guido van Rossum y lanzado por primera vez en 1991, y ha crecido rápidamente en popularidad debido a su versatilidad y facilidad de uso, tanto para principiantes como para programadores experimentados, lo que le convierte en un lenguaje multiplataforma y multiparadigma.
 
-%\setcounter{footnote}{49} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://es.python.org/}\label{note:enlace49}}
+%Python es un lenguaje interpretado, lo que significa que el código se ejecuta línea a línea sin necesidad de ser compilado. Esto facilita el desarrollo rápido y la depuración. Tiene una sintaxis sencilla, legible y es ampliamente utilizado en áreas como: desarrollo web (Django y Flask), ciencia de datos y aprendizaje automático (NumPy, Pandas, TensorFlow, y PyTorch), automatización y scripting, entre otros.
+
+%Debido a esa simplicidad y versatilidad, en Raspberry Pi se considera Python como uno de los lenguajes de programación oficiales recomendados, y es por ello que se ha decidido usar este lenguaje para este proyecto.
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/python.png}
+%	\end{center}
+%	\caption{Logo de Python}  
+%	\label{fig:python}
+%\end{figure}
 
 \subsubsection{Software matemático}
 \label{subsec:numpy}
@@ -355,7 +354,7 @@ PyNMEA2 es una biblioteca de Python que se utiliza para analizar y generar mensa
 	\begin{center}
 		\includegraphics[width=12cm]{figs/workinggps.png}
 	\end{center}
-	\caption{Sentencias NMEA capturadas del GPS} %$^{\ref{note:enlace50}}$
+	\caption{Sentencias NMEA capturadas del GPS} 
 	\label{fig:nmea}
 \end{figure}
 
@@ -378,12 +377,9 @@ OpenCV\footnote{\url{https://opencv.org/}} (Figura \ref{fig:opencv}) es una bibl
 	\begin{center}
 		\includegraphics[width=3cm]{figs/opencv.png}
 	\end{center}
-	\caption{Logo de OpenCV} %$^{\ref{note:enlace50}}$
+	\caption{Logo de OpenCV} 
 	\label{fig:opencv}
 \end{figure}
-
-%\setcounter{footnote}{50} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://opencv.org/}\label{note:enlace50}}
 
 \subsection{ROS 2}
 \label{subsec:ros2}
@@ -407,7 +403,6 @@ Según se ha explicado en la Sección \ref{subsec:ubuntu}, debido a que se ha ne
 		\caption*{\centering Logo ROS 2 Foxy} % $^{\ref{note:enlace54}}$
 	\end{minipage}
 	\hspace{2cm}
-	% aquí incluir iamgen de Guerrero de terracota
 	\begin{minipage}{0.35\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/humble.png}
@@ -446,18 +441,15 @@ En este proyecto se ha decidido usar ROS 2 Control para crear un modelo del robo
 \subsection{Gazebo}
 \label{subsec:gazebo}
 
-Gazebo\footnote{\url{https://gazebosim.org/home}} (Figura \ref{fig:gazebo}) es un simulador de robots que permite modelar entornos físicos tridimensionales y probar robots en ellos sin necesidad de tener el robot físico y evitar así posibles caídas o golpes. Es ampliamente utilizado en la investigación y desarrollo de robótica, especialmente en combinación con ROS y ROS 2. Además, ofrece una simulación realista en un entorno 3D, y por ello se decidió usar este simulador para el proyecto.
+Gazebo\footnote{\url{https://gazebosim.org/home}} es un simulador de robots que permite modelar entornos físicos tridimensionales y probar robots en ellos sin necesidad de tener el robot físico y evitar así posibles caídas o golpes. Es ampliamente utilizado en la investigación y desarrollo de robótica, especialmente en combinación con ROS y ROS 2. Además, ofrece una simulación realista en un entorno 3D, y por ello se decidió usar este simulador para el proyecto.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/gazebo.png}
-	\end{center}
-	\caption{Logo de Gazebo} % $^{\ref{note:enlace57}}$
-	\label{fig:gazebo}
-\end{figure}
-
-%\setcounter{footnote}{57} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://gazebosim.org/home}\label{note:enlace57}}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/gazebo.png}
+%	\end{center}
+%	\caption{Logo de Gazebo} 
+%	\label{fig:gazebo}
+%\end{figure}
 
 \subsection{Herramientas de monitorización}
 \label{subsec:monitorización}
@@ -467,18 +459,16 @@ Para el desarrollo del proyecto, se emplean diversas herramientas de monitorizac
 \subsubsection{Rviz}
 \label{subsubsec:rviz}
 
-RViz\footnote{\url{http://wiki.ros.org/rviz}} (Figura \ref{fig:rviz}) es una herramienta de visualización en 3D utilizada en ROS y ROS 2 para representar información del sistema robótico. Permite a los usuarios ver, en tiempo real, datos como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorear el comportamiento del robot en simulación.\\
+RViz\footnote{\url{http://wiki.ros.org/rviz}} es una herramienta de visualización en 3D utilizada en ROS y ROS 2 para representar información del sistema robótico. Permite a los usuarios ver, en tiempo real, datos como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorear el comportamiento del robot en simulación.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/rviz.png}
-	\end{center}
-	\caption{Logo de Rviz} %$^{\ref{note:enlace58}}$
-	\label{fig:rviz}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/rviz.png}
+%	\end{center}
+%	\caption{Logo de Rviz} 
+%	\label{fig:rviz}
+%\end{figure}
 
-%\setcounter{footnote}{58} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{http://wiki.ros.org/rviz}\label{note:enlace58}}
 
 \subsubsection{RQT Image View}
 \label{subsubsec:rqtimage}
@@ -500,28 +490,23 @@ Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \
 	\begin{center}
 		\includegraphics[width=4cm]{figs/googlecolab.png}
 	\end{center}
-	\caption{Logo de Google Colab} %$^{\ref{note:enlace61}}$
+	\caption{Logo de Google Colab} 
 	\label{fig:googlecolab}
 \end{figure}
-
-%\setcounter{footnote}{61} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://colab.research.google.com/}\label{note:enlace61}}
 
 \subsection{YOLOv8}
 \label{subsec:yolov8}
 
-\acs{YOLO}v8\footnote{\url{https://docs.ultralytics.com/es}} (Figura \ref{fig:yolov8}) desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas, incluidos como EdgeTPU, para dispositivos con recursos limitados como puede ser Raspberry Pi. Por todo lo anterior, esta herramienta ha sido elegida para el entrenamiento del modelo de detección de baches. 
+\acs{YOLO}v8\footnote{\url{https://docs.ultralytics.com/es}} desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas, incluidos como EdgeTPU, para dispositivos con recursos limitados como puede ser Raspberry Pi. Por todo lo anterior, esta herramienta ha sido elegida para el entrenamiento del modelo de detección de baches. 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/yolov8.png}
-	\end{center}
-	\caption{Logo de YOLOv8} % $^{\ref{note:enlace62}}$
-	\label{fig:yolov8}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/yolov8.png}
+%	\end{center}
+%	\caption{Logo de YOLOv8} 
+%	\label{fig:yolov8}
+%\end{figure}
 
-%\setcounter{footnote}{62} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://docs.ultralytics.com/es}\label{note:enlace62}}
 
 \subsection{TensorFlow Lite}
 \label{subsec:tflite}
@@ -552,20 +537,15 @@ ROS2bridge Server\footnote{\url{http://wiki.ros.org/rosbridge_server}} es parte 
 \subsubsection{OpenStreetMaps}
 \label{subsubsec:openstreetmaps}
 
-OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} (Figura \ref{fig:osm}) es un proyecto internacional colaborativo desde 2004 que proporciona datos geográficos gratuitos y abiertos, permitiendo la creación de mapas detallados y editables de cualquier parte del mundo por usuarios voluntarios que den crédito a OpenStreetMaps. Esta herramienta es utilizada en una amplia gama de aplicaciones, incluyendo navegación, análisis de datos geográficos, y proyectos de código abierto relacionados con mapas y geolocalización.
+OpenStreetMaps\footnote{\url{https://www.openstreetmap.org}} es un proyecto internacional colaborativo desde 2004 que proporciona datos geográficos gratuitos y abiertos, permitiendo la creación de mapas detallados y editables de cualquier parte del mundo por usuarios voluntarios que den crédito a OpenStreetMaps. Esta herramienta es utilizada en una amplia gama de aplicaciones, incluyendo navegación, análisis de datos geográficos, y proyectos de código abierto relacionados con mapas y geolocalización.\\\\
 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/osm.png}
-	\end{center}
-	\caption{Logo de Open Street Maps}  %$^{\ref{note:enlace65}}$
-	\label{fig:osm}
-\end{figure}\ 
-
-%\setcounter{footnote}{65} % Establecer la numeración de la siguiente nota al pie
-%\footnotetext[\value{footnote}]{\url{https://www.openstreetmap.org}\label{note:enlace65}}
-
-
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/osm.png}
+%	\end{center}
+%	\caption{Logo de Open Street Maps}  
+%	\label{fig:osm}
+%\end{figure}\ 
 
 Tras conocer todas las plataformas \textit{software} y \textit{hardware} empleadas para la realización del presente trabajo fin de grado, es el momento de describir el desarrollo completo llevado a cabo para la construcción \textit{hardware} del robot y su correspondiente soporte \textit{software}, lo que se explicará detalladamente en los siguientes capítulos.
