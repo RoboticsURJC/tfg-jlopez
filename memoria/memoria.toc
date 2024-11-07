@@ -91,31 +91,32 @@
 \contentsline {section}{\numberline {7.2}Ruedas}{87}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Aprendizaje automático}{87}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Modelo pinhole}{87}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Método shoelace}{87}{section.7.5}%
+\contentsline {section}{\numberline {7.5}Método shoelace}{88}{section.7.5}%
 \contentsline {section}{\numberline {7.6}VFF}{88}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Interfaz web}{88}{section.7.7}%
-\contentsline {section}{\numberline {7.8}Ejecución completa de la aplicación}{88}{section.7.8}%
-\contentsline {subsection}{\numberline {7.8.1}Teleoperado}{88}{subsection.7.8.1}%
-\contentsline {subsection}{\numberline {7.8.2}Autónomo}{88}{subsection.7.8.2}%
-\contentsline {section}{\numberline {7.9}Snippets}{88}{section.7.9}%
-\contentsline {section}{\numberline {7.10}Verbatim}{88}{section.7.10}%
-\contentsline {section}{\numberline {7.11}Ecuaciones}{89}{section.7.11}%
-\contentsline {section}{\numberline {7.12}Tablas o cuadros}{90}{section.7.12}%
-\contentsline {section}{\numberline {7.13}Segunda sección}{90}{section.7.13}%
-\contentsline {subsection}{\numberline {7.13.1}Números}{91}{subsection.7.13.1}%
-\contentsline {subsection}{\numberline {7.13.2}Listas}{91}{subsection.7.13.2}%
+\contentsline {section}{\numberline {7.7}Detectar líneas}{88}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Interfaz web}{88}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Ejecución completa de la aplicación}{88}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Teleoperado}{88}{subsection.7.9.1}%
+\contentsline {subsection}{\numberline {7.9.2}Autónomo}{88}{subsection.7.9.2}%
+\contentsline {section}{\numberline {7.10}Snippets}{89}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Verbatim}{90}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Ecuaciones}{90}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Tablas o cuadros}{90}{section.7.13}%
+\contentsline {section}{\numberline {7.14}Segunda sección}{91}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Números}{92}{subsection.7.14.1}%
+\contentsline {subsection}{\numberline {7.14.2}Listas}{92}{subsection.7.14.2}%
 \contentsline {paragraph}{Referencias bibliográficas}{92}{paragraph*.150}%
-\contentsline {section}{\numberline {7.14}Corrector ortográfico}{92}{section.7.14}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos cumplidos}{93}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivo principal}{93}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Subobjetivos}{93}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Conclusiones finales y líneas futuras}{94}{section.8.2}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{95}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{95}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{96}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{96}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{97}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{98}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{101}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{102}{appendix*.153}%
+\contentsline {section}{\numberline {7.15}Corrector ortográfico}{93}{section.7.15}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{94}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Objetivos cumplidos}{94}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivo principal}{94}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Subobjetivos}{94}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Conclusiones finales y líneas futuras}{95}{section.8.2}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{96}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{96}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{97}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{97}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{98}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{99}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{102}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{103}{appendix*.153}%
