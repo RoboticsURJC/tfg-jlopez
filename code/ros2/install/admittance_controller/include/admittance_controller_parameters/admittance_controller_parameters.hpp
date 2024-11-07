@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/admittance_controller/admittance_controller_parameters/include/admittance_controller_parameters.hpp

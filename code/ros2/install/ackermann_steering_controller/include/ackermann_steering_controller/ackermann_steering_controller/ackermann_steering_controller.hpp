@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/ros2_controllers/ackermann_steering_controller/include/ackermann_steering_controller/ackermann_steering_controller.hpp

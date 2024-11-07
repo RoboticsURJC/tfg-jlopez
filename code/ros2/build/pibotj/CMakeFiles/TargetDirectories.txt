@@ -1,9 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/pibotj_uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/test.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/edit_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/rebuild_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/list_install_components.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/install.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/install/local.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj/CMakeFiles/install/strip.dir

@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/gz_ros2_control_tests/ament_cmake_environment_hooks/local_setup.sh

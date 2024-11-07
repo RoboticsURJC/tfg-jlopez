@@ -1,4 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_toolbox/lib/libcontrol_toolbox.so
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_toolbox/lib/liblow_pass_filter.so
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_toolbox/share/control_toolbox/cmake/export_control_toolboxExport.cmake
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/control_toolbox/share/control_toolbox/cmake/export_control_toolboxExport-noconfig.cmake

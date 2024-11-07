@@ -1,8 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/gps_node.dir/src/gps_node.cpp.o[0m
-[01m[K/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/gps/src/gps_node.cpp:22:10:[m[K [01;31m[Kfatal error: [m[KwiringPi.h: No such file or directory
-   22 | #include [01;31m[K<wiringPi.h>[m[K
-      |          [01;31m[K^~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/gps_node.dir/build.make:76: CMakeFiles/gps_node.dir/src/gps_node.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gps_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

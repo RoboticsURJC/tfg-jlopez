@@ -1,7 +1,0 @@
-[console_scripts]
-camera_node = pibotj_rr.camera:main
-camera_tfv1_node = pibotj_rr.camera_tfv1_node:main
-camera_tfv2_node = pibotj_rr.camera_tfv2_node:main
-gps_node = pibotj_rr.gps_node:main
-motors_controller_node = pibotj_rr.motors_controller_node:main
-

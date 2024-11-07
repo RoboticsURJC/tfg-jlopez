@@ -107,8 +107,10 @@
 \contentsline {paragraph}{Referencias bibliográficas}{92}{paragraph*.150}%
 \contentsline {section}{\numberline {7.14}Corrector ortográfico}{92}{section.7.14}%
 \contentsline {chapter}{\numberline {8}Conclusiones}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusiones}{93}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corrector ortográfico}{94}{section.8.2}%
+\contentsline {section}{\numberline {8.1}Objetivos cumplidos}{93}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivo principal}{93}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Subobjetivos}{93}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Conclusiones finales y líneas futuras}{94}{section.8.2}%
 \contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{95}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Simulación}{95}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Robot real}{96}{section.Alph1.2}%

@@ -1,9 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/ros2_control_test_assets_uninstall.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/test.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/edit_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/rebuild_cache.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/list_install_components.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/install.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/install/local.dir
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ros2_control_test_assets/CMakeFiles/install/strip.dir

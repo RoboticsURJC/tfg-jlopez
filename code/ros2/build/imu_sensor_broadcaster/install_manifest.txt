@@ -1,3 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/imu_sensor_broadcaster/lib/libimu_sensor_broadcaster.so
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/export_imu_sensor_broadcasterExport.cmake
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/export_imu_sensor_broadcasterExport-noconfig.cmake

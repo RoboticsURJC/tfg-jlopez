@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/pibotj_r2c/ament_cmake_core/pibotj_r2cConfig-version.cmake

@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/kinematics_interface_kdl/ament_cmake_environment_hooks/local_setup.bash

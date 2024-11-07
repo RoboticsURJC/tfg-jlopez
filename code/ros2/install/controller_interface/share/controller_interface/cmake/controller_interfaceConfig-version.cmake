@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/controller_interface/ament_cmake_core/controller_interfaceConfig-version.cmake

@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/admittance_controller/ament_cmake_core/admittance_controllerConfig-version.cmake

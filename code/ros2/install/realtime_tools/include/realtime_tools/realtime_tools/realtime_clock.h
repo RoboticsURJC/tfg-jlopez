@@ -1,1 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/src/ros-controls/realtime_tools/include/realtime_tools/realtime_clock.h

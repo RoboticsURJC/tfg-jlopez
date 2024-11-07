@@ -1,3 +1,0 @@
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/tricycle_steering_controller/lib/libtricycle_steering_controller.so
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/tricycle_steering_controller/share/tricycle_steering_controller/cmake/export_tricycle_steering_controllerExport.cmake
-/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/install/tricycle_steering_controller/share/tricycle_steering_controller/cmake/export_tricycle_steering_controllerExport-noconfig.cmake

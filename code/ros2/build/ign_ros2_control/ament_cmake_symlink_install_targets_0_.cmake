@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/juloau/Desktop/TFG/tfg-jlopez/code/ros2/build/ign_ros2_control/libign_hardware_plugins.so" "TARGETS" "ign_hardware_plugins" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
