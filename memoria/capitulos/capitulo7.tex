@@ -67,7 +67,6 @@ Después de eso, se tuvo que cambiar el enfoque y se decidió dividirlo en difer
 	\end{center}
 \end{table}
 
-
 \section{Ruedas}
 \label{sec:expruedas}
 Como se comentó en la Sección \ref{subsec:ruedas}, en este proyecto se han usado 2 tipos de ruedas que gracias a las distintas pruebas realizadas, se ha podido definir las características de cada una de ellas. 
@@ -113,7 +112,7 @@ Una vez creado, entrenado y convertido el modelo en el formato .tflite, formato 
 	\item \verb|detect_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/detect_edgetpu.tflite}}. Esta versión usa el dataset de 75 imágenes y se intentó que el modelo usase \ac{TPU} del Google Coral pero no funcionó.
 	\item \verb|best_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/best_full_integer_quant_edgetpu.tflite}}. Esta versión usa el dataset definido en la Sección \ref{subsec:softwareiayolo}. En esta ocasión sí es capar de usar \acs{TPU} pero el modelo se moría a los pocos segundos de inicializarlo y era debido a que procesaba imágenes demasiado grandes.
 	\item \verb|bestv2_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}. Esta es la la versión actual usada en el proyecto. A diferencia del ejemplo anterior procesa imágenes de 192x192 y así evitamos que el modelo se muera y funcione perfectamente. La latencia se ha reducido a más de un cuarto de la primera versión y permite el correcto funcionamiento del modelo.	
-\end{itemize}\
+\end{itemize}
 
 
 En la Sección \ref{subsec:softwareiayolo} también se comenta cómo conseguir que los valores obtenidos sean estables usando \acs{EMA} y a continuación se puede ver una gráfica que demuestra su correcta aplicación (Figura \ref{fig:diagramaema}).
@@ -128,6 +127,69 @@ En la Sección \ref{subsec:softwareiayolo} también se comenta cómo conseguir q
 
 %% compara los valores de ema con la realidad y estudiar la gráfica.
 
+\subsection{Obtención del contorno y coordenadas del bache}
+\label{subsec:expcontorno}
+
+Para la obtención de las coordenadas del bache detectado, se probaron distintas opciones. La primera de ellas fue tomar la imagen en la que se consideraba que tenía bache y a partir de ella, aplicando un desenfoque gaussiano, convirtiéndola en escala de grises, se aplicó el detector de bordes de Canny, utilizando a ojo 80 como umbral mínimo y 180 como umbral máximo. El problema que tenía esta opción era que el contorno a buscar se aplicaba a toda la imagen y no solo dónde se encontraba el bache, produciendose en ocasiones la detección incorrecta (Figura \ref{fig:contornoerror}).
+
+\begin{figure} [h!]
+	\begin{center}
+			\includegraphics[width=8cm]{figs/cap7/contornoerror.png}
+		\end{center}
+	\caption{Primera versión en la obtención del contorno del bache}
+	\label{fig:contornoerror}
+\end{figure}
+
+La segunda y última opción realiza la detección  del contorno usando los pasos definidos en el Código \ref{cod:contorno}, siendo el valor de 0,6 en el paso de binarizar la máscara, el elegido para decidir si hay bache o no en la imagen. El resultado final se muestra en la Figura \ref{fig:contornobien}.
+
+\begin{code}[h]
+	\begin{lstlisting}[language=Python]
+		def extract_contour_pixels(self, pothole_mask, resized_frame):
+			# Escalar para que aparezca en el tamano correcto
+			scale_factor = 192 / 48
+			# Binarizar la mascara del bache
+			_, binary_mask = cv2.threshold(pothole_mask, 0.6, 1, cv2.THRESH_BINARY)
+		
+			# Encontrar los contornos del bache
+			contours, _ = cv2.findContours(binary_mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+		
+			# Dibujar los contornos en la imagen original
+			largest_contour = None
+			largest_area = 0
+			
+			for cnt in contours:
+				# Escalar los contornos al tamano correcto
+				cnt = cnt.astype(np.float32) * scale_factor
+				# Calcular el area del bache
+				area = cv2.contourArea(cnt)
+		
+				# Filtrar contornos pequenos
+				if area > 200:
+					# Mantener el contorno mas grande
+					if area > largest_area:
+						largest_area = area
+						largest_contour = cnt.astype(np.int32)
+		
+			# Dibujar solo el contorno mas grande
+			if largest_contour is not None:
+				# Convertir a una lista de pixeles (x, y)
+				contour_pixels = largest_contour.reshape(-1, 2) 
+				return contour_pixels
+		
+			return None
+	\end{lstlisting}
+	\caption[Cómo obtener los píxeles del contorno del bache]{Cómo obtener los píxeles del contorno del bache}
+	\label{cod:contorno}
+\end{code}
+
+ 
+ \begin{figure} [h!]
+ 	\begin{center}
+ 		\includegraphics[width=8cm]{figs/cap6/contornobache1.png}
+ 	\end{center}
+ 	\caption{Versión final en la obtención del contorno del bache}
+ 	\label{fig:contornobien}
+ \end{figure}
 
 
 \section{Modelo pinhole}
@@ -156,23 +218,57 @@ Los pasos seguidos para la aplicación del modelo pinhole para la cámara están
 
 \section{Algoritmo de la lazada}
 \label{sec:expshoelace}
+Al igual que en la Sección \ref{subsec:softwareshoelace} se definió y se ejemplificó de manera teórica el funcionamiento del algoritmo de la lazada, a continuación se va a demostrar su funcionamiento pero en este caso usando un bache. 
+
+%% redactar esta parte: 
+%% Incluir imagen del bache con las medidas
+
+%\begin{figure} [h!]
+%	\begin{center}
+	%		\includegraphics[width=8cm]{figs/cap7/exppinhole.png}
+	%	\end{center}
+%	\caption{Parte de la configuración usada para el entrenamiento}
+%	\label{fig:}
+%\end{figure}\
 
 
-Bache en su dimensión máxima y ver el valor obtenido 
+%% incluir el valor del área teórica con una imagen 
+%\begin{figure} [h!]
+%	\begin{center}
+	%		\includegraphics[width=8cm]{figs/cap7/exppinhole.png}
+	%	\end{center}
+%	\caption{Parte de la configuración usada para el entrenamiento}
+%	\label{fig:}
+%\end{figure}\
 
-rectángulo y luego demostrar los valores obtenidos
+
+%% incluir una captura del video que muestre el área del bache  usando lazada
+%\begin{figure} [h!]
+%	\begin{center}
+	%		\includegraphics[width=8cm]{figs/cap7/exppinhole.png}
+	%	\end{center}
+%	\caption{Parte de la configuración usada para el entrenamiento}
+%	\label{fig:}
+%\end{figure}\
+
+
 
 \section{VFF}
 \label{sec:expvff}
-Mostrar un video cómo se produce la repulsión
+Para evitar los baches se decidió usar el algoritmo \ac{VFF}, descrito en la Sección \ref{subsec:autonomo}, y para demostrar su funcionamiento, se ha decidido crear un video\footnote{\url{}} que recoge los distintos casos que puede ocurrir (Figura \ref{fig:expvff}).  
 
-\section{Detectar líneas}
-\label{sec:expdetectarlineas}
-Video de cómo detecta las líneas (con la velocidad original NO CON LOS VALORES DESPACIOS DEL VIDEO ANTIGUO) y el filtro antiguo, con valores puestos a ojo
+% mostrar un video con las distintas fases: no bache, hay bache lejos (no afecta), hay bache cerca (aumenta repulsión) y lo hay cada vez más cerca. 
+%\begin{figure} [h!]
+%	\begin{center}
+	%		\includegraphics[width=8cm]{figs/cap7/exppinhole.png}
+	%	\end{center}
+%	\caption{Parte de la configuración usada para el entrenamiento}
+%	\label{fig:expvff}
+%\end{figure}\
 
-\section{Interfaz web}
-\label{sec:interfazweb}
-Reactividad al mostrar bache y cómo se actualiza en la interfaz web 
+%% Explicar los resultados
+
+%% incluir capturas de pantalla
 
 \section{Ejecución completa de la aplicación}
 \label{sec:expcompleto}
