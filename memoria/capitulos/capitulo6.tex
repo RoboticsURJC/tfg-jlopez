@@ -328,10 +328,12 @@ Para los cálculos teóricos se decidió consultar en numerosas fuentes de infor
 \begin{myequation}[h]
 	\begin{align}
 		f_x &= F \cdot \frac{\text{Res. horizontal}}{\text{tam. sensor horizontal}} \quad
-		f_x = 3.04 \cdot \frac{640}{3.674} = 529,56 \\
+		f_x = 3.04 \cdot \frac{640}{3.674} = 529,56 
+		\nonumber\\
 		\hspace{1cm}
 		f_y &= F \cdot \frac{\text{Res. vertical}}{\text{tam. sensor vertical}} \quad
 		f_y = 3.04 \cdot \frac{480}{2.760} = 528,69
+		\nonumber
 	\end{align}
 	\caption[Fórmula para calcular la distancia focal teórica]{Fórmula para calcular la distancia focal teórica}
 	\label{ec:distfocal}
@@ -340,10 +342,12 @@ Para los cálculos teóricos se decidió consultar en numerosas fuentes de infor
 \begin{myequation}[h]
 	\begin{align}
 		c_x &= \frac{\text{Res. horizontal}}{2} \quad
-		c_x = \frac{640}{2} = 320 \\
+		c_x = \frac{640}{2} = 320 
+		\nonumber\\
 		\hspace{1cm}
 		c_y &= \frac{\text{Res. vertical}}{2} \quad
 		c_y =  \frac{480}{2} = 240
+		\nonumber
 	\end{align}
 	\caption[Fórmula para calcular el centro de la imagen]{Fórmula para calcular el centro de la imagen}
 	\label{ec:cenimagen}
@@ -734,16 +738,17 @@ Una vez se conocen las características que posee el modelo, es necesario extrae
 	\label{cod:codeconvert}
 \end{code}
 
-Los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| ya se pueden tratar y establecer una umbralizacización de 0.6 para considerar dichos valores si han detectado bache o no. Sin embargo, los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| eran muy inestables y se consideró la técnica de \ac{EMA} (Ecuación \ref{ec:ema}) para que no fluctuasen tanto los valores y darle más peso a las medidas más recientes. Esta técnica es común en análisis técnico, como se describe en \cite{6708545}, pero se decidió incluir en ese proyecto ya que satisfacía las necesidades buscadas y por su liviana carga computacional.
+Los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| ya se pueden tratar y establecer una umbralizacización de 0.6 para considerar dichos valores si han detectado bache o no. Sin embargo, los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| eran muy inestables y se consideró la técnica de \ac{EMA} (Ecuación \ref{ec:ema2}) para que no fluctuasen tanto los valores y darle más peso a las medidas más recientes. Esta técnica es común en análisis técnico, como se describe en \cite{6708545}, pero se decidió incluir en ese proyecto ya que satisfacía las necesidades buscadas y por su liviana carga computacional.
 
 \begin{myequation}[h]
 	\begin{equation}
 		S_t = \alpha \cdot Y_t + (1 - \alpha) \cdot S_{t-1}
 		\nonumber
-		\label{ec:ema}
 	\end{equation}
 	\caption[Fórmula de la media móvil exponencial]{Fórmula de la media móvil exponencial}
+	\label{ec:ema2}
 \end{myequation} 
+
 
 Siendo $\alpha$  el valor de grado de disminución de ponderación, $Y_t$ el valor actual en tiempo t, $S_t$ es el valor de \acs{EMA} en tiempo t y $S_{t-1}$ es el valor de \acs{EMA} en tiempo t-1.
  
@@ -834,9 +839,9 @@ El nombre de este algoritmo es debido al constante cruce de productos de las coo
 	\begin{equation}
 		A = \frac{1}{2}\abs{\sum_{i=1}^{n-1}x_i y_{i+1} + x_n y_1 - \sum_{i=1}^{n-1}x_{i+1} y_{i} - x_1 y_n}
 		\nonumber
-		\label{ec:shoelace}
 	\end{equation}
 	\caption[Fórmula del algoritmo de la lazada]{Fórmula del algoritmo de la lazada}
+	\label{ec:shoelace}
 \end{myequation} 
 
 Donde A es el área del polígono, n es el número de lados del polígono y $(x_i, y_i)$ , i = 1,2,...,n son los vértices del polígono de forma alternativa.
@@ -956,9 +961,9 @@ Es un método de navegación local para que un robot autónomo evite obstáculos
 	\begin{equation}
 		F_{resultante} = \alpha \cdot F_{atractiva} + \beta \cdot F_{repulsiva}
 		\nonumber
-		\label{ec:vff}
 	\end{equation}
 	\caption[Ecuación de VFF]{Ecuación de VFF}
+	\label{ec:vff}
 \end{myequation} 
 
 El robot se mueve en la dirección de la fuerza resultante, ajustando su trayectoria en tiempo real según las posiciones del obstáculo y el objetivo. En este caso, se decidió fijar como objetivo, un punto siempre hacia adelante y como repulsión, el punto más cercano detectado del contorno al robot, en coordenadas del mundo real, y aplicar la fuerza repulsiva respecto a él. La Figura \ref{fig:vfffuerzas} muestra la dirección de las distintas fuerzas. Todo está documentado en \verb|camera_vff_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_vff_node.py}}.
