@@ -134,13 +134,13 @@ Para la obtención de las coordenadas del bache detectado, se probaron distintas
 
 \begin{figure} [h!]
 	\begin{center}
-			\includegraphics[width=8cm]{figs/cap7/contornoerror.png}
+			\includegraphics[width=6cm]{figs/cap7/contornoerror.png}
 		\end{center}
 	\caption{Primera versión en la obtención del contorno del bache}
 	\label{fig:contornoerror}
 \end{figure}
 
-La segunda y última opción realiza la detección  del contorno usando los pasos definidos en el Código \ref{cod:contorno}, siendo el valor de 0,6 en el paso de binarizar la máscara, el elegido para decidir si hay bache o no en la imagen. El resultado final se muestra en la Figura \ref{fig:contornobien}.
+La segunda y última opción para realizar la detección del contorno, descrita en la Sección \ref{subsec:softwareiayolo} y se puede ver gracias al Código \ref{cod:contorno}. Siendo el valor de 0,6 en el paso de binarizar la máscara, el elegido para decidir si hay bache o no en la imagen. El resultado final se muestra en la Figura \ref{fig:contornobien}.
 
 \begin{code}[h]
 	\begin{lstlisting}[language=Python]
@@ -152,40 +152,15 @@ La segunda y última opción realiza la detección  del contorno usando los paso
 		
 			# Encontrar los contornos del bache
 			contours, _ = cv2.findContours(binary_mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-		
-			# Dibujar los contornos en la imagen original
-			largest_contour = None
-			largest_area = 0
-			
-			for cnt in contours:
-				# Escalar los contornos al tamano correcto
-				cnt = cnt.astype(np.float32) * scale_factor
-				# Calcular el area del bache
-				area = cv2.contourArea(cnt)
-		
-				# Filtrar contornos pequenos
-				if area > 200:
-					# Mantener el contorno mas grande
-					if area > largest_area:
-						largest_area = area
-						largest_contour = cnt.astype(np.int32)
-		
-			# Dibujar solo el contorno mas grande
-			if largest_contour is not None:
-				# Convertir a una lista de pixeles (x, y)
-				contour_pixels = largest_contour.reshape(-1, 2) 
-				return contour_pixels
-		
-			return None
 	\end{lstlisting}
-	\caption[Cómo obtener los píxeles del contorno del bache]{Cómo obtener los píxeles del contorno del bache}
+	\caption[Cómo obtener el contorno del bache]{Cómo obtener el contorno del bache}
 	\label{cod:contorno}
 \end{code}
 
  
  \begin{figure} [h!]
  	\begin{center}
- 		\includegraphics[width=8cm]{figs/cap6/contornobache1.png}
+ 		\includegraphics[width=6cm]{figs/cap6/contornobache1.png}
  	\end{center}
  	\caption{Versión final en la obtención del contorno del bache}
  	\label{fig:contornobien}

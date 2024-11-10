@@ -99,21 +99,22 @@
 \contentsline {subsection}{\numberline {7.7.2}Autónomo}{92}{subsection.7.7.2}%
 \contentsline {section}{\numberline {7.8}Snippets}{93}{section.7.8}%
 \contentsline {section}{\numberline {7.9}Verbatim}{93}{section.7.9}%
-\contentsline {section}{\numberline {7.10}Ecuaciones}{93}{section.7.10}%
-\contentsline {section}{\numberline {7.11}Tablas o cuadros}{93}{section.7.11}%
-\contentsline {section}{\numberline {7.12}Segunda sección}{94}{section.7.12}%
+\contentsline {section}{\numberline {7.10}Ecuaciones}{94}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Tablas o cuadros}{94}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Segunda sección}{95}{section.7.12}%
 \contentsline {subsection}{\numberline {7.12.1}Números}{95}{subsection.7.12.1}%
-\contentsline {subsection}{\numberline {7.12.2}Listas}{95}{subsection.7.12.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{98}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos cumplidos}{98}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivo principal}{98}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Subobjetivos}{98}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Conclusiones finales y líneas futuras}{99}{section.8.2}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{100}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{100}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{101}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{101}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{102}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{103}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{106}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{107}{appendix*.159}%
+\contentsline {subsection}{\numberline {7.12.2}Listas}{96}{subsection.7.12.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{97}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Objetivos cumplidos}{97}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivo principal}{97}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Subobjetivos}{97}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Competencias adquiridas}{98}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{98}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{99}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{99}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{100}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{100}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{101}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{102}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{105}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{106}{appendix*.159}%
