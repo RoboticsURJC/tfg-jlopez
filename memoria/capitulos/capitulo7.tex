@@ -11,68 +11,146 @@ Ralph Waldo Emerson\\
 
 \vspace{1cm}
 
-En este capítulo se tratarán los diferentes experimentos llevados a cabo para la realización de este proyecto.  y la consecución del objetivo final 
+\setcounter{footnote}{132} % Establecer la numeración de la siguiente nota al pie
+
+En este capítulo se tratarán los diferentes experimentos llevados a cabo para la realización de este proyecto y que han permitido conseguir y demostrar la consecución del objetivo y subobjetivos definidos en la Seccción \ref{sec:descripcion}.
 
 \section{Impresión 3D}
+\label{sec:expimpresion3d}
+Aparte de la solución proporcionada en la Sección \ref{sec:impresionmontaje}, se probaron previamente distintas opciones de diseño y de impresión 3D hasta encontrar la mejor opción.
+
+Primero se optó por diseñar la estructura como una pieza única para facilitar el trabajo de ensamblaje para los usuarios, sin embargo el resultado final no fue el esperado (Figura \ref{fig:imfallida}). 
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap7/impresionfallida1.png}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap7/piezav1error.jpeg}
+	\end{minipage}
+	\caption{Versiones previas de impresión}
+	\label{fig:imfallida}
+\end{figure}
+
+
+Después de eso, se tuvo que cambiar el enfoque y se decidió dividirlo en diferentes piezas para intentar solucionar el problema, como se comentó en la Sección \ref{sec:diseñocad}. En ese momento se estaba usando otra impresora distinta a la definida en la Sección \ref{sec:impresionmontaje}, llamada Ultimaker Cura 2+\footnote{\url{https://ultimaker.com/3d-printers/s-series/ultimaker-2-connect/}}y se empleó ABS en vez de PLA; por lo tanto, los parámetros de impresión fueron distintos (Cuadro \ref{cuadro:cimpresion2}) pero se producía \textit{warping}. Para conocer más acerca de distintas pruebas, puedes consultarlas en la WIKI\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/wiki/HARDWARE\#impresi\%C3\%B3n-3d}}.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			Características & Parámetros\\
+			\hline
+			 Densidad & 1.04 g/cm³\\
+			\hline
+			Diámetro & 2.85 mm\\
+			\hline
+			Temperatura de impresión & 240 ºC\\
+			\hline
+			Temperatura de la placa & 110 ºC\\
+			\hline
+			Temperatura en modo de espera & 175 ºC\\
+			\hline
+			Distancia de retracción & 6.50 mm\\
+			\hline
+			Velocidad de retracción & 40mm/s\\
+			\hline
+			Velocidad del ventilador & 10\%\\
+			\hline
+		\end{tabular}
+		\caption{Características usadas en impresiones previas}
+		\label{cuadro:cimpresion2}
+	\end{center}
+\end{table}
+
 
 
 \section{Ruedas}
+\label{sec:expruedas}
+Como se comentó en la Sección \ref{subsec:ruedas}, en este proyecto se han usado 2 tipos de ruedas que gracias a las distintas pruebas realizadas, se ha podido definir las características de cada una de ellas. 
+
+En el primer video\footnote{\url{}} (Figura \ref{fig:pruebaruedas} izquierda) se puede ver a PiBotJ usando las ruedas negras y teniendo dificultades en superficies con irregularidades. Por otro lado, en el segundo video\footnote{\url{}} (Figura \ref{fig:pruebaruedas} derecha) se puede ver a PiBotJ usando las ruedas azules genéricas y superando con mayor facilidad las dificultades que con las ruedas del kit \textit{ActivityBot}.
+
+%% Incluir 2 vídeos y las dos fotos (capturas del video)
+
+%\begin{figure}[ht!]
+%	\centering
+%	\begin{minipage}{0.4\linewidth}
+%		\centering
+%		\includegraphics[width=\linewidth]{figs/cap7/pruebanegra.png}
+%	\end{minipage}
+%	\hspace{1cm}
+%	\begin{minipage}{0.40\linewidth}
+%		\centering
+%		\includegraphics[width=\linewidth]{figs/cap7/pruebaazul.png}
+%	\end{minipage}
+%	\caption{Versiones previas de impresión}
+%	\label{fig:pruebaruedas}
+%\end{figure}
 
 
 \section{Aprendizaje automático}
+\label{sec:expaa}
+Para la detección de baches, como se comentó... (pequeña intro )
 
-Imagen con todos los parámetros
+Para conseguir el modelo entrenado en formato .pb, se realizaron numerosas pruebas pero finalmente para la etapa de entrenamiento se decidió usar la siguiente configuración (Figura X); está completamente recogido y facilitado en el fichero args.yaml\footnote{\url{}}.
 
-Dsitintas versiones que se hizo 
+\begin{itemize}
+	\item \verb|detect.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/detect.tflite}}. Esta primera versión una se realizó usando un dataset de 75 imágenes que usa CPU y va lenta, unos 4 segundos de retraso (latencia...)
+	\item \verb|detect_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/detect_edgetpu.tflite}} es la primera versión que se realizó intentando convertirla para que fuera compatible con el Google Coral pero no funcionó.
+	
+	\item \verb|best_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/best_full_integer_quant_edgetpu.tflite}} es la segunda versión entrenada convertida para que google coral la detectara. Esta vez sí la detecta pero el modelo era demasiado grande ya que usaba imágenes de 640x480. 
+	
+	\item \verb|bestv2_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}} esta es la versión actual usada en el proyecto, convertida a Googel Coral pero usa imágenes de 192x192. La latencia es como mucho de 1 segundo. De puede decir que el problema se ha resuelto con creces. ES muy difícil conseguir real time con las circunstancias presentes. (LA ACTUAL USADAA EN EL PROYECTO) 	
+\end{itemize}\
 
-detect.tflite (v1 CPU)
-detect\_edgetpu.tflite (v1 convertida pero que sigue usando CPU)
-best\_...edge.tflite  (v2 muy pesada usando edge tpu pero que NO VA)
-bestv2\_...edge.tflite (V2 funcional que usa imágenes 192x192) 
 
+\subsection{Aplicación del modelo}
+\label{subsec:expcapmodelo}
+Para evitar los picos se usa la media movil exponencial, como se explica en el apartado X y se puede ver cómo esos picos desapaceren gracias a la Gráfica X.
 
-media movil exponencial (incluir alguna gráfica) y compararlo con otros medios como puede ser filtro de kalman (darle una vuelta a esto)
+Estudiar gráfica
 
 \section{Modelo pinhole}
+\label{sec:expmodelopinhole}
 Video con lo del punto rosa y la cartulina blanca
 
 
 \section{Método shoelace}
+\label{sec:expshoelace}
 Bache en su dimensión máxima y ver el valor obtenido 
 
 rectángulo y luego demostrar los valores obtenidos
 
 \section{VFF}
-
+\label{sec:expvff}
 Mostrar un video cómo se produce la repulsión
 
 \section{Detectar líneas}
-Video de cómo detecta las líneas (con la velocidad original NO CON LOS VALORES DESPACIOS DEL VIDEO ANTIGUO)
+\label{sec:expdetectarlineas}
+Video de cómo detecta las líneas (con la velocidad original NO CON LOS VALORES DESPACIOS DEL VIDEO ANTIGUO) y el filtro antiguo, con valores puestos a ojo
 
 \section{Interfaz web}
+\label{sec:interfazweb}
 Reactividad al mostrar bache y cómo se actualiza en la interfaz web 
 
 \section{Ejecución completa de la aplicación}
-
-Contar cada launcher creado
+\label{sec:expcompleto}
+Contar cada launcher creado 
 \subsection{Teleoperado}
-Video  y capturas del ejemplo creado
+Video  y capturas del ejemplo creado \verb|ros2 launch pibotj_rr robot_teleop.launch.py|
 \subsection{Autónomo}
-Vídeo y capturas del ejemplo creado
-
+Vídeo y capturas del ejemplo creado \verb|ros2 launch pibotj_rr robot_vff.launch.py|
 
 
 Cómo se enlazan internamente 
-(diagrama de todos los nodos creados)
-
-explicar experimentos impresora del instituto \\
-
-explicar filtro de imagen v1 con los valores de canny puestos a ojo\\
-
-explicar tipos de tflite usadas \\
+(diagrama de todos los nodos creados) y meter capturas de pantalla !! IMPORTANTE
 
 
-https://github.com/RoboticsURJC/tfg-jlopez/wiki/Experimentos (diseño carretera y la primera prueba hecha en la calle con las ruedas de ActivityBot)
 
 \section{Snippets}
 
@@ -215,28 +293,4 @@ Puede resultar interesante, para clarificar la descripción, mostrar fragmentos 
 				\item Segundo elemento de la colección.
 			\end{enumerate}\
 			
-			\paragraph{Referencias bibliográficas}
-			\label{sec:referencias}
-			
-			Cita, sobre todo en este capítulo, referencias bibliográficas que respalden tu argumento. Para citarlas basta con poner la instrucción \verb|\cite| con el identificador de la cita. Por ejemplo: libros como \cite{vega12e}, artículos como \cite{vega19b}, URLs como \cite{vega19a}, tesis como \cite{vega18b}, congresos como \cite{vega18a}, u otros trabajos fin de grado como \cite{vega08b}.
-			
-			Las referencias, con todo su contenido, están recogidas en el fichero \texttt{bibliografia.bib}. El contenido de estas referencias está en formato \texttt{BibTex}. Este formato se puede obtener en muchas ocasiones directamente, desde plataformas como \texttt{Google Scholar} u otros repositorios de recursos científicos.
-			
-			Existen numerosos estilos para reflejar una referencia bibliográfica. El estilo establecido por defecto en este documento es APA, que es uno de los estilos más comunes, pero lo puedes modificar en el archivo \texttt{memoria.tex}; concretamente, cambiando el campo \verb|apalike| a otro en la instrucción \verb|\bibliographystyle{apalike}|. 
-			
-			\
-			
-			\
-			
-			\
-			
-			Y, para terminar este capítulo, resume brevemente qué vas a contar en los siguientes.
-			
 
-\section{Corrector ortográfico}
-
-Una vez tengas todo, no olvides pasar el corrector ortográfico de \LaTeX a todos tus ficheros \textit{.tex}. En \texttt{Windows}, el propio editor \texttt{TeXworks} incluye el corrector. En \texttt{Linux}, usa \texttt{aspell} ejecutando el siguiente comando en tu terminal:
-
-\begin{verbatim}
-aspell --lang=es --mode=tex check capitulo1.tex
-\end{verbatim}
