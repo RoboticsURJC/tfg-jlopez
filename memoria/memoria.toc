@@ -106,9 +106,7 @@
 \contentsline {subsection}{\numberline {7.12.2}Listas}{98}{subsection.7.12.2}%
 \contentsline {chapter}{\numberline {8}Conclusiones}{99}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Objetivos cumplidos}{99}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivo principal}{99}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Subobjetivos}{99}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Competencias adquiridas}{100}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Competencias adquiridas}{99}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Líneas futuras}{100}{section.8.3}%
 \contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{101}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Simulación}{101}{section.Alph1.1}%
