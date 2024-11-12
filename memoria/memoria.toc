@@ -109,7 +109,7 @@
 \contentsline {subsection}{\numberline {8.1.1}Objetivos}{99}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Requisitos}{100}{subsection.8.1.2}%
 \contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{101}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Líneas futuras}{101}{section.8.3}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{102}{section.8.3}%
 \contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{103}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Simulación}{103}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Robot real}{104}{section.Alph1.2}%

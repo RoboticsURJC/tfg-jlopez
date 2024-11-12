@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  12 NOV 2024 12:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  12 NOV 2024 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2781,19 +2781,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 [99
 
 ]
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
  [100]
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
- [101])
-Underfull \hbox (badness 10000) in paragraph at lines 101--35
-
+Underfull \hbox (badness 1303) in paragraph at lines 62--63
+[]\OT1/cmr/m/n/12 Se ha adquirido la habilidad de implementar un modelo de apre
+ndizaje
  []
 
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+[101])
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
-[102]
+ [102]
 No file memoria.ind.
 (./capitulos/capitulo9.tex
 Ap\'{e}ndice A.
@@ -2809,7 +2810,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
  [104]
-<figs/cap6/vl.png, id=2445, 493.845pt x 309.155pt>
+<figs/cap6/vl.png, id=2446, 493.845pt x 309.155pt>
 File: figs/cap6/vl.png Graphic file (type png)
 <use figs/cap6/vl.png>
 Package pdftex.def Info: figs/cap6/vl.png  used on input line 81.
@@ -2820,7 +2821,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<figs/cap6/pycoralinstalled.png, id=2447, 800.9925pt x 503.8825pt>
+<figs/cap6/pycoralinstalled.png, id=2448, 800.9925pt x 503.8825pt>
 File: figs/cap6/pycoralinstalled.png Graphic file (type png)
 <use figs/cap6/pycoralinstalled.png>
 Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 116
@@ -2873,10 +2874,10 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 (rerunfilecheck)             Checksum: 48B0C48CB3C51F1474B77F0E420CC3FD;13468.
  ) 
 Here is how much of TeX's memory you used:
- 32555 strings out of 480112
- 603838 string characters out of 5892631
+ 32556 strings out of 480112
+ 603846 string characters out of 5892631
  1208641 words of memory out of 5000000
- 48982 multiletter control sequences out of 15000+600000
+ 48983 multiletter control sequences out of 15000+600000
  477207 words of font info for 57 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  89i,15n,92p,1397b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2898,10 +2899,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on memoria.pdf (131 pages, 51404364 bytes).
+Output written on memoria.pdf (131 pages, 51404381 bytes).
 PDF statistics:
- 2883 PDF objects out of 2984 (max. 8388607)
- 2469 compressed objects within 25 object streams
+ 2884 PDF objects out of 2984 (max. 8388607)
+ 2470 compressed objects within 25 object streams
  823 named destinations out of 1000 (max. 500000)
  1382 words of extra memory for PDF output out of 10000 (max. 10000000)
 

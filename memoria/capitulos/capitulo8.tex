@@ -38,64 +38,44 @@ Es importante destacar que se ha conseguido cumplir con el objetivo principal de
 Tammbién hay que destacar que se han satisfecho todos los requisitos propuestos en la Sección \ref{sec:requisitos}:
 
 \begin{enumerate}
-	\item El coste total de la fabricación del robot no debe superar los 250€.
-	\item Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
-	\item Se usará Ubuntu con soporte a largo plazo como sistema operativo, tanto para el ordenador como para el robot.
-	\item A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica de uso dedicado para entrenar los modelos. 
-	\item Los modelos entrenados se deben ajustar a las limitaciones hardware del robot.
-	\item Se busca que sea un proyecto a largo plazo, por eso se debe realizar la integración con la plataforma ROS 2. 
+	\item El coste total de la fabricación del robot ha sido de 237,12€, siendo 250€ el límite establecido.
+	\item Todas las piezas diseñadas están pensadas para ser impresa en cualquier impresora 3D, habiéndose probado los diseños en dos impresoras distintas.
+	\item Se ha usado el sistema operativo Ubuntu con soporte a largo plazo, en distintas versiones, tanto para el ordenador como para el robot.
+	\item Para el entrenamiento de los modelos, se ha usado Google Colaboratory y así se cumple el requisito de no ser necesario disponer de ninguna tarjeta gráfica de uso dedicado para conseguirlo.
+	\item Los modelos entrenados se han convertido al formato necesario para conseguir que funcione a pesar de las limitaciones hardware de Raspberry Pi y la PiCamera.
+	\item Para todo el proyecto, se ha usado ROS 2 para conseguir que sea un proyecto a largo plazo.
 \end{enumerate}
-
-
-%\begin{enumerate}
-%	\item{} El coste total de la fabricación del robot no debe superar los 250€.
-%	\item{} Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
-%	\item{} Se usará Ubuntu con soporte a largo plazo como sistema operativo, tanto para el ordenador como para el robot.
-%	\item{} A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica de uso dedicado para entrenar los modelos. 
-%	\item{} Los modelos entrenados se deben ajustar a las limitaciones hardware del robot.
-%	\item{} Se busca que sea un proyecto a largo plazo, por eso se debe realizar la integración con la plataforma ROS 2. 
-%\end{enumerate}
 
 \section{Habilidades desarrolladas}
 
-Las competencias adquiridas a lo largo del proyecto
+Además de todas las competencias nombradas en la Sección \ref{sec:competencias}, se han desarrollado numerosas habilidades y conocimientos, de los cuáles a destacar: 
 
-conocimientos profundos/skills de Freecad (ampliado experiencia)
+\begin{itemize}
+	\item Se han adquirido conocimientos muy profundos sobre cómo investigar de un tema y cómo llevarlo a cabo.
+	\item Se han adquirido conocimientos profundos de la herramienta FreeCAD.
+	\item Se ha adquirido conocimientos sobre los parámetros a modificar en una impresión y las necesidad que esta necesita (ventanas cerradas, uso de laca, etc).
+	\item Se ha adquirido conocimientos sobre mecánica y ensamblaje de piezas. 
+	\item Se ha adquirido la habilidad de construir al robot en simulación.
+	\item Se ha adquirido conocimientos profundos sobre ROS2 Control.
+	\item Se ha adquirido el conocimiento de poder configurar y conocer a bajo nivel todos los componentes \textit{hardware}.
+	\item Se ha adquirido conocimientos profundos sobre direcciones IP, conexiones ssh y derivados.
+	\item Se ha adquirido la habilidad de implementar un modelo de aprendizaje supervisado sobre un dispositivo de limitaciones computacionales
+	\item Se ha adquirido conocimientos muy profundos sobre el sensor cámara y cómo extraer información de ella para finalmente conocer el aŕea del bache. 
+	\item Se ha adquirido habilidades sobre desarrollo de páginas web y cómo están relacionadas con ROS 2.
+	\item Se ha adquirido la habilidad de ser capaz de redactar y generar documentación de calidad.
+\end{itemize}
+ 
 
-He aprendido sobre estructuras y diseños
-
-He podido trabajar con la Raspberry usando puerot CSI, Serial (configurado y probado)  que previamente no se había hecho
-
-He conseguido implementar un modelo de aprendizaje supervisado sobre un dispositivo que tenía limitciones computacionales
-
-He aprendido en muy profundidad el funcioanmiento del modelo pin hole 
-
-He aprendido sobre cómo investigar y los pasos a seguir 
-
-He aprendido a generar documentación de calidad para un trabajo al igual que conocer sus etapas y saber respetarlas 
-
-He aprendido nuevas técnicas matemáticas 
-
-He aprendido sobre cómo usar una interfaz web 
-
-He aprendido a integrar ROS2 a un dispositivo los limitaciones
-
-He aprendido a construir un robot definido por urdf/xacro
-
-He aprendido a integrar  una arquitectura ros2 control en un robot
 
 \section{Líneas futuras}
 
-
-Por último, añade otro par de párrafos de líneas futuras; esto es, cómo se puede continuar tu trabajo para abarcar una solución más amplia, o qué otras ramas de la investigación podrían seguirse partiendo de este trabajo, o cómo se podría mejorar para conseguir una aplicación real de este desarrollo (si es que no se ha llegado a conseguir).
-
+Finalmente, para permitir la continuidad de este proyecto, se han planteado una serie de líneas futuras a tener en cuenta: 
 
 \begin{itemize}
-	\item \textit{Integración en la vida real del motor de la cámara} Aumenta la complejidad...
-	\item \textit{Aumentar el campo de visión de la cámara} Haciendo más largo el soporte
-	\item \textit{Desarrollar software para el robot simulado} Para que las caídas no duelan
-	\item \textit{Implantar PiBotJ como ayudante de mantenimiento} primero en pueblos y más adelante en carreteras
-	\item \textit{Continuar dando soporte a PiBotJ} para mantenerlo actualizado en las últimas versiones
-\end{itemize}\
+	\item Dar soporte software al robot en simulación. 
+	\item Integrar, configurar y dar soporte software al motor de la cámara.
+	\item Modificar la altura de la cámara para conseguir mayor alcance.
+	\item Continuar dando soporte a PiBotJ para mantenerlo actualizado en la última versión.
+	\item Conseguir implantar a PiBotJ como ayudante de mantenimiento y que en un futuro se pueda aplicar a las carreteras.
+\end{itemize}
 
-No olvides dedicar un par de párrafos para hacer un balance global de qué has conseguido, y por qué es un avance respecto a lo que tenías inicialmente. Haz mención expresa de alguna limitación o peculiaridad de tu sistema y por qué es así. Y también, qué has aprendido desarrollando este trabajo.\\
