@@ -105,14 +105,16 @@
 \contentsline {subsection}{\numberline {7.12.1}Números}{98}{subsection.7.12.1}%
 \contentsline {subsection}{\numberline {7.12.2}Listas}{98}{subsection.7.12.2}%
 \contentsline {chapter}{\numberline {8}Conclusiones}{99}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos cumplidos}{99}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Competencias adquiridas}{99}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Líneas futuras}{100}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{101}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{101}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{102}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{102}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{103}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{104}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{107}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{108}{appendix*.164}%
+\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{99}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivos}{99}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Requisitos}{100}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{101}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{101}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{103}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{103}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{104}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{104}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{105}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{106}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{109}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{110}{appendix*.164}%

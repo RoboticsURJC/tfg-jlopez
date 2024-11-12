@@ -11,34 +11,52 @@ Buda\\
 
 \vspace{1cm}
 
-En este último capítulo se van a detallar todos los objetivos y subobjetivos cumplidos; así como las competencias adquiridas a lo largo de todo el proyecto. Finalmente se concluirá la memoria exponiendo las posibles líneas futuras para el proyecto.
+En este último capítulo se van a detallar todos los objetivos y requisitos cumplidos; así como las competencias adquiridas a lo largo de todo el proyecto. Finalmente se concluirá la memoria exponiendo las posibles líneas futuras para el proyecto.
 
 
-\section{Objetivos cumplidos}
+\section{Objetivos y requisitos cumplidos}
 
-En este apartado se va
+A continuación se van a explicar todos los objetivos y requisitos cumplidos a lo largo de la realización del presente trabajo fin de grado. 
 
-%El objetivo principal era: 
+\subsection{Objetivos}
 
-%Crear un robot que, usando materiales de bajo coste, sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y sea capaz de estimar el área del bache para hacer una estimación media del volumen que ocupa dicho bache y poder ser tapado. De igual manera, todo quedará registrado en una interfaz web en la que cada bache quedará marcado sobre un mapa con su correspondiente descripción para que los operarios puedan operar cuando estimen oportuno.
+Es importante destacar que se ha conseguido cumplir con el objetivo principal de este trabajo fin de grado: crear un robot que, usando materiales de bajo coste, sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y sea capaz de estimar el área del bache para hacer una estimación media del volumen que ocupa dicho bache y poder ser tapado; todo ello registrado sobre una interfaz web. A decir verdad, se ha cumplido cada uno de los subobjetivos establecidos en la Sección \ref{sec:descripcion}:
+
+\begin{enumerate}
+	\item Se han investigado las soluciones robóticas actuales, encontrándose muchas de ellas en fase todavía de experimentación.
+	\item Se han seleccionado los componentes \textit{hardware} más adecuados para el robot, siendo  los elegidos, los de menor coste. Además, se ha sugerido distintas opciones para abaratar los costes así como, consejos para facilitar el diseño y robustez del robot. 
+	\item Se han analizado las diferentes opciones de diseño que gracias a los bocetos y maquetas, han permitido ir perfilando la idea del diseño hasta encontrar la solución final.
+	\item Se ha usado FreeCAD como herramienta de diseño \acs{CAD}, conocida como una de las herramientas de diseño libre. 
+	\item Como se ha explicado tanto en las Secciones \ref{sec:impresionmontaje} y \ref{sec:expimpresion3d}, en todas las pruebas de impresión se han usado materiales típicos de impresión 3D: tanto PLA como ABS.
+	\item Se ha desarrollado  y contruido el robot tanto para simulación, usando URDF y ROS 2 Control, como en la vida real, configurando cada componente a bajo nivel.
+	\item Al robot se le ha dotado de nodos en ROS2 para conseguir aplicar el objetivo principal en la vida real.
+	\item Para demostrar la viabilidad del proyecto, se han realizado experimentos de cada uno de los componentes, así como se ha proporcionado dos posibles aplicaciones completas para poder usar el robot.  
+\end{enumerate}
+
+\subsection{Requisitos}
+
+Tammbién hay que destacar que se han satisfecho todos los requisitos propuestos en la Sección \ref{sec:requisitos}:
+
+\begin{enumerate}
+	\item El coste total de la fabricación del robot no debe superar los 250€.
+	\item Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
+	\item Se usará Ubuntu con soporte a largo plazo como sistema operativo, tanto para el ordenador como para el robot.
+	\item A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica de uso dedicado para entrenar los modelos. 
+	\item Los modelos entrenados se deben ajustar a las limitaciones hardware del robot.
+	\item Se busca que sea un proyecto a largo plazo, por eso se debe realizar la integración con la plataforma ROS 2. 
+\end{enumerate}
 
 
-No olvides dedicar un par de párrafos para hacer un balance global de qué has conseguido, y por qué es un avance respecto a lo que tenías inicialmente. Haz mención expresa de alguna limitación o peculiaridad de tu sistema y por qué es así. Y también, qué has aprendido desarrollando este trabajo.\\
+%\begin{enumerate}
+%	\item{} El coste total de la fabricación del robot no debe superar los 250€.
+%	\item{} Todas las piezas diseñadas deben poderse imprimir en cualquiera impresora convencional.
+%	\item{} Se usará Ubuntu con soporte a largo plazo como sistema operativo, tanto para el ordenador como para el robot.
+%	\item{} A fin de facilitar la implementación de este proyecto para cualquier tipo de usuario, no será necesario disponer de ninguna tarjeta gráfica de uso dedicado para entrenar los modelos. 
+%	\item{} Los modelos entrenados se deben ajustar a las limitaciones hardware del robot.
+%	\item{} Se busca que sea un proyecto a largo plazo, por eso se debe realizar la integración con la plataforma ROS 2. 
+%\end{enumerate}
 
-% Los subobjetivos:
-
-%1. Investigar los robots o soluciones actuales que cumplan con las caracterı́sticas y objetivos establecidos.
-%2. Seleccionar los componentes hardware de bajo coste necesarios para construir el esqueleto del robot.
-%3. Analizar las diferentes opciones de diseño que más encajen con la forma del robot.
-%4. Diseñar las piezas en CAD usando herramientas de software libre.
-%5. Usar material tı́pico de impresión 3D para imprimir las partes del robot, como puede ser ABS o PLA.
-%6. Desarrollar un modelo del robot para que pueda ser usado en simulación usando herramientas robóticas.
-%7. Desarrollar software necesario usando herramientas robóticas para poder controlar el robot fı́sico.
-%8. Realizar algunos experimentos en entorno reales o adaptados.
-
-%% Terminar de razonar estos subobjetivos 
-
-\section{Competencias adquiridas}
+\section{Habilidades desarrolladas}
 
 Las competencias adquiridas a lo largo del proyecto
 
@@ -80,3 +98,4 @@ Por último, añade otro par de párrafos de líneas futuras; esto es, cómo se 
 	\item \textit{Continuar dando soporte a PiBotJ} para mantenerlo actualizado en las últimas versiones
 \end{itemize}\
 
+No olvides dedicar un par de párrafos para hacer un balance global de qué has conseguido, y por qué es un avance respecto a lo que tenías inicialmente. Haz mención expresa de alguna limitación o peculiaridad de tu sistema y por qué es así. Y también, qué has aprendido desarrollando este trabajo.\\
