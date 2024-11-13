@@ -44,57 +44,57 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Distintas vistas del chasis\relax }}{49}{figure.caption.80}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Inclinación de la cámara\relax }}{49}{figure.caption.81}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Distintas vistas del soporte de la cámara\relax }}{50}{figure.caption.82}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Distintas vistas de la carcasa\relax }}{51}{figure.caption.83}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Distintas vistas de la carcasa\relax }}{50}{figure.caption.83}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Distintas vistas de la pieza para la sujección trasera\relax }}{51}{figure.caption.84}%
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace67}}$\relax }}{52}{figure.caption.85}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Piezas impresas\relax }}{53}{figure.caption.87}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Soldando pines al módulo GPS\relax }}{54}{figure.caption.88}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Robot completo montado en FreeCAD\relax }}{55}{figure.caption.90}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Ensamblaje ruedas azules genéricas\relax }}{56}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces PiBotJ con ruedas azules\relax }}{57}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Soldando pines al módulo GPS\relax }}{53}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Robot completo montado en FreeCAD\relax }}{54}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Ensamblaje ruedas azules genéricas\relax }}{55}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Robot con distintos tipos de ruedas\relax }}{56}{figure.caption.92}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Sistemas de Coordenadas de PiBotJ\relax }}{61}{figure.caption.96}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Interfaces que tiene definidas PiBotJ\relax }}{62}{figure.caption.97}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Diagrama de robot\_state\_publisher\relax }}{62}{figure.caption.98}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Esquema de launch\_sim.launch.py\relax }}{63}{figure.caption.99}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Topics disponibles al lanzar el robot\relax }}{64}{figure.caption.100}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Herramientas usadas\relax }}{65}{figure.caption.101}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Herramienta usada para visualizar los valores del GPS\relax }}{65}{figure.caption.102}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Herramienta usada para rotar la cámara\relax }}{65}{figure.caption.103}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Cámara de PiBotJ en funcionamiento\relax }}{67}{figure.caption.104}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Media de la matriz de intrínsecos\relax }}{68}{figure.caption.108}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Parámetros extrínsecos\relax }}{68}{figure.caption.110}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Valores publicados de latitud y longitud captados del GPS\relax }}{69}{figure.caption.111}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Demostración de una correcta localización\relax }}{70}{figure.caption.112}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Diagrama para la posición central del servo\relax }}{71}{figure.caption.113}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Distintas direcciones de PiBotJ\relax }}{71}{figure.caption.114}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Gráficas de resultados del entrenamiento\relax }}{72}{figure.caption.115}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Gráficas de resultados del entrenamiento: métricas\relax }}{73}{figure.caption.116}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Demostración del modelo funcionando\relax }}{74}{figure.caption.118}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Contorno del baches detectados\relax }}{78}{figure.caption.125}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Funcionamiento de una cámara esteneopeica $^{\ref {note:enlace124}}$\relax }}{78}{figure.caption.126}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Relación de fórmulas del modelo pinhole\relax }}{79}{figure.caption.127}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Sistemas de coordenadas\relax }}{80}{figure.caption.128}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{80}{figure.caption.129}%
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Demostración del algoritmo de la lazada\relax }}{81}{figure.caption.131}%
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Interfaz web\relax }}{82}{figure.caption.133}%
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Conversión de medidas de la carretera\relax }}{83}{figure.caption.134}%
-\contentsline {figure}{\numberline {6.27}{\ignorespaces Carretera creada en cartulina\relax }}{83}{figure.caption.135}%
-\contentsline {figure}{\numberline {6.28}{\ignorespaces Filtro resultante aplicado para la detección de líneas\relax }}{84}{figure.caption.139}%
-\contentsline {figure}{\numberline {6.29}{\ignorespaces Distintos casos de la detección de líneas\relax }}{85}{figure.caption.140}%
-\contentsline {figure}{\numberline {6.30}{\ignorespaces Diagrama de fuerzas del algoritmo VFF\relax }}{86}{figure.caption.143}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Sistemas de Coordenadas de PiBotJ\relax }}{59}{figure.caption.96}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Interfaces que tiene definidas PiBotJ\relax }}{60}{figure.caption.97}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Diagrama de robot\_state\_publisher\relax }}{60}{figure.caption.98}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Esquema de launch\_sim.launch.py\relax }}{61}{figure.caption.99}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Topics disponibles al lanzar el robot\relax }}{62}{figure.caption.100}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Herramientas usadas\relax }}{63}{figure.caption.101}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Herramienta usada para visualizar los valores del GPS\relax }}{63}{figure.caption.102}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Herramienta usada para rotar la cámara\relax }}{63}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Cámara de PiBotJ en funcionamiento\relax }}{65}{figure.caption.104}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Media de la matriz de intrínsecos\relax }}{66}{figure.caption.108}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Parámetros extrínsecos\relax }}{66}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Valores publicados de latitud y longitud captados del GPS\relax }}{67}{figure.caption.111}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Demostración de una correcta localización\relax }}{68}{figure.caption.112}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Diagrama para la posición central del servo\relax }}{69}{figure.caption.113}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Distintas direcciones de PiBotJ\relax }}{69}{figure.caption.114}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Gráficas de resultados del entrenamiento\relax }}{70}{figure.caption.115}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Gráficas de resultados del entrenamiento: métricas\relax }}{71}{figure.caption.116}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Demostración del modelo funcionando\relax }}{72}{figure.caption.118}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Contorno del baches detectados\relax }}{76}{figure.caption.125}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Funcionamiento de una cámara esteneopeica $^{\ref {note:enlace124}}$\relax }}{76}{figure.caption.126}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Relación de fórmulas del modelo pinhole\relax }}{77}{figure.caption.127}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Sistemas de coordenadas\relax }}{78}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{78}{figure.caption.129}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Demostración del algoritmo de la lazada\relax }}{79}{figure.caption.131}%
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Interfaz web\relax }}{80}{figure.caption.133}%
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Conversión de medidas de la carretera\relax }}{81}{figure.caption.134}%
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Carretera creada en cartulina\relax }}{81}{figure.caption.135}%
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Filtro resultante aplicado para la detección de líneas\relax }}{82}{figure.caption.139}%
+\contentsline {figure}{\numberline {6.29}{\ignorespaces Distintos casos de la detección de líneas\relax }}{83}{figure.caption.140}%
+\contentsline {figure}{\numberline {6.30}{\ignorespaces Diagrama de fuerzas del algoritmo VFF\relax }}{84}{figure.caption.143}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Versiones previas de impresión\relax }}{87}{figure.caption.144}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Capturas de las pruebas de PiBotJ con las distintas ruedas\relax }}{88}{figure.caption.146}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Parte de la configuración usada para el entrenamiento\relax }}{89}{figure.caption.147}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{91}{figure.caption.149}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Versión final en la obtención del contorno del bache\relax }}{91}{figure.caption.151}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Medidas del bache\relax }}{92}{figure.caption.152}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{93}{figure.caption.154}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{94}{figure.caption.155}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{95}{figure.caption.156}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{97}{figure.caption.162}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Versiones previas de impresión\relax }}{85}{figure.caption.144}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Capturas de las pruebas de PiBotJ con las distintas ruedas\relax }}{86}{figure.caption.146}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Parte de la configuración usada para el entrenamiento\relax }}{87}{figure.caption.147}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{89}{figure.caption.149}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Versión final en la obtención del contorno del bache\relax }}{89}{figure.caption.151}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Medidas del bache\relax }}{90}{figure.caption.152}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{91}{figure.caption.154}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{92}{figure.caption.155}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{93}{figure.caption.156}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{95}{figure.caption.162}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{105}{figure.caption.163}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{106}{figure.caption.164}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{103}{figure.caption.163}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{104}{figure.caption.164}%

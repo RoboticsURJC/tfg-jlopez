@@ -227,7 +227,7 @@ Además, a este chasis se le dotó de cuatro orificios circulares, que permitier
 	\hspace{1cm}
 	\begin{minipage}{0.45\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/basecon2.png}
+		\includegraphics[angle=270, width=\linewidth]{figs/cap5/basecon2.png}
 		%\caption*{\centering}
 	\end{minipage}
 	\caption{Distintas vistas del chasis}
@@ -289,7 +289,7 @@ Para posicionar la cámara de manera que mire hacia el suelo y pueda captar los 
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/cap5/rot.png}
+		\includegraphics[width=7cm]{figs/cap5/rot.png}
 	\end{center}
 	\caption{Inclinación de la cámara} 
 \label{fig:rot}
@@ -410,7 +410,7 @@ La Figura \ref{fig:psuperior} (izquierda) muestra la carcasa, lista para la impr
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.45\linewidth}
+	\begin{minipage}{0.46\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/superior2.png}
 		%\caption*{\centering}
@@ -418,7 +418,7 @@ La Figura \ref{fig:psuperior} (izquierda) muestra la carcasa, lista para la impr
 	\hspace{1cm}
 	\begin{minipage}{0.45\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/superior1m.png}
+		\includegraphics[angle=270, width=\linewidth]{figs/cap5/superior1m.png}
 		%\caption*{\centering}
 	\end{minipage}
 	\caption{Distintas vistas de la carcasa}
@@ -458,7 +458,7 @@ Para asegurar que la \textit{power bank} se mantenga en su lugar dentro del robo
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.45\linewidth}
+	\begin{minipage}{0.365\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/trasera2.png}
 		%\caption*{\centering}
@@ -484,7 +484,7 @@ En nuestro caso, para la impresión de PiBotJ, se usó la impresora FDM Creality
  
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=7cm]{figs/cap5/impresora.jpg}
+		\includegraphics[width=6cm]{figs/cap5/impresora.jpg}
 	\end{center}
 	\caption{Impresora FDM Creality Ender3 V2$^{\ref{note:enlace67}}$} 
 	\label{fig:impresora}
@@ -592,7 +592,7 @@ Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=12cm]{figs/cap5/completo3.png}
+		\includegraphics[width=11cm]{figs/cap5/completo3.png}
 	\end{center}
 	\caption{Robot completo montado en FreeCAD} 
 	\label{fig:robotfreecad}
@@ -603,8 +603,7 @@ Para sujetar el cable de alimentación de la Raspberry Pi se utilizó una brida.
 
 Respecto a las ruedas, se han probado dos tipos: las del kit \textit{ActivityBot} y las de goma azul genéricas. Según la aplicación, se puede optar por una u otra. A continuación, se explicará el montaje de cada tipo.
 
-Para utilizar las ruedas del kit \textit{ActivityBot} simplemente fue necesario atornillarlas al robot con el tornillo que viene incluido, ya que estas ruedas fueron diseñadas específicamente para motores Parallax. 
-%El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:ab}.
+Para utilizar las ruedas del kit \textit{ActivityBot} simplemente fue necesario atornillarlas al robot con el tornillo que viene incluido, ya que estas ruedas fueron diseñadas específicamente para motores Parallax. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (izquierda).
 
 %\begin{figure} [h!]
 %	\begin{center}
@@ -614,33 +613,51 @@ Para utilizar las ruedas del kit \textit{ActivityBot} simplemente fue necesario 
 %	\label{fig:ab}
 %\end{figure}
 
-Por otro lado, para poder usar la ruedas genéricas, fue necesario realizar algunas modificaciones. En primer lugar, se usó una sierra para cortar las partes sobrantes (Figura \ref{fig:rae}, izquierda). También fue necesario perforar la rueda con un taladro para que el tornillo que conecta al motor encajara fácilmente. Y, tras esto, fue necesario colocar dos topes de motor sobre la superficie lisa de la rueda (Figura \ref{fig:rae}, derecha) y hacer los agujeros correspondientes para atornillarlos. En este caso, se utilizaron siete tornillos M2 de 8 mm. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:ra}.
+Por otro lado, para poder usar la ruedas genéricas, fue necesario realizar algunas modificaciones. En primer lugar, se usó una sierra para cortar las partes sobrantes (Figura \ref{fig:rae}, izquierda). También fue necesario perforar la rueda con un taladro para que el tornillo que conecta al motor encajara fácilmente. Y, tras esto, fue necesario colocar dos topes de motor sobre la superficie lisa de la rueda (Figura \ref{fig:rae}, derecha) y hacer los agujeros correspondientes para atornillarlos. En este caso, se utilizaron siete tornillos M2 de 8 mm. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (derecha).
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.45\linewidth}
+	\begin{minipage}{0.40\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/creacionra1.jpeg}
-		\caption*{\centering}
+
 	\end{minipage}
-	\hspace{1cm}
-	\begin{minipage}{0.45\linewidth}
+	\hspace{2cm}
+	\begin{minipage}{0.40\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/creacionra2.jpeg}
-		\caption*{\centering}
+
 	\end{minipage}
 	\caption{Ensamblaje ruedas azules genéricas}
 	\label{fig:rae}
 \end{figure}
 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap5/ra.jpeg}
-	\end{center}
-	\caption{PiBotJ con ruedas azules} 
-	\label{fig:ra}
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.31\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/ab.jpeg}
+		\caption*{\centering Robot con ruedas negras}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.30\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/ra.jpeg}
+		\caption*{\centering Robot con ruedas azules}
+	\end{minipage}
+	\caption{Robot con distintos tipos de ruedas}
+	\label{fig:robot}
 \end{figure}
+
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=10cm]{figs/cap5/ra.jpeg}
+%	\end{center}
+%	\caption{PiBotJ con ruedas azules} 
+%	\label{fig:ra}
+%\end{figure}
 
 En el Capítulo de Experimentos se verá qué rueda funciona mejor según el tipo de superficie. Para resumir lo explicado, el Cuadro \ref{cuadro:costetotal} enumera todos los componentes necesarios para construir a PiBotJ, junto con sus respectivos precios.
 
@@ -678,7 +695,7 @@ En el Capítulo de Experimentos se verá qué rueda funciona mejor según el tip
 	\end{center}
 \end{table}
 
-El coste total del proyecto es de 237,13€, por lo que está por debajo del límite establecido de 250€, cumpliendo de este modo con el objetivo establecido en la Sección \ref{sec:descripcion}.\\\\\\
+El coste total del proyecto es de 237,13€, por lo que está por debajo del límite establecido de 250€, cumpliendo de este modo con el objetivo establecido en la Sección \ref{sec:descripcion}.\\\\
 
 
 
