@@ -74,7 +74,7 @@
 \contentsline {figure}{\numberline {6.19}{\ignorespaces Contorno del baches detectados\relax }}{76}{figure.caption.125}%
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Funcionamiento de una cámara esteneopeica $^{\ref {note:enlace124}}$\relax }}{76}{figure.caption.126}%
 \contentsline {figure}{\numberline {6.21}{\ignorespaces Relación de fórmulas del modelo pinhole\relax }}{77}{figure.caption.127}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Sistemas de coordenadas\relax }}{78}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Sistemas de coordenadas\relax }}{77}{figure.caption.128}%
 \contentsline {figure}{\numberline {6.23}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{78}{figure.caption.129}%
 \contentsline {figure}{\numberline {6.24}{\ignorespaces Demostración del algoritmo de la lazada\relax }}{79}{figure.caption.131}%
 \contentsline {figure}{\numberline {6.25}{\ignorespaces Interfaz web\relax }}{80}{figure.caption.133}%
@@ -93,8 +93,7 @@
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{91}{figure.caption.154}%
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{92}{figure.caption.155}%
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{93}{figure.caption.156}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Robot aspirador Roomba de iRobot.\relax }}{95}{figure.caption.162}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{103}{figure.caption.163}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{104}{figure.caption.164}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{100}{figure.caption.157}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{101}{figure.caption.158}%
