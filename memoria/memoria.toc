@@ -94,9 +94,9 @@
 \contentsline {section}{\numberline {7.4}Modelo de cámara pinhole}{88}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{90}{section.7.5}%
 \contentsline {section}{\numberline {7.6}VFF}{91}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{91}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Teleoperado}{91}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Autónomo}{92}{subsection.7.7.2}%
+\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{92}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Teleoperado}{92}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Autónomo}{93}{subsection.7.7.2}%
 \contentsline {chapter}{\numberline {8}Conclusiones}{94}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{94}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Objetivos}{94}{subsection.8.1.1}%
@@ -110,4 +110,4 @@
 \contentsline {subsection}{\numberline {A.2.2}Google Coral}{100}{subsection.Alph1.2.2}%
 \contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{101}{subsection.Alph1.2.3}%
 \contentsline {subsection}{\numberline {A.2.4}Servomotores}{104}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{105}{appendix*.159}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{105}{appendix*.160}%

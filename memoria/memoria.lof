@@ -89,11 +89,12 @@
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Parte de la configuración usada para el entrenamiento\relax }}{87}{figure.caption.147}%
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{89}{figure.caption.149}%
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Versión final en la obtención del contorno del bache\relax }}{89}{figure.caption.151}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Medidas del bache\relax }}{90}{figure.caption.152}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{91}{figure.caption.154}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{92}{figure.caption.155}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{93}{figure.caption.156}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Captura del video que demuestra el modelo pinhole\relax }}{90}{figure.caption.152}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Medidas del bache\relax }}{91}{figure.caption.153}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{91}{figure.caption.155}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{92}{figure.caption.156}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{93}{figure.caption.157}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{100}{figure.caption.157}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{101}{figure.caption.158}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{100}{figure.caption.158}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{101}{figure.caption.159}%
