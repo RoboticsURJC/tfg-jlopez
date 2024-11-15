@@ -90,24 +90,24 @@
 \contentsline {section}{\numberline {7.1}Impresión 3D}{85}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Ruedas}{86}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Detección de baches}{87}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Obtención del contorno y coordenadas del bache}{88}{subsection.7.3.1}%
-\contentsline {section}{\numberline {7.4}Modelo de cámara pinhole}{88}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{90}{section.7.5}%
-\contentsline {section}{\numberline {7.6}VFF}{91}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{92}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Teleoperado}{92}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.3.1}Obtención del contorno y coordenadas del bache}{89}{subsection.7.3.1}%
+\contentsline {section}{\numberline {7.4}Modelo de cámara pinhole}{90}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{91}{section.7.5}%
+\contentsline {section}{\numberline {7.6}VFF}{92}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{93}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Teleoperado}{93}{subsection.7.7.1}%
 \contentsline {subsection}{\numberline {7.7.2}Autónomo}{93}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{94}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{94}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivos}{94}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Requisitos}{95}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{96}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Líneas futuras}{97}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{98}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{98}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{99}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{99}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{100}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{101}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{104}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{105}{appendix*.160}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{96}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{96}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivos}{96}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Requisitos}{97}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{98}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{99}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{100}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{100}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{101}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{101}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{102}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{103}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{106}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{107}{appendix*.162}%

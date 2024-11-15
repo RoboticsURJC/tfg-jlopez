@@ -115,17 +115,27 @@ Una vez creado, entrenado y convertido el modelo en el formato .tflite, formato 
 \end{itemize}
 
 
-En la Sección \ref{subsec:softwareiayolo} también se comenta cómo conseguir que los valores obtenidos sean estables usando \acs{EMA} y a continuación se puede ver una gráfica que demuestra su correcta aplicación (Figura \ref{fig:diagramaema}).
+En la Sección \ref{subsec:softwareiayolo} también se comenta cómo conseguir que los valores obtenidos sean estables usando \acs{EMA} y a continuación se puede ver dos gráficas que demuestra la aplicación EMA sobre la máscara de la clase 0 y la máscara de la clase 1 (Figura \ref{fig:diagramaemac0} y Figura \ref{fig:diagramaemac1} respectivamente).
 
-%\begin{figure} [h!]
-%	\begin{center}
-	%		\includegraphics[width=8cm]{figs/cap7/parametros.png}
-	%	\end{center}
-%	\caption{Parte de la configuración usada para el entrenamiento}
-%	\label{fig:diagramaema}
-%\end{figure}\
+\begin{figure} [h!]
+	\begin{center}
+			\includegraphics[width=15cm]{figs/cap7/GraficaC0.png}
+		\end{center}
+	\caption{Gráfica que muestra los valores de la clase 0}
+	\label{fig:diagramaemac0}
+\end{figure}
 
-%% compara los valores de ema con la realidad y estudiar la gráfica.
+En Figura \ref{fig:diagramaemac0}\footnote{Los valores usados en la gráfica se pueden apreciar aquí: \url{}}, se puede ver que los valores por encima de 0.6 es cuando se detecta que hay bache. Los valores azules en todo momento se puede ver cómo toman valores dispares mientras que los valores naranjas permiten que el valor se estabilice eliminando picos. Si se produce un pequeño movimiento y se pierde momentáneamente el bache, gracias a EMA tarda muy poco en recuperar el valor previo, como ocurre en el intervalo entre las medidas 200 y 300.
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap7/GraficaC1.png}
+	\end{center}
+	\caption{Gráfica que muestra los valores de la clase 1}
+	\label{fig:diagramaemac1}
+\end{figure}
+
+Sin embargo, en la Figura \ref{fig:diagramaemac1}\footnote{Los valores usados en la gráfica se pueden apreciar aquí: \url{}} se puede apreciar cómo inicialmente los valores azules que no muestran bache están por encima del umbral elegido y es gracias a EMA que los valores se estabilizan por debajo del umbral, teniendo a lo largo de todo el proceso un comportamiento correcto. 
 
 \subsection{Obtención del contorno y coordenadas del bache}
 \label{subsec:expcontorno}
