@@ -31,6 +31,9 @@ class CameraTFv4Node(Node):
         # Publicador del array con coordenadas
         self.polygon_publisher = self.create_publisher(Polygon, 'pothole_coords', self.queueSize)
 
+        # Publicador del array con coordenadas
+        self.polygon_vff_publisher = self.create_publisher(Polygon, 'pothole_vff_coords', self.queueSize)
+
         # Usa 10 Hz
         self.periodCommunication = 0.1  
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
@@ -60,7 +63,7 @@ class CameraTFv4Node(Node):
         self.largest_contour = None 
         self.detected = False
         self.detect_time = 0
-
+        self.detect_vff_time = 0
 
     def timer_callbackFunction(self):
         success, frame = self.camera.read()
@@ -120,10 +123,11 @@ class CameraTFv4Node(Node):
         # se usa media móvil exponencial para reducir los picos
         ema_value_updated_class0 = self.update_ema(max_value_class0)
 
-        ema_value_updated_class1= self.update_ema(max_value_class1)
+        ema_value_updated_class1 = self.update_ema(max_value_class1)
 
         newframe = resized_frame.copy()
         polygon_coords = Polygon()
+        polygon_vff_coords = Polygon()
 
         current_time = time.time()
         
@@ -148,6 +152,7 @@ class CameraTFv4Node(Node):
             if not self.detected:
                 self.detected = True
                 self.detect_time = current_time
+                self.detect_vff_time = current_time
                 self.largest_contour = pixels  
 
             # Ya ha sido detectado
@@ -159,11 +164,21 @@ class CameraTFv4Node(Node):
             # Dibuja el contorno más grande en la imagen
             cv2.drawContours(newframe, [self.largest_contour], -1, (0, 255, 0), 2)
             # Comprobar si han pasado 3 segundos
-            if (current_time - self.detect_time) > 1.0:
+            if (current_time - self.detect_time) > 3.0:
                 # Convertir las coordenadas al formato del publicador 
                 polygon_coords = self.convert_coords(self.largest_contour)
 
-                self.reset_detection()  # Reinicia la detección
+                #self.reset_detection()  # Reinicia la detección
+
+            # Publica las coordenadas para el movimiento de vff
+            if (current_time - self.detect_vff_time) > 1.0:
+                # Convertir las coordenadas al formato del publicador 
+                polygon_vff_coords = self.convert_coords(self.largest_contour)
+
+                #self.reset_detection()  # Reinicia la detección
+
+            if (current_time - self.detect_time) > 3.0 and (current_time - self.detect_vff_time) > 1.0:
+                self.reset_detection()
 
         # No se ha encontrado un contorno
         else:  
@@ -175,6 +190,8 @@ class CameraTFv4Node(Node):
         # Publicar las coordenadas y que el nodo de pinhole las convierta
         self.polygon_publisher.publish(polygon_coords)
 
+        self.polygon_vff_publisher.publish(polygon_vff_coords)
+
         # Convertir y publicar la imagen
         ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(newframe, encoding="bgr8")
 
@@ -183,6 +200,7 @@ class CameraTFv4Node(Node):
     def reset_detection(self):
         self.detected = False
         self.detect_time = 0
+        self.detect_vff_time = 0
         self.largest_contour = None
 
     def convert_coords(self, coords):

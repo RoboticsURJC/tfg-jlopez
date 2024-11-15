@@ -88,6 +88,8 @@ class CameraVFFNode(Node):
             # Calcular la distancia al bache
             distance = math.sqrt((pothole_x - self.robot_position[0]) ** 2 +
                                      (pothole_y - self.robot_position[1]) ** 2)
+
+            #print(distance)
    
             # si el bache está a menos de 20 cm aplicar la repulsión 
             if pothole_x < 200.0:  
@@ -97,12 +99,12 @@ class CameraVFFNode(Node):
                                                   pothole_x - self.robot_position[0])
 
                 # Descomponer la fuerza en componentes x e y
-                #repulsive_force[0] -= force_magnitude * math.cos(angle_to_pothole)
-                #repulsive_force[1] -= force_magnitude * math.sin(angle_to_pothole)
+                repulsive_force[0] -= force_magnitude * math.cos(angle_to_pothole)
+                repulsive_force[1] -= force_magnitude * math.sin(angle_to_pothole)
 
                 # La fuerza  repulsiva queda (y, -x)
-                repulsive_force[0] -= force_magnitude * math.sin(angle_to_pothole)
-                repulsive_force[1] += force_magnitude * math.cos(angle_to_pothole)
+                #repulsive_force[0] -= force_magnitude * math.sin(angle_to_pothole)
+                #repulsive_force[1] += force_magnitude * math.cos(angle_to_pothole)
 
         return repulsive_force
 

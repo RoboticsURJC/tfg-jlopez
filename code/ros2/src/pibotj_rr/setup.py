@@ -11,7 +11,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name, ['launch/robot.launch.py']),
+        ('share/' + package_name, ['launch/robot_teleop.launch.py']),
+        ('share/' + package_name, ['launch/robot_vff.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -53,19 +54,26 @@ setup(
             # nodo que publica cámara + modelo pin hole (usando post-it)          
             'camera_pinhole_node = pibotj_rr.camera_pinhole_node:main',
 
-            # nodo que publica cámara + modelo pin Hole + área funcionando
+            # nodo que publica cámara + modelo pin Hole + área funcionando + min coords
             'camera_pinholev2_node = pibotj_rr.camera_pinholev2_node:main',
+
+            # nodo que publica cámara + modelo pin Hole + área funcionando
+            'camera_pinhole_web_node = pibotj_rr.camera_pinhole_web_node:main',
+
+            # nodo que publica cámara + modelo pin Hole + min coords
+            'camera_pinhole_vff_node = pibotj_rr.camera_pinhole_vff_node:main',
 
             # nodo controlador para controlar los motores por la interfaz web
             'motors_controller_web_node = pibotj_rr.motors_controller_web_node:main',
 
-            # nodo controlador para controlar los motores en el entorno controlado
+            # nodo controlador para controlar los motores en el entorno controlado (fórnula lenta)
             'motors_vff_node = pibotj_rr.motors_vff_node:main',
 
-            # nodo controlador para controlar los motores en el entorno controlado
-            # PROBANDO DE OTRA FORMA
-            'motors_vffv2_node = pibotj_rr.motors_vffv2_node:main'
+            # nodo controlador para controlar los motores en el entorno controlado (fórmula rápida)
+            'motors_vffv2_node = pibotj_rr.motors_vffv2_node:main',
 
+            # Prueba BORRRARLO
+            'motors_vffv3_node = pibotj_rr.motors_vffv3_node:main'
         ],
     },
 )
