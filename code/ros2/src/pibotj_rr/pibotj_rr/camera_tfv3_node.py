@@ -10,6 +10,15 @@ import signal
 import sys
 import time
 from geometry_msgs.msg import Polygon, Point32
+import csv
+
+# Ruta del archivo CSV donde se guardarán los datos
+#csv_file = "valoresc1.csv"
+
+# Crear el archivo CSV y escribir el encabezado
+#with open(csv_file, mode='w', newline='') as file:
+#    writer = csv.writer(file)
+#    writer.writerow(["Valor máscara", "Valor EMA"])  # Encabezado
 
 
 class CameraTFv3Node(Node):
@@ -124,11 +133,16 @@ class CameraTFv3Node(Node):
         # se usa media móvil exponencial para reducir los picos
         ema_value_updated_class0 = self.update_ema(max_value_class0)
 
-        ema_value_updated_class1= self.update_ema(max_value_class1)
+        ema_value_updated_class1 = self.update_ema(max_value_class1)
 
-        print("el valor de la clase 0 es: " + str(ema_value_updated_class0))
-        print("el valor de la clase 1 es: " + str(ema_value_updated_class1))
+        #print("el valor de la clase 0 es: " + str(ema_value_updated_class0))
+        #print("el valor de la clase 1 es: " + str(ema_value_updated_class1))
 
+        #print(f"Valor máscara: {max_value_class1}, EMA Clase 1: {ema_value_updated_class1}")
+
+        #with open(csv_file, mode='a', newline='') as file:
+        #    writer = csv.writer(file)
+        #    writer.writerow([max_value_class1, ema_value_updated_class1])
 
         newframe = resized_frame.copy()
         polygon_coords = Polygon()

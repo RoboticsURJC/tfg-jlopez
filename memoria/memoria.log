@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  15 NOV 2024 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  15 NOV 2024 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2618,12 +2618,12 @@ Package pdftex.def Info: figs/cap7/GraficaC0.png  used on input line 122.
 LaTeX Info: Redefining \. on input line 129.
 LaTeX Info: Redefining \% on input line 129.
 [88 <./figs/cap7/GraficaC0.png>]
-<figs/cap7/GraficaC1.png, id=2230, 722.7pt x 433.62pt>
+<figs/cap7/GraficaC1.png, id=2231, 722.7pt x 433.62pt>
 File: figs/cap7/GraficaC1.png Graphic file (type png)
 <use figs/cap7/GraficaC1.png>
 Package pdftex.def Info: figs/cap7/GraficaC1.png  used on input line 132.
 (pdftex.def)             Requested size: 426.79134pt x 256.07838pt.
-<figs/cap7/contornoerror.png, id=2235, 885.3075pt x 891.33pt>
+<figs/cap7/contornoerror.png, id=2236, 885.3075pt x 891.33pt>
 File: figs/cap7/contornoerror.png Graphic file (type png)
 <use figs/cap7/contornoerror.png>
 Package pdftex.def Info: figs/cap7/contornoerror.png  used on input line 147.
@@ -2643,7 +2643,7 @@ Package pdftex.def Info: figs/cap6/contornobache1.png  used on input line 173.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/cap7/exppinhole.png, id=2249, 1792.6975pt x 889.3225pt>
+<figs/cap7/exppinhole.png, id=2251, 1792.6975pt x 889.3225pt>
 File: figs/cap7/exppinhole.png Graphic file (type png)
 <use figs/cap7/exppinhole.png>
 Package pdftex.def Info: figs/cap7/exppinhole.png  used on input line 197.
@@ -2654,13 +2654,13 @@ LaTeX Info: Redefining \% on input line 201.
 LaTeX Info: Redefining \. on input line 207.
 LaTeX Info: Redefining \% on input line 207.
  [91 <./figs/cap7/exppinhole.png>]
-<figs/cap7/memidasbacheteorico.jpeg, id=2276, 2055.68pt x 1072.005pt>
+<figs/cap7/memidasbacheteorico.jpeg, id=2278, 2055.68pt x 1072.005pt>
 File: figs/cap7/memidasbacheteorico.jpeg Graphic file (type jpg)
 <use figs/cap7/memidasbacheteorico.jpeg>
 Package pdftex.def Info: figs/cap7/memidasbacheteorico.jpeg  used on input line
  210.
 (pdftex.def)             Requested size: 341.43306pt x 178.05093pt.
-<figs/cap7/capturavideolazada.png, id=2280, 1927.2pt x 1084.05pt>
+<figs/cap7/capturavideolazada.png, id=2282, 1927.2pt x 1084.05pt>
 File: figs/cap7/capturavideolazada.png Graphic file (type png)
 <use figs/cap7/capturavideolazada.png>
 Package pdftex.def Info: figs/cap7/capturavideolazada.png  used on input line 2
@@ -2680,7 +2680,7 @@ LaTeX Info: Redefining \% on input line 262.
 LaTeX Warning: Reference `fig:expteleop' on page 93 undefined on input line 265
 .
 
-<figs/cap7/esquema_nodos_teleop_ampliado.png, id=2295, 1366.10374pt x 910.40125
+<figs/cap7/esquema_nodos_teleop_ampliado.png, id=2297, 1366.10374pt x 910.40125
 pt>
 File: figs/cap7/esquema_nodos_teleop_ampliado.png Graphic file (type png)
 <use figs/cap7/esquema_nodos_teleop_ampliado.png>
@@ -2702,7 +2702,7 @@ Underfull \hbox (badness 2790) in paragraph at lines 295--296
 LaTeX Info: Redefining \. on input line 296.
 LaTeX Info: Redefining \% on input line 296.
 [93 <./figs/cap7/capturavideolazada.png>]
-<figs/cap7/esquema_nodos_vff_ampliado.png, id=2305, 1446.40375pt x 888.31876pt>
+<figs/cap7/esquema_nodos_vff_ampliado.png, id=2307, 1446.40375pt x 888.31876pt>
 
 File: figs/cap7/esquema_nodos_vff_ampliado.png Graphic file (type png)
 <use figs/cap7/esquema_nodos_vff_ampliado.png>
@@ -2758,7 +2758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
  [101]
-<figs/cap6/vl.png, id=2381, 493.845pt x 309.155pt>
+<figs/cap6/vl.png, id=2383, 493.845pt x 309.155pt>
 File: figs/cap6/vl.png Graphic file (type png)
 <use figs/cap6/vl.png>
 Package pdftex.def Info: figs/cap6/vl.png  used on input line 81.
@@ -2769,7 +2769,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<figs/cap6/pycoralinstalled.png, id=2383, 800.9925pt x 503.8825pt>
+<figs/cap6/pycoralinstalled.png, id=2385, 800.9925pt x 503.8825pt>
 File: figs/cap6/pycoralinstalled.png Graphic file (type png)
 <use figs/cap6/pycoralinstalled.png>
 Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 116
@@ -2824,7 +2824,7 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 Here is how much of TeX's memory you used:
  32381 strings out of 480112
  602187 string characters out of 5892631
- 1208864 words of memory out of 5000000
+ 1208928 words of memory out of 5000000
  48841 multiletter control sequences out of 15000+600000
  477090 words of font info for 56 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
@@ -2845,10 +2845,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on memoria.pdf (128 pages, 56461947 bytes).
+Output written on memoria.pdf (128 pages, 56462172 bytes).
 PDF statistics:
- 2805 PDF objects out of 2984 (max. 8388607)
- 2390 compressed objects within 24 object streams
+ 2807 PDF objects out of 2984 (max. 8388607)
+ 2392 compressed objects within 24 object streams
  787 named destinations out of 1000 (max. 500000)
  1351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -29,10 +29,10 @@ class CameraPinHoleClass(Node):
             rclpy.shutdown()
             sys.exit(1)  # Exit with an error code
 
-        self.bridgeObject = CvBridge()
-        self.topicNameFrames = 'camera_pinhole'
-        self.queueSize = 20
-        self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
+        #self.bridgeObject = CvBridge()
+        #self.topicNameFrames = 'camera_pinhole'
+        #self.queueSize = 20
+        #self.publisher = self.create_publisher(Image, self.topicNameFrames, self.queueSize)
         self.periodCommunication = 0.1  # Reduce to 10 Hz for stability
         self.timer = self.create_timer(self.periodCommunication, self.timer_callbackFunction)
         self.i = 0
@@ -53,8 +53,8 @@ class CameraPinHoleClass(Node):
         
         self.getPoints(frame)
 
-        ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
-        self.publisher.publish(ROSImageMessage)
+        #ROSImageMessage = self.bridgeObject.cv2_to_imgmsg(frame, encoding="bgr8")
+        #self.publisher.publish(ROSImageMessage)
         #self.get_logger().info('Publishing image number %d' % self.i)
         #self.i += 1
 
