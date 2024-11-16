@@ -275,23 +275,17 @@ Para ejecutar a PiBotJ de forma teleoperada, hay que ejecutar el \textit{launche
 	\label{fig:nodosteleop}
 \end{figure}
  
-El nodo \verb|gps_node| publica la posición del robot(\verb|/gps_data|). Para poder controlar la cámara, se ha creado el nodo \verb|camera_tfv3_node| que publica la imagen de la cámara con la detección del bache (\verb|/camera_tf3|), se usa para la depuración, y se publica las coordenadas del contorno en el sistema de coordenadas de la imagen (\verb|/pothole_coords|). El nodo \verb|camera_pinhole_web_node| se suscribe a las coordenadas publicadas para poder convertir dichas coordenadas en el sistema de coordenadas del mundo real y poder calcular su área (\verb|/area_calculated|), que será publicada. La interfaz web se suscribirá al aŕea calculado y a los datos del gps para poder mostrar por pantalla el volumen estimado junto con su posisción. Por otro lado, la interfaz web publica el movimento de las ruedas (\verb|/move_controller|), a lo que que el nodo \verb|motors_controller_web_node| se suscribirá a él para poder mover las ruedas según el movimiento comandado. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expteleop}).
+El nodo \verb|gps_node| publica la posición del robot(\verb|/gps_data|). Para poder controlar la cámara, se ha creado el nodo \verb|camera_tfv3_node| que publica la imagen de la cámara con la detección del bache (\verb|/camera_tf3|), se usa para la depuración, y se publica las coordenadas del contorno en el sistema de coordenadas de la imagen (\verb|/pothole_coords|). El nodo \verb|camera_pinhole_web_node| se suscribe a las coordenadas publicadas para poder convertir dichas coordenadas en el sistema de coordenadas del mundo real y poder calcular su área (\verb|/area_calculated|), que será publicada. La interfaz web se suscribirá al aŕea calculado y a los datos del gps para poder mostrar por pantalla el volumen estimado junto con su posisción. Por otro lado, la interfaz web publica el movimento de las ruedas (\verb|/move_controller|), a lo que que el nodo \verb|motors_controller_web_node| se suscribirá a él para poder mover las ruedas según el movimiento comandado. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{https://www.youtube.com/watch?v=qGbJ7IGwjWk}} (Figura \ref{fig:expteleop}).
 %% Capturas de pantalla del video 
 
-%\begin{figure}[ht!]
-%	\centering
-%	\begin{minipage}{0.4\linewidth}
-	%		\centering
-	%		\includegraphics[width=\linewidth]{figs/cap7/pruebanegra.png}
-	%	\end{minipage}
-%	\hspace{1cm}
-%	\begin{minipage}{0.40\linewidth}
-	%		\centering
-	%		\includegraphics[width=\linewidth]{figs/cap7/pruebaazul.png}
-	%	\end{minipage}
-%	\caption{Versiones previas de impresión}
-%	\label{fig:expteleop}
-%\end{figure}
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=15cm]{figs/cap7/teleop_final.png}
+	\end{center}
+	\caption{Captura del video del modo teleoperado}
+	\label{fig:expteleop}
+\end{figure}
 
 
 \subsection{Autónomo}
