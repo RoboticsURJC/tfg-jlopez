@@ -265,7 +265,7 @@ A continuación se pueden apreciar los dos ejemplos creados que engloban las pos
 
 \subsection{Teleoperado}
 
-Para ejecutar a PiBotJ de forma teleoperada, hay que ejecutar el \textit{launcher}: \verb|ros2 launch pibotj_rr robot_teleop.launch.py|. Dentro del \textit{launcher} se puede distinguir una serie de nodos conectados, como muestra la Figura \ref{fig:nodosteleop}. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expteleop}). 
+Para ejecutar a PiBotJ de forma teleoperada, hay que ejecutar el \textit{launcher}: \verb|ros2 launch pibotj_rr robot_teleop.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/launch/robot_teleop.launch.py}}. Dentro del \textit{launcher} se puede distinguir una serie de nodos conectados, como muestra la Figura \ref{fig:nodosteleop}. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -275,6 +275,7 @@ Para ejecutar a PiBotJ de forma teleoperada, hay que ejecutar el \textit{launche
 	\label{fig:nodosteleop}
 \end{figure}
  
+El nodo \verb|gps_node| publica la posición del robot(\verb|/gps_data|). Para poder controlar la cámara, se ha creado el nodo \verb|camera_tfv3_node| que publica la imagen de la cámara con la detección del bache (\verb|/camera_tf3|), se usa para la depuración, y se publica las coordenadas del contorno en el sistema de coordenadas de la imagen (\verb|/pothole_coords|). El nodo \verb|camera_pinhole_web_node| se suscribe a las coordenadas publicadas para poder convertir dichas coordenadas en el sistema de coordenadas del mundo real y poder calcular su área (\verb|/area_calculated|), que será publicada. La interfaz web se suscribirá al aŕea calculado y a los datos del gps para poder mostrar por pantalla el volumen estimado junto con su posisción. Por otro lado, la interfaz web publica el movimento de las ruedas (\verb|/move_controller|), a lo que que el nodo \verb|motors_controller_web_node| se suscribirá a él para poder mover las ruedas según el movimiento comandado. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expteleop}).
 %% Capturas de pantalla del video 
 
 %\begin{figure}[ht!]
@@ -295,7 +296,7 @@ Para ejecutar a PiBotJ de forma teleoperada, hay que ejecutar el \textit{launche
 
 \subsection{Autónomo}
 
-Para ejecutar a PiBotJ de forma autónoma, hay que ejecutar el \textit{launcher}: \verb|ros2 launch pibotj_rr robot_vff.launch.py|. Dentro del \textit{launcher} se puede distinguir una serie de nodos conectados, como muestra la Figura \ref{fig:nodosvff}. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expvff}). 
+Para ejecutar a PiBotJ de forma autónoma, hay que ejecutar el \textit{launcher}: \verb|ros2 launch pibotj_rr robot_vff.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/launch/robot_vff.launch.py}}. Dentro del \textit{launcher} se puede distinguir una serie de nodos conectados, como muestra la Figura \ref{fig:nodosvff}. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expvff}). 
 
 \begin{figure} [h!]
 	\begin{center}
