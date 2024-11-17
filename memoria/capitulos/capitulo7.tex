@@ -275,7 +275,7 @@ Para ejecutar a PiBotJ de forma teleoperada, hay que ejecutar el \textit{launche
 	\label{fig:nodosteleop}
 \end{figure}
  
-El nodo \verb|gps_node| publica la posición del robot(\verb|/gps_data|). Para poder controlar la cámara, se ha creado el nodo \verb|camera_tfv3_node| que publica la imagen de la cámara con la detección del bache (\verb|/camera_tf3|), se usa para la depuración, y se publica las coordenadas del contorno en el sistema de coordenadas de la imagen (\verb|/pothole_coords|). El nodo \verb|camera_pinhole_web_node| se suscribe a las coordenadas publicadas para poder convertir dichas coordenadas en el sistema de coordenadas del mundo real y poder calcular su área (\verb|/area_calculated|), que será publicada. La interfaz web se suscribirá al aŕea calculado y a los datos del gps para poder mostrar por pantalla el volumen estimado junto con su posisción. Por otro lado, la interfaz web publica el movimento de las ruedas (\verb|/move_controller|), a lo que que el nodo \verb|motors_controller_web_node| se suscribirá a él para poder mover las ruedas según el movimiento comandado. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{https://www.youtube.com/watch?v=qGbJ7IGwjWk}} (Figura \ref{fig:expteleop}).
+El nodo \verb|gps_node| publica la posición del robot (\verb|/gps_data|). Para poder controlar la cámara, se ha creado el nodo \verb|camera_tfv3_node| que publica la imagen de la cámara con la detección del bache (\verb|/camera_tf3|), se usa para la depuración, y se publica las coordenadas del contorno en el sistema de coordenadas de la imagen (\verb|/pothole_coords|). El nodo \verb|camera_pinhole_web_node| se suscribe a las coordenadas publicadas para poder convertir dichas coordenadas en el sistema de coordenadas del mundo real y poder calcular su área (\verb|/area_calculated|), que será publicada. La interfaz web se suscribirá al aŕea calculado y a los datos del gps para poder mostrar por pantalla el volumen estimado junto con su posición. Por otro lado, la interfaz web publica el movimento de las ruedas (\verb|/move_controller|), a lo que que el nodo \verb|motors_controller_web_node| se suscribirá a él para poder mover las ruedas según el movimiento comandado. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{https://www.youtube.com/watch?v=qGbJ7IGwjWk}} (Figura \ref{fig:expteleop}).
 %% Capturas de pantalla del video 
 
 
@@ -290,7 +290,8 @@ El nodo \verb|gps_node| publica la posición del robot(\verb|/gps_data|). Para p
 
 \subsection{Autónomo}
 
-Para ejecutar a PiBotJ de forma autónoma, hay que ejecutar el \textit{launcher}: \verb|ros2 launch pibotj_rr robot_vff.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/launch/robot_vff.launch.py}}. Dentro del \textit{launcher} se puede distinguir una serie de nodos conectados, como muestra la Figura \ref{fig:nodosvff}. Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expvff}). 
+Para ejecutar a PiBotJ de forma autónoma, hay que ejecutar el \textit{launcher}: \verb|ros2 launch pibotj_rr robot_vff.launch.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/launch/robot_vff.launch.py}}. Dentro del \textit{launcher} se puede distinguir una serie de nodos conectados, como muestra la Figura \ref{fig:nodosvff}. 
+
 
 \begin{figure} [h!]
 	\begin{center}
@@ -300,20 +301,23 @@ Para ejecutar a PiBotJ de forma autónoma, hay que ejecutar el \textit{launcher}
 	\label{fig:nodosvff}
 \end{figure}
 
-%% Capturas de pantalla del video 
 
-%\begin{figure}[ht!]
-%	\centering
-%	\begin{minipage}{0.4\linewidth}
-	%		\centering
-	%		\includegraphics[width=\linewidth]{figs/cap7/pruebanegra.png}
-	%	\end{minipage}
-%	\hspace{1cm}
-%	\begin{minipage}{0.40\linewidth}
-	%		\centering
-	%		\includegraphics[width=\linewidth]{figs/cap7/pruebaazul.png}
-	%	\end{minipage}
-%	\caption{Versiones previas de impresión}
-%	\label{fig:expvff}
+El nodo \verb|gps_node| publica la posición del robot (\verb|/gps_data|). Para poder controlar la cámara, se ha creado el nodo \verb|camera_tfv4_node| que publica la imagen de la cámara con la detección del bache (\verb|/camera_tf4|) y se publica dos veces las coordenadas del contorno en el sistema de coordenadas de la imagen (\verb|/pothole_coords| y \verb|/pothole_vff_coords|). La diferencia que existe entre cada \textit{topic} es que la primera se publica cada dos segundos y la segunda cada segundo. El nodo \verb|camera_pinhole_web_node| se suscribe a las coordenadas publicadas (\verb|/pothole_coords|) para poder convertir dichas coordenadas en el sistema de coordenadas del mundo real y poder calcular su área (\verb|/area_calculated|), que será publicada. La interfaz web se suscribirá al aŕea calculado y a los datos del gps para poder mostrar por pantalla el volumen estimado junto con su posición. 
+
+Por otro lado, el nodo \verb|camera_pinhole_vff_node| se suscribe a las coordenadas publicadas (\verb|pothole_vff_node|) para convertirlas en el sistema de coordendas del mundo real hasta encontrar la coordenada que se encuentra más cerca del robot (usando el eje X) para posteriormente ser publicada (\verb|/min_coords|). Es el nodo \verb|camera_vff_node| quien se suscriba a la coordenda menor para poder aplicar el algoritmo vff y que finalmente se pueda publicar una velocidad resultante (\verb|vff_vel|). 
+
+Para completar el comportamiento final, el nodo \verb|camera_dl_node| se suscribe a la imagen con la detección del bache para poder aplicar un filtro de detección de líneas. Se publica la imagen con el filtro aplicado (\verb|camera_dl|), usado para depuración, y una velocidad resultante (\verb|\dl_vel|), dependiendo de la situación.
+
+Finalmente, es el nodo \verb|motors_vffv2_node| quien se suscribirá a las dos velocidades y dará prioridad a detectar el bache antes que detectar las líneas, para aplicar la velocidad adecuada a los motores, usando mecanismos de sincronización.
+
+Una ejecución completa de este ejemplo, se puede apreciar en este video\footnote{\url{}} (Figura \ref{fig:expvfffinal}). 
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=15cm]{figs/cap7/teleop_final.png}
+%	\end{center}
+%	\caption{Captura del video del modo teleoperado}
+%	\label{fig:expvfffinal}
 %\end{figure}
+
 
