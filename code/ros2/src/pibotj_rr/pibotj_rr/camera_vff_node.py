@@ -68,9 +68,17 @@ class CameraVFFNode(Node):
         else:
             angle = 0.0  # Reiniciar si ha pasado más de 1 segundo sin cambios
 
+        # para evitar que vaya para atrás
+        #if angle > 0.0:
+        #    angle = 0.5
+        #elif angle < 0.0:
+        #    angle = -0.5
+
         twist = Twist()
         twist.linear.x = linear_speed
         twist.angular.z = angle 
+
+        #print(twist)
 
         self.vel_publisher.publish(twist)
 

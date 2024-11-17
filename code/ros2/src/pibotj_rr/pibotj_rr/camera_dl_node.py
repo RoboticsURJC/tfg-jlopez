@@ -76,7 +76,7 @@ class CameraDLNode(Node):
 
             self.reset_detection()
 
-            print("Seguir recto")
+            #print("Seguir recto")
             twist.linear.x = 0.5  
             twist.angular.z = 0.0  
 
@@ -91,7 +91,7 @@ class CameraDLNode(Node):
             #for position in line_positions:
             cX, cY = line_positions[0]
             if cX < width // 3:
-                print("Línea detectada a la izquierda")
+                #print("Línea detectada a la izquierda")
                 # gira hacia la derecha
                 # angular es NEGATIVA
                 twist.linear.x = 0.5  
@@ -100,7 +100,7 @@ class CameraDLNode(Node):
 
 
             elif cX > (2 * width) // 3:
-                print("Línea detectada a la derecha")
+                #print("Línea detectada a la derecha")
                 # gira hacia la izquierda
                 # angular es POSITIVA
                 twist.linear.x = 0.5  
@@ -108,7 +108,7 @@ class CameraDLNode(Node):
                 twist.angular.z = 0.5 
 
             else:
-                print("Línea detectada en el centro")
+                #print("Línea detectada en el centro")
                 # seguir recto
                 # lineal: 0.5
                 # angular 0.0
@@ -116,7 +116,7 @@ class CameraDLNode(Node):
                 twist.angular.z = 0.0
 
         if(num_lines_detected == 0): 
-            print("Seguir recto durante 3s y luego girar")
+            #print("Seguir recto durante 3s y luego girar")
             
             # durante 3 segundos y empezar a girar 
             if not self.detected:

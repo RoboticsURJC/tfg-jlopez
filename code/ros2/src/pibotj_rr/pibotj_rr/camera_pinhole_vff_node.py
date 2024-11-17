@@ -76,7 +76,7 @@ class CameraPinHoleVFFClass(Node):
         # publica la coordenada que está detectada más cerca del robot
         pose = Pose2D()
         pose = self.get_min_coords(array3D)
-        print(pose)
+        #print(pose)
         self.min_coords_publisher.publish(pose)
 
         #area = 0

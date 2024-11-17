@@ -67,15 +67,16 @@ class MotorsVFFV2Node(Node):
     def move_motors(self):
         if self.vff_angular_vel != 0.0 and self.vff_vel is not None:
             # Prioridad para el VFF
-            print("VFF")
+            #print("VFF")
             self.set_vel(self.vff_vel)
         elif self.dl_vel is not None:
             # Prioridad para DL si no hay rotación angular con VFF
-            print("DL")
+            #print("DL")
             self.set_vel(self.dl_vel)
 
     def set_vel(self, vel):
         # Asegúrate de que vel no es None y contiene valores válidos
+        #print(vel.angular.z)
         if vel is not None:
             lvalue = 0
             rvalue = 0
@@ -83,25 +84,25 @@ class MotorsVFFV2Node(Node):
 
                 if vel.angular.z > 0:
                     # gira hacia la izquierda
-                    print("girar hacia la izquierda")
+                    #print("girar hacia la izquierda")
                     lvalue = 0.0
                     rvalue = self.set_right_duty_value(abs(vel.angular.z))
 
                 elif vel.angular.z < 0:
                     # gira hacia la derecha
-                    print("girar hacia la derecha")
+                    #print("girar hacia la derecha")
                     lvalue = self.set_left_duty_value(abs(vel.angular.z))
                     rvalue = 0.0
 
                 else: 
                     # va recto
-                    print("ir recto")
+                    #print("ir recto")
                     #lvalue = 12.5
                     #rvalue = 2.5
                     lvalue = self.set_left_duty_value(abs(vel.linear.x))
                     rvalue = self.set_right_duty_value(abs(vel.linear.x))
 
-                print("Motor izquierdo " + str(abs(lvalue)) + " Motor derecho " + str(abs(rvalue)))
+                #print("Motor izquierdo " + str(abs(lvalue)) + " Motor derecho " + str(abs(rvalue)))
                 self.set_motors_vel(abs(lvalue),abs(rvalue))
             else: 
                 self.stop()

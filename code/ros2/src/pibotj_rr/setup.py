@@ -70,10 +70,8 @@ setup(
             'motors_vff_node = pibotj_rr.motors_vff_node:main',
 
             # nodo controlador para controlar los motores en el entorno controlado (fórmula rápida)
-            'motors_vffv2_node = pibotj_rr.motors_vffv2_node:main',
+            'motors_vffv2_node = pibotj_rr.motors_vffv2_node:main'
 
-            # Prueba BORRRARLO
-            'motors_vffv3_node = pibotj_rr.motors_vffv3_node:main'
         ],
     },
 )

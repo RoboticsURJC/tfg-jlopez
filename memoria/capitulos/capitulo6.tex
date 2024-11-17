@@ -755,7 +755,7 @@ Siendo $\alpha$  el valor de grado de disminución de ponderación, $Y_t$ el val
 \subsubsection{Obtención del contorno y coordenadas}
 \label{subsec:contornoycoordenadas}
 
-Después de saber si en una imagen había bache o no, se consideraría bache si la detección ocurre durante 3 segundos sin interrupciones. Una vez pasado ese tiempo, había que publicar los píxeles asociados a ese contorno. 
+Después de saber si en una imagen había bache o no, se consideraría bache si la detección ocurre durante 2 segundos sin interrupciones. Una vez pasado ese tiempo, había que publicar los píxeles asociados a ese contorno. 
 
 Para conseguir los píxeles, se toma la máscara binarizada usando el umbral definido previamente de 0.6. De esa forma, es posible encontrar los píxeles del contorno más grande de la máscara pero, esos píxeles están en base a las dimensiones de la máscara que es de 48x48 píxeles; así que, es necesario aplicar un factor de escala para que los píxeles estén en base a la imagen que es de 192x192 píxeles. Se puede ver un resultado final del contorno detectado en la Figura \ref{fig:contornobache}.
   
