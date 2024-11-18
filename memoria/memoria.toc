@@ -97,17 +97,17 @@
 \contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{93}{section.7.7}%
 \contentsline {subsection}{\numberline {7.7.1}Teleoperado}{94}{subsection.7.7.1}%
 \contentsline {subsection}{\numberline {7.7.2}Autónomo}{95}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{97}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{97}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivos}{97}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Requisitos}{98}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{99}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Líneas futuras}{100}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{101}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{101}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{102}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{102}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{103}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{104}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{107}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{108}{appendix*.164}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{98}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{98}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivos}{98}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Requisitos}{99}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{100}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{101}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{102}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{102}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{103}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{103}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{104}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{105}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{108}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{109}{appendix*.165}%
