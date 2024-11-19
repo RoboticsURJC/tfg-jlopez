@@ -95,8 +95,8 @@
 \contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{91}{section.7.5}%
 \contentsline {section}{\numberline {7.6}VFF}{92}{section.7.6}%
 \contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{93}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Teleoperado}{94}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Autónomo}{95}{subsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.7.1}Navegación teleoperada}{94}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Navegación autónoma}{95}{subsection.7.7.2}%
 \contentsline {chapter}{\numberline {8}Conclusiones}{98}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{98}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Objetivos}{98}{subsection.8.1.1}%
