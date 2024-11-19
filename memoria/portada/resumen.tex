@@ -3,16 +3,18 @@
 \chapter*{Resumen\markboth{Resumen}{Resumen}}
 
 % Un primer párrafo para dar contexto sobre la temática que rodea al trabajo.
-La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots. De todos los tipos de robots que existen, interesa destacar a los robots de campo que son capaces de operar en entornos no estructurados y difíciles, pero son de elevado coste. Es por ello que la robótica de bajo coste, campo creado para hacer robots económicos, accesibles y fáciles de producir, permita ser una solución a este problema.
+La robótica es el campo de la ingeniería que se enfoca en el diseño, la construcción y la programación de robots. De todos los tipos de robots que existen cabe destacar los robots de campo que son capaces de operar en entornos no estructurados y difíciles, pero estos son de elevado coste. Es por ello que, bajo el prisma de la robótica \textit{low cost}, campo creado para hacer robots económicos, accesibles y fáciles de producir, se puede idear una solución a este problema.
 
 % Un segundo párrafo concretando el contexto del problema abordado.
-Las carreteras son una de las infraestructuras que necesitan un constante mantenimiento y que ello conlleva un reto logístico y económico. Además, ese mantenimiento siempre ha dependido de un equipo de trabajadores expuestos a altos riesgos mientras realizan tareas laboriosas.
+%Las carreteras son una de las infraestructuras que necesitan un constante mantenimiento y que ello conlleva un reto logístico y económico. Además, ese mantenimiento siempre ha dependido de un equipo de trabajadores expuestos a altos riesgos mientras realizan tareas laboriosas.
 
 % En el tercer párrafo, comenta cómo has resuelto la problemática descrita en el anterior párrafo.
-El presente trabajo pretende solucionar este problema diseñando un robot que permita la detección de baches y se calcule su volumen estimado, todo ello almacenado en una interfaz web, para que la persona de mantenimiento pueda operar cuando estime oportuno.  
+Una de las aplicaciones de los robots de campo es el mantenimiento de carreteras. El presente trabajo pretende solucionar este problema diseñando un robot de bajo coste que permita la detección de baches, almacene su localización, vía GPS, y calcule el volumen de estos. Además, se ha desarrollado toda una interfaz web, para que la persona de mantenimiento pueda gestionar el mantenimiento de forma cómoda e intuitiva.
 
-El diseño en 3D se ha realizado usando herramientas de \textit{software} libre, su impresión se ha hecho en cualquiera impresora convencional y sus componentes \textit{hardware} se pueden encontrar fácilmente en internet. Además, se ha desarrollado una versión de este robot en simulación, a la que se le ha insertado un sistema creado con ROS 2 control. Por otro lado, para el robot físico se decidió desarrollar software para conseguir el objetivo principal, usando distintas tecnologías y técnicas como: el aprendizaje supervisado, \acs{TPU}, filtros de imagen, el modelo pinhole, el algoritmo de la lazada, \acs{VFF}, servidores web, entre otros.
+El prototipo robótico se ha diseñado en 3D, para lo que se han empleado herramientas de \textit{software} libre. Su impresión se ha hecho en una impresora convencional y sus componentes \textit{hardware} de terceros se pueden encontrar fácilmente en cualquier tienda de electrónica. Además, se ha desarrollado una versión de este robot en simulación, al que se le ha dado soporte en ROS 2. 
+
+Algunas de las técnicas empleadas en el robot físico para conseguir el objetivo principal, son: el aprendizaje supervisado, \ac{TPU}, filtros de imagen, el modelo pinhole, el algoritmo de la lazada, \ac{VFF}, servidores web, entre otros.
 
 % en este cuarto párrafo, describe cómo han ido los experimentos.
-Para conseguirlo se han realizado numerosos experimentos, evaluando cada componente tanto de forma individual como mostrando dos posibles soluciones completas. Una de esas soluciones es manejar el robot de forma teleoperada y la otra es que el robot se mueva de forma autónoma, usando una carretera adaptada como su medio de referencia.
+Numerosos son los experimentos realizados, tanto para evaluar cada componente de forma individual, como para afinar el comportamiento completo. Uno de los comportamientos supone manejar el robot de forma teleoperada, y, el otro, que el robot se mueva de forma autónoma, usando una carretera adaptada como su entorno de operatividad.
 
