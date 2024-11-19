@@ -3,7 +3,7 @@
 
 \begin{flushright}
 \begin{minipage}[]{10cm}
-\emph{La mente lo es todo. En lo que piensas, te conviertes}\\
+\emph{La mente lo es todo. En lo que piensas, te conviertes.}\\
 \end{minipage}\\
 
 Buda\\
@@ -11,7 +11,7 @@ Buda\\
 
 \vspace{1cm}
 
-En este último capítulo se van a detallar todos los objetivos y requisitos cumplidos; así como las competencias adquiridas a lo largo de todo el proyecto. Finalmente se concluirá la memoria exponiendo las posibles líneas futuras para el proyecto.
+En este último capítulo se van a detallar todos los objetivos y requisitos cumplidos, así como las competencias adquiridas a lo largo de todo el proyecto. Finalmente se describen algunas posibles líneas futuras que pueden dar continuidad a este proyecto.
 
 
 \section{Objetivos y requisitos cumplidos}
@@ -20,14 +20,14 @@ A continuación se van a explicar todos los objetivos y requisitos cumplidos a l
 
 \subsection{Objetivos}
 
-Es importante destacar que se ha conseguido cumplir con el objetivo principal de este trabajo fin de grado: crear un robot que, usando materiales de bajo coste, sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y sea capaz de estimar el área del bache para hacer una estimación media del volumen que ocupa dicho bache y poder ser tapado; todo ello registrado sobre una interfaz web. A decir verdad, se ha cumplido cada uno de los subobjetivos establecidos en la Sección \ref{sec:descripcion}:
+Se ha conseguido cumplir con el objetivo principal de este trabajo fin de grado; esto es, crear un robot que, usando materiales de bajo coste, sea capaz de navegar por las carreteras, detectar los baches que vaya encontrando y sea capaz de estimar el área del bache para hacer una estimación media del volumen que ocupa dicho bache y poder ser tapado; todo ello manipulable mediante una interfaz web. A su vez, se han cumplido todos los subobjetivos establecidos en la Sección \ref{sec:descripcion}:
 
 \begin{enumerate}
-	\item Se han investigado las soluciones robóticas actuales, encontrándose muchas de ellas en fase todavía de experimentación.
-	\item Se han seleccionado los componentes \textit{hardware} más adecuados para el robot, siendo  los elegidos, los de menor coste. Además, se ha sugerido distintas opciones para abaratar los costes así como, consejos para facilitar el diseño y robustez del robot. 
-	\item Se han analizado las diferentes opciones de diseño que gracias a los bocetos y maquetas, han permitido ir perfilando la idea del diseño hasta encontrar la solución final.
-	\item Se ha usado FreeCAD como herramienta de diseño \acs{CAD}, conocida como una de las herramientas de diseño libre. 
-	\item Como se ha explicado tanto en las Secciones \ref{sec:impresionmontaje} y \ref{sec:expimpresion3d}, en todas las pruebas de impresión se han usado materiales típicos de impresión 3D: tanto PLA como ABS.
+	\item Se han investigado las soluciones robóticas actuales al respecto, encontrándose muchas de ellas en fase todavía de experimentación.
+	\item Se han seleccionado los componentes \textit{hardware} más adecuados para el robot, siendo  los de menor coste, los elegidos. Además, se han sugerido distintas opciones para abaratar los costes, así como consejos para facilitar el diseño y robustez del robot. 
+	\item Se han analizado las diferentes opciones de diseño, que gracias a los bocetos y maquetas, han permitido ir perfilando la idea del diseño hasta encontrar la solución final.
+	\item Se ha usado FreeCAD como herramienta libre de diseño \acs{CAD}.
+	\item Como se ha explicado en las Secciones \ref{sec:impresionmontaje} y \ref{sec:expimpresion3d}, en todas las pruebas de impresión se han usado materiales comunes de impresión 3D: tanto PLA como ABS.
 	\item Se ha desarrollado  y contruido el robot tanto para simulación, usando URDF y ROS 2 Control, como en la vida real, configurando cada componente a bajo nivel.
 	\item Al robot se le ha dotado de nodos en ROS2 para conseguir aplicar el objetivo principal en la vida real.
 	\item Para demostrar la viabilidad del proyecto, se han realizado experimentos de cada uno de los componentes, así como se ha proporcionado dos posibles aplicaciones completas para poder usar el robot.  
@@ -41,9 +41,9 @@ También hay que destacar que se han satisfecho todos los requisitos propuestos 
 	\item El coste total de la fabricación del robot ha sido de 237,12€, siendo 250€ el límite establecido.
 	\item Todas las piezas diseñadas están pensadas para ser impresas en cualquier impresora 3D, habiéndose probado los diseños en dos impresoras distintas.
 	\item Se ha usado el sistema operativo Ubuntu con soporte a largo plazo, en distintas versiones, tanto para el ordenador como para el robot.
-	\item Para el entrenamiento de los modelos, se ha usado Google Colaboratory y así se cumple el requisito de no ser necesario disponer de ninguna tarjeta gráfica de uso dedicado para conseguirlo.
+	\item Para el entrenamiento de los modelos, se ha usado Google Colaboratory, y así se cumple el requisito de no ser necesario disponer de ninguna tarjeta gráfica de uso dedicado para conseguirlo.
 	\item Los modelos entrenados se han convertido al formato necesario para conseguir que funcione a pesar de las limitaciones hardware de Raspberry Pi y la PiCamera.
-	\item Para todo el proyecto, se ha usado ROS 2 para conseguir que sea un proyecto a largo plazo.
+	\item Para todo el proyecto se ha usado ROS 2 para que sea un proyecto reutilizable por una amplia comunidad de vecinos.
 \end{enumerate}
 
 \section{Habilidades desarrolladas}
@@ -53,16 +53,16 @@ Además de todas las competencias nombradas en la Sección \ref{sec:competencias
 \begin{itemize}
 	\item Se han adquirido conocimientos muy profundos sobre cómo investigar sobre un tema y cómo llevarlo a cabo.
 	\item Se han adquirido conocimientos profundos de la herramienta FreeCAD.
-	\item Se ha adquirido conocimientos sobre los parámetros a modificar en una impresión y las necesidad que esta necesita (ventanas cerradas, uso de laca, etc).
-	\item Se ha adquirido conocimientos sobre mecánica y ensamblaje de piezas. 
-	\item Se ha adquirido la habilidad de construir al robot en simulación.
-	\item Se ha adquirido conocimientos profundos sobre ROS2 Control.
-	\item Se ha adquirido el conocimiento de poder configurar y conocer a bajo nivel todos los componentes \textit{hardware}.
-	\item Se ha adquirido conocimientos profundos sobre direcciones IP, conexiones ssh y derivados.
-	\item Se ha adquirido la habilidad de implementar un modelo de aprendizaje supervisado sobre un dispositivo de limitaciones computacionales
-	\item Se ha adquirido conocimientos muy profundos sobre el sensor cámara y cómo extraer información de ella para finalmente conocer el aŕea del bache. 
-	\item Se ha adquirido habilidades sobre desarrollo de páginas web y cómo están relacionadas con ROS 2.
-	\item Se ha adquirido la habilidad de ser capaz de redactar y generar documentación de calidad.
+	\item Se han adquirido conocimientos sobre los parámetros a modificar en una impresión 3D y las necesidad que esta necesita (ventanas cerradas, uso de laca, etc).
+	\item Se han adquirido conocimientos sobre mecánica y ensamblaje de piezas. 
+	\item Se ha adquirido la habilidad de construir un robot en simulador.
+	\item Se han adquirido conocimientos profundos sobre ROS2 Control.
+	\item Se ha adquirido el conocimiento de poder configurar y conocer a bajo nivel todos los componentes \textit{hardware} que forman parte del robot.
+	\item Se han adquirido conocimientos profundos sobre direcciones IP, conexiones ssh y derivados.
+	\item Se ha adquirido la habilidad de implementar un modelo de aprendizaje supervisado sobre un dispositivo con cierta, limitación computacional, como es la Raspberry Pi. 
+	\item Se han adquirido conocimientos muy profundos sobre el modelado de un sensor cámara y cómo extraer información de ella para finalmente conocer el aŕea del bache. 
+	\item Se han adquirido habilidades sobre desarrollo de páginas web y cómo se comunican con ROS 2.
+	\item Se ha adquirido la habilidad de ser capaz de redactar y generar documentación de calidad en un lenguaje de confección de documentos científicos como es LaTeX.
 \end{itemize}
  
 
@@ -76,6 +76,6 @@ Finalmente, para permitir la continuidad de este proyecto, se han planteado una 
 	\item Integrar, configurar y dar soporte software al motor de la cámara.
 	\item Modificar la altura de la cámara para conseguir mayor alcance.
 	\item Continuar dando soporte a PiBotJ para mantenerlo actualizado en la última versión.
-	\item Conseguir implantar a PiBotJ como ayudante de mantenimiento y que en un futuro se pueda aplicar a las carreteras.
+	\item Conseguir implantar a PiBotJ como ayudante real de mantenimiento de carreteras.
 \end{itemize}
 

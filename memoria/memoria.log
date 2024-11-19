@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  19 NOV 2024 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  19 NOV 2024 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2796,8 +2796,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 [98
 
 ]
-LaTeX Info: Redefining \. on input line 46.
-LaTeX Info: Redefining \% on input line 46.
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
  [99]
 Underfull \hbox (badness 1303) in paragraph at lines 62--63
 []\OT1/cmr/m/n/12 Se ha adquirido la habilidad de implementar un modelo de apre
@@ -2806,7 +2806,13 @@ ndizaje
 
 LaTeX Info: Redefining \. on input line 75.
 LaTeX Info: Redefining \% on input line 75.
-[100])
+[100]
+Underfull \hbox (badness 1286) in paragraph at lines 79--80
+[]\OT1/cmr/m/n/12 Conseguir implantar a PiBotJ como ayudante real de mantenimie
+nto de
+ []
+
+)
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
  [101]
@@ -2912,7 +2918,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on memoria.pdf (130 pages, 61350541 bytes).
+Output written on memoria.pdf (130 pages, 61350657 bytes).
 PDF statistics:
  2846 PDF objects out of 2984 (max. 8388607)
  2420 compressed objects within 25 object streams
