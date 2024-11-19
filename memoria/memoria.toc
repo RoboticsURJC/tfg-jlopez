@@ -82,10 +82,10 @@
 \contentsline {subsubsection}{Obtención del contorno y coordenadas}{74}{subsubsection*.126}%
 \contentsline {subsection}{\numberline {6.3.2}Modelo de cámara pinhole}{75}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{78}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{79}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Autónomo}{80}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{80}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Comportamiento autónomo}{81}{subsection.6.3.5}%
 \contentsline {subsubsection}{Detección de líneas}{82}{subsubsection*.138}%
-\contentsline {subsubsection}{Virtual Force Field}{83}{subsubsection*.142}%
+\contentsline {subsubsection}{Virtual Force Field}{82}{subsubsection*.142}%
 \contentsline {chapter}{\numberline {7}Experimentos}{85}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Impresión 3D}{85}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Ruedas}{86}{section.7.2}%
