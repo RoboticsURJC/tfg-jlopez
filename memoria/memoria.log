@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  21 NOV 2024 13:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  21 NOV 2024 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2850,7 +2850,7 @@ LaTeX Info: Redefining \% on input line 1.
  [107] [108
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 67--74
+Underfull \hbox (badness 10000) in paragraph at lines 68--75
 []\OT1/cmr/m/n/12 Katsamenis, I.,
  []
 
@@ -2870,10 +2870,10 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
 (rerunfilecheck)             Checksum: E549491F53B1439EECA9967BEFFBDD1D;12993.
  ) 
 Here is how much of TeX's memory you used:
- 32381 strings out of 480112
- 602428 string characters out of 5892631
- 1210190 words of memory out of 5000000
- 48837 multiletter control sequences out of 15000+600000
+ 32380 strings out of 480112
+ 602431 string characters out of 5892631
+ 1211203 words of memory out of 5000000
+ 48836 multiletter control sequences out of 15000+600000
  477090 words of font info for 56 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
  89i,15n,92p,1397b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2893,7 +2893,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on memoria.pdf (129 pages, 60987977 bytes).
+Output written on memoria.pdf (129 pages, 60988043 bytes).
 PDF statistics:
  2828 PDF objects out of 2984 (max. 8388607)
  2410 compressed objects within 25 object streams
