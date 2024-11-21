@@ -76,7 +76,7 @@ Las desventajas de este proyecto son las siguientes:
 \subsubsection{EyesNroad}
 \label{subsubsec:sistema3}
 
-EyesNroad es una plataforma que emplea \ac{IA} y \textit{Machine Learning} para identificar baches, señalización y otros deterioros en carreteras a partir de vídeos capturados por cámaras georreferenciadas instaladas en vehículos. La plataforma genera inventarios detallados y reportes del estado de las carreteras, facilitando el control y mantenimiento de las mismas. Esta aplicación ha sido desarrollada para participar en los XX premios de conservación de carreteras de \ac{ACEX} (año 2024)\footnote{\url{https://www.acex.eu/candidatura-3-4/}}, que ha resultado ganadora en la en la categoría general. Se puede ver su aspecto en la Figura \ref{fig:enr}.
+EyesNroad es una plataforma que emplea \ac{IA} y \textit{Machine Learning} para identificar baches, señalización y otros deterioros en carreteras a partir de videos capturados por cámaras georreferenciadas instaladas en vehículos. La plataforma genera inventarios detallados y reportes del estado de las carreteras, facilitando el control y mantenimiento de las mismas. Esta aplicación ha sido desarrollada para participar en los XX premios de conservación de carreteras de \ac{ACEX} (año 2024)\footnote{\url{https://www.acex.eu/candidatura-3-4/}}, que ha resultado ganadora en la en la categoría general. Se puede ver su aspecto en la Figura \ref{fig:enr}.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -130,7 +130,7 @@ Las ventajas de este proyecto son las siguientes:
 Las desventajas de este proyecto son las siguientes:
 
 \begin{itemize}
-	\item \textit{Es un prototipo}. Todavía está en fase temprana de implementación lo que le impide a los clientes tener una disponibilidad inmediata.
+	\item \textit{Es un prototipo}. Todavía está en fase temprana de implementación lo que le impide a los clientes tener una disponbilidad inmediata.
 	\item \textit{Alto coste}. Necesita componentes caros para poder llevar a cabo sus objetivos, como un camión o un brazo robótico, entre otros.
 	\item \textit{Complejidad técnica}. Ya que se trata de una automatización completa, necesita un alto nivel de precisión y coordinación, lo que supone un gran desafío para su implementación.
 \end{itemize}\
@@ -169,7 +169,7 @@ En relación a la detección de los baches se pueden encontrar métodos que se p
 			\hline
 			%\multirow{3}{4cm}{Métodos} & \multirow{2}{*}[3 mm] {Ventajas} & Desventajas\\
 			%\cline{3-3} % línea solo en la tercera columna
-			\multirow{2}{*}{Visión} & \multirow{2}{*}{\shortstack{ Más rentable que reconstrucción 3D \\ Adecuada para ciertos baches}} &\multirow{2}{*}{\shortstack{Limitaciones en profundidad \\ Afecta condiciones meteorológicas}}\\
+			\multirow{2}{*}{Visión} & \multirow{2}{*}{\shortstack{ Más rentable que reconstrucción 3D \\ Adecuada para ciertos baches}} &\multirow{2}{*}{\shortstack{Limitaciones en profundidad \\ Efecta condiciones metereológicas}}\\
 			&  &  \\
 			\hline
 			\multirow{3}{*}{Vibración} & \multirow{3}{*}{\shortstack{ Más rentable de todos \\ Requiere poco almacenamiento\\ Soporta tiempo real}} &\multirow{3}{*}{\shortstack{Limitaciones en formas \\ Depende de la arquitectura }}\\

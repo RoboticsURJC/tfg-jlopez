@@ -4,63 +4,55 @@ The top-level auxiliary file: memoria.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
 Warning--entry type for "unknown" isn't style-file defined
---line 367 of file bibliografia.bib
-Warning--I didn't find a database entry for "vega12e"
-Warning--I didn't find a database entry for "vega19b"
-Warning--I didn't find a database entry for "vega19a"
-Warning--I didn't find a database entry for "vega18b"
-Warning--I didn't find a database entry for "vega18a"
-Warning--I didn't find a database entry for "vega08b"
+--line 347 of file bibliografia.bib
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1023 of file apalike.bst
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1023 of file apalike.bst
 Warning--there's a number but no volume in barcelo2004nuevo
 Warning--empty journal in bidaudrobots
-Warning--there's a number but no volume in cuenca2023diseno
-Warning--empty journal in giri2020maquinas
 Warning--empty journal in llopis2020deterioros
 Too many commas in name 1 of "Wanli Ye, Wei Jiang, Zheng Tong, Dongdong Yuan and Jingjing Xiao" for entry doi:10.1080/14680629.2019.1615533
 while executing---line 1098 of file apalike.bst
-You've used 28 entries,
+You've used 26 entries,
             1935 wiz_defined-function locations,
-            642 strings with 8923 characters,
-and the built_in function-call counts, 11328 in all, are:
-= -- 1083
-> -- 542
-< -- 21
-+ -- 194
-- -- 186
-* -- 960
-:= -- 1996
-add.period$ -- 84
-call.type$ -- 28
-change.case$ -- 231
-chr.to.int$ -- 28
-cite$ -- 33
-duplicate$ -- 424
-empty$ -- 730
-format.name$ -- 231
-if$ -- 2206
+            625 strings with 8349 characters,
+and the built_in function-call counts, 10642 in all, are:
+= -- 1017
+> -- 517
+< -- 20
++ -- 186
+- -- 178
+* -- 901
+:= -- 1873
+add.period$ -- 79
+call.type$ -- 26
+change.case$ -- 217
+chr.to.int$ -- 26
+cite$ -- 29
+duplicate$ -- 397
+empty$ -- 681
+format.name$ -- 221
+if$ -- 2077
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 141
-num.names$ -- 84
-pop$ -- 204
+missing$ -- 24
+newline$ -- 132
+num.names$ -- 78
+pop$ -- 190
 preamble$ -- 1
-purify$ -- 232
+purify$ -- 218
 quote$ -- 0
-skip$ -- 334
+skip$ -- 315
 stack$ -- 0
-substring$ -- 659
-swap$ -- 60
+substring$ -- 613
+swap$ -- 59
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 164
-warning$ -- 5
-while$ -- 77
+type$ -- 152
+warning$ -- 3
+while$ -- 71
 width$ -- 0
-write$ -- 358
+write$ -- 335
 (There were 3 error messages)
