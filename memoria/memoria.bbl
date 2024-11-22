@@ -1,23 +1,15 @@
 \begin{thebibliography}{}
 
-\bibitem[Ahmed et~al., 2022]{9345528}
-Ahmed, A., Ashfaque, M., Ulhaq, M.~U., Mathavan, S., Kamal, K., and Rahman, M.
-  (2022).
-\newblock Pothole 3d reconstruction with a novel imaging system and structure
-  from motion techniques.
-\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
-  23(5):4685--4694.
-
 \bibitem[Allouch et~al., 2017]{7922534}
 Allouch, A., Koubâa, A., Abbes, T., and Ammar, A. (2017).
 \newblock Roadsense: Smartphone application to estimate road conditions using
   accelerometer and gyroscope.
 \newblock {\em IEEE Sensors Journal}, 17(13):4231--4238.
 
-\bibitem[Barcel{\'o}, 2004]{barcelo2004nuevo}
-Barcel{\'o}, M. (2004).
-\newblock De nuevo los robots.
-\newblock {\em Paradojas}, (64):1--2.
+\bibitem[Asimov, 2013]{asimov2013suenos}
+Asimov, I. (2013).
+\newblock {\em Sue{\~n}os de robot}.
+\newblock DEBOLS! LLO.
 
 \bibitem[Bruno et~al., 2023]{s23135860}
 Bruno, S., Loprencipe, G., Di~Mascio, P., Cantisani, G., Fiore, N., Polidori,
@@ -140,13 +132,6 @@ Vega, J. and Ca\~nas, J. (2018).
 Vega, J. and Ca\~nas, J. (2019).
 \newblock Open vision system for low-cost {Robotics} education.
 \newblock {\em Electronics}, 8:1295--1315.
-
-\bibitem[Wang et~al., 2023]{WANG2023132499}
-Wang, N., Dong, J., Fang, H., Li, B., Zhai, K., Ma, D., Shen, Y., and Hu, H.
-  (2023).
-\newblock 3d reconstruction and segmentation system for pavement potholes based
-  on improved structure-from-motion (sfm) and deep learning.
-\newblock {\em Construction and Building Materials}, 398:132499.
 
 \bibitem[Wanli~Ye and Xiao, 2021]{doi:10.1080/14680629.2019.1615533}
 Wanli~Ye, Wei~Jiang, Z. T. D.~Y. and Xiao, J. (2021).
