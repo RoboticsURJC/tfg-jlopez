@@ -16,7 +16,7 @@ Tras haber establecido los objetivos que se pretenden alcanzar en este proyecto,
 \section{Hardware}
 \label{sec:hardware}
 
-En este apartado se van a describir el conjunto de componentes \textit{hardware} que se han adquirido para llevar a cabo este proyecto. Siguiendo la folosofía \textit{low-cost} y \ac{DIY}, se ha primado el conseguir el menor coste de cada componente.
+En este apartado se van a describir el conjunto de componentes \textit{hardware} que se han adquirido para llevar a cabo este proyecto. Siguiendo la filosofía \textit{low-cost} y \ac{DIY}, se ha primado el conseguir el menor coste de cada componente.
 
 \subsection{Raspberry Pi 4}
 \label{subsec:raspberry}
@@ -61,7 +61,7 @@ Esta cámara (Figura \ref{fig:raspberrycam}) tiene un tamaño de 23,86 x 25 x 9 
 \subsection{GPS NEO 6M}
 \label{subsec:gps}
 
-Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Tiene una precisión de aproximadamente 2,5 metros en condiciones abiertas. Soporta hasta veintidós satélites simultáneamente, lo que le permite ofrecer posicionamiento (latitud, longitud, altitud y velocidad) confiable y estable. Asimismo, utiliza comunicación por \ac{UART}, comunmente a 9.600 bps, lo que facilita su integración con muchas placas del mercado.
+Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Tiene una precisión de aproximadamente 2,5 metros en condiciones abiertas. Soporta hasta veintidós satélites simultáneamente, lo que le permite ofrecer posicionamiento (latitud, longitud, altitud y velocidad) confiable y estable. Asimismo, utiliza comunicación por \ac{UART}, comúnmente a 9.600 bps, lo que facilita su integración con muchas placas del mercado.
 
 %Para poder identificar dónde se encuentra cada bache es necesario hacer uso de un posicionamiento global mediante satélites. En este caso se decidió usar el módulo NEO 6M (Figura \ref{fig:gps}), cuyo precio aproximado es de 9€. Este módulo utiliza el chipset u-blox NEO-6M, que proporciona un seguimiento preciso de la posición utilizando satélites \acs{GPS}, permitiendo determinar la latitud, longitud, altitud, y velocidad. Además, incluye una antena cerámica externa de alta ganancia (puede ser interna en algunas versiones) que mejora la recepción de la señal \acs{GPS}, incluso en áreas con una señal débil.
 
@@ -79,7 +79,7 @@ Para poder identificar dónde se encuentra cada bache es necesario hacer uso de 
 \footnotetext[\value{footnote}]{\url{https://www.u-blox.com/en/product/neo-6-series}\label{note:enlace28}}
 
 
-\subsection{Sevomotor estándar Parallax}
+\subsection{Servomotor estándar Parallax}
 \label{subsec:motor}
 
 Este tipo de servo (Figura \ref{fig:parallax}) tiene un rango de rotación de 0 a 180 grados y se puede controlar digitalmente mediante la técnica de \ac{PWM} con un pulso alto de 0,75–2,25 ms en intervalos de 20 ms. Este tipo de servo es muy común en aplicaciones de animatrónica y robótica. Su precio ronda los 17€.
@@ -149,7 +149,7 @@ Por sus cualidades descritas, se ha decidido este componente para mejorar la det
 \subsection{Power bank}
 \label{subsec:powerbank}
 
-Para poder alimentar a todos los componentes se ha incluido en el prototipo robótico una \textit{power bank} de gran capacidad para que permita la autonomía del robot durante un tiempo más que razonable. Concretamente, se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh, cuyas dimensiones son: 73,6 x 27,3 x 154 mm y después de muchos ciclos de carga y descarga, mantienen un buen rendimiento sin perder demasiada capacidad. Su precio ronda los 20€. % peso de 400g
+Para poder alimentar a todos los componentes se ha incluido en el prototipo robótico una \textit{power bank} de gran capacidad para que permita la autonomía del robot durante un tiempo más que razonable. Concretamente, se ha elegido la Xiaomi Redmi Power Bank de 20000 mAh, cuyas dimensiones son: 73,6 x 27,3 x 154 mm y después de muchos ciclos de carga y descarga, mantiene un buen rendimiento sin perder demasiada capacidad. Su precio ronda los 20€. % peso de 400g
 
 \begin{figure} [h!]
 	\begin{center}
@@ -434,10 +434,10 @@ Gazebo\footnote{\url{https://gazebosim.org/home}} es un simulador de robots que 
 
 Para el desarrollo del proyecto, se emplean diversas herramientas de monitorización que permiten visualizar y controlar los datos y procesos dentro del entorno de ROS 2, y para ello se ha decidido usar las herramientas que se describen a continuación.
 
-\subsubsection{Rviz}
+\subsubsection{RViz}
 \label{subsubsec:rviz}
 
-RViz\footnote{\url{http://wiki.ros.org/rviz}} es una herramienta de visualización en 3D utilizada en ROS y ROS 2 para representar información del sistema robótico. Permite a los usuarios ver, en tiempo real, datos como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorear el comportamiento del robot en simulación.
+RViz\footnote{\url{http://wiki.ros.org/rviz}} es una herramienta de visualización en 3D utilizada en ROS y ROS 2 para representar información del sistema robótico. Permite a los usuarios ver, en tiempo real, datos como la posición de un robot, sensores, cámaras, mapas y otros elementos. Se ha utilizado para monitorizar el comportamiento del robot en simulación.
 
 %\begin{figure} [h!]
 %	\begin{center}

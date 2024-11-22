@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Raspberry Pi 4}{25}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Raspberry PiCamera}{26}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}GPS NEO 6M}{27}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Sevomotor estándar Parallax}{27}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.4}Servomotor estándar Parallax}{27}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Ruedas}{27}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Google Coral USB}{28}{subsection.4.1.6}%
 \contentsline {subsection}{\numberline {4.1.7}Power bank}{29}{subsection.4.1.7}%
@@ -42,7 +42,7 @@
 \contentsline {subsubsection}{ROS 2 Control}{36}{subsubsection*.64}%
 \contentsline {subsection}{\numberline {4.2.6}Gazebo}{36}{subsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.2.7}Herramientas de monitorización}{37}{subsection.4.2.7}%
-\contentsline {subsubsection}{Rviz}{37}{subsubsection*.65}%
+\contentsline {subsubsection}{RViz}{37}{subsubsection*.65}%
 \contentsline {subsubsection}{RQT Image View}{37}{subsubsection*.66}%
 \contentsline {subsubsection}{ROS2cli}{37}{subsubsection*.67}%
 \contentsline {subsection}{\numberline {4.2.8}Google Colaboratory}{37}{subsection.4.2.8}%
