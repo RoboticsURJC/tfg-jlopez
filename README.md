@@ -58,7 +58,3 @@ Este [vídeo](https://www.youtube.com/watch?v=A0yi7YlLpq0) muestra una demo comp
 
 
 
---------------------------
-# English version
-
-## Introduction 
