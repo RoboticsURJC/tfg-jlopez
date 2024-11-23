@@ -73,7 +73,7 @@ En relación a los \textit{link}\footnote{\url{https://articulatedrobotics.xyz/t
 %\end{code}
 
 
-Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}.Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
+Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 %Existen muchos tipos de interacciones; en el Código \ref{cod:gazebo} se muestra; a modo de ejemplo, cómo simular el sensor cámara. Por su parte, para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 
 %\begin{code}[h]
@@ -308,7 +308,7 @@ Partiendo del \verb|cameraPublisher.py| de este tutorial\footnote{\url{https://w
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/cap6/camerarr.png}
+		\includegraphics[width=7cm]{figs/cap6/camerarr.png}
 	\end{center}
 	\caption{Cámara de PiBotJ en funcionamiento}
 	\label{fig:camararr}
@@ -374,7 +374,7 @@ Los parámetros extrínsecos relacionan los sistemas de referencia del mundo rea
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.35\linewidth}
+	\begin{minipage}{0.45\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/rotation.jpeg}
 		\caption*{\centering Rotación de la cámara} 
@@ -556,24 +556,41 @@ El módulo \acs{GPS} utiliza una comunicación \acs{UART}, o comunicación seria
 %\end{lstlisting}
 
 
-El serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias a los pasos de instalación descritos en el \hyperref[cap:capitulo9]{Anexo}, como muestra la Figura \ref{fig:nmea}. Para tratar la información obtenida, se decidió usar la librería llamada PyNMEA2, detallada en la Sección \ref{subsec:pynmea}, y que se desarrolló con el código del nodo \verb|gps_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/gps_node.py}} para parsear la información y únicamente publicar la latitud y longitud, como muestra la Figura \ref{fig:gpsnode}. De los valores obtenidos, se decidió usar un conversor de coordenadas\footnote{\url{https://www.coordenadas-gps.com/convertidor-de-coordenadas-gps}} para demostrar que los valores recibidos eran correctos, como muestra la Figura \ref{fig:demogpsnode}.
+El serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias a los pasos de instalación descritos en el \hyperref[cap:capitulo9]{Anexo}, como muestra la Figura \ref{fig:nmea}. Para tratar la información obtenida, se decidió usar la librería llamada PyNMEA2, detallada en la Sección \ref{subsec:pynmea}, y que se desarrolló con el código del nodo \verb|gps_node|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/gps_node.py}} para parsear la información y únicamente publicar la latitud y longitud, como muestra la Figura \ref{fig:gpsnode} (izquierda). De los valores obtenidos, se decidió usar un conversor de coordenadas\footnote{\url{https://www.coordenadas-gps.com/convertidor-de-coordenadas-gps}} para demostrar que los valores recibidos eran correctos, como muestra la Figura \ref{fig:gpsnode} (derecha).
 
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/echo_gps_controller.png}
-	\end{center}
-	\caption{Valores publicados de latitud y longitud captados del GPS}
+% \begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=12cm]{figs/cap6/echo_gps_controller.png}
+%	\end{center}
+%	\caption{Valores publicados de latitud y longitud captados del GPS}
+%	\label{fig:gpsnode}
+%\end{figure}
+
+
+% \begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm]{figs/cap6/localizacion.png}
+%	\end{center}
+%	\caption{Demostración de una correcta localización}
+%	\label{fig:demogpsnode}
+%\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.56\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/echo_gps_controller.png}
+		\caption*{\centering Obtenidos del GPS}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/localizacion.png}
+		\caption*{\centering Su posición en el mapa}
+	\end{minipage}
+	\caption{Valores de localización}
 	\label{fig:gpsnode}
-\end{figure}
-
-
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/localizacion.png}
-	\end{center}
-	\caption{Demostración de una correcta localización}
-	\label{fig:demogpsnode}
 \end{figure}
 
 %% Preguntar si dejarlo o no
@@ -595,23 +612,38 @@ Los últimos componentes que faltaban por configurar son los motores, que van co
 %\end{verbatim}
 
 %Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups} y ya 
-Tras seguir los pasos de configuración del \hyperref[cap:capitulo9]{Anexo}, importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
+Tras seguir los pasos de configuración del \hyperref[cap:capitulo9]{Anexo}, importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}}. Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/pwm.png}
-	\end{center}
-	\caption{Diagrama para la posición central del servo}
-	\label{fig:pwm}
-\end{figure}
+% \begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=12cm]{figs/cap6/pwm.png}
+%	\end{center}
+%	\caption{Diagrama para la posición central del servo}
+%	\label{fig:pwm}
+%\end{figure}
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=6cm]{figs/cap6/motorlogic.png}
-	\end{center}
+% \begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm]{figs/cap6/motorlogic.png}
+%	\end{center}
+%	\caption{Distintas direcciones de PiBotJ}
+%	\label{fig:motorlogic}
+%\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/motorlogic1.png}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap6/motorlogic2.png}
+	\end{minipage}
 	\caption{Distintas direcciones de PiBotJ}
 	\label{fig:motorlogic}
-\end{figure}\
+\end{figure}
 
 Una vez configurados todos los componentes del robot, ya se puede pasar a desarrollar el \textit{software} que conforma el comportamiento final de este. 
  
@@ -630,7 +662,7 @@ Para poder entrenar dicho modelo, fue necesario usar un \textit{dataset} tomado 
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/results.png}
+		\includegraphics[width=13cm]{figs/cap6/results.png}
 	\end{center}
 	\caption{Gráficas de resultados del entrenamiento}
 	\label{fig:iares}
@@ -639,7 +671,7 @@ Para poder entrenar dicho modelo, fue necesario usar un \textit{dataset} tomado 
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/results1.png}
+		\includegraphics[width=14cm]{figs/cap6/results1.png}
 	\end{center}
 	\caption{Gráficas de resultados del entrenamiento: métricas}
 	\label{fig:iares2}
@@ -653,7 +685,7 @@ Para comprobar que el modelo funciona correctamente, se ha aplicado el modelo en
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/train_results.jpg}
+		\includegraphics[width=13cm]{figs/cap6/train_results.jpg}
 	\end{center}
 	\caption{Demostración del modelo funcionando}
 	\label{fig:trainex}
@@ -760,16 +792,16 @@ Para conseguir los píxeles, se toma la máscara binarizada usando el umbral def
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.4\linewidth}
+	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/contornobache1.png}
 	\end{minipage}
 	\hspace{2 cm}
-	\begin{minipage}{0.4\linewidth}
+	\begin{minipage}{0.3\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/contornobache2.png}
 	\end{minipage}
-	\caption{Contorno del baches detectados}
+	\caption{Contornos de baches detectados}
 	\label{fig:contornobache}
 \end{figure}
 
@@ -780,7 +812,7 @@ Extraer información de la cámara no es fácil y, por ello, se decidió simplif
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/cap6/pinhole.png}
+		\includegraphics[width=7cm]{figs/cap6/pinhole.png}
 	\end{center}
 	\caption{Funcionamiento de una cámara esteneopeica $^{\ref{note:enlace124}}$}
 	\label{fig:pinhole}
@@ -803,11 +835,11 @@ Este modelo explica cómo se realiza la proyección de un punto en el espacio tr
   
 En la Figura \ref{fig:pinholeformula} se pueden ver los parámetros intrínsecos y extrínsecos, que son tomados de la calibración de la cámara, descritos en la Sección \ref{subsec:configcamara}. Dicha calibración se realizó sobre imágenes de 640x480, y los píxeles del contorno del bache están en imágenes de 192x192, por lo que es necesario aplicar otro factor de conversión. 
 
-Una vez se conoce cómo funciona el modelo pinhole, es importante destacar que, para poder convertir los píxeles de un sistema a otro, hay que tener en cuenta que hay tres sistemas de coordenadas diferentes como muestra la Figura \ref{fig:siscoordenadas}, que ha sido modificada del artículo \cite{unknown}. La modificación se ha producido debido a que para este proyecto se ha estimado más oportuno que el sentido del eje X sea hacia adelante y por ende, usando la regla de la mano derecha, el sentido del eje Z sea hacia abajo.
+Una vez se conoce cómo funciona el modelo pinhole, es importante destacar que, para poder convertir los píxeles de un sistema a otro, hay que tener en cuenta que hay tres sistemas de coordenadas diferentes como muestra la Figura \ref{fig:siscoordenadas}, que ha sido modificada del artículo \cite{201705.0170}. La modificación se ha producido debido a que para este proyecto se ha estimado más oportuno que el sentido del eje X sea hacia adelante y por ende, usando la regla de la mano derecha, el sentido del eje Z sea hacia abajo.
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/pinholecoordinates.png}
+		\includegraphics[width=14cm]{figs/cap6/pinholecoordinates.png}
 	\end{center}
 	\caption{Sistemas de coordenadas}
 	\label{fig:siscoordenadas}
@@ -817,7 +849,7 @@ Otro dato importante a tener en cuenta es que solo disponemos de una cámara, y 
 
 % partimos de la solución ofrecida en el artículo x, donde los autores nos facilitan una infraestructura software que da soporte a esta hipótesis suelo usando el modelo pinhole como nosotros
 
-La hipótesis suelo (Figura \ref{fig:hipotesissuelo} tomada del artículo \cite{vega19d}) supone que todos los objetos del mundo en 3D están apoyados sobre el suelo, por lo tanto, asumiendo que el suelo etá en el plano Z = 0, este nos permitirá estimar, con una única cámara, la posición 3D de los puntos que estén en el suelo, como los que conforman un bache.
+La hipótesis suelo (Figura \ref{fig:hipotesissuelo} tomada del artículo \cite{vega19d}) supone que todos los objetos del mundo en 3D están apoyados sobre el suelo, por lo tanto, asumiendo que el suelo está en el plano Z = 0, este nos permitirá estimar, con una única cámara, la posición 3D de los puntos que estén en el suelo, como los que conforman un bache.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -872,7 +904,7 @@ Una vez habilitada esa comunicación, ya se podía apreciar la página web\footn
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/interfazweb.png}
+		\includegraphics[width=12cm]{figs/cap6/interfazweb.png}
 	\end{center}
 	\caption{Interfaz web}
 	\label{fig:interfazweb}
@@ -883,7 +915,8 @@ Una vez habilitada esa comunicación, ya se podía apreciar la página web\footn
 \label{subsec:autonomo}
 PiBotJ se puede controlar de forma teleoperada, usando la botonera definida en la Sección \ref{subsec:softwareweb} pero además, se ha implementado un algoritmo para que su navegación pueda ser autónoma.
 
-Lo ideal en este caso hubiera sido que PiBotJ navegase autónomamente por carreteras reales, pero debido a la imposibilidad de probarlo en ese entorno, por cuestiones de seguridad, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
+Lo ideal en este caso hubiera sido que PiBotJ navegase autónomamente por carreteras reales, pero debido a la imposibilidad de probarlo en ese entorno, por cuestiones de seguridad, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. 
+%El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
 
 \begin{figure}[ht!]
 	\centering
@@ -902,13 +935,13 @@ Lo ideal en este caso hubiera sido que PiBotJ navegase autónomamente por carret
 	\label{fig:medidascarretera}
 \end{figure}
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=6cm, height=6cm]{figs/cap6/carretera.png}
-	\end{center}
-	\caption{Carretera creada en cartulina}
-	\label{fig:carreteracartulina}
-\end{figure}
+ %\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm, height=6cm]{figs/cap6/carretera.png}
+%	\end{center}
+%	\caption{Carretera creada en cartulina}
+%	\label{fig:carreteracartulina}
+%\end{figure}
 
 Una vez definido el entorno donde se iba a trabajar, era el momento de definir la lógica a usar, y se decidió unir un algoritmo de detección de líneas junto a la técnica de navegación local conocida como \ac{VFF}. 
 
@@ -936,7 +969,7 @@ Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente 
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=9cm]{figs/cap6/camaradlines.png}
+		\includegraphics[width=7cm]{figs/cap6/camaradlines.png}
 	\end{center}
 	\caption{Filtro resultante aplicado para la detección de líneas}
 	\label{fig:camaradlines}
@@ -957,14 +990,14 @@ En la Figura \ref{fig:dlines} se puede ver los distintos tipos de situaciones a 
 \subsubsection{Virtual Force Field}
 \label{subsubsec:vff}
 
-Es un método de navegación local para que un robot autónomo evite obstáculos en su entorno. Este método se compone de una fuerza repulsiva para evitar el obstáculo y de una fuerza atractiva para alcanzar el destino objetivo\footnote{\url{https://robmovjuloau2022.blogspot.com/2022/11/task-3-local-navigation-with-vff.html}}. Estas fuerzas se suman vectorialmente para obtener una fuerza resultante, que indica la dirección y velocidad de movimiento del robot. Esta fuerza resultante se puede calcular siguiendo la Ecuacion \ref{ec:vff}.
+Es un método de navegación local para que un robot autónomo evite obstáculos en su entorno. Este método se compone de una fuerza repulsiva para evitar el obstáculo y de una fuerza atractiva para alcanzar el destino objetivo\footnote{\url{https://robmovjuloau2022.blogspot.com/2022/11/task-3-local-navigation-with-vff.html}}. Estas fuerzas se suman vectorialmente para obtener una fuerza resultante, que indica la dirección y velocidad de movimiento del robot. Esta fuerza resultante se puede calcular siguiendo la Ecuación \ref{ec:vff}.
 
 \begin{myequation}[h]
 	\begin{equation}
 		F_{resultante} = \alpha \cdot F_{atractiva} + \beta \cdot F_{repulsiva}
 		\nonumber
 	\end{equation}
-	\caption[Ecuación de VFF]{Ecuación de VFF}
+	\caption[Fórmula del método VFF]{Fórmula del método VFF}
 	\label{ec:vff}
 \end{myequation} 
 
@@ -973,7 +1006,7 @@ El robot se mueve en la dirección de la fuerza resultante, ajustando su trayect
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/cap6/vff.png}
+		\includegraphics[width=6cm]{figs/cap6/vff.png}
 	\end{center}
 	\caption{Diagrama de fuerzas del algoritmo VFF}
 	\label{fig:vfffuerzas}

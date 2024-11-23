@@ -86,7 +86,7 @@ Este tipo de servo (Figura \ref{fig:parallax}) tiene un rango de rotación de 0 
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=4cm]{figs/parallax.png}
+		\includegraphics[width=3cm]{figs/parallax.png}
 	\end{center}
 	\caption{Servomotor Parallax$^{\ref{note:enlace29}}$} 
 	\label{fig:parallax}
@@ -287,7 +287,7 @@ Ubuntu\footnote{\url{https://ubuntu.com/}} es una de las muchas distribuciones d
 
 Esta herramienta de código abierto\footnote{\url{https://www.freecad.org/}} (Figura \ref{fig:freecad}) es un \textit{software} de diseño asistido por ordenador utilizado principalmente para la creación de modelos 3D en diferentes áreas, como la ingeniería, arquitectura, y diseño de productos. Está diseñado para ser altamente modular, formado por \textit{workbenches}, lo que permite a los usuarios adaptar y extender su funcionalidad según sus necesidades.
 
-FreeCAD se basa en el concepto de modelado paramétrico, lo que permite modificar el diseño fácilmente. Los usuarios pueden retroceder en la historia de un modelo y cambiar parámetros que actualizan automáticamente el diseño. También FreeCAD es multiplataforma, cuenta con una consola de Python integrada y soporta una amplia gama de formatos de archivo como STL y SVG, entre otros. Esta ha sido la herramienta elegida para hacer el diseño 3D de la pieza y la generación del formato STL para su posterior impresión. 
+FreeCAD se basa en el concepto de modelado paramétrico, lo que permite modificar el diseño fácilmente. Los usuarios pueden retroceder en la historia de un modelo y cambiar parámetros que actualizan automáticamente el diseño. También FreeCAD es multiplataforma, cuenta con una consola de Python integrada y soporta una amplia gama de formatos de fichero como STL y SVG, entre otros. Esta ha sido la herramienta elegida para hacer el diseño 3D de la pieza y la generación del formato STL para su posterior impresión. 
 
 \begin{figure} [h!]
 	\begin{center}
@@ -462,20 +462,20 @@ ROS 2 \ac{CLI}\footnote{\url{https://docs.ros.org/en/humble/Tutorials/Beginner-C
 \subsection{Google Colaboratory}
 \label{subsec:googlecolab}
 
-Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \ref{fig:googlecolab}) es un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta, se puede cumplir el requisito nº.4 de los indicados en la Sección \ref{sec:requisitos}.
+Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \ref{fig:herramientasas} izquierda) es un servicio en la nube proporcionado por Google que permite escribir y ejecutar código en Python a través de un entorno de Jupyter Notebook. No requiere configuración para su uso y proporciona acceso gratuito a recursos de computación, incluidos GPUs y TPUs. Es especialmente usado para el aprendizaje automático, la ciencia de datos y la educación. Gracias a esta herramienta, se puede cumplir el requisito nº.4 de los indicados en la Sección \ref{sec:requisitos}.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=4cm]{figs/googlecolab.png}
-	\end{center}
-	\caption{Logo de Google Colab} 
-	\label{fig:googlecolab}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=4cm]{figs/googlecolab.png}
+%	\end{center}
+%	\caption{Logo de Google Colab} 
+%	\label{fig:googlecolab}
+%\end{figure}
 
 \subsection{YOLOv8}
 \label{subsec:yolov8}
 
-\acs{YOLO}v8\footnote{\url{https://docs.ultralytics.com/es}} desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas, incluidos como EdgeTPU, para dispositivos con recursos limitados como puede ser Raspberry Pi. Por todo lo anterior, esta herramienta ha sido elegida para el entrenamiento del modelo de detección de baches. 
+\acs{YOLO}v8\footnote{\url{https://docs.ultralytics.com/es}} (Figura \ref{fig:herramientasas} central) desarrollado por la empresa Ultralytics, es una versión avanzada del popular modelo de detección de objetos \ac{YOLO}, diseñado para identificar y localizar objetos en imágenes y videos en tiempo real. Esta versión es conocida por su eficiencia y precisión en la detección de objetos. Es compatible con TensorFlow y PyTorch. También ofrece optimización para diferentes plataformas, incluidos como EdgeTPU, para dispositivos con recursos limitados como puede ser Raspberry Pi. Por todo lo anterior, esta herramienta ha sido elegida para el entrenamiento del modelo de detección de baches. 
 
 %\begin{figure} [h!]
 %	\begin{center}
@@ -489,14 +489,38 @@ Google Colaboratory\footnote{\url{https://colab.research.google.com/}} (Figura \
 \subsection{TensorFlow Lite}
 \label{subsec:tflite}
 
-TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Concretamente, para poder ejecutar modelos en dispositivos como las Raspberry Pi, se usa la versión TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:tflite}), ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
+TensorFlow es una plataforma de código abierto desarrollada por Google para el aprendizaje automático y el desarrollo de redes neuronales. Su diseño permite a los desarrolladores e investigadores crear, entrenar y desplegar modelos de aprendizaje automático de manera eficiente en una variedad de dispositivos, desde ordenadores de alto rendimiento hasta dispositivos con recursos limitados como puede ser Raspberry Pi. Concretamente, para poder ejecutar modelos en dispositivos como las Raspberry Pi, se usa la versión TensorFlow Lite\footnote{\url{https://ai.google.dev/edge/litert}} (Figura \ref{fig:herramientasas} derecha), ya que está preparada para optimizar los modelos. Es por ello que cualquier modelo que se quiera usar se tiene que convertir a este formato. 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=6cm]{figs/tflite.png}
-	\end{center}
-	\caption{Logo de TensorFlow Lite}
-	\label{fig:tflite}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm]{figs/tflite.png}
+%	\end{center}
+%	\caption{Logo de TensorFlow Lite}
+%	\label{fig:tflite}
+%\end{figure}
+
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.20\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/googlecolab.png}
+		\caption*{\centering Google Colab} % $^{\ref{note:enlace54}}$
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.25\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/yolov8.png}
+		\caption*{\centering YOLOv8} % $^{\ref{note:enlace55}}$
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.25\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/tflite.png}
+		\caption*{\centering TensorFlow Lite} % $^{\ref{note:enlace55}}$
+	\end{minipage}
+	\caption{Logos de las herramientas usadas para el aprendizaje supervisado}
+	\label{fig:herramientasas}
 \end{figure}
 
 \subsection{Interfaz Web}

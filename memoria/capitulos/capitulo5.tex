@@ -18,25 +18,42 @@ Tras haber expuesto todas las plataformas de desarrollo utilizadas en este proye
 
 En este apartado se detalla el proceso llevado a cabo para definir la idea y la forma elegida para el robot. La aplicación de este proyecto se encuentra dentro de los robots de campo, y es por ello que estos tipos de robots son mayoritariamente plataformas que trabajan en entornos no estructurados, como se comentó en la Sección \ref{sec:robotcampo}. Por ello, es necesario que la estructura del robot se asemeje a esos tipos de robots y los más comunes son los robots con ruedas. 
 
-Sin embargo, los robots de campo son de gran coste y de grandes dimensiones, lo que hacía inviable que entidades con recursos limitados pudieran adquirirlos. Es por ello que se decidió apostar por los robots de bajo coste. Una primera idea hasta conseguir la solución final al proyecto la tomamos del artículo, \cite{vega18c}, donde los autores nos presentan PiBot (Figura \ref{fig:pibot}), una plataforma robótica educativa de 20 x 10 x 8 cm basada en Raspberry Pi 3 y PiCamera, diseñada para facilitar la enseñanza de robótica a estudiantes de secundaria. Ofrece una infraestructura de \textit{software} abierta en Python y comandos de alto nivel para facilitar el aprendizaje. Además, incluye un modelo 3D imprimible y una versión simulada en Gazebo, disponibles públicamente para que estudiantes y escuelas puedan aprender y practicar robótica sin necesidad del robot físico. 
+Sin embargo, los robots de campo son de gran coste y de grandes dimensiones, lo que hacía inviable que entidades con recursos limitados pudieran adquirirlos. Es por ello que se decidió apostar por los robots de bajo coste. Una primera idea hasta conseguir la solución final al proyecto la tomamos del artículo, \cite{vega18c}, donde los autores nos presentan PiBot (Figura \ref{fig:pibot} izquierda), una plataforma robótica educativa de 20 x 10 x 8 cm basada en Raspberry Pi 3 y PiCamera, diseñada para facilitar la enseñanza de robótica a estudiantes de secundaria. Ofrece una infraestructura de \textit{software} abierta en Python y comandos de alto nivel para facilitar el aprendizaje. Además, incluye un modelo 3D imprimible y una versión simulada en Gazebo, disponibles públicamente para que estudiantes y escuelas puedan aprender y practicar robótica sin necesidad del robot físico. 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=6cm]{figs/cap5/Original.png}
-	\end{center}
-	\caption{PiBot} 
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm]{figs/cap5/Original.png}
+%	\end{center}
+%	\caption{PiBot} 
+%	\label{fig:pibot}
+%\end{figure}
+
+Para poder continuar con la investigación de ese proyecto, se adquirió una unidad del robot PiBot. Además, se creó una estructura de metal para que la cámara cambiase su disposición, mirase hacia el suelo y estuviese orientada de forma natural para evitar futuros cálculos innecesarios. El diseño en este punto quedó como muestra la Figura \ref{fig:pibot} (derecha).
+
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=8cm]{figs/cap5/new.png}
+%	\end{center}
+%	\caption{PiBot con cámara modificada} 
+%	\label{fig:pibotmetal}
+%\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/Original.png}
+		\caption*{\centering Pibot original}
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap5/new.png}
+		\caption*{\centering Pibot con cámara modificada}
+	\end{minipage}
+	\caption{Pibot}
 	\label{fig:pibot}
-\end{figure}
-
-Para poder continuar con la investigación de ese proyecto, se adquirió una unidad del robot PiBot. Además, se creó una estructura de metal para que la cámara cambiase su disposición, mirase hacia el suelo y estuviese orientada de forma natural para evitar futuros cálculos innecesarios. El diseño en este punto quedó como muestra la Figura \ref{fig:pibotmetal}.
-
-
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=8cm]{figs/cap5/new.png}
-	\end{center}
-	\caption{PiBot con cámara modificada} 
-	\label{fig:pibotmetal}
 \end{figure}
 
 
@@ -78,16 +95,16 @@ La realización de bocetos es una etapa fundamental en el proceso de diseño, qu
 
 \begin{figure}[ht!]
 	\centering
-	\begin{minipage}{0.4\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/prototipo_laser.jpeg}
-	\end{minipage}
-	\hspace{2cm}
+	%\begin{minipage}{0.4\linewidth}
+	%	\centering
+	%	\includegraphics[width=\linewidth]{figs/cap5/prototipo_laser.jpeg}
+	%\end{minipage}
+	%\hspace{2cm}
 	\begin{minipage}{0.4\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/prototipo_sin_laser.jpeg}
 	\end{minipage}
-	\hspace{2cm}
+	\hspace{1cm}
 	\begin{minipage}{0.5\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap5/boceto_papel.jpeg}
@@ -484,7 +501,7 @@ En nuestro caso, para la impresión de PiBotJ, se usó la impresora FDM Creality
  
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=6cm]{figs/cap5/impresora.jpg}
+		\includegraphics[width=4.5cm]{figs/cap5/impresora.jpg}
 	\end{center}
 	\caption{Impresora FDM Creality Ender3 V2$^{\ref{note:enlace67}}$} 
 	\label{fig:impresora}
@@ -494,6 +511,7 @@ En nuestro caso, para la impresión de PiBotJ, se usó la impresora FDM Creality
 \footnotetext[\value{footnote}]{\url{https://www.creality.com/es/products/ender-3-v2-neo-3d-printer}\label{note:enlace67}}
 
 \begin{table}[H]
+	\footnotesize
 	\begin{center}
 		\begin{tabular}{|c|c|}
 			\hline
@@ -532,7 +550,7 @@ En nuestro caso, para la impresión de PiBotJ, se usó la impresora FDM Creality
 
 Una vez impresas todas las piezas y retirados sus soportes generados, fue el momento del montaje, cuya duración fue de dos horas aproximadamente, pero puede ser más dependiendo de las habilidades del usuario.
 
-Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los Hama Beads\footnote{\url{https://www.hamabeads.es/}}. Los Hama Beads son cilindros de plástico pequeños con un círculo en el centro usados comunmente para manualidades y para la creación de objetos de decoración. En este caso, se usaron para evitar que tanto la Raspberry Pi como el módulo GPS toquen directamente la superficie impresa. Además, por su círculo interior pasaban perfectamente los tornillos usados. 
+Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los Hama Beads\footnote{\url{https://www.hamabeads.es/}}. Los Hama Beads son cilindros de plástico pequeños con un círculo en el centro usados comúnmente para manualidades y para la creación de objetos de decoración. En este caso, se usaron para evitar que tanto la Raspberry Pi como el módulo GPS toquen directamente la superficie impresa. Además, por su círculo interior pasaban perfectamente los tornillos usados. 
 
 %Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los Hama Beads (Figura \ref{fig:hamabeads}). Los Hama Beads son cilindros de plástico pequeños con un círculo en el centro usados comunmente para manualidades y para la creación de objetos de decoración. En este caso, se usaron para evitar que tanto la Raspberry Pi como el módulo GPS toquen directamente la superficie impresa. Además, por su círculo interior pasaban perfectamente los tornillos usados. 
 
@@ -548,17 +566,17 @@ Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los 
 %\footnotetext[\value{footnote}]{\url{https://www.hamabeads.es/}\label{note:enlace80}}
 
 
-Otro aspecto a tener en cuenta es que, para la placa del módulo GPS, fue necesario soldarle unos pines (Figura \ref{fig:soldar}) para posteriormente conectarle los cables sin pérdidas de señal. También fue necesario agrandar con una taladradora los cuatro agujeros que tiene la antena del módulo para que puedan entrar bien los tornillos. 
+Otro aspecto a tener en cuenta es que, para la placa del módulo GPS, fue necesario soldarle unos pines para posteriormente conectarle los cables sin pérdidas de señal. También fue necesario agrandar con una taladradora los cuatro agujeros que tiene la antena del módulo para que puedan entrar bien los tornillos. 
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=7cm]{figs/cap5/soldar.jpeg}
-	\end{center}
-	\caption{Soldando pines al módulo GPS} 
-	\label{fig:soldar}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=7cm]{figs/cap5/soldar.jpeg}
+%	\end{center}
+%	\caption{Soldando pines al módulo GPS} 
+%	\label{fig:soldar}
+%\end{figure}
 
-Una vez solventados los contratiempo anteriores, se puede pasar a la fase de fijación de piezas mediante tornillos. El Cuadro \ref{cuadro:tornillos} muestra toda la tornillería necesaria.Los tornillos, tuercas y arandelas se pueden obtener en cualquier ferretería. Se recomienda usar un fijador para evitar que se aflojen los tornillos.
+Una vez solventados los contratiempo anteriores, se puede pasar a la fase de fijación de piezas mediante tornillos. El Cuadro \ref{cuadro:tornillos} muestra toda la tornillería necesaria. Los tornillos, tuercas y arandelas se pueden obtener en cualquier ferretería. Se recomienda usar un fijador para evitar que se aflojen los tornillos.
 
 Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd}}, un diseño de PiBotJ completo, que muestra el lugar donde se sitúa la tornillería del robot y ayudará al usuario facilitar el ensamblaje. La Figura \ref{fig:robotfreecad} muestra el robot completo montado. Para conseguir realizar el diseño de PiBotJ completo en FreeCAD, se tomaron los ficheros .stl obtenidos de la Sección \ref{sec:diseñocad}. Además, se tuvo que diseñar aparte: la antena del módulo \acs{GPS}, la batería, la rueda loca, un Hama Bead y la rueda; todos los ficheros se pueden encontrar en la carpeta \verb|misc|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/tree/main/design/misc}}. La placa del módulo \acs{GPS} necesitó ser editada partiendo de una versión de Thinkercad\footnote{\url{https://www.tinkercad.com/things/6etb23HSw0w-gy-neo6mv2-neo-6m}} y, por otro lado, el resto de componentes se tomaron de la librería de FreeCAD\footnote{\url{https://github.com/FreeCAD/FreeCAD-library/tree/master}}.
 
@@ -580,9 +598,9 @@ Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez
 			\hline
 			Antena GPS & 4 M2 16mm & 4 & & 4\\
 			\hline
-			Sujección entre placas & 4 M2 16mm & 4 & 8 &\\
+			Sujeción entre placas & 4 M2 16mm & 4 & 8 &\\
 			\hline
-			Sujección trasera & 1 M2 16mm & 1 & 2 &\\
+			Sujeción trasera & 1 M2 16mm & 1 & 2 &\\
 			\hline
 		\end{tabular}
 		\caption{Tornillería necesaria}
@@ -699,5 +717,5 @@ El coste total del proyecto es de 237,13€, por lo que está por debajo del lí
 
 
 
-Llegados a este punto, se ha completado el diseño y contrucción del prototipo robótico PiBotJ. A continuación, se detallará el soporte \textit{software} que se ha dado a este robot para alcanzar el objetivo del proyecto.
+Llegados a este punto, se ha completado el diseño y construcción del prototipo robótico PiBotJ. A continuación, se detallará el soporte \textit{software} que se ha dado a este robot para alcanzar el objetivo del proyecto.
 

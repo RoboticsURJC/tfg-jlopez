@@ -3,7 +3,7 @@
 
 \begin{flushright}
 \begin{minipage}[]{10cm}
-\emph{El software es una gran combinación entre arte e ingeniería}\\
+\emph{El software es una gran combinación entre arte e ingeniería.}\\
 \end{minipage}\\
 
 Bill Gates\\
@@ -12,7 +12,7 @@ Bill Gates\\
 \vspace{1cm}
 \setcounter{footnote}{72}
 
-Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico descrito, en este capítulo se explica la implementación \textit{software} desarrrollado para dar soporte a dicho prototipo.
+Una vez contado todo el proceso llevado a cabo para el diseño y construcción del prototipo robótico descrito, en este capítulo se explica la implementación \textit{software} desarrollado para dar soporte a dicho prototipo.
 
 \section{Simulación}
 \label{sec:simulacion}
@@ -73,7 +73,7 @@ En relación a los \textit{link}\footnote{\url{https://articulatedrobotics.xyz/t
 %\end{code}
 
 
-Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}.Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
+Una vez definidas las distintas partes del robot, se describen las interacciones del robot con el simulador; para ello se usa la macro \verb|<gazebo>|. En el presente proyecto, se ha simulado el sensor cámara y el módulo \acs{GPS}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 %Existen muchos tipos de interacciones; en el Código \ref{cod:gazebo} se muestra; a modo de ejemplo, cómo simular el sensor cámara. Por su parte, para simular el módulo GPS se ha utilizado un mensaje del tipo NavSatFix\footnote{\url{http://docs.ros.org/en/api/sensor_msgs/html/msg/NavSatFix.html}}. Se pueden encontrar más ejemplos en la web oficial\footnote{\url{http://wiki.ros.org/urdf/XML/Gazebo}}.
 
 %\begin{code}[h]
@@ -595,15 +595,15 @@ Los últimos componentes que faltaban por configurar son los motores, que van co
 %\end{verbatim}
 
 %Para asegurarnos que funcionaban perfectamente habia que añadir \textit{dialout} a \textit{groups} y ya 
-Tras seguir los pasos de configuración del \hyperref[cap:capitulo9]{Anexo}, importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}} (Figura \ref{fig:pwm}). Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
+Tras seguir los pasos de configuración del \hyperref[cap:capitulo9]{Anexo}, importando la librería \verb|RPi.GPIO| se pueden operar directamente. Estos servomotores se mueven por posición entre 0º y 180º, y se controlan mediante modulación del ancho del pulso (\ac{PWM}), donde la posición del eje del servo depende de la duración del pulso. Para mantener su posición, el servo necesita recibir un pulso cada 20 ms\footnote{\url{https://docs.rs-online.com/0e85/0900766b8123f8d7.pdf}}. Para cambiar ese \ac{PWM}\footnote{\url{https://solectroshop.com/es/blog/que-es-pwm-y-como-usarlo--n38}} es necesario usar el procedimiento \verb|ChangeDutyCycle()|, que modifica el porcentaje de tiempo que la señal está activa durante un período de la señal. En este caso, el ciclo de trabajo determina la posición del eje del servo siendo 0º de 2,5\% de \textit{duty cycle} y 180º de 12,5\% \textit{duty cycle}. Para facilitar la lógica de movimiento se creó una fórmula de conversión de grados a porcentaje de trabajo. En la Figura \ref{fig:motorlogic} se muestran los distintos valores necesarios para hacer los movimientos que necesitaba PiBotJ: hacia adelante, hacia atrás, girar hacia la izquierda mientras avanza hacia adelante, y girar hacia la derecha mientras avanza hacia adelante.
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap6/pwm.png}
-	\end{center}
-	\caption{Diagrama para la posición central del servo}
-	\label{fig:pwm}
-\end{figure}
+% \begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=12cm]{figs/cap6/pwm.png}
+%	\end{center}
+%	\caption{Diagrama para la posición central del servo}
+%	\label{fig:pwm}
+%\end{figure}
 
  \begin{figure} [h!]
 	\begin{center}
@@ -649,7 +649,7 @@ En la Figura \ref{fig:iares} se puede ver que aparecen cuatro gráficas en la pa
 
 En la Figura \ref{fig:iares2}, en concreto en la parte superior, se puede ver las métricas de precisión y exhaustividad (\textit{recall}) que evalúan la capacidad del modelo para identificar correctamente las instancias de cada clase ya que valores son crecientes. En la parte inferior, la métrica \ac{mAP} es creciente e indica que el modelo está mejorando en la detección y clasificación ya que, evalúa el equilibrio entre precisión y exhaustividad.
 
-Para comprobar que el modelo funciona correctamente, se ha aplicado el modelo entrenado sobre una serie de imágenes mostradas en la Figura \ref{fig:trainex} y sobre un video\footnote{\url{https://www.youtube.com/watch?v=Gnwciv4pWf0}}. Todo está documentado en un Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1QRFWn5tQNXs6ldnomCZNv3DUDi8FudW2?usp=sharing}}, que está basado en el tutorial de Muhammad Moin\footnote{\url{https://www.youtube.com/watch?v=bAlObHUIErM}}.
+Para comprobar que el modelo funciona correctamente, se ha aplicado el modelo entrenado sobre una serie de imágenes mostradas en la Figura \ref{fig:trainex} y sobre un vídeo\footnote{\url{https://www.youtube.com/watch?v=Gnwciv4pWf0}}. Todo está documentado en un Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1QRFWn5tQNXs6ldnomCZNv3DUDi8FudW2?usp=sharing}}, que está basado en el tutorial de Muhammad Moin\footnote{\url{https://www.youtube.com/watch?v=bAlObHUIErM}}.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -659,7 +659,7 @@ Para comprobar que el modelo funciona correctamente, se ha aplicado el modelo en
 	\label{fig:trainex}
 \end{figure}
 
-Una vez demostrado que el modelo es capaz de detectar bien los baches, es el momento de convertir ese modelo para que fuera capaz de trabajar dentro de la RPi 4 y Google Coral. Gracias a este video\footnote{\url{https://www.youtube.com/watch?v=w4yHORvDBw0}}, se pudo conseguir realizar este Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1XU2ONX5Mq2zNWlZu3hmNIylqbto5hGfm?usp=sharing}}, que convierte el modelo entrenado a un formato edgetpu de 192x192 imágenes, para que el dispositivo Google Coral pueda operar con él, llamado \textit{bestv2\_full\_integer\_quant\_edgetpu.tflite}\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}.
+Una vez demostrado que el modelo es capaz de detectar bien los baches, es el momento de convertir ese modelo para que fuera capaz de trabajar dentro de la RPi 4 y Google Coral. Gracias a este vídeo\footnote{\url{https://www.youtube.com/watch?v=w4yHORvDBw0}}, se pudo conseguir realizar este Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1XU2ONX5Mq2zNWlZu3hmNIylqbto5hGfm?usp=sharing}}, que convierte el modelo entrenado a un formato edgetpu de 192x192 imágenes, para que el dispositivo Google Coral pueda operar con él, llamado \textit{bestv2\_full\_integer\_quant\_edgetpu.tflite}\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}.
 
 \subsubsection{Valores obtenidos del modelo}
 \label{subsec:valoresmodelotflite}
@@ -702,7 +702,7 @@ Estos son dos tensores de salida en un modelo cuantizado. El primer tensor (Part
 \subsubsection{Aplicación del modelo}
 \label{subsec:aplicacionmodelo}
 
-Una vez se conocen las características que posee el modelo, es necesario extraer la información y convertirla en el formato adecuado para poder operar con ella (Código \ref{cod:codeconvert}). Los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| ya se pueden tratar y establecer una umbralizacización de 0.6 para considerar dichos valores si han detectado bache o no. Sin embargo, los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| eran muy inestables, y se consideró la técnica de \ac{EMA} (Ecuación \ref{ec:ema2}) para que no fluctuasen tanto los valores y darle más peso a las medidas más recientes. Esta técnica es común en análisis técnico, como se describe en \cite{6708545}, pero se decidió incluir en ese proyecto ya que satisfacía las necesidades buscadas y por su liviana carga computacional.
+Una vez se conocen las características que posee el modelo, es necesario extraer la información y convertirla en el formato adecuado para poder operar con ella (Código \ref{cod:codeconvert}). Los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| ya se pueden tratar y establecer una umbralización de 0.6 para considerar dichos valores si han detectado bache o no. Sin embargo, los valores de \verb|pothole_mask_class0| y \verb|pothole_mask_class1| eran muy inestables, y se consideró la técnica de \ac{EMA} (Ecuación \ref{ec:ema2}) para que no fluctuasen tanto los valores y darle más peso a las medidas más recientes. Esta técnica es común en análisis técnico, como se describe en \cite{6708545}, pero se decidió incluir en ese proyecto ya que satisfacía las necesidades buscadas y por su liviana carga computacional.
 
 \begin{code}[h]
 	\begin{lstlisting}[language=Python]
@@ -726,7 +726,7 @@ Una vez se conocen las características que posee el modelo, es necesario extrae
 		
 		# Saca informacion del tensor de salida 2 que tiene forma [1, 48, 48, 32] 
 		output_data1 = self.interpreter.get_tensor(self.output_details[1]['index'])
-		# elimina la dimensipn del batch (el primer valor del array)
+		# elimina la dimension del batch (el primer valor del array)
 		prediction1 = np.squeeze(output_data1)
 		
 		# Descuantificar la mascara de baches mirando el canal 0
@@ -769,7 +769,7 @@ Para conseguir los píxeles, se toma la máscara binarizada usando el umbral def
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/contornobache2.png}
 	\end{minipage}
-	\caption{Contorno del baches detectados}
+	\caption{Contornos de baches detectados}
 	\label{fig:contornobache}
 \end{figure}
 
@@ -791,7 +791,7 @@ Extraer información de la cámara no es fácil y, por ello, se decidió simplif
 \footnotetext[\value{footnote}]{\url{https://es.wikipedia.org/wiki/C\%C3\%A1mara_estenopeica}\label{note:enlace124}}
 
 
-Este modelo explica cómo se realiza la proyección de un punto en el espacio tridimensional hacia el plano bidimensional de una imagen. En otras palabras, el modelo de cámara define una formulación matemática que permite, a partir de las coordenadas de un punto en el espacio 3D con referencia a la cámara, calcular las coordenadas en las que ese punto aparecería en una fotografía. Un resumen de fórmulas matemáticas aparecen en la Figura \ref{fig:pinholeformula}.
+Este modelo explica cómo se realiza la proyección de un punto en el espacio tridimensional hacia el plano bidimensional de una imagen. En otras palabras, el modelo de cámara define una formulación matemática que permite, a partir de las coordenadas de un punto en el espacio 3D con referencia a la cámara, calcular las coordenadas en las que ese punto aparecería en una fotografía y viceversa. Un resumen de fórmulas matemáticas aparecen en la Figura \ref{fig:pinholeformula}.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -801,13 +801,13 @@ Este modelo explica cómo se realiza la proyección de un punto en el espacio tr
 	\label{fig:pinholeformula}
 \end{figure}
   
-En la Figura \ref{fig:pinholeformula} se pueden ver los pámetros intrínsecos y extrínsecos, que son tomados de la calibración de la cámara, descritos en la Sección \ref{subsec:configcamara}. Dicha calibración se realizó sobre imágenes de 640x480, y los píxeles del contorno del bache están en imágenes de 192x192, por lo que es necesario aplicar otro factor de conversión. 
+En la Figura \ref{fig:pinholeformula} se pueden ver los parámetros intrínsecos y extrínsecos, que son tomados de la calibración de la cámara, descritos en la Sección \ref{subsec:configcamara}. Dicha calibración se realizó sobre imágenes de 640x480, y los píxeles del contorno del bache están en imágenes de 192x192, por lo que es necesario aplicar otro factor de conversión. 
 
-Una vez se conoce cómo funciona el modelo pinhole, es importante destacar que, para poder convertir los píxeles del mundo 2D al mundo real hay que tener en cuenta que hay tres sistemas de coordenadas diferentes como muestra la Figura \ref{fig:siscoordenadas}, que ha sido modificada del artículo \cite{unknown} y que el modelo pinhole únicamente es capaz de convertir del sistema de coordenadas del mundo real al sistema de coordenadas de la cámara, algo a tener en cuenta.  
+Una vez se conoce cómo funciona el modelo pinhole, es importante destacar que, para poder convertir los píxeles de un sistema a otro, hay que tener en cuenta que hay tres sistemas de coordenadas diferentes como muestra la Figura \ref{fig:siscoordenadas}, que ha sido modificada del artículo \cite{201705.0170}. La modificación se ha producido debido a que para este proyecto se ha estimado más oportuno que el sentido del eje X sea hacia adelante y por ende, usando la regla de la mano derecha, el sentido del eje Z sea hacia abajo.
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/pinholecoordinates.png}
+		\includegraphics[width=14cm]{figs/cap6/pinholecoordinates.png}
 	\end{center}
 	\caption{Sistemas de coordenadas}
 	\label{fig:siscoordenadas}
@@ -817,7 +817,7 @@ Otro dato importante a tener en cuenta es que solo disponemos de una cámara, y 
 
 % partimos de la solución ofrecida en el artículo x, donde los autores nos facilitan una infraestructura software que da soporte a esta hipótesis suelo usando el modelo pinhole como nosotros
 
-La hipótesis suelo (Figura \ref{fig:hipotesissuelo} tomada del artículo \cite{vega19d}) supone que todos los objetos del mundo en 3D están pegados al suelo, por lo tanto, asumiendo que Z = 0, nos permitirá estimar la conversión de 2D a 3D con una sola cámara.  
+La hipótesis suelo (Figura \ref{fig:hipotesissuelo} tomada del artículo \cite{vega19d}) supone que todos los objetos del mundo en 3D están apoyados sobre el suelo, por lo tanto, asumiendo que el suelo etá en el plano Z = 0, este nos permitirá estimar, con una única cámara, la posición 3D de los puntos que estén en el suelo, como los que conforman un bache.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -829,14 +829,14 @@ La hipótesis suelo (Figura \ref{fig:hipotesissuelo} tomada del artículo \cite{
 
 
 %Para conseguir la solución a este problema la tomamos del artículo \cite{vega19d}, donde los autores nos presentan un sistema de visión de código abierto que simplifica el uso de cámaras en la robótica educativa. 
-Partimos de la solución ofrecida en el artículo \cite{vega19d}, donde los autores nos facilitan una infraestructura software que da soporte a esta hipótesis suelo usando el modelo pinhole, como nosotros. En él se detallan todos los pasos que se han explicado previamente y el código asociado con la obtención de los píxeles en coordenadas del mundo en 3D, se encuentra definido en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
+Partimos de la solución ofrecida en el artículo \cite{vega19d}, donde los autores nos facilitan una infraestructura software que da soporte a esta hipótesis suelo usando el modelo pinhole. En él se detallan todos los pasos que se han explicado previamente, y el código asociado con la obtención de los píxeles en coordenadas del mundo en 3D, se encuentra definido en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
 
 \subsection{Algoritmo de la lazada}
 \label{subsec:softwareshoelace}
 
-Para calcular el área de las coordenadas del mundo real, se ha obtado por seguir el algoritmo de la lazada\footnote{\url{https://es.wikipedia.org/wiki/F\%C3\%B3rmula_del_\%C3\%A1rea_de_Gauss}} o también conocido como el área de Gauss. Este algoritmo matemático es usado para calcular el área de un polígono simple cuyos vértices están descritos como pares de coordenadas en el plano. Tiene múltiples aplicaciones en agrimensura y topografía.
+Para calcular el área de las coordenadas del mundo real, se ha optado por seguir el algoritmo de la lazada\footnote{\url{https://es.wikipedia.org/wiki/F\%C3\%B3rmula_del_\%C3\%A1rea_de_Gauss}} o también conocido como el área de Gauss. Este algoritmo matemático es usado para calcular el área de un polígono simple cuyos vértices están descritos como pares de coordenadas en el plano. Tiene múltiples aplicaciones en agrimensura y topografía.
 
-El nombre de este algoritmo es debido al constante cruce de productos de las coordenadas, que simula atarse los cordones, como muestra la Ecuación \ref{ec:shoelace}.
+El nombre de este algoritmo es debido al constante cruce de productos de las coordenadas, que simula la acción de atarse los cordones, y cuya formulación matemática se muestra en la Ecuación \ref{ec:shoelace}.
 \begin{myequation}[h]
 	\begin{equation}
 		A = \frac{1}{2}\abs{\sum_{i=1}^{n-1}x_i y_{i+1} + x_n y_1 - \sum_{i=1}^{n-1}x_{i+1} y_{i} - x_1 y_n}
@@ -846,9 +846,9 @@ El nombre de este algoritmo es debido al constante cruce de productos de las coo
 	\label{ec:shoelace}
 \end{myequation} 
 
-Donde A es el área del polígono, n es el número de lados del polígono y $(x_i, y_i)$ , i = 1,2,...,n son los vértices del polígono de forma alternativa.
+Donde $A$ es el área del polígono, $n$ es el número de lados del polígono y $(x_i, y_i)$ , i = 1,2,...,n son los vértices del polígono de forma alternativa.
 
-Un ejemplo que ilustra estre proceso y demuestra que se cumple el algoritmo de la lazada con respecto a la fórmula usada para calcular el área de un rectángulo, se puede apreciar en la Figura \ref{fig:demoshoelace}.
+Un ejemplo que ilustra este proceso, y demuestra que se cumple el algoritmo de la lazada con respecto a la fórmula usada para calcular el área de un rectángulo, se puede apreciar en la Figura \ref{fig:demoshoelace}.
 
  \begin{figure} [h!]
 	\begin{center}
@@ -859,31 +859,32 @@ Un ejemplo que ilustra estre proceso y demuestra que se cumple el algoritmo de l
 \end{figure}
 
 
-Este algoritmo aparece aplicado una vez que se ha convertido las coordenadas al sistema del mundo real en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
+Este algoritmo aparece aplicado una vez que se han convertido las coordenadas al sistema del mundo real en \verb|camera_pinholev2_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_pinholev2_node.py}}.
 
 
 \subsection{Interfaz Web}
 \label{subsec:softwareweb}
-La forma que se decidió usar la \ac{HRI} para poder cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}, fue a través de una interfaz web. Dicha interfaz web, ha sido creada gracias a las herramientas descritas en la Sección \ref{subsec:interfazweb}. \verb|Rosbridge_server| permite a las páginas web (que actúan como clientes) comunicarse con el servidor (que en este caso se inicializa en PiBotJ). Para acceder como cliente, en una ventana de un navegador hay que escribir \verb|http://<ip de PiBotJ>:8000/index.html|, sustituyendo \verb|<ip de PiBotJ>| por la IP obtenida al conectarse PiBotJ a la red.
+La forma en que se decidió ofrecer la \ac{HRI} para poder cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}, ha sido a través de una interfaz web. Esta ha sido creada gracias a las herramientas descritas en la Sección \ref{subsec:interfazweb}. \verb|Rosbridge_server| permite a las páginas web (que actúan como clientes) comunicarse con el servidor (que en este caso se inicializa en PiBotJ). Para acceder como cliente, en una ventana de un navegador hay que escribir \verb|http://<ip de PiBotJ>:8000/index.html|, sustituyendo \verb|<ip de PiBotJ>| por la IP obtenida al conectarse PiBotJ a la red.
  
-Una vez habilitada esa comunicación, ya se podía apreciar la página web\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/index.html}} (Figura \ref{fig:interfazweb}). Se decidió incluir un mapa, usando OpenStreetMaps, en el que apareciese un marcador que tiene asociado el valor de área/volumen por cada bache detectado. Por otro lado, se decidió incluir una botonera para poder ser capaz de controlar el movimiento de las ruedas de PiBotJ cuando se quiera usar el modo teleoperado. Dicha botonera se conforma de cuatro botones que publican los distintos movimientos al robot, y cuando se deja de pulsar, el robot se para.
+Una vez habilitada esa comunicación, ya se podía apreciar la página web\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/index.html}} (Figura \ref{fig:interfazweb}). Se decidió incluir un mapa, usando OpenStreetMaps, en el que apareciese un marcador que tiene asociado el valor de área y volumen estimado por cada bache detectado. Por otro lado, se decidió incluir una botonera para poder ser capaz de controlar el movimiento de las ruedas de PiBotJ cuando se quiera usar el modo teleoperado. Dicha botonera se conforma de cuatro botones que publican los distintos movimientos al robot, y cuando se deja de pulsar, el robot se para.
 
 % PENSAR SI INCLUIR VIDEO DEL MODO TELEOPERADO O NO O UN VIDEO DONDE SE MUEVA ÚNICAMENTE LAS RUEDAS.
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap6/interfazweb.png}
+		\includegraphics[width=12cm]{figs/cap6/interfazweb.png}
 	\end{center}
 	\caption{Interfaz web}
 	\label{fig:interfazweb}
 \end{figure}
 
 
-\subsection{Autónomo}
+\subsection{Comportamiento autónomo}
 \label{subsec:autonomo}
-PiBotJ ya se ha visto que se puede controlar de forma teleoperada, usando la botonera definida en la Sección \ref{subsec:softwareweb} pero, para tener otra alternativa con respecto a la navegación de PiBotJ, se ha decidido implementar una lógica para que su movimiento sea autónomo. 
+PiBotJ se puede controlar de forma teleoperada, usando la botonera definida en la Sección \ref{subsec:softwareweb} pero además, se ha implementado un algoritmo para que su navegación pueda ser autónoma.
 
-Lo ideal para este caso es que PiBotJ fuera capaz de navegar  autónomamente por carreteras pero debido a la imposibilidad de probarlo en ese entorno, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
+Lo ideal en este caso hubiera sido que PiBotJ navegase autónomamente por carreteras reales, pero debido a la imposibilidad de probarlo en ese entorno, por cuestiones de seguridad, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. 
+%El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
 
 \begin{figure}[ht!]
 	\centering
@@ -902,20 +903,20 @@ Lo ideal para este caso es que PiBotJ fuera capaz de navegar  autónomamente por
 	\label{fig:medidascarretera}
 \end{figure}
 
- \begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=6cm, height=6cm]{figs/cap6/carretera.png}
-	\end{center}
-	\caption{Carretera creada en cartulina}
-	\label{fig:carreteracartulina}
-\end{figure}
+ %\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=6cm, height=6cm]{figs/cap6/carretera.png}
+%	\end{center}
+%	\caption{Carretera creada en cartulina}
+%	\label{fig:carreteracartulina}
+%\end{figure}
 
-Una vez definido el entorno donde se iba a trabajar, era el momento de definir la lógica a usar y se decidió unir un algoritmo de detección de líneas junto a la técnica de navegación local conocida como \ac{VFF}. 
+Una vez definido el entorno donde se iba a trabajar, era el momento de definir la lógica a usar, y se decidió unir un algoritmo de detección de líneas junto a la técnica de navegación local conocida como \ac{VFF}. 
 
 \subsubsection{Detección de líneas}
 \label{subsubsec:softwaredl}
 
-Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente cuando no haya bache en el entorno controlado. Para conseguirlo, es necesario procesar la imagen en escala de grises para detectar los contornos de las líneas, usando una umbralización adaptativa para destacar los bordes y una operación de apertura morfológica para eliminar pequeños puntos blancos que representan ruido en la imagen binaria (Código \ref{cod:dl}). El resultado final queda reflejado en la Figura \ref{fig:camaradlines} y el código está plasmado en \verb|camera_dl_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_dl_node.py}}.
+Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente cuando no haya bache en el entorno controlado. Para conseguirlo, es necesario procesar la imagen en escala de grises para detectar los contornos de las líneas, usando una umbralización adaptativa para destacar los bordes y una operación de apertura morfológica para eliminar pequeños puntos blancos que representan ruido en la imagen binaria (Código \ref{cod:dl}). El resultado final queda reflejado en la Figura \ref{fig:camaradlines}, y el código está plasmado en \verb|camera_dl_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_dl_node.py}}.
 
 
 \begin{code}[h]
@@ -936,7 +937,7 @@ Es importante a tener en cuenta que este algoritmo se va a ejecutar únicamente 
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=9cm]{figs/cap6/camaradlines.png}
+		\includegraphics[width=7cm]{figs/cap6/camaradlines.png}
 	\end{center}
 	\caption{Filtro resultante aplicado para la detección de líneas}
 	\label{fig:camaradlines}
@@ -964,16 +965,16 @@ Es un método de navegación local para que un robot autónomo evite obstáculos
 		F_{resultante} = \alpha \cdot F_{atractiva} + \beta \cdot F_{repulsiva}
 		\nonumber
 	\end{equation}
-	\caption[Ecuación de VFF]{Ecuación de VFF}
+	\caption[Ecuación de VFF]{Fórmula del método VFF}
 	\label{ec:vff}
 \end{myequation} 
 
-El robot se mueve en la dirección de la fuerza resultante, ajustando su trayectoria en tiempo real según las posiciones del obstáculo y el objetivo. En este caso, se decidió fijar como objetivo, un punto siempre hacia adelante y como repulsión, el punto más cercano detectado del contorno al robot, en coordenadas del mundo real, y aplicar la fuerza repulsiva respecto a él. La Figura \ref{fig:vfffuerzas} muestra la dirección de las distintas fuerzas. Todo está documentado en \verb|camera_vff_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_vff_node.py}}.
+El robot se mueve en la dirección de la fuerza resultante, ajustando su trayectoria en tiempo real según las posiciones del obstáculo y el objetivo. En este caso, se decidió fijar como objetivo un punto siempre hacia adelante y como repulsión, el punto más cercano detectado del contorno al robot, en coordenadas del mundo real, y aplicar la fuerza repulsiva respecto a él. La Figura \ref{fig:vfffuerzas} muestra la dirección de las distintas fuerzas. Todo está documentado en \verb|camera_vff_node.py|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/pibotj_rr/camera_vff_node.py}}.
 
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=8cm]{figs/cap6/vff.png}
+		\includegraphics[width=6cm]{figs/cap6/vff.png}
 	\end{center}
 	\caption{Diagrama de fuerzas del algoritmo VFF}
 	\label{fig:vfffuerzas}

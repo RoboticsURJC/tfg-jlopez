@@ -46,6 +46,12 @@ Earnest, L. (2012).
 \newblock Cobot programming for collaborative industrial tasks: An overview.
 \newblock {\em Robotics and Autonomous Systems}, 116:162--180.
 
+\bibitem[Fernandez et~al., 2017]{201705.0170}
+Fernandez, L., Avila, V., and Goncalves, L. (2017).
+\newblock A generic approach for error estimation of depth data from (stereo
+  and rgb-d) 3d sensors.
+\newblock {\em Preprints}.
+
 \bibitem[Hansun, 2013]{6708545}
 Hansun, S. (2013).
 \newblock A new approach of moving average method in time series analysis.
@@ -86,11 +92,6 @@ moinfaisal (2023).
 Nilsson, N.~J. et~al. (1984).
 \newblock {\em Shakey the robot}, volume 323.
 \newblock Sri International Menlo Park, California.
-
-\bibitem[Ortiz et~al., 2017]{unknown}
-Ortiz, L., Gonçalves, L., and Cabrera, E. (2017).
-\newblock A generic approach for error estimation of depth data from (stereo
-  and rgb-d) 3d sensors.
 
 \bibitem[Park et~al., 2021]{app112311229}
 Park, S.-S., Tran, V.-T., and Lee, D.-E. (2021).
@@ -133,8 +134,8 @@ Vega, J. and Ca\~nas, J. (2019).
 \newblock Open vision system for low-cost {Robotics} education.
 \newblock {\em Electronics}, 8:1295--1315.
 
-\bibitem[Wanli~Ye and Xiao, 2021]{doi:10.1080/14680629.2019.1615533}
-Wanli~Ye, Wei~Jiang, Z. T. D.~Y. and Xiao, J. (2021).
+\bibitem[Ye et~al., 2021]{doi:10.1080/14680629.2019.1615533}
+Ye, W., Jiang, W., Tong, Z., Yuan, D., and Xiao, J. (2021).
 \newblock Convolutional neural network for pothole detection in asphalt
   pavement.
 \newblock {\em Road Materials and Pavement Design}, 22(1):42--58.

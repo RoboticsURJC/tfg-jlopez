@@ -26,10 +26,10 @@
 \contentsline {subsection}{\numberline {4.1.2}Raspberry PiCamera}{26}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}GPS NEO 6M}{27}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Servomotor estándar Parallax}{27}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Ruedas}{27}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.5}Ruedas}{28}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Google Coral USB}{28}{subsection.4.1.6}%
 \contentsline {subsection}{\numberline {4.1.7}Power bank}{29}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}Rueda loca}{30}{subsection.4.1.8}%
+\contentsline {subsection}{\numberline {4.1.8}Rueda loca}{29}{subsection.4.1.8}%
 \contentsline {subsection}{\numberline {4.1.9}Ordenador principal}{30}{subsection.4.1.9}%
 \contentsline {section}{\numberline {4.2}Software}{31}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Ubuntu}{31}{subsection.4.2.1}%
@@ -49,65 +49,65 @@
 \contentsline {subsection}{\numberline {4.2.9}YOLOv8}{38}{subsection.4.2.9}%
 \contentsline {subsection}{\numberline {4.2.10}TensorFlow Lite}{38}{subsection.4.2.10}%
 \contentsline {subsection}{\numberline {4.2.11}Interfaz Web}{39}{subsection.4.2.11}%
-\contentsline {subsubsection}{ROS2bridge Server}{39}{subsubsection*.72}%
-\contentsline {subsubsection}{OpenStreetMaps}{39}{subsubsection*.73}%
+\contentsline {subsubsection}{ROS2bridge Server}{39}{subsubsection*.71}%
+\contentsline {subsubsection}{OpenStreetMaps}{39}{subsubsection*.72}%
 \contentsline {chapter}{\numberline {5}Diseño y construcción del robot}{40}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Geometría del robot}{40}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Disposición de los componentes hardware}{42}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Bocetos}{43}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Diseño CAD}{45}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Chasis}{46}{subsection.5.4.1}%
+\contentsline {section}{\numberline {5.4}Diseño CAD}{44}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Chasis}{45}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Soporte de la cámara}{46}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Carcasa}{47}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Sujección trasera}{49}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.4}Sujección trasera}{48}{subsection.5.4.4}%
 \contentsline {section}{\numberline {5.5}Impresión y montaje}{49}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Soporte software del robot}{55}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Simulación}{55}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}URDF/Xacro}{55}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{57}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{58}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Launcher}{59}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Ejecución en simulador}{60}{subsection.6.1.5}%
-\contentsline {section}{\numberline {6.2}Componentes del robot real}{62}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Cámara}{62}{subsection.6.2.1}%
-\contentsline {subsubsection}{Parámetros intrínsecos}{62}{subsubsection*.106}%
-\contentsline {subsubsection}{Parámetros extrínsecos}{64}{subsubsection*.110}%
-\contentsline {subsection}{\numberline {6.2.2}Google Coral USB}{65}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{65}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Servomotores}{66}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Comportamiento del robot real}{68}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{68}{subsection.6.3.1}%
-\contentsline {subsubsection}{Valores obtenidos del modelo}{71}{subsubsection*.120}%
-\contentsline {subsubsection}{Aplicación del modelo}{72}{subsubsection*.121}%
-\contentsline {subsubsection}{Obtención del contorno y coordenadas}{72}{subsubsection*.125}%
-\contentsline {subsection}{\numberline {6.3.2}Modelo de cámara pinhole}{73}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{76}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{78}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Comportamiento autónomo}{79}{subsection.6.3.5}%
-\contentsline {subsubsection}{Detección de líneas}{80}{subsubsection*.137}%
-\contentsline {subsubsection}{Virtual Force Field}{80}{subsubsection*.141}%
-\contentsline {chapter}{\numberline {7}Experimentos}{83}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Impresión 3D}{83}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ruedas}{84}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Detección de baches}{85}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Obtención del contorno y coordenadas del bache}{87}{subsection.7.3.1}%
-\contentsline {section}{\numberline {7.4}Modelo de cámara pinhole}{88}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{89}{section.7.5}%
-\contentsline {section}{\numberline {7.6}VFF}{90}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{91}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Navegación teleoperada}{92}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Navegación autónoma}{93}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{96}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{96}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivos}{96}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Requisitos}{97}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{98}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Líneas futuras}{99}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{100}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{100}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{101}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{101}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{102}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{103}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{106}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{107}{appendix*.164}%
+\contentsline {chapter}{\numberline {6}Soporte software del robot}{54}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Simulación}{54}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}URDF/Xacro}{54}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}ROS 2 Control}{56}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Robot State Publisher}{57}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Launcher}{58}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Ejecución en simulador}{59}{subsection.6.1.5}%
+\contentsline {section}{\numberline {6.2}Componentes del robot real}{61}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Cámara}{61}{subsection.6.2.1}%
+\contentsline {subsubsection}{Parámetros intrínsecos}{62}{subsubsection*.103}%
+\contentsline {subsubsection}{Parámetros extrínsecos}{63}{subsubsection*.107}%
+\contentsline {subsection}{\numberline {6.2.2}Google Coral USB}{63}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{64}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Servomotores}{65}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Comportamiento del robot real}{66}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{66}{subsection.6.3.1}%
+\contentsline {subsubsection}{Valores obtenidos del modelo}{68}{subsubsection*.115}%
+\contentsline {subsubsection}{Aplicación del modelo}{70}{subsubsection*.116}%
+\contentsline {subsubsection}{Obtención del contorno y coordenadas}{71}{subsubsection*.120}%
+\contentsline {subsection}{\numberline {6.3.2}Modelo de cámara pinhole}{71}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{74}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{75}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Comportamiento autónomo}{76}{subsection.6.3.5}%
+\contentsline {subsubsection}{Detección de líneas}{76}{subsubsection*.131}%
+\contentsline {subsubsection}{Virtual Force Field}{78}{subsubsection*.135}%
+\contentsline {chapter}{\numberline {7}Experimentos}{80}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Impresión 3D}{80}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ruedas}{81}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Detección de baches}{82}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Obtención del contorno y coordenadas del bache}{84}{subsection.7.3.1}%
+\contentsline {section}{\numberline {7.4}Modelo de cámara pinhole}{85}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{86}{section.7.5}%
+\contentsline {section}{\numberline {7.6}VFF}{87}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{88}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Navegación teleoperada}{89}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Navegación autónoma}{90}{subsection.7.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{93}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{93}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivos}{93}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Requisitos}{94}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{95}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{96}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{97}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{97}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{98}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{98}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{99}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{100}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{103}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{104}{appendix*.158}%
