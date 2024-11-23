@@ -11,14 +11,57 @@ Para poder construir este robot, se han proporcionado una serie de ficheros .stl
 - [Sujección trasera](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl)
 
 Estas son las características de impresión: 
+<table>
+  
+  <tr>
+    <th>Características</th>
+    <th>Parámetros</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Calidad</b></td>
+    <td>Altura de capa: 0,2 mm</td>
+  </tr>
+  <tr>
+    <td>Ancho de línea: 0,4 mm</td>
+  </tr>
+  <tr>
+    <td rowspan="4"><b>Paredes</b></td>
+    <td>Grosor de pared: 0,8 mm</td>
+  </tr>
+  <tr>
+    <td>Cantidad de líneas de pared: 2</td>
+  </tr>
+  <tr>
+    <td>Alineación de costura en Z: Esquina más afilada</td>
+  </tr>
+  <tr>
+    <td>Preferencia de costura en esquina: Ocultación inteligente</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Relleno</b></td>
+    <td>Densidad de relleno: 15%</td>
+  </tr>
+  <tr>
+    <td>Patrón de relleno: Gyroid</td>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Velocidad</b></td>
+    <td>Velocidad de impresión: 50 mm/s</td>
+  </tr>
+  <tr>
+    <td>Velocidad de la primera capa: 20 mm/s</td>
+  </tr>
+</table>
 
 
 Esta es la tornillería usada: 
 
 
-Para el ensamblaje, se ha creado este [fichero]() que muestra paso a paso el ensamblaje completo del robot. Finalmente el robot tiene que quedar así: 
+Para el ensamblaje, se ha creado este [fichero](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd) que muestra paso a paso el ensamblaje completo del robot. Finalmente el robot tiene que quedar así: 
 
-(Incluir imagen)
+<p align="center">
+<img src="https://github.com/RoboticsURJC/tfg-jlopez/blob/main/memoria/figs/cap5/completo3.png" width="40%" height="40%">
+</p>
 
 ## Soporte software 
 A continuación, se van a explicar la implementación software desarrollada para el robot: 
@@ -46,6 +89,10 @@ Si la primera vez que se lance el robot ocurre algún error, puede ser normal; s
 
 El vídeo de acontinuación, muestra una demo completa del robot ejecutado en simulación.
 
+<a href="https://www.youtube.com/watch?v=A0yi7YlLpq0">
+    <img src="https://img.youtube.com/vi/A0yi7YlLpq0/mqdefault.jpg" alt="">
+</a>
+
 ### Robot físico
 
 
@@ -64,6 +111,9 @@ ros2 launch pibotj_rr robot_vff.launch.py
 http://<ip robot>:8000/index_vff.html
 ```
 
+<a href="https://www.youtube.com/watch?v=zQudXBXHVaY">
+    <img src="https://img.youtube.com/vi/zQudXBXHVaY/mqdefault.jpg" alt="">
+</a>
 
 
 
