@@ -71,28 +71,28 @@
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Sistemas de coordenadas\relax }}{73}{figure.caption.124}%
 \contentsline {figure}{\numberline {6.21}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{74}{figure.caption.125}%
 \contentsline {figure}{\numberline {6.22}{\ignorespaces Demostración del algoritmo de la lazada\relax }}{75}{figure.caption.127}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Interfaz web\relax }}{76}{figure.caption.129}%
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Conversión de medidas de la carretera\relax }}{77}{figure.caption.130}%
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Filtro resultante aplicado para la detección de líneas\relax }}{78}{figure.caption.133}%
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Distintos casos de la detección de líneas\relax }}{78}{figure.caption.134}%
-\contentsline {figure}{\numberline {6.27}{\ignorespaces Diagrama de fuerzas del algoritmo VFF\relax }}{79}{figure.caption.137}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Interfaz web\relax }}{76}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Conversión de medidas de la carretera\relax }}{77}{figure.caption.129}%
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Filtro resultante aplicado para la detección de líneas\relax }}{78}{figure.caption.132}%
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Distintos casos de la detección de líneas\relax }}{78}{figure.caption.133}%
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Diagrama de fuerzas del algoritmo VFF\relax }}{79}{figure.caption.136}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Versiones previas de impresión\relax }}{80}{figure.caption.138}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Capturas de las pruebas de PiBotJ con las distintas ruedas\relax }}{81}{figure.caption.140}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Parte de la configuración usada para el entrenamiento\relax }}{82}{figure.caption.141}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Gráfica que muestra los valores de la clase 0\relax }}{83}{figure.caption.142}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Gráfica que muestra los valores de la clase 1\relax }}{84}{figure.caption.143}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{85}{figure.caption.144}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Versión final en la obtención del contorno del bache\relax }}{86}{figure.caption.146}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Captura del vídeo que demuestra el modelo pinhole\relax }}{86}{figure.caption.147}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Medidas del bache\relax }}{87}{figure.caption.148}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{88}{figure.caption.150}%
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Capturas del vídeo que hace pruebas sobre el algoritmo VFF\relax }}{88}{figure.caption.151}%
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{89}{figure.caption.152}%
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Captura del vídeo del modo teleoperado\relax }}{90}{figure.caption.153}%
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{91}{figure.caption.154}%
-\contentsline {figure}{\numberline {7.15}{\ignorespaces Captura del vídeo del modo autónomo\relax }}{92}{figure.caption.155}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Versiones previas de impresión\relax }}{80}{figure.caption.137}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Capturas de las pruebas de PiBotJ con las distintas ruedas\relax }}{81}{figure.caption.139}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Parte de la configuración usada para el entrenamiento\relax }}{82}{figure.caption.140}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Gráfica que muestra los valores de la clase 0\relax }}{83}{figure.caption.141}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Gráfica que muestra los valores de la clase 1\relax }}{84}{figure.caption.142}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{85}{figure.caption.143}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Versión final en la obtención del contorno del bache\relax }}{86}{figure.caption.145}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Captura del vídeo que demuestra el modelo pinhole\relax }}{86}{figure.caption.146}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Medidas del bache\relax }}{87}{figure.caption.147}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{88}{figure.caption.149}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Capturas del vídeo que hace pruebas sobre el algoritmo VFF\relax }}{88}{figure.caption.150}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{89}{figure.caption.151}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Captura del vídeo del modo teleoperado\relax }}{90}{figure.caption.152}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{91}{figure.caption.153}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Captura del vídeo del modo autónomo\relax }}{92}{figure.caption.154}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{99}{figure.caption.156}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{100}{figure.caption.157}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{99}{figure.caption.155}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{100}{figure.caption.156}%

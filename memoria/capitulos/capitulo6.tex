@@ -896,7 +896,7 @@ Este algoritmo aparece aplicado una vez que se han convertido las coordenadas al
 
 \subsection{Interfaz Web}
 \label{subsec:softwareweb}
-La forma en que se decidió ofrecer la \ac{HRI} para poder cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}, ha sido a través de una interfaz web. Esta ha sido creada gracias a las herramientas descritas en la Sección \ref{subsec:interfazweb}. \verb|Rosbridge_server| permite a las páginas web (que actúan como clientes) comunicarse con el servidor (que en este caso se inicializa en PiBotJ). Para acceder como cliente, en una ventana de un navegador hay que escribir \verb|http://<ip de PiBotJ>:8000/index.html|, sustituyendo \verb|<ip de PiBotJ>| por la IP obtenida al conectarse PiBotJ a la red.
+La forma en que se decidió ofrecer la Interacción Humano-Robot (HRI) para poder cumplir con el objetivo principal descrito en la Sección \ref{sec:descripcion}, ha sido a través de una interfaz web. Esta ha sido creada gracias a las herramientas descritas en la Sección \ref{subsec:interfazweb}. \verb|Rosbridge_server| permite a las páginas web (que actúan como clientes) comunicarse con el servidor (que en este caso se inicializa en PiBotJ). Para acceder como cliente, en una ventana de un navegador hay que escribir \verb|http://<ip de PiBotJ>:8000/index.html|, sustituyendo \verb|<ip de PiBotJ>| por la IP obtenida al conectarse PiBotJ a la red.
  
 Una vez habilitada esa comunicación, ya se podía apreciar la página web\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/index.html}} (Figura \ref{fig:interfazweb}). Se decidió incluir un mapa, usando OpenStreetMaps, en el que apareciese un marcador que tiene asociado el valor de área y volumen estimado por cada bache detectado. Por otro lado, se decidió incluir una botonera para poder ser capaz de controlar el movimiento de las ruedas de PiBotJ cuando se quiera usar el modo teleoperado. Dicha botonera se conforma de cuatro botones que publican los distintos movimientos al robot, y cuando se deja de pulsar, el robot se para.
 
@@ -1006,7 +1006,7 @@ El robot se mueve en la dirección de la fuerza resultante, ajustando su trayect
 
  \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=6cm]{figs/cap6/vff.png}
+		\includegraphics[width=8cm]{figs/cap6/vff.png}
 	\end{center}
 	\caption{Diagrama de fuerzas del algoritmo VFF}
 	\label{fig:vfffuerzas}
