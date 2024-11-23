@@ -56,12 +56,30 @@ Estas son las características de impresión:
 
 Esta es la tornillería usada: 
 
+| **Componente**         | **Tornillos**  | **Tuercas**| **Arandelas**| **Hama beads blancas**|
+|------------------------|----------------|------------|--------------|-----------------------|
+| Motores                | 12 M2 10mm     |   12       |      24      |                       |
+| PiCamera(base)         |  2 M2 10mm     |    2       |       4      |                       |
+| PiCamera(cámara)       |  2 M2 12mm     |    2       |      12      |                       |
+| Raspberry Pi           |  4 M2 12mm     |    4       |              |         4             |
+| Placa GPS              |  4 M2 16mm     |    4       |       8      |         4             |
+| Antena GPS             |  4 M2 16mm     |    4       |              |         4             |
+| Sujección entre placas |  4 M2 16mm     |    4       |       8      |                       |
+| Sujección trasera      |  1 M2 16mm     |    1       |       2      |                       |
+
+
+
 
 Para el ensamblaje, se ha creado este [fichero](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd) que muestra paso a paso el ensamblaje completo del robot. Finalmente el robot tiene que quedar así: 
 
 <p align="center">
 <img src="https://github.com/RoboticsURJC/tfg-jlopez/blob/main/memoria/figs/cap5/completo3.png" width="40%" height="40%">
 </p>
+
+<p align="center">
+<img src="https://github.com/RoboticsURJC/tfg-jlopez/blob/main/memoria/figs/cap5/ab.jpeg" width="20%" height="20%">
+</p>
+
 
 ## Soporte software 
 A continuación, se van a explicar la implementación software desarrollada para el robot: 
@@ -103,6 +121,11 @@ ros2 launch pibotj_rr robot_teleop.launch.py
 ```bash
 http://<ip robot>:8000/index_teleop.html
 ```
+
+<a href="https://www.youtube.com/watch?v=qGbJ7IGwjWk">
+    <img src="https://img.youtube.com/vi/qGbJ7IGwjWk/mqdefault.jpg" alt="">
+</a>
+
 ```bash
 ros2 launch pibotj_rr robot_vff.launch.py
 ```
