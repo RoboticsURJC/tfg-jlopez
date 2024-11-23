@@ -92,22 +92,22 @@
 \contentsline {section}{\numberline {7.3}Detección de baches}{82}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}Obtención del contorno y coordenadas del bache}{84}{subsection.7.3.1}%
 \contentsline {section}{\numberline {7.4}Modelo de cámara pinhole}{85}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{86}{section.7.5}%
-\contentsline {section}{\numberline {7.6}VFF}{87}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{88}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Navegación teleoperada}{89}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Navegación autónoma}{90}{subsection.7.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusiones}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{93}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Objetivos}{93}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Requisitos}{94}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{95}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Líneas futuras}{96}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{97}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Simulación}{97}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Robot real}{98}{section.Alph1.2}%
-\contentsline {subsection}{\numberline {A.2.1}Cámara}{98}{subsection.Alph1.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Google Coral}{99}{subsection.Alph1.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{100}{subsection.Alph1.2.3}%
-\contentsline {subsection}{\numberline {A.2.4}Servomotores}{103}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{104}{appendix*.157}%
+\contentsline {section}{\numberline {7.5}Algoritmo de la lazada}{85}{section.7.5}%
+\contentsline {section}{\numberline {7.6}VFF}{86}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Ejecución completa de la aplicación}{87}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Navegación teleoperada}{87}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Navegación autónoma}{88}{subsection.7.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusiones}{91}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Objetivos y requisitos cumplidos}{91}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Objetivos}{91}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Requisitos}{92}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Habilidades desarrolladas}{93}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Líneas futuras}{94}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Configuración de PiBotJ}{95}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Simulación}{95}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Robot real}{96}{section.Alph1.2}%
+\contentsline {subsection}{\numberline {A.2.1}Cámara}{96}{subsection.Alph1.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Google Coral}{97}{subsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{98}{subsection.Alph1.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Servomotores}{101}{subsection.Alph1.2.4}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{102}{appendix*.155}%

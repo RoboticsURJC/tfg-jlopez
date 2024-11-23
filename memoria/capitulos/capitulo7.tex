@@ -11,7 +11,7 @@ Ralph Waldo Emerson\\
 
 \vspace{1cm}
 
-\setcounter{footnote}{132} % Establecer la numeración de la siguiente nota al pie
+\setcounter{footnote}{117} % Establecer la numeración de la siguiente nota al pie
 
 En este capítulo se tratarán los diferentes experimentos llevados a cabo para la realización de este proyecto y que han permitido conseguir y demostrar la consecución del objetivo y subobjetivos definidos en la Sección \ref{sec:descripcion}.
 
@@ -35,7 +35,6 @@ Primero, se optó por diseñar la estructura como una pieza única para facilita
 	\caption{Versiones previas de impresión}
 	\label{fig:imfallida}
 \end{figure}
-
 
 Después de eso, se tuvo que cambiar el enfoque y se decidió dividirlo en diferentes piezas para intentar solucionar el problema, como se comentó en la Sección \ref{sec:diseñocad}. En ese momento se estaba usando otra impresora distinta a la definida en la Sección \ref{sec:impresionmontaje}, llamada Ultimaker Cura 2+\footnote{\url{https://ultimaker.com/3d-printers/s-series/ultimaker-2-connect/}}y se empleó ABS en vez de PLA; por lo tanto, los parámetros de impresión fueron distintos (Cuadro \ref{cuadro:cimpresion2}), pero se producía \textit{warping}. Para conocer más acerca de distintas pruebas, puedes consultarlas en la Wiki\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/wiki/HARDWARE\#impresi\%C3\%B3n-3d}}.
 
@@ -94,15 +93,15 @@ En el primer vídeo\footnote{\url{https://www.youtube.com/watch?v=G71mNFDIDuw}} 
 \section{Detección de baches}
 \label{sec:expaa}
 
-Para conseguir el modelo de entrenamiento de red neuronal creado con YOLOv8, con formato .pb, que se explicó en la Sección \ref{subsec:softwareiayolo}, se realizaron numerosas pruebas, pero finalmente para la etapa de entrenamiento se decidió usar la siguiente configuración (Figura \ref{fig:configaa}). Está completamente recogido y facilitado en el fichero \verb|args.yaml|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/args.yaml}}.
+%Para conseguir el modelo de entrenamiento de red neuronal creado con YOLOv8, con formato .pb, que se explicó en la Sección \ref{subsec:softwareiayolo}, se realizaron numerosas pruebas, pero finalmente para la etapa de entrenamiento se decidió usar la siguiente configuración (Figura \ref{fig:configaa}). Está completamente recogido y facilitado en el fichero \verb|args.yaml|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/args.yaml}}.
 
-\begin{figure} [h!]
-	\begin{center}
-		\includegraphics[width=12cm]{figs/cap7/args.png}
-	\end{center}
-	\caption{Parte de la configuración usada para el entrenamiento}
-	\label{fig:configaa}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=12cm]{figs/cap7/args.png}
+%	\end{center}
+%	\caption{Parte de la configuración usada para el entrenamiento}
+%	\label{fig:configaa}
+%\end{figure}
 
 %% Descripción de la imagen 
 
@@ -111,31 +110,47 @@ Una vez creado, entrenado y convertido el modelo en el formato .tflite, formato 
 	\item \verb|detect.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/detect.tflite}}. Esta primera versión se realizó usando un dataset de 75 imágenes pero usa CPU y tiene baja reactividad: tiene una latencia de unos cuatro segundos.
 	\item \verb|detect_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/detect_edgetpu.tflite}}. Esta versión usa el dataset de 75 imágenes y se intentó que el modelo usase \ac{TPU} del Google Coral pero no funcionó.
 	\item \verb|best_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/best_full_integer_quant_edgetpu.tflite}}. Esta versión usa el dataset definido en la Sección \ref{subsec:softwareiayolo}. En esta ocasión sí es capar de usar \acs{TPU} pero el modelo se moría a los pocos segundos de inicializarlo y era debido a que procesaba imágenes demasiado grandes.
-	\item \verb|bestv2_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}. Esta es la la versión actual usada en el proyecto. A diferencia del ejemplo anterior procesa imágenes de 192x192 y así evitamos que el modelo se muera y funcione perfectamente. La latencia se ha reducido a más de un cuarto de la primera versión y permite el correcto funcionamiento del modelo.	
+	\item \verb|bestv2_full_integer_quant_edgetpu.tflite|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}. Esta es la la versión actual usada en el proyecto. A diferencia del ejemplo anterior, esta versión procesa imágenes de 192x192 y así evitamos que el modelo se muera y funcione perfectamente. La latencia se ha reducido a más de un cuarto de la primera versión y permite el correcto funcionamiento del modelo.	
 \end{itemize}
 
 
 En la Sección \ref{subsec:softwareiayolo} también se comenta cómo conseguir que los valores obtenidos sean estables usando \acs{EMA} y a continuación se puede ver dos gráficas que demuestra la aplicación EMA sobre la máscara de la clase 0 y la máscara de la clase 1 (Figura \ref{fig:diagramaemac0} y Figura \ref{fig:diagramaemac1} respectivamente).
 
-\begin{figure} [h!]
-	\begin{center}
-			\includegraphics[width=15cm]{figs/cap7/GraficaC0.png}
-		\end{center}
-	\caption{Gráfica que muestra los valores de la clase 0}
-	\label{fig:diagramaemac0}
-\end{figure}
+%\begin{figure} [h!]
+%	\begin{center}
+%			\includegraphics[width=15cm]{figs/cap7/GraficaC0.png}
+%		\end{center}
+%	\caption{Gráfica que muestra los valores de la clase 0}
+%	\label{fig:diagramaemac0}
+%\end{figure}
 
 En Figura \ref{fig:diagramaemac0}\footnote{Los valores usados en la gráfica se pueden apreciar aquí: \url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/ema_experiments/valoresc0.csv}}, se puede ver que los valores por encima de 0.6 es cuando se detecta que hay bache. Los valores azules en todo momento se puede ver cómo toman valores dispares, mientras que los valores naranjas permiten que el valor se estabilice eliminando picos. Si se produce un pequeño movimiento y se pierde momentáneamente el bache, gracias a EMA tarda muy poco en recuperar el valor previo, como ocurre en el intervalo entre las medidas 200 y 300.
 
 \begin{figure} [h!]
 	\begin{center}
-		\includegraphics[width=15cm]{figs/cap7/GraficaC1.png}
+		\includegraphics[width=11.5cm]{figs/cap7/GraficaC0.png}
+	\end{center}
+	\caption{Gráfica que muestra los valores de la clase 0}
+	\label{fig:diagramaemac0}
+\end{figure}
+
+%\begin{figure} [h!]
+%	\begin{center}
+%		\includegraphics[width=15cm]{figs/cap7/GraficaC1.png}
+%	\end{center}
+%	\caption{Gráfica que muestra los valores de la clase 1}
+%	\label{fig:diagramaemac1}
+%\end{figure}
+
+Sin embargo, en la Figura \ref{fig:diagramaemac1}\footnote{Los valores usados en la gráfica se pueden apreciar aquí: \url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/ema_experiments/valoresc1.csv}} se puede apreciar cómo inicialmente los valores azules que no muestran bache están por encima del umbral elegido y es gracias a EMA que los valores se estabilizan por debajo del umbral, teniendo a lo largo de todo el proceso un comportamiento correcto. 
+
+\begin{figure} [h!]
+	\begin{center}
+		\includegraphics[width=11.5cm]{figs/cap7/GraficaC1.png}
 	\end{center}
 	\caption{Gráfica que muestra los valores de la clase 1}
 	\label{fig:diagramaemac1}
 \end{figure}
-
-Sin embargo, en la Figura \ref{fig:diagramaemac1}\footnote{Los valores usados en la gráfica se pueden apreciar aquí: \url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/ema_experiments/valoresc1.csv}} se puede apreciar cómo inicialmente los valores azules que no muestran bache están por encima del umbral elegido y es gracias a EMA que los valores se estabilizan por debajo del umbral, teniendo a lo largo de todo el proceso un comportamiento correcto. 
 
 \subsection{Obtención del contorno y coordenadas del bache}
 \label{subsec:expcontorno}
@@ -150,7 +165,7 @@ Para la obtención de las coordenadas del bache detectado, se probaron distintas
 	\label{fig:contornoerror}
 \end{figure}
 
-La segunda y última opción para realizar la detección del contorno, descrita en la Sección \ref{subsec:softwareiayolo} y se puede ver gracias al Código \ref{cod:contorno}. Siendo el valor de 0,6 en el paso de binarizar la máscara, el elegido para decidir si hay bache o no en la imagen. El resultado final se muestra en la Figura \ref{fig:contornobien}.
+La segunda y última opción para realizar la detección del contorno, descrita en la Sección \ref{subsec:softwareiayolo} y se puede ver gracias al Código \ref{cod:contorno}. Siendo el valor de 0,6 en el paso de binarizar la máscara, el elegido para decidir si hay bache o no en la imagen. El resultado final se muestra en la Figura \ref{fig:contornobache}.
 
 \begin{code}[h]
 	\begin{lstlisting}[language=Python]
@@ -168,13 +183,13 @@ La segunda y última opción para realizar la detección del contorno, descrita 
 \end{code}
 
  
- \begin{figure} [h!]
- 	\begin{center}
- 		\includegraphics[width=6cm]{figs/cap6/contornobache1.png}
- 	\end{center}
- 	\caption{Versión final en la obtención del contorno del bache}
- 	\label{fig:contornobien}
- \end{figure}
+% \begin{figure} [h!]
+% 	\begin{center}
+% 		\includegraphics[width=6cm]{figs/cap6/contornobache1.png}
+ %	\end{center}
+ %	\caption{Versión final en la obtención del contorno del bache}
+% 	\label{fig:contornobien}
+% \end{figure}
 
 
 \section{Modelo de cámara pinhole}
@@ -230,10 +245,25 @@ Al igual que en la Sección \ref{subsec:softwareshoelace} se definió y se ejemp
 En el vídeo\footnote{\url{https://www.youtube.com/watch?v=E-q_aclKNqI}} (Figura \ref{fig:expcapturalazada}) se puede ver que en ningún momento el valor calculado de área no supera el valor teórico y son resultados coherentes; demostrando así que el algoritmo de la lazada es una buena opción para calcular el área.
  
 %% incluir el valor del área teórica con una imagen 
-\begin{figure} [h!]
-	\begin{center}
-			\includegraphics[width=15cm]{figs/cap7/capturavideolazada.png}
-		\end{center}
+%\begin{figure} [h!]
+%	\begin{center}
+%			\includegraphics[width=12cm]{figs/cap7/capturavideolazada.png}
+%		\end{center}
+%	\caption{Captura del vídeo que calcula el área usando el algoritmo de la lazada}
+%	\label{fig:expcapturalazada}
+%\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap7/capturavideolazada1.png}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figs/cap7/capturavideolazada2.png}
+	\end{minipage}
 	\caption{Captura del vídeo que calcula el área usando el algoritmo de la lazada}
 	\label{fig:expcapturalazada}
 \end{figure}
@@ -246,7 +276,7 @@ Para evitar los baches se decidió usar el algoritmo \ac{VFF}, descrito en la Se
  
 \begin{figure} [h!]
 	\centering
-	\begin{minipage}{0.45\linewidth}
+	\begin{minipage}{0.44\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap7/demovff1.png}
 	\end{minipage}
@@ -309,7 +339,7 @@ Para completar el comportamiento final el nodo \verb|camera_dl_node| se suscribe
 
 Finalmente, es el nodo \verb|motors_vffv2_node| quien se suscribirá a las dos velocidades y dará prioridad a la detección de baches antes que a la detección de líneas, para aplicar la velocidad adecuada a los motores, usando mecanismos de sincronización.
 
-Una ejecución completa de este ejemplo se puede apreciar en este video\footnote{\url{https://www.youtube.com/watch?v=zQudXBXHVaY}} (Figura \ref{fig:expvfffinal}). 
+Una ejecución completa de este ejemplo se puede apreciar en este vídeo\footnote{\url{https://www.youtube.com/watch?v=zQudXBXHVaY}} (Figura \ref{fig:expvfffinal}). 
 
 \begin{figure} [h!]
 	\begin{center}

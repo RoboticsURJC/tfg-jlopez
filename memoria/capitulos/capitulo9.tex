@@ -11,6 +11,7 @@ Santiago Ramón y Cajal\\
 
 \vspace{1cm}
 
+\setcounter{footnote}{136} % Establecer la numeración de la siguiente nota al pie
 Una vez el robot ya está construido, es necesario configurarlo tanto para simulación como para poder ejecutarlo en la vida real. Para ello, es necesario seguir los siguientes pasos: 
 
 \section{Simulación}
@@ -27,7 +28,7 @@ Primero de todo, hay que instalar los siguientes programas:
 	sudo apt install ros-humble-joint-state-publisher
 \end{verbatim}
  
-Una vez instalados, únicamente hay que ejecutar el programa que permita que el robot en simulación se inicalice. Para ello, únicamente hay que escribir los siguientes comandos:
+Una vez instalados, únicamente hay que ejecutar el programa que permita que el robot en simulación se inicialice. Para ello, únicamente hay que escribir los siguientes comandos:
 \begin{verbatim}
 	colcon build --packages-select pibotj_r2c   # compila los paquetes
 	source ./install/setup.bash                 # configura variables 
@@ -71,7 +72,7 @@ Una vez instalados, hay que seguir los siguientes pasos:
 \begin{enumerate}
 	\item Editar el fichero \verb|/boot/firmware/config.txt| añadiendo \verb|start_x=1| al final.
 	\item Reiniciar la Raspberry: \verb|sudo reboot|.
-	\item Comprobar que la cofiguración es correcta: \verb|v4l2-ctl --list-devices|.
+	\item Comprobar que la configuración es correcta: \verb|v4l2-ctl --list-devices|.
 \end{enumerate}\
 
 En la Figura \ref{fig:v4l2} se puede ver el resultado del Paso 3 y muestra que la cámara se encontraba conectada en el dispositivo \verb|/dev/video0|.
@@ -80,7 +81,7 @@ En la Figura \ref{fig:v4l2} se puede ver el resultado del Paso 3 y muestra que l
 	\begin{center}
 		\includegraphics[width=9cm]{figs/cap6/vl.png}
 	\end{center}
-	\caption{Dispositivos de video y media disponibles en PiBotJ}
+	\caption{Dispositivos de vídeo y media disponibles en PiBotJ}
 	\label{fig:v4l2}
 \end{figure}
 
@@ -134,7 +135,7 @@ Hay que seguir los siguientes pasos:
 	\item Instalar \verb|raspi-config|\footnote{\url{https://github.com/EmilGus/install_raspi-config/tree/master}}.
 	\item Ejecutar \verb|raspi-config| usando \verb|sudo raspi-config|
 	\item Dentro de \textit{raspi-config} hay que desplazarse hasta \textit{Interfacing options} y \textit{serial}.
-	\item Desabilitar \textit{serial login shell} y habilitar \textit{serial interface}.
+	\item Deshabilitar \textit{serial login shell} y habilitar \textit{serial interface}.
 	\item Reiniciar la Raspberry: \verb|sudo reboot|
 \end{enumerate}\
 

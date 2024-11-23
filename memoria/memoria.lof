@@ -17,15 +17,15 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Método PDCA\relax }}{23}{figure.caption.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 4$^{\ref {note:enlace26}}$\relax }}{26}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Raspberry PiCamera V2$^{\ref {note:enlace27}}$\relax }}{26}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Módulo GPS NEO 6M$^{\ref {note:enlace28}}$\relax }}{27}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Servomotor Parallax$^{\ref {note:enlace29}}$\relax }}{27}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Raspberry Pi 4$^{\ref {note:enlace25}}$\relax }}{26}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Raspberry PiCamera V2$^{\ref {note:enlace26}}$\relax }}{26}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Módulo GPS NEO 6M$^{\ref {note:enlace27}}$\relax }}{27}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Servomotor Parallax$^{\ref {note:enlace28}}$\relax }}{27}{figure.caption.49}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Ruedas utilizadas\relax }}{28}{figure.caption.50}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Google Coral USB$^{\ref {note:enlace32}}$\relax }}{29}{figure.caption.51}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Xiaomi power bank$^{\ref {note:enlace33}}$\relax }}{29}{figure.caption.52}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Rueda loca$^{\ref {note:enlace34}}$\relax }}{30}{figure.caption.53}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces ASUS VivoBook 14$^{\ref {note:enlace35}}$\relax }}{30}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Google Coral USB$^{\ref {note:enlace31}}$\relax }}{29}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Xiaomi power bank$^{\ref {note:enlace32}}$\relax }}{29}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Rueda loca$^{\ref {note:enlace33}}$\relax }}{30}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ASUS VivoBook 14$^{\ref {note:enlace34}}$\relax }}{30}{figure.caption.54}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Logo de Freecad\relax }}{32}{figure.caption.58}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Sentencias NMEA capturadas del GPS\relax }}{34}{figure.caption.61}%
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Logo de OpenCV\relax }}{34}{figure.caption.62}%
@@ -43,7 +43,7 @@
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Distintas vistas del soporte de la cámara\relax }}{47}{figure.caption.81}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Distintas vistas de la carcasa\relax }}{48}{figure.caption.82}%
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Distintas vistas de la pieza para la sujección trasera\relax }}{48}{figure.caption.83}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace67}}$\relax }}{49}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Impresora FDM Creality Ender3 V2$^{\ref {note:enlace66}}$\relax }}{49}{figure.caption.84}%
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Piezas impresas\relax }}{50}{figure.caption.86}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Robot completo montado en FreeCAD\relax }}{51}{figure.caption.88}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Ensamblaje ruedas azules genéricas\relax }}{52}{figure.caption.89}%
@@ -66,7 +66,7 @@
 \contentsline {figure}{\numberline {6.15}{\ignorespaces Gráficas de resultados del entrenamiento: métricas\relax }}{67}{figure.caption.112}%
 \contentsline {figure}{\numberline {6.16}{\ignorespaces Demostración del modelo funcionando\relax }}{68}{figure.caption.114}%
 \contentsline {figure}{\numberline {6.17}{\ignorespaces Contornos de baches detectados\relax }}{71}{figure.caption.121}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Funcionamiento de una cámara esteneopeica $^{\ref {note:enlace124}}$\relax }}{72}{figure.caption.122}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Funcionamiento de una cámara esteneopeica $^{\ref {note:enlace109}}$\relax }}{72}{figure.caption.122}%
 \contentsline {figure}{\numberline {6.19}{\ignorespaces Relación de fórmulas del modelo pinhole\relax }}{72}{figure.caption.123}%
 \contentsline {figure}{\numberline {6.20}{\ignorespaces Sistemas de coordenadas\relax }}{73}{figure.caption.124}%
 \contentsline {figure}{\numberline {6.21}{\ignorespaces La hipótesis suelo asume que todos los objetos están en el suelo\relax }}{74}{figure.caption.125}%
@@ -79,20 +79,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Versiones previas de impresión\relax }}{80}{figure.caption.137}%
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Capturas de las pruebas de PiBotJ con las distintas ruedas\relax }}{81}{figure.caption.139}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Parte de la configuración usada para el entrenamiento\relax }}{82}{figure.caption.140}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Gráfica que muestra los valores de la clase 0\relax }}{83}{figure.caption.141}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Gráfica que muestra los valores de la clase 1\relax }}{84}{figure.caption.142}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{85}{figure.caption.143}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Versión final en la obtención del contorno del bache\relax }}{86}{figure.caption.145}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Captura del vídeo que demuestra el modelo pinhole\relax }}{86}{figure.caption.146}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Medidas del bache\relax }}{87}{figure.caption.147}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{88}{figure.caption.149}%
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Capturas del vídeo que hace pruebas sobre el algoritmo VFF\relax }}{88}{figure.caption.150}%
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{89}{figure.caption.151}%
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Captura del vídeo del modo teleoperado\relax }}{90}{figure.caption.152}%
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{91}{figure.caption.153}%
-\contentsline {figure}{\numberline {7.15}{\ignorespaces Captura del vídeo del modo autónomo\relax }}{92}{figure.caption.154}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Gráfica que muestra los valores de la clase 0\relax }}{83}{figure.caption.140}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Gráfica que muestra los valores de la clase 1\relax }}{83}{figure.caption.141}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Primera versión en la obtención del contorno del bache\relax }}{84}{figure.caption.142}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Captura del vídeo que demuestra el modelo pinhole\relax }}{85}{figure.caption.144}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Medidas del bache\relax }}{86}{figure.caption.145}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Captura del vídeo que calcula el área usando el algoritmo de la lazada\relax }}{86}{figure.caption.147}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Capturas del vídeo que hace pruebas sobre el algoritmo VFF\relax }}{87}{figure.caption.148}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Esquema de nodos para el modo teleoperado\relax }}{88}{figure.caption.149}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Captura del vídeo del modo teleoperado\relax }}{89}{figure.caption.150}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Esquema de nodos para el modo autónomo\relax }}{89}{figure.caption.151}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Captura del vídeo del modo autónomo\relax }}{90}{figure.caption.152}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de video y media disponibles en PiBotJ\relax }}{99}{figure.caption.155}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{100}{figure.caption.156}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dispositivos de vídeo y media disponibles en PiBotJ\relax }}{97}{figure.caption.153}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Configuración exitosa del Google Coral\relax }}{98}{figure.caption.154}%
