@@ -1,8 +1,8 @@
 
 # Introducción 
-Bienvenido/a al repo del TFG (Trabajo Fin de Carrera) de Julia López Augusto. En él podrás encontrar todo el código y ficheros correspondientes y podrás ver un seguimiento continuo en el apartado de [Wiki](https://github.com/RoboticsURJC/tfg-jlopez/wiki). Si deseas replicar este proyecto, te recomiendo seguir los siguientes pasos: 
+Bienvenido/a al repo del TFG (Trabajo Fin de Carrera) de Julia López Augusto. En él podrás encontrar todo el código y ficheros correspondientes y podrás ver un seguimiento continuo en el apartado de [Wiki](https://github.com/RoboticsURJC/tfg-jlopez/wiki). Si se desea replicar este proyecto, es recomendable seguir los siguientes pasos: 
 
-## Construcción del robot
+# Construcción del robot
 Para poder construir este robot, se han proporcionado una serie de ficheros .stl  que se pueden imprimir en cualquier impresora 3D convencional. Para ello, es necesario imprimir una pieza de cada una de las siguientes: 
 
 - [Chasis](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/base.stl)
@@ -81,10 +81,10 @@ Para el ensamblaje, se ha creado este [fichero](https://github.com/RoboticsURJC/
 </p>
 
 
-## Soporte software 
+# Soporte software 
 A continuación, se va a explicar la implementación software desarrollada para el robot: 
 
-### Simulación 
+## Simulación 
 
 Primero de todo, hay que instalar los siguientes programas:
 ```bash
@@ -111,7 +111,7 @@ El vídeo de acontinuación, muestra una demo completa del robot ejecutado en si
     <img src="https://img.youtube.com/vi/A0yi7YlLpq0/mqdefault.jpg" alt="">
 </a>
 
-### Robot físico
+## Robot físico
 
 Hay que seguir los siguientes pasos:
 1. Instalar Raspberry Pi Imager : ``sudo apt install rpi-imager``.
@@ -125,7 +125,7 @@ Hay que seguir los siguientes pasos:
 Al no tener disponible interfaz gráfica, la única forma de comunicarse con el robot es a través de ssh y variantes de esta, como scp, para copiar directorios entre el robot y el ordenador local. Otra opción para poder desarrollar código es usar un plugin de VSCode (desde el ordenador local) que permite usar [VSCode conectándose al robot usando ssh](https://code.visualstudio.com/docs/remote/ssh-tutorial).
 
 
-#### Cámara
+### Cámara
 La cámara está conectada al puerto CSI y, para hacerla funcionar, se necesitan instalar los siguientes programas:
 ```bash
 sudo apt-get install gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
@@ -142,7 +142,7 @@ En la siguiente figura se puede ver el resultado del Paso 3 y muestra que la cá
 <img src="https://github.com/RoboticsURJC/tfg-jlopez/blob/main/memoria/figs/cap6/vl.png" width="40%" height="40%">
 </p>
 
-#### Google Coral
+### Google Coral
 Para su configuración hay que seguir los siguientes pasos:
 1.
 ```bash
@@ -163,7 +163,7 @@ Finalmente, el proceso se deberı́a haber completado de forma exitosa cuando la
 <img src="https://github.com/RoboticsURJC/tfg-jlopez/blob/main/memoria/figs/cap6/pycoralinstalled.png" width="40%" height="40%">
 </p>
 
-#### Módulo GPS
+### Módulo GPS
 Hay que seguir los siguientes pasos:
 1. Crear el fichero ``/etc/udev/rules.d/99-ttyAMA0.rules``.
 2. Añadir: ``KERNEL=="ttyAMA0", MODE="0666", GROUP="dialout"``.
@@ -275,43 +275,40 @@ dtparam=i2c_arm=on
 dtparam=spi=on
 cmdline=cmdline.txt
 ```
-Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie141 , pero las sugerencias de otros usuarios no conseguı́an hacer funcionar bien el módulo; por lo tanto, la única solución encontrada es desconectar el módulo GPS hasta que se inicia sesión a través de ssh y luego conectar el módulo.
+Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del [puerto serie](https://wiki.ubuntu.com/EoanErmine/ReleaseNotes#Raspberry_Pi), pero las sugerencias de otros usuarios no conseguı́an hacer funcionar bien el módulo; por lo tanto, la única solución encontrada es desconectar el módulo GPS hasta que se inicia sesión a través de ssh y luego conectar el módulo.
 
 El módulo GPS realmente capta información válida cuando se enciende el LED que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior.
 
-Servomotores
+### Servomotores
 Hay que seguir los siguientes pasos:
-1. sudo apt-get update.
-2. sudo apt-get install rpi.gpio-common python3-pigpio
-3. sudo apt-get install python3-gpiozero python3-rpi.gpio.
-4. Hay que añadir dialout a groups.
-5. Los motores ya estarán listos para usarse importando la librerı́a RPi.GPIO.
+1. ``sudo apt-get update``.
+2. ``sudo apt-get install rpi.gpio-common python3-pigpio``
+3. ``sudo apt-get install python3-gpiozero python3-rpi.gpio``.
+4. Hay que añadir ``dialout`` a ``groups``.
+5. Los motores ya estarán listos para usarse importando la librerı́a ``RPi.GPIO``.
 
 
+### Aplicaciones completas 
 
+Para ejecutar a PiBotJ en modo **teleoperado**, es necesario escribir los siguientes comandos: 
 
+- En la terminal: ``ros2 launch pibotj_rr robot_teleop.launch.py``
 
+- En un navegador: ``http://<ip robot>:8000/index_teleop.html``
 
-
-```bash
-ros2 launch pibotj_rr robot_teleop.launch.py
-```
-
-```bash
-http://<ip robot>:8000/index_teleop.html
-```
+A continuación, se muestra un vídeo mostrando a PiBotJ de forma teleoperada:
 
 <a href="https://www.youtube.com/watch?v=qGbJ7IGwjWk">
     <img src="https://img.youtube.com/vi/qGbJ7IGwjWk/mqdefault.jpg" alt="">
 </a>
 
-```bash
-ros2 launch pibotj_rr robot_vff.launch.py
-```
+Para ejecutar a PiBotJ en modo **autónomo**, es necesario escribir los siguientes comandos: 
 
-```bash
-http://<ip robot>:8000/index_vff.html
-```
+- En la terminal: ``ros2 launch pibotj_rr robot_vff.launch.py ``
+
+- En un navegador: ``http://<ip robot>:8000/index_vff.html``
+
+A continuación, se muestra un vídeo mostrando a PiBotJ de forma autónoma:
 
 <a href="https://www.youtube.com/watch?v=zQudXBXHVaY">
     <img src="https://img.youtube.com/vi/zQudXBXHVaY/mqdefault.jpg" alt="">
