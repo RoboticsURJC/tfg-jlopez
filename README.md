@@ -187,8 +187,7 @@ cat /boot/firmware/config.txt
 # refer to the README file for a description of the various configuration
 # files on the boot partition.
 # The unusual ordering below is deliberate; older firmwares (in particular
-# the version initially shipped with bionic) don’t understand the
-conditional
+# the version initially shipped with bionic) don’t understand the conditional
 # [sections] below and simply ignore them. The Pi4 doesn’t boot at all
 # with firmwares this old so it’s safe to place at the top. Of the Pi2 and
 # Pi3, the Pi3 uboot happens to work happily on the Pi2, so it needs to go
@@ -207,28 +206,24 @@ device_tree_address=0x03000000
 max_framebuffers=2
 arm_boost=1
 [all]
-# Enable the audio output, I2C and SPI interfaces on the GPIO header. As
-these
+# Enable the audio output, I2C and SPI interfaces on the GPIO header. As these
 # parameters related to the base device-tree they must appear *before* any
 # other dtoverlay= specification
 dtparam=audio=on
 dtparam=i2c_arm=on
 dtparam=spi=on
-# Comment out the following line if the edges of the desktop appear
-outside
+# Comment out the following line if the edges of the desktop appear outside
 # the edges of your display
 disable_overscan=1
-# If you have issues with audio, you may try uncommenting the following
-line
+# If you have issues with audio, you may try uncommenting the following line
 # which forces the HDMI output into HDMI mode instead of DVI (which doesn’t
-#  support audio output)
+# support audio output)
 #hdmi_drive=2
 # Config settings specific to arm64
 arm_64bit=1
 dtoverlay=dwc2
 [cm4]
-# Enable the USB2 outputs on the IO board (assuming your CM4 is plugged
-into
+# Enable the USB2 outputs on the IO board (assuming your CM4 is plugged into
 # such a board)
 dtoverlay=dwc2,dr_mode=host
 [all]
@@ -251,10 +246,8 @@ elevator=deadline net.ifnames=0 dwc_otg.lpm_enable=0 root=LABEL=writable rootfst
 cat /boot/firmware/usercfg.txt
 ```
 ```bash
-# Place "config.txt" changes (dtparam, dtoverlay, disable_overscan, etc.)
-in
-# this file. Please refer to the README file for a description of the
-various
+# Place "config.txt" changes (dtparam, dtoverlay, disable_overscan, etc.) in
+# this file. Please refer to the README file for a description of the various
 # configuration files on the boot partition.
 dtoverlay=pi3-disable-bt
 ```
@@ -263,10 +256,8 @@ cat /boot/firmware/syscfg.txt
 ```
 ```bash
 # This file is intended to be modified by the pibootctl utility. User
-# configuration changes should be placed in "usercfg.txt". Please refer
-to the
-# README file for a description of the various configuration files on the
-boot
+# configuration changes should be placed in "usercfg.txt". Please refer to the
+# README file for a description of the various configuration files on the boot
 # partition.
 
 enable_uart=1
