@@ -98,8 +98,8 @@ sudo apt install ros-humble-joint-state-publisher
 Una vez instalados, únicamente hay que **ejecutar el programa que permita que el robot en simulación se inicialice**. Para ello, únicamente hay que escribir los siguientes comandos:
 
 ```bash
-colcon build --packages-select pibotj_r2c# compila los paquetes
-source ./install/setup.bash# configura variables
+colcon build --packages-select pibotj_r2c # compila los paquetes
+source ./install/setup.bash # configura variables
 ros2 launch pibotj_r2c launch_sim.launch.py
 ```
 
