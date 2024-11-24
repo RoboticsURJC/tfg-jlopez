@@ -52,9 +52,9 @@ Hay que seguir los siguientes pasos:
 	\item Configurar cada uno de los componentes del robot.
 \end{enumerate}
 
-Al no tener disponible interfaz gráfica, la única forma de comunicarse con el robot es a través de ssh y variantes de esta, como \verb|scp|, para copiar directorios entre el robot y el ordenador local.
+Al no tener disponible interfaz gráfica, la única forma de comunicarse con el robot es a través de SSH y variantes de esta, como SCP, para copiar directorios entre el robot y el ordenador local.
 
-Otra opción para poder desarrollar código es usar un \textit{plugin} de VSCode (desde el ordenador local) que permite usar VSCode conectándose al robot usando ssh\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}.
+Otra opción para poder desarrollar código es usar un \textit{plugin} de VSCode (desde el ordenador local) que permite usar VSCode conectándose al robot usando SSH\footnote{\url{https://code.visualstudio.com/docs/remote/ssh-tutorial}}.
 
 \subsection{Cámara}
 \label{subsec:anexocamara}
@@ -248,7 +248,7 @@ Finalmente, los siguientes ficheros tienen que contener la siguiente informació
 \end{lstlisting}
 
 
-Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada es desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de ssh y luego conectar el módulo.
+Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada es desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de SSH y luego conectar el módulo.
 
 El módulo GPS realmente capta información válida cuando se enciende el LED que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
 
