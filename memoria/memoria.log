@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  25 NOV 2024 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  25 NOV 2024 19:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2580,13 +2580,13 @@ Underfull \hbox (badness 1281) in paragraph at lines 298--299
 l \OT1/cmr/m/it/12 launcher\OT1/cmr/m/n/12 :
  []
 
-<figs/cap7/esquema_nodos_teleop_ampliado.png, id=2248, 1366.10374pt x 910.40125
-pt>
-File: figs/cap7/esquema_nodos_teleop_ampliado.png Graphic file (type png)
-<use figs/cap7/esquema_nodos_teleop_ampliado.png>
-Package pdftex.def Info: figs/cap7/esquema_nodos_teleop_ampliado.png  used on i
-nput line 302.
-(pdftex.def)             Requested size: 426.79134pt x 284.41634pt.
+<figs/cap7/esquema_nodos_teleoperado_ampliado.png, id=2248, 1031.35312pt x 690.
+32906pt>
+File: figs/cap7/esquema_nodos_teleoperado_ampliado.png Graphic file (type png)
+<use figs/cap7/esquema_nodos_teleoperado_ampliado.png>
+Package pdftex.def Info: figs/cap7/esquema_nodos_teleoperado_ampliado.png  used
+ on input line 302.
+(pdftex.def)             Requested size: 426.79134pt x 285.67014pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2614,13 +2614,12 @@ Underfull \hbox (badness 2503) in paragraph at lines 322--323
  \OT1/cmr/m/it/12 launcher\OT1/cmr/m/n/12 :
  []
 
-<figs/cap7/esquema_nodos_vff_ampliado.png, id=2267, 1446.40375pt x 888.31876pt>
-
+<figs/cap7/esquema_nodos_vff_ampliado.png, id=2267, 1103.62312pt x 686.565pt>
 File: figs/cap7/esquema_nodos_vff_ampliado.png Graphic file (type png)
 <use figs/cap7/esquema_nodos_vff_ampliado.png>
 Package pdftex.def Info: figs/cap7/esquema_nodos_vff_ampliado.png  used on inpu
 t line 327.
-(pdftex.def)             Requested size: 426.79134pt x 262.11954pt.
+(pdftex.def)             Requested size: 426.79134pt x 265.5069pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2656,12 +2655,12 @@ Underfull \hbox (badness 1796) in paragraph at lines 334--335
 
 LaTeX Info: Redefining \. on input line 335.
 LaTeX Info: Redefining \% on input line 335.
-[88 <./figs/cap7/esquema_nodos_teleop_ampliado.png>]
+[88 <./figs/cap7/esquema_nodos_teleoperado_ampliado.png>]
 LaTeX Info: Redefining \. on input line 336.
 LaTeX Info: Redefining \% on input line 336.
  [89 <./figs/cap7/teleop_final.png> <./figs/cap7/esquema_nodos_vff_ampliado.png
 >]
-<figs/cap7/autonomo_final.png, id=2287, 1764.5925pt x 917.4275pt>
+<figs/cap7/autonomo_final.png, id=2285, 1764.5925pt x 917.4275pt>
 File: figs/cap7/autonomo_final.png Graphic file (type png)
 <use figs/cap7/autonomo_final.png>
 Package pdftex.def Info: figs/cap7/autonomo_final.png  used on input line 346.
@@ -2715,7 +2714,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
  [96]
-<figs/cap6/vl.png, id=2357, 493.845pt x 309.155pt>
+<figs/cap6/vl.png, id=2355, 493.845pt x 309.155pt>
 File: figs/cap6/vl.png Graphic file (type png)
 <use figs/cap6/vl.png>
 Package pdftex.def Info: figs/cap6/vl.png  used on input line 82.
@@ -2726,7 +2725,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<figs/cap6/pycoralinstalled.png, id=2359, 800.9925pt x 503.8825pt>
+<figs/cap6/pycoralinstalled.png, id=2357, 800.9925pt x 503.8825pt>
 File: figs/cap6/pycoralinstalled.png Graphic file (type png)
 <use figs/cap6/pycoralinstalled.png>
 Package pdftex.def Info: figs/cap6/pycoralinstalled.png  used on input line 118
@@ -2780,8 +2779,8 @@ Package rerunfilecheck Info: File `memoria.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  32310 strings out of 480112
- 601495 string characters out of 5892631
- 1208989 words of memory out of 5000000
+ 601530 string characters out of 5892631
+ 1208987 words of memory out of 5000000
  48792 multiletter control sequences out of 15000+600000
  477436 words of font info for 57 fonts, out of 8000000 for 9000
  91 hyphenation exceptions out of 8191
@@ -2803,9 +2802,9 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on memoria.pdf (122 pages, 59111381 bytes).
+Output written on memoria.pdf (122 pages, 59040604 bytes).
 PDF statistics:
- 2778 PDF objects out of 2984 (max. 8388607)
+ 2776 PDF objects out of 2984 (max. 8388607)
  2366 compressed objects within 24 object streams
  765 named destinations out of 1000 (max. 500000)
  1346 words of extra memory for PDF output out of 10000 (max. 10000000)

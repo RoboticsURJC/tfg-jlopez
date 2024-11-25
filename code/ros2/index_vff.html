@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Tracking & Control</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!--link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /-->
+    <!--script src="https://unpkg.com/leaflet/dist/leaflet.js"></script-->
+    <script src="https://cdn.jsdelivr.net/npm/roslib@1.0.0/build/roslib.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        #map-container, #controls-container{
+            margin-bottom: 20px;
+        }
+        #map { 
+            height: 500px; 
+            margin-bottom: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map-container">
+        <h2>Mapa de Seguimiento GPS</h2>
+        <div id="map"></div>
+    </div>
+
+    <!--div id="controls-container">
+        <h2>Mando Controlador</h2>
+        <div id="controls">
+            <button id="forward-btn" onpointerdown="startMovement('forward')" onpointerup="stopMovement()" >⬆️</button>
+            <div class="arrow-controls">
+                <button id="left-btn" onpointerdown="startMovement('left')" onpointerup="stopMovement()">⬅️</button>
+                <button id="right-btn" onpointerdown="startMovement('right')" onpointerup="stopMovement()" >➡️</button>
+            </div>
+            <button id="backward-btn" onpointerdown="startMovement('backward')" onpointerup="stopMovement()">⬇️</button>
+        </div>
+    </div-->
+
+    <script>
+
+        // MAPA
+
+        // Crear y configurar el mapa
+        const map = L.map('map').setView([0, 0], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Array para mantener los marcadores
+        let markers = [];  
+
+        // Variables para GPS y área calculada
+        let gpsCoordinates = null;
+        let currentArea = null;
+
+        // Conectar a rosbridge
+        const ros = new ROSLIB.Ros({
+            url: 'ws://raspberrypi.local:9090'
+        });
+
+        // Suscribirse al topic 'gps_data' para recibir las coordenadas GPS
+        const gpsListener = new ROSLIB.Topic({
+            ros: ros,
+            name: '/gps_data',
+            messageType: 'std_msgs/String'
+        });
+
+        // Suscribirse al tópico 'area_calculated' para obtener el área
+        const areaListener = new ROSLIB.Topic({
+            ros: ros,
+            name: '/area_calculated',
+            messageType: 'std_msgs/Float32'
+        });
+
+        // Almacenar el área cuando se recibe
+        areaListener.subscribe(function(message) {
+            currentArea = message.data;  // Guardar el área calculada
+            //console.log("Área calculada recibida:", currentArea);
+
+            // Si ya se tienen las coordenadas GPS, crear el marcador
+            //if (gpsCoordinates) {
+            //    addMarker(gpsCoordinates.lat, gpsCoordinates.lon, currentArea);
+            //}
+        });
+
+        // Almacenar las coordenadas GPS cuando se reciben
+        gpsListener.subscribe(function(message) {
+            //console.log("Localización recibida:", message.data);
+
+            // Extraer latitud y longitud del mensaje
+            const data = message.data.split(',');
+            const lat = parseFloat(data[0].split(':')[1].trim());
+            const lon = parseFloat(data[1].split(':')[1].trim());
+
+            // Guardar las coordenadas GPS
+            gpsCoordinates = { lat: lat, lon: lon };  
+
+            // Si ya se ha recibido el área calculada, crear el marcador
+            if (currentArea !== null) {
+                console.log("Localización recibida:", message.data);
+                console.log("Área calculada recibida:", currentArea);
+
+                addMarker(lat, lon, currentArea);
+            }
+        });
+
+        // Función para añadir un marcador en el mapa
+        function addMarker(lat, lon, area) {
+            // Crear nuevo marcador
+            const newMarker = L.marker([lat, lon]).addTo(map);
+
+            // Mostrar el área en el popup
+            newMarker.bindPopup(`Área calculada: ${area} mm².<br><br><br>El volumen estimado es ${area * 40} mm³ según la RAC foundation.`).openPopup();
+
+            // Agregar el nuevo marcador al array de marcadores
+            markers.push(newMarker);
+
+            // Limitar el número de marcadores a 50
+            if (markers.length > 50) {
+                const oldMarker = markers.shift();  // Eliminar el marcador más antiguo
+                map.removeLayer(oldMarker);  // Removerlo del mapa
+            }
+
+            // Limpiar las coordenadas GPS y el área después de crear el marcador
+            gpsCoordinates = null;
+            currentArea = null;
+        }
+
+        // MOTORES
+
+        //const commandTopic = new ROSLIB.Topic({
+        //    ros: ros,
+        //    name: '/move_controller',
+        //    messageType: 'std_msgs/String'
+        //});
+
+        //let commandInterval;
+
+        // manda la dirección 'forward', 'backward', 'left', right
+        //function startMovement(direction) {
+        //    sendCommand(direction);
+
+        //    commandInterval = setTimeout(() => {
+        //        sendCommand(direction);  
+        //    }, 100); 
+        //}
+
+        //function stopMovement() {
+        //    clearInterval(commandInterval); 
+        //    sendCommand("stop");  
+        //}
+
+        // se publica la acción que tiene que hacer 'forward', 'backward', ...
+        //function sendCommand(direction) {
+        //    const command = new ROSLIB.Message({
+        //        data: direction
+        //    });
+        //    commandTopic.publish(command);
+        //    console.log("Sent command:", direction);
+        //}
+
+    </script>
+</body>
+</html>
