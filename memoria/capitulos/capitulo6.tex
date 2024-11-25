@@ -40,7 +40,7 @@ Existen cuatro tipos de \textit{joint}: \textit{prismatic}, \textit{continuous},
 	\label{cod:fj}
 			\end{code}
 
-En relación a los \textit{link}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}, obligatoriamente tienen que tener las macros de \verb|<visual>|, \verb|<collision>| e \verb|<inertial>|, si no pueden surgir errores\footnote{\url{https://answers.gazebosim.org//question/25166/problem-changing-joint-from-fixed-to-revolute/}}. Existen cuatro tipos de geometría: \textit{box}, \textit{cylinder}, \textit{sphere} y \textit{mesh}. 
+En relación a los \textit{links}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}, obligatoriamente tienen que tener las macros de \verb|<visual>|, \verb|<collision>| e \verb|<inertial>|, si no pueden surgir errores\footnote{\url{https://answers.gazebosim.org//question/25166/problem-changing-joint-from-fixed-to-revolute/}}. Existen cuatro tipos de geometría: \textit{box}, \textit{cylinder}, \textit{sphere} y \textit{mesh}. 
 %El Código \ref{cod:ml} muestra un ejemplo de una \textit{mesh link}\footnote{\url{https://articulatedrobotics.xyz/tutorials/ready-for-ros/urdf/\#link-tags}}.
 
 %\begin{code}[h]
@@ -122,7 +122,7 @@ Asimismo, se han definido los sistemas de coordenadas que aparecen en la Figura 
 
 Como se explicó en la Sección \ref{subsec:ros2control}, ROS 2 Control es un \textit{framework} que permite gestionar y controlar los sensores y actuadores de manera eficiente, y es por ello que se decidió aplicar a este proyecto a través del fichero \verb|ros2_control.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/ros2_control.xacro}}.
 
-Para este proyecto se definió un sistema llamado \textit{GazeboSystem}, encargado del \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En muchos casos, se decidió controlar a \textit{left\_wheel\_joint}, \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellos \textit{joints} que tenían asignados un motor en la vida real. 
+Para este proyecto se definió un sistema llamado \textit{GazeboSystem}, encargado del \textit{hardware interface}; de esta forma, es más sencillo añadir el número de sensores y actuadores que se necesiten. En este caso, se decidió controlar a \textit{left\_wheel\_joint}, a \textit{right\_wheel\_joint} y a \textit{camera\_joint}, que son aquellos \textit{joints} que tenían asignados un motor en la vida real. 
 
 Al ejecutar \verb|ros2 control list_hardware_interfaces| se puede ver las interfaces asociadas de lectura/escritura y de monitorización que tiene cada \textit{joint} a controlar. En la Figura \ref{fig:ros2control} se pueden ver las interfaces que tiene PiBotJ y, por ende, cómo se va a controlar cada interfaz.
 
@@ -134,7 +134,7 @@ Al ejecutar \verb|ros2 control list_hardware_interfaces| se puede ver las interf
  	\label{fig:ros2control}
  \end{figure}
 
-Tras definir los \textit{joints} a controlar, era necesario definir en un fichero YAML el tipo de controladores que utilizaba el \textit{controller manager}. Dentro de cada controlador había que asignar los \textit{joints} definidos previamente al controlador que necesite cada una. En este caso, se asignaron las ruedas a un control diferencial y, la cámara, se decidió controlar por posición, usando el \textit{topic} \verb|\pos_cont|\footnote{\url{https://control.ros.org/humble/index.html}}.
+Tras definir los \textit{joints} a controlar, era necesario definir en un fichero YAML el tipo de controladores que utilizaba el \textit{controller manager}. Dentro de cada controlador había que asignar los \textit{joints} definidos previamente al controlador que necesite cada una. En este caso, se asignaron las ruedas a un control diferencial y, la cámara, se decidió controlar por posición, usando el \textit{topic} \verb|/pos_cont|\footnote{\url{https://control.ros.org/humble/index.html}}.
 
 Una vez el robot estaba completamente definido en los diferentes ficheros \textit{Xacro}, era necesario unirlos todos en otro fichero llamado \verb|robot.urdf.xacro|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_r2c/description/robot.urdf.xacro}} para poder facilitar la publicación del estado del robot, y eso se consigue usando \verb|robot_state_publisher|.
  
@@ -262,7 +262,7 @@ El resultado final, con el robot de PiBotJ funcionando en simulación, se puede 
 \section{Componentes del robot real}
 \label{sec:configrf}
 
-Una vez definido el robot a través de sus topics, ya se puede lanzar su ejecución (usando la RPi 4 como núcleo computacional) para realizar su tarea.
+Una vez definido el robot a través de sus topics, ya se puede lanzar su ejecución (usando la Raspberry Pi 4 como núcleo computacional) para realizar su tarea.
 
 %Como se explicó en la sección anterior, el robot ya estaba listo en simulación para, a través de los \textit{topics} definidos en el apartado anterior, poder definir y monitorear su comportamiento. Después de eso, era momento de poner al robot físico también listo para operar. 
 El sistema operativo instalado en la placa controladora fue Ubuntu 20.04 Server \acs{LTS} y la distribución Foxy de ROS2, como se explicó en la Sección \ref{subsec:ubuntu} y \ref{subsec:ros2} respectivamente. Se hizo uso de SSH a efectos de usar el PC principal como cliente. Para ello, se instaló el paquete de openssh-client.
@@ -370,7 +370,7 @@ Podemos ver que los valores de fábrica difieren de los obtenidos empíricamente
 \subsubsection{Parámetros extrínsecos}
 \label{subsubsec:extrinsecoscamara}
 
-Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real. Dichos parámetros incluyen la rotación y la traslación de la cámara. En este caso, la cámara tiene una rotación sobre el eje Y de 50º (Figura \ref{fig:extrinseco} izquierda) y está trasladada 8,8 cm en el eje Z (Figura \ref{fig:extrinseco} derecha). 
+Los parámetros extrínsecos relacionan los sistemas de referencia del mundo real y la cámara, describiendo la posición y orientación de la cámara en el sistema de coordenadas del mundo real. Dichos parámetros incluyen la rotación y la traslación de la cámara. En este caso, la cámara tiene una rotación sobre el eje Y de 40 grados (Figura \ref{fig:extrinseco} izquierda) y está trasladada 8,8 cm en el eje Z (Figura \ref{fig:extrinseco} derecha). 
 
 \begin{figure}[ht!]
 	\centering
@@ -596,7 +596,7 @@ El serial se encuentra configurado correctamente en \verb|/dev/ttyAMA0| gracias 
 %% Preguntar si dejarlo o no
 Debido a la distribución de Ubuntu usada, hay problemas al encender la Raspberry Pi si tiene algo a través del puerto serie\footnote{\url{https://wiki.ubuntu.com/EoanErmine/ReleaseNotes\#Raspberry_Pi}}, pero las sugerencias de otros usuarios no conseguían hacer funcionar bien el módulo; por lo tanto, la única solución encontrada fue desconectar el módulo \acs{GPS} hasta que se inicia sesión a través de SSH y luego conectar el módulo.
 
-El módulo GPS realmente capta información válida cuando se enciende el LED que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
+El módulo \acs{GPS} realmente capta información válida cuando se enciende el LED que tiene integrado. Una forma fiable para que el módulo reciba todo el rato señal correcta es dejarle en el exterior hasta que se encienda el LED y luego poder operar con el módulo en interior o exterior. 
 
 
 \subsection{Servomotores}
@@ -641,7 +641,7 @@ Tras seguir los pasos de configuración del \hyperref[cap:capitulo9]{Anexo}, imp
 		\centering
 		\includegraphics[width=\linewidth]{figs/cap6/motorlogic2.png}
 	\end{minipage}
-	\caption{Distintas direcciones de PiBotJ}
+	\caption{Distintas direcciones de las ruedas de PiBotJ}
 	\label{fig:motorlogic}
 \end{figure}
 
@@ -679,7 +679,7 @@ Para poder entrenar dicho modelo, fue necesario usar un \textit{dataset} tomado 
 
 En la Figura \ref{fig:iares} se puede ver que aparecen cuatro gráficas en la parte superior midiendo el error obtenido durante el entrenamiento del modelo, y se puede apreciar que disminuye a medida que pasa el tiempo y, por lo tanto, se puede decir que existe un correcto entrenamiento. Por otro lado, las cuatro imágenes que aparecen debajo muestran las pérdidas calculadas en el conjunto de validación. Si las pérdidas en validación aumentan mientras las pérdidas de entrenamiento disminuyen, puede ser una señal de \textit{overfitting} (sobreajuste); en este caso, al solo usar una imagen de validación, el valor permanece constante sobre el 0.
 
-En la Figura \ref{fig:iares2}, en concreto en la parte superior, se puede ver las métricas de precisión y exhaustividad (\textit{recall}) que evalúan la capacidad del modelo para identificar correctamente las instancias de cada clase ya que valores son crecientes. En la parte inferior, la métrica \ac{mAP} es creciente e indica que el modelo está mejorando en la detección y clasificación ya que, evalúa el equilibrio entre precisión y exhaustividad.
+En la Figura \ref{fig:iares2}, en concreto en la parte superior, se puede ver las métricas de precisión y exhaustividad (\textit{recall}) que evalúan la capacidad del modelo para identificar correctamente las instancias de cada clase ya que valores son crecientes. En la parte inferior, la métrica \textit{Mean Average Precision} (mAP) es creciente e indica que el modelo está mejorando en la detección y clasificación ya que, evalúa el equilibrio entre precisión y exhaustividad.
 
 Para comprobar que el modelo funciona correctamente, se ha aplicado el modelo entrenado sobre una serie de imágenes mostradas en la Figura \ref{fig:trainex} y sobre un vídeo\footnote{\url{https://www.youtube.com/watch?v=Gnwciv4pWf0}}. Todo está documentado en un Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1QRFWn5tQNXs6ldnomCZNv3DUDi8FudW2?usp=sharing}}, que está basado en el tutorial de Muhammad Moin\footnote{\url{https://www.youtube.com/watch?v=bAlObHUIErM}}.
 
@@ -691,7 +691,7 @@ Para comprobar que el modelo funciona correctamente, se ha aplicado el modelo en
 	\label{fig:trainex}
 \end{figure}
 
-Una vez demostrado que el modelo es capaz de detectar bien los baches, es el momento de convertir ese modelo para que fuera capaz de trabajar dentro de la RPi 4 y Google Coral. Gracias a este vídeo\footnote{\url{https://www.youtube.com/watch?v=w4yHORvDBw0}}, se pudo conseguir realizar este Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1XU2ONX5Mq2zNWlZu3hmNIylqbto5hGfm?usp=sharing}}, que convierte el modelo entrenado a un formato edgetpu de 192x192 imágenes, para que el dispositivo Google Coral pueda operar con él, llamado \textit{bestv2\_full\_integer\_quant\_edgetpu.tflite}\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}.
+Una vez demostrado que el modelo es capaz de detectar bien los baches, es el momento de convertir ese modelo para que fuera capaz de trabajar dentro de la Raspberry Pi 4 y Google Coral. Gracias a este vídeo\footnote{\url{https://www.youtube.com/watch?v=w4yHORvDBw0}}, se pudo conseguir realizar este Jupyter notebook\footnote{\url{https://colab.research.google.com/drive/1XU2ONX5Mq2zNWlZu3hmNIylqbto5hGfm?usp=sharing}}, que convierte el modelo entrenado a un formato edgetpu de 192 x 192 imágenes, para que el dispositivo Google Coral pueda operar con él, llamado \textit{bestv2\_full\_integer\_quant\_edgetpu.tflite}\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/code/ros2/src/pibotj_rr/custom_model_lite/bestv2_full_integer_quant_edgetpu.tflite}}.
 
 \subsubsection{Valores obtenidos del modelo}
 \label{subsec:valoresmodelotflite}
@@ -708,7 +708,7 @@ De este modelo se pueden obtener sus detalles de entrada y de salida, una vez se
 		'sparsity_parameters': {}}]
 \end{verbatim}
 
-Este tensor define la entrada para un modelo cuantizado que toma imágenes RGB de tamaño 192x192, en formato entero de 8 bits (int8). La cuantización utiliza una escala de 0.0187 y un punto cero de -14, mapeando los valores al rango del tensor int8, lo que ayuda a mejorar la eficiencia del modelo. Por otro lado, de salida podemos encontrar los siguientes valores: 
+Este tensor define la entrada para un modelo cuantizado que toma imágenes RGB de tamaño 192 x 192, en formato entero de 8 bits (int8). La cuantización utiliza una escala de 0.0187 y un punto cero de -14, mapeando los valores al rango del tensor int8, lo que ayuda a mejorar la eficiencia del modelo. Por otro lado, de salida podemos encontrar los siguientes valores: 
 
 \begin{verbatim}
 	[{'name': 'PartitionedCall:0', 'index': 2, 'shape': 
@@ -725,9 +725,7 @@ Este tensor define la entrada para un modelo cuantizado que toma imágenes RGB d
 		{'scales': array([0.02025699], dtype=float32), 
 		'zero_points': array([-114], dtype=int32), 'quantized_dimension': 0},
 		'sparsity_parameters': {}}]
-		
 \end{verbatim}
-
 
 Estos son dos tensores de salida en un modelo cuantizado. El primer tensor (PartitionedCall:0) tiene forma [1, 38, 756], y el segundo tensor (PartitionedCall:1) tiene forma [1, 48, 48, 32]. Ambos utilizan el formato int8 y aplican parámetros de cuantización específicos que ajustan el rango de valores, optimizando el modelo para dispositivos de bajo consumo. De ambos tensores, el que nos interesa es el segundo, y esto es debido a su forma. Posee 32 canales y para este proyecto únicamente nos interesan los canales 0 y 1 como muestra la Figura \ref{fig:trainex}.
 
@@ -787,7 +785,7 @@ Siendo $\alpha$  el valor de grado de disminución de ponderación, $Y_t$ el val
 
 Después de saber si en una imagen había bache o no, se consideraría bache si la detección ocurre durante 2 segundos sin interrupciones. Una vez pasado ese tiempo, había que publicar los píxeles asociados a ese contorno. 
 
-Para conseguir los píxeles, se toma la máscara binarizada usando el umbral definido previamente de 0.6. De esa forma, es posible encontrar los píxeles del contorno más grande de la máscara pero, esos píxeles están en base a las dimensiones de la máscara que es de 48x48 píxeles; así que, es necesario aplicar un factor de escala para que los píxeles estén en base a la imagen que es de 192x192 píxeles. Se puede ver un resultado final del contorno detectado en la Figura \ref{fig:contornobache}.
+Para conseguir los píxeles, se toma la máscara binarizada usando el umbral definido previamente de 0.6. De esa forma, es posible encontrar los píxeles del contorno más grande de la máscara pero, esos píxeles están en base a las dimensiones de la máscara que es de 48 x 48 píxeles; así que, es necesario aplicar un factor de escala para que los píxeles estén en base a la imagen que es de 192 x 192 píxeles. Se puede ver un resultado final del contorno detectado en la Figura \ref{fig:contornobache}.
   
 
 \begin{figure}[ht!]
@@ -833,7 +831,7 @@ Este modelo explica cómo se realiza la proyección de un punto en el espacio tr
 	\label{fig:pinholeformula}
 \end{figure}
   
-En la Figura \ref{fig:pinholeformula} se pueden ver los parámetros intrínsecos y extrínsecos, que son tomados de la calibración de la cámara, descritos en la Sección \ref{subsec:configcamara}. Dicha calibración se realizó sobre imágenes de 640x480, y los píxeles del contorno del bache están en imágenes de 192x192, por lo que es necesario aplicar otro factor de conversión. 
+En la Figura \ref{fig:pinholeformula} se pueden ver los parámetros intrínsecos y extrínsecos, que son tomados de la calibración de la cámara, descritos en la Sección \ref{subsec:configcamara}. Dicha calibración se realizó sobre imágenes de 640 x 480, y los píxeles del contorno del bache están en imágenes de 192 x 192, por lo que es necesario aplicar otro factor de conversión. 
 
 Una vez se conoce cómo funciona el modelo pinhole, es importante destacar que, para poder convertir los píxeles de un sistema a otro, hay que tener en cuenta que hay tres sistemas de coordenadas diferentes como muestra la Figura \ref{fig:siscoordenadas}, que ha sido modificada del artículo \cite{201705.0170}. La modificación se ha producido debido a que para este proyecto se ha estimado más oportuno que el sentido del eje X sea hacia adelante y por ende, usando la regla de la mano derecha, el sentido del eje Z sea hacia abajo.
 
@@ -915,7 +913,7 @@ Una vez habilitada esa comunicación, ya se podía apreciar la página web\footn
 \label{subsec:autonomo}
 PiBotJ se puede controlar de forma teleoperada, usando la botonera definida en la Sección \ref{subsec:softwareweb} pero además, se ha implementado un algoritmo para que su navegación pueda ser autónoma.
 
-Lo ideal en este caso hubiera sido que PiBotJ navegase autónomamente por carreteras reales, pero debido a la imposibilidad de probarlo en ese entorno, por cuestiones de seguridad, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestra las medidas definidas. 
+Lo ideal en este caso hubiera sido que PiBotJ navegase autónomamente por carreteras reales, pero debido a la imposibilidad de probarlo en ese entorno, por cuestiones de seguridad, se decidió hacer una recreación de una carretera real\footnote{\url{https://www.totalmentereflejante.com/medidas-rayas-de-carretera/}} a escala 769:10000 sobre una cartulina negra. En la Figura \ref{fig:medidascarretera} (izquierda) se muestran las medidas reales y en la Figura \ref{fig:medidascarretera} (derecha) se muestran las medidas definidas. 
 %El resultado final aparece en la Figura \ref{fig:carreteracartulina}.
 
 \begin{figure}[ht!]

@@ -35,28 +35,28 @@
 \contentsline {subsection}{\numberline {4.2.1}Ubuntu}{31}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}FreeCAD}{32}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Python}{33}{subsection.4.2.3}%
-\contentsline {subsubsection}{Software matemático}{33}{subsubsection*.59}%
-\contentsline {subsubsection}{Software para localización}{33}{subsubsection*.60}%
+\contentsline {subsubsection}{Software matemático}{33}{subsubsection*.58}%
+\contentsline {subsubsection}{Software para localización}{33}{subsubsection*.59}%
 \contentsline {subsection}{\numberline {4.2.4}OpenCV}{34}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}ROS 2}{35}{subsection.4.2.5}%
-\contentsline {subsubsection}{ROS 2 Control}{36}{subsubsection*.64}%
+\contentsline {subsubsection}{ROS 2 Control}{36}{subsubsection*.63}%
 \contentsline {subsection}{\numberline {4.2.6}Gazebo}{36}{subsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.2.7}Herramientas de monitorización}{37}{subsection.4.2.7}%
-\contentsline {subsubsection}{RViz}{37}{subsubsection*.65}%
-\contentsline {subsubsection}{RQT Image View}{37}{subsubsection*.66}%
-\contentsline {subsubsection}{ROS2cli}{37}{subsubsection*.67}%
+\contentsline {subsubsection}{RViz}{37}{subsubsection*.64}%
+\contentsline {subsubsection}{RQT Image View}{37}{subsubsection*.65}%
+\contentsline {subsubsection}{ROS2cli}{37}{subsubsection*.66}%
 \contentsline {subsection}{\numberline {4.2.8}Google Colaboratory}{37}{subsection.4.2.8}%
 \contentsline {subsection}{\numberline {4.2.9}YOLOv8}{38}{subsection.4.2.9}%
 \contentsline {subsection}{\numberline {4.2.10}TensorFlow Lite}{38}{subsection.4.2.10}%
 \contentsline {subsection}{\numberline {4.2.11}Interfaz Web}{39}{subsection.4.2.11}%
-\contentsline {subsubsection}{ROS2bridge Server}{39}{subsubsection*.71}%
-\contentsline {subsubsection}{OpenStreetMaps}{39}{subsubsection*.72}%
+\contentsline {subsubsection}{ROS2bridge Server}{39}{subsubsection*.70}%
+\contentsline {subsubsection}{OpenStreetMaps}{39}{subsubsection*.71}%
 \contentsline {chapter}{\numberline {5}Diseño y construcción del robot}{40}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Geometría del robot}{40}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Disposición de los componentes hardware}{42}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Bocetos}{43}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Diseño CAD}{44}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Chasis}{45}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.1}Chasis}{44}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Soporte de la cámara}{46}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Carcasa}{47}{subsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.4.4}Sujección trasera}{48}{subsection.5.4.4}%
@@ -70,22 +70,22 @@
 \contentsline {subsection}{\numberline {6.1.5}Ejecución en simulador}{59}{subsection.6.1.5}%
 \contentsline {section}{\numberline {6.2}Componentes del robot real}{61}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Cámara}{61}{subsection.6.2.1}%
-\contentsline {subsubsection}{Parámetros intrínsecos}{62}{subsubsection*.103}%
-\contentsline {subsubsection}{Parámetros extrínsecos}{63}{subsubsection*.107}%
+\contentsline {subsubsection}{Parámetros intrínsecos}{62}{subsubsection*.102}%
+\contentsline {subsubsection}{Parámetros extrínsecos}{63}{subsubsection*.106}%
 \contentsline {subsection}{\numberline {6.2.2}Google Coral USB}{63}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Módulo GPS}{64}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Servomotores}{65}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Comportamiento del robot real}{66}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Red neuronal para la detección de baches}{66}{subsection.6.3.1}%
-\contentsline {subsubsection}{Valores obtenidos del modelo}{68}{subsubsection*.115}%
-\contentsline {subsubsection}{Aplicación del modelo}{70}{subsubsection*.116}%
-\contentsline {subsubsection}{Obtención del contorno y coordenadas}{71}{subsubsection*.120}%
+\contentsline {subsubsection}{Valores obtenidos del modelo}{68}{subsubsection*.113}%
+\contentsline {subsubsection}{Aplicación del modelo}{70}{subsubsection*.114}%
+\contentsline {subsubsection}{Obtención del contorno y coordenadas}{71}{subsubsection*.118}%
 \contentsline {subsection}{\numberline {6.3.2}Modelo de cámara pinhole}{71}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Algoritmo de la lazada}{74}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Interfaz Web}{75}{subsection.6.3.4}%
 \contentsline {subsection}{\numberline {6.3.5}Comportamiento autónomo}{76}{subsection.6.3.5}%
-\contentsline {subsubsection}{Detección de líneas}{76}{subsubsection*.130}%
-\contentsline {subsubsection}{Virtual Force Field}{78}{subsubsection*.134}%
+\contentsline {subsubsection}{Detección de líneas}{76}{subsubsection*.128}%
+\contentsline {subsubsection}{Virtual Force Field}{78}{subsubsection*.132}%
 \contentsline {chapter}{\numberline {7}Experimentos}{80}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Impresión 3D}{80}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Ruedas}{81}{section.7.2}%
@@ -110,4 +110,4 @@
 \contentsline {subsection}{\numberline {A.2.2}Google Coral}{97}{subsection.Alph1.2.2}%
 \contentsline {subsection}{\numberline {A.2.3}Módulo GPS}{98}{subsection.Alph1.2.3}%
 \contentsline {subsection}{\numberline {A.2.4}Servomotores}{101}{subsection.Alph1.2.4}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{102}{appendix*.155}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{102}{appendix*.153}%

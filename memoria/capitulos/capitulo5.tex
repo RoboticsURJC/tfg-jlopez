@@ -85,7 +85,7 @@ Una vez conocido las características que eran útiles de PiBot para PiBotJ, se 
 \end{figure}
 
 
-La alimentación a la placa se realiza a través del puerto USB-C. En uno de los puertos USB 3.0 se conectó el Google Coral y, en el puerto CSI, la Raspberry PiCamera. Asimismo, sobre los pines se conectaron los servomotores estándar de Parallax y el módulo GPS. Para el servomotor derecho fue necesario usar el pin 4 para el cable de alimentación, el pin 12 (GPIO 18) para el cable de la señal y el pin 6 para el cable de tierra. Para el servomotor izquierdo fue necesario usar el pin 2 para el cable de alimentación, el pin 7 (GPIO 4) para el cable de la señal y el pin 9 para el cable de tierra. Finalmente, para el módulo GPS había que conectarlo al puerto serie y fue necesario usar el pin 1 para el cable de la alimentación, el pin 10 (GPIO 15) para el cable de transmisión de señal (TX), el pin 8 (GPIO 14) para el cable de recepción de señal (RX) y el pin 14 para el cable de tierra. 
+La alimentación a la placa se realiza a través del puerto USB-C. En uno de los puertos USB 3.0 se conectó el Google Coral y, en el puerto \acs{CSI}, la Raspberry PiCamera. Asimismo, sobre los pines se conectaron los servomotores estándar de Parallax y el módulo \acs{GPS}. Para el servomotor derecho fue necesario usar el pin 4 para el cable de alimentación, el pin 12 (GPIO 18) para el cable de la señal y el pin 6 para el cable de tierra. Para el servomotor izquierdo fue necesario usar el pin 2 para el cable de alimentación, el pin 7 (GPIO 4) para el cable de la señal y el pin 9 para el cable de tierra. Finalmente, para el módulo \acs{GPS} había que conectarlo al puerto serie y fue necesario usar el pin 1 para el cable de la alimentación, el pin 10 (GPIO 15) para el cable de transmisión de señal (TX), el pin 8 (GPIO 14) para el cable de recepción de señal (RX) y el pin 14 para el cable de tierra. 
 
  
 \section{Bocetos}
@@ -171,7 +171,8 @@ Antes de realizar el diseño CAD de las piezas se creó una maqueta a tamaño re
 \section{Diseño CAD}
 \label{sec:diseñocad}
 
-Para hacer el diseño CAD y la maqueta explicada en el apartado anterior, se crearon unos planos a mano (Figura \ref{fig:planos}) de las diferentes piezas involucradas en el diseño. Las medidas fueron precisas gracias al uso del calibre.
+Para hacer el diseño CAD y la maqueta explicada en el apartado anterior, se crearon unos planos a mano (Figura \ref{fig:planos}) de las diferentes piezas involucradas en el diseño. 
+%Las medidas fueron precisas gracias al uso del calibre.
 
 
 \begin{figure}[ht!]
@@ -302,7 +303,7 @@ Además, a este chasis se le dotó de cuatro orificios circulares, que permitier
 \subsection{Soporte de la cámara}
 \label{subsec:soportecamara}
 
-Para posicionar la cámara de manera que mire hacia el suelo y pueda captar los baches, fue necesario fijarla con una rotación sobre el eje y. En este caso, dicha rotación fue de 50 grados, o 130 grados si se toma como referencia la base de la pieza que va atornillada al motor (Figura \ref{fig:rot}). Esta base fue dotada con dos orificios diagonales que permiten su fijación al motor.
+Para posicionar la cámara de manera que mire hacia el suelo y pueda captar los baches, fue necesario fijarla con una rotación sobre el eje y. En este caso, dicha rotación fue de 40 grados, o 130 grados si se toma como referencia la base de la pieza que va atornillada al motor (Figura \ref{fig:rot}). Esta base fue dotada con dos orificios diagonales que permiten su fijación al motor.
 
 \begin{figure} [h!]
 	\begin{center}
@@ -370,7 +371,7 @@ A la parte inclinada de la pieza se le incluyó un orificio diseñado para aloja
 \subsection{Carcasa}
 \label{subsec:carcasa}
 
-Esta carcasa fue diseñada para alojar la placa Raspberry Pi, el módulo GPS y la \textit{power bank} en su interior. La cara superior fue dotada de doce orificios circulares, destinados a atornillar tanto la Raspberry Pi como el módulo GPS, y seis aberturas que se conectaban con la cara inferior, alineándose con las aberturas correspondientes del chasis, para garantizar un paso de cables ordenado.
+Esta carcasa fue diseñada para alojar la placa Raspberry Pi, el módulo \acs{GPS} y la \textit{power bank} en su interior. La cara superior fue dotada de doce orificios circulares, destinados a atornillar tanto la Raspberry Pi como el módulo \acs{GPS}, y seis aberturas que se conectaban con la cara inferior, alineándose con las aberturas correspondientes del chasis, para garantizar un paso de cables ordenado.
 
 La cara inferior, además de las seis aberturas, fue dotada con cuatro orificios adicionales para permitir el atornillado del chasis. En el lateral izquierdo, la pieza se dejó abierta para facilitar la inserción de la \textit{power bank}, mientras que en el lado derecho se añadieron dos cuadrantes que permitieron retirar la \textit{power bank} cuando sea necesario. Esta pieza está disponible tanto en formato compatible con FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/parte-superior.FCStd}} como en STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/parte-superior.stl}}.
 
@@ -446,7 +447,7 @@ La Figura \ref{fig:psuperior} (izquierda) muestra la carcasa, lista para la impr
 \subsection{Sujección trasera}
 \label{subsec:sujecciontrasera}
 
-Para asegurar que la \textit{power bank} se mantenga en su lugar dentro del robot, se diseñó una pieza que se atornilla en el lado izquierdo del chasis. Esta pieza fue definida como un prisma rectangular con más de 30 mm de altura, aproximadamente 5 mm de largo y 3 mm de ancho (Figura \ref{fig:ptrasera} izquierda). La pieza debe colocarse en posición vertical para evitar que la \textit{power bank} se deslice, y en posición horizontal cuando se desea extraer esta. Existe una versión en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.FCStd}} y otra en formato STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl}}. La Figura \ref{fig:ptrasera} (derecha) muesta cómo quedaría montada la pieza sobre el robot.
+Para asegurar que la \textit{power bank} se mantenga en su lugar dentro del robot, se diseñó una pieza que se atornilla en el lado izquierdo del chasis. Esta pieza fue definida como un prisma rectangular con más de 30 mm de altura, aproximadamente 5 mm de largo y 3 mm de ancho (Figura \ref{fig:ptrasera} izquierda). La pieza debe colocarse en posición vertical para evitar que la \textit{power bank} se deslice, y en posición horizontal cuando se desea extraer esta. Existe una versión en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.FCStd}} y otra en formato STL\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl}}. La Figura \ref{fig:ptrasera} (derecha) muestra cómo quedaría montada la pieza sobre el robot.
 
 %\begin{figure}[ht!]
 %	\centering
@@ -550,7 +551,7 @@ En nuestro caso, para la impresión de PiBotJ, se usó la impresora FDM Creality
 
 Una vez impresas todas las piezas y retirados sus soportes generados, fue el momento del montaje, cuya duración fue de dos horas aproximadamente, pero puede ser más dependiendo de las habilidades del usuario.
 
-Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los Hama Beads\footnote{\url{https://www.hamabeads.es/}}. Los Hama Beads son cilindros de plástico pequeños con un círculo en el centro usados comúnmente para manualidades y para la creación de objetos de decoración. En este caso, se usaron para evitar que tanto la Raspberry Pi como el módulo GPS toquen directamente la superficie impresa. Además, por su círculo interior pasaban perfectamente los tornillos usados. 
+Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los Hama Beads\footnote{\url{https://www.hamabeads.es/}}. Los Hama Beads son cilindros de plástico pequeños con un círculo en el centro usados comúnmente para manualidades y para la creación de objetos de decoración. En este caso, se usaron para evitar que tanto la Raspberry Pi como el módulo \acs{GPS} toquen directamente la superficie impresa. Además, por su círculo interior pasaban perfectamente los tornillos usados. 
 
 %Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los Hama Beads (Figura \ref{fig:hamabeads}). Los Hama Beads son cilindros de plástico pequeños con un círculo en el centro usados comunmente para manualidades y para la creación de objetos de decoración. En este caso, se usaron para evitar que tanto la Raspberry Pi como el módulo GPS toquen directamente la superficie impresa. Además, por su círculo interior pasaban perfectamente los tornillos usados. 
 
@@ -566,7 +567,7 @@ Uno de los elementos que se tuvo que tener en cuenta para el montaje fueron los 
 %\footnotetext[\value{footnote}]{\url{https://www.hamabeads.es/}\label{note:enlace80}}
 
 
-Otro aspecto a tener en cuenta es que, para la placa del módulo GPS, fue necesario soldarle unos pines para posteriormente conectarle los cables sin pérdidas de señal. También fue necesario agrandar con una taladradora los cuatro agujeros que tiene la antena del módulo para que puedan entrar bien los tornillos. 
+Otro aspecto a tener en cuenta es que, para la placa del módulo \acs{GPS}, fue necesario soldarle unos pines para posteriormente conectarle los cables sin pérdidas de señal. También fue necesario agrandar con una taladradora los cuatro agujeros que tiene la antena del módulo para que puedan entrar bien los tornillos. 
 
 %\begin{figure} [h!]
 %	\begin{center}
@@ -578,7 +579,7 @@ Otro aspecto a tener en cuenta es que, para la placa del módulo GPS, fue necesa
 
 Una vez solventados los contratiempo anteriores, se puede pasar a la fase de fijación de piezas mediante tornillos. El Cuadro \ref{cuadro:tornillos} muestra toda la tornillería necesaria. Los tornillos, tuercas y arandelas se pueden obtener en cualquier ferretería. Se recomienda usar un fijador para evitar que se aflojen los tornillos.
 
-Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd}}, un diseño de PiBotJ completo, que muestra el lugar donde se sitúa la tornillería del robot y ayudará al usuario facilitar el ensamblaje. La Figura \ref{fig:robotfreecad} muestra el robot completo montado. Para conseguir realizar el diseño de PiBotJ completo en FreeCAD, se tomaron los ficheros .stl obtenidos de la Sección \ref{sec:diseñocad}. Además, se tuvo que diseñar aparte: la antena del módulo \acs{GPS}, la batería, la rueda loca, un Hama Bead y la rueda; todos los ficheros se pueden encontrar en la carpeta \verb|misc|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/tree/main/design/misc}}. La placa del módulo \acs{GPS} necesitó ser editada partiendo de una versión de Thinkercad\footnote{\url{https://www.tinkercad.com/things/6etb23HSw0w-gy-neo6mv2-neo-6m}} y, por otro lado, el resto de componentes se tomaron de la librería de FreeCAD\footnote{\url{https://github.com/FreeCAD/FreeCAD-library/tree/master}}.
+Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/robotcompleto.FCStd}}, un diseño de PiBotJ completo, que muestra el lugar donde se sitúa la tornillería del robot y ayudará al usuario a facilitar el ensamblaje. La Figura \ref{fig:robotfreecad} muestra el robot completo montado. Para conseguir realizar el diseño de PiBotJ completo en FreeCAD, se tomaron los ficheros .stl obtenidos de la Sección \ref{sec:diseñocad}. Además, se tuvo que diseñar aparte: la antena del módulo \acs{GPS}, la batería, la rueda loca, un Hama Bead y la rueda; todos los ficheros se pueden encontrar en la carpeta \verb|misc|\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez/tree/main/design/misc}}. La placa del módulo \acs{GPS} necesitó ser editada partiendo de una versión de Thinkercad\footnote{\url{https://www.tinkercad.com/things/6etb23HSw0w-gy-neo6mv2-neo-6m}} y, por otro lado, el resto de componentes se tomaron de la librería de FreeCAD\footnote{\url{https://github.com/FreeCAD/FreeCAD-library/tree/master}}.
 
 \begin{table}[H]
 	\begin{center}
@@ -594,9 +595,9 @@ Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez
 			\hline
 			Raspberry Pi & 4 M2 12mm & 4 & & 4\\
 			\hline
-			Placa GPS & 4 M2 16mm & 4 & 8 & 4\\
+			Placa \acs{GPS} & 4 M2 16mm & 4 & 8 & 4\\
 			\hline
-			Antena GPS & 4 M2 16mm & 4 & & 4\\
+			Antena \acs{GPS} & 4 M2 16mm & 4 & & 4\\
 			\hline
 			Sujeción entre placas & 4 M2 16mm & 4 & 8 &\\
 			\hline
@@ -617,11 +618,11 @@ Se ha creado en FreeCAD\footnote{\url{https://github.com/RoboticsURJC/tfg-jlopez
 \end{figure}
 
 
-Para sujetar el cable de alimentación de la Raspberry Pi se utilizó una brida. Para optimizar el espacio ocupado por los cables se emplearon gomas pequeñas. Además, fue necesario utilizar diez cables macho-hembra para alimentar los dos motores y el módulo GPS, mientras que el motor de la cámara se quedó sin conectar, ya que la cámara se va a mantener fija, dejando su movilidad como una posible línea futura de trabajo.
+Para sujetar el cable de alimentación de la Raspberry Pi se utilizó una brida. Para optimizar el espacio ocupado por los cables se emplearon gomas pequeñas. Además, fue necesario utilizar diez cables macho-hembra para alimentar los dos motores y el módulo \acs{GPS}, mientras que el motor de la cámara se quedó sin conectar, ya que la cámara se va a mantener fija, dejando su movilidad como una posible línea futura de trabajo.
 
-Respecto a las ruedas, se han probado dos tipos: las del kit \textit{ActivityBot} y las de goma azul genéricas. Según la aplicación, se puede optar por una u otra. A continuación, se explicará el montaje de cada tipo.
+Respecto a las ruedas, se han probado dos tipos: las de goma azul genéricas y las del kit \textit{ActivityBot}. Según la aplicación, se puede optar por una u otra. A continuación, se explicará el montaje de cada tipo.
 
-Para utilizar las ruedas del kit \textit{ActivityBot} simplemente fue necesario atornillarlas al robot con el tornillo que viene incluido, ya que estas ruedas fueron diseñadas específicamente para motores Parallax. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (izquierda).
+%Para utilizar las ruedas del kit \textit{ActivityBot} simplemente fue necesario atornillarlas al robot con el tornillo que viene incluido, ya que estas ruedas fueron diseñadas específicamente para motores Parallax. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (izquierda).
 
 %\begin{figure} [h!]
 %	\begin{center}
@@ -631,38 +632,42 @@ Para utilizar las ruedas del kit \textit{ActivityBot} simplemente fue necesario 
 %	\label{fig:ab}
 %\end{figure}
 
-Por otro lado, para poder usar la ruedas genéricas, fue necesario realizar algunas modificaciones. En primer lugar, se usó una sierra para cortar las partes sobrantes (Figura \ref{fig:rae}, izquierda). También fue necesario perforar la rueda con un taladro para que el tornillo que conecta al motor encajara fácilmente. Y, tras esto, fue necesario colocar dos topes de motor sobre la superficie lisa de la rueda (Figura \ref{fig:rae}, derecha) y hacer los agujeros correspondientes para atornillarlos. En este caso, se utilizaron siete tornillos M2 de 8 mm. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (derecha).
+%Por otro lado, para poder usar la ruedas genéricas, fue necesario realizar algunas modificaciones. En primer lugar, se usó una sierra para cortar las partes sobrantes (Figura \ref{fig:rae}, izquierda). También fue necesario perforar la rueda con un taladro para que el tornillo que conecta al motor encajara fácilmente. Y, tras esto, fue necesario colocar dos topes de motor sobre la superficie lisa de la rueda (Figura \ref{fig:rae}, derecha) y hacer los agujeros correspondientes para atornillarlos. En este caso, se utilizaron siete tornillos M2 de 8 mm. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (derecha).
+
+Para utilizar las ruedas genéricas, fue necesario realizar algunas modificaciones. En primer lugar, se usó una sierra para cortar las partes sobrantes (Figura \ref{fig:rae}, izquierda). También fue necesario perforar la rueda con un taladro para que el tornillo que conecta al motor encajara fácilmente. Y, tras esto, fue necesario colocar dos topes de motor sobre la superficie lisa de la rueda (Figura \ref{fig:rae}, derecha) y hacer los agujeros correspondientes para atornillarlos. En este caso, se utilizaron siete tornillos M2 de 8 mm. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (izquierda).
 
 \begin{figure}[ht!]
 	\centering
 	\begin{minipage}{0.40\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/creacionra1.jpeg}
+		\includegraphics[width=\linewidth]{figs/cap5/creacionra2.jpeg}
 
 	\end{minipage}
 	\hspace{2cm}
 	\begin{minipage}{0.40\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/creacionra2.jpeg}
-
+		\includegraphics[width=\linewidth]{figs/cap5/creacionra1.jpeg}
 	\end{minipage}
 	\caption{Ensamblaje ruedas azules genéricas}
 	\label{fig:rae}
 \end{figure}
 
 
+Por otro lado, para poder usar las ruedas del kit \textit{ActivityBot} simplemente fue necesario atornillarlas al robot con el tornillo que viene incluido, ya que estas ruedas fueron diseñadas específicamente para motores Parallax. El aspecto del robot con este tipo de ruedas es el que muestra la Figura \ref{fig:robot} (derecha).
+
+
 \begin{figure}[ht!]
 	\centering
 	\begin{minipage}{0.31\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/ab.jpeg}
-		\caption*{\centering Robot con ruedas negras}
+		\includegraphics[width=\linewidth]{figs/cap5/ra.jpeg}
+		\caption*{\centering Robot con ruedas azules}
 	\end{minipage}
 	\hspace{2cm}
 	\begin{minipage}{0.30\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figs/cap5/ra.jpeg}
-		\caption*{\centering Robot con ruedas azules}
+		\includegraphics[width=\linewidth]{figs/cap5/ab.jpeg}
+		\caption*{\centering Robot con ruedas negras}
 	\end{minipage}
 	\caption{Robot con distintos tipos de ruedas}
 	\label{fig:robot}
@@ -691,7 +696,7 @@ En el Capítulo de Experimentos se verá qué rueda funciona mejor según el tip
 			\hline
 			Raspberry Pi & 65€ \\
 			\hline
-			Módulo GPS & 9€ \\
+			Módulo \acs{GPS} & 9€ \\
 			\hline
 			Ruedas ActivityBot/Azules & 9€ \\
 			\hline

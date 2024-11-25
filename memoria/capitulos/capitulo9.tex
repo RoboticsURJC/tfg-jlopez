@@ -98,7 +98,8 @@ Para su configuración hay que seguir los siguientes pasos:
 		echo "deb https://packages.cloud.google.com/apt \
 		coral-edgetpu-stable main" | \
 		sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
-	\end{lstlisting}.
+	\end{lstlisting}
+
 	\item
 	\begin{lstlisting}[language=bash]
 		curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
@@ -106,7 +107,7 @@ Para su configuración hay que seguir los siguientes pasos:
 	\end{lstlisting}
 	\item \verb|sudo apt-get update|.
 	\item \verb|sudo apt-get install libedgetpu1-std|.
-	\item Conecta el USB en uno de los puertos 3.0.
+	\item Conectar el USB en uno de los puertos 3.0.
 	\item \verb|sudo apt-get install python3-pycoral|.
 \end{enumerate}\
 
