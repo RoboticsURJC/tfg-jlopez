@@ -63,7 +63,7 @@ class CameraVFFNode(Node):
             self.last_non_zero_angular = angle
             self.last_non_zero_time = current_time
         # Si la velocidad angular es 0, pero ha pasado menos de 1.5 segundo desde el último valor distinto de 0, usar el último valor
-        elif current_time - self.last_non_zero_time < 1.0:
+        elif current_time - self.last_non_zero_time < 0.5:
             angle = self.last_non_zero_angular
         else:
             angle = 0.0  # Reiniciar si ha pasado más de 1 segundo sin cambios
