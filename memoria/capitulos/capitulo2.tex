@@ -38,10 +38,10 @@ Las desventajas de este proyecto son las siguientes:
 \begin{itemize}
 	\item \textit{Limitaciones climáticas}. No puede operar en condiciones adversas ni durante la noche.
 	\item \textit{Uso de software de pago}. Utiliza ContextCapture, que es de pago, para el procesamiento fotogramétrico.
-	\item \textit{Movimiento circular para detección del volumen}. Una vez detectado el bache, es necesario moverse alrededor de él para que el algoritmo de fotogametría sea capaz de encontrar su volumen, lo que ralentiza el cálculo.
+	\item \textit{Movimiento circular para detección del volumen}. Una vez detectado el bache, es necesario moverse alrededor de él para que el algoritmo de fotogrametría sea capaz de encontrar su volumen, lo que ralentiza el cálculo.
 \end{itemize}
 
-\subsubsection{El proyecto Herón}
+\subsubsection{El proyecto HERON}
 \label{subsubsec:sistema2}
 
 En \cite{10.1145/3529190.3534746} se habla del Proyecto HERON\footnote{\url{https://www.heron-h2020.eu/}} que también parte del programa Horizon 2020. Este proyecto propone una solución integral para el mantenimiento de infraestructuras viales mediante el uso de vehículos modulares robóticos autónomos y drones. El sistema está diseñado para optimizar la eficiencia y seguridad de las operaciones de mantenimiento, utilizando sensores y escáneres para crear mapas 3D, inteligencia artificial para coordinar flujos de trabajo, y módulos de análisis de imágenes para detectar defectos. Todavía está en etapa de desarrollo. (Figura \ref{fig:heron})
@@ -183,7 +183,7 @@ En relación a la detección de los baches se pueden encontrar métodos que se p
 En visión se puede encontrar el método de \cite{app112311229}, que usa modelos de YOLOv4, YOLOv4-tiny y YOLOv5, un \textit{dataset} total de 665 imágenes (70\% entrenamiento, 10\% validación, 20\% pruebas) y aplicado sobre 
 Tesla K80 GPU (12 GB) en Google Colab. Otro método es el de \cite{doi:10.1080/14680629.2019.1615533}, que utiliza un modelo de Prepooling CNN con un \textit{dataset} de 96.000 imágenes (72.000 entrenamiento, 24.000 pruebas), una precisión optimizada hasta de 0,9825. Todo ello probado sobre un Intel Core i7, 32 GB RAM, GeForce GTX 1080 (8 GB).
 
-En vibración se puede encontrar el método de \cite{s20020451}, que usa un filtro Butterworth, un modelo gaussiano mejorado y un algoritmo de K-Nearest Neighbor. Se usan unas 118 muestras de bultos, 174 muestras de planos y 103 de bache. Tiene una precisión de 0,96 para baches y 0,94 para bultos. Se usa un Cavalier con un smartphone Redmi Note 8 Pro con frecuencia de muestreo de 400 Hz. Otro método es el de \cite{7922534} que usa un filtro paso bajo, con transformada de Fourier. Para clasificar se usa un árbol de decisión C4.5 (0,9860), SVM (0,9525) y Naïve Bayes (0,9690). Todo ello se ha probado sobre el smartphone Samsung Galaxy Alpha con frecuencia de muestreo de 50 Hz.
+En vibración se puede encontrar el método de \cite{s20020451}, que usa un filtro Butterworth, un modelo gaussiano mejorado y un algoritmo de K-Nearest Neighbor. Se usan unas 118 muestras de bultos, 174 muestras de planos y 103 de bache. Tiene una precisión de 0,96 para baches y 0,94 para bultos. Se usa un Cavalier con un \textit{smartphone} Redmi Note 8 Pro con frecuencia de muestreo de 400 Hz. Otro método es el de \cite{7922534} que usa un filtro paso bajo, con transformada de Fourier. Para clasificar se usa un árbol de decisión C4.5 (0,9860), SVM (0,9525) y Naïve Bayes (0,9690). Todo ello se ha probado sobre el \textit{smartphone} Samsung Galaxy Alpha con frecuencia de muestreo de 50 Hz.
 
 Finalmente, para la reconstrucción 3D se puede encontrar el método de \cite{8788687}, que usa visión estéreo de un solo marco, fusión de múltiples marcos, aprendizaje por transferencia con Mask R-CNN y aprendizaje por transferencia con YOLOv2, todo ello usando una GeForce GTX 1080 y un Tesla K80. Otro método es el de \cite{8638822}, que usa un filtro de paso-alto, una ecualización de histograma, una combinación de \textit{waypoints} con triangulación estéreo. Este método ha sido probado en dos webcams A4Tech PKS-732 montadas en un trípode o en la parte trasera de un coche usando un ordenador con sistema operativo Windows.
 

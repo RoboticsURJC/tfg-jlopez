@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1.3}Robots de bajo coste}{7}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Estado del arte}{11}{chapter.2}%
 \contentsline {subsubsection}{Sistema de reconstrucción 3D de baches}{11}{subsubsection*.28}%
-\contentsline {subsubsection}{El proyecto Herón}{12}{subsubsection*.31}%
+\contentsline {subsubsection}{El proyecto HERON}{12}{subsubsection*.31}%
 \contentsline {subsubsection}{EyesNroad}{13}{subsubsection*.33}%
 \contentsline {subsubsection}{El proyecto OMICRÓN}{15}{subsubsection*.36}%
 \contentsline {chapter}{\numberline {3}Objetivos}{18}{chapter.3}%
