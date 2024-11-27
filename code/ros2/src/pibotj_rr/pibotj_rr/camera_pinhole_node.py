@@ -69,8 +69,7 @@ class CameraPinHoleClass(Node):
     def loadCamera(self):
         global myCamera
         myCamera = PinholeCamera()
-        #thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
-        thetaY = 40*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
+        thetaY = 50*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
         thetaZ = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
         thetaX = 0*DEGTORAD # considerando que la camara (en vertical) está rotada 90º sobre eje Y
 
