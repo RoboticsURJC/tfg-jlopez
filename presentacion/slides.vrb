@@ -1,0 +1,9 @@
+\frametitle{Algoritmo de visión}
+\begin{lstlisting}
+cvCvtColor (&image, IplTmp1, CV_RGB2GRAY);//to Gray
+cvNormalize(IplTmp1, IplTmp1, 0, 255, CV_MINMAX);
+cvSmooth(IplTmp1,IplTmp2,CV_BLUR,3,3);//Avrg filter
+cvLaplace(IplTmp2, IplLaplace, 3);//Laplace
+cvConvertScale(IplLaplace,IplTmp1);
+cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
+\end{lstlisting}
