@@ -53,7 +53,7 @@
 %=========
 
 %========= TODO: diapositiva de portada
-\title[Robot de bajo coste para el mantenimiento]{Robot de bajo coste para el mantenimiento de carreteras} % El título reducido aparece en la parte inferior de todas las diapositivas
+\title[Robot de bajo coste para el mantenimiento]{Robot de bajo coste para \newline el mantenimiento de carreteras} % El título reducido aparece en la parte inferior de todas las diapositivas
                                          % El título completo aparece solo en la diapositiva de portada
 \author[Julia López Augusto]{Julia López Augusto}
 \institute[URJC]
@@ -84,13 +84,15 @@ Trabajo Fin de Grado
 
 %========= Índice o tabla de contenidos (TOC)
 \begin{frame}
+% Título del índice
 \frametitle{Contenidos}
 %\begin{multicols}{2} % si tengo muchas secciones, lo parte en dos columnas
   \tableofcontents[hideallsubsections] % no muestra subsecciones
 %\end{multicols}
-\note[item]{La presentaci\'on esta dividida en cuatro partes.}
+\note[item]{La presentación esta dividida en cuatro partes.}
 \end{frame}
 
+%============================= Introducción =========================================
 %========= Diapositiva "vacía" de comienzo de sección:
 \section*{}
 \begin{frame}{}
@@ -99,133 +101,280 @@ Trabajo Fin de Grado
 \note[item]{Comencemos con la introducción.}
 \end{frame}
 
+% Título en azul (pequeñito) 
 \section{Introducción}
-\subsection{Contexto general}
+% Título en azul (pequeñito) 
+%\subsection{Robótica}
 %========= Diapositiva con imágenes:
 \begin{frame}
-\frametitle{Situación de la Robótica}
+\frametitle{Robots de campo}
 \begin{figure}
-\centering
-\includegraphics[width=3.4cm]{figs/roomba.jpg}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth, valign=m]{figs/strawberry.png} & \includegraphics[width=0.3\textwidth, valign=m]{figs/komatsu.jpeg} \\
+		\includegraphics[width=0.3\textwidth, valign=m]{figs/perseverance.jpg} & \includegraphics[width=0.3\textwidth, valign=m]{figs/tello.png} 
+	\end{tabular}
+\end{table}
 \end{figure}
 \end{frame}
 
-%========= Diapositiva con ítems resaltados con colores:
-\begin{frame}
-\frametitle{Situación de la Robótica}
-\begin{itemize}
-\item La \textcolor{red}{tecnología} está cada vez más presente en la vida cotidiana.
-\item Los robots de servicio aparecen en el \textcolor{blue}{mercado}.
-\item La \textcolor{red}{domótica} presenta cada vez más aplicaciones domésticas.
-\end{itemize}
-\end{frame}
-
-\subsection{Contexto específico}
-%========= Diapositiva con bloques:
-\begin{frame}
-\frametitle{Precedentes de la robótica}
-\begin{block}{Primera revolución industrial de 1800}
-Productos fabricados por \textcolor{blue}{máquinas}. La \textcolor{red}{máquina de vapor} fue clave.
-\end{block}
-\end{frame}
-
-%========= Diapositiva con bullets en diferentes niveles (outline):
-\section{Principios de transducción}
-\subsection{Principio de transducción piezoresistivo}
-\begin{frame}
-\frametitle{Conceptos}
-\begin{outline}
-\1 Piezoresistividad: relación entre resistencia eléctrica y deformación.
-\2 Material piezoresistivo: (1) material en reposo (átomos en equilibrio).
-\3 (2) Si sufre deformación, movimiento átomos, modifican su resistividad.
-\2 Resistencia vs. resistividad de un material.
-\3 Resistencia: depende del volumen del material a tratar.
-\3 Resistividad: caract. intrínseca relacionada con colocación de átomos.
-\end{outline}
-\end{frame}
-
+%===================================================================================
+%============================= Objetivos ===========================================
 \section*{}
 \begin{frame}{}
   \centering \Huge
   \emph{Objetivos}
-\note[item]{Pasemos ahora a comentar los objetivos que nos hemos con este trabajo.}
+\note[item]{Pasemos ahora a comentar los objetivos que nos hemos enfrentado con este trabajo.}
 \end{frame}
 
 \section{Objetivos}
 \begin{frame}
-\begin{enumerate}
-\item Crear una herramienta multiplataforma.
-\item Sin necesidad de instalación.
-\item Toda ejecución vía web.
-\end{enumerate}
+\frametitle{Descripción del problema y requisitos}
+%\begin{enumerate}
+%\item Crear una herramienta multiplataforma.
+%\item Sin necesidad de instalación.
+%\item Toda ejecución vía web.
+%\end{enumerate}
+%\end{frame}
+
+%\begin{frame}
+	\begin{block}{Requisitos}
+		\begin{itemize}
+			\item Coste inferior a 250€.
+			\item Piezas impresas en una impresora convencional.
+			\item Ubuntu como sistema operativo.
+			\item No se requiere tarjeta gráfica dedicada para entrenar modelos.
+			\item Modelos adaptados a las limitaciones hardware.
+			\item Integración con ROS 2.
+		\end{itemize}
+	\end{block}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Metodología}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Plan de trabajo}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+%===================================================================================
+
+%================= Plataforma de desarrollo ========================================
 \section*{}
 \begin{frame}{}
-  \centering \Huge
-  \emph{Diseño}
-\note[item]{Una vez descritos los objetivos, veamos qué hemos hecho para alcanzarlos.}
+	\centering \Huge
+	\emph{Plataforma de desarrollo}
+	\note[item]{Pasemos ahora a comentar los objetivos que nos hemos enfrentado con este trabajo.}
 \end{frame}
 
-\section{Diseño}
-%========= Diapositiva con matemáticas:
-\subsection{Matemáticas empleadas}
+\section{Plataforma de desarrollo}
 \begin{frame}
-\frametitle{Matrices de la cámara}
-\begin{itemize}
-\item Se usa una matriz $RT (4x4)$ en lugar de $R$ y $T$.
-\item La matriz $RT$ rota $\theta$ grados en los ejes $X$, $Y$ y $Z$:
-\end{itemize}
-\begin{equation}
-	\begin{bmatrix}
-	1 & 0 & 0 & X \\
-	0 & cos(\theta) & sin(\theta) &	Y \\
-	0 & -sin(\theta)& cos(\theta) & Z \\
-	0 & 0 & 0 & 1 
-	\end{bmatrix}
-\end{equation}
+	\frametitle{Hardware}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
 \end{frame}
 
-%========= Diapositiva con matemáticas y leyenda (conditions*):
 \begin{frame}
-\frametitle{Resistencia de un material}
-\begin{outline}
-\1 Si material piezoresistivo se deforma, cambia su resistencia eléctrica.
-\begin{equation}
-R=\rho\frac{l}{A}
-\end{equation}
-donde:
-\begin{conditions*}
-R & resistencia del material $[\Omega]$\\
-\rho & resistividad $[\Omega-m]$\\
-l & longitud $[m]$\\
-A & área de sección transversal $[m^2]$
-\end{conditions*}
-\1 El cambio de resistencia se obtiene a partir de:
-\begin{equation}
-\frac{\Delta R}{R}=\frac{\Delta\rho}{\rho}=\frac{\Delta A}{A}=\frac{\Delta l}{l}
-\end{equation}
-\1 Otra forma de medir el efecto piezoresistivo: el factor de deformación.
-\begin{equation}
-GF(\textit{Gauge Factor})=\frac{\frac{\Delta R}{R}}{\varepsilon}=\frac{\frac{\Delta R}{R}}{\frac{\Delta l}{l}}
-\end{equation}
-\end{outline}
+	\frametitle{Software}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
 \end{frame}
 
-%========= Diapositiva con códigos:
-\subsection{Algoritmo principal}
-\begin{frame}[fragile]
-\frametitle{Algoritmo de visión}
-\begin{lstlisting}
-cvCvtColor (&image, IplTmp1, CV_RGB2GRAY);//to Gray
-cvNormalize(IplTmp1, IplTmp1, 0, 255, CV_MINMAX);
-cvSmooth(IplTmp1,IplTmp2,CV_BLUR,3,3);//Avrg filter
-cvLaplace(IplTmp2, IplLaplace, 3);//Laplace
-cvConvertScale(IplLaplace,IplTmp1);
-cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
-\end{lstlisting}
+
+%===================================================================================
+%============= Diseño y construcción del robot =====================================
+\section*{}
+\begin{frame}{}
+	\centering \Huge
+	\emph{Diseño y construcción del robot}
+	\note[item]{Pasemos ahora a comentar los objetivos que nos hemos enfrentado con este trabajo.}
 \end{frame}
 
+\section{Diseño y construcción del robot}
+\begin{frame}
+	\frametitle{Geometría del robot}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bocetos y maquetas}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Piezas diseñadas}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Impresión y montaje}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+
+%===================================================================================
+
+%============= Soporte software del robot ==========================================
+\section*{}
+\begin{frame}{}
+	\centering \Huge
+	\emph{Soporte software del robot}
+	\note[item]{Pasemos ahora a comentar los objetivos que nos hemos enfrentado con este trabajo.}
+\end{frame}
+
+\section{Soporte software del robot}
+% Título en azul (pequeñito) 
+\subsection{Simulación}
+\begin{frame}
+	\frametitle{Simulación}
+	% Título en azul (pequeñito) 
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+% Título en azul (pequeñito) 
+\subsection{Configuración del robot real}
+
+\begin{frame}
+	\frametitle{Configuración del robot real}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+% Título en azul (pequeñito) 
+\subsection{Comportamiento del robot real}
+\begin{frame}
+	\frametitle{Red neuronal}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Obtención del contorno}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Modelo de cámara pinhole}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Algoritmo de la lazada}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interfaz web}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Detección de líneas}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{VFF}
+	\begin{enumerate}
+		\item Crear una herramienta multiplataforma.
+		\item Sin necesidad de instalación.
+		\item Toda ejecución vía web.
+	\end{enumerate}
+\end{frame}
+%===================================================================================
+%========================== Experimentos ===========================================
+\section*{}
+\begin{frame}{}
+	\centering \Huge
+	\emph{Experimentos}
+	\note[item]{Pasemos ahora a comentar los objetivos que nos hemos enfrentado con este trabajo.}
+\end{frame}
+
+\section{Experimentos}
+\begin{frame}
+	%\frametitle{Descripción del problema y requisitos}
+	%\begin{enumerate}
+	%	\item Crear una herramienta multiplataforma.
+	%	\item Sin necesidad de instalación.
+	%	\item Toda ejecución vía web.
+	%\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	%\frametitle{Metodología}
+	%\begin{enumerate}
+	%	\item Crear una herramienta multiplataforma.
+	%	\item Sin necesidad de instalación.
+	%	\item Toda ejecución vía web.
+	%\end{enumerate}
+\end{frame}
+
+%===================================================================================
+%============================= Conclusiones ========================================
 \section*{}
 \begin{frame}{}
   \centering \Huge
@@ -235,14 +384,17 @@ cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
 
 \section{Conclusiones}
 \begin{frame}
-\begin{block}{Objetivos cumplidos}
+\begin{block}{Habilidades desarrolladas}
 \begin{itemize}
 \item Herramienta multiplataforma: soporta Linux, Windows, MacOS.
 \item Intuitiva para el usuario final: no se necesita instalar nada.
 \item Solo se necesita un navegador web.
 \end{itemize}
 \end{block}
+\end{frame}
+	
 
+\begin{frame}
 \begin{block}{Líneas futuras}
 \begin{itemize}
 \item Permitir el uso de otras herramientas.
@@ -256,5 +408,101 @@ cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
 \note[item]{Y hasta aquí mi exposición.}
 \note[item]{Quedo a disposición del tribunal...}
 \end{frame}
+
+
+%========= Diapositiva con ítems resaltados con colores:
+%\begin{frame}
+%	\frametitle{Situación de la Robótica}
+%	\begin{itemize}
+%		\item La \textcolor{red}{tecnología} está cada vez más presente en la vida cotidiana.
+%		\item Los robots de servicio aparecen en el \textcolor{blue}{mercado}.
+%		\item La \textcolor{red}{domótica} presenta cada vez más aplicaciones domésticas.
+%	\end{itemize}
+%\end{frame}
+
+%\subsection{Contexto específico}
+%========= Diapositiva con bloques:
+%\begin{frame}
+%	\frametitle{Precedentes de la robótica}
+%	\begin{block}{Primera revolución industrial de 1800}
+%		Productos fabricados por \textcolor{blue}{máquinas}. La \textcolor{red}{máquina de vapor} fue clave.
+%	\end{block}
+%\end{frame}
+
+
+%========= Diapositiva con bullets en diferentes niveles (outline):
+%\section{Principios de transducción}
+%\subsection{Principio de transducción piezoresistivo}
+%\begin{frame}
+%\frametitle{Conceptos}
+%\begin{outline}
+%\1 Piezoresistividad: relación entre resistencia eléctrica y deformación.
+%\2 Material piezoresistivo: (1) material en reposo (átomos en equilibrio).
+%\3 (2) Si sufre deformación, movimiento átomos, modifican su resistividad.
+%\2 Resistencia vs. resistividad de un material.
+%\3 Resistencia: depende del volumen del material a tratar.
+%\3 Resistividad: caract. intrínseca relacionada con colocación de átomos.
+%\end{outline}
+%\end{frame}
+
+
+%\section{Plataforma de desarrollo}
+%========= Diapositiva con matemáticas:
+%\subsection{Matemáticas empleadas}
+%\begin{frame}
+%	\frametitle{Matrices de la cámara}
+%	\begin{itemize}
+%		\item Se usa una matriz $RT (4x4)$ en lugar de $R$ y $T$.
+%		\item La matriz $RT$ rota $\theta$ grados en los ejes $X$, $Y$ y $Z$:
+%	\end{itemize}
+%	\begin{equation}
+%		\begin{bmatrix}
+%			1 & 0 & 0 & X \\
+%			0 & cos(\theta) & sin(\theta) &	Y \\
+%			0 & -sin(\theta)& cos(\theta) & Z \\
+%			0 & 0 & 0 & 1 
+%		\end{bmatrix}
+%	\end{equation}
+%\end{frame}
+
+%========= Diapositiva con matemáticas y leyenda (conditions*):
+%\begin{frame}
+%	\frametitle{Resistencia de un material}
+%	\begin{outline}
+%		\1 Si material piezoresistivo se deforma, cambia su resistencia eléctrica.
+%		\begin{equation}
+%			R=\rho\frac{l}{A}
+%		\end{equation}
+%		donde:
+%		\begin{conditions*}
+%			R & resistencia del material $[\Omega]$\\
+%			\rho & resistividad $[\Omega-m]$\\
+%			l & longitud $[m]$\\
+%			A & área de sección transversal $[m^2]$
+%		\end{conditions*}
+%		\1 El cambio de resistencia se obtiene a partir de:
+%		\begin{equation}
+%			\frac{\Delta R}{R}=\frac{\Delta\rho}{\rho}=\frac{\Delta A}{A}=\frac{\Delta l}{l}
+%		\end{equation}
+%		\1 Otra forma de medir el efecto piezoresistivo: el factor de deformación.
+%		\begin{equation}
+%			GF(\textit{Gauge Factor})=\frac{\frac{\Delta R}{R}}{\varepsilon}=\frac{\frac{\Delta R}{R}}{\frac{\Delta l}{l}}
+%		\end{equation}
+%	\end{outline}
+%\end{frame}
+
+%========= Diapositiva con códigos:
+%\subsection{Algoritmo principal}
+%\begin{frame}[fragile]
+%	\frametitle{Algoritmo de visión}
+%	\begin{lstlisting}
+%		cvCvtColor (&image, IplTmp1, CV_RGB2GRAY);//to Gray
+%		cvNormalize(IplTmp1, IplTmp1, 0, 255, CV_MINMAX);
+%		cvSmooth(IplTmp1,IplTmp2,CV_BLUR,3,3);//Avrg filter
+%		cvLaplace(IplTmp2, IplLaplace, 3);//Laplace
+%		cvConvertScale(IplLaplace,IplTmp1);
+%		cvThreshold(IplTmp1,IplTmp2,Thress,255,CV_THRESH_BIN);
+%	\end{lstlisting}
+%\end{frame}
 
 \end{document}
