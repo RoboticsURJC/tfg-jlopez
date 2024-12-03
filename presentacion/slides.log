@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  3 DEC 2024 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  3 DEC 2024 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,34 +1187,34 @@ s/tello.png>] [6
 <figs/dana.jpg, id=167, 825.83531pt x 587.19376pt>
 File: figs/dana.jpg Graphic file (type jpg)
 <use figs/dana.jpg>
-Package pdftex.def Info: figs/dana.jpg  used on input line 168.
+Package pdftex.def Info: figs/dana.jpg  used on input line 158.
 (pdftex.def)             Requested size: 102.68962pt x 73.01376pt.
 <figs/seguridad.jpg, id=168, 825.83531pt x 587.19376pt>
 File: figs/seguridad.jpg Graphic file (type jpg)
 <use figs/seguridad.jpg>
-Package pdftex.def Info: figs/seguridad.jpg  used on input line 168.
+Package pdftex.def Info: figs/seguridad.jpg  used on input line 158.
 (pdftex.def)             Requested size: 102.68962pt x 73.01376pt.
 <figs/impresion.png, id=169, 900.36375pt x 915.42pt>
 File: figs/impresion.png Graphic file (type png)
 <use figs/impresion.png>
-Package pdftex.def Info: figs/impresion.png  used on input line 168.
+Package pdftex.def Info: figs/impresion.png  used on input line 158.
 (pdftex.def)             Requested size: 94.13171pt x 95.6959pt.
 <figs/bache.png, id=170, 247.92625pt x 152.57pt>
 File: figs/bache.png Graphic file (type png)
 <use figs/bache.png>
-Package pdftex.def Info: figs/bache.png  used on input line 168.
+Package pdftex.def Info: figs/bache.png  used on input line 158.
 (pdftex.def)             Requested size: 68.45801pt x 42.12798pt.
 <figs/interfaceweb.png, id=171, 642.4pt x 428.60126pt>
 File: figs/interfaceweb.png Graphic file (type png)
 <use figs/interfaceweb.png>
-Package pdftex.def Info: figs/interfaceweb.png  used on input line 168.
+Package pdftex.def Info: figs/interfaceweb.png  used on input line 158.
 (pdftex.def)             Requested size: 68.45801pt x 45.66826pt.
  [7
 
  <./figs/dana.jpg> <./figs/seguridad.jpg> <./figs/impresion.png> <./figs/bache.
 png> <./figs/interfaceweb.png (PNG copy)>]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-193.
+171.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1224,7 +1224,7 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 <figs/PDCA.png, id=192, 679.03688pt x 491.58656pt>
 File: figs/PDCA.png Graphic file (type png)
 <use figs/PDCA.png>
-Package pdftex.def Info: figs/PDCA.png  used on input line 202.
+Package pdftex.def Info: figs/PDCA.png  used on input line 180.
 (pdftex.def)             Requested size: 284.52756pt x 205.97737pt.
  [9
 
@@ -1232,17 +1232,17 @@ Package pdftex.def Info: figs/PDCA.png  used on input line 202.
 <figs/github.png, id=200, 602.25pt x 602.25pt>
 File: figs/github.png Graphic file (type png)
 <use figs/github.png>
-Package pdftex.def Info: figs/github.png  used on input line 221.
+Package pdftex.def Info: figs/github.png  used on input line 199.
 (pdftex.def)             Requested size: 109.53323pt x 109.53064pt.
 <figs/diario.png, id=202, 906.38625pt x 566.115pt>
 File: figs/diario.png Graphic file (type png)
 <use figs/diario.png>
-Package pdftex.def Info: figs/diario.png  used on input line 221.
+Package pdftex.def Info: figs/diario.png  used on input line 199.
 (pdftex.def)             Requested size: 136.91862pt x 85.50961pt.
 <figs/evo.png, id=203, 906.38625pt x 566.115pt>
 File: figs/evo.png Graphic file (type png)
 <use figs/evo.png>
-Package pdftex.def Info: figs/evo.png  used on input line 221.
+Package pdftex.def Info: figs/evo.png  used on input line 199.
 (pdftex.def)             Requested size: 136.91862pt x 85.50961pt.
  [10
 
@@ -1252,55 +1252,55 @@ Package pdftex.def Info: figs/evo.png  used on input line 221.
 <figs/raspberrypi4.png, id=222, 710.655pt x 390.45876pt>
 File: figs/raspberrypi4.png Graphic file (type png)
 <use figs/raspberrypi4.png>
-Package pdftex.def Info: figs/raspberrypi4.png  used on input line 253.
+Package pdftex.def Info: figs/raspberrypi4.png  used on input line 231.
 (pdftex.def)             Requested size: 68.45801pt x 37.6123pt.
 <figs/camera.png, id=223, 797.98125pt x 654.445pt>
 File: figs/camera.png Graphic file (type png)
 <use figs/camera.png>
-Package pdftex.def Info: figs/camera.png  used on input line 253.
+Package pdftex.def Info: figs/camera.png  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 42.10103pt.
 <figs/GPSNEO6MV2.jpeg, id=224, 225.84375pt x 225.84375pt>
 File: figs/GPSNEO6MV2.jpeg Graphic file (type jpg)
 <use figs/GPSNEO6MV2.jpeg>
-Package pdftex.def Info: figs/GPSNEO6MV2.jpeg  used on input line 253.
+Package pdftex.def Info: figs/GPSNEO6MV2.jpeg  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 51.33989pt.
 <figs/parallax.png, id=225, 241.90375pt x 379.4175pt>
 File: figs/parallax.png Graphic file (type png)
 <use figs/parallax.png>
-Package pdftex.def Info: figs/parallax.png  used on input line 253.
+Package pdftex.def Info: figs/parallax.png  used on input line 231.
 (pdftex.def)             Requested size: 34.23161pt x 53.69124pt.
 <figs/wheel.png, id=226, 429.605pt x 412.54124pt>
 File: figs/wheel.png Graphic file (type png)
 <use figs/wheel.png>
-Package pdftex.def Info: figs/wheel.png  used on input line 253.
+Package pdftex.def Info: figs/wheel.png  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 49.30138pt.
 <figs/wheel2.png, id=227, 2589.675pt x 2581.645pt>
 File: figs/wheel2.png Graphic file (type png)
 <use figs/wheel2.png>
-Package pdftex.def Info: figs/wheel2.png  used on input line 253.
+Package pdftex.def Info: figs/wheel2.png  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 51.17108pt.
 <figs/googlecoral.png, id=228, 232.87pt x 217.81375pt>
 File: figs/googlecoral.png Graphic file (type png)
 <use figs/googlecoral.png>
-Package pdftex.def Info: figs/googlecoral.png  used on input line 253.
+Package pdftex.def Info: figs/googlecoral.png  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 48.02219pt.
 <figs/powerbank.png, id=229, 225.84375pt x 225.84375pt>
 File: figs/powerbank.png Graphic file (type png)
 <use figs/powerbank.png>
-Package pdftex.def Info: figs/powerbank.png  used on input line 253.
+Package pdftex.def Info: figs/powerbank.png  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 51.33989pt.
 <figs/ruedaloca.png, id=230, 379.4175pt x 416.55624pt>
 File: figs/ruedaloca.png Graphic file (type png)
 <use figs/ruedaloca.png>
-Package pdftex.def Info: figs/ruedaloca.png  used on input line 253.
+Package pdftex.def Info: figs/ruedaloca.png  used on input line 231.
 (pdftex.def)             Requested size: 34.23161pt x 37.57742pt.
 <figs/ordenador.png, id=231, 225.84375pt x 225.84375pt>
 File: figs/ordenador.png Graphic file (type png)
 <use figs/ordenador.png>
-Package pdftex.def Info: figs/ordenador.png  used on input line 253.
+Package pdftex.def Info: figs/ordenador.png  used on input line 231.
 (pdftex.def)             Requested size: 51.3422pt x 51.33989pt.
 
-Overfull \vbox (14.02705pt too high) detected at line 253
+Overfull \vbox (14.02705pt too high) detected at line 231
  []
 
 [12
@@ -1311,65 +1311,65 @@ Overfull \vbox (14.02705pt too high) detected at line 253
 <figs/ubuntu.png, id=244, 225.84375pt x 225.84375pt>
 File: figs/ubuntu.png Graphic file (type png)
 <use figs/ubuntu.png>
-Package pdftex.def Info: figs/ubuntu.png  used on input line 275.
+Package pdftex.def Info: figs/ubuntu.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
 <figs/freecad.png, id=245, 225.84375pt x 225.84375pt>
 File: figs/freecad.png Graphic file (type png)
 <use figs/freecad.png>
-Package pdftex.def Info: figs/freecad.png  used on input line 275.
+Package pdftex.def Info: figs/freecad.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
 <figs/python.png, id=246, 148.555pt x 148.555pt>
 File: figs/python.png Graphic file (type png)
 <use figs/python.png>
-Package pdftex.def Info: figs/python.png  used on input line 275.
+Package pdftex.def Info: figs/python.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 47.92165pt.
 <figs/opencv.png, id=247, 233.87375pt x 216.81pt>
 File: figs/opencv.png Graphic file (type png)
 <use figs/opencv.png>
-Package pdftex.def Info: figs/opencv.png  used on input line 275.
+Package pdftex.def Info: figs/opencv.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 44.42317pt.
 <figs/humble.png, id=248, 633.94737pt x 773.09882pt>
 File: figs/humble.png Graphic file (type png)
 <use figs/humble.png>
-Package pdftex.def Info: figs/humble.png  used on input line 275.
+Package pdftex.def Info: figs/humble.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 58.42818pt.
 <figs/foxy.png, id=249, 661.0061pt x 785.27524pt>
 File: figs/foxy.png Graphic file (type png)
 <use figs/foxy.png>
-Package pdftex.def Info: figs/foxy.png  used on input line 275.
+Package pdftex.def Info: figs/foxy.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 56.928pt.
 <figs/gazebo.png, id=250, 225.84375pt x 225.84375pt>
 File: figs/gazebo.png Graphic file (type png)
 <use figs/gazebo.png>
-Package pdftex.def Info: figs/gazebo.png  used on input line 275.
+Package pdftex.def Info: figs/gazebo.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
 <figs/rviz.png, id=251, 280.04625pt x 181.67876pt>
 File: figs/rviz.png Graphic file (type png)
 <use figs/rviz.png>
-Package pdftex.def Info: figs/rviz.png  used on input line 275.
+Package pdftex.def Info: figs/rviz.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 31.08734pt.
 <figs/googlecolab.png, id=252, 187.70125pt x 124.465pt>
 File: figs/googlecolab.png Graphic file (type png)
 <use figs/googlecolab.png>
-Package pdftex.def Info: figs/googlecolab.png  used on input line 275.
+Package pdftex.def Info: figs/googlecolab.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 31.77518pt.
 <figs/yolov8.png, id=253, 301.125pt x 168.63pt>
 File: figs/yolov8.png Graphic file (type png)
 <use figs/yolov8.png>
-Package pdftex.def Info: figs/yolov8.png  used on input line 275.
+Package pdftex.def Info: figs/yolov8.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 26.83467pt.
 <figs/tflite.png, id=254, 301.125pt x 168.63pt>
 File: figs/tflite.png Graphic file (type png)
 <use figs/tflite.png>
-Package pdftex.def Info: figs/tflite.png  used on input line 275.
+Package pdftex.def Info: figs/tflite.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 26.83467pt.
 <figs/osm.png, id=255, 225.84375pt x 225.84375pt>
 File: figs/osm.png Graphic file (type png)
 <use figs/osm.png>
-Package pdftex.def Info: figs/osm.png  used on input line 275.
+Package pdftex.def Info: figs/osm.png  used on input line 253.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
 
-Overfull \vbox (8.50871pt too high) detected at line 275
+Overfull \vbox (8.50871pt too high) detected at line 253
  []
 
 [13
@@ -1379,19 +1379,133 @@ g> <./figs/humble.png> <./figs/foxy.png> <./figs/gazebo.png> <./figs/rviz.png>
 <./figs/googlecolab.png> <./figs/yolov8.png> <./figs/tflite.png> <./figs/osm.pn
 g>] [14
 
-] [15
+]
+<figs/Original.png, id=278, 480.79625pt x 538.01pt>
+File: figs/Original.png Graphic file (type png)
+<use figs/Original.png>
+Package pdftex.def Info: figs/Original.png  used on input line 283.
+(pdftex.def)             Requested size: 145.47653pt x 162.79163pt.
+<figs/modelocompleto_bb3.png, id=279, 405.78267pt x 499.19833pt>
+File: figs/modelocompleto_bb3.png Graphic file (type png)
+<use figs/modelocompleto_bb3.png>
+Package pdftex.def Info: figs/modelocompleto_bb3.png  used on input line 283.
+(pdftex.def)             Requested size: 136.91862pt x 168.43788pt.
+ [15
 
-] [16
+ <./figs/Original.png> <./figs/modelocompleto_bb3.png>]
+<figs/boceto_papel.jpeg, id=288, 941.5175pt x 917.4275pt>
+File: figs/boceto_papel.jpeg Graphic file (type jpg)
+<use figs/boceto_papel.jpeg>
+Package pdftex.def Info: figs/boceto_papel.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 68.45801pt x 66.70427pt.
+<figs/boceto_carton5.jpeg, id=289, 1279.78125pt x 1526.70375pt>
+File: figs/boceto_carton5.jpeg Graphic file (type jpg)
+<use figs/boceto_carton5.jpeg>
+Package pdftex.def Info: figs/boceto_carton5.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 68.45801pt x 81.65105pt.
+<figs/planos1.jpeg, id=290, 1427.3325pt x 1634.105pt>
+File: figs/planos1.jpeg Graphic file (type jpg)
+<use figs/planos1.jpeg>
+Package pdftex.def Info: figs/planos1.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 68.4593pt x 78.36882pt.
+<figs/planos2.jpeg, id=291, 1326.9575pt x 1726.45pt>
+File: figs/planos2.jpeg Graphic file (type jpg)
+<use figs/planos2.jpeg>
+Package pdftex.def Info: figs/planos2.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 68.4593pt x 89.06728pt.
+<figs/planos3.jpeg, id=292, 1411.2725pt x 1862.96pt>
+File: figs/planos3.jpeg Graphic file (type jpg)
+<use figs/planos3.jpeg>
+Package pdftex.def Info: figs/planos3.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 68.4593pt x 90.36766pt.
+<figs/planos4.jpeg, id=293, 1506.62875pt x 1761.58125pt>
+File: figs/planos4.jpeg Graphic file (type jpg)
+<use figs/planos4.jpeg>
+Package pdftex.def Info: figs/planos4.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 68.4593pt x 80.02036pt.
+ [16
 
-] [17
+ <./figs/boceto_papel.jpeg> <./figs/boceto_carton5.jpeg> <./figs/planos1.jpeg> 
+<./figs/planos2.jpeg> <./figs/planos3.jpeg> <./figs/planos4.jpeg>]
+<figs/basevistasuperiorsin.png, id=301, 568.1225pt x 328.22626pt>
+File: figs/basevistasuperiorsin.png Graphic file (type png)
+<use figs/basevistasuperiorsin.png>
+Package pdftex.def Info: figs/basevistasuperiorsin.png  used on input line 333.
 
-] [18
+(pdftex.def)             Requested size: 148.89761pt x 86.02295pt.
+<figs/camera3sin.png, id=302, 798.985pt x 704.6325pt>
+File: figs/camera3sin.png Graphic file (type png)
+<use figs/camera3sin.png>
+Package pdftex.def Info: figs/camera3sin.png  used on input line 333.
+(pdftex.def)             Requested size: 85.57382pt x 75.46696pt.
+<figs/superior2.png, id=303, 514.92375pt x 323.2075pt>
+File: figs/superior2.png Graphic file (type png)
+<use figs/superior2.png>
+Package pdftex.def Info: figs/superior2.png  used on input line 333.
+(pdftex.def)             Requested size: 136.91862pt x 85.94055pt.
+<figs/trasera2.png, id=304, 598.235pt x 470.75874pt>
+File: figs/trasera2.png Graphic file (type png)
+<use figs/trasera2.png>
+Package pdftex.def Info: figs/trasera2.png  used on input line 333.
+(pdftex.def)             Requested size: 94.13171pt x 74.07306pt.
+ [17
 
-] [19
+ <./figs/basevistasuperiorsin.png> <./figs/camera3sin.png> <./figs/superior2.pn
+g> <./figs/trasera2.png>]
+<figs/impresora.jpg, id=316, 792.9625pt x 991.705pt>
+File: figs/impresora.jpg Graphic file (type jpg)
+<use figs/impresora.jpg>
+Package pdftex.def Info: figs/impresora.jpg  used on input line 348.
+(pdftex.def)             Requested size: 61.61064pt x 77.03792pt.
+<figs/setcompleto.jpeg, id=317, 1295.84125pt x 940.51375pt>
+File: figs/setcompleto.jpeg Graphic file (type jpg)
+<use figs/setcompleto.jpeg>
+Package pdftex.def Info: figs/setcompleto.jpeg  used on input line 348.
+(pdftex.def)             Requested size: 106.1107pt x 77.00781pt.
+<figs/completo3.png, id=318, 772.8875pt x 510.90875pt>
+File: figs/completo3.png Graphic file (type png)
+<use figs/completo3.png>
+Package pdftex.def Info: figs/completo3.png  used on input line 348.
+(pdftex.def)             Requested size: 116.37914pt x 76.92924pt.
+<figs/soldar.jpeg, id=319, 1541.76pt x 2055.68pt>
+File: figs/soldar.jpeg Graphic file (type jpg)
+<use figs/soldar.jpeg>
+Package pdftex.def Info: figs/soldar.jpeg  used on input line 348.
+(pdftex.def)             Requested size: 78.72646pt x 104.95435pt.
+<figs/ab.jpeg, id=320, 1118.1775pt x 1840.8775pt>
+File: figs/ab.jpeg Graphic file (type jpg)
+<use figs/ab.jpeg>
+Package pdftex.def Info: figs/ab.jpeg  used on input line 348.
+(pdftex.def)             Requested size: 64.44315pt x 106.1107pt.
+<figs/ra.jpeg, id=321, 1026.83624pt x 1759.57375pt>
+File: figs/ra.jpeg Graphic file (type jpg)
+<use figs/ra.jpeg>
+Package pdftex.def Info: figs/ra.jpeg  used on input line 348.
+(pdftex.def)             Requested size: 61.92087pt x 106.1107pt.
+ [18
 
-] [20
+ <./figs/impresora.jpg> <./figs/setcompleto.jpeg> <./figs/completo3.png> <./fig
+s/soldar.jpeg> <./figs/ab.jpeg> <./figs/ra.jpeg>] [19
 
-] [21
+]
+<figs/rsp.png, id=339, 947.4597pt x 453.8556pt>
+File: figs/rsp.png Graphic file (type png)
+<use figs/rsp.png>
+Package pdftex.def Info: figs/rsp.png  used on input line 390.
+(pdftex.def)             Requested size: 205.37926pt x 98.38037pt.
+<figs/rotder.png, id=340, 555.07375pt x 500.87125pt>
+File: figs/rotder.png Graphic file (type png)
+<use figs/rotder.png>
+Package pdftex.def Info: figs/rotder.png  used on input line 390.
+(pdftex.def)             Requested size: 94.13171pt x 84.93298pt.
+<figs/rqtimage.png, id=341, 1069.9975pt x 654.445pt>
+File: figs/rqtimage.png Graphic file (type png)
+<use figs/rqtimage.png>
+Package pdftex.def Info: figs/rqtimage.png  used on input line 390.
+(pdftex.def)             Requested size: 136.91862pt x 83.7427pt.
+ [20
+
+ <./figs/rsp.png> <./figs/rotder.png> <./figs/rqtimage.png>] [21
 
 ] [22
 
@@ -1399,16 +1513,35 @@ g>] [14
 
 ] [24
 
-] [25
-
-] [26
+]
+[25
 
 ]
-[27
+<figs/interfazweb.png, id=394, 1084.05pt x 688.07062pt>
+File: figs/interfazweb.png Graphic file (type png)
+<use figs/interfazweb.png>
+Package pdftex.def Info: figs/interfazweb.png  used on input line 448.
+(pdftex.def)             Requested size: 312.9803pt x 198.65344pt.
+ [26
 
-] [28
+ <./figs/interfazweb.png>]
+<figs/casosdlines.png, id=404, 1445.4pt x 813.0375pt>
+File: figs/casosdlines.png Graphic file (type png)
+<use figs/casosdlines.png>
+Package pdftex.def Info: figs/casosdlines.png  used on input line 456.
+(pdftex.def)             Requested size: 312.9803pt x 176.05266pt.
+ [27
 
-] [29
+ <./figs/casosdlines.png (PNG copy)>]
+<figs/vff.png, id=413, 702.625pt x 887.315pt>
+File: figs/vff.png Graphic file (type png)
+<use figs/vff.png>
+Package pdftex.def Info: figs/vff.png  used on input line 465.
+(pdftex.def)             Requested size: 142.26378pt x 179.65323pt.
+
+[28
+
+ <./figs/vff.png>] [29
 
 ] [30
 
@@ -1423,7 +1556,7 @@ g>] [14
 ]
 File: figs/logo-urjc.jpg Graphic file (type jpg)
 <use figs/logo-urjc.jpg>
-Package pdftex.def Info: figs/logo-urjc.jpg  used on input line 496.
+Package pdftex.def Info: figs/logo-urjc.jpg  used on input line 537.
 (pdftex.def)             Requested size: 85.35826pt x 34.20592pt.
  [35
 
@@ -1445,10 +1578,10 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: F690B533EFB408BA5DFBC07D61D9B794;1764.
  ) 
 Here is how much of TeX's memory you used:
- 26874 strings out of 480112
- 513052 string characters out of 5892631
+ 27040 strings out of 480112
+ 516700 string characters out of 5892631
  772142 words of memory out of 5000000
- 44151 multiletter control sequences out of 15000+600000
+ 44295 multiletter control sequences out of 15000+600000
  479661 words of font info for 64 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  128i,16n,122p,407b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1459,10 +1592,10 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on slides.pdf (35 pages, 16933062 bytes).
+Output written on slides.pdf (35 pages, 20001714 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
+ 532 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams
  88 named destinations out of 1000 (max. 500000)
- 446 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 566 words of extra memory for PDF output out of 10000 (max. 10000000)
 

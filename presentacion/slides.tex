@@ -141,16 +141,6 @@ Trabajo Fin de Grado
 	
 	% Parte inferior con 1 imagen a la izquierda y 2 imágenes una debajo de otra a la derecha
 	\begin{center}
-	%	\begin{minipage}{0.45\textwidth}
-	%		\raggedleft
-	%		\includegraphics[width=0.65\textwidth]{figs/impresion.png}
-	%	\end{minipage} \hspace{0.5cm}
-	%	\begin{minipage}{0.5\textwidth}
-	%		\raggedright
-	%		\includegraphics[width=0.4\textwidth]{figs/bache.png} \\[0.5cm]
-	
-	%		\includegraphics[width=0.4\textwidth]{figs/interfaceweb.png}
-	%	\end{minipage}
 	\begin{columns}
 		% Columna izquierda
 		\begin{column}{0.5\textwidth}
@@ -170,25 +160,13 @@ Trabajo Fin de Grado
 
 \begin{frame}
 \frametitle{Requisitos}
-%\begin{enumerate}
-%\item Crear una herramienta multiplataforma.
-%\item Sin necesidad de instalación.
-%\item Toda ejecución vía web.
-%\end{enumerate}
-%\end{frame}
-
-%\begin{frame}
 \begin{enumerate}
-	%\begin{block}{Requisitos}
-	%	\begin{itemize}
 	\item Coste inferior a 250€.
 	\item Piezas impresas en una impresora convencional.
 	\item Ubuntu como sistema operativo.
 	\item No se requiere tarjeta gráfica dedicada para entrenar modelos.
 	\item Modelos adaptados a las limitaciones hardware.
 	\item Integración con ROS 2.
-	%	\end{itemize}
-	%\end{block}
 \end{enumerate}
 \end{frame}
 
@@ -287,40 +265,89 @@ Trabajo Fin de Grado
 \section{Diseño y construcción del robot}
 \begin{frame}
 	\frametitle{Geometría del robot}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
 
-	\end{enumerate}
+	\begin{columns}
+		% Columna izquierda
+		\begin{column}{0.50\textwidth}
+			\centering
+			\includegraphics[width=0.85\textwidth]{figs/Original.png} \\[5pt]
+			%\caption{Descripción de la imagen 1}
+		\end{column}
+		% Columna derecha
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/modelocompleto_bb3.png} \\[5pt]
+		\end{column}
+	\end{columns}
+
 \end{frame}
 
 \begin{frame}
 	\frametitle{Bocetos y maquetas}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{center}
+		\includegraphics[width=0.2\textwidth]{figs/boceto_papel.jpeg} \hspace{0.5cm}
+		\includegraphics[width=0.2\textwidth]{figs/boceto_carton5.jpeg}
+	\end{center}
+
+	\vspace{0.5cm}  % Espacio entre las imágenes de arriba y las de abajo
+	\begin{columns}
+		% Columna izquierda
+		\begin{column}{0.25\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/planos1.jpeg} \\[5pt]
+		\end{column}
+		% Columna izquierda
+		\begin{column}{0.25\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/planos2.jpeg} \\[5pt]
+		\end{column}
+		% Columna izquierda
+		\begin{column}{0.25\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/planos3.jpeg} \\[5pt]
+		\end{column}
+		% Columna izquierda
+		\begin{column}{0.25\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/planos4.jpeg} \\[5pt]
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Piezas diseñadas}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{columns}
+		% Columna izquierda
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.87\textwidth]{figs/basevistasuperiorsin.png} \\[20pt]
+			\includegraphics[width=0.5\textwidth]{figs/camera3sin.png}\\[10pt]
+		\end{column}
+		% Columna izquierdacamera3sin
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/superior2.png} \\[20pt]
+			\includegraphics[width=0.55\textwidth]{figs/trasera2.png} \\[10pt]
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Impresión y montaje}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{figure}
+		\centering
+		\begin{tabular}{ccc} % 3 columnas
+			\includegraphics[width=0.18\textwidth]{figs/impresora.jpg} & 
+			\includegraphics[width=0.31\textwidth]{figs/setcompleto.jpeg} & 
+			\includegraphics[width=0.34\textwidth]{figs/completo3.png} \\[10pt]
+			\includegraphics[width=0.23\textwidth]{figs/soldar.jpeg} & 
+			\includegraphics[height=0.31\textwidth]{figs/ab.jpeg} & 
+			\includegraphics[height=0.31\textwidth]{figs/ra.jpeg}		
+		\end{tabular}
+	\end{figure}
 \end{frame}
+
+
 
 
 %===================================================================================
@@ -338,12 +365,28 @@ Trabajo Fin de Grado
 \subsection{Simulación}
 \begin{frame}
 	\frametitle{Simulación}
-	% Título en azul (pequeñito) 
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	% Parte superior con 2 imágenes centradas
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{figs/rsp.png} 
+	\end{center}
+	
+	\vspace{0.5cm}  % Espacio entre las imágenes de arriba y las de abajo
+	
+	% Parte inferior con 1 imagen a la izquierda y 2 imágenes una debajo de otra a la derecha
+	\begin{center}
+		\begin{columns}
+			% Columna izquierda
+			\begin{column}{0.5\textwidth}
+				\centering
+				\includegraphics[width=0.55\textwidth]{figs/rotder.png}
+			\end{column}
+			% Columna derecha
+			\begin{column}{0.5\textwidth}
+				\centering
+				\includegraphics[width=0.8\textwidth]{figs/rqtimage.png}
+			\end{column}
+		\end{columns}
+	\end{center}
 \end{frame}
 
 % Título en azul (pequeñito) 
@@ -398,29 +441,27 @@ Trabajo Fin de Grado
 
 \begin{frame}
 	\frametitle{Interfaz web}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[width=11cm]{figs/interfazweb.png}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Detección de líneas}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[width=11cm]{figs/casosdlines.png}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{VFF}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[width=5cm]{figs/vff.png}
+	\end{figure}
+	
 \end{frame}
 %===================================================================================
 %========================== Experimentos ===========================================
@@ -469,7 +510,7 @@ Trabajo Fin de Grado
 \item Crear un robot en simulación.
 \item ROS 2 Control.
 \item Modelo de aprendizaje supervisado en una Raspberry Pi.
-\item Integración de ROS 2 con páginas web
+\item Integración de ROS 2 con páginas web.
 \item Generar documentación de calidad en LaTeX.
 \end{itemize}
 %\end{block}
