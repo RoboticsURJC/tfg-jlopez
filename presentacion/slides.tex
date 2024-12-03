@@ -26,6 +26,9 @@
 \usepackage[export]{adjustbox}
 \usepackage{outlines} % Para poner bullets tabulados (\1 \2 \3 ...) y no items
 
+\usepackage{amsmath}
+\usepackage{physics}  % Paquete necesario para \abs{}
+
 \usepackage{array,tabularx} % para tabular leyenda de ecuaciones
 \newenvironment{conditions*} % entorno de "leyenda de ecuación"
   {\par\vspace{\abovedisplayskip}\noindent
@@ -283,7 +286,7 @@ Trabajo Fin de Grado
 \end{frame}
 
 \begin{frame}
-	\frametitle{Bocetos y maquetas}
+	\frametitle{Bocetos, maquetas y planos}
 	\begin{center}
 		\includegraphics[width=0.2\textwidth]{figs/boceto_papel.jpeg} \hspace{0.5cm}
 		\includegraphics[width=0.2\textwidth]{figs/boceto_carton5.jpeg}
@@ -394,49 +397,111 @@ Trabajo Fin de Grado
 
 \begin{frame}
 	\frametitle{Configuración del robot real}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	
+	\centering
+	% Primera fila: ecuación y dos imágenes
+	\begin{minipage}{0.35\textwidth}
+		\centering
+		\begin{equation*}
+			\begin{bmatrix}
+				497.66 & 0 & 325.3 \\
+				0 & 502.16 & 240.18 \\
+				0 & 0 & 1 \\
+			\end{bmatrix}
+		\end{equation*}
+	\end{minipage}
+	\hspace{0.5cm} % Espacio horizontal entre la ecuación y la primera imagen
+	\begin{minipage}{0.2\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/traslacion.jpeg}
+	\end{minipage}
+	\hspace{0.5cm} % Espacio horizontal entre la ecuación y la primera imagen
+	\begin{minipage}{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/rotation.jpeg}
+	\end{minipage}
+	
+	\vspace{0.5cm} % Espacio entre las filas
+	
+	% Segunda fila: dos imágenes centradas
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/motorlogic1.png}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/motorlogic2.png}
+	\end{minipage}
+	
 \end{frame}
 
 % Título en azul (pequeñito) 
 \subsection{Comportamiento del robot real}
 \begin{frame}
-	\frametitle{Red neuronal}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\frametitle{Detección y obtención del contorno del bache}
+	\centering
+	\begin{columns}
+		% Columna izquierda
+		\begin{column}{0.60\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/train_results.jpg} \\[5pt]
+			\href{https://www.youtube.com/watch?v=Gnwciv4pWf0}{Vídeo de la demostración}
+		\end{column}
+		% Columna derecha
+		\begin{column}{0.4\textwidth}
+			\centering
+			\includegraphics[height=0.7\textwidth]{figs/contornobache1.png} \\[10pt]
+			\includegraphics[height=0.7\textwidth]{figs/contornobache2.png} \\[5pt]
+
+		\end{column}
+	\end{columns}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Obtención del contorno}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
-\end{frame}
 
 \begin{frame}
 	\frametitle{Modelo de cámara pinhole}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	
+	\centering
+	% Imagen superior
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/esquema_pinhole_matrices.jpg}
+	\end{minipage}
+	
+	%\vspace{0.5cm} % Espacio entre las imágenes
+	
+	% Imagen inferior
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/pinholecoordinates.png}
+	\end{minipage}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Hipótesis suelo}
+	\begin{figure}
+		\centering
+		\includegraphics[width=10cm]{figs/hipotesissuelo.png}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Algoritmo de la lazada}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	%\begin{minipage}{0.5\textwidth}
+	\centering
+	\begin{equation*}
+		A = \frac{1}{2}\abs{\sum_{i=1}^{n-1}x_i y_{i+1} + x_n y_1 - \sum_{i=1}^{n-1}x_{i+1} y_{i} - x_1 y_n}
+	\end{equation*}
+
+	Donde $A$ es el área del polígono, $n$ es el número de lados del polígono y $(x_i, y_i)$ , i = 1,2,...,n son los vértices del polígono de forma alternativa.\\[10pt]
+	\raggedright Ejemplo teórico: 
+	\begin{figure}
+		\centering
+		\includegraphics[width=8cm]{figs/demoshoelace.png}
+	\end{figure}
+	%\end{minipage}
 \end{frame}
 
 \begin{frame}
@@ -473,23 +538,40 @@ Trabajo Fin de Grado
 \end{frame}
 
 \section{Experimentos}
+% Título en azul (pequeñito) 
+\subsection{Aplicaciones completas}
 \begin{frame}
-	%\frametitle{Descripción del problema y requisitos}
-	%\begin{enumerate}
-	%	\item Crear una herramienta multiplataforma.
-	%	\item Sin necesidad de instalación.
-	%	\item Toda ejecución vía web.
-	%\end{enumerate}
+\frametitle{Teleoperado}
+  
+  	\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figs/esquema_nodos_teleoperado_ampliado.png} % Cambia "imagen1.jpg" al nombre de tu imagen
+	\end{figure}
+
+\vspace{0.15cm} % Espacio entre las imágenes
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figs/teleop_final.png} % Cambia "imagen2.jpg" al nombre de tu imagen
+\end{figure}
 \end{frame}
 
 \begin{frame}
-	%\frametitle{Metodología}
-	%\begin{enumerate}
-	%	\item Crear una herramienta multiplataforma.
-	%	\item Sin necesidad de instalación.
-	%	\item Toda ejecución vía web.
-	%\end{enumerate}
+	\frametitle{Autónomo}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\textwidth]{figs/esquema_nodos_vff_ampliado.png} % Cambia "imagen1.jpg" al nombre de tu imagen
+	\end{figure}
+	
+	\vspace{0.15cm} % Espacio entre las imágenes
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\textwidth]{figs/autonomo_final.png} % Cambia "imagen2.jpg" al nombre de tu imagen
+	\end{figure}
 \end{frame}
+
 
 %===================================================================================
 %============================= Conclusiones ========================================

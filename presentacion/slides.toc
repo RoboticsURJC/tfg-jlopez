@@ -8,4 +8,5 @@
 \beamer@subsectionintoc {10}{2}{Configuración del robot real}{21}{0}{5}
 \beamer@subsectionintoc {10}{3}{Comportamiento del robot real}{22}{0}{5}
 \beamer@sectionintoc {12}{Experimentos}{30}{0}{6}
+\beamer@subsectionintoc {12}{1}{Aplicaciones completas}{30}{0}{6}
 \beamer@sectionintoc {14}{Conclusiones}{33}{0}{7}

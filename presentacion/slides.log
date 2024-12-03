@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  3 DEC 2024 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  3 DEC 2024 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -904,15 +904,29 @@ Package: outlines 2012/1/23 1.1 Ch. Pecheur
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count367
+\l__pdf_internal_box=\box125
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen329
-\ar@mcellbox=\box125
+\ar@mcellbox=\box126
 \extrarowheight=\dimen330
 \NC@list=\toks51
 \extratabsurround=\skip69
 \backup@length=\skip70
-\ar@cellbox=\box126
+\ar@cellbox=\box127
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
@@ -921,40 +935,34 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen333
 \TX@target=\dimen334
 \TX@delta=\dimen335
-\TX@cols=\count367
+\TX@cols=\count368
 \TX@ftn=\toks52
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 52.
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count368
-\l__pdf_internal_box=\box127
-)
-(./slides.aux
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+ (./slides.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1012,7 +1020,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 71.
+Package hyperref Info: Link coloring ON on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1025,66 +1033,66 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count375
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
 
 (./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 71.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 71.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 74.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 71.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 71.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 71.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 71.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 71.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 71.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 71.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 71.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 71.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 71.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 71.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 71.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 71.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 71.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 71.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 71.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 71.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 71.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 71.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 71.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 74.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 74.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 7
-1.
+4.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 7
-1.
+4.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 71.
+ut line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1110,40 +1118,40 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
 \c@lstlisting=\count376
  (./slides.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 78.
+ut line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<figs/logo-urjc.jpg, id=96, 525.965pt x 210.7875pt>
+<figs/logo-urjc.jpg, id=100, 525.965pt x 210.7875pt>
 File: figs/logo-urjc.jpg Graphic file (type jpg)
 <use figs/logo-urjc.jpg>
-Package pdftex.def Info: figs/logo-urjc.jpg  used on input line 78.
+Package pdftex.def Info: figs/logo-urjc.jpg  used on input line 81.
 (pdftex.def)             Requested size: 85.35826pt x 34.20592pt.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figs/logo-urjc.jpg>]
 (./licencia.tex
-<figs/by-nc-sa.png, id=106, 97.0827pt x 33.9669pt>
+<figs/by-nc-sa.png, id=110, 97.0827pt x 33.9669pt>
 File: figs/by-nc-sa.png Graphic file (type png)
 <use figs/by-nc-sa.png>
 Package pdftex.def Info: figs/by-nc-sa.png  used on input line 10.
@@ -1158,25 +1166,25 @@ LaTeX Info: Redefining \% on input line 1.
 ] [4
 
 ]
-<figs/strawberry.png, id=148, 623.32875pt x 416.55624pt>
+<figs/strawberry.png, id=152, 623.32875pt x 416.55624pt>
 File: figs/strawberry.png Graphic file (type png)
 <use figs/strawberry.png>
-Package pdftex.def Info: figs/strawberry.png  used on input line 120.
+Package pdftex.def Info: figs/strawberry.png  used on input line 123.
 (pdftex.def)             Requested size: 102.68962pt x 68.62076pt.
-<figs/komatsu.jpeg, id=149, 94.1919pt x 67.452pt>
+<figs/komatsu.jpeg, id=153, 94.1919pt x 67.452pt>
 File: figs/komatsu.jpeg Graphic file (type jpg)
 <use figs/komatsu.jpeg>
-Package pdftex.def Info: figs/komatsu.jpeg  used on input line 120.
+Package pdftex.def Info: figs/komatsu.jpeg  used on input line 123.
 (pdftex.def)             Requested size: 102.68962pt x 73.53973pt.
-<figs/perseverance.jpg, id=150, 321.2pt x 240.9pt>
+<figs/perseverance.jpg, id=154, 321.2pt x 240.9pt>
 File: figs/perseverance.jpg Graphic file (type jpg)
 <use figs/perseverance.jpg>
-Package pdftex.def Info: figs/perseverance.jpg  used on input line 120.
+Package pdftex.def Info: figs/perseverance.jpg  used on input line 123.
 (pdftex.def)             Requested size: 102.68962pt x 77.01605pt.
-<figs/tello.png, id=151, 860.21375pt x 667.49374pt>
+<figs/tello.png, id=155, 860.21375pt x 667.49374pt>
 File: figs/tello.png Graphic file (type png)
 <use figs/tello.png>
-Package pdftex.def Info: figs/tello.png  used on input line 120.
+Package pdftex.def Info: figs/tello.png  used on input line 123.
 (pdftex.def)             Requested size: 102.68962pt x 79.67819pt.
  [5
 
@@ -1184,123 +1192,123 @@ Package pdftex.def Info: figs/tello.png  used on input line 120.
 s/tello.png>] [6
 
 ]
-<figs/dana.jpg, id=167, 825.83531pt x 587.19376pt>
+<figs/dana.jpg, id=171, 825.83531pt x 587.19376pt>
 File: figs/dana.jpg Graphic file (type jpg)
 <use figs/dana.jpg>
-Package pdftex.def Info: figs/dana.jpg  used on input line 158.
+Package pdftex.def Info: figs/dana.jpg  used on input line 161.
 (pdftex.def)             Requested size: 102.68962pt x 73.01376pt.
-<figs/seguridad.jpg, id=168, 825.83531pt x 587.19376pt>
+<figs/seguridad.jpg, id=172, 825.83531pt x 587.19376pt>
 File: figs/seguridad.jpg Graphic file (type jpg)
 <use figs/seguridad.jpg>
-Package pdftex.def Info: figs/seguridad.jpg  used on input line 158.
+Package pdftex.def Info: figs/seguridad.jpg  used on input line 161.
 (pdftex.def)             Requested size: 102.68962pt x 73.01376pt.
-<figs/impresion.png, id=169, 900.36375pt x 915.42pt>
+<figs/impresion.png, id=173, 900.36375pt x 915.42pt>
 File: figs/impresion.png Graphic file (type png)
 <use figs/impresion.png>
-Package pdftex.def Info: figs/impresion.png  used on input line 158.
+Package pdftex.def Info: figs/impresion.png  used on input line 161.
 (pdftex.def)             Requested size: 94.13171pt x 95.6959pt.
-<figs/bache.png, id=170, 247.92625pt x 152.57pt>
+<figs/bache.png, id=174, 247.92625pt x 152.57pt>
 File: figs/bache.png Graphic file (type png)
 <use figs/bache.png>
-Package pdftex.def Info: figs/bache.png  used on input line 158.
+Package pdftex.def Info: figs/bache.png  used on input line 161.
 (pdftex.def)             Requested size: 68.45801pt x 42.12798pt.
-<figs/interfaceweb.png, id=171, 642.4pt x 428.60126pt>
+<figs/interfaceweb.png, id=175, 642.4pt x 428.60126pt>
 File: figs/interfaceweb.png Graphic file (type png)
 <use figs/interfaceweb.png>
-Package pdftex.def Info: figs/interfaceweb.png  used on input line 158.
+Package pdftex.def Info: figs/interfaceweb.png  used on input line 161.
 (pdftex.def)             Requested size: 68.45801pt x 45.66826pt.
  [7
 
  <./figs/dana.jpg> <./figs/seguridad.jpg> <./figs/impresion.png> <./figs/bache.
 png> <./figs/interfaceweb.png (PNG copy)>]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-171.
+174.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [8
 
 ]
-<figs/PDCA.png, id=192, 679.03688pt x 491.58656pt>
+<figs/PDCA.png, id=196, 679.03688pt x 491.58656pt>
 File: figs/PDCA.png Graphic file (type png)
 <use figs/PDCA.png>
-Package pdftex.def Info: figs/PDCA.png  used on input line 180.
+Package pdftex.def Info: figs/PDCA.png  used on input line 183.
 (pdftex.def)             Requested size: 284.52756pt x 205.97737pt.
  [9
 
  <./figs/PDCA.png>]
-<figs/github.png, id=200, 602.25pt x 602.25pt>
+<figs/github.png, id=204, 602.25pt x 602.25pt>
 File: figs/github.png Graphic file (type png)
 <use figs/github.png>
-Package pdftex.def Info: figs/github.png  used on input line 199.
+Package pdftex.def Info: figs/github.png  used on input line 202.
 (pdftex.def)             Requested size: 109.53323pt x 109.53064pt.
-<figs/diario.png, id=202, 906.38625pt x 566.115pt>
+<figs/diario.png, id=206, 906.38625pt x 566.115pt>
 File: figs/diario.png Graphic file (type png)
 <use figs/diario.png>
-Package pdftex.def Info: figs/diario.png  used on input line 199.
+Package pdftex.def Info: figs/diario.png  used on input line 202.
 (pdftex.def)             Requested size: 136.91862pt x 85.50961pt.
-<figs/evo.png, id=203, 906.38625pt x 566.115pt>
+<figs/evo.png, id=207, 906.38625pt x 566.115pt>
 File: figs/evo.png Graphic file (type png)
 <use figs/evo.png>
-Package pdftex.def Info: figs/evo.png  used on input line 199.
+Package pdftex.def Info: figs/evo.png  used on input line 202.
 (pdftex.def)             Requested size: 136.91862pt x 85.50961pt.
  [10
 
  <./figs/github.png> <./figs/diario.png> <./figs/evo.png>] [11
 
 ]
-<figs/raspberrypi4.png, id=222, 710.655pt x 390.45876pt>
+<figs/raspberrypi4.png, id=226, 710.655pt x 390.45876pt>
 File: figs/raspberrypi4.png Graphic file (type png)
 <use figs/raspberrypi4.png>
-Package pdftex.def Info: figs/raspberrypi4.png  used on input line 231.
+Package pdftex.def Info: figs/raspberrypi4.png  used on input line 234.
 (pdftex.def)             Requested size: 68.45801pt x 37.6123pt.
-<figs/camera.png, id=223, 797.98125pt x 654.445pt>
+<figs/camera.png, id=227, 797.98125pt x 654.445pt>
 File: figs/camera.png Graphic file (type png)
 <use figs/camera.png>
-Package pdftex.def Info: figs/camera.png  used on input line 231.
+Package pdftex.def Info: figs/camera.png  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 42.10103pt.
-<figs/GPSNEO6MV2.jpeg, id=224, 225.84375pt x 225.84375pt>
+<figs/GPSNEO6MV2.jpeg, id=228, 225.84375pt x 225.84375pt>
 File: figs/GPSNEO6MV2.jpeg Graphic file (type jpg)
 <use figs/GPSNEO6MV2.jpeg>
-Package pdftex.def Info: figs/GPSNEO6MV2.jpeg  used on input line 231.
+Package pdftex.def Info: figs/GPSNEO6MV2.jpeg  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 51.33989pt.
-<figs/parallax.png, id=225, 241.90375pt x 379.4175pt>
+<figs/parallax.png, id=229, 241.90375pt x 379.4175pt>
 File: figs/parallax.png Graphic file (type png)
 <use figs/parallax.png>
-Package pdftex.def Info: figs/parallax.png  used on input line 231.
+Package pdftex.def Info: figs/parallax.png  used on input line 234.
 (pdftex.def)             Requested size: 34.23161pt x 53.69124pt.
-<figs/wheel.png, id=226, 429.605pt x 412.54124pt>
+<figs/wheel.png, id=230, 429.605pt x 412.54124pt>
 File: figs/wheel.png Graphic file (type png)
 <use figs/wheel.png>
-Package pdftex.def Info: figs/wheel.png  used on input line 231.
+Package pdftex.def Info: figs/wheel.png  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 49.30138pt.
-<figs/wheel2.png, id=227, 2589.675pt x 2581.645pt>
+<figs/wheel2.png, id=231, 2589.675pt x 2581.645pt>
 File: figs/wheel2.png Graphic file (type png)
 <use figs/wheel2.png>
-Package pdftex.def Info: figs/wheel2.png  used on input line 231.
+Package pdftex.def Info: figs/wheel2.png  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 51.17108pt.
-<figs/googlecoral.png, id=228, 232.87pt x 217.81375pt>
+<figs/googlecoral.png, id=232, 232.87pt x 217.81375pt>
 File: figs/googlecoral.png Graphic file (type png)
 <use figs/googlecoral.png>
-Package pdftex.def Info: figs/googlecoral.png  used on input line 231.
+Package pdftex.def Info: figs/googlecoral.png  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 48.02219pt.
-<figs/powerbank.png, id=229, 225.84375pt x 225.84375pt>
+<figs/powerbank.png, id=233, 225.84375pt x 225.84375pt>
 File: figs/powerbank.png Graphic file (type png)
 <use figs/powerbank.png>
-Package pdftex.def Info: figs/powerbank.png  used on input line 231.
+Package pdftex.def Info: figs/powerbank.png  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 51.33989pt.
-<figs/ruedaloca.png, id=230, 379.4175pt x 416.55624pt>
+<figs/ruedaloca.png, id=234, 379.4175pt x 416.55624pt>
 File: figs/ruedaloca.png Graphic file (type png)
 <use figs/ruedaloca.png>
-Package pdftex.def Info: figs/ruedaloca.png  used on input line 231.
+Package pdftex.def Info: figs/ruedaloca.png  used on input line 234.
 (pdftex.def)             Requested size: 34.23161pt x 37.57742pt.
-<figs/ordenador.png, id=231, 225.84375pt x 225.84375pt>
+<figs/ordenador.png, id=235, 225.84375pt x 225.84375pt>
 File: figs/ordenador.png Graphic file (type png)
 <use figs/ordenador.png>
-Package pdftex.def Info: figs/ordenador.png  used on input line 231.
+Package pdftex.def Info: figs/ordenador.png  used on input line 234.
 (pdftex.def)             Requested size: 51.3422pt x 51.33989pt.
 
-Overfull \vbox (14.02705pt too high) detected at line 231
+Overfull \vbox (14.02705pt too high) detected at line 234
  []
 
 [12
@@ -1308,68 +1316,68 @@ Overfull \vbox (14.02705pt too high) detected at line 231
  <./figs/raspberrypi4.png> <./figs/camera.png> <./figs/GPSNEO6MV2.jpeg> <./figs
 /parallax.png> <./figs/wheel.png> <./figs/wheel2.png> <./figs/googlecoral.png> 
 <./figs/powerbank.png> <./figs/ruedaloca.png> <./figs/ordenador.png>]
-<figs/ubuntu.png, id=244, 225.84375pt x 225.84375pt>
+<figs/ubuntu.png, id=248, 225.84375pt x 225.84375pt>
 File: figs/ubuntu.png Graphic file (type png)
 <use figs/ubuntu.png>
-Package pdftex.def Info: figs/ubuntu.png  used on input line 253.
+Package pdftex.def Info: figs/ubuntu.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
-<figs/freecad.png, id=245, 225.84375pt x 225.84375pt>
+<figs/freecad.png, id=249, 225.84375pt x 225.84375pt>
 File: figs/freecad.png Graphic file (type png)
 <use figs/freecad.png>
-Package pdftex.def Info: figs/freecad.png  used on input line 253.
+Package pdftex.def Info: figs/freecad.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
-<figs/python.png, id=246, 148.555pt x 148.555pt>
+<figs/python.png, id=250, 148.555pt x 148.555pt>
 File: figs/python.png Graphic file (type png)
 <use figs/python.png>
-Package pdftex.def Info: figs/python.png  used on input line 253.
+Package pdftex.def Info: figs/python.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 47.92165pt.
-<figs/opencv.png, id=247, 233.87375pt x 216.81pt>
+<figs/opencv.png, id=251, 233.87375pt x 216.81pt>
 File: figs/opencv.png Graphic file (type png)
 <use figs/opencv.png>
-Package pdftex.def Info: figs/opencv.png  used on input line 253.
+Package pdftex.def Info: figs/opencv.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 44.42317pt.
-<figs/humble.png, id=248, 633.94737pt x 773.09882pt>
+<figs/humble.png, id=252, 633.94737pt x 773.09882pt>
 File: figs/humble.png Graphic file (type png)
 <use figs/humble.png>
-Package pdftex.def Info: figs/humble.png  used on input line 253.
+Package pdftex.def Info: figs/humble.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 58.42818pt.
-<figs/foxy.png, id=249, 661.0061pt x 785.27524pt>
+<figs/foxy.png, id=253, 661.0061pt x 785.27524pt>
 File: figs/foxy.png Graphic file (type png)
 <use figs/foxy.png>
-Package pdftex.def Info: figs/foxy.png  used on input line 253.
+Package pdftex.def Info: figs/foxy.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 56.928pt.
-<figs/gazebo.png, id=250, 225.84375pt x 225.84375pt>
+<figs/gazebo.png, id=254, 225.84375pt x 225.84375pt>
 File: figs/gazebo.png Graphic file (type png)
 <use figs/gazebo.png>
-Package pdftex.def Info: figs/gazebo.png  used on input line 253.
+Package pdftex.def Info: figs/gazebo.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
-<figs/rviz.png, id=251, 280.04625pt x 181.67876pt>
+<figs/rviz.png, id=255, 280.04625pt x 181.67876pt>
 File: figs/rviz.png Graphic file (type png)
 <use figs/rviz.png>
-Package pdftex.def Info: figs/rviz.png  used on input line 253.
+Package pdftex.def Info: figs/rviz.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 31.08734pt.
-<figs/googlecolab.png, id=252, 187.70125pt x 124.465pt>
+<figs/googlecolab.png, id=256, 187.70125pt x 124.465pt>
 File: figs/googlecolab.png Graphic file (type png)
 <use figs/googlecolab.png>
-Package pdftex.def Info: figs/googlecolab.png  used on input line 253.
+Package pdftex.def Info: figs/googlecolab.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 31.77518pt.
-<figs/yolov8.png, id=253, 301.125pt x 168.63pt>
+<figs/yolov8.png, id=257, 301.125pt x 168.63pt>
 File: figs/yolov8.png Graphic file (type png)
 <use figs/yolov8.png>
-Package pdftex.def Info: figs/yolov8.png  used on input line 253.
+Package pdftex.def Info: figs/yolov8.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 26.83467pt.
-<figs/tflite.png, id=254, 301.125pt x 168.63pt>
+<figs/tflite.png, id=258, 301.125pt x 168.63pt>
 File: figs/tflite.png Graphic file (type png)
 <use figs/tflite.png>
-Package pdftex.def Info: figs/tflite.png  used on input line 253.
+Package pdftex.def Info: figs/tflite.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 26.83467pt.
-<figs/osm.png, id=255, 225.84375pt x 225.84375pt>
+<figs/osm.png, id=259, 225.84375pt x 225.84375pt>
 File: figs/osm.png Graphic file (type png)
 <use figs/osm.png>
-Package pdftex.def Info: figs/osm.png  used on input line 253.
+Package pdftex.def Info: figs/osm.png  used on input line 256.
 (pdftex.def)             Requested size: 47.92113pt x 47.92137pt.
 
-Overfull \vbox (8.50871pt too high) detected at line 253
+Overfull \vbox (8.50871pt too high) detected at line 256
  []
 
 [13
@@ -1380,107 +1388,107 @@ g> <./figs/humble.png> <./figs/foxy.png> <./figs/gazebo.png> <./figs/rviz.png>
 g>] [14
 
 ]
-<figs/Original.png, id=278, 480.79625pt x 538.01pt>
+<figs/Original.png, id=282, 480.79625pt x 538.01pt>
 File: figs/Original.png Graphic file (type png)
 <use figs/Original.png>
-Package pdftex.def Info: figs/Original.png  used on input line 283.
+Package pdftex.def Info: figs/Original.png  used on input line 286.
 (pdftex.def)             Requested size: 145.47653pt x 162.79163pt.
-<figs/modelocompleto_bb3.png, id=279, 405.78267pt x 499.19833pt>
+<figs/modelocompleto_bb3.png, id=283, 405.78267pt x 499.19833pt>
 File: figs/modelocompleto_bb3.png Graphic file (type png)
 <use figs/modelocompleto_bb3.png>
-Package pdftex.def Info: figs/modelocompleto_bb3.png  used on input line 283.
+Package pdftex.def Info: figs/modelocompleto_bb3.png  used on input line 286.
 (pdftex.def)             Requested size: 136.91862pt x 168.43788pt.
  [15
 
  <./figs/Original.png> <./figs/modelocompleto_bb3.png>]
-<figs/boceto_papel.jpeg, id=288, 941.5175pt x 917.4275pt>
+<figs/boceto_papel.jpeg, id=292, 941.5175pt x 917.4275pt>
 File: figs/boceto_papel.jpeg Graphic file (type jpg)
 <use figs/boceto_papel.jpeg>
-Package pdftex.def Info: figs/boceto_papel.jpeg  used on input line 315.
+Package pdftex.def Info: figs/boceto_papel.jpeg  used on input line 318.
 (pdftex.def)             Requested size: 68.45801pt x 66.70427pt.
-<figs/boceto_carton5.jpeg, id=289, 1279.78125pt x 1526.70375pt>
+<figs/boceto_carton5.jpeg, id=293, 1279.78125pt x 1526.70375pt>
 File: figs/boceto_carton5.jpeg Graphic file (type jpg)
 <use figs/boceto_carton5.jpeg>
-Package pdftex.def Info: figs/boceto_carton5.jpeg  used on input line 315.
+Package pdftex.def Info: figs/boceto_carton5.jpeg  used on input line 318.
 (pdftex.def)             Requested size: 68.45801pt x 81.65105pt.
-<figs/planos1.jpeg, id=290, 1427.3325pt x 1634.105pt>
+<figs/planos1.jpeg, id=294, 1427.3325pt x 1634.105pt>
 File: figs/planos1.jpeg Graphic file (type jpg)
 <use figs/planos1.jpeg>
-Package pdftex.def Info: figs/planos1.jpeg  used on input line 315.
+Package pdftex.def Info: figs/planos1.jpeg  used on input line 318.
 (pdftex.def)             Requested size: 68.4593pt x 78.36882pt.
-<figs/planos2.jpeg, id=291, 1326.9575pt x 1726.45pt>
+<figs/planos2.jpeg, id=295, 1326.9575pt x 1726.45pt>
 File: figs/planos2.jpeg Graphic file (type jpg)
 <use figs/planos2.jpeg>
-Package pdftex.def Info: figs/planos2.jpeg  used on input line 315.
+Package pdftex.def Info: figs/planos2.jpeg  used on input line 318.
 (pdftex.def)             Requested size: 68.4593pt x 89.06728pt.
-<figs/planos3.jpeg, id=292, 1411.2725pt x 1862.96pt>
+<figs/planos3.jpeg, id=296, 1411.2725pt x 1862.96pt>
 File: figs/planos3.jpeg Graphic file (type jpg)
 <use figs/planos3.jpeg>
-Package pdftex.def Info: figs/planos3.jpeg  used on input line 315.
+Package pdftex.def Info: figs/planos3.jpeg  used on input line 318.
 (pdftex.def)             Requested size: 68.4593pt x 90.36766pt.
-<figs/planos4.jpeg, id=293, 1506.62875pt x 1761.58125pt>
+<figs/planos4.jpeg, id=297, 1506.62875pt x 1761.58125pt>
 File: figs/planos4.jpeg Graphic file (type jpg)
 <use figs/planos4.jpeg>
-Package pdftex.def Info: figs/planos4.jpeg  used on input line 315.
+Package pdftex.def Info: figs/planos4.jpeg  used on input line 318.
 (pdftex.def)             Requested size: 68.4593pt x 80.02036pt.
  [16
 
  <./figs/boceto_papel.jpeg> <./figs/boceto_carton5.jpeg> <./figs/planos1.jpeg> 
 <./figs/planos2.jpeg> <./figs/planos3.jpeg> <./figs/planos4.jpeg>]
-<figs/basevistasuperiorsin.png, id=301, 568.1225pt x 328.22626pt>
+<figs/basevistasuperiorsin.png, id=305, 568.1225pt x 328.22626pt>
 File: figs/basevistasuperiorsin.png Graphic file (type png)
 <use figs/basevistasuperiorsin.png>
-Package pdftex.def Info: figs/basevistasuperiorsin.png  used on input line 333.
+Package pdftex.def Info: figs/basevistasuperiorsin.png  used on input line 336.
 
 (pdftex.def)             Requested size: 148.89761pt x 86.02295pt.
-<figs/camera3sin.png, id=302, 798.985pt x 704.6325pt>
+<figs/camera3sin.png, id=306, 798.985pt x 704.6325pt>
 File: figs/camera3sin.png Graphic file (type png)
 <use figs/camera3sin.png>
-Package pdftex.def Info: figs/camera3sin.png  used on input line 333.
+Package pdftex.def Info: figs/camera3sin.png  used on input line 336.
 (pdftex.def)             Requested size: 85.57382pt x 75.46696pt.
-<figs/superior2.png, id=303, 514.92375pt x 323.2075pt>
+<figs/superior2.png, id=307, 514.92375pt x 323.2075pt>
 File: figs/superior2.png Graphic file (type png)
 <use figs/superior2.png>
-Package pdftex.def Info: figs/superior2.png  used on input line 333.
+Package pdftex.def Info: figs/superior2.png  used on input line 336.
 (pdftex.def)             Requested size: 136.91862pt x 85.94055pt.
-<figs/trasera2.png, id=304, 598.235pt x 470.75874pt>
+<figs/trasera2.png, id=308, 598.235pt x 470.75874pt>
 File: figs/trasera2.png Graphic file (type png)
 <use figs/trasera2.png>
-Package pdftex.def Info: figs/trasera2.png  used on input line 333.
+Package pdftex.def Info: figs/trasera2.png  used on input line 336.
 (pdftex.def)             Requested size: 94.13171pt x 74.07306pt.
  [17
 
  <./figs/basevistasuperiorsin.png> <./figs/camera3sin.png> <./figs/superior2.pn
 g> <./figs/trasera2.png>]
-<figs/impresora.jpg, id=316, 792.9625pt x 991.705pt>
+<figs/impresora.jpg, id=320, 792.9625pt x 991.705pt>
 File: figs/impresora.jpg Graphic file (type jpg)
 <use figs/impresora.jpg>
-Package pdftex.def Info: figs/impresora.jpg  used on input line 348.
+Package pdftex.def Info: figs/impresora.jpg  used on input line 351.
 (pdftex.def)             Requested size: 61.61064pt x 77.03792pt.
-<figs/setcompleto.jpeg, id=317, 1295.84125pt x 940.51375pt>
+<figs/setcompleto.jpeg, id=321, 1295.84125pt x 940.51375pt>
 File: figs/setcompleto.jpeg Graphic file (type jpg)
 <use figs/setcompleto.jpeg>
-Package pdftex.def Info: figs/setcompleto.jpeg  used on input line 348.
+Package pdftex.def Info: figs/setcompleto.jpeg  used on input line 351.
 (pdftex.def)             Requested size: 106.1107pt x 77.00781pt.
-<figs/completo3.png, id=318, 772.8875pt x 510.90875pt>
+<figs/completo3.png, id=322, 772.8875pt x 510.90875pt>
 File: figs/completo3.png Graphic file (type png)
 <use figs/completo3.png>
-Package pdftex.def Info: figs/completo3.png  used on input line 348.
+Package pdftex.def Info: figs/completo3.png  used on input line 351.
 (pdftex.def)             Requested size: 116.37914pt x 76.92924pt.
-<figs/soldar.jpeg, id=319, 1541.76pt x 2055.68pt>
+<figs/soldar.jpeg, id=323, 1541.76pt x 2055.68pt>
 File: figs/soldar.jpeg Graphic file (type jpg)
 <use figs/soldar.jpeg>
-Package pdftex.def Info: figs/soldar.jpeg  used on input line 348.
+Package pdftex.def Info: figs/soldar.jpeg  used on input line 351.
 (pdftex.def)             Requested size: 78.72646pt x 104.95435pt.
-<figs/ab.jpeg, id=320, 1118.1775pt x 1840.8775pt>
+<figs/ab.jpeg, id=324, 1118.1775pt x 1840.8775pt>
 File: figs/ab.jpeg Graphic file (type jpg)
 <use figs/ab.jpeg>
-Package pdftex.def Info: figs/ab.jpeg  used on input line 348.
+Package pdftex.def Info: figs/ab.jpeg  used on input line 351.
 (pdftex.def)             Requested size: 64.44315pt x 106.1107pt.
-<figs/ra.jpeg, id=321, 1026.83624pt x 1759.57375pt>
+<figs/ra.jpeg, id=325, 1026.83624pt x 1759.57375pt>
 File: figs/ra.jpeg Graphic file (type jpg)
 <use figs/ra.jpeg>
-Package pdftex.def Info: figs/ra.jpeg  used on input line 348.
+Package pdftex.def Info: figs/ra.jpeg  used on input line 351.
 (pdftex.def)             Requested size: 61.92087pt x 106.1107pt.
  [18
 
@@ -1488,66 +1496,166 @@ Package pdftex.def Info: figs/ra.jpeg  used on input line 348.
 s/soldar.jpeg> <./figs/ab.jpeg> <./figs/ra.jpeg>] [19
 
 ]
-<figs/rsp.png, id=339, 947.4597pt x 453.8556pt>
+<figs/rsp.png, id=343, 947.4597pt x 453.8556pt>
 File: figs/rsp.png Graphic file (type png)
 <use figs/rsp.png>
-Package pdftex.def Info: figs/rsp.png  used on input line 390.
+Package pdftex.def Info: figs/rsp.png  used on input line 393.
 (pdftex.def)             Requested size: 205.37926pt x 98.38037pt.
-<figs/rotder.png, id=340, 555.07375pt x 500.87125pt>
+<figs/rotder.png, id=344, 555.07375pt x 500.87125pt>
 File: figs/rotder.png Graphic file (type png)
 <use figs/rotder.png>
-Package pdftex.def Info: figs/rotder.png  used on input line 390.
+Package pdftex.def Info: figs/rotder.png  used on input line 393.
 (pdftex.def)             Requested size: 94.13171pt x 84.93298pt.
-<figs/rqtimage.png, id=341, 1069.9975pt x 654.445pt>
+<figs/rqtimage.png, id=345, 1069.9975pt x 654.445pt>
 File: figs/rqtimage.png Graphic file (type png)
 <use figs/rqtimage.png>
-Package pdftex.def Info: figs/rqtimage.png  used on input line 390.
+Package pdftex.def Info: figs/rqtimage.png  used on input line 393.
 (pdftex.def)             Requested size: 136.91862pt x 83.7427pt.
  [20
 
- <./figs/rsp.png> <./figs/rotder.png> <./figs/rqtimage.png>] [21
+ <./figs/rsp.png> <./figs/rotder.png> <./figs/rqtimage.png>]
+Overfull \hbox (6.04475pt too wide) detected at line 436
+[]
+ []
 
-] [22
+<figs/traslacion.jpeg, id=356, 1889.0575pt x 2043.635pt>
+File: figs/traslacion.jpeg Graphic file (type jpg)
+<use figs/traslacion.jpeg>
+Package pdftex.def Info: figs/traslacion.jpeg  used on input line 436.
+(pdftex.def)             Requested size: 68.45801pt x 74.02919pt.
+<figs/rotation.jpeg, id=357, 1919.17pt x 1648.1575pt>
+File: figs/rotation.jpeg Graphic file (type jpg)
+<use figs/rotation.jpeg>
+Package pdftex.def Info: figs/rotation.jpeg  used on input line 436.
+(pdftex.def)             Requested size: 85.57382pt x 73.48486pt.
+<figs/motorlogic1.png, id=358, 1091.07625pt x 968.61874pt>
+File: figs/motorlogic1.png Graphic file (type png)
+<use figs/motorlogic1.png>
+Package pdftex.def Info: figs/motorlogic1.png  used on input line 436.
+(pdftex.def)             Requested size: 102.68962pt x 91.16249pt.
+<figs/motorlogic2.png, id=359, 1085.05376pt x 945.5325pt>
+File: figs/motorlogic2.png Graphic file (type png)
+<use figs/motorlogic2.png>
+Package pdftex.def Info: figs/motorlogic2.png  used on input line 436.
+(pdftex.def)             Requested size: 102.68962pt x 89.48026pt.
+[21
 
-] [23
+ <./figs/traslacion.jpeg> <./figs/rotation.jpeg> <./figs/motorlogic1.png> <./fi
+gs/motorlogic2.png>]
+<figs/train_results.jpg, id=372, 1927.2pt x 1927.2pt>
+File: figs/train_results.jpg Graphic file (type jpg)
+<use figs/train_results.jpg>
+Package pdftex.def Info: figs/train_results.jpg  used on input line 458.
+(pdftex.def)             Requested size: 164.30403pt x 164.29504pt.
+<figs/contornobache1.png, id=374, 692.5875pt x 839.135pt>
+File: figs/contornobache1.png Graphic file (type png)
+<use figs/contornobache1.png>
+Package pdftex.def Info: figs/contornobache1.png  used on input line 458.
+(pdftex.def)             Requested size: 79.10162pt x 95.84079pt.
+<figs/contornobache2.png, id=375, 692.5875pt x 839.135pt>
+File: figs/contornobache2.png Graphic file (type png)
+<use figs/contornobache2.png>
+Package pdftex.def Info: figs/contornobache2.png  used on input line 458.
+(pdftex.def)             Requested size: 79.10162pt x 95.84079pt.
+ [22
 
-] [24
+ <./figs/train_results.jpg> <./figs/contornobache1.png> <./figs/contornobache2.
+png>]
+<figs/esquema_pinhole_matrices.jpg, id=387, 895.345pt x 433.62pt>
+File: figs/esquema_pinhole_matrices.jpg Graphic file (type jpg)
+<use figs/esquema_pinhole_matrices.jpg>
+Package pdftex.def Info: figs/esquema_pinhole_matrices.jpg  used on input line 
+479.
+(pdftex.def)             Requested size: 171.14764pt x 82.88489pt.
+<figs/pinholecoordinates.png, id=388, 796.47563pt x 583.42969pt>
+File: figs/pinholecoordinates.png Graphic file (type png)
+<use figs/pinholecoordinates.png>
+Package pdftex.def Info: figs/pinholecoordinates.png  used on input line 479.
+(pdftex.def)             Requested size: 171.14764pt x 125.36371pt.
+ [23
 
-]
+ <./figs/esquema_pinhole_matrices.jpg> <./figs/pinholecoordinates.png>]
+<figs/hipotesissuelo.png, id=397, 487.8225pt x 239.89626pt>
+File: figs/hipotesissuelo.png Graphic file (type png)
+<use figs/hipotesissuelo.png>
+Package pdftex.def Info: figs/hipotesissuelo.png  used on input line 488.
+(pdftex.def)             Requested size: 284.52756pt x 139.92326pt.
+ [24
+
+ <./figs/hipotesissuelo.png>]
+<figs/demoshoelace.png, id=407, 657.95813pt x 314.67563pt>
+File: figs/demoshoelace.png Graphic file (type png)
+<use figs/demoshoelace.png>
+Package pdftex.def Info: figs/demoshoelace.png  used on input line 505.
+(pdftex.def)             Requested size: 227.62204pt x 108.8609pt.
+
+Overfull \vbox (5.84753pt too high) detected at line 505
+ []
+
 [25
 
-]
-<figs/interfazweb.png, id=394, 1084.05pt x 688.07062pt>
+ <./figs/demoshoelace.png>]
+<figs/interfazweb.png, id=421, 1084.05pt x 688.07062pt>
 File: figs/interfazweb.png Graphic file (type png)
 <use figs/interfazweb.png>
-Package pdftex.def Info: figs/interfazweb.png  used on input line 448.
+Package pdftex.def Info: figs/interfazweb.png  used on input line 513.
 (pdftex.def)             Requested size: 312.9803pt x 198.65344pt.
  [26
 
  <./figs/interfazweb.png>]
-<figs/casosdlines.png, id=404, 1445.4pt x 813.0375pt>
+<figs/casosdlines.png, id=431, 1445.4pt x 813.0375pt>
 File: figs/casosdlines.png Graphic file (type png)
 <use figs/casosdlines.png>
-Package pdftex.def Info: figs/casosdlines.png  used on input line 456.
+Package pdftex.def Info: figs/casosdlines.png  used on input line 521.
 (pdftex.def)             Requested size: 312.9803pt x 176.05266pt.
  [27
 
  <./figs/casosdlines.png (PNG copy)>]
-<figs/vff.png, id=413, 702.625pt x 887.315pt>
+<figs/vff.png, id=440, 702.625pt x 887.315pt>
 File: figs/vff.png Graphic file (type png)
 <use figs/vff.png>
-Package pdftex.def Info: figs/vff.png  used on input line 465.
+Package pdftex.def Info: figs/vff.png  used on input line 530.
 (pdftex.def)             Requested size: 142.26378pt x 179.65323pt.
-
-[28
+ [28
 
  <./figs/vff.png>] [29
 
-] [30
+]
+<figs/esquema_nodos_teleoperado_ampliado.png, id=457, 1031.35312pt x 690.32906p
+t>
+File: figs/esquema_nodos_teleoperado_ampliado.png Graphic file (type png)
+<use figs/esquema_nodos_teleoperado_ampliado.png>
+Package pdftex.def Info: figs/esquema_nodos_teleoperado_ampliado.png  used on i
+nput line 557.
+(pdftex.def)             Requested size: 171.14764pt x 114.55246pt.
+<figs/teleop_final.png, id=458, 1921.1775pt x 939.51pt>
+File: figs/teleop_final.png Graphic file (type png)
+<use figs/teleop_final.png>
+Package pdftex.def Info: figs/teleop_final.png  used on input line 557.
+(pdftex.def)             Requested size: 171.14764pt x 83.6921pt.
 
-] [31
+Overfull \vbox (1.5083pt too high) detected at line 557
+ []
 
-] [32
+[30
+
+ <./figs/esquema_nodos_teleoperado_ampliado.png> <./figs/teleop_final.png>]
+<figs/esquema_nodos_vff_ampliado.png, id=467, 1103.62312pt x 686.565pt>
+File: figs/esquema_nodos_vff_ampliado.png Graphic file (type png)
+<use figs/esquema_nodos_vff_ampliado.png>
+Package pdftex.def Info: figs/esquema_nodos_vff_ampliado.png  used on input lin
+e 573.
+(pdftex.def)             Requested size: 171.14764pt x 106.46886pt.
+<figs/autonomo_final.png, id=468, 1764.5925pt x 917.4275pt>
+File: figs/autonomo_final.png Graphic file (type png)
+<use figs/autonomo_final.png>
+Package pdftex.def Info: figs/autonomo_final.png  used on input line 573.
+(pdftex.def)             Requested size: 171.14764pt x 88.97636pt.
+
+[31
+
+ <./figs/esquema_nodos_vff_ampliado.png> <./figs/autonomo_final.png>]
+[32
 
 ] [33
 
@@ -1556,7 +1664,7 @@ Package pdftex.def Info: figs/vff.png  used on input line 465.
 ]
 File: figs/logo-urjc.jpg Graphic file (type jpg)
 <use figs/logo-urjc.jpg>
-Package pdftex.def Info: figs/logo-urjc.jpg  used on input line 537.
+Package pdftex.def Info: figs/logo-urjc.jpg  used on input line 619.
 (pdftex.def)             Requested size: 85.35826pt x 34.20592pt.
  [35
 
@@ -1575,27 +1683,32 @@ LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: F690B533EFB408BA5DFBC07D61D9B794;1764.
+(rerunfilecheck)             Checksum: F0DBA9EDE50982D52687D216260595B4;1938.
  ) 
 Here is how much of TeX's memory you used:
- 27040 strings out of 480112
- 516700 string characters out of 5892631
- 772142 words of memory out of 5000000
- 44295 multiletter control sequences out of 15000+600000
+ 27824 strings out of 480112
+ 527924 string characters out of 5892631
+ 783261 words of memory out of 5000000
+ 45053 multiletter control sequences out of 15000+600000
  479661 words of font info for 64 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
  128i,16n,122p,407b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/juloau/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss1095.60
-0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on slides.pdf (35 pages, 20001714 bytes).
+0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmssi17.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb>
+Output written on slides.pdf (35 pages, 26231934 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 88 named destinations out of 1000 (max. 500000)
- 566 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 386 compressed objects within 4 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 649 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -92,9 +92,11 @@
 \headcommand {\beamer@sectionpages {29}{29}}
 \headcommand {\beamer@subsectionpages {29}{29}}
 \headcommand {\sectionentry {12}{Experimentos}{30}{Experimentos}{0}}
-\headcommand {\slideentry {12}{0}{1}{30/30}{}{0}}
+\headcommand {\beamer@subsectionpages {30}{29}}
+\headcommand {\beamer@subsectionentry {0}{12}{1}{30}{Aplicaciones completas}}
+\headcommand {\slideentry {12}{1}{1}{30/30}{Aplicaciones completas}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {12}{0}{2}{31/31}{}{0}}
+\headcommand {\slideentry {12}{1}{2}{31/31}{Aplicaciones completas}{0}}
 \headcommand {\beamer@framepages {31}{31}}
 \headcommand {\beamer@sectionpages {30}{31}}
 \headcommand {\beamer@subsectionpages {30}{31}}
