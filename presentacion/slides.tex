@@ -130,7 +130,46 @@ Trabajo Fin de Grado
 
 \section{Objetivos}
 \begin{frame}
-\frametitle{Descripción del problema y requisitos}
+	\frametitle{Descripción del problema}
+	% Parte superior con 2 imágenes centradas
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{figs/dana.jpg} \hspace{0.5cm}
+		\includegraphics[width=0.3\textwidth]{figs/seguridad.jpg}
+	\end{center}
+	
+	\vspace{0.5cm}  % Espacio entre las imágenes de arriba y las de abajo
+	
+	% Parte inferior con 1 imagen a la izquierda y 2 imágenes una debajo de otra a la derecha
+	\begin{center}
+	%	\begin{minipage}{0.45\textwidth}
+	%		\raggedleft
+	%		\includegraphics[width=0.65\textwidth]{figs/impresion.png}
+	%	\end{minipage} \hspace{0.5cm}
+	%	\begin{minipage}{0.5\textwidth}
+	%		\raggedright
+	%		\includegraphics[width=0.4\textwidth]{figs/bache.png} \\[0.5cm]
+	
+	%		\includegraphics[width=0.4\textwidth]{figs/interfaceweb.png}
+	%	\end{minipage}
+	\begin{columns}
+		% Columna izquierda
+		\begin{column}{0.5\textwidth}
+			\raggedleft
+			\includegraphics[width=0.55\textwidth]{figs/impresion.png} \\[5pt]
+		\end{column} \hspace{0.5cm}
+		% Columna derecha
+		\begin{column}{0.5\textwidth}
+			\raggedright
+			\includegraphics[width=0.4\textwidth]{figs/bache.png} \\[5pt]
+			\includegraphics[width=0.4\textwidth]{figs/interfaceweb.png} \\[5pt]
+		\end{column}
+	\end{columns}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Requisitos}
 %\begin{enumerate}
 %\item Crear una herramienta multiplataforma.
 %\item Sin necesidad de instalación.
@@ -139,34 +178,46 @@ Trabajo Fin de Grado
 %\end{frame}
 
 %\begin{frame}
-	\begin{block}{Requisitos}
-		\begin{itemize}
-			\item Coste inferior a 250€.
-			\item Piezas impresas en una impresora convencional.
-			\item Ubuntu como sistema operativo.
-			\item No se requiere tarjeta gráfica dedicada para entrenar modelos.
-			\item Modelos adaptados a las limitaciones hardware.
-			\item Integración con ROS 2.
-		\end{itemize}
-	\end{block}
+\begin{enumerate}
+	%\begin{block}{Requisitos}
+	%	\begin{itemize}
+	\item Coste inferior a 250€.
+	\item Piezas impresas en una impresora convencional.
+	\item Ubuntu como sistema operativo.
+	\item No se requiere tarjeta gráfica dedicada para entrenar modelos.
+	\item Modelos adaptados a las limitaciones hardware.
+	\item Integración con ROS 2.
+	%	\end{itemize}
+	%\end{block}
+\end{enumerate}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Metodología}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{figure}
+		\centering
+		\includegraphics[width=10cm]{figs/PDCA.png}
+	\end{figure}
+	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Plan de trabajo}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{columns}
+		% Columna izquierda
+		\begin{column}{0.40\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/github.png} \\[5pt]
+			\href{https://github.com/RoboticsURJC/tfg-jlopez}{Repositorio}
+		\end{column}
+		% Columna derecha
+		 \begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figs/diario.png} \\[5pt]
+			\includegraphics[width=0.8\textwidth]{figs/evo.png} \\[5pt]
+			\href{https://github.com/RoboticsURJC/tfg-jlopez/wiki}{Wiki}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 %===================================================================================
@@ -181,21 +232,46 @@ Trabajo Fin de Grado
 
 \section{Plataforma de desarrollo}
 \begin{frame}
-	\frametitle{Hardware}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+\frametitle{Hardware}
+\begin{figure}
+	\centering
+	\begin{tabular}{ccc} % 3 columnas
+		\includegraphics[width=0.2\textwidth]{figs/raspberrypi4.png} & 
+		\includegraphics[width=0.15\textwidth]{figs/camera.png} & 
+		\includegraphics[width=0.15\textwidth]{figs/GPSNEO6MV2.jpeg} \\
+		\includegraphics[width=0.1\textwidth]{figs/parallax.png} & 
+		\includegraphics[width=0.15\textwidth]{figs/wheel.png} & 
+		\includegraphics[width=0.15\textwidth]{figs/wheel2.png} \\
+		\includegraphics[width=0.15\textwidth]{figs/googlecoral.png} & 
+		\includegraphics[width=0.15\textwidth]{figs/powerbank.png} & 
+		\includegraphics[width=0.1\textwidth]{figs/ruedaloca.png} \\
+		\multicolumn{3}{c}{
+			\includegraphics[width=0.15\textwidth]{figs/ordenador.png}
+		}
+	\end{tabular}
+\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Software}
-	\begin{enumerate}
-		\item Crear una herramienta multiplataforma.
-		\item Sin necesidad de instalación.
-		\item Toda ejecución vía web.
-	\end{enumerate}
+	\begin{figure}
+	\centering
+	\begin{tabular}{ccc} % 3 columnas
+		\includegraphics[width=0.14\textwidth]{figs/ubuntu.png} & 
+		\includegraphics[width=0.14\textwidth]{figs/freecad.png} & 
+		\includegraphics[width=0.14\textwidth]{figs/python.png} \\
+		\includegraphics[width=0.14\textwidth]{figs/opencv.png} & 
+		\includegraphics[width=0.14\textwidth]{figs/humble.png} & 
+		\includegraphics[width=0.14\textwidth]{figs/foxy.png} \\
+		\includegraphics[width=0.14\textwidth]{figs/gazebo.png} & 
+		\includegraphics[width=0.14\textwidth]{figs/rviz.png} & 
+		\includegraphics[width=0.14\textwidth]{figs/googlecolab.png} \\
+		\includegraphics[width=0.14\textwidth]{figs/yolov8.png} &
+		\includegraphics[width=0.14\textwidth]{figs/tflite.png} &
+		\includegraphics[width=0.14\textwidth]{figs/osm.png}
+
+	\end{tabular}
+	\end{figure}	
 \end{frame}
 
 
@@ -215,6 +291,7 @@ Trabajo Fin de Grado
 		\item Crear una herramienta multiplataforma.
 		\item Sin necesidad de instalación.
 		\item Toda ejecución vía web.
+
 	\end{enumerate}
 \end{frame}
 
@@ -384,23 +461,32 @@ Trabajo Fin de Grado
 
 \section{Conclusiones}
 \begin{frame}
-\begin{block}{Habilidades desarrolladas}
+\frametitle{Habilidades desarrolladas}
+%\begin{block}{Habilidades desarrolladas}
 \begin{itemize}
-\item Herramienta multiplataforma: soporta Linux, Windows, MacOS.
-\item Intuitiva para el usuario final: no se necesita instalar nada.
-\item Solo se necesita un navegador web.
+\item FreeCAD.
+\item Mecánica y ensamblaje de piezas.
+\item Crear un robot en simulación.
+\item ROS 2 Control.
+\item Modelo de aprendizaje supervisado en una Raspberry Pi.
+\item Integración de ROS 2 con páginas web
+\item Generar documentación de calidad en LaTeX.
 \end{itemize}
-\end{block}
+%\end{block}
 \end{frame}
 	
 
 \begin{frame}
-\begin{block}{Líneas futuras}
+%\begin{block}{Líneas futuras}
+\frametitle{Líneas futuras}
 \begin{itemize}
-\item Permitir el uso de otras herramientas.
-\item Ampliar los botones disponibles en el interfaz.
+\item Soporte software al robot en simulación.
+\item Integrar el motor de la cámara.
+\item Modificar la altura cámara.
+\item Mantener a PiBotJ en la última versión.
+\item Implantar a PiBotJ como un asistente real.
 \end{itemize}
-\end{block}
+%\end{block}
 \end{frame}
 
 \begin{frame}[plain]

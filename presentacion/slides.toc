@@ -1,11 +1,11 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {2}{Introducción}{5}{0}{1}
 \beamer@sectionintoc {4}{Objetivos}{7}{0}{2}
-\beamer@sectionintoc {6}{Plataforma de desarrollo}{11}{0}{3}
-\beamer@sectionintoc {8}{Diseño y construcción del robot}{14}{0}{4}
-\beamer@sectionintoc {10}{Soporte software del robot}{19}{0}{5}
-\beamer@subsectionintoc {10}{1}{Simulación}{19}{0}{5}
-\beamer@subsectionintoc {10}{2}{Configuración del robot real}{20}{0}{5}
-\beamer@subsectionintoc {10}{3}{Comportamiento del robot real}{21}{0}{5}
-\beamer@sectionintoc {12}{Experimentos}{29}{0}{6}
-\beamer@sectionintoc {14}{Conclusiones}{32}{0}{7}
+\beamer@sectionintoc {6}{Plataforma de desarrollo}{12}{0}{3}
+\beamer@sectionintoc {8}{Diseño y construcción del robot}{15}{0}{4}
+\beamer@sectionintoc {10}{Soporte software del robot}{20}{0}{5}
+\beamer@subsectionintoc {10}{1}{Simulación}{20}{0}{5}
+\beamer@subsectionintoc {10}{2}{Configuración del robot real}{21}{0}{5}
+\beamer@subsectionintoc {10}{3}{Comportamiento del robot real}{22}{0}{5}
+\beamer@sectionintoc {12}{Experimentos}{30}{0}{6}
+\beamer@sectionintoc {14}{Conclusiones}{33}{0}{7}
