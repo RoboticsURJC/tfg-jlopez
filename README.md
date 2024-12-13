@@ -8,7 +8,7 @@ Para poder construir este robot, se han proporcionado una serie de ficheros .stl
 - [Chasis](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/base.stl)
 - [Soporte de la cámara](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/camara.stl)
 - [Carcasa](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/parte-superior.stl)
-- [Sujección trasera](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl)
+- [Sujeción trasera](https://github.com/RoboticsURJC/tfg-jlopez/blob/main/design/sujeccion-trasera.stl)
 
 Estas son las características de impresión: 
 <table>
@@ -297,7 +297,7 @@ Para ejecutar a PiBotJ en modo **autónomo**, es necesario escribir los siguient
 
 - En la terminal: ``ros2 launch pibotj_rr robot_vff.launch.py ``
 
-- En un navegador: ``http://<ip robot>:8000/index_vff.html``
+- En un navegador: ``http://<ip robot>:8001/index_vff.html``
 
 A continuación, se muestra un vídeo mostrando a PiBotJ de forma autónoma:
 
