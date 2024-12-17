@@ -77,7 +77,7 @@ class MotorsVFFV2Node(Node):
                     custom_vel.linear.x = 0.5  
                     custom_vel.angular.z = -0.5 
                     self.set_vel(custom_vel)
-                    return
+                    #return
                 # hay línea en la derecha
                 elif self.dl_vel.angular.z > 0.0:
                     #Girar MUY FUERTE IZQUIERDA
@@ -85,40 +85,15 @@ class MotorsVFFV2Node(Node):
                     custom_vel.linear.x = 0.5  
                     custom_vel.angular.z = 0.5  
                     self.set_vel(custom_vel)
-                    return
+                    #return
                 else:
                     # Hay bache pero no línea
                     self.set_vel(self.vff_vel)
-                    return
+                    #return
             else:
                 # no hay bache
                 self.set_vel(self.dl_vel)
-                return
-
-        # Girar MUY FUERTE DERECHA
-        #if self.vff_angular_vel < 0.0 and self.dl_vel.angular.z < 0.0:
-            #print("MUY DERECHA")
-        #    custom_vel = Twist()
-        #    custom_vel.linear.x = 0.5  
-        #    custom_vel.angular.z = -0.5 
-        #    self.set_vel(custom_vel)
-
-        # Girar MUY FUERTE IZQUIERDA
-        #if self.vff_angular_vel > 0.0 and self.dl_vel.angular.z > 0.0:
-            #print("MUY IZQUIERDA")
-        #    custom_vel = Twist()
-        #    custom_vel.linear.x = 0.5  
-        #    custom_vel.angular.z = 0.5  
-        #    self.set_vel(custom_vel)
-
-        #if self.vff_angular_vel != 0.0 and self.vff_vel is not None:
-            # Prioridad para el VFF
-            #print("VFF")
-        #    self.set_vel(self.vff_vel)
-        #elif self.dl_vel is not None:
-            # Prioridad para DL si no hay rotación angular con VFF
-            #print("DL")
-        #     self.set_vel(self.dl_vel)
+                #return
 
     def set_vel(self, vel):
         # Asegúrate de que vel no es None y contiene valores válidos
